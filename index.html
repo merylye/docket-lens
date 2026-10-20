@@ -210,8 +210,8 @@ footer p { margin: 0; }
         <input class="field" id="search" type="search" placeholder="Search comments" aria-label="Search comments">
         <label class="sortby"><span class="label" style="min-width:0">Sort</span>
           <select id="sort" class="select" aria-label="Sort comments">
+            <option value="latest" selected>Latest</option>
             <option value="earliest">Earliest</option>
-            <option value="latest">Latest</option>
             <option value="alpha">Alphabetical</option>
             <option value="least">Least coverage</option>
             <option value="most">Most coverage</option>
@@ -229,7 +229,7 @@ footer p { margin: 0; }
 </div>
 
 <script>
-const state = { sort: "earliest", lens: "questions", weight: "count", types: new Set(), sel: null, cat: null, q: "", all: false, pinned: [], hidden: new Set(), gcols: "questions" };
+const state = { sort: "latest", lens: "questions", weight: "count", types: new Set(), sel: null, cat: null, q: "", all: false, pinned: [], hidden: new Set(), gcols: "questions" };
 let D = null, META = null, BYID = {};
 
 const esc = s => String(s ?? "").replace(/[&<>"']/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
