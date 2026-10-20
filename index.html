@@ -109,6 +109,7 @@ footer { border-top: 2px solid var(--ink); padding-block: 22px 40px; font-size: 
 footer p { margin: 0; }
 .split { display: grid; gap: 40px; padding-block: 32px 0; }
 .split > * { min-width: 0; }
+#gridSection { scroll-margin-top: calc(var(--ctl-h, 70px) + 16px); }
 .left { display: grid; gap: 48px; align-content: start; min-width: 0; padding-bottom: 8px; }
 .side { min-width: 0; }
 .side h2 { margin-bottom: 8px; }
@@ -165,7 +166,7 @@ footer p { margin: 0; }
     </div>
   </section>
 
-  <section>
+  <section id="gridSection">
     <h2>By category</h2>
     <div class="panel">
       <div class="adder">
@@ -372,14 +373,15 @@ function renderTypes() {
     const g = `<g class="row${on ? " on" : ""}" data-type="${esc(t)}" tabindex="0" role="button" aria-label="${esc(t)}: ${v.n} comments">
       <rect class="hit" x="0" y="${y}" width="${W}" height="${rowH}" fill="transparent"></rect>
       <text x="0" y="${y + 19}" font-size="14" font-weight="${on ? 700 : 400}" fill="#111111" font-family="Fira Sans, Arial, sans-serif">${esc(t)}</text>
-      <rect x="${x0}" y="${y + 7}" width="${full - inf}" height="${rowH - 14}" fill="#111111"></rect>
-      <rect x="${x0 + full - inf}" y="${y + 7}" width="${inf}" height="${rowH - 14}" fill="#bbbbbb"></rect>
+      <g opacity="${state.types.size && !on ? .3 : 1}">
+      <rect x="${x0}" y="${y + 7}" width="${full - inf}" height="${rowH - 14}" fill="${on ? "#00848a" : "#111111"}"></rect>
+      <rect x="${x0 + full - inf}" y="${y + 7}" width="${inf}" height="${rowH - 14}" fill="${on ? "#7fb9bc" : "#bbbbbb"}"></rect></g>
       <text x="${x0 + full + 8}" y="${y + 19}" font-size="14" fill="#111111" font-family="Fira Sans, Arial, sans-serif" style="font-variant-numeric:tabular-nums">${v.n}</text></g>`;
     y += rowH; return g;
   });
   const el = document.getElementById("types-chart");
   el.innerHTML = `<svg viewBox="0 0 ${W} ${y}" width="100%" style="max-width:${W}px">${out.join("")}</svg>`;
-  el.querySelectorAll(".row").forEach(g => bindPick(g, () => { const t = g.dataset.type; state.types.has(t) ? state.types.delete(t) : state.types.add(t); render(); }));
+  el.querySelectorAll(".row").forEach(g => bindPick(g, () => { const t = g.dataset.type; state.types.has(t) ? state.types.delete(t) : state.types.add(t); render(); showSide(); }));
 }
 /* Table */
 function renderTable() {
@@ -392,7 +394,8 @@ function renderTable() {
   if (state.sel) {
     const it = catalog(state.sel.lens).find(i => i.key === state.sel.key);
     note.textContent = `${rows.length} comments${state.cat ? " from " + state.cat : ""} addressing ${it ? it.label : state.sel.key}`; clear.hidden = false;
-  } else { note.textContent = `${rows.length} comments`; clear.hidden = true; }
+  } else { note.textContent = `${rows.length} comments`; clear.hidden = state.types.size === 0; }
+  if (state.types.size) note.textContent += ` · ${[...state.types].join(", ")}`;
   const a = META.aria, ariaShow = state.pinned.includes("ARIA") && (!state.sel || ariaItems(state.sel.lens).includes(state.sel.key)) && !state.cat && (!q || "aria".includes(q));
   const SHORT = { IV: "Risk", V: "Premarket", VI: "Postmarket", VII: "Other" };
   const chips = arr => arr.length ? `<div class="qs">${arr.map(x => `<span class="q">${esc(x)}</span>`).join("")}</div>` : `<span class="none">None</span>`;
@@ -411,10 +414,14 @@ function renderTable() {
   const fmtD = d => d ? new Date(d).toLocaleDateString("en-US", { month: "short", day: "numeric", year: "numeric" }) : "";
   document.getElementById("rows").innerHTML = ariaRow + (rows.length ? shown.map(c => `
     <article class="card"><div class="top"><span class="who">${esc(nameOf(c))}</span>
-      <button type="button" class="cmp" data-id="${esc(c.id)}" aria-pressed="${state.pinned.includes(c.id)}">${state.pinned.includes(c.id) ? "In grid" : "Compare"}</button></div>
+      <button type="button" class="cmp" data-id="${esc(c.id)}" aria-pressed="${state.pinned.includes(c.id)}">${state.pinned.includes(c.id) ? "In grid" : "Add to grid"}</button></div>
     <div class="meta"><a href="https://www.regulations.gov/comment/${esc(c.id)}" target="_blank" rel="noopener">${esc(short(c.id))}</a><span>${esc(c.commenter_type)}${c.type_inferred ? " (inferred)" : ""}</span><span>Received ${fmtD(c.received)}</span></div>
     ${c.unreadable ? '<div class="themes">Attachment unreadable, not coded</div>' : facets(c.q_addr, c.topics || [])}</article>`).join("") : (ariaRow ? "" : `<p class="empty">No comments match.</p>`));
-  document.querySelectorAll("#rows .cmp").forEach(b => b.onclick = () => { togglePin(b.dataset.id); });
+  document.querySelectorAll("#rows .cmp").forEach(b => b.onclick = () => {
+    const adding = !state.pinned.includes(b.dataset.id);
+    togglePin(b.dataset.id);
+    if (adding) document.getElementById("gridSection").scrollIntoView({ behavior: "smooth", block: "start" });
+  });
 }
 
 /* Interaction */
@@ -427,6 +434,10 @@ function toggleSel(key, cat, lens = state.lens) {
     if (matchMedia("(min-width: 1100px)").matches) side.scrollTo({ top: 0, behavior: "smooth" });
     else document.getElementById("rows").scrollIntoView({ behavior: "smooth", block: "start" });
   }
+}
+function showSide() {
+  if (matchMedia("(min-width: 1100px)").matches) document.getElementById("side").scrollTo({ top: 0, behavior: "smooth" });
+  else document.getElementById("rows").scrollIntoView({ behavior: "smooth", block: "start" });
 }
 function togglePin(id) {
   if (state.pinned.includes(id)) state.pinned = state.pinned.filter(x => x !== id);
@@ -447,11 +458,11 @@ function init() {
   const types = [...new Set(D.map(c => c.commenter_type))].sort((a, b) => D.filter(c => c.commenter_type === b).length - D.filter(c => c.commenter_type === a).length);
   const counts = {}; D.forEach(c => counts[c.commenter_type] = (counts[c.commenter_type] || 0) + 1);
   document.getElementById("catMenu").innerHTML = types.map(t => `<label><input type="checkbox" data-v="${esc(t)}"><span>${esc(t)} <span class="num">(${counts[t]})</span></span></label>`).join("") + `<button type="button" class="textbtn" id="catClear" style="justify-self:start;margin:6px">Show all categories</button>`;
-  document.querySelectorAll("#catMenu input").forEach(i => i.onchange = () => { i.checked ? state.types.add(i.dataset.v) : state.types.delete(i.dataset.v); render(); });
+  document.querySelectorAll("#catMenu input").forEach(i => i.onchange = () => { i.checked ? state.types.add(i.dataset.v) : state.types.delete(i.dataset.v); render(); showSide(); });
   document.getElementById("catClear").onclick = () => { state.types.clear(); render(); };
   document.querySelectorAll("#lens .pill").forEach(b => b.onclick = () => { state.lens = b.dataset.v; state.sel = null; state.cat = null; render(); });
   document.getElementById("search").addEventListener("input", e => { state.q = e.target.value; renderTable(); });
-  document.getElementById("clear").onclick = () => { state.sel = null; state.cat = null; render(); };
+  document.getElementById("clear").onclick = () => { state.sel = null; state.cat = null; state.types.clear(); render(); };
   document.getElementById("more").onclick = () => { state.all = true; renderTable(); };
   document.querySelectorAll("#gcols .pill").forEach(b => b.onclick = () => { state.gcols = b.dataset.v; render(); });
   document.getElementById("addSearch").addEventListener("input", renderAddMenu);
