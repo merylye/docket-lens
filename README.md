@@ -4,11 +4,11 @@ Where public comments on FDA's discussion paper on generative AI-enabled medical
 
 The site lets you define "focus" three ways and redraws the charts for each:
 
-- **FDA questions.** Which of the discussion paper's 26 questions a comment substantively addressed, whether or not it cited them by number.
-- **Paper sections.** Risk assessment, premarket evaluation, postmarket monitoring, and other topics.
-- **Topics beyond the questions.** Themes commenters raised that none of FDA's questions asked about.
+- **Docket questions.** Which of the discussion paper's 26 questions a comment substantively addressed, whether or not it cited them by number.
+- **Question groups.** Risk assessment, premarket evaluation, postmarket monitoring, and other topics.
+- **Additional themes.** Themes commenters raised that none of FDA's questions asked about.
 
-You can also filter by commenter type and weight comments by page count.
+You can also filter by commenter category, compare categories question by question, and add individual comments to the comparison.
 
 ## Repository layout
 
