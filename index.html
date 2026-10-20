@@ -125,12 +125,6 @@ footer p { margin: 0; }
       <button type="button" class="pill" data-v="topics" aria-pressed="false">Additional themes</button>
     </span>
   </div>
-  <div class="group"><span class="label">Weight</span>
-    <span id="weight" class="group">
-      <button type="button" class="pill" data-v="count" aria-pressed="true">Each comment once</button>
-      <button type="button" class="pill" data-v="pages" aria-pressed="false">By page count</button>
-    </span>
-  </div>
   <div class="group"><span class="label">Category</span>
     <details class="dd" id="catDD"><summary class="pill small">All categories</summary><div class="menu" id="catMenu"></div></details>
   </div>
@@ -223,7 +217,7 @@ function ariaItems(lens) {
   if (lens === "sections") return [...new Set(a.q_addr.map(sectionOf))];
   return a.topics;
 }
-const w = c => state.weight === "pages" ? Math.max(1, c.pages || 1) : 1;
+const w = () => 1;
 const readable = () => D.filter(c => !c.unreadable);
 function filtered() { return readable().filter(c => state.types.size === 0 || state.types.has(c.commenter_type)); }
 function shareOf(pool, key, lens) {
@@ -403,7 +397,7 @@ function togglePin(id) {
   document.getElementById("addNote").textContent = ""; render();
 }
 function renderControls() {
-  ["lens", "weight"].forEach(id => document.querySelectorAll(`#${id} .pill`).forEach(b => b.setAttribute("aria-pressed", String(b.dataset.v === state[id]))));
+  ["lens"].forEach(id => document.querySelectorAll(`#${id} .pill`).forEach(b => b.setAttribute("aria-pressed", String(b.dataset.v === state[id]))));
   document.querySelectorAll("#gcols .pill").forEach(b => b.setAttribute("aria-pressed", String(b.dataset.v === state.gcols)));
   document.querySelectorAll("#catMenu input").forEach(i => i.checked = state.types.has(i.dataset.v));
   document.querySelector("#catDD summary").textContent = state.types.size === 0 ? "All categories" : state.types.size === 1 ? [...state.types][0] : `${state.types.size} categories`;
@@ -418,7 +412,6 @@ function init() {
   document.querySelectorAll("#catMenu input").forEach(i => i.onchange = () => { i.checked ? state.types.add(i.dataset.v) : state.types.delete(i.dataset.v); render(); });
   document.getElementById("catClear").onclick = () => { state.types.clear(); render(); };
   document.querySelectorAll("#lens .pill").forEach(b => b.onclick = () => { state.lens = b.dataset.v; state.sel = null; state.cat = null; render(); });
-  document.querySelectorAll("#weight .pill").forEach(b => b.onclick = () => { state.weight = b.dataset.v; render(); });
   document.getElementById("search").addEventListener("input", e => { state.q = e.target.value; renderTable(); });
   document.getElementById("clear").onclick = () => { state.sel = null; state.cat = null; render(); };
   document.getElementById("more").onclick = () => { state.all = true; renderTable(); };
