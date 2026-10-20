@@ -4959,17 +4959,37 @@
   "commenter_type": "Health professional",
   "type_inferred": false,
   "org": "",
-  "domain": "General / cross-cutting",
+  "domain": "Clinical documentation",
   "q_cited": [],
-  "q_addr": [],
-  "topics": [],
-  "tags": [],
-  "summary": "Eleven image-only PDF and JPG attachments with no text layer and no inline substance; content could not be read.",
-  "words": 3,
+  "q_addr": [
+   1,
+   2,
+   6,
+   7,
+   9,
+   19,
+   21
+  ],
+  "topics": [
+   "Coverage and reimbursement",
+   "Human oversight and automation bias",
+   "Liability and accountability",
+   "Privacy and consent",
+   "Regulatory process and harmonization"
+  ],
+  "tags": [
+   "liability allocation",
+   "reimbursement and coverage",
+   "fda-cms coordination",
+   "patient disclosure and consent",
+   "human oversight design"
+  ],
+  "summary": "Policy essay on AI in nursing and physician assessment, linking FDA's risk axes to CPT coding, CMS ACCESS payment, liability allocation, and a proposed AI nursing association. Read by OCR.",
+  "words": 6500,
   "pages": 11,
   "posted": "2026-09-30T04:00:00Z",
   "received": "2026-09-26T04:00:00Z",
-  "unreadable": true
+  "unreadable": false
  },
  {
   "id": "FDA-2026-N-7874-0122",
