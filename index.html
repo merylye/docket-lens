@@ -3,106 +3,95 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>GenAI Device Docket</title>
+<title>Docket Lens</title>
 <meta name="description" content="Where public comments on FDA's discussion paper on generative AI-enabled medical devices (FDA-2026-N-7874) focused, compared with ARIA's comment.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400;6..72,500&family=Fira+Sans:wght@400;500;700&display=swap">
 <style>
-/* Layout: a docket reading room. Summary band, sticky lens controls, one main chart, two side charts, then the record. */
+/* Layout: editorial serif opener on cream, pill controls, then the question chart, the category grid, two small charts, and the comment table. Single light theme, matching ARIA's palette. */
 :root {
-  --bg: #f6f7f9;
-  --surface: #ffffff;
-  --ink: #17233a;
-  --muted: #5a6478;
-  --rule: #dfe3ea;
-  --bar: #9aa7bd;
-  --bar-strong: #3c5175;
-  --aria: #0f8c93;
-  --aria-soft: #d5eeef;
-  --sel: #e9eef7;
-  --display: "Public Sans", "Helvetica Neue", Arial, sans-serif;
-  --body: "Public Sans", "Helvetica Neue", Arial, sans-serif;
-  --mono: "IBM Plex Mono", ui-monospace, Menlo, Consolas, monospace;
+  --cream: #f7f5f1;
+  --white: #ffffff;
+  --ink: #291b13;
+  --muted: #6b5a4f;
+  --rule: #e4ddd0;
+  --sand: #e4ddd0;
+  --teal: #00848a;
+  --teal-deep: #00474b;
+  --cyan: #00dfe9;
+  --gold: #ffd996;
+  --serif: "Newsreader", Georgia, "Times New Roman", serif;
+  --sans: "Fira Sans", Arial, sans-serif;
   color-scheme: light;
-}
-@media (prefers-color-scheme: dark) {
-  :root:not([data-theme="light"]) {
-    --bg: #0f1522; --surface: #172033; --ink: #e6eaf2; --muted: #9aa5b9; --rule: #2a3550;
-    --bar: #4c5d7d; --bar-strong: #9fb3d6; --aria: #3cc4cb; --aria-soft: #133d43; --sel: #1f2c46; color-scheme: dark;
-  }
-}
-:root[data-theme="dark"] {
-  --bg: #0f1522; --surface: #172033; --ink: #e6eaf2; --muted: #9aa5b9; --rule: #2a3550;
-  --bar: #4c5d7d; --bar-strong: #9fb3d6; --aria: #3cc4cb; --aria-soft: #133d43; --sel: #1f2c46; color-scheme: dark;
 }
 * { box-sizing: border-box; }
 html, body { margin: 0; }
 body {
-  background: var(--bg); color: var(--ink); font: 15px/1.55 var(--body);
+  background: var(--cream); color: var(--ink); font: 17px/1.55 var(--sans);
   padding-left: max(16px, env(safe-area-inset-left, 0px));
   padding-right: max(16px, env(safe-area-inset-right, 0px));
 }
-.wrap { max-width: 1120px; margin: 0 auto; }
-a { color: var(--bar-strong); }
-a:focus-visible, button:focus-visible, input:focus-visible { outline: 2px solid var(--aria); outline-offset: 2px; }
-header { padding-block: 32px 20px; display: grid; gap: 10px; }
-.docket { font: 500 12px/1 var(--mono); letter-spacing: .06em; text-transform: uppercase; color: var(--muted); }
-h1 { font: 800 clamp(26px, 4vw, 38px)/1.1 var(--display); margin: 0; text-wrap: balance; letter-spacing: -.01em; }
-.lede { max-width: 68ch; color: var(--muted); margin: 0; }
-.facts { display: flex; flex-wrap: wrap; gap: 8px 22px; font-size: 13px; color: var(--muted); }
+.wrap { max-width: 1160px; margin: 0 auto; }
+a { color: var(--teal); }
+a:focus-visible, button:focus-visible, input:focus-visible, [tabindex]:focus-visible { outline: 3px solid var(--cyan); outline-offset: 2px; }
+header { padding-block: 56px 28px; display: grid; gap: 18px; }
+.eyebrow { font-size: 15px; color: var(--ink); }
+h1 { font: 500 clamp(40px, 7vw, 84px)/1.02 var(--serif); margin: 0; letter-spacing: -.01em; text-wrap: balance; max-width: 15ch; }
+.lede { font-size: 19px; max-width: 60ch; margin: 0; }
+.facts { display: flex; flex-wrap: wrap; gap: 6px 28px; font-size: 15px; color: var(--muted); }
 .facts b { color: var(--ink); font-weight: 700; font-variant-numeric: tabular-nums; }
 .controls {
-  position: sticky; top: env(safe-area-inset-top, 0px); z-index: 5;
-  background: var(--bg); border-bottom: 1px solid var(--rule);
-  padding-block: 10px; display: flex; flex-wrap: wrap; gap: 10px 22px; align-items: center;
+  position: sticky; top: env(safe-area-inset-top, 0px); z-index: 5; background: var(--cream);
+  border-block: 1px solid var(--rule); padding-block: 12px; display: grid; gap: 10px;
 }
-body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-area-inset-top, 0px); z-index: 10; background: var(--bg); }
-.group { display: flex; flex-wrap: wrap; align-items: center; gap: 6px; }
-.label { font-size: 11px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); margin-right: 4px; }
-.seg { display: inline-flex; border: 1px solid var(--rule); border-radius: 6px; overflow: hidden; background: var(--surface); }
-.seg button { font: 600 13px var(--body); padding: 6px 11px; border: 0; background: transparent; color: var(--muted); cursor: pointer; }
-.seg button + button { border-left: 1px solid var(--rule); }
-.seg button[aria-pressed="true"] { background: var(--ink); color: var(--bg); }
-.chip { font: 500 12px var(--body); padding: 4px 9px; border-radius: 999px; border: 1px solid var(--rule); background: var(--surface); color: var(--muted); cursor: pointer; }
-.chip[aria-pressed="true"] { border-color: var(--bar-strong); color: var(--ink); background: var(--sel); }
-main { display: grid; gap: 28px; padding-block: 22px 48px; }
-main > *, section, .panel { min-width: 0; }
-.more { margin-top: 10px; font: 600 13px var(--body); padding: 7px 12px; border: 1px solid var(--rule); border-radius: 6px; background: var(--surface); color: var(--ink); cursor: pointer; }
-section h2 { font: 700 18px/1.2 var(--display); margin: 0 0 4px; }
-.sub { color: var(--muted); font-size: 13px; margin: 0 0 14px; max-width: 75ch; }
-.panel { background: var(--surface); border: 1px solid var(--rule); border-radius: 8px; padding: 18px; }
-.insight { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 14px; margin-bottom: 16px; }
-.insight div { font-size: 13px; color: var(--muted); }
-.insight strong { display: block; color: var(--ink); font-size: 13px; margin-bottom: 2px; }
-.legend { display: flex; gap: 16px; flex-wrap: wrap; font-size: 12px; color: var(--muted); margin-bottom: 10px; }
+body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-area-inset-top, 0px); z-index: 10; background: var(--cream); }
+.group { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; }
+.label { font-size: 12px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); min-width: 92px; }
+.pill { font: 500 15px var(--sans); padding: 7px 16px; border-radius: 999px; border: 1.5px solid var(--ink); background: transparent; color: var(--ink); cursor: pointer; }
+.pill[aria-pressed="true"] { background: var(--cyan); border-color: var(--cyan); font-weight: 700; }
+.pill.small { font-size: 13px; padding: 4px 11px; border-width: 1px; border-color: #c9bfae; }
+.pill.small[aria-pressed="true"] { border-color: var(--cyan); }
+main { display: grid; gap: 56px; padding-block: 40px 64px; }
+main > *, section { min-width: 0; }
+h2 { font: 500 clamp(28px, 3.4vw, 40px)/1.1 var(--serif); margin: 0 0 8px; text-wrap: balance; }
+.sub { color: var(--muted); font-size: 15px; margin: 0 0 18px; max-width: 72ch; }
+.panel { background: var(--white); border-radius: 6px; padding: 22px; min-width: 0; }
+.insight { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px 28px; margin-bottom: 20px; font-size: 15px; }
+.insight strong { display: block; font-size: 12px; letter-spacing: .08em; text-transform: uppercase; color: var(--teal); margin-bottom: 4px; }
+.legend { display: flex; gap: 18px; flex-wrap: wrap; font-size: 13px; color: var(--muted); margin-bottom: 12px; align-items: center; }
 .legend span { display: inline-flex; align-items: center; gap: 6px; }
-.sw { width: 12px; height: 12px; border-radius: 2px; display: inline-block; }
+.sw { width: 14px; height: 14px; border-radius: 2px; display: inline-block; }
+.ramp { display: inline-flex; gap: 2px; }
+.ramp i { width: 18px; height: 12px; display: inline-block; }
 .chart { overflow-x: auto; }
 .chart svg { display: block; }
-.chart text { fill: var(--ink); font-family: var(--body); }
-.chart .muted { fill: var(--muted); }
-.row { cursor: pointer; }
-.row:hover .hit, .row.on .hit { fill: var(--sel); }
-.two { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 28px; }
-.two > * { min-width: 0; }
-.search { width: 100%; max-width: 420px; font: 14px var(--body); padding: 8px 10px; border: 1px solid var(--rule); border-radius: 6px; background: var(--surface); color: var(--ink); }
-.filters { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; margin-bottom: 12px; }
-.clear { font: 600 12px var(--body); border: 0; background: none; color: var(--aria); cursor: pointer; padding: 0; }
-.tablewrap { overflow-x: auto; border: 1px solid var(--rule); border-radius: 8px; background: var(--surface); }
-table { border-collapse: collapse; width: 100%; min-width: 760px; font-size: 13px; }
-th { text-align: left; font-size: 11px; letter-spacing: .06em; text-transform: uppercase; color: var(--muted); padding: 10px 12px; border-bottom: 1px solid var(--rule); white-space: nowrap; }
-td { padding: 10px 12px; border-bottom: 1px solid var(--rule); vertical-align: top; }
+.row, .cell { cursor: pointer; }
+.row:hover .hit, .row.on .hit { fill: var(--cream); }
+.cell:hover { stroke: var(--ink); stroke-width: 1.5; }
+.two { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 40px; }
+.adder { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; margin-bottom: 14px; }
+.field { font: 15px var(--sans); padding: 8px 12px; border: 1.5px solid var(--ink); border-radius: 999px; background: var(--white); color: var(--ink); min-width: 0; width: min(100%, 420px); }
+.note { font-size: 13px; color: var(--muted); }
+.textbtn { font: 700 13px var(--sans); border: 0; background: none; color: var(--teal); cursor: pointer; padding: 0; }
+.tablewrap { overflow-x: auto; background: var(--white); border-radius: 6px; }
+table { border-collapse: collapse; width: 100%; min-width: 820px; font-size: 14px; }
+th { text-align: left; font-size: 12px; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); padding: 12px; border-bottom: 1.5px solid var(--ink); white-space: nowrap; }
+td { padding: 12px; border-bottom: 1px solid var(--rule); vertical-align: top; }
 tr:last-child td { border-bottom: 0; }
-td.id { font: 12px var(--mono); white-space: nowrap; }
+td.id { font-variant-numeric: tabular-nums; white-space: nowrap; }
 td.num { font-variant-numeric: tabular-nums; text-align: right; }
 .qs { display: flex; flex-wrap: wrap; gap: 3px; }
-.q { font: 11px var(--mono); padding: 1px 5px; border-radius: 3px; background: var(--sel); color: var(--ink); }
-.tag { font-size: 11px; color: var(--muted); }
-.inferred { font-size: 11px; color: var(--muted); font-style: italic; }
-.aria-row td { background: var(--aria-soft); }
-.empty { color: var(--muted); padding: 24px; text-align: center; }
-footer { border-top: 1px solid var(--rule); padding-block: 20px 36px; font-size: 12px; color: var(--muted); display: grid; gap: 6px; }
+.q { font-size: 12px; padding: 1px 6px; border-radius: 999px; background: var(--cream); }
+.tag { font-size: 12px; color: var(--muted); }
+.inferred { font-size: 12px; color: var(--muted); font-style: italic; }
+.aria-row td { background: #eaf6f6; }
+.cmp { font: 700 12px var(--sans); padding: 3px 10px; border-radius: 999px; border: 1px solid var(--teal); background: transparent; color: var(--teal); cursor: pointer; white-space: nowrap; }
+.cmp[aria-pressed="true"] { background: var(--teal); color: var(--white); }
+.filters { display: flex; flex-wrap: wrap; gap: 12px; align-items: center; margin-bottom: 14px; }
+.empty { color: var(--muted); padding: 28px; text-align: center; }
+.more { margin-top: 12px; }
+footer { border-top: 1.5px solid var(--ink); padding-block: 22px 40px; font-size: 14px; color: var(--muted); display: grid; gap: 8px; }
 footer p { margin: 0; max-width: 90ch; }
 @media (prefers-reduced-motion: no-preference) { .bar { transition: width .25s ease; } }
 </style>
@@ -110,70 +99,90 @@ footer p { margin: 0; max-width: 90ch; }
 <body>
 <div class="wrap">
 <header>
-  <div class="docket">Docket FDA-2026-N-7874 · Public comments</div>
-  <h1>Where commenters focused on FDA's GenAI device discussion paper</h1>
-  <p class="lede">Every posted comment on FDA's discussion paper on generative AI-enabled medical devices, coded by the questions it addressed and the topics it raised, compared with ARIA's comment. Pick a definition of focus below and the charts redraw.</p>
+  <div class="eyebrow">Docket FDA-2026-N-7874 · Public comments</div>
+  <h1>Where commenters focused on FDA's GenAI device paper</h1>
+  <p class="lede">Every posted comment on FDA's discussion paper on generative AI-enabled medical devices, coded by the questions it addressed and the topics it raised, compared with ARIA's comment.</p>
   <div class="facts" id="facts"><span>Loading comments…</span></div>
 </header>
 
 <div class="controls" role="toolbar" aria-label="Chart controls">
   <div class="group"><span class="label">Focus</span>
-    <div class="seg" id="lens">
-      <button type="button" data-v="questions" aria-pressed="true">FDA questions</button>
-      <button type="button" data-v="sections" aria-pressed="false">Paper sections</button>
-      <button type="button" data-v="topics" aria-pressed="false">Topics beyond the questions</button>
-    </div>
+    <span id="lens" class="group">
+      <button type="button" class="pill" data-v="questions" aria-pressed="true">FDA questions</button>
+      <button type="button" class="pill" data-v="sections" aria-pressed="false">Paper sections</button>
+      <button type="button" class="pill" data-v="topics" aria-pressed="false">Other topics</button>
+    </span>
   </div>
   <div class="group"><span class="label">Weight</span>
-    <div class="seg" id="weight">
-      <button type="button" data-v="count" aria-pressed="true">Each comment once</button>
-      <button type="button" data-v="pages" aria-pressed="false">By page count</button>
-    </div>
+    <span id="weight" class="group">
+      <button type="button" class="pill" data-v="count" aria-pressed="true">Each comment once</button>
+      <button type="button" class="pill" data-v="pages" aria-pressed="false">By page count</button>
+    </span>
   </div>
-  <div class="group" id="types"><span class="label">Commenters</span></div>
+  <div class="group" id="types"><span class="label">Category</span></div>
 </div>
 
 <main>
   <section>
-    <h2 id="mainTitle">Share of comments addressing each FDA question</h2>
+    <h2 id="mainTitle">Share of comments addressing each question</h2>
     <p class="sub" id="mainSub"></p>
     <div class="panel">
       <div class="insight" id="insight"></div>
       <div class="legend">
-        <span><i class="sw" style="background:var(--bar)"></i>Share of selected comments</span>
-        <span><i class="sw" style="background:var(--aria)"></i>Addressed by ARIA</span>
-        <span>Click a row to list those comments</span>
+        <span><i class="sw" style="background:var(--teal)"></i>Addressed by ARIA</span>
+        <span><i class="sw" style="background:var(--sand)"></i>Not addressed by ARIA</span>
+        <span>Select a row to list those comments</span>
       </div>
       <div class="chart" id="main"></div>
     </div>
   </section>
 
+  <section>
+    <h2 id="gridTitle">Commenter category by question</h2>
+    <p class="sub" id="gridSub">Each cell is the share of that row's comments addressing the column's question. ARIA and any comments you add appear as rows too, shaded fully when they addressed the question. Turn rows on or off below, and add as many comments as you like.</p>
+    <div class="panel">
+      <div class="adder">
+        <input class="field" id="addField" list="commentList" placeholder="Add a comment by commenter or number" aria-label="Add a comment as a row">
+        <datalist id="commentList"></datalist>
+        <button type="button" class="pill small" id="addBtn">Add row</button>
+        <span class="note" id="addNote"></span>
+      </div>
+      <div class="group" id="rowToggles" style="margin-bottom:14px"><span class="label">Rows</span></div>
+      <div class="legend">
+        <span>Share of row's comments</span>
+        <span class="ramp" id="rampKey"></span>
+        <span>Select a cell to list those comments</span>
+      </div>
+      <div class="chart" id="grid"></div>
+    </div>
+  </section>
+
   <div class="two">
     <section>
-      <h2>Who commented</h2>
-      <p class="sub">Regulations.gov's own category. Lighter bars are comments with no category, assigned from their content.</p>
+      <h2>Commenter category</h2>
+      <p class="sub">From Regulations.gov's category field. Lighter segments are comments filed without a category and assigned one from their content. Select a bar to filter.</p>
       <div class="panel chart" id="types-chart"></div>
     </section>
     <section>
-      <h2>When comments arrived</h2>
-      <p class="sub">Comments by week received. FDA posts comments after review, so recent weeks fill in over time.</p>
+      <h2>Date received</h2>
+      <p class="sub">Comments by week received. FDA posts comments after review, so recent weeks may still be incomplete.</p>
       <div class="panel chart" id="time-chart"></div>
     </section>
   </div>
 
   <section>
-    <h2>All comments</h2>
-    <p class="sub">Search by commenter, summary, or topic. Questions listed are those the comment substantively addressed, whether or not it cited them by number.</p>
+    <h2>Comments</h2>
+    <p class="sub">Questions listed are those the comment substantively addressed, cited or not. Use Compare to add a comment to the grid above.</p>
     <div class="filters">
-      <input class="search" id="search" type="search" placeholder="Search comments" aria-label="Search comments">
-      <span id="selNote" class="tag"></span>
-      <button type="button" class="clear" id="clear" hidden>Clear selection</button>
+      <input class="field" id="search" type="search" placeholder="Search comments" aria-label="Search comments">
+      <span id="selNote" class="note"></span>
+      <button type="button" class="textbtn" id="clear" hidden>Clear selection</button>
     </div>
     <div class="tablewrap"><table>
-      <thead><tr><th>Comment</th><th>Commenter</th><th>Type</th><th>Questions addressed</th><th>Topics</th><th>Pages</th><th>Summary</th></tr></thead>
-      <tbody id="rows"><tr><td colspan="7" class="empty">Loading…</td></tr></tbody>
+      <thead><tr><th>Comment</th><th>Commenter</th><th>Category</th><th>Questions addressed</th><th>Other topics</th><th>Pages</th><th>Summary</th><th></th></tr></thead>
+      <tbody id="rows"><tr><td colspan="8" class="empty">Loading…</td></tr></tbody>
     </table></div>
-    <button type="button" class="more" id="more" hidden>Show all comments</button>
+    <button type="button" class="pill small more" id="more" hidden>Show all comments</button>
   </section>
 </main>
 
@@ -184,11 +193,13 @@ footer p { margin: 0; max-width: 90ch; }
 </div>
 
 <script>
-const state = { lens: "questions", weight: "count", types: new Set(), sel: null, q: "", all: false };
-let D = null, META = null;
+const state = { lens: "questions", weight: "count", types: new Set(), sel: null, cat: null, q: "", all: false, pinned: [], hidden: new Set() };
+let D = null, META = null, BYID = {};
 
 const esc = s => String(s ?? "").replace(/[&<>"']/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
-const pct = x => (x * 100).toFixed(x > 0 && x < .01 ? 1 : 0) + "%";
+const pct = x => Math.round(x * 100) + "%";
+const short = id => id.replace("FDA-2026-N-7874-", "");
+const nameOf = c => c.org || c.title.replace(/^Comment from /, "");
 
 function sectionOf(n) { return META.questions.find(q => q.n === n).section; }
 function itemsFor(c, lens) {
@@ -198,175 +209,243 @@ function itemsFor(c, lens) {
 }
 function catalog(lens) {
   if (lens === "questions") return META.questions.map(q => ({ key: String(q.n), label: "Q" + q.n, desc: q.label, group: q.section }));
-  if (lens === "sections") return META.sections.map(s => ({ key: s.key, label: s.key, desc: s.label }));
-  return META.topics.map(t => ({ key: t.key, label: t.key, desc: t.desc || "" }));
+  if (lens === "sections") return META.sections.map(s => ({ key: s.key, label: s.label, desc: "Section " + s.key }));
+  return META.topics.map(t => ({ key: t.key, label: t.key, desc: "" }));
 }
-function ariaHas(lens, key) {
+function ariaItems(lens) {
   const a = META.aria;
-  if (lens === "questions") return a.q_addr.includes(+key);
-  if (lens === "sections") return a.q_addr.some(n => sectionOf(n) === key);
-  return a.topics.includes(key);
+  if (lens === "questions") return a.q_addr.map(String);
+  if (lens === "sections") return [...new Set(a.q_addr.map(sectionOf))];
+  return a.topics;
 }
 const w = c => state.weight === "pages" ? Math.max(1, c.pages || 1) : 1;
-function filtered() { return D.filter(c => !c.unreadable && (state.types.size === 0 || state.types.has(c.commenter_type))); }
-
-function computeShares() {
-  const pool = filtered(); const total = pool.reduce((s, c) => s + w(c), 0) || 1;
-  return catalog(state.lens).map(it => {
-    const hits = pool.filter(c => itemsFor(c, state.lens).includes(it.key));
-    return { ...it, share: hits.reduce((s, c) => s + w(c), 0) / total, n: hits.length, aria: ariaHas(state.lens, it.key) };
-  });
+const readable = () => D.filter(c => !c.unreadable);
+function filtered() { return readable().filter(c => state.types.size === 0 || state.types.has(c.commenter_type)); }
+function shareOf(pool, key, lens) {
+  const total = pool.reduce((s, c) => s + w(c), 0);
+  if (!total) return null;
+  return pool.filter(c => itemsFor(c, lens).includes(key)).reduce((s, c) => s + w(c), 0) / total;
 }
 
+/* Main chart */
 function renderMain() {
-  const titles = {
-    questions: ["Share of comments addressing each FDA question", "A comment counts toward a question if it cites it and discusses it, or discusses its topic substantively without citing it (at least a paragraph or a concrete recommendation)."],
-    sections: ["Share of comments addressing each part of the discussion paper", "A comment counts toward a section if it substantively addresses any question in it."],
-    topics: ["Topics raised beyond FDA's 26 questions", "Themes commenters raised that none of FDA's questions asked about, grouped from tags assigned to each comment."]
-  };
-  document.getElementById("mainTitle").textContent = titles[state.lens][0];
-  document.getElementById("mainSub").textContent = titles[state.lens][1] + (state.weight === "pages" ? " Weighted by page count." : "");
-  let rows = computeShares();
+  const t = {
+    questions: ["Share of comments addressing each question", "A comment counts toward a question if it discusses that question substantively (at least a paragraph or a concrete recommendation), whether or not it cites the question number."],
+    sections: ["Share of comments addressing each section", "A comment counts toward a section if it substantively addresses any question in it."],
+    topics: ["Topics raised outside FDA's questions", "Themes none of FDA's 26 questions asked about, grouped from tags assigned to each comment."]
+  }[state.lens];
+  document.getElementById("mainTitle").textContent = t[0];
+  document.getElementById("mainSub").textContent = t[1] + (state.weight === "pages" ? " Weighted by page count." : "");
+  const pool = filtered(), aset = new Set(ariaItems(state.lens));
+  let rows = catalog(state.lens).map(it => ({ ...it, share: shareOf(pool, it.key, state.lens) || 0, n: pool.filter(c => itemsFor(c, state.lens).includes(it.key)).length, aria: aset.has(it.key) }));
   if (state.lens === "topics") rows = rows.filter(r => r.n > 0 || r.aria).sort((a, b) => b.share - a.share);
   const max = Math.max(.05, ...rows.map(r => r.share));
-  const W = 1040, labelW = state.lens === "topics" ? 290 : 64, descW = state.lens === "questions" ? 340 : (state.lens === "sections" ? 300 : 0);
-  const x0 = labelW + descW + 12, barW = W - x0 - 90, rowH = 26, gapH = state.lens === "questions" ? 26 : 0;
-  let y = 4, out = [], lastGroup = null;
+  const W = 1100, labelW = state.lens === "questions" ? 58 : (state.lens === "sections" ? 330 : 330), descW = state.lens === "questions" ? 380 : 0;
+  const x0 = labelW + descW + 10, barW = W - x0 - 60, rowH = 30;
+  let y = 0, out = [], last = null;
   rows.forEach(r => {
-    if (r.group && r.group !== lastGroup) {
-      if (lastGroup !== null) y += 8;
+    if (r.group && r.group !== last) {
+      if (last !== null) y += 10;
       const sec = META.sections.find(s => s.key === r.group);
-      out.push(`<text x="0" y="${y + 16}" font-size="11" font-weight="700" letter-spacing="1" class="muted">${esc((sec ? sec.key + " · " + sec.label : r.group).toUpperCase())}</text>`);
-      y += gapH; lastGroup = r.group;
+      out.push(`<text x="0" y="${y + 18}" font-size="12" font-weight="700" letter-spacing="1" fill="#00848a" font-family="Fira Sans, Arial, sans-serif">${esc(sec.label.toUpperCase())}</text>`);
+      y += 28; last = r.group;
     }
-    const bw = Math.max(r.share > 0 ? 2 : 0, r.share / max * barW), on = state.sel && state.sel.lens === state.lens && state.sel.key === r.key;
+    const bw = r.share ? Math.max(2, r.share / max * barW) : 0, on = state.sel && state.sel.lens === state.lens && state.sel.key === r.key;
     out.push(`<g class="row${on ? " on" : ""}" data-key="${esc(r.key)}" tabindex="0" role="button" aria-label="${esc(r.label)}: ${pct(r.share)} of comments${r.aria ? ", addressed by ARIA" : ""}">
-      <rect class="hit" x="0" y="${y}" width="${W}" height="${rowH}" fill="transparent" rx="3"></rect>
-      <text x="${state.lens === "topics" ? 0 : 6}" y="${y + 17}" font-size="13" font-weight="600" ${state.lens === "questions" ? 'font-family="IBM Plex Mono, monospace"' : ""}>${esc(state.lens === "topics" ? r.label : r.label)}</text>
-      ${descW ? `<text x="${labelW}" y="${y + 17}" font-size="12" class="muted">${esc(r.desc.length > 52 ? r.desc.slice(0, 50) + "…" : r.desc)}</text>` : ""}
-      <rect x="${x0}" y="${y + 6}" width="${barW}" height="${rowH - 12}" fill="var(--rule)" opacity=".45" rx="2"></rect>
-      <rect class="bar" x="${x0}" y="${y + 6}" width="${bw}" height="${rowH - 12}" fill="${on ? "var(--bar-strong)" : "var(--bar)"}" rx="2"></rect>
-      <text x="${x0 + barW + 10}" y="${y + 17}" font-size="12" style="font-variant-numeric:tabular-nums">${pct(r.share)}</text>
-      ${r.aria ? `<circle cx="${W - 14}" cy="${y + rowH / 2}" r="6" fill="var(--aria)"></circle>` : `<circle cx="${W - 14}" cy="${y + rowH / 2}" r="5.5" fill="none" stroke="var(--rule)" stroke-width="1.5"></circle>`}
+      <rect class="hit" x="0" y="${y}" width="${W}" height="${rowH}" fill="transparent"></rect>
+      <text x="0" y="${y + 20}" font-size="15" font-weight="${state.lens === "questions" ? 700 : 500}" fill="#291b13" font-family="Fira Sans, Arial, sans-serif">${esc(r.label)}</text>
+      ${descW ? `<text x="${labelW}" y="${y + 20}" font-size="14" fill="#6b5a4f" font-family="Fira Sans, Arial, sans-serif">${esc(r.desc.length > 54 ? r.desc.slice(0, 52) + "…" : r.desc)}</text>` : ""}
+      <rect class="bar" x="${x0}" y="${y + 7}" width="${bw}" height="${rowH - 14}" fill="${r.aria ? "#00848a" : "#e4ddd0"}" stroke="${on ? "#291b13" : "none"}" stroke-width="2"></rect>
+      <text x="${x0 + bw + 8}" y="${y + 20}" font-size="14" fill="#291b13" font-family="Fira Sans, Arial, sans-serif" style="font-variant-numeric:tabular-nums">${pct(r.share)}</text>
       <title>${esc(r.desc ? r.label + ": " + r.desc : r.label)} (${r.n} comments)</title>
     </g>`);
     y += rowH;
   });
-  out.unshift(`<text x="${W - 14}" y="${-2}" text-anchor="middle" font-size="10" font-weight="700" class="muted">ARIA</text>`);
-  document.getElementById("main").innerHTML = rows.length
-    ? `<svg viewBox="0 -14 ${W} ${y + 18}" width="100%" style="min-width:680px">${out.join("")}</svg>`
-    : `<p class="empty">No coded topics yet for this selection.</p>`;
-  document.querySelectorAll("#main .row").forEach(g => {
-    const pick = () => { const k = g.dataset.key; state.sel = state.sel && state.sel.key === k && state.sel.lens === state.lens ? null : { lens: state.lens, key: k }; render(); document.getElementById("rows").scrollIntoView({ behavior: "smooth", block: "nearest" }); };
-    g.addEventListener("click", pick);
-    g.addEventListener("keydown", e => { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); pick(); } });
-  });
+  document.getElementById("main").innerHTML = rows.length ? `<svg viewBox="0 0 ${W} ${y + 4}" width="100%" style="min-width:700px">${out.join("")}</svg>` : `<p class="empty">No comments match this selection.</p>`;
+  document.querySelectorAll("#main .row").forEach(g => bindPick(g, () => { const k = g.dataset.key; toggleSel(k, null); }));
   renderInsight(rows);
 }
-
 function renderInsight(rows) {
-  const el = document.getElementById("insight");
-  const withAria = rows.filter(r => r.aria), without = rows.filter(r => !r.aria);
-  const fmt = arr => arr.map(r => `${esc(r.label)} (${pct(r.share)})`).join(", ") || "none";
-  const unit = state.lens === "questions" ? "questions" : state.lens === "sections" ? "sections" : "topics";
-  const rare = [...withAria].sort((a, b) => a.share - b.share).slice(0, 3);
-  const common = [...without].sort((a, b) => b.share - a.share).slice(0, 3);
-  const pool = filtered().length;
-  el.innerHTML = `
-    <div><strong>${withAria.length} of ${rows.length} ${unit} addressed by ARIA</strong>Out of ${pool} readable comments in this selection.</div>
-    <div><strong>ARIA's least-shared ${unit}</strong>${fmt(rare)}</div>
-    <div><strong>Common ${unit} ARIA did not address</strong>${fmt(common)}</div>`;
+  const unit = { questions: "questions", sections: "sections", topics: "topics" }[state.lens];
+  const withA = rows.filter(r => r.aria), without = rows.filter(r => !r.aria);
+  const fmt = arr => arr.length ? arr.map(r => `${esc(state.lens === "questions" ? r.label : r.label)} (${pct(r.share)})`).join(", ") : "None";
+  document.getElementById("insight").innerHTML = `
+    <div><strong>ARIA's coverage</strong>${withA.length} of ${rows.length} ${unit}, compared with ${filtered().length} comments in this selection</div>
+    <div><strong>ARIA's least shared</strong>${fmt([...withA].sort((a, b) => a.share - b.share).slice(0, 3))}</div>
+    <div><strong>Common, not in ARIA's comment</strong>${fmt([...without].sort((a, b) => b.share - a.share).slice(0, 3))}</div>`;
 }
 
+/* Grid */
+const STOPS = [[228, 221, 208], [127, 185, 188], [0, 132, 138], [0, 71, 75]];
+function shade(v) { const t = Math.min(v, .8) / .8 * 3, i = Math.min(2, Math.floor(t)), f = t - i, a = STOPS[i], b = STOPS[i + 1]; return `rgb(${a.map((x, k) => Math.round(x + (b[k] - x) * f)).join(",")})`; }
+function renderGrid() {
+  const cols = catalog(state.lens).filter(c => state.lens !== "topics" || readable().some(x => x.topics.includes(c.key)) || ariaItems("topics").includes(c.key));
+  document.getElementById("gridTitle").textContent = { questions: "Commenter category by question", sections: "Commenter category by section", topics: "Commenter category by topic" }[state.lens];
+  const cats = [...new Set(readable().map(c => c.commenter_type))].map(t => ({ t, pool: readable().filter(c => c.commenter_type === t) })).sort((a, b) => b.pool.length - a.pool.length);
+  const rows = cats.map(c => ({ kind: "cat", key: c.t, label: c.t, n: c.pool.length, val: k => shareOf(c.pool, k, state.lens) }));
+  rows.push({ kind: "all", key: "all", label: "All comments", n: readable().length, val: k => shareOf(readable(), k, state.lens) });
+  const aset = new Set(ariaItems(state.lens));
+  rows.push({ kind: "aria", key: "aria", label: "ARIA", val: k => aset.has(k) ? 1 : 0 });
+  renderRowToggles(rows);
+  for (let i = rows.length - 1; i >= 0; i--) if (state.hidden.has(rows[i].key)) rows.splice(i, 1);
+  state.pinned.forEach(id => { const c = BYID[id]; if (c) { const s = new Set(itemsFor(c, state.lens)); rows.push({ kind: "pin", key: id, label: `${short(id)} · ${nameOf(c)}`, val: k => c.unreadable ? null : (s.has(k) ? 1 : 0) }); } });
+
+  const many = cols.length > 8, lw = 250, cw = many ? 30 : Math.max(70, Math.min(120, 820 / cols.length)), rh = 30, headH = many ? 46 : 110;
+  const W = lw + cols.length * cw + 40;
+  const out = [];
+  if (state.lens === "questions") {
+    META.sections.forEach(s => { const first = cols.findIndex(c => c.group === s.key); if (first >= 0) out.push(`<text x="${lw + first * cw}" y="14" font-size="12" font-weight="700" letter-spacing="1" fill="#00848a" font-family="Fira Sans, Arial, sans-serif">${esc(s.label.split(" ").slice(-1)[0].toUpperCase())}</text>`); });
+  }
+  cols.forEach((c, i) => {
+    const x = lw + i * cw + cw / 2;
+    out.push(many
+      ? `<text x="${x}" y="${headH - 8}" font-size="13" font-weight="700" text-anchor="middle" fill="#291b13" font-family="Fira Sans, Arial, sans-serif">${esc(c.key)}</text>`
+      : `<text transform="translate(${x - 4},${headH - 8}) rotate(-35)" font-size="13" fill="#291b13" font-family="Fira Sans, Arial, sans-serif">${esc(c.label.length > 30 ? c.label.slice(0, 28) + "…" : c.label)}</text>`);
+  });
+  let y = headH;
+  rows.forEach(r => {
+    if (r.kind === "all" || r.kind === "aria") y += 8;
+    const bold = r.kind !== "cat" && r.kind !== "pin";
+    out.push(`<text x="0" y="${y + 20}" font-size="14" font-weight="${bold ? 700 : 400}" fill="#291b13" font-family="Fira Sans, Arial, sans-serif">${esc(r.label.length > 30 ? r.label.slice(0, 28) + "…" : r.label)}${r.n ? ` <tspan fill="#6b5a4f" font-weight="400">(${r.n})</tspan>` : ""}</text>`);
+    if (r.kind === "pin") out.push(`<g class="unpin" data-id="${esc(r.key)}" tabindex="0" role="button" aria-label="Remove row" style="cursor:pointer"><circle cx="${lw - 14}" cy="${y + 15}" r="9" fill="#f7f5f1"></circle><text x="${lw - 14}" y="${y + 19.5}" font-size="13" text-anchor="middle" fill="#6b5a4f">×</text></g>`);
+    cols.forEach((c, i) => {
+      const v = r.val(c.key), on = state.sel && state.sel.lens === state.lens && state.sel.key === c.key && (state.cat === null ? r.kind === "all" : state.cat === r.key);
+      const tip = v === null ? `${r.label}: unreadable` : `${r.label}, ${c.label}: ${r.kind === "aria" || r.kind === "pin" ? (v ? "addressed" : "not addressed") : pct(v)}`;
+      out.push(`<rect class="cell" data-key="${esc(c.key)}" data-row="${esc(r.key)}" data-kind="${r.kind}" x="${lw + i * cw}" y="${y}" width="${cw - 2}" height="${rh - 3}" fill="${v === null ? "#f7f5f1" : shade(v)}" ${on ? 'stroke="#291b13" stroke-width="2.5"' : ""}><title>${esc(tip)}</title></rect>`);
+    });
+    y += rh;
+  });
+  document.getElementById("grid").innerHTML = `<svg viewBox="0 0 ${W} ${y + 6}" width="100%" style="min-width:${Math.min(W, 900)}px">${out.join("")}</svg>`;
+  document.querySelectorAll("#grid .cell").forEach(el => el.addEventListener("click", () => {
+    const kind = el.dataset.kind, row = el.dataset.row;
+    if (kind === "aria" || kind === "pin") { toggleSel(el.dataset.key, null); return; }
+    toggleSel(el.dataset.key, kind === "cat" ? row : null);
+  }));
+  document.querySelectorAll("#grid .unpin").forEach(g => bindPick(g, () => { state.pinned = state.pinned.filter(x => x !== g.dataset.id); render(); }));
+  document.getElementById("rampKey").innerHTML = [0, .2, .4, .6, .8].map(v => `<i style="background:${shade(v)}"></i>`).join("") + `<span style="margin-left:6px">0% to 80%+</span>`;
+}
+
+function renderRowToggles(rows) {
+  const box = document.getElementById("rowToggles");
+  box.querySelectorAll(".pill").forEach(b => b.remove());
+  rows.forEach(r => {
+    const b = document.createElement("button"); b.type = "button"; b.className = "pill small"; b.textContent = r.label;
+    b.setAttribute("aria-pressed", String(!state.hidden.has(r.key)));
+    b.onclick = () => { state.hidden.has(r.key) ? state.hidden.delete(r.key) : state.hidden.add(r.key); renderGrid(); };
+    box.appendChild(b);
+  });
+}
+
+/* Small charts */
 function renderTypes() {
-  const pool = D.filter(c => !c.unreadable || true);
-  const counts = {}; pool.forEach(c => { const t = c.commenter_type || "Other"; counts[t] = counts[t] || { n: 0, inf: 0 }; counts[t].n++; if (c.type_inferred) counts[t].inf++; });
+  const counts = {}; D.forEach(c => { const t = c.commenter_type || "Other"; counts[t] = counts[t] || { n: 0, inf: 0 }; counts[t].n++; if (c.type_inferred) counts[t].inf++; });
   const rows = Object.entries(counts).sort((a, b) => b[1].n - a[1].n);
-  const W = 520, x0 = 190, barW = W - x0 - 40, rowH = 24, max = Math.max(...rows.map(r => r[1].n));
+  const W = 560, x0 = 220, barW = W - x0 - 40, rowH = 28, max = Math.max(...rows.map(r => r[1].n));
   let y = 0; const out = rows.map(([t, v]) => {
     const full = v.n / max * barW, inf = v.inf / max * barW, on = state.types.has(t);
     const g = `<g class="row${on ? " on" : ""}" data-type="${esc(t)}" tabindex="0" role="button" aria-label="${esc(t)}: ${v.n} comments">
-      <rect class="hit" x="0" y="${y}" width="${W}" height="${rowH}" fill="transparent" rx="3"></rect>
-      <text x="0" y="${y + 16}" font-size="12">${esc(t)}</text>
-      <rect x="${x0}" y="${y + 6}" width="${full - inf}" height="${rowH - 12}" fill="var(--bar-strong)" rx="2"></rect>
-      <rect x="${x0 + full - inf}" y="${y + 6}" width="${inf}" height="${rowH - 12}" fill="var(--bar)" rx="2"></rect>
-      <text x="${x0 + full + 6}" y="${y + 16}" font-size="12" style="font-variant-numeric:tabular-nums">${v.n}</text></g>`;
+      <rect class="hit" x="0" y="${y}" width="${W}" height="${rowH}" fill="transparent"></rect>
+      <text x="0" y="${y + 19}" font-size="14" font-weight="${on ? 700 : 400}" fill="#291b13" font-family="Fira Sans, Arial, sans-serif">${esc(t)}</text>
+      <rect x="${x0}" y="${y + 7}" width="${full - inf}" height="${rowH - 14}" fill="#291b13"></rect>
+      <rect x="${x0 + full - inf}" y="${y + 7}" width="${inf}" height="${rowH - 14}" fill="#c9bfae"></rect>
+      <text x="${x0 + full + 8}" y="${y + 19}" font-size="14" fill="#291b13" font-family="Fira Sans, Arial, sans-serif" style="font-variant-numeric:tabular-nums">${v.n}</text></g>`;
     y += rowH; return g;
   });
   const el = document.getElementById("types-chart");
-  el.innerHTML = `<svg viewBox="0 0 ${W} ${y + 4}" width="100%">${out.join("")}</svg>`;
-  el.querySelectorAll(".row").forEach(g => {
-    const pick = () => { const t = g.dataset.type; state.types.has(t) ? state.types.delete(t) : state.types.add(t); render(); };
-    g.addEventListener("click", pick);
-    g.addEventListener("keydown", e => { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); pick(); } });
-  });
+  el.innerHTML = `<svg viewBox="0 0 ${W} ${y}" width="100%">${out.join("")}</svg>`;
+  el.querySelectorAll(".row").forEach(g => bindPick(g, () => { const t = g.dataset.type; state.types.has(t) ? state.types.delete(t) : state.types.add(t); render(); }));
 }
-
-function weekStart(d) { const x = new Date(d); const day = (x.getUTCDay() + 6) % 7; x.setUTCDate(x.getUTCDate() - day); x.setUTCHours(0, 0, 0, 0); return x; }
+function weekStart(d) { const x = new Date(d); x.setUTCDate(x.getUTCDate() - (x.getUTCDay() + 6) % 7); x.setUTCHours(0, 0, 0, 0); return x; }
 function renderTime() {
-  const by = new Map();
-  D.forEach(c => { const k = weekStart(c.received || c.posted).toISOString().slice(0, 10); by.set(k, (by.get(k) || 0) + 1); });
+  const by = new Map(); D.forEach(c => { const k = weekStart(c.received || c.posted).toISOString().slice(0, 10); by.set(k, (by.get(k) || 0) + 1); });
   const keys = [...by.keys()].sort(); if (!keys.length) return;
   const all = []; for (let d = new Date(keys[0]); d <= new Date(keys[keys.length - 1]); d.setUTCDate(d.getUTCDate() + 7)) all.push(d.toISOString().slice(0, 10));
-  const W = 520, H = 200, padL = 30, padB = 34, padT = 10, max = Math.max(...all.map(k => by.get(k) || 0));
-  const step = Math.max(1, Math.ceil(max / 4)), ticks = []; for (let t = 0; t <= max; t += step) ticks.push(t);
-  const bw = (W - padL) / all.length;
-  const yS = v => H - padB - v / (ticks[ticks.length - 1] || 1) * (H - padB - padT);
-  const out = ticks.map(t => `<line x1="${padL}" x2="${W}" y1="${yS(t)}" y2="${yS(t)}" stroke="var(--rule)"></line><text x="${padL - 6}" y="${yS(t) + 4}" text-anchor="end" font-size="10" class="muted">${t}</text>`);
+  const W = 560, H = 230, padL = 34, padB = 36, padT = 10, max = Math.max(...all.map(k => by.get(k) || 0));
+  const step = Math.max(1, Math.ceil(max / 4 / 5) * 5), top = Math.ceil(max / step) * step, ticks = []; for (let t = 0; t <= top; t += step) ticks.push(t);
+  const bw = (W - padL) / all.length, yS = v => H - padB - v / top * (H - padB - padT);
+  const out = ticks.map(t => `<line x1="${padL}" x2="${W}" y1="${yS(t)}" y2="${yS(t)}" stroke="#e4ddd0"></line><text x="${padL - 8}" y="${yS(t) + 4}" text-anchor="end" font-size="12" fill="#6b5a4f" font-family="Fira Sans, Arial, sans-serif">${t}</text>`);
   all.forEach((k, i) => {
-    const v = by.get(k) || 0, x = padL + i * bw + 2;
-    out.push(`<rect x="${x}" y="${yS(v)}" width="${Math.max(1, bw - 4)}" height="${H - padB - yS(v)}" fill="var(--bar-strong)" rx="1.5"><title>Week of ${k}: ${v}</title></rect>`);
-    if (i % Math.ceil(all.length / 5) === 0 || i === all.length - 1) {
-      const d = new Date(k); out.push(`<text x="${x + bw / 2 - 2}" y="${H - padB + 16}" text-anchor="middle" font-size="10" class="muted">${d.toLocaleDateString("en-US", { month: "short", day: "numeric", timeZone: "UTC" })}</text>`);
-    }
+    const v = by.get(k) || 0, x = padL + i * bw + 3;
+    out.push(`<rect x="${x}" y="${yS(v)}" width="${Math.max(1, bw - 6)}" height="${H - padB - yS(v)}" fill="#00848a"><title>Week of ${k}: ${v} comments</title></rect>`);
+    if (i % Math.ceil(all.length / 5) === 0 || i === all.length - 1) out.push(`<text x="${x + bw / 2 - 3}" y="${H - padB + 18}" text-anchor="middle" font-size="12" fill="#6b5a4f" font-family="Fira Sans, Arial, sans-serif">${new Date(k).toLocaleDateString("en-US", { month: "short", day: "numeric", timeZone: "UTC" })}</text>`);
   });
   document.getElementById("time-chart").innerHTML = `<svg viewBox="0 0 ${W} ${H}" width="100%">${out.join("")}</svg>`;
 }
 
+/* Table */
 function renderTable() {
   const q = state.q.trim().toLowerCase();
   let rows = D.filter(c => state.types.size === 0 || state.types.has(c.commenter_type));
+  if (state.cat) rows = rows.filter(c => c.commenter_type === state.cat);
   if (state.sel) rows = rows.filter(c => itemsFor(c, state.sel.lens).includes(state.sel.key));
   if (q) rows = rows.filter(c => [c.id, c.org, c.title, c.summary, c.commenter_type, ...(c.topics || []), ...(c.tags || [])].join(" ").toLowerCase().includes(q));
   const note = document.getElementById("selNote"), clear = document.getElementById("clear");
   if (state.sel) {
     const it = catalog(state.sel.lens).find(i => i.key === state.sel.key);
-    note.textContent = `Showing ${rows.length} comments addressing ${it ? it.label : state.sel.key}`; clear.hidden = false;
+    note.textContent = `${rows.length} comments${state.cat ? " from " + state.cat : ""} addressing ${it ? it.label : state.sel.key}`; clear.hidden = false;
   } else { note.textContent = `${rows.length} comments`; clear.hidden = true; }
-  const aria = META.aria;
-  const ariaRow = (!state.sel || ariaHas(state.sel.lens, state.sel.key)) && (!q || "aria".includes(q) || aria.summary.toLowerCase().includes(q))
-    ? `<tr class="aria-row"><td class="id">Pending</td><td><b>ARIA</b> (our comment)</td><td>Academia</td><td><div class="qs">${aria.q_addr.map(n => `<span class="q">Q${n}</span>`).join("")}</div></td><td>${aria.topics.map(t => `<div class="tag">${esc(t)}</div>`).join("")}</td><td class="num">${aria.pages}</td><td>${esc(aria.summary)}</td></tr>` : "";
+  const a = META.aria, ariaShow = (!state.sel || ariaItems(state.sel.lens).includes(state.sel.key)) && !state.cat && (!q || "aria".includes(q) || a.summary.toLowerCase().includes(q));
+  const ariaRow = ariaShow ? `<tr class="aria-row"><td class="id">Pending</td><td><b>ARIA</b></td><td>Academia</td><td><div class="qs">${a.q_addr.map(n => `<span class="q">Q${n}</span>`).join("")}</div></td><td>${a.topics.map(t => `<div class="tag">${esc(t)}</div>`).join("")}</td><td class="num">${a.pages}</td><td>${esc(a.summary)}</td><td></td></tr>` : "";
   const more = document.getElementById("more"), limit = 30;
   more.hidden = state.all || rows.length <= limit; more.textContent = `Show all ${rows.length} comments`;
   const shown = state.all ? rows : rows.slice(0, limit);
   document.getElementById("rows").innerHTML = ariaRow + (rows.length ? shown.map(c => `
-    <tr><td class="id"><a href="https://www.regulations.gov/comment/${esc(c.id)}" target="_blank" rel="noopener">${esc(c.id.replace("FDA-2026-N-7874-", ""))}</a></td>
-    <td>${esc(c.org || c.title.replace(/^Comment from /, ""))}</td>
+    <tr><td class="id"><a href="https://www.regulations.gov/comment/${esc(c.id)}" target="_blank" rel="noopener">${esc(short(c.id))}</a></td>
+    <td>${esc(nameOf(c))}</td>
     <td>${esc(c.commenter_type)}${c.type_inferred ? '<div class="inferred">inferred</div>' : ""}</td>
     <td><div class="qs">${c.unreadable ? '<span class="tag">Attachment unreadable</span>' : c.q_addr.map(n => `<span class="q">Q${n}</span>`).join("")}</div></td>
     <td>${(c.topics || []).map(t => `<div class="tag">${esc(t)}</div>`).join("")}</td>
     <td class="num">${c.pages ?? ""}</td>
-    <td>${esc(c.summary)}</td></tr>`).join("") : (ariaRow ? "" : `<tr><td colspan="7" class="empty">No comments match.</td></tr>`));
+    <td>${esc(c.summary)}</td>
+    <td><button type="button" class="cmp" data-id="${esc(c.id)}" aria-pressed="${state.pinned.includes(c.id)}">${state.pinned.includes(c.id) ? "In grid" : "Compare"}</button></td></tr>`).join("") : (ariaRow ? "" : `<tr><td colspan="8" class="empty">No comments match.</td></tr>`));
+  document.querySelectorAll("#rows .cmp").forEach(b => b.onclick = () => { togglePin(b.dataset.id); });
 }
 
-function renderControls() {
-  ["lens", "weight"].forEach(id => document.querySelectorAll(`#${id} button`).forEach(b => b.setAttribute("aria-pressed", String(b.dataset.v === state[id]))));
-  document.querySelectorAll("#types .chip").forEach(b => b.setAttribute("aria-pressed", String(state.types.has(b.dataset.v))));
+/* Interaction */
+function bindPick(el, fn) { el.addEventListener("click", fn); el.addEventListener("keydown", e => { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); fn(); } }); }
+function toggleSel(key, cat) {
+  const same = state.sel && state.sel.lens === state.lens && state.sel.key === key && state.cat === cat;
+  state.sel = same ? null : { lens: state.lens, key }; state.cat = same ? null : cat; state.all = false; render();
+  if (!same) document.getElementById("rows").scrollIntoView({ behavior: "smooth", block: "nearest" });
 }
-function render() { renderControls(); renderMain(); renderTypes(); renderTable(); }
+function togglePin(id) {
+  if (state.pinned.includes(id)) state.pinned = state.pinned.filter(x => x !== id);
+  else if (state.pinned.length >= 12) { document.getElementById("addNote").textContent = "Up to 12 added rows. Remove one to add another."; return; }
+  else state.pinned.push(id);
+  document.getElementById("addNote").textContent = ""; render();
+}
+function addFromField() {
+  const v = document.getElementById("addField").value.trim().toLowerCase(), note = document.getElementById("addNote");
+  if (!v) { note.textContent = "Type a commenter name or comment number."; return; }
+  const num = v.match(/(\d{4})/);
+  const hit = D.find(c => num && short(c.id) === num[1]) || D.find(c => nameOf(c).toLowerCase().includes(v.replace(/^\d{4}\s*·\s*/, "")));
+  if (!hit) { note.textContent = "No comment matches that. Try the number shown in the table."; return; }
+  if (!state.pinned.includes(hit.id)) togglePin(hit.id);
+  document.getElementById("addField").value = "";
+}
+function renderControls() {
+  ["lens", "weight"].forEach(id => document.querySelectorAll(`#${id} .pill`).forEach(b => b.setAttribute("aria-pressed", String(b.dataset.v === state[id]))));
+  document.querySelectorAll("#types .pill").forEach(b => b.setAttribute("aria-pressed", String(state.types.has(b.dataset.v))));
+}
+function render() { renderControls(); renderMain(); renderGrid(); renderTypes(); renderTable(); }
 
 function init() {
+  D.forEach(c => BYID[c.id] = c);
   const types = [...new Set(D.map(c => c.commenter_type))].sort((a, b) => D.filter(c => c.commenter_type === b).length - D.filter(c => c.commenter_type === a).length);
   const box = document.getElementById("types");
-  types.forEach(t => { const b = document.createElement("button"); b.type = "button"; b.className = "chip"; b.dataset.v = t; b.textContent = t; b.setAttribute("aria-pressed", "false"); b.onclick = () => { state.types.has(t) ? state.types.delete(t) : state.types.add(t); render(); }; box.appendChild(b); });
-  document.querySelectorAll("#lens button").forEach(b => b.onclick = () => { state.lens = b.dataset.v; render(); });
-  document.querySelectorAll("#weight button").forEach(b => b.onclick = () => { state.weight = b.dataset.v; render(); });
+  types.forEach(t => { const b = document.createElement("button"); b.type = "button"; b.className = "pill small"; b.dataset.v = t; b.textContent = t; b.setAttribute("aria-pressed", "false"); b.onclick = () => { state.types.has(t) ? state.types.delete(t) : state.types.add(t); render(); }; box.appendChild(b); });
+  document.querySelectorAll("#lens .pill").forEach(b => b.onclick = () => { state.lens = b.dataset.v; state.sel = null; state.cat = null; render(); });
+  document.querySelectorAll("#weight .pill").forEach(b => b.onclick = () => { state.weight = b.dataset.v; render(); });
   document.getElementById("search").addEventListener("input", e => { state.q = e.target.value; renderTable(); });
+  document.getElementById("clear").onclick = () => { state.sel = null; state.cat = null; render(); };
   document.getElementById("more").onclick = () => { state.all = true; renderTable(); };
-  document.getElementById("clear").onclick = () => { state.sel = null; render(); };
+  document.getElementById("addBtn").onclick = addFromField;
+  document.getElementById("addField").addEventListener("keydown", e => { if (e.key === "Enter") { e.preventDefault(); addFromField(); } });
+  document.getElementById("addField").addEventListener("input", () => document.getElementById("addNote").textContent = "");
+  document.getElementById("commentList").innerHTML = D.map(c => `<option value="${esc(short(c.id) + " · " + nameOf(c))}"></option>`).join("");
   const unread = D.filter(c => c.unreadable).length;
   const upd = new Date(META.updated).toLocaleDateString("en-US", { month: "long", day: "numeric", year: "numeric" });
-  document.getElementById("facts").innerHTML = `<span><b>${D.length}</b> comments posted</span><span><b>${D.length - unread}</b> readable and coded</span><span>Updated <b>${esc(upd)}</b></span><span>Comment period closed <b>October 19, 2026</b></span>`;
+  document.getElementById("facts").innerHTML = `<span><b>${D.length}</b> comments posted</span><span><b>${D.length - unread}</b> coded</span><span>Updated <b>${esc(upd)}</b></span><span>Comment period closed <b>October 19, 2026</b></span>`;
   document.getElementById("method").textContent = META.method || "";
   renderTime(); render();
 }
