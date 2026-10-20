@@ -156,8 +156,6 @@ footer p { margin: 0; }
     <h2>Overview</h2>
     <div class="panel">
       <div class="legend">
-        <span><i class="sw" style="background:var(--teal)"></i>Addressed by ARIA</span>
-        <span><i class="sw" style="background:var(--ink)"></i>Not addressed by ARIA</span>
         <span>Select a row to view comments</span>
       </div>
       <div class="chart" id="main"></div>
@@ -272,11 +270,11 @@ function renderMain() {
       y += 28; last = r.group;
     }
     const bw = r.share ? Math.max(2, r.share / max * barW) : 0, on = state.sel && state.sel.lens === state.lens && state.sel.key === r.key;
-    out.push(`<g class="row${on ? " on" : ""}" data-key="${esc(r.key)}" tabindex="0" role="button" aria-label="${esc(r.label)}: ${pct(r.share)} of comments${r.aria ? ", addressed by ARIA" : ""}">
+    out.push(`<g class="row${on ? " on" : ""}" data-key="${esc(r.key)}" tabindex="0" role="button" aria-label="${esc(r.label)}: ${pct(r.share)} of comments">
       <rect class="hit" x="0" y="${y}" width="${W}" height="${rowH}" fill="transparent"></rect>
       <text x="0" y="${y + 20}" font-size="15" font-weight="${state.lens === "questions" ? 700 : 500}" fill="#111111" font-family="Fira Sans, Arial, sans-serif">${esc(r.label)}</text>
       ${descW ? `<text x="${labelW}" y="${y + 20}" font-size="14" fill="#555555" font-family="Fira Sans, Arial, sans-serif">${esc(r.desc.length > Math.floor(descW / 7.4) ? r.desc.slice(0, Math.floor(descW / 7.4) - 2) + "…" : r.desc)}</text>` : ""}
-      <rect class="bar" x="${x0}" y="${y + 7}" width="${bw}" height="${rowH - 14}" fill="${r.aria ? "#00848a" : "#111111"}" stroke="${on ? "#00dfe9" : "none"}" stroke-width="3"></rect>
+      <rect class="bar" x="${x0}" y="${y + 7}" width="${bw}" height="${rowH - 14}" fill="#00848a" stroke="${on ? "#00dfe9" : "none"}" stroke-width="3"></rect>
       <text x="${x0 + bw + 8}" y="${y + 20}" font-size="14" fill="#111111" font-family="Fira Sans, Arial, sans-serif" style="font-variant-numeric:tabular-nums">${pct(r.share)}</text>
       <title>${esc(r.desc ? r.label + ": " + r.desc : r.label)} (${r.n} comments)</title>
     </g>`);
@@ -303,11 +301,11 @@ function renderGrid() {
   const cats = [...new Set(readable().map(c => c.commenter_type))].map(t => ({ t, pool: readable().filter(c => c.commenter_type === t) })).sort((a, b) => b.pool.length - a.pool.length);
   const rows = cats.map(c => ({ kind: "cat", key: c.t, label: c.t, n: c.pool.length, val: k => shareOf(c.pool, k, L) }));
   rows.push({ kind: "all", key: "all", label: "All comments", n: readable().length, val: k => shareOf(readable(), k, L) });
-  const aset = new Set(ariaItems(L));
-  rows.push({ kind: "aria", key: "aria", label: "ARIA", val: k => aset.has(k) ? 1 : 0 });
   renderRowToggles(rows);
   for (let i = rows.length - 1; i >= 0; i--) if (state.hidden.has(rows[i].key)) rows.splice(i, 1);
-  state.pinned.forEach(id => { const c = BYID[id]; if (c) { const s = new Set(itemsFor(c, L)); rows.push({ kind: "pin", key: id, label: `${short(id)} · ${nameOf(c)}`, val: k => c.unreadable ? null : (s.has(k) ? 1 : 0) }); } });
+  state.pinned.forEach(id => {
+    if (id === "ARIA") { const s = new Set(ariaItems(L)); rows.push({ kind: "pin", key: "ARIA", label: "ARIA", val: k => s.has(k) ? 1 : 0 }); return; }
+    const c = BYID[id]; if (c) { const s = new Set(itemsFor(c, L)); rows.push({ kind: "pin", key: id, label: `${short(id)} · ${nameOf(c)}`, val: k => c.unreadable ? null : (s.has(k) ? 1 : 0) }); } });
 
   const avail = Math.max(600, document.getElementById("grid").clientWidth || 900), many = cols.length > 8, lw = 230, cw = many ? Math.max(22, Math.floor((avail - lw - 12) / cols.length)) : Math.max(70, Math.min(140, (avail - lw - 12) / cols.length)), rh = 30, headH = many ? 46 : 36;
   const W = lw + cols.length * cw + 12;
@@ -321,9 +319,10 @@ function renderGrid() {
       ? `<text x="${x}" y="${headH - 8}" font-size="13" font-weight="700" text-anchor="middle" fill="#111111" font-family="Fira Sans, Arial, sans-serif">${esc(c.key)}</text>`
       : `<text x="${x}" y="${headH - 10}" font-size="14" font-weight="700" text-anchor="middle" fill="#111111" font-family="Fira Sans, Arial, sans-serif">${esc({ IV: "Risk", V: "Premarket", VI: "Postmarket", VII: "Other" }[c.key] || c.label)}<title>${esc(c.label)}</title></text>`);
   });
-  let y = headH;
+  let y = headH, prevKind = null;
   rows.forEach(r => {
-    if (r.kind === "all" || r.kind === "aria") y += 8;
+    if (r.kind === "all" || (r.kind === "pin" && prevKind !== "pin")) y += 8;
+    prevKind = r.kind;
     const bold = r.kind !== "cat" && r.kind !== "pin";
     out.push(`<text x="0" y="${y + 20}" font-size="14" font-weight="${bold ? 700 : 400}" fill="#111111" font-family="Fira Sans, Arial, sans-serif">${esc(r.label.length > 30 ? r.label.slice(0, 28) + "…" : r.label)}${r.n ? ` <tspan fill="#555555" font-weight="400">(${r.n})</tspan>` : ""}</text>`);
     if (r.kind === "pin") out.push(`<g class="unpin" data-id="${esc(r.key)}" tabindex="0" role="button" aria-label="Remove row" style="cursor:pointer"><circle cx="${lw - 14}" cy="${y + 15}" r="9" fill="#f2f2f2"></circle><text x="${lw - 14}" y="${y + 19.5}" font-size="13" text-anchor="middle" fill="#555555">×</text></g>`);
@@ -353,8 +352,9 @@ function renderRowToggles(rows) {
 function renderAddMenu() {
   const q = (document.getElementById("addSearch").value || "").trim().toLowerCase();
   const list = D.filter(c => !q || (short(c.id) + " " + nameOf(c) + " " + c.commenter_type).toLowerCase().includes(q));
+  const ariaOpt = (!q || "aria nsf ai research institute on interaction for ai assistants".includes(q)) ? `<label><input type="checkbox" data-id="ARIA" ${state.pinned.includes("ARIA") ? "checked" : ""}><span><span class="num">Pending</span> ARIA</span></label>` : "";
   const menu = document.getElementById("addMenu");
-  menu.innerHTML = list.length ? list.map(c => `<label><input type="checkbox" data-id="${esc(c.id)}" ${state.pinned.includes(c.id) ? "checked" : ""}><span><span class="num">${esc(short(c.id))}</span> ${esc(nameOf(c))}</span></label>`).join("") : `<p class="note" style="margin:6px">No comments match.</p>`;
+  menu.innerHTML = (list.length || ariaOpt) ? ariaOpt + list.map(c => `<label><input type="checkbox" data-id="${esc(c.id)}" ${state.pinned.includes(c.id) ? "checked" : ""}><span><span class="num">${esc(short(c.id))}</span> ${esc(nameOf(c))}</span></label>`).join("") : `<p class="note" style="margin:6px">No comments match.</p>`;
   menu.querySelectorAll("input").forEach(i => i.onchange = () => togglePin(i.dataset.id));
   document.querySelector("#addDD summary").textContent = state.pinned.length ? `Add comments (${state.pinned.length})` : "Add comments";
 }
@@ -390,7 +390,7 @@ function renderTable() {
     const it = catalog(state.sel.lens).find(i => i.key === state.sel.key);
     note.textContent = `${rows.length} comments${state.cat ? " from " + state.cat : ""} addressing ${it ? it.label : state.sel.key}`; clear.hidden = false;
   } else { note.textContent = `${rows.length} comments`; clear.hidden = true; }
-  const a = META.aria, ariaShow = (!state.sel || ariaItems(state.sel.lens).includes(state.sel.key)) && !state.cat && (!q || "aria".includes(q) || a.summary.toLowerCase().includes(q));
+  const a = META.aria, ariaShow = state.pinned.includes("ARIA") && (!state.sel || ariaItems(state.sel.lens).includes(state.sel.key)) && !state.cat && (!q || "aria".includes(q) || a.summary.toLowerCase().includes(q));
   const qchips = arr => `<div class="qs">${arr.map(n => `<span class="q">Q${n}</span>`).join("")}</div>`;
   const ariaRow = ariaShow ? `<article class="card aria"><div class="top"><span class="who">ARIA</span></div>
     <div class="meta"><span>Academia</span><span>Received Oct 19, 2026</span><span>Posting pending</span></div>
