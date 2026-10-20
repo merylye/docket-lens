@@ -7,7 +7,7 @@
 <meta name="description" content="Where public comments on FDA's discussion paper on generative AI-enabled medical devices (FDA-2026-N-7874) focused, compared with ARIA's comment.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,500&family=Fira+Sans:wght@400;500;700&family=Fira+Sans+Condensed:wght@600;700&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,500&family=Fira+Sans:wght@400;500;700&display=swap">
 <style>
 /* Layout: full-bleed cyan title band, condensed caps headings, square black controls on white, then the overview chart, the category grid, the category bar chart, and the comment table. Single light theme in ARIA's cyan and teal. */
 :root {
@@ -49,7 +49,7 @@ h1 a { color: var(--ink); text-decoration-thickness: 3px; text-underline-offset:
 }
 body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-area-inset-top, 0px); z-index: 10; background: var(--white); }
 .group { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; }
-.label { font: 600 13px var(--cond); letter-spacing: .08em; text-transform: uppercase; color: var(--ink); min-width: 92px; }
+.label { font: 700 12px var(--sans); letter-spacing: .08em; text-transform: uppercase; color: var(--ink); min-width: 92px; }
 .pill { font: 700 14px var(--sans); padding: 6px 12px; border-radius: 3px; border: 1.5px solid var(--ink); background: var(--white); color: var(--ink); cursor: pointer; }
 .pill:hover { background: var(--cream); }
 .pill[aria-pressed="true"] { background: var(--ink); color: var(--white); }
@@ -91,7 +91,7 @@ h2 { font: 500 clamp(24px, 2.4vw, 30px)/1.15 var(--serif); margin: 0 0 12px; }
 .textbtn { font: 700 13px var(--sans); border: 0; background: none; color: var(--teal); cursor: pointer; padding: 0; }
 .tablewrap { overflow-x: auto; background: var(--white); border-top: 2px solid var(--ink); }
 table { border-collapse: collapse; width: 100%; min-width: 820px; font-size: 14px; }
-th { text-align: left; font: 600 13px var(--cond); letter-spacing: .06em; text-transform: uppercase; color: var(--ink); padding: 12px; border-bottom: 1px solid var(--ink); white-space: nowrap; }
+th { text-align: left; font: 700 12px var(--sans); letter-spacing: .08em; text-transform: uppercase; color: var(--ink); padding: 12px; border-bottom: 1px solid var(--ink); white-space: nowrap; }
 td { padding: 12px; border-bottom: 1px solid var(--rule); vertical-align: top; }
 tr:last-child td { border-bottom: 0; }
 td.id { font-variant-numeric: tabular-nums; white-space: nowrap; }
@@ -124,8 +124,8 @@ footer p { margin: 0; }
 .card .sum { font-size: 14px; margin: 0; }
 .card.aria { background: #e0fbfc; padding-inline: 10px; }
 .themes { font-size: 12px; color: var(--muted); }
-.facet { display: grid; grid-template-columns: 112px minmax(0, 1fr); gap: 8px; align-items: baseline; font-size: 13px; }
-.facet > span:first-child { font: 600 12px var(--cond); letter-spacing: .06em; text-transform: uppercase; color: var(--muted); }
+.facet { display: grid; grid-template-columns: 132px minmax(0, 1fr); gap: 8px; align-items: baseline; font-size: 13px; }
+.facet > span:first-child { font: 700 11px var(--sans); letter-spacing: .08em; text-transform: uppercase; color: var(--muted); }
 .facet .none { color: var(--muted); }
 @media (min-width: 1100px) {
   .split { grid-template-columns: minmax(0, 1.55fr) minmax(360px, 1fr); }
@@ -272,7 +272,7 @@ function renderMain() {
     if (r.group && r.group !== last) {
       if (last !== null) y += 10;
       const sec = META.sections.find(s => s.key === r.group);
-      out.push(`<text x="0" y="${y + 18}" font-size="13" font-weight="700" letter-spacing="1" fill="#00848a" font-family="Fira Sans Condensed, Arial Narrow, sans-serif">${esc(sec.label.toUpperCase())}</text>`);
+      out.push(`<text x="0" y="${y + 18}" font-size="12" font-weight="700" letter-spacing="1" fill="#00848a" font-family="Fira Sans, Arial, sans-serif">${esc(sec.label.toUpperCase())}</text>`);
       y += 28; last = r.group;
     }
     const bw = r.share ? Math.max(2, r.share / max * barW) : 0, on = state.sel && state.sel.lens === state.lens && state.sel.key === r.key;
@@ -317,7 +317,7 @@ function renderGrid() {
   const W = lw + cols.length * cw + 12;
   const out = [];
   if (L === "questions") {
-    META.sections.forEach(s => { const first = cols.findIndex(c => c.group === s.key); if (first >= 0) out.push(`<text x="${lw + first * cw}" y="14" font-size="13" font-weight="700" letter-spacing="1" fill="#00848a" font-family="Fira Sans Condensed, Arial Narrow, sans-serif">${esc(s.label.split(" ").slice(-1)[0].toUpperCase())}</text>`); });
+    META.sections.forEach(s => { const first = cols.findIndex(c => c.group === s.key); if (first >= 0) out.push(`<text x="${lw + first * cw}" y="14" font-size="12" font-weight="700" letter-spacing="1" fill="#00848a" font-family="Fira Sans, Arial, sans-serif">${esc(s.label.split(" ").slice(-1)[0].toUpperCase())}</text>`); });
   }
   cols.forEach((c, i) => {
     const x = lw + i * cw + cw / 2;
