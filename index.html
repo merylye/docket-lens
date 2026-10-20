@@ -7,57 +7,57 @@
 <meta name="description" content="Where public comments on FDA's discussion paper on generative AI-enabled medical devices (FDA-2026-N-7874) focused, compared with ARIA's comment.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400;6..72,500&family=Fira+Sans:wght@400;500;700&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@400;500;700&family=Fira+Sans+Condensed:wght@600;700&display=swap">
 <style>
-/* Layout: editorial serif opener on cream, pill controls, then the question chart, the category grid, two small charts, and the comment table. Single light theme, matching ARIA's palette. */
+/* Layout: full-bleed cyan title band, condensed caps headings, square black controls on white, then the overview chart, the category grid, the category bar chart, and the comment table. Single light theme in ARIA's cyan and teal. */
 :root {
-  --cream: #f7f5f1;
+  --cream: #f2f2f2;
   --white: #ffffff;
-  --ink: #291b13;
-  --muted: #6b5a4f;
-  --rule: #e4ddd0;
-  --sand: #e4ddd0;
+  --ink: #111111;
+  --muted: #555555;
+  --rule: #dddddd;
+  --sand: #e6e6e6;
   --teal: #00848a;
   --teal-deep: #00474b;
   --cyan: #00dfe9;
   --gold: #ffd996;
-  --serif: "Newsreader", Georgia, "Times New Roman", serif;
+  --cond: "Fira Sans Condensed", "Arial Narrow", Arial, sans-serif;
   --sans: "Fira Sans", Arial, sans-serif;
   color-scheme: light;
 }
 * { box-sizing: border-box; }
 html, body { margin: 0; }
 body {
-  background: var(--cream); color: var(--ink); font: 17px/1.55 var(--sans);
+  background: var(--white); color: var(--ink); font: 16px/1.55 var(--sans);
   padding-left: max(16px, env(safe-area-inset-left, 0px));
   padding-right: max(16px, env(safe-area-inset-right, 0px));
 }
 .wrap { max-width: 1160px; margin: 0 auto; }
 a { color: var(--teal); }
 a:focus-visible, button:focus-visible, input:focus-visible, [tabindex]:focus-visible { outline: 3px solid var(--cyan); outline-offset: 2px; }
-header { padding-block: 48px 24px; display: grid; gap: 14px; min-width: 0; }
+header { padding-block: 36px 28px; display: grid; gap: 10px; min-width: 0; background: var(--cyan); box-shadow: 0 0 0 100vmax var(--cyan); clip-path: inset(0 -100vmax); }
 .eyebrow { font-size: 15px; color: var(--ink); }
-h1 { font: 500 48px/1.1 var(--serif); margin: 0; letter-spacing: -.01em; white-space: nowrap; }
-h1 a { color: var(--teal); text-decoration-thickness: 2px; text-underline-offset: 6px; }
+h1 { font: 700 48px/1.0 var(--cond); margin: 0; text-transform: uppercase; letter-spacing: -.005em; white-space: nowrap; }
+h1 a { color: var(--ink); text-decoration-thickness: 3px; text-underline-offset: 5px; }
 .lede { font-size: 19px; max-width: 60ch; margin: 0; }
-.facts { display: flex; flex-wrap: wrap; gap: 6px 28px; font-size: 15px; color: var(--muted); }
+.facts { display: flex; flex-wrap: wrap; gap: 6px 28px; font-size: 15px; color: var(--ink); }
 .facts b { color: var(--ink); font-weight: 700; font-variant-numeric: tabular-nums; }
 .controls {
-  position: sticky; top: env(safe-area-inset-top, 0px); z-index: 5; background: var(--cream);
-  border-block: 1px solid var(--rule); padding-block: 12px; display: grid; gap: 10px;
+  position: sticky; top: env(safe-area-inset-top, 0px); z-index: 5; background: var(--white);
+  border-bottom: 2px solid var(--ink); padding-block: 14px; display: grid; gap: 10px;
 }
-body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-area-inset-top, 0px); z-index: 10; background: var(--cream); }
+body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-area-inset-top, 0px); z-index: 10; background: var(--white); }
 .group { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; }
-.label { font-size: 12px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); min-width: 92px; }
-.pill { font: 500 15px var(--sans); padding: 7px 16px; border-radius: 999px; border: 1.5px solid var(--ink); background: transparent; color: var(--ink); cursor: pointer; }
-.pill[aria-pressed="true"] { background: var(--cyan); border-color: var(--cyan); font-weight: 700; }
-.pill.small { font-size: 13px; padding: 4px 11px; border-width: 1px; border-color: #c9bfae; }
-.pill.small[aria-pressed="true"] { border-color: var(--cyan); }
+.label { font: 600 13px var(--cond); letter-spacing: .08em; text-transform: uppercase; color: var(--ink); min-width: 92px; }
+.pill { font: 700 14px var(--sans); padding: 6px 12px; border-radius: 3px; border: 1.5px solid var(--ink); background: var(--white); color: var(--ink); cursor: pointer; }
+.pill:hover { background: var(--cream); }
+.pill[aria-pressed="true"] { background: var(--ink); color: var(--white); }
+.pill.small { font-size: 13px; padding: 4px 10px; border-width: 1px; }
 main { display: grid; gap: 56px; padding-block: 40px 64px; }
 main > *, section { min-width: 0; }
-h2 { font: 500 clamp(22px, 2.6vw, 30px)/1.15 var(--serif); margin: 0 0 12px; text-wrap: balance; }
+h2 { font: 700 clamp(20px, 2.2vw, 26px)/1.1 var(--cond); text-transform: uppercase; margin: 0 0 12px; letter-spacing: .01em; }
 .sub { color: var(--muted); font-size: 15px; margin: 0 0 18px; max-width: 72ch; }
-.panel { background: var(--white); border-radius: 6px; padding: 22px; min-width: 0; }
+.panel { background: var(--white); padding-block: 4px; min-width: 0; }
 .insight { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px 28px; margin-bottom: 20px; font-size: 15px; }
 .insight strong { display: block; font-size: 12px; letter-spacing: .08em; text-transform: uppercase; color: var(--teal); margin-bottom: 4px; }
 .legend { display: flex; gap: 18px; flex-wrap: wrap; font-size: 13px; color: var(--muted); margin-bottom: 12px; align-items: center; }
@@ -75,8 +75,8 @@ h2 { font: 500 clamp(22px, 2.6vw, 30px)/1.15 var(--serif); margin: 0 0 12px; tex
 .dd summary { list-style: none; display: inline-block; }
 .dd summary::-webkit-details-marker { display: none; }
 .dd summary::after { content: " ▾"; font-size: 11px; }
-.dd[open] summary { background: var(--cream); }
-.menu { position: absolute; z-index: 6; top: calc(100% + 6px); left: 0; background: var(--white); border: 1.5px solid var(--ink); border-radius: 8px; padding: 8px; width: 300px; max-width: calc(100vw - 40px); display: grid; gap: 2px; }
+.dd[open] summary { background: var(--ink); color: var(--white); }
+.menu { position: absolute; z-index: 6; top: calc(100% + 6px); left: 0; background: var(--white); border: 1.5px solid var(--ink); border-radius: 3px; padding: 8px; width: 300px; max-width: calc(100vw - 40px); display: grid; gap: 2px; }
 .menu.wide { width: 420px; }
 .menu .list { max-height: 300px; overflow-y: auto; display: grid; gap: 2px; margin-top: 8px; }
 .menu label { display: flex; gap: 8px; align-items: flex-start; font-size: 14px; padding: 5px 6px; border-radius: 4px; cursor: pointer; }
@@ -85,27 +85,27 @@ h2 { font: 500 clamp(22px, 2.6vw, 30px)/1.15 var(--serif); margin: 0 0 12px; tex
 .menu .num { color: var(--muted); font-variant-numeric: tabular-nums; }
 .menu .field { width: 100%; }
 .adder { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; margin-bottom: 14px; }
-.field { font: 15px var(--sans); padding: 8px 12px; border: 1.5px solid var(--ink); border-radius: 999px; background: var(--white); color: var(--ink); min-width: 0; width: min(100%, 420px); }
+.field { font: 15px var(--sans); padding: 7px 10px; border: 1.5px solid var(--ink); border-radius: 3px; background: var(--white); color: var(--ink); min-width: 0; width: min(100%, 420px); }
 .note { font-size: 13px; color: var(--muted); }
 .textbtn { font: 700 13px var(--sans); border: 0; background: none; color: var(--teal); cursor: pointer; padding: 0; }
-.tablewrap { overflow-x: auto; background: var(--white); border-radius: 6px; }
+.tablewrap { overflow-x: auto; background: var(--white); border-top: 2px solid var(--ink); }
 table { border-collapse: collapse; width: 100%; min-width: 820px; font-size: 14px; }
-th { text-align: left; font-size: 12px; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); padding: 12px; border-bottom: 1.5px solid var(--ink); white-space: nowrap; }
+th { text-align: left; font: 600 13px var(--cond); letter-spacing: .06em; text-transform: uppercase; color: var(--ink); padding: 12px; border-bottom: 1px solid var(--ink); white-space: nowrap; }
 td { padding: 12px; border-bottom: 1px solid var(--rule); vertical-align: top; }
 tr:last-child td { border-bottom: 0; }
 td.id { font-variant-numeric: tabular-nums; white-space: nowrap; }
 td.num { font-variant-numeric: tabular-nums; text-align: right; }
 .qs { display: flex; flex-wrap: wrap; gap: 3px; }
-.q { font-size: 12px; padding: 1px 6px; border-radius: 999px; background: var(--cream); }
+.q { font-size: 12px; padding: 1px 5px; border-radius: 2px; background: var(--cream); }
 .tag { font-size: 12px; color: var(--muted); }
 .inferred { font-size: 12px; color: var(--muted); font-style: italic; }
-.aria-row td { background: #eaf6f6; }
-.cmp { font: 700 12px var(--sans); padding: 3px 10px; border-radius: 999px; border: 1px solid var(--teal); background: transparent; color: var(--teal); cursor: pointer; white-space: nowrap; }
+.aria-row td { background: #e0fbfc; }
+.cmp { font: 700 12px var(--sans); padding: 3px 9px; border-radius: 3px; border: 1px solid var(--teal); background: transparent; color: var(--teal); cursor: pointer; white-space: nowrap; }
 .cmp[aria-pressed="true"] { background: var(--teal); color: var(--white); }
 .filters { display: flex; flex-wrap: wrap; gap: 12px; align-items: center; margin-bottom: 14px; }
 .empty { color: var(--muted); padding: 28px; text-align: center; }
 .more { margin-top: 12px; }
-footer { border-top: 1.5px solid var(--ink); padding-block: 22px 40px; font-size: 13px; color: var(--muted); display: grid; gap: 8px; }
+footer { border-top: 2px solid var(--ink); padding-block: 22px 40px; font-size: 13px; color: var(--muted); display: grid; gap: 8px; }
 footer p { margin: 0; }
 @media (prefers-reduced-motion: no-preference) { .bar { transition: width .25s ease; } }
 </style>
@@ -136,7 +136,7 @@ footer p { margin: 0; }
     <div class="panel">
       <div class="legend">
         <span><i class="sw" style="background:var(--teal)"></i>Addressed by ARIA</span>
-        <span><i class="sw" style="background:var(--sand)"></i>Not addressed by ARIA</span>
+        <span><i class="sw" style="background:var(--ink)"></i>Not addressed by ARIA</span>
         <span>Select a row to view comments</span>
       </div>
       <div class="chart" id="main"></div>
@@ -168,6 +168,7 @@ footer p { margin: 0; }
 
   <section>
     <h2>Commenter category</h2>
+    <div class="legend"><span><i class="sw" style="background:var(--ink)"></i>Category filed on Regulations.gov</span><span><i class="sw" style="background:#bbbbbb"></i>No category filed, assigned from content</span><span>Select a bar to filter</span></div>
     <div class="panel chart" id="types-chart"></div>
   </section>
 
@@ -237,28 +238,29 @@ function renderMain() {
   let rows = catalog(state.lens).map(it => ({ ...it, share: shareOf(pool, it.key, state.lens) || 0, n: pool.filter(c => itemsFor(c, state.lens).includes(it.key)).length, aria: aset.has(it.key) }));
   if (state.lens === "topics") rows = rows.filter(r => r.n > 0 || r.aria).sort((a, b) => b.share - a.share);
   const max = Math.max(.05, ...rows.map(r => r.share));
-  const W = 1100, labelW = state.lens === "questions" ? 58 : (state.lens === "sections" ? 330 : 330), descW = state.lens === "questions" ? 380 : 0;
+  const narrow = document.getElementById("main").clientWidth < 640;
+  const W = narrow ? 560 : 1100, labelW = state.lens === "questions" ? 58 : (narrow ? 250 : 330), descW = state.lens === "questions" && !narrow ? 380 : 0;
   const x0 = labelW + descW + 10, barW = W - x0 - 60, rowH = 30;
   let y = 0, out = [], last = null;
   rows.forEach(r => {
     if (r.group && r.group !== last) {
       if (last !== null) y += 10;
       const sec = META.sections.find(s => s.key === r.group);
-      out.push(`<text x="0" y="${y + 18}" font-size="12" font-weight="700" letter-spacing="1" fill="#00848a" font-family="Fira Sans, Arial, sans-serif">${esc(sec.label.toUpperCase())}</text>`);
+      out.push(`<text x="0" y="${y + 18}" font-size="13" font-weight="700" letter-spacing="1" fill="#00848a" font-family="Fira Sans Condensed, Arial Narrow, sans-serif">${esc(sec.label.toUpperCase())}</text>`);
       y += 28; last = r.group;
     }
     const bw = r.share ? Math.max(2, r.share / max * barW) : 0, on = state.sel && state.sel.lens === state.lens && state.sel.key === r.key;
     out.push(`<g class="row${on ? " on" : ""}" data-key="${esc(r.key)}" tabindex="0" role="button" aria-label="${esc(r.label)}: ${pct(r.share)} of comments${r.aria ? ", addressed by ARIA" : ""}">
       <rect class="hit" x="0" y="${y}" width="${W}" height="${rowH}" fill="transparent"></rect>
-      <text x="0" y="${y + 20}" font-size="15" font-weight="${state.lens === "questions" ? 700 : 500}" fill="#291b13" font-family="Fira Sans, Arial, sans-serif">${esc(r.label)}</text>
-      ${descW ? `<text x="${labelW}" y="${y + 20}" font-size="14" fill="#6b5a4f" font-family="Fira Sans, Arial, sans-serif">${esc(r.desc.length > 54 ? r.desc.slice(0, 52) + "…" : r.desc)}</text>` : ""}
-      <rect class="bar" x="${x0}" y="${y + 7}" width="${bw}" height="${rowH - 14}" fill="${r.aria ? "#00848a" : "#e4ddd0"}" stroke="${on ? "#291b13" : "none"}" stroke-width="2"></rect>
-      <text x="${x0 + bw + 8}" y="${y + 20}" font-size="14" fill="#291b13" font-family="Fira Sans, Arial, sans-serif" style="font-variant-numeric:tabular-nums">${pct(r.share)}</text>
+      <text x="0" y="${y + 20}" font-size="15" font-weight="${state.lens === "questions" ? 700 : 500}" fill="#111111" font-family="Fira Sans, Arial, sans-serif">${esc(r.label)}</text>
+      ${descW ? `<text x="${labelW}" y="${y + 20}" font-size="14" fill="#555555" font-family="Fira Sans, Arial, sans-serif">${esc(r.desc.length > 54 ? r.desc.slice(0, 52) + "…" : r.desc)}</text>` : ""}
+      <rect class="bar" x="${x0}" y="${y + 7}" width="${bw}" height="${rowH - 14}" fill="${r.aria ? "#00848a" : "#111111"}" stroke="${on ? "#00dfe9" : "none"}" stroke-width="3"></rect>
+      <text x="${x0 + bw + 8}" y="${y + 20}" font-size="14" fill="#111111" font-family="Fira Sans, Arial, sans-serif" style="font-variant-numeric:tabular-nums">${pct(r.share)}</text>
       <title>${esc(r.desc ? r.label + ": " + r.desc : r.label)} (${r.n} comments)</title>
     </g>`);
     y += rowH;
   });
-  document.getElementById("main").innerHTML = rows.length ? `<svg viewBox="0 0 ${W} ${y + 4}" width="100%" style="min-width:700px">${out.join("")}</svg>` : `<p class="empty">No comments match this selection.</p>`;
+  document.getElementById("main").innerHTML = rows.length ? `<svg viewBox="0 0 ${W} ${y + 4}" width="100%">${out.join("")}</svg>` : `<p class="empty">No comments match this selection.</p>`;
   document.querySelectorAll("#main .row").forEach(g => bindPick(g, () => { const k = g.dataset.key; toggleSel(k, null); }));
 }
 function renderInsight(rows) {
@@ -272,7 +274,7 @@ function renderInsight(rows) {
 }
 
 /* Grid */
-const STOPS = [[228, 221, 208], [127, 185, 188], [0, 132, 138], [0, 71, 75]];
+const STOPS = [[230, 230, 230], [127, 185, 188], [0, 132, 138], [0, 71, 75]];
 function shade(v) { const t = Math.min(v, .8) / .8 * 3, i = Math.min(2, Math.floor(t)), f = t - i, a = STOPS[i], b = STOPS[i + 1]; return `rgb(${a.map((x, k) => Math.round(x + (b[k] - x) * f)).join(",")})`; }
 function renderGrid() {
   const L = state.gcols, cols = catalog(L);
@@ -289,24 +291,24 @@ function renderGrid() {
   const W = lw + cols.length * cw + 40;
   const out = [];
   if (L === "questions") {
-    META.sections.forEach(s => { const first = cols.findIndex(c => c.group === s.key); if (first >= 0) out.push(`<text x="${lw + first * cw}" y="14" font-size="12" font-weight="700" letter-spacing="1" fill="#00848a" font-family="Fira Sans, Arial, sans-serif">${esc(s.label.split(" ").slice(-1)[0].toUpperCase())}</text>`); });
+    META.sections.forEach(s => { const first = cols.findIndex(c => c.group === s.key); if (first >= 0) out.push(`<text x="${lw + first * cw}" y="14" font-size="13" font-weight="700" letter-spacing="1" fill="#00848a" font-family="Fira Sans Condensed, Arial Narrow, sans-serif">${esc(s.label.split(" ").slice(-1)[0].toUpperCase())}</text>`); });
   }
   cols.forEach((c, i) => {
     const x = lw + i * cw + cw / 2;
     out.push(many
-      ? `<text x="${x}" y="${headH - 8}" font-size="13" font-weight="700" text-anchor="middle" fill="#291b13" font-family="Fira Sans, Arial, sans-serif">${esc(c.key)}</text>`
-      : `<text x="${x}" y="${headH - 10}" font-size="14" font-weight="700" text-anchor="middle" fill="#291b13" font-family="Fira Sans, Arial, sans-serif">${esc({ IV: "Risk", V: "Premarket", VI: "Postmarket", VII: "Other" }[c.key] || c.label)}<title>${esc(c.label)}</title></text>`);
+      ? `<text x="${x}" y="${headH - 8}" font-size="13" font-weight="700" text-anchor="middle" fill="#111111" font-family="Fira Sans, Arial, sans-serif">${esc(c.key)}</text>`
+      : `<text x="${x}" y="${headH - 10}" font-size="14" font-weight="700" text-anchor="middle" fill="#111111" font-family="Fira Sans, Arial, sans-serif">${esc({ IV: "Risk", V: "Premarket", VI: "Postmarket", VII: "Other" }[c.key] || c.label)}<title>${esc(c.label)}</title></text>`);
   });
   let y = headH;
   rows.forEach(r => {
     if (r.kind === "all" || r.kind === "aria") y += 8;
     const bold = r.kind !== "cat" && r.kind !== "pin";
-    out.push(`<text x="0" y="${y + 20}" font-size="14" font-weight="${bold ? 700 : 400}" fill="#291b13" font-family="Fira Sans, Arial, sans-serif">${esc(r.label.length > 30 ? r.label.slice(0, 28) + "…" : r.label)}${r.n ? ` <tspan fill="#6b5a4f" font-weight="400">(${r.n})</tspan>` : ""}</text>`);
-    if (r.kind === "pin") out.push(`<g class="unpin" data-id="${esc(r.key)}" tabindex="0" role="button" aria-label="Remove row" style="cursor:pointer"><circle cx="${lw - 14}" cy="${y + 15}" r="9" fill="#f7f5f1"></circle><text x="${lw - 14}" y="${y + 19.5}" font-size="13" text-anchor="middle" fill="#6b5a4f">×</text></g>`);
+    out.push(`<text x="0" y="${y + 20}" font-size="14" font-weight="${bold ? 700 : 400}" fill="#111111" font-family="Fira Sans, Arial, sans-serif">${esc(r.label.length > 30 ? r.label.slice(0, 28) + "…" : r.label)}${r.n ? ` <tspan fill="#555555" font-weight="400">(${r.n})</tspan>` : ""}</text>`);
+    if (r.kind === "pin") out.push(`<g class="unpin" data-id="${esc(r.key)}" tabindex="0" role="button" aria-label="Remove row" style="cursor:pointer"><circle cx="${lw - 14}" cy="${y + 15}" r="9" fill="#f2f2f2"></circle><text x="${lw - 14}" y="${y + 19.5}" font-size="13" text-anchor="middle" fill="#555555">×</text></g>`);
     cols.forEach((c, i) => {
       const v = r.val(c.key), on = state.sel && state.sel.lens === L && state.sel.key === c.key && (state.cat === null ? r.kind === "all" : state.cat === r.key);
       const tip = v === null ? `${r.label}: unreadable` : `${r.label}, ${c.label}: ${r.kind === "aria" || r.kind === "pin" ? (v ? "addressed" : "not addressed") : pct(v)}`;
-      out.push(`<rect class="cell" data-key="${esc(c.key)}" data-row="${esc(r.key)}" data-kind="${r.kind}" x="${lw + i * cw}" y="${y}" width="${cw - 2}" height="${rh - 3}" fill="${v === null ? "#f7f5f1" : shade(v)}" ${on ? 'stroke="#291b13" stroke-width="2.5"' : ""}><title>${esc(tip)}</title></rect>`);
+      out.push(`<rect class="cell" data-key="${esc(c.key)}" data-row="${esc(r.key)}" data-kind="${r.kind}" x="${lw + i * cw}" y="${y}" width="${cw - 2}" height="${rh - 3}" fill="${v === null ? "#f2f2f2" : shade(v)}" ${on ? 'stroke="#111111" stroke-width="2.5"' : ""}><title>${esc(tip)}</title></rect>`);
     });
     y += rh;
   });
@@ -344,14 +346,14 @@ function renderTypes() {
     const full = v.n / max * barW, inf = v.inf / max * barW, on = state.types.has(t);
     const g = `<g class="row${on ? " on" : ""}" data-type="${esc(t)}" tabindex="0" role="button" aria-label="${esc(t)}: ${v.n} comments">
       <rect class="hit" x="0" y="${y}" width="${W}" height="${rowH}" fill="transparent"></rect>
-      <text x="0" y="${y + 19}" font-size="14" font-weight="${on ? 700 : 400}" fill="#291b13" font-family="Fira Sans, Arial, sans-serif">${esc(t)}</text>
-      <rect x="${x0}" y="${y + 7}" width="${full - inf}" height="${rowH - 14}" fill="#291b13"></rect>
-      <rect x="${x0 + full - inf}" y="${y + 7}" width="${inf}" height="${rowH - 14}" fill="#c9bfae"></rect>
-      <text x="${x0 + full + 8}" y="${y + 19}" font-size="14" fill="#291b13" font-family="Fira Sans, Arial, sans-serif" style="font-variant-numeric:tabular-nums">${v.n}</text></g>`;
+      <text x="0" y="${y + 19}" font-size="14" font-weight="${on ? 700 : 400}" fill="#111111" font-family="Fira Sans, Arial, sans-serif">${esc(t)}</text>
+      <rect x="${x0}" y="${y + 7}" width="${full - inf}" height="${rowH - 14}" fill="#111111"></rect>
+      <rect x="${x0 + full - inf}" y="${y + 7}" width="${inf}" height="${rowH - 14}" fill="#bbbbbb"></rect>
+      <text x="${x0 + full + 8}" y="${y + 19}" font-size="14" fill="#111111" font-family="Fira Sans, Arial, sans-serif" style="font-variant-numeric:tabular-nums">${v.n}</text></g>`;
     y += rowH; return g;
   });
   const el = document.getElementById("types-chart");
-  el.innerHTML = `<svg viewBox="0 0 ${W} ${y}" width="100%">${out.join("")}</svg>`;
+  el.innerHTML = `<svg viewBox="0 0 ${W} ${y}" width="100%" style="max-width:${W}px">${out.join("")}</svg>`;
   el.querySelectorAll(".row").forEach(g => bindPick(g, () => { const t = g.dataset.type; state.types.has(t) ? state.types.delete(t) : state.types.add(t); render(); }));
 }
 /* Table */
@@ -422,7 +424,7 @@ function init() {
   const unread = D.filter(c => c.unreadable).length;
   const upd = new Date(META.updated).toLocaleDateString("en-US", { month: "long", day: "numeric", year: "numeric" });
   document.getElementById("facts").innerHTML = `<span><b>${D.length}</b> comments posted</span><span>Last updated <b>${esc(upd)}</b></span>`;
-  render(); fitTitle(); window.addEventListener("resize", fitTitle);
+  render(); fitTitle(); let rt; window.addEventListener("resize", () => { fitTitle(); clearTimeout(rt); rt = setTimeout(renderMain, 150); });
   if (document.fonts) document.fonts.ready.then(fitTitle);
 }
 function fitTitle() {
