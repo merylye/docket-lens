@@ -398,7 +398,9 @@ function renderTable() {
     note.textContent = `${rows.length} comments${state.cat ? " from " + state.cat : ""} addressing ${it ? it.label : state.sel.key}`; clear.hidden = false;
   } else { note.textContent = `${rows.length} comments`; clear.hidden = state.types.size === 0; }
   if (state.types.size) note.textContent += ` · ${[...state.types].join(", ")}`;
-  const a = META.aria, ariaShow = state.pinned.includes("ARIA") && (!state.sel || ariaItems(state.sel.lens).includes(state.sel.key)) && !state.cat && (!q || "aria".includes(q));
+  const a = META.aria, ariaText = ["aria", a.name, "academia", ...a.topics].join(" ").toLowerCase();
+  const ariaShow = (!state.sel || ariaItems(state.sel.lens).includes(state.sel.key)) && (state.types.size === 0 || state.types.has("Academia")) && (!q || ariaText.includes(q));
+  if (ariaShow) note.textContent = note.textContent.replace(/^\d+/, n => +n + 1);
   const SHORT = { IV: "Risk", V: "Premarket", VI: "Postmarket", VII: "Other" };
   const chips = arr => arr.length ? `<div class="qs">${arr.map(x => `<span class="q">${esc(x)}</span>`).join("")}</div>` : `<span class="none">None</span>`;
   const facets = (qs, themes) => {
@@ -407,18 +409,19 @@ function renderTable() {
       <div class="facet"><span>Question groups</span>${chips(groups)}</div>
       <div class="facet"><span>Additional themes</span>${themes.length ? `<span>${themes.map(esc).join(" · ")}</span>` : `<span class="none">None</span>`}</div>`;
   };
-  const ariaRow = ariaShow ? `<article class="card aria"><div class="top"><span class="who">ARIA</span></div>
+  const ariaRow = ariaShow ? `<article class="card aria"><div class="top"><span class="who">ARIA</span>
+      <button type="button" class="cmp" data-id="ARIA" aria-pressed="${state.pinned.includes("ARIA")}">${state.pinned.includes("ARIA") ? "In grid" : "Add to grid"}</button></div>
     <div class="meta"><span>Academia</span><span>Received Oct 19, 2026</span><span>Posting pending</span></div>
     ${facets(a.q_addr, a.topics)}</article>` : "";
   const more = document.getElementById("more"), limit = 40;
   more.hidden = state.all || rows.length <= limit; more.textContent = `Show all ${rows.length} comments`;
   const shown = state.all ? rows : rows.slice(0, limit);
   const fmtD = d => d ? new Date(d).toLocaleDateString("en-US", { month: "short", day: "numeric", year: "numeric" }) : "";
-  document.getElementById("rows").innerHTML = ariaRow + (rows.length ? shown.map(c => `
+  document.getElementById("rows").innerHTML = (rows.length ? shown.map(c => `
     <article class="card"><div class="top"><span class="who">${esc(nameOf(c))}</span>
       <button type="button" class="cmp" data-id="${esc(c.id)}" aria-pressed="${state.pinned.includes(c.id)}">${state.pinned.includes(c.id) ? "In grid" : "Add to grid"}</button></div>
     <div class="meta"><a href="https://www.regulations.gov/comment/${esc(c.id)}" target="_blank" rel="noopener">${esc(short(c.id))}</a><span>${esc(c.commenter_type)}${c.type_inferred ? " (inferred)" : ""}</span><span>Received ${fmtD(c.received)}</span></div>
-    ${c.unreadable ? '<div class="themes">Attachment unreadable, not coded</div>' : facets(c.q_addr, c.topics || [])}</article>`).join("") : (ariaRow ? "" : `<p class="empty">No comments match.</p>`));
+    ${c.unreadable ? '<div class="themes">Attachment unreadable, not coded</div>' : facets(c.q_addr, c.topics || [])}</article>`).join("") : (ariaRow ? "" : `<p class="empty">No comments match.</p>`)) + (shown.length === rows.length ? ariaRow : "");
   document.querySelectorAll("#rows .cmp").forEach(b => b.onclick = () => {
     const adding = !state.pinned.includes(b.dataset.id);
     togglePin(b.dataset.id);
