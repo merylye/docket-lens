@@ -490,7 +490,7 @@ function init() {
 }
 function fitTitle() {
   const h = document.querySelector("h1"), box = h.parentElement.clientWidth;
-  let lo = 10, hi = 140;
+  let lo = 10, hi = 40;
   for (let i = 0; i < 18; i++) { const mid = (lo + hi) / 2; h.style.fontSize = mid + "px"; (h.scrollWidth <= box ? lo = mid : hi = mid); }
   h.style.fontSize = lo + "px";
 }
