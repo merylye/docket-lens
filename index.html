@@ -32,7 +32,7 @@ body {
   padding-left: max(16px, env(safe-area-inset-left, 0px));
   padding-right: max(16px, env(safe-area-inset-right, 0px));
 }
-.wrap { max-width: 1160px; margin: 0 auto; }
+.wrap { max-width: 1480px; margin: 0 auto; }
 a { color: var(--teal); }
 a:focus-visible, button:focus-visible, input:focus-visible, [tabindex]:focus-visible { outline: 3px solid var(--cyan); outline-offset: 2px; }
 header { padding-block: 36px 28px; display: grid; gap: 10px; min-width: 0; background: var(--cyan); box-shadow: 0 0 0 100vmax var(--cyan); clip-path: inset(0 -100vmax); }
@@ -107,6 +107,25 @@ td.num { font-variant-numeric: tabular-nums; text-align: right; }
 .more { margin-top: 12px; }
 footer { border-top: 2px solid var(--ink); padding-block: 22px 40px; font-size: 13px; color: var(--muted); display: grid; gap: 8px; }
 footer p { margin: 0; }
+.split { display: grid; gap: 40px; padding-block: 32px 48px; }
+.split > * { min-width: 0; }
+.left { display: grid; gap: 48px; align-content: start; min-width: 0; }
+.side { min-width: 0; }
+.side h2 { margin-bottom: 8px; }
+.list { border-top: 2px solid var(--ink); }
+.card { display: grid; gap: 6px; padding: 14px 2px; border-bottom: 1px solid var(--rule); }
+.card .top { display: flex; justify-content: space-between; gap: 10px; align-items: baseline; }
+.card .who { font-weight: 700; font-size: 15px; }
+.card .meta { font-size: 13px; color: var(--muted); display: flex; flex-wrap: wrap; gap: 4px 12px; }
+.card .meta a { font-variant-numeric: tabular-nums; }
+.card .sum { font-size: 14px; margin: 0; }
+.card.aria { background: #e0fbfc; padding-inline: 10px; }
+.themes { font-size: 12px; color: var(--muted); }
+@media (min-width: 1100px) {
+  .split { grid-template-columns: minmax(0, 1.55fr) minmax(360px, 1fr); }
+  .side { position: sticky; top: calc(var(--ctl-h, 70px) + env(safe-area-inset-top, 0px)); align-self: start; max-height: calc(100vh - var(--ctl-h, 70px) - env(safe-area-inset-top, 0px)); overflow-y: auto; padding: 32px 4px 24px 0; margin-top: -32px; overscroll-behavior: contain; }
+  .side .head { position: sticky; top: -32px; background: var(--white); z-index: 2; padding-top: 2px; }
+}
 @media (prefers-reduced-motion: no-preference) { .bar { transition: width .25s ease; } }
 </style>
 </head>
@@ -130,7 +149,8 @@ footer p { margin: 0; }
   </div>
 </div>
 
-<main>
+<main class="split">
+<div class="left">
   <section>
     <h2>Overview</h2>
     <div class="panel">
@@ -172,19 +192,19 @@ footer p { margin: 0; }
     <div class="panel chart" id="types-chart"></div>
   </section>
 
-  <section>
-    <h2>Comments</h2>
-    <div class="filters">
-      <input class="field" id="search" type="search" placeholder="Search comments" aria-label="Search comments">
-      <span id="selNote" class="note"></span>
-      <button type="button" class="textbtn" id="clear" hidden>Clear selection</button>
+</div>
+  <aside class="side" id="side" aria-label="Comments">
+    <div class="head">
+      <h2>Comments</h2>
+      <div class="filters">
+        <input class="field" id="search" type="search" placeholder="Search comments" aria-label="Search comments">
+        <span id="selNote" class="note"></span>
+        <button type="button" class="textbtn" id="clear" hidden>Clear selection</button>
+      </div>
     </div>
-    <div class="tablewrap"><table>
-      <thead><tr><th>Comment</th><th>Commenter</th><th>Category</th><th>Questions addressed</th><th>Additional themes</th><th>Date received</th><th>Summary</th><th></th></tr></thead>
-      <tbody id="rows"><tr><td colspan="8" class="empty">Loading…</td></tr></tbody>
-    </table></div>
+    <div class="list" id="rows"><p class="empty">Loading…</p></div>
     <button type="button" class="pill small more" id="more" hidden>Show all comments</button>
-  </section>
+  </aside>
 </main>
 
 <footer>
@@ -238,8 +258,8 @@ function renderMain() {
   let rows = catalog(state.lens).map(it => ({ ...it, share: shareOf(pool, it.key, state.lens) || 0, n: pool.filter(c => itemsFor(c, state.lens).includes(it.key)).length, aria: aset.has(it.key) }));
   if (state.lens === "topics") rows = rows.filter(r => r.n > 0 || r.aria).sort((a, b) => b.share - a.share);
   const max = Math.max(.05, ...rows.map(r => r.share));
-  const narrow = document.getElementById("main").clientWidth < 640;
-  const W = narrow ? 560 : 1100, labelW = state.lens === "questions" ? 58 : (narrow ? 250 : 330), descW = state.lens === "questions" && !narrow ? 380 : 0;
+  const cwid = document.getElementById("main").clientWidth || 900, narrow = cwid < 640;
+  const W = Math.max(560, cwid), labelW = state.lens === "questions" ? 58 : (narrow ? 250 : 330), descW = state.lens === "questions" && !narrow ? Math.min(380, Math.round(W * .36)) : 0;
   const x0 = labelW + descW + 10, barW = W - x0 - 60, rowH = 30;
   let y = 0, out = [], last = null;
   rows.forEach(r => {
@@ -253,7 +273,7 @@ function renderMain() {
     out.push(`<g class="row${on ? " on" : ""}" data-key="${esc(r.key)}" tabindex="0" role="button" aria-label="${esc(r.label)}: ${pct(r.share)} of comments${r.aria ? ", addressed by ARIA" : ""}">
       <rect class="hit" x="0" y="${y}" width="${W}" height="${rowH}" fill="transparent"></rect>
       <text x="0" y="${y + 20}" font-size="15" font-weight="${state.lens === "questions" ? 700 : 500}" fill="#111111" font-family="Fira Sans, Arial, sans-serif">${esc(r.label)}</text>
-      ${descW ? `<text x="${labelW}" y="${y + 20}" font-size="14" fill="#555555" font-family="Fira Sans, Arial, sans-serif">${esc(r.desc.length > 54 ? r.desc.slice(0, 52) + "…" : r.desc)}</text>` : ""}
+      ${descW ? `<text x="${labelW}" y="${y + 20}" font-size="14" fill="#555555" font-family="Fira Sans, Arial, sans-serif">${esc(r.desc.length > Math.floor(descW / 7.4) ? r.desc.slice(0, Math.floor(descW / 7.4) - 2) + "…" : r.desc)}</text>` : ""}
       <rect class="bar" x="${x0}" y="${y + 7}" width="${bw}" height="${rowH - 14}" fill="${r.aria ? "#00848a" : "#111111"}" stroke="${on ? "#00dfe9" : "none"}" stroke-width="3"></rect>
       <text x="${x0 + bw + 8}" y="${y + 20}" font-size="14" fill="#111111" font-family="Fira Sans, Arial, sans-serif" style="font-variant-numeric:tabular-nums">${pct(r.share)}</text>
       <title>${esc(r.desc ? r.label + ": " + r.desc : r.label)} (${r.n} comments)</title>
@@ -287,8 +307,8 @@ function renderGrid() {
   for (let i = rows.length - 1; i >= 0; i--) if (state.hidden.has(rows[i].key)) rows.splice(i, 1);
   state.pinned.forEach(id => { const c = BYID[id]; if (c) { const s = new Set(itemsFor(c, L)); rows.push({ kind: "pin", key: id, label: `${short(id)} · ${nameOf(c)}`, val: k => c.unreadable ? null : (s.has(k) ? 1 : 0) }); } });
 
-  const many = cols.length > 8, lw = 250, cw = many ? 30 : Math.max(70, Math.min(120, 820 / cols.length)), rh = 30, headH = many ? 46 : 36;
-  const W = lw + cols.length * cw + 40;
+  const avail = Math.max(600, document.getElementById("grid").clientWidth || 900), many = cols.length > 8, lw = 230, cw = many ? Math.max(22, Math.floor((avail - lw - 12) / cols.length)) : Math.max(70, Math.min(140, (avail - lw - 12) / cols.length)), rh = 30, headH = many ? 46 : 36;
+  const W = lw + cols.length * cw + 12;
   const out = [];
   if (L === "questions") {
     META.sections.forEach(s => { const first = cols.findIndex(c => c.group === s.key); if (first >= 0) out.push(`<text x="${lw + first * cw}" y="14" font-size="13" font-weight="700" letter-spacing="1" fill="#00848a" font-family="Fira Sans Condensed, Arial Narrow, sans-serif">${esc(s.label.split(" ").slice(-1)[0].toUpperCase())}</text>`); });
@@ -369,19 +389,21 @@ function renderTable() {
     note.textContent = `${rows.length} comments${state.cat ? " from " + state.cat : ""} addressing ${it ? it.label : state.sel.key}`; clear.hidden = false;
   } else { note.textContent = `${rows.length} comments`; clear.hidden = true; }
   const a = META.aria, ariaShow = (!state.sel || ariaItems(state.sel.lens).includes(state.sel.key)) && !state.cat && (!q || "aria".includes(q) || a.summary.toLowerCase().includes(q));
-  const ariaRow = ariaShow ? `<tr class="aria-row"><td class="id">Pending</td><td><b>ARIA</b></td><td>Academia</td><td><div class="qs">${a.q_addr.map(n => `<span class="q">Q${n}</span>`).join("")}</div></td><td>${a.topics.map(t => `<div class="tag">${esc(t)}</div>`).join("")}</td><td class="id">Oct 19, 2026</td><td>${esc(a.summary)}</td><td></td></tr>` : "";
-  const more = document.getElementById("more"), limit = 30;
+  const qchips = arr => `<div class="qs">${arr.map(n => `<span class="q">Q${n}</span>`).join("")}</div>`;
+  const ariaRow = ariaShow ? `<article class="card aria"><div class="top"><span class="who">ARIA</span></div>
+    <div class="meta"><span>Academia</span><span>Received Oct 19, 2026</span><span>Posting pending</span></div>
+    ${qchips(a.q_addr)}${a.topics.length ? `<div class="themes">${a.topics.map(esc).join(" · ")}</div>` : ""}<p class="sum">${esc(a.summary)}</p></article>` : "";
+  const more = document.getElementById("more"), limit = 40;
   more.hidden = state.all || rows.length <= limit; more.textContent = `Show all ${rows.length} comments`;
   const shown = state.all ? rows : rows.slice(0, limit);
+  const fmtD = d => d ? new Date(d).toLocaleDateString("en-US", { month: "short", day: "numeric", year: "numeric" }) : "";
   document.getElementById("rows").innerHTML = ariaRow + (rows.length ? shown.map(c => `
-    <tr><td class="id"><a href="https://www.regulations.gov/comment/${esc(c.id)}" target="_blank" rel="noopener">${esc(short(c.id))}</a></td>
-    <td>${esc(nameOf(c))}</td>
-    <td>${esc(c.commenter_type)}${c.type_inferred ? '<div class="inferred">inferred</div>' : ""}</td>
-    <td><div class="qs">${c.unreadable ? '<span class="tag">Attachment unreadable</span>' : c.q_addr.map(n => `<span class="q">Q${n}</span>`).join("")}</div></td>
-    <td>${(c.topics || []).map(t => `<div class="tag">${esc(t)}</div>`).join("")}</td>
-    <td class="id">${c.received ? new Date(c.received).toLocaleDateString("en-US", { month: "short", day: "numeric", year: "numeric" }) : ""}</td>
-    <td>${esc(c.summary)}</td>
-    <td><button type="button" class="cmp" data-id="${esc(c.id)}" aria-pressed="${state.pinned.includes(c.id)}">${state.pinned.includes(c.id) ? "In grid" : "Compare"}</button></td></tr>`).join("") : (ariaRow ? "" : `<tr><td colspan="8" class="empty">No comments match.</td></tr>`));
+    <article class="card"><div class="top"><span class="who">${esc(nameOf(c))}</span>
+      <button type="button" class="cmp" data-id="${esc(c.id)}" aria-pressed="${state.pinned.includes(c.id)}">${state.pinned.includes(c.id) ? "In grid" : "Compare"}</button></div>
+    <div class="meta"><a href="https://www.regulations.gov/comment/${esc(c.id)}" target="_blank" rel="noopener">${esc(short(c.id))}</a><span>${esc(c.commenter_type)}${c.type_inferred ? " (inferred)" : ""}</span><span>Received ${fmtD(c.received)}</span></div>
+    ${c.unreadable ? '<div class="themes">Attachment unreadable</div>' : qchips(c.q_addr)}
+    ${(c.topics || []).length ? `<div class="themes">${c.topics.map(esc).join(" · ")}</div>` : ""}
+    <p class="sum">${esc(c.summary)}</p></article>`).join("") : (ariaRow ? "" : `<p class="empty">No comments match.</p>`));
   document.querySelectorAll("#rows .cmp").forEach(b => b.onclick = () => { togglePin(b.dataset.id); });
 }
 
@@ -390,7 +412,11 @@ function bindPick(el, fn) { el.addEventListener("click", fn); el.addEventListene
 function toggleSel(key, cat, lens = state.lens) {
   const same = state.sel && state.sel.lens === lens && state.sel.key === key && state.cat === cat;
   state.sel = same ? null : { lens, key }; state.cat = same ? null : cat; state.all = false; render();
-  if (!same) document.getElementById("rows").scrollIntoView({ behavior: "smooth", block: "nearest" });
+  if (!same) {
+    const side = document.getElementById("side");
+    if (matchMedia("(min-width: 1100px)").matches) side.scrollTo({ top: 0, behavior: "smooth" });
+    else document.getElementById("rows").scrollIntoView({ behavior: "smooth", block: "start" });
+  }
 }
 function togglePin(id) {
   if (state.pinned.includes(id)) state.pinned = state.pinned.filter(x => x !== id);
@@ -424,7 +450,9 @@ function init() {
   const unread = D.filter(c => c.unreadable).length;
   const upd = new Date(META.updated).toLocaleDateString("en-US", { month: "long", day: "numeric", year: "numeric" });
   document.getElementById("facts").innerHTML = `<span><b>${D.length}</b> comments posted</span><span>Last updated <b>${esc(upd)}</b></span>`;
-  render(); fitTitle(); let rt; window.addEventListener("resize", () => { fitTitle(); clearTimeout(rt); rt = setTimeout(renderMain, 150); });
+  const ctl = document.querySelector(".controls"), setH = () => document.documentElement.style.setProperty("--ctl-h", ctl.offsetHeight + "px");
+  setH(); if (window.ResizeObserver) new ResizeObserver(setH).observe(ctl);
+  render(); fitTitle(); let rt; window.addEventListener("resize", () => { fitTitle(); clearTimeout(rt); rt = setTimeout(() => { renderMain(); renderGrid(); }, 150); });
   if (document.fonts) document.fonts.ready.then(fitTitle);
 }
 function fitTitle() {
