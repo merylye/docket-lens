@@ -331,7 +331,7 @@ function renderGrid() {
     out.push(`<text x="0" y="${y + 20}" font-size="14" font-weight="${bold ? 700 : 400}" fill="#111111" font-family="Fira Sans, Arial, sans-serif">${esc(r.label.length > 30 ? r.label.slice(0, 28) + "…" : r.label)}${r.n ? ` <tspan fill="#555555" font-weight="400">(${r.n})</tspan>` : ""}</text>`);
     if (r.kind === "pin") out.push(`<g class="unpin" data-id="${esc(r.key)}" tabindex="0" role="button" aria-label="Remove row" style="cursor:pointer"><circle cx="${lw - 14}" cy="${y + 15}" r="9" fill="#f2f2f2"></circle><text x="${lw - 14}" y="${y + 19.5}" font-size="13" text-anchor="middle" fill="#555555">×</text></g>`);
     cols.forEach((c, i) => {
-      const v = r.val(c.key), on = state.sel && state.sel.lens === L && state.sel.key === c.key && (state.cat === null ? r.kind === "all" : state.cat === r.key);
+      const v = r.val(c.key), on = state.sel && state.sel.lens === L && state.sel.key === c.key && (state.types.size === 1 ? (r.kind === "cat" && state.types.has(r.key)) : r.kind === "all");
       const tip = v === null ? `${r.label}: unreadable` : `${r.label}, ${c.label}: ${r.kind === "aria" || r.kind === "pin" ? (v ? "addressed" : "not addressed") : pct(v)}`;
       out.push(`<rect class="cell" data-key="${esc(c.key)}" data-row="${esc(r.key)}" data-kind="${r.kind}" x="${lw + i * cw}" y="${y}" width="${cw - 2}" height="${rh - 3}" fill="${v === null ? "#f2f2f2" : shade(v)}" ${on ? 'stroke="#111111" stroke-width="2.5"' : ""}><title>${esc(tip)}</title></rect>`);
     });
@@ -427,8 +427,11 @@ function renderTable() {
 /* Interaction */
 function bindPick(el, fn) { el.addEventListener("click", fn); el.addEventListener("keydown", e => { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); fn(); } }); }
 function toggleSel(key, cat, lens = state.lens) {
-  const same = state.sel && state.sel.lens === lens && state.sel.key === key && state.cat === cat;
-  state.sel = same ? null : { lens, key }; state.cat = same ? null : cat; state.all = false; render();
+  const sameCat = cat ? (state.types.size === 1 && state.types.has(cat)) : true;
+  const same = state.sel && state.sel.lens === lens && state.sel.key === key && sameCat;
+  state.sel = same ? null : { lens, key }; state.cat = null;
+  if (cat) state.types = same ? new Set() : new Set([cat]);
+  state.all = false; render();
   if (!same) {
     const side = document.getElementById("side");
     if (matchMedia("(min-width: 1100px)").matches) side.scrollTo({ top: 0, behavior: "smooth" });
