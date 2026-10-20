@@ -1,0 +1,5408 @@
+[
+ {
+  "id": "FDA-2026-N-7874-0003",
+  "title": "Comment from Walnut Hill Medical",
+  "category_raw": "Health Care Association - D0022",
+  "commenter_type": "Health care association",
+  "type_inferred": false,
+  "org": "Walnut Hill Medical",
+  "domain": "General / cross-cutting",
+  "q_cited": [
+   1,
+   2,
+   3,
+   4,
+   5,
+   6,
+   7,
+   8,
+   9,
+   10,
+   11,
+   12,
+   13,
+   14,
+   16,
+   17,
+   18,
+   19,
+   20,
+   21,
+   22,
+   23,
+   24,
+   25,
+   26
+  ],
+  "q_addr": [
+   1,
+   2,
+   3,
+   4,
+   5,
+   6,
+   7,
+   8,
+   9,
+   10,
+   11,
+   12,
+   13,
+   14,
+   16,
+   17,
+   18,
+   19,
+   20,
+   21,
+   22,
+   23,
+   24,
+   25,
+   26
+  ],
+  "topics": [
+   "Coverage and reimbursement",
+   "Regulatory process and harmonization",
+   "Small developer burden",
+   "Transparency and public participation"
+  ],
+  "tags": [
+   "reimbursement and coverage",
+   "international harmonization",
+   "small manufacturer burden",
+   "labeling requirements",
+   "regulatory pathway clarity"
+  ],
+  "summary": "Reimbursement consultancy supports the competency framework but calls for a pathway decision matrix, FDA-CMS coverage alignment, PCCP change categories, and small-business support.",
+  "words": 6050,
+  "pages": 15,
+  "posted": "2026-08-27T04:00:00Z",
+  "received": "2026-08-18T04:00:00Z",
+  "unreadable": false
+ },
+ {
+  "id": "FDA-2026-N-7874-0004",
+  "title": "Comment from Vasuki Pasumarty",
+  "category_raw": "Device Industry - C0012",
+  "commenter_type": "Device industry",
+  "type_inferred": false,
+  "org": "",
+  "domain": "General / cross-cutting",
+  "q_cited": [],
+  "q_addr": [],
+  "topics": [
+   "Equity, access, and disability",
+   "Liability and accountability",
+   "Transparency and public participation"
+  ],
+  "tags": [
+   "algorithmic bias",
+   "patient autonomy",
+   "AI personhood"
+  ],
+  "summary": "Loosely argued reflection on patient agency, collective welfare, AI personhood, and demographic bias in medical AI devices, without concrete regulatory recommendations.",
+  "words": 270,
+  "pages": null,
+  "posted": "2026-08-27T04:00:00Z",
+  "received": "2026-08-18T04:00:00Z",
+  "unreadable": false
+ },
+ {
+  "id": "FDA-2026-N-7874-0005",
+  "title": "Comment from Alfred McBride",
+  "category_raw": null,
+  "commenter_type": "Individual",
+  "type_inferred": true,
+  "org": "",
+  "domain": "General / cross-cutting",
+  "q_cited": [
+   1,
+   2,
+   3,
+   4,
+   5,
+   6,
+   7,
+   8,
+   9,
+   10,
+   11,
+   12,
+   13,
+   14,
+   15,
+   16,
+   17,
+   18,
+   19,
+   20,
+   21,
+   22,
+   23,
+   24,
+   25,
+   26
+  ],
+  "q_addr": [
+   1,
+   2,
+   3,
+   4,
+   5,
+   6,
+   7,
+   8,
+   9,
+   10,
+   11,
+   12,
+   13,
+   14,
+   15,
+   16,
+   17,
+   18,
+   19,
+   20,
+   21,
+   22,
+   23,
+   24,
+   25,
+   26
+  ],
+  "topics": [
+   "Audit trails, provenance, and records",
+   "Human oversight and automation bias",
+   "Runtime controls and kill switches"
+  ],
+  "tags": [
+   "hard-gate safety criteria",
+   "meaningful human oversight",
+   "proprietary audit framework"
+  ],
+  "summary": "Applies the author's Boundary-Conditioned Realization audit framework to the paper, rating it partial and giving traceable recommendations for all 26 questions.",
+  "words": 9320,
+  "pages": 22,
+  "posted": "2026-08-27T04:00:00Z",
+  "received": "2026-08-18T04:00:00Z",
+  "unreadable": false
+ },
+ {
+  "id": "FDA-2026-N-7874-0006",
+  "title": "Comment from Richard Pescatore",
+  "category_raw": "Health Professional - A0007",
+  "commenter_type": "Health professional",
+  "type_inferred": false,
+  "org": "BellyMD, Inc.",
+  "domain": "Patient-facing information",
+  "q_cited": [
+   1,
+   2,
+   3,
+   5,
+   6,
+   11,
+   14,
+   15,
+   16,
+   18,
+   24,
+   25
+  ],
+  "q_addr": [
+   1,
+   2,
+   3,
+   5,
+   6,
+   11,
+   14,
+   15,
+   16,
+   18,
+   22,
+   24,
+   25
+  ],
+  "topics": [
+   "Equity, access, and disability",
+   "Regulatory process and harmonization",
+   "Small developer burden"
+  ],
+  "tags": [
+   "small manufacturer burden",
+   "underserved patient access",
+   "counterfactual care baseline"
+  ],
+  "summary": "Emergency physician and small DGBI app maker supports the framework but urges counterfactual comparators, trajectory envelopes, presumptive evidence tiers, and size-scaled third-party fees.",
+  "words": 2450,
+  "pages": 4,
+  "posted": "2026-08-27T04:00:00Z",
+  "received": "2026-08-18T04:00:00Z",
+  "unreadable": false
+ },
+ {
+  "id": "FDA-2026-N-7874-0007",
+  "title": "Comment from Abby Brody",
+  "category_raw": "Individual Consumer",
+  "commenter_type": "Individual",
+  "type_inferred": false,
+  "org": "",
+  "domain": "General / cross-cutting",
+  "q_cited": [],
+  "q_addr": [],
+  "topics": [
+   "Hallucination and output reliability",
+   "Opposition to AI use",
+   "Privacy and consent"
+  ],
+  "tags": [
+   "opposition to genai use",
+   "data privacy",
+   "hallucination concerns"
+  ],
+  "summary": "Cancer patient opposes generative AI in healthcare as too risky for accuracy and privacy, preferring direct physician communication and human care.",
+  "words": 75,
+  "pages": null,
+  "posted": "2026-08-27T04:00:00Z",
+  "received": "2026-08-18T04:00:00Z",
+  "unreadable": false
+ },
+ {
+  "id": "FDA-2026-N-7874-0008",
+  "title": "Comment from Supernova Technologies",
+  "category_raw": "Private Industry - C0003",
+  "commenter_type": "Private industry (non-device)",
+  "type_inferred": false,
+  "org": "Supernova Technologies",
+  "domain": "General / cross-cutting",
+  "q_cited": [
+   18,
+   19,
+   20,
+   24,
+   25
+  ],
+  "q_addr": [
+   18,
+   19,
+   24,
+   25
+  ],
+  "topics": [
+   "Coverage and reimbursement",
+   "Regulatory process and harmonization"
+  ],
+  "tags": [
+   "monitoring coverage verification",
+   "ai developer self-detection"
+  ],
+  "summary": "Commenter warns developers often fail to detect their own model failures, so MAF filers should disclose detection methods and monitoring must prove coverage and independence.",
+  "words": 1230,
+  "pages": 2,
+  "posted": "2026-08-27T04:00:00Z",
+  "received": "2026-08-18T04:00:00Z",
+  "unreadable": false
+ },
+ {
+  "id": "FDA-2026-N-7874-0009",
+  "title": "Comment from Renee Dua",
+  "category_raw": null,
+  "commenter_type": "Device industry",
+  "type_inferred": true,
+  "org": "Cara AI, Inc.",
+  "domain": "Other",
+  "q_cited": [
+   1,
+   3,
+   4,
+   6,
+   11,
+   14,
+   15,
+   21
+  ],
+  "q_addr": [
+   1,
+   3,
+   4,
+   6,
+   11,
+   14,
+   15,
+   21
+  ],
+  "topics": [
+   "Deployment settings and infrastructure",
+   "Liability and accountability",
+   "Small developer burden"
+  ],
+  "tags": [
+   "non-clinical health workers",
+   "home and community care",
+   "reference standard reliability",
+   "small sponsor burden"
+  ],
+  "summary": "In-home Medicaid assessment company proposes extra risk dimensions, a non-clinical health worker user tier, blinded adjudication, inter-rater reporting, realistic comparators, and payer monitoring roles.",
+  "words": 2230,
+  "pages": 6,
+  "posted": "2026-08-27T04:00:00Z",
+  "received": "2026-08-18T04:00:00Z",
+  "unreadable": false
+ },
+ {
+  "id": "FDA-2026-N-7874-0010",
+  "title": "Comment from Hari Prakash Chanumolu",
+  "category_raw": null,
+  "commenter_type": "Individual",
+  "type_inferred": true,
+  "org": "",
+  "domain": "General / cross-cutting",
+  "q_cited": [
+   1,
+   2,
+   3,
+   4,
+   5,
+   6,
+   7,
+   8,
+   9,
+   10,
+   11,
+   12,
+   13,
+   14,
+   15,
+   16,
+   17,
+   18,
+   19,
+   20,
+   21,
+   22,
+   23,
+   24,
+   25,
+   26
+  ],
+  "q_addr": [
+   1,
+   2,
+   3,
+   4,
+   5,
+   6,
+   7,
+   8,
+   9,
+   10,
+   11,
+   12,
+   13,
+   14,
+   15,
+   16,
+   17,
+   18,
+   19,
+   20,
+   21,
+   22,
+   23,
+   24,
+   25,
+   26
+  ],
+  "topics": [
+   "Hallucination and output reliability",
+   "Liability and accountability",
+   "Regulatory process and harmonization"
+  ],
+  "tags": [
+   "iso 14971 alignment",
+   "mdr reportability",
+   "qms integration",
+   "legal authority limits",
+   "output nondeterminism"
+  ],
+  "summary": "Regulatory affairs professional answers all questions, urging a detectability axis, published evidence mapping, invariant-based PCCPs, version pinning as a design control, and independent supervisors.",
+  "words": 8550,
+  "pages": 19,
+  "posted": "2026-08-27T04:00:00Z",
+  "received": "2026-08-18T04:00:00Z",
+  "unreadable": false
+ },
+ {
+  "id": "FDA-2026-N-7874-0011",
+  "title": "Comment from Edward Flynn",
+  "category_raw": "Device Industry - C0012",
+  "commenter_type": "Device industry",
+  "type_inferred": false,
+  "org": "",
+  "domain": "General / cross-cutting",
+  "q_cited": [],
+  "q_addr": [],
+  "topics": [
+   "Equity, access, and disability",
+   "Liability and accountability",
+   "Opposition to AI use",
+   "Privacy and consent"
+  ],
+  "tags": [
+   "algorithmic bias",
+   "liability allocation",
+   "data privacy",
+   "opposition to deployment"
+  ],
+  "summary": "Opposes allowing GenAI devices until bias, privacy, black-box opacity, and manufacturer liability questions are resolved with congressional oversight.",
+  "words": 330,
+  "pages": null,
+  "posted": "2026-08-27T04:00:00Z",
+  "received": "2026-08-18T04:00:00Z",
+  "unreadable": false
+ },
+ {
+  "id": "FDA-2026-N-7874-0012",
+  "title": "Comment from Anonymous",
+  "category_raw": null,
+  "commenter_type": "Individual",
+  "type_inferred": true,
+  "org": "",
+  "domain": "General / cross-cutting",
+  "q_cited": [
+   1,
+   2,
+   3,
+   4,
+   5,
+   6,
+   7,
+   8,
+   9,
+   10,
+   18,
+   19,
+   20,
+   21,
+   22,
+   23,
+   24,
+   25
+  ],
+  "q_addr": [
+   1,
+   9,
+   20,
+   22,
+   25
+  ],
+  "topics": [
+   "Regulatory process and harmonization"
+  ],
+  "tags": [
+   "streamlined clearance pathways"
+  ],
+  "summary": "Strongly supports the framework and asks for streamlined pathways for HCP-supervised tools like scribing and imaging second-reads, operational Master Files, supervisory agents, and flexible PCCPs.",
+  "words": 400,
+  "pages": null,
+  "posted": "2026-08-27T04:00:00Z",
+  "received": "2026-08-18T04:00:00Z",
+  "unreadable": false
+ },
+ {
+  "id": "FDA-2026-N-7874-0013",
+  "title": "Comment from Hari Prakash Chanumolu",
+  "category_raw": null,
+  "commenter_type": "Individual",
+  "type_inferred": true,
+  "org": "",
+  "domain": "General / cross-cutting",
+  "q_cited": [
+   1,
+   2,
+   3,
+   4,
+   5,
+   6,
+   7,
+   8,
+   9,
+   10,
+   11,
+   12,
+   13,
+   14,
+   15,
+   16,
+   17,
+   18,
+   19,
+   20,
+   21,
+   22,
+   23,
+   24,
+   25,
+   26
+  ],
+  "q_addr": [
+   1,
+   2,
+   3,
+   4,
+   5,
+   6,
+   7,
+   8,
+   9,
+   10,
+   11,
+   12,
+   13,
+   14,
+   15,
+   16,
+   17,
+   18,
+   19,
+   20,
+   21,
+   22,
+   23,
+   24,
+   25,
+   26
+  ],
+  "topics": [
+   "Liability and accountability",
+   "Regulatory process and harmonization"
+  ],
+  "tags": [
+   "iso 14971 alignment",
+   "mdr reportability",
+   "legal authority"
+  ],
+  "summary": "Regulatory professional answers all questions, urging detectability as a risk dimension, a published evidence map, version pinning as a design control, and invariant-based PCCPs.",
+  "words": 8540,
+  "pages": 19,
+  "posted": "2026-08-27T04:00:00Z",
+  "received": "2026-08-18T04:00:00Z",
+  "unreadable": false
+ },
+ {
+  "id": "FDA-2026-N-7874-0014",
+  "title": "Comment from George Armstr",
+  "category_raw": "Individual Consumer",
+  "commenter_type": "Individual",
+  "type_inferred": false,
+  "org": "",
+  "domain": "General / cross-cutting",
+  "q_cited": [],
+  "q_addr": [],
+  "topics": [
+   "Equity, access, and disability"
+  ],
+  "tags": [
+   "digital access equity"
+  ],
+  "summary": "One-line note that internet connectivity is a barrier for some families.",
+  "words": 7,
+  "pages": null,
+  "posted": "2026-08-27T04:00:00Z",
+  "received": "2026-08-18T04:00:00Z",
+  "unreadable": false
+ },
+ {
+  "id": "FDA-2026-N-7874-0015",
+  "title": "Comment from Nathan Sabich",
+  "category_raw": "Device Industry - C0012",
+  "commenter_type": "Device industry",
+  "type_inferred": false,
+  "org": "",
+  "domain": "General / cross-cutting",
+  "q_cited": [
+   1
+  ],
+  "q_addr": [
+   1
+  ],
+  "topics": [
+   "Audit trails, provenance, and records",
+   "Human oversight and automation bias"
+  ],
+  "tags": [
+   "output traceability",
+   "human oversight design"
+  ],
+  "summary": "Argues the two-axis risk model is insufficient and proposes a four-axis model adding degree of human oversight and traceability of outputs to source data.",
+  "words": 330,
+  "pages": null,
+  "posted": "2026-08-27T04:00:00Z",
+  "received": "2026-08-18T04:00:00Z",
+  "unreadable": false
+ },
+ {
+  "id": "FDA-2026-N-7874-0016",
+  "title": "Comment from Nathan Sabich",
+  "category_raw": "Device Industry - C0012",
+  "commenter_type": "Device industry",
+  "type_inferred": false,
+  "org": "",
+  "domain": "General / cross-cutting",
+  "q_cited": [
+   23
+  ],
+  "q_addr": [
+   23
+  ],
+  "topics": [],
+  "tags": [],
+  "summary": "Proposes a Performance-Bounded PCCP prespecifying competency benchmarks, deviation bounds, monitoring, rollback, and cumulative tracking so unpredictable GenAI changes stay within an authorized envelope.",
+  "words": 420,
+  "pages": null,
+  "posted": "2026-08-27T04:00:00Z",
+  "received": "2026-08-18T04:00:00Z",
+  "unreadable": false
+ },
+ {
+  "id": "FDA-2026-N-7874-0017",
+  "title": "Comment from Douglas Stoddard",
+  "category_raw": "Health Professional - A0007",
+  "commenter_type": "Health professional",
+  "type_inferred": false,
+  "org": "",
+  "domain": "Other",
+  "q_cited": [
+   1,
+   2,
+   5,
+   6,
+   7,
+   8,
+   9,
+   10,
+   11,
+   12,
+   13,
+   14,
+   15,
+   16,
+   17,
+   18,
+   19,
+   20,
+   21,
+   22,
+   23,
+   24,
+   25,
+   26
+  ],
+  "q_addr": [
+   1,
+   5,
+   7,
+   9,
+   10,
+   11,
+   13,
+   14,
+   15,
+   16,
+   18,
+   19,
+   20,
+   21,
+   22,
+   24,
+   25,
+   26
+  ],
+  "topics": [
+   "Equity, access, and disability",
+   "Liability and accountability",
+   "Other",
+   "Privacy and consent",
+   "Transparency and public participation"
+  ],
+  "tags": [
+   "surgical applications",
+   "health equity",
+   "data privacy",
+   "liability allocation",
+   "stakeholder participation"
+  ],
+  "summary": "Surgeon urges surgical GenAI risk assessment to include irreversibility, time to harm, and rescue, with human-AI team testing, no postmarket tradeoff for invasive actions, and control-based accountability.",
+  "words": 3400,
+  "pages": 6,
+  "posted": "2026-08-27T04:00:00Z",
+  "received": "2026-08-18T04:00:00Z",
+  "unreadable": false
+ },
+ {
+  "id": "FDA-2026-N-7874-0018",
+  "title": "Comment from JAGADEESHA PAMPAPATHI",
+  "category_raw": "Device Industry - C0012",
+  "commenter_type": "Device industry",
+  "type_inferred": false,
+  "org": "",
+  "domain": "General / cross-cutting",
+  "q_cited": [],
+  "q_addr": [
+   9,
+   12,
+   24,
+   26
+  ],
+  "topics": [
+   "Cybersecurity",
+   "Human oversight and automation bias",
+   "Regulatory process and harmonization"
+  ],
+  "tags": [
+   "multiple function devices",
+   "cybersecurity",
+   "retrieval-augmented generation",
+   "human factors"
+  ],
+  "summary": "Cloud medical software developer flags gaps: multiple-function products, cybersecurity, human factors, RAG validation layers, statistical acceptance criteria, agentic controls, and third-party foundation model change management.",
+  "words": 630,
+  "pages": 4,
+  "posted": "2026-08-27T04:00:00Z",
+  "received": "2026-08-19T04:00:00Z",
+  "unreadable": false
+ },
+ {
+  "id": "FDA-2026-N-7874-0020",
+  "title": "Comment from Mark Simonian MD FAAP",
+  "category_raw": "Health Professional - A0007",
+  "commenter_type": "Health professional",
+  "type_inferred": false,
+  "org": "",
+  "domain": "General / cross-cutting",
+  "q_cited": [],
+  "q_addr": [
+   1,
+   7,
+   8,
+   12,
+   13,
+   14,
+   18
+  ],
+  "topics": [
+   "Equity, access, and disability",
+   "Regulatory process and harmonization"
+  ],
+  "tags": [
+   "pediatric use",
+   "clinical utility evidence"
+  ],
+  "summary": "Pediatrician rates the paper, warning that competency benchmarks may become surrogate endpoints and calling for added risk dimensions and age-stratified pediatric validation.",
+  "words": 2000,
+  "pages": 7,
+  "posted": "2026-08-27T04:00:00Z",
+  "received": "2026-08-20T04:00:00Z",
+  "unreadable": false
+ },
+ {
+  "id": "FDA-2026-N-7874-0021",
+  "title": "Comment from Brainstorm: The Stanford Lab for Mental Health Innovation, Stanford University School of Medicine",
+  "category_raw": "Academia - E0007",
+  "commenter_type": "Academia",
+  "type_inferred": false,
+  "org": "Brainstorm: The Stanford Lab for Mental Health Innovation, Stanford University School of Medicine",
+  "domain": "Mental and behavioral health",
+  "q_cited": [],
+  "q_addr": [
+   1,
+   5,
+   6,
+   9,
+   14,
+   19,
+   21,
+   24
+  ],
+  "topics": [
+   "Deployment settings and infrastructure",
+   "Equity, access, and disability",
+   "Regulatory process and harmonization",
+   "Reliance, sycophancy, and affective harms"
+  ],
+  "tags": [
+   "pediatric use",
+   "sycophancy and concordance",
+   "product discontinuation",
+   "relational features",
+   "reasonably foreseeable use"
+  ],
+  "summary": "Stanford lab draws on teen chatbot testing to argue for omission and harmful-affirmation failure types, long-horizon testing, escalation quality, discontinuation plans, and a pediatric pathway.",
+  "words": 2450,
+  "pages": 5,
+  "posted": "2026-08-27T04:00:00Z",
+  "received": "2026-08-20T04:00:00Z",
+  "unreadable": false
+ },
+ {
+  "id": "FDA-2026-N-7874-0022",
+  "title": "Comment from Robert Lacroix",
+  "category_raw": "Private Industry - C0003",
+  "commenter_type": "Private industry (non-device)",
+  "type_inferred": false,
+  "org": "LTC - Healthcare, Diagnostics & Life Science",
+  "domain": "General / cross-cutting",
+  "q_cited": [],
+  "q_addr": [],
+  "topics": [
+   "Liability and accountability",
+   "Runtime controls and kill switches"
+  ],
+  "tags": [
+   "liability allocation",
+   "kill switch requirement"
+  ],
+  "summary": "Argues regulation needs an off switch and doctor-level legal accountability for device owners and developers, rejecting disclaimers, especially for autonomous agentic AI.",
+  "words": 330,
+  "pages": null,
+  "posted": "2026-08-27T04:00:00Z",
+  "received": "2026-08-20T04:00:00Z",
+  "unreadable": false
+ },
+ {
+  "id": "FDA-2026-N-7874-0023",
+  "title": "Comment from Anonymous",
+  "category_raw": null,
+  "commenter_type": "Individual",
+  "type_inferred": true,
+  "org": "",
+  "domain": "Mental and behavioral health",
+  "q_cited": [
+   18
+  ],
+  "q_addr": [
+   18
+  ],
+  "topics": [
+   "Human oversight and automation bias",
+   "Privacy and consent",
+   "Regulatory process and harmonization"
+  ],
+  "tags": [
+   "ai therapy regulation",
+   "data privacy",
+   "human oversight"
+  ],
+  "summary": "Individual cites harmful chatbot and AI therapy incidents, urging human oversight, FDA regulation of AI therapists, premarket accuracy standards, and rejecting reliance on postmarket review.",
+  "words": 430,
+  "pages": null,
+  "posted": "2026-08-27T04:00:00Z",
+  "received": "2026-08-20T04:00:00Z",
+  "unreadable": false
+ },
+ {
+  "id": "FDA-2026-N-7874-0024",
+  "title": "Comment from Srividya Narayanan",
+  "category_raw": "Health Professional - A0007",
+  "commenter_type": "Health professional",
+  "type_inferred": false,
+  "org": "",
+  "domain": "General / cross-cutting",
+  "q_cited": [],
+  "q_addr": [
+   1,
+   9,
+   18,
+   22,
+   24,
+   26
+  ],
+  "topics": [
+   "Human oversight and automation bias",
+   "Regulatory process and harmonization"
+  ],
+  "tags": [
+   "human factors validation",
+   "international harmonization"
+  ],
+  "summary": "Commenter recommends added risk dimensions, broad benchmarking cases, human factors testing, agentic autonomy limits, foundation model traceability, PCCP change elements, and international convergence.",
+  "words": 890,
+  "pages": 2,
+  "posted": "2026-08-27T04:00:00Z",
+  "received": "2026-08-21T04:00:00Z",
+  "unreadable": false
+ },
+ {
+  "id": "FDA-2026-N-7874-0025",
+  "title": "Comment from Deborah Ault",
+  "category_raw": "Health Professional - A0007",
+  "commenter_type": "Health professional",
+  "type_inferred": false,
+  "org": "Nurse Deb Speaking, Media & Consulting, LLC",
+  "domain": "Patient-facing information",
+  "q_cited": [
+   1,
+   2,
+   3,
+   4,
+   5,
+   6,
+   7,
+   8,
+   9,
+   10,
+   11,
+   12,
+   13,
+   14,
+   15,
+   16,
+   17,
+   18,
+   19,
+   20,
+   21,
+   22,
+   23,
+   24,
+   25,
+   26
+  ],
+  "q_addr": [
+   1,
+   2,
+   3,
+   4,
+   5,
+   6,
+   7,
+   8,
+   9,
+   10,
+   11,
+   13,
+   14,
+   15,
+   16,
+   18,
+   19,
+   20,
+   21,
+   22,
+   23,
+   24,
+   25,
+   26
+  ],
+  "topics": [
+   "Coverage and reimbursement",
+   "Equity, access, and disability",
+   "Regulatory process and harmonization"
+  ],
+  "tags": [
+   "clinical-adjacent ai gap",
+   "latent clinical need",
+   "evidence-based guidelines",
+   "interagency coordination",
+   "insurance utilization management"
+  ],
+  "summary": "Nurse advocate warns patient-facing and administrative agents can miss latent clinical needs, urging evidence-grounded triage, outcome monitoring, and oversight of non-device healthcare AI.",
+  "words": 11540,
+  "pages": 31,
+  "posted": "2026-08-27T04:00:00Z",
+  "received": "2026-08-22T04:00:00Z",
+  "unreadable": false
+ },
+ {
+  "id": "FDA-2026-N-7874-0026",
+  "title": "Comment from Rama Doddi",
+  "category_raw": "Device Industry - C0012",
+  "commenter_type": "Device industry",
+  "type_inferred": false,
+  "org": "",
+  "domain": "Clinical decision support",
+  "q_cited": [],
+  "q_addr": [
+   6,
+   9
+  ],
+  "topics": [
+   "Regulatory process and harmonization"
+  ],
+  "tags": [
+   "out-of-domain testing"
+  ],
+  "summary": "Regulatory professional recommends prioritizing sensitivity over over-escalation for triage devices and a standardized out-of-domain dataset with a deferral benchmark threshold.",
+  "words": 330,
+  "pages": null,
+  "posted": "2026-08-27T04:00:00Z",
+  "received": "2026-08-22T04:00:00Z",
+  "unreadable": false
+ },
+ {
+  "id": "FDA-2026-N-7874-0027",
+  "title": "Comment from SichGate Inc.",
+  "category_raw": "Device Industry - C0012",
+  "commenter_type": "Device industry",
+  "type_inferred": false,
+  "org": "SichGate Inc.",
+  "domain": "General / cross-cutting",
+  "q_cited": [
+   5,
+   9,
+   10,
+   16,
+   19,
+   22,
+   23,
+   25,
+   26
+  ],
+  "q_addr": [
+   5,
+   9,
+   10,
+   19,
+   22,
+   23,
+   25,
+   26
+  ],
+  "topics": [
+   "Cybersecurity",
+   "Deployment settings and infrastructure"
+  ],
+  "tags": [
+   "model compression",
+   "fine-tuning safety regression",
+   "adversarial robustness"
+  ],
+  "summary": "Adversarial-evaluation founder asks FDA to treat compression as a change category, require active adversarial re-benchmarking, failure-mode-level comparison, and multi-turn trajectory testing.",
+  "words": 4150,
+  "pages": 8,
+  "posted": "2026-08-27T04:00:00Z",
+  "received": "2026-08-22T04:00:00Z",
+  "unreadable": false
+ },
+ {
+  "id": "FDA-2026-N-7874-0028",
+  "title": "Comment from Aruna Badiga",
+  "category_raw": null,
+  "commenter_type": "Individual",
+  "type_inferred": true,
+  "org": "",
+  "domain": "General / cross-cutting",
+  "q_cited": [],
+  "q_addr": [
+   1,
+   2,
+   3,
+   4,
+   5,
+   6,
+   7,
+   9,
+   10,
+   11,
+   13,
+   14,
+   16,
+   18,
+   19,
+   20
+  ],
+  "topics": [
+   "Deployment settings and infrastructure",
+   "Equity, access, and disability"
+  ],
+  "tags": [
+   "interoperability",
+   "health equity"
+  ],
+  "summary": "Supports the framework with added risk modifiers, a directiveness decision tree, construct-validity requirements, third-party benchmark stewards, and auditable postmarket plans; attachment truncated mid-sentence.",
+  "words": 1650,
+  "pages": 5,
+  "posted": "2026-08-27T04:00:00Z",
+  "received": "2026-08-23T04:00:00Z",
+  "unreadable": false
+ },
+ {
+  "id": "FDA-2026-N-7874-0029",
+  "title": "Comment from Persistence Analytics Group LLC",
+  "category_raw": "Private Industry - C0003",
+  "commenter_type": "Private industry (non-device)",
+  "type_inferred": false,
+  "org": "Persistence Analytics Group LLC",
+  "domain": "General / cross-cutting",
+  "q_cited": [],
+  "q_addr": [
+   16,
+   19,
+   22,
+   24,
+   26
+  ],
+  "topics": [
+   "Reliance, sycophancy, and affective harms"
+  ],
+  "tags": [
+   "continued reliance assurance"
+  ],
+  "summary": "Analytics firm urges separating initial authorization from continued reliance, with prespecified assumptions, dependencies, and revalidation triggers, plus authorization checks for agentic actions.",
+  "words": 520,
+  "pages": null,
+  "posted": "2026-08-27T04:00:00Z",
+  "received": "2026-08-24T04:00:00Z",
+  "unreadable": false
+ },
+ {
+  "id": "FDA-2026-N-7874-0030",
+  "title": "Comment from Quality & Regulatory Expert Partners LLC (dba QRx Partners)",
+  "category_raw": "Device Industry - C0012",
+  "commenter_type": "Device industry",
+  "type_inferred": false,
+  "org": "Quality & Regulatory Expert Partners LLC (QRx Partners)",
+  "domain": "General / cross-cutting",
+  "q_cited": [
+   1,
+   3,
+   11,
+   24
+  ],
+  "q_addr": [
+   1,
+   3,
+   11,
+   24
+  ],
+  "topics": [
+   "Audit trails, provenance, and records"
+  ],
+  "tags": [
+   "soup software components"
+  ],
+  "summary": "Consultancy treats the two-axis framework as a screening tool, proposes adaptive user-comprehension as a risk control, flexible clinical confirmation, and SOUP-style controls for foundation models.",
+  "words": 800,
+  "pages": null,
+  "posted": "2026-08-27T04:00:00Z",
+  "received": "2026-08-24T04:00:00Z",
+  "unreadable": false
+ },
+ {
+  "id": "FDA-2026-N-7874-0031",
+  "title": "Comment from Medome.ai",
+  "category_raw": "Health Professional - A0007",
+  "commenter_type": "Health professional",
+  "type_inferred": false,
+  "org": "Medome.ai",
+  "domain": "General / cross-cutting",
+  "q_cited": [],
+  "q_addr": [],
+  "topics": [
+   "Liability and accountability",
+   "Regulatory process and harmonization"
+  ],
+  "tags": [
+   "liability allocation",
+   "deregulation advocacy"
+  ],
+  "summary": "Commenter argues product liability law already holds AI makers to a stricter standard than clinicians and urges light regulation with market forces.",
+  "words": 500,
+  "pages": null,
+  "posted": "2026-08-27T04:00:00Z",
+  "received": "2026-08-24T04:00:00Z",
+  "unreadable": false
+ },
+ {
+  "id": "FDA-2026-N-7874-0032",
+  "title": "Comment from Gregory Marcisz",
+  "category_raw": "Health Professional - A0007",
+  "commenter_type": "Health professional",
+  "type_inferred": false,
+  "org": "",
+  "domain": "General / cross-cutting",
+  "q_cited": [
+   1,
+   9,
+   18,
+   19,
+   20,
+   21,
+   22,
+   23,
+   24,
+   25,
+   26
+  ],
+  "q_addr": [
+   1,
+   9,
+   19,
+   21,
+   24,
+   25
+  ],
+  "topics": [
+   "Cybersecurity",
+   "Deployment settings and infrastructure"
+  ],
+  "tags": [
+   "cybersecurity",
+   "serviceability and repair",
+   "lifecycle obsolescence",
+   "operational resilience",
+   "common-mode risk"
+  ],
+  "summary": "Clinical engineer urges requirements for safe failure during dependency outages, GenAI cybersecurity, serviceability and repair access, lifecycle support, and inclusion of HTM professionals.",
+  "words": 4700,
+  "pages": 12,
+  "posted": "2026-08-27T04:00:00Z",
+  "received": "2026-08-24T04:00:00Z",
+  "unreadable": false
+ },
+ {
+  "id": "FDA-2026-N-7874-0033",
+  "title": "Comment from Shara Gospel",
+  "category_raw": "Device Industry - C0012",
+  "commenter_type": "Device industry",
+  "type_inferred": false,
+  "org": "",
+  "domain": "General / cross-cutting",
+  "q_cited": [
+   18,
+   19,
+   20,
+   21,
+   26
+  ],
+  "q_addr": [
+   18,
+   19,
+   20,
+   21
+  ],
+  "topics": [
+   "Liability and accountability",
+   "Regulatory process and harmonization"
+  ],
+  "tags": [
+   "mdr reportability",
+   "adjudicator reliability"
+  ],
+  "summary": "Pharmacovigilance professional argues postmarket programs must characterize detection capability, use decision-rule criteria with measured adjudicator agreement, and clarify generative malfunction reporting.",
+  "words": 2000,
+  "pages": 5,
+  "posted": "2026-08-27T04:00:00Z",
+  "received": "2026-08-24T04:00:00Z",
+  "unreadable": false
+ },
+ {
+  "id": "FDA-2026-N-7874-0034",
+  "title": "Comment from Rick Schrenker",
+  "category_raw": "Health Professional - A0007",
+  "commenter_type": "Health professional",
+  "type_inferred": false,
+  "org": "",
+  "domain": "General / cross-cutting",
+  "q_cited": [],
+  "q_addr": [],
+  "topics": [
+   "Runtime controls and kill switches"
+  ],
+  "tags": [
+   "design controls"
+  ],
+  "summary": "Insists devices meet established requirements, verification, and validation practices, warning that unconstrained generative AI risks grievous patient harm.",
+  "words": 65,
+  "pages": null,
+  "posted": "2026-08-27T04:00:00Z",
+  "received": "2026-08-25T04:00:00Z",
+  "unreadable": false
+ },
+ {
+  "id": "FDA-2026-N-7874-0035",
+  "title": "Comment from VivaSecuris",
+  "category_raw": "Device Industry - C0012",
+  "commenter_type": "Device industry",
+  "type_inferred": false,
+  "org": "VivaSecuris",
+  "domain": "General / cross-cutting",
+  "q_cited": [
+   1,
+   2,
+   3,
+   4,
+   5,
+   6,
+   7,
+   8,
+   9,
+   10,
+   11,
+   12,
+   13,
+   14,
+   15,
+   16,
+   17,
+   18,
+   19,
+   20,
+   21,
+   22,
+   23,
+   24,
+   25,
+   26
+  ],
+  "q_addr": [
+   1,
+   2,
+   3,
+   5,
+   6,
+   7,
+   8,
+   9,
+   10,
+   12,
+   14,
+   16,
+   18,
+   19,
+   20,
+   21,
+   22,
+   23,
+   24,
+   25,
+   26
+  ],
+  "topics": [
+   "Audit trails, provenance, and records",
+   "Cybersecurity",
+   "Privacy and consent",
+   "Regulatory process and harmonization"
+  ],
+  "tags": [
+   "ai-sbom",
+   "data privacy",
+   "cybersecurity",
+   "identity and provenance",
+   "device boundary definition"
+  ],
+  "summary": "Proposes treating the full system configuration as the unit of assurance, with an auditable lifecycle assurance case, AI-SBOM, deterministic safety controls, and bounded agent authority.",
+  "words": 5820,
+  "pages": 17,
+  "posted": "2026-08-27T04:00:00Z",
+  "received": "2026-08-25T04:00:00Z",
+  "unreadable": false
+ },
+ {
+  "id": "FDA-2026-N-7874-0036",
+  "title": "Comment from Tammy Rich Swinford",
+  "category_raw": "Health Professional - A0007",
+  "commenter_type": "Health professional",
+  "type_inferred": false,
+  "org": "",
+  "domain": "Radiology / imaging",
+  "q_cited": [],
+  "q_addr": [],
+  "topics": [
+   "Coverage and reimbursement",
+   "Equity, access, and disability"
+  ],
+  "tags": [
+   "rural health access",
+   "insurance coverage"
+  ],
+  "summary": "Rural hospital worker supports AI CT stroke interpretation when no radiologist is available, contingent on acceptance by receiving facilities and insurers.",
+  "words": 130,
+  "pages": null,
+  "posted": "2026-08-27T04:00:00Z",
+  "received": "2026-08-25T04:00:00Z",
+  "unreadable": false
+ },
+ {
+  "id": "FDA-2026-N-7874-0037",
+  "title": "Comment from Vizma Carver",
+  "category_raw": null,
+  "commenter_type": "Private industry (non-device)",
+  "type_inferred": true,
+  "org": "",
+  "domain": "General / cross-cutting",
+  "q_cited": [
+   1,
+   2,
+   3,
+   4,
+   5,
+   6
+  ],
+  "q_addr": [
+   1,
+   2,
+   3
+  ],
+  "topics": [
+   "Cybersecurity",
+   "Human oversight and automation bias"
+  ],
+  "tags": [
+   "cybersecurity containment",
+   "agentic system security",
+   "user competency gating"
+  ],
+  "summary": "Security consultant urges adding architectural connectedness to the risk framework, citing an agent sandbox escape, and replacing patient/HCP categories with risk-scaled user competency affirmation.",
+  "words": 2170,
+  "pages": 6,
+  "posted": "2026-08-27T04:00:00Z",
+  "received": "2026-08-25T04:00:00Z",
+  "unreadable": false
+ },
+ {
+  "id": "FDA-2026-N-7874-0038",
+  "title": "Comment from Mitchell Berger",
+  "category_raw": "Health Professional - A0007",
+  "commenter_type": "Health professional",
+  "type_inferred": false,
+  "org": "",
+  "domain": "General / cross-cutting",
+  "q_cited": [
+   1,
+   2,
+   3,
+   9,
+   11,
+   21
+  ],
+  "q_addr": [
+   1,
+   2,
+   3,
+   11
+  ],
+  "topics": [
+   "Regulatory process and harmonization",
+   "Transparency and public participation"
+  ],
+  "tags": [
+   "international harmonization",
+   "consensus definitions",
+   "patient engagement",
+   "ethics review"
+  ],
+  "summary": "Individual proposes a three-layer risk model, treating action-directing outputs as high risk despite disclaimers, tailored patient versus provider outputs, and added confirmation tests.",
+  "words": 1900,
+  "pages": 4,
+  "posted": "2026-08-27T04:00:00Z",
+  "received": "2026-08-25T04:00:00Z",
+  "unreadable": false
+ },
+ {
+  "id": "FDA-2026-N-7874-0039",
+  "title": "Comment from Anonymous",
+  "category_raw": null,
+  "commenter_type": "Individual",
+  "type_inferred": true,
+  "org": "",
+  "domain": "General / cross-cutting",
+  "q_cited": [],
+  "q_addr": [
+   1,
+   19,
+   22
+  ],
+  "topics": [
+   "Deployment settings and infrastructure"
+  ],
+  "tags": [
+   "model retraining controls"
+  ],
+  "summary": "Brief comment recommends clear performance metrics, expanded risk dimensions, retraining documentation, proactive drift monitoring, and risk-based revalidation triggers within a continuous lifecycle framework.",
+  "words": 200,
+  "pages": null,
+  "posted": "2026-08-27T04:00:00Z",
+  "received": "2026-08-26T04:00:00Z",
+  "unreadable": false
+ },
+ {
+  "id": "FDA-2026-N-7874-0040",
+  "title": "Comment from Amber Garner",
+  "category_raw": "Health Care Association - D0022",
+  "commenter_type": "Health care association",
+  "type_inferred": false,
+  "org": "",
+  "domain": "Other",
+  "q_cited": [],
+  "q_addr": [],
+  "topics": [
+   "Privacy and consent"
+  ],
+  "tags": [
+   "consent",
+   "off-topic grievance"
+  ],
+  "summary": "Personal grievance alleging fraud, identity control, and nonconsensual experimentation, opting out of generative AI; does not engage the discussion paper.",
+  "words": 470,
+  "pages": null,
+  "posted": "2026-08-27T04:00:00Z",
+  "received": "2026-08-26T04:00:00Z",
+  "unreadable": false
+ },
+ {
+  "id": "FDA-2026-N-7874-0041",
+  "title": "Comment from Amber Garner",
+  "category_raw": "Health Care Association - D0022",
+  "commenter_type": "Health care association",
+  "type_inferred": false,
+  "org": "",
+  "domain": "Other",
+  "q_cited": [],
+  "q_addr": [],
+  "topics": [
+   "Privacy and consent"
+  ],
+  "tags": [
+   "off-topic",
+   "consent and opt-out"
+  ],
+  "summary": "Off-topic personal grievance alleging fraud and nonconsensual experimentation; states opposition and opts out of generative AI use.",
+  "words": 430,
+  "pages": null,
+  "posted": "2026-08-27T04:00:00Z",
+  "received": "2026-08-26T04:00:00Z",
+  "unreadable": false
+ },
+ {
+  "id": "FDA-2026-N-7874-0042",
+  "title": "Comment from Tanmaya Kumar",
+  "category_raw": "Other Organizations - E0003",
+  "commenter_type": "Other",
+  "type_inferred": false,
+  "org": "Behavioral Health Open Source",
+  "domain": "General / cross-cutting",
+  "q_cited": [
+   1,
+   19,
+   20,
+   21,
+   26
+  ],
+  "q_addr": [
+   1,
+   19,
+   20,
+   21,
+   26
+  ],
+  "topics": [
+   "Audit trails, provenance, and records",
+   "Deployment settings and infrastructure"
+  ],
+  "tags": [
+   "audit trail attribution",
+   "interoperability standards"
+  ],
+  "summary": "Open-source audit standard maintainer argues current FHIR audit records cannot show whether AI agent actions were human-supervised, proposing attribution traceability as risk dimension and acceptance criterion.",
+  "words": 2800,
+  "pages": null,
+  "posted": "2026-08-27T04:00:00Z",
+  "received": "2026-08-26T04:00:00Z",
+  "unreadable": false
+ },
+ {
+  "id": "FDA-2026-N-7874-0043",
+  "title": "Comment from Ben Locwin",
+  "category_raw": "Health Professional - A0007",
+  "commenter_type": "Health professional",
+  "type_inferred": false,
+  "org": "",
+  "domain": "General / cross-cutting",
+  "q_cited": [
+   1,
+   2,
+   3,
+   4,
+   5,
+   6,
+   7,
+   8,
+   9,
+   10,
+   11,
+   12,
+   13,
+   14,
+   15,
+   16,
+   17
+  ],
+  "q_addr": [
+   1,
+   2,
+   3,
+   4,
+   5,
+   6,
+   9,
+   10,
+   12,
+   13,
+   14,
+   16,
+   17
+  ],
+  "topics": [
+   "Transparency and public participation"
+  ],
+  "tags": [
+   "output disclaimers"
+  ],
+  "summary": "Commenter answers questions 1-17 briefly, favoring informational disclaimers, skepticism of patient empowerment, over-escalation concern, meta-analytic comparators, and opposing third-party evaluation requirements.",
+  "words": 1980,
+  "pages": 4,
+  "posted": "2026-08-27T04:00:00Z",
+  "received": "2026-08-26T04:00:00Z",
+  "unreadable": false
+ },
+ {
+  "id": "FDA-2026-N-7874-0044",
+  "title": "Comment from Casedok",
+  "category_raw": "Federal Government - G0007",
+  "commenter_type": "Government",
+  "type_inferred": false,
+  "org": "Casedok",
+  "domain": "Other",
+  "q_cited": [],
+  "q_addr": [],
+  "topics": [
+   "Audit trails, provenance, and records",
+   "Privacy and consent"
+  ],
+  "tags": [
+   "data privacy",
+   "biometric consent",
+   "hipaa compliance",
+   "voice recording surveillance"
+  ],
+  "summary": "Objects that emergency room AI captures and indexes patient voice prints without informed consent, violating HIPAA, HITECH, and wiretapping laws.",
+  "words": 280,
+  "pages": null,
+  "posted": "2026-08-27T04:00:00Z",
+  "received": "2026-08-27T04:00:00Z",
+  "unreadable": false
+ },
+ {
+  "id": "FDA-2026-N-7874-0045",
+  "title": "Comment from Ravi Pankhaniya",
+  "category_raw": "Health Professional - A0007",
+  "commenter_type": "Health professional",
+  "type_inferred": false,
+  "org": "",
+  "domain": "General / cross-cutting",
+  "q_cited": [
+   1,
+   2,
+   3,
+   4,
+   5,
+   6,
+   7,
+   8,
+   9,
+   10,
+   11,
+   12,
+   13,
+   14,
+   15,
+   16,
+   17,
+   18,
+   19,
+   20,
+   21,
+   22,
+   23,
+   24,
+   25,
+   26
+  ],
+  "q_addr": [
+   1,
+   2,
+   3,
+   5,
+   6,
+   7,
+   8,
+   9,
+   10,
+   11,
+   14,
+   15,
+   16,
+   18,
+   19,
+   22,
+   23,
+   25,
+   26
+  ],
+  "topics": [
+   "Liability and accountability",
+   "Runtime controls and kill switches"
+  ],
+  "tags": [
+   "clinical AI licensure",
+   "graduated autonomy",
+   "state practice of medicine"
+  ],
+  "summary": "Physician proposes a clinical AI licensure model with nine stages, five risk axes, numeric authorization thresholds, and an agency ladder for agentic systems.",
+  "words": 3620,
+  "pages": 9,
+  "posted": "2026-09-01T04:00:00Z",
+  "received": "2026-08-28T04:00:00Z",
+  "unreadable": false
+ },
+ {
+  "id": "FDA-2026-N-7874-0046",
+  "title": "Comment from Blaine Warkentine",
+  "category_raw": null,
+  "commenter_type": "Health professional",
+  "type_inferred": true,
+  "org": "",
+  "domain": "General / cross-cutting",
+  "q_cited": [],
+  "q_addr": [
+   1,
+   3,
+   14,
+   21,
+   26
+  ],
+  "topics": [
+   "Audit trails, provenance, and records",
+   "Liability and accountability",
+   "Regulatory process and harmonization"
+  ],
+  "tags": [
+   "human accountability",
+   "audit trails",
+   "clinical decision support exclusion"
+  ],
+  "summary": "Physician-developer argues a named, accountable licensed human reviewer should lower assessed risk, anchor agentic oversight, and be recorded in tamper-evident attestations.",
+  "words": 1790,
+  "pages": 4,
+  "posted": "2026-09-01T04:00:00Z",
+  "received": "2026-08-28T04:00:00Z",
+  "unreadable": false
+ },
+ {
+  "id": "FDA-2026-N-7874-0047",
+  "title": "Comment from QC Healthcare",
+  "category_raw": "Private Industry - C0003",
+  "commenter_type": "Private industry (non-device)",
+  "type_inferred": false,
+  "org": "QC Healthcare",
+  "domain": "General / cross-cutting",
+  "q_cited": [],
+  "q_addr": [
+   16,
+   21
+  ],
+  "topics": [
+   "Audit trails, provenance, and records",
+   "Equity, access, and disability",
+   "Liability and accountability",
+   "Privacy and consent"
+  ],
+  "tags": [
+   "patient disclosure and consent",
+   "liability allocation",
+   "audit logging",
+   "pediatric use",
+   "enforcement penalties"
+  ],
+  "summary": "Calls for enforceable guardrails including clinician approval for clinical decisions, independent audits, tamper-resistant logs, patient disclosure rights, incident reporting, and assigned accountability.",
+  "words": 800,
+  "pages": 3,
+  "posted": "2026-09-01T04:00:00Z",
+  "received": "2026-08-28T04:00:00Z",
+  "unreadable": false
+ },
+ {
+  "id": "FDA-2026-N-7874-0048",
+  "title": "Comment from VitaSignal",
+  "category_raw": "Private Industry - C0003",
+  "commenter_type": "Private industry (non-device)",
+  "type_inferred": false,
+  "org": "VitaSignal",
+  "domain": "General / cross-cutting",
+  "q_cited": [],
+  "q_addr": [
+   1,
+   2,
+   5,
+   9,
+   10,
+   13,
+   18,
+   19,
+   24,
+   26
+  ],
+  "topics": [],
+  "tags": [],
+  "summary": "Company recommends added risk modifiers, behavior-based directiveness, claim-specific traceable evidence, bounded postmarket reliance, foundation model dependency controls, and agentic action safeguards.",
+  "words": 800,
+  "pages": null,
+  "posted": "2026-09-01T04:00:00Z",
+  "received": "2026-08-28T04:00:00Z",
+  "unreadable": false
+ },
+ {
+  "id": "FDA-2026-N-7874-0049",
+  "title": "Comment from OneSource Solutions International (OSSI)",
+  "category_raw": "Private Industry - C0003",
+  "commenter_type": "Private industry (non-device)",
+  "type_inferred": false,
+  "org": "OneSource Solutions International (OSSI)",
+  "domain": "General / cross-cutting",
+  "q_cited": [
+   1,
+   2,
+   3,
+   4,
+   5,
+   6,
+   7,
+   8,
+   9,
+   10,
+   11,
+   12,
+   13,
+   14,
+   15,
+   16,
+   17,
+   18,
+   19,
+   20,
+   21,
+   22,
+   23,
+   24,
+   25,
+   26
+  ],
+  "q_addr": [
+   1,
+   2,
+   3,
+   4,
+   5,
+   6,
+   7,
+   8,
+   9,
+   10,
+   11,
+   12,
+   13,
+   14,
+   15,
+   16,
+   17,
+   18,
+   19,
+   20,
+   21,
+   22,
+   23,
+   24,
+   25,
+   26
+  ],
+  "topics": [
+   "Audit trails, provenance, and records",
+   "Cybersecurity",
+   "Deployment settings and infrastructure",
+   "Runtime controls and kill switches"
+  ],
+  "tags": [
+   "audit trails and reconstructability",
+   "data provenance",
+   "execution authority",
+   "cybersecurity",
+   "interoperability"
+  ],
+  "summary": "Answers all 26 questions, arguing capability does not confer authority and proposing risk modifiers, a reconstructable event record, and governed reliance and execution for agents.",
+  "words": 7180,
+  "pages": 18,
+  "posted": "2026-09-01T04:00:00Z",
+  "received": "2026-08-28T04:00:00Z",
+  "unreadable": false
+ },
+ {
+  "id": "FDA-2026-N-7874-0050",
+  "title": "Comment from Chirag Kanitkar",
+  "category_raw": "Health Professional - A0007",
+  "commenter_type": "Health professional",
+  "type_inferred": false,
+  "org": "",
+  "domain": "General / cross-cutting",
+  "q_cited": [
+   19,
+   21
+  ],
+  "q_addr": [
+   19,
+   21,
+   24,
+   25
+  ],
+  "topics": [
+   "Audit trails, provenance, and records",
+   "Deployment settings and infrastructure",
+   "Equity, access, and disability",
+   "Transparency and public participation"
+  ],
+  "tags": [
+   "deployer capacity",
+   "health equity",
+   "device traceability",
+   "public data transparency"
+  ],
+  "summary": "Health system supply chain researcher argues institutions cannot inventory or trace GenAI devices, so their monitoring role should be receiving and reporting, with tiered public Master Files.",
+  "words": 10700,
+  "pages": 22,
+  "posted": "2026-09-01T04:00:00Z",
+  "received": "2026-08-28T04:00:00Z",
+  "unreadable": false
+ },
+ {
+  "id": "FDA-2026-N-7874-0051",
+  "title": "Comment from Sehouenou Alberic Candide Ahouehome",
+  "category_raw": "Drug Association - D0012",
+  "commenter_type": "Drug industry",
+  "type_inferred": false,
+  "org": "",
+  "domain": "General / cross-cutting",
+  "q_cited": [
+   1,
+   2,
+   3,
+   4,
+   5,
+   6,
+   7,
+   8,
+   9,
+   10,
+   11,
+   12,
+   13,
+   14,
+   15,
+   16,
+   18,
+   19,
+   22,
+   23,
+   26
+  ],
+  "q_addr": [
+   1,
+   2,
+   3,
+   4,
+   5,
+   6,
+   7,
+   8,
+   9,
+   10,
+   11,
+   12,
+   15,
+   18,
+   19,
+   22,
+   23,
+   26
+  ],
+  "topics": [
+   "Equity, access, and disability",
+   "Regulatory process and harmonization"
+  ],
+  "tags": [
+   "international harmonization",
+   "real-world evidence transportability",
+   "non-english language performance"
+  ],
+  "summary": "Epidemiologist offers wide-ranging responses including error detectability as risk modifier, directiveness rubric, sequestered test sets, outcome-linked surveillance, change-envelope PCCPs, and IMDRF alignment.",
+  "words": 2150,
+  "pages": 5,
+  "posted": "2026-09-01T04:00:00Z",
+  "received": "2026-08-29T04:00:00Z",
+  "unreadable": false
+ },
+ {
+  "id": "FDA-2026-N-7874-0052",
+  "title": "Comment from Martin Haimerl",
+  "category_raw": "Academia - E0007",
+  "commenter_type": "Academia",
+  "type_inferred": false,
+  "org": "Furtwangen University",
+  "domain": "General / cross-cutting",
+  "q_cited": [
+   1,
+   2,
+   3,
+   4,
+   5,
+   6,
+   7,
+   8,
+   9,
+   10,
+   11,
+   12,
+   13,
+   14,
+   15,
+   18,
+   19,
+   20,
+   21,
+   22,
+   23,
+   24,
+   26
+  ],
+  "q_addr": [
+   1,
+   2,
+   3,
+   4,
+   5,
+   6,
+   7,
+   8,
+   9,
+   10,
+   11,
+   12,
+   13,
+   14,
+   15,
+   18,
+   19,
+   20,
+   21,
+   22,
+   23,
+   24,
+   26
+  ],
+  "topics": [
+   "Deployment settings and infrastructure",
+   "Human oversight and automation bias",
+   "Regulatory process and harmonization",
+   "Runtime controls and kill switches"
+  ],
+  "tags": [
+   "criticality vs ISO 14971 risk",
+   "staged deployment",
+   "temporal fidelity in evaluation",
+   "deskilling",
+   "interoperability"
+  ],
+  "summary": "Detailed response separating regulatory criticality stratification from ISO 14971 risk management, proposing staged evidence-gated deployment, dynamic benchmarking, and end-to-end accountability for agentic systems.",
+  "words": 9000,
+  "pages": 16,
+  "posted": "2026-09-01T04:00:00Z",
+  "received": "2026-09-01T04:00:00Z",
+  "unreadable": false
+ },
+ {
+  "id": "FDA-2026-N-7874-0053",
+  "title": "Comment from Krishna Koka",
+  "category_raw": null,
+  "commenter_type": "Individual",
+  "type_inferred": true,
+  "org": "",
+  "domain": "Other",
+  "q_cited": [
+   1,
+   7,
+   11,
+   18,
+   21,
+   22,
+   23,
+   24,
+   26
+  ],
+  "q_addr": [
+   1,
+   7,
+   11,
+   18,
+   21,
+   22,
+   23,
+   24,
+   26
+  ],
+  "topics": [
+   "Audit trails, provenance, and records",
+   "Deployment settings and infrastructure"
+  ],
+  "tags": [
+   "physical output devices",
+   "point-of-care manufacturing",
+   "manufacturing traceability"
+  ],
+  "summary": "Medical student argues GenAI-designed implants need a physical-output risk modifier, production-system evaluation, coupled change control, two-signature release, and no postmarket tradeoff.",
+  "words": 1275,
+  "pages": 3,
+  "posted": "2026-09-02T04:00:00Z",
+  "received": "2026-09-01T04:00:00Z",
+  "unreadable": false
+ },
+ {
+  "id": "FDA-2026-N-7874-0054",
+  "title": "Comment from Sitora Healthcare Digital",
+  "category_raw": "International Industry - I0022",
+  "commenter_type": "International industry",
+  "type_inferred": false,
+  "org": "Sitora Healthcare Digital",
+  "domain": "General / cross-cutting",
+  "q_cited": [
+   1,
+   3,
+   6,
+   7,
+   9,
+   14,
+   18,
+   19,
+   25,
+   26
+  ],
+  "q_addr": [
+   1,
+   3,
+   6,
+   7,
+   9,
+   14,
+   18,
+   19,
+   24,
+   25,
+   26
+  ],
+  "topics": [
+   "Audit trails, provenance, and records",
+   "Equity, access, and disability",
+   "Runtime controls and kill switches"
+  ],
+  "tags": [
+   "evidence provenance",
+   "layered safety architecture",
+   "automation bias"
+  ],
+  "summary": "UK firm proposes a seven-layer safety architecture, evidence fidelity as a competency, separate escalation error metrics, effective human oversight, and authority-graded agentic regulation.",
+  "words": 4750,
+  "pages": 16,
+  "posted": "2026-09-03T04:00:00Z",
+  "received": "2026-09-03T04:00:00Z",
+  "unreadable": false
+ },
+ {
+  "id": "FDA-2026-N-7874-0055",
+  "title": "Comment from Newton's Tree Inc",
+  "category_raw": "Private Industry - C0003",
+  "commenter_type": "Private industry (non-device)",
+  "type_inferred": false,
+  "org": "Newton's Tree",
+  "domain": "General / cross-cutting",
+  "q_cited": [
+   1,
+   2,
+   3,
+   4,
+   5,
+   6,
+   7,
+   8,
+   9,
+   10,
+   11,
+   12,
+   13,
+   14,
+   15,
+   16,
+   17,
+   18,
+   19,
+   20,
+   21,
+   22,
+   23,
+   24,
+   25,
+   26
+  ],
+  "q_addr": [
+   1,
+   2,
+   3,
+   4,
+   5,
+   6,
+   7,
+   8,
+   9,
+   10,
+   11,
+   12,
+   13,
+   14,
+   15,
+   16,
+   17,
+   18,
+   19,
+   20,
+   21,
+   22,
+   23,
+   24,
+   25,
+   26
+  ],
+  "topics": [
+   "Deployment settings and infrastructure",
+   "Equity, access, and disability",
+   "Runtime controls and kill switches"
+  ],
+  "tags": [
+   "deterministic scope controls",
+   "automation bias",
+   "multi-site monitoring network"
+  ],
+  "summary": "Proposes three non-substitutable assurance layers (competency, clinical confirmation, operational assurance), a general versus patient-specific output split, and deterministic controls, answering every question.",
+  "words": 3780,
+  "pages": 16,
+  "posted": "2026-09-04T04:00:00Z",
+  "received": "2026-09-03T04:00:00Z",
+  "unreadable": false
+ },
+ {
+  "id": "FDA-2026-N-7874-0056",
+  "title": "Comment from Manuj Agarwal",
+  "category_raw": "Health Professional - A0007",
+  "commenter_type": "Health professional",
+  "type_inferred": false,
+  "org": "",
+  "domain": "Clinical decision support",
+  "q_cited": [
+   4,
+   9,
+   14,
+   16,
+   19,
+   21,
+   26
+  ],
+  "q_addr": [
+   4,
+   9,
+   14,
+   16,
+   19,
+   21,
+   26
+  ],
+  "topics": [],
+  "tags": [],
+  "summary": "Radiation oncologist argues competency should be task-specific and consequence-sensitive, with specialist comparators, error detectability in risk, independent adjudication, trigger-based monitoring, and agentic autonomy boundaries.",
+  "words": 2110,
+  "pages": 5,
+  "posted": "2026-09-04T04:00:00Z",
+  "received": "2026-09-03T04:00:00Z",
+  "unreadable": false
+ },
+ {
+  "id": "FDA-2026-N-7874-0057",
+  "title": "Comment from Wen Hsien Ethan Huang",
+  "category_raw": null,
+  "commenter_type": "Health professional",
+  "type_inferred": true,
+  "org": "DrEthan AI Aesthetics",
+  "domain": "Clinical decision support",
+  "q_cited": [
+   1,
+   2,
+   9,
+   10,
+   11,
+   14,
+   19,
+   22,
+   23,
+   25
+  ],
+  "q_addr": [
+   1,
+   2,
+   9,
+   10,
+   11,
+   14,
+   19,
+   22,
+   23,
+   25
+  ],
+  "topics": [
+   "Deployment settings and infrastructure",
+   "Equity, access, and disability",
+   "Reliance, sycophancy, and affective harms"
+  ],
+  "tags": [
+   "automation bias",
+   "authority-based persuasion",
+   "case-mix shift"
+  ],
+  "summary": "Clinician-educator urges benchmarks testing speaker-authority sway, empirically demonstrated human oversight, re-credentialing style re-examination after changes, and case-mix aware generalizability testing.",
+  "words": 2000,
+  "pages": 6,
+  "posted": "2026-09-04T04:00:00Z",
+  "received": "2026-09-03T04:00:00Z",
+  "unreadable": false
+ },
+ {
+  "id": "FDA-2026-N-7874-0058",
+  "title": "Comment from Wen Hsien Ethan Huang",
+  "category_raw": null,
+  "commenter_type": "Health professional",
+  "type_inferred": true,
+  "org": "",
+  "domain": "General / cross-cutting",
+  "q_cited": [
+   1,
+   2,
+   9,
+   10,
+   11,
+   14,
+   19,
+   22,
+   23,
+   25
+  ],
+  "q_addr": [
+   1,
+   2,
+   9,
+   10,
+   11,
+   14,
+   19,
+   22,
+   23,
+   25
+  ],
+  "topics": [
+   "Equity, access, and disability"
+  ],
+  "tags": [
+   "user authority bias",
+   "automation bias"
+  ],
+  "summary": "Clinician-educator recommends benchmarking sensitivity to claimed user seniority, testing real human override behavior, periodic re-credentialing-style re-examination, and MAFs disclosing refusal and stability behavior.",
+  "words": 1950,
+  "pages": 6,
+  "posted": "2026-09-04T04:00:00Z",
+  "received": "2026-09-03T04:00:00Z",
+  "unreadable": false
+ },
+ {
+  "id": "FDA-2026-N-7874-0059",
+  "title": "Comment from Middle Wave LLC / Teach & Serve",
+  "category_raw": "Health Professional - A0007",
+  "commenter_type": "Health professional",
+  "type_inferred": false,
+  "org": "Middle Wave LLC / Teach & Serve",
+  "domain": "Clinical decision support",
+  "q_cited": [],
+  "q_addr": [
+   9
+  ],
+  "topics": [
+   "Equity, access, and disability",
+   "Regulatory process and harmonization"
+  ],
+  "tags": [
+   "evidence quality calibration",
+   "health equity"
+  ],
+  "summary": "Physician recommends benchmarking whether models calibrate confidence to evidence quality, using historical medical reversals, and framing subgroup evaluation as usability and safety rather than parity.",
+  "words": 1800,
+  "pages": 4,
+  "posted": "2026-09-09T04:00:00Z",
+  "received": "2026-09-04T04:00:00Z",
+  "unreadable": false
+ },
+ {
+  "id": "FDA-2026-N-7874-0060",
+  "title": "Comment from Christopher Tobias",
+  "category_raw": "Device Industry - C0012",
+  "commenter_type": "Device industry",
+  "type_inferred": false,
+  "org": "",
+  "domain": "Clinical decision support",
+  "q_cited": [],
+  "q_addr": [],
+  "topics": [
+   "Audit trails, provenance, and records",
+   "Human oversight and automation bias"
+  ],
+  "tags": [
+   "audit trails",
+   "clinician feedback loop"
+  ],
+  "summary": "Brief comment asks FDA to require full-loop auditing of how clinician responses to AI outputs are used or dismissed, with reasons recorded.",
+  "words": 75,
+  "pages": null,
+  "posted": "2026-09-09T04:00:00Z",
+  "received": "2026-09-04T04:00:00Z",
+  "unreadable": false
+ },
+ {
+  "id": "FDA-2026-N-7874-0061",
+  "title": "Comment from The Christman AI Project LLC",
+  "category_raw": "Device Industry - C0012",
+  "commenter_type": "Device industry",
+  "type_inferred": false,
+  "org": "The Christman AI Project / Luma Cognify AI",
+  "domain": "General / cross-cutting",
+  "q_cited": [
+   15,
+   19,
+   20,
+   24,
+   26
+  ],
+  "q_addr": [
+   26
+  ],
+  "topics": [
+   "Equity, access, and disability",
+   "Reliance, sycophancy, and affective harms",
+   "Runtime controls and kill switches"
+  ],
+  "tags": [
+   "sycophancy",
+   "persistent memory risks",
+   "instruction-layer insufficiency",
+   "assistive communication users"
+  ],
+  "summary": "On agentic devices, documents unreliable self-reports, faulty persistent memory, and sycophancy, proposing step-report integrity, absence-claim, memory, and affect-invariance acceptance criteria.",
+  "words": 4070,
+  "pages": 8,
+  "posted": "2026-09-09T04:00:00Z",
+  "received": "2026-09-04T04:00:00Z",
+  "unreadable": false
+ },
+ {
+  "id": "FDA-2026-N-7874-0062",
+  "title": "Comment from The Christman AI Project / Luma Cognify AI. LLC",
+  "category_raw": "Device Industry - C0012",
+  "commenter_type": "Device industry",
+  "type_inferred": false,
+  "org": "The Christman AI Project / Luma Cognify AI, LLC",
+  "domain": "Other",
+  "q_cited": [
+   20,
+   24
+  ],
+  "q_addr": [
+   9,
+   19,
+   20,
+   24
+  ],
+  "topics": [
+   "Audit trails, provenance, and records",
+   "Cybersecurity",
+   "Equity, access, and disability",
+   "Runtime controls and kill switches"
+  ],
+  "tags": [
+   "input integrity monitoring",
+   "runtime component manifest",
+   "failure logging",
+   "disability and accessibility"
+  ],
+  "summary": "Field measurements show misidentified components, silent upstream audio failures, and transcriber confabulation; recommends runtime manifests, version pinning, input-integrity monitoring, and null-input benchmarks.",
+  "words": 2180,
+  "pages": 5,
+  "posted": "2026-09-09T04:00:00Z",
+  "received": "2026-09-04T04:00:00Z",
+  "unreadable": false
+ },
+ {
+  "id": "FDA-2026-N-7874-0063",
+  "title": "Comment from The Christman AI Project / Luma Cognify AI. LLC",
+  "category_raw": "Device Industry - C0012",
+  "commenter_type": "Device industry",
+  "type_inferred": false,
+  "org": "The Christman AI Project / Luma Cognify AI",
+  "domain": "Other",
+  "q_cited": [
+   19
+  ],
+  "q_addr": [
+   19
+  ],
+  "topics": [
+   "Audit trails, provenance, and records",
+   "Equity, access, and disability",
+   "Hallucination and output reliability",
+   "Human oversight and automation bias"
+  ],
+  "tags": [
+   "assistive technology users",
+   "within-session degradation",
+   "independent action logs",
+   "caregiver notification"
+  ],
+  "summary": "Argues periodic re-benchmarking misses within-session degradation and proposes continuous claim-versus-independent-record verification with alerts to caregivers of nonverbal users.",
+  "words": 2730,
+  "pages": 6,
+  "posted": "2026-09-09T04:00:00Z",
+  "received": "2026-09-04T04:00:00Z",
+  "unreadable": false
+ },
+ {
+  "id": "FDA-2026-N-7874-0064",
+  "title": "Comment from The Christman AI Project / Luma Cognify AI. LLC",
+  "category_raw": "Device Industry - C0012",
+  "commenter_type": "Device industry",
+  "type_inferred": false,
+  "org": "The Christman AI Project / Luma Cognify AI LLC",
+  "domain": "Other",
+  "q_cited": [
+   15
+  ],
+  "q_addr": [
+   15
+  ],
+  "topics": [
+   "Equity, access, and disability",
+   "Hallucination and output reliability"
+  ],
+  "tags": [
+   "assistive communication devices",
+   "disability access",
+   "fabricated output from null input"
+  ],
+  "summary": "AAC developer argues absence-of-device comparator should be a pass/fail floor test, citing speech transcription that fabricated words from silent audio for nonverbal users.",
+  "words": 2100,
+  "pages": 4,
+  "posted": "2026-09-09T04:00:00Z",
+  "received": "2026-09-04T04:00:00Z",
+  "unreadable": false
+ },
+ {
+  "id": "FDA-2026-N-7874-0065",
+  "title": "Comment from The Christman AI Project / Luma Cognify AI. LLC",
+  "category_raw": "Device Industry - C0012",
+  "commenter_type": "Device industry",
+  "type_inferred": false,
+  "org": "The Christman AI Project / Luma Cognify AI LLC",
+  "domain": "Patient-facing information",
+  "q_cited": [
+   5
+  ],
+  "q_addr": [
+   5
+  ],
+  "topics": [
+   "Equity, access, and disability",
+   "Reliance, sycophancy, and affective harms"
+  ],
+  "tags": [
+   "sycophancy and affect",
+   "persistent memory risks",
+   "neurodivergent users"
+  ],
+  "summary": "Uses a recorded chatbot session to argue directiveness drifts with user affect, recommending trajectory-level risk assessment varying affect and including persistent memory state.",
+  "words": 3050,
+  "pages": 6,
+  "posted": "2026-09-09T04:00:00Z",
+  "received": "2026-09-04T04:00:00Z",
+  "unreadable": false
+ },
+ {
+  "id": "FDA-2026-N-7874-0066",
+  "title": "Comment from The Christman AI Project / Luma Cognify AI. LLC",
+  "category_raw": "Device Industry - C0012",
+  "commenter_type": "Device industry",
+  "type_inferred": false,
+  "org": "The Christman AI Project / Luma Cognify AI LLC",
+  "domain": "General / cross-cutting",
+  "q_cited": [
+   20,
+   24
+  ],
+  "q_addr": [
+   20
+  ],
+  "topics": [
+   "Hallucination and output reliability",
+   "Transparency and public participation"
+  ],
+  "tags": [
+   "evidence basis disclosure",
+   "confidence calibration"
+  ],
+  "summary": "Documents an LLM supervisory reviewer making confident unsupported claims from stale evidence, recommending supervisory agents disclose evidence basis and age, and be validated without expert backstops.",
+  "words": 2400,
+  "pages": 6,
+  "posted": "2026-09-09T04:00:00Z",
+  "received": "2026-09-04T04:00:00Z",
+  "unreadable": false
+ },
+ {
+  "id": "FDA-2026-N-7874-0067",
+  "title": "Comment from Bhasker Sambar",
+  "category_raw": "Device Industry - C0012",
+  "commenter_type": "Device industry",
+  "type_inferred": false,
+  "org": "",
+  "domain": "General / cross-cutting",
+  "q_cited": [
+   6,
+   8,
+   9,
+   10,
+   16,
+   19,
+   22,
+   26
+  ],
+  "q_addr": [
+   6,
+   8,
+   9,
+   10,
+   16,
+   19,
+   22,
+   26
+  ],
+  "topics": [
+   "Human oversight and automation bias",
+   "Regulatory process and harmonization"
+  ],
+  "tags": [
+   "combination products",
+   "cross-center harmonization",
+   "human factors"
+  ],
+  "summary": "Pharma CMC professional urges reusing existing FDA terminology and drug-side mechanisms (V&V 40, ICH Q12, MDDT, Part 11) and clarifying treatment of GenAI in combination products.",
+  "words": 1900,
+  "pages": 5,
+  "posted": "2026-09-09T04:00:00Z",
+  "received": "2026-09-04T04:00:00Z",
+  "unreadable": false
+ },
+ {
+  "id": "FDA-2026-N-7874-0068",
+  "title": "Comment from Linda Ahrens",
+  "category_raw": "Drug Industry - C0022",
+  "commenter_type": "Drug industry",
+  "type_inferred": false,
+  "org": "",
+  "domain": "Clinical decision support",
+  "q_cited": [],
+  "q_addr": [],
+  "topics": [
+   "Regulatory process and harmonization",
+   "Transparency and public participation"
+  ],
+  "tags": [
+   "complementary medicine evidence",
+   "global evidence retrieval",
+   "evidence grading transparency"
+  ],
+  "summary": "Urges that medical AI retrieve and impartially grade global evidence, including complementary and traditional therapies, using the same rigorous standards as conventional treatments.",
+  "words": 560,
+  "pages": null,
+  "posted": "2026-09-09T04:00:00Z",
+  "received": "2026-09-05T04:00:00Z",
+  "unreadable": false
+ },
+ {
+  "id": "FDA-2026-N-7874-0069",
+  "title": "Comment from Vent Creativity Corporation",
+  "category_raw": "Device Industry - C0012",
+  "commenter_type": "Device industry",
+  "type_inferred": false,
+  "org": "Vent Creativity Corporation",
+  "domain": "General / cross-cutting",
+  "q_cited": [],
+  "q_addr": [],
+  "topics": [
+   "Regulatory process and harmonization"
+  ],
+  "tags": [
+   "scope definition",
+   "causal ai"
+  ],
+  "summary": "Company asks FDA to clarify what counts as generative AI and consider a parallel proposal for causal AI models.",
+  "words": 70,
+  "pages": null,
+  "posted": "2026-09-09T04:00:00Z",
+  "received": "2026-09-06T04:00:00Z",
+  "unreadable": false
+ },
+ {
+  "id": "FDA-2026-N-7874-0070",
+  "title": "Comment from Amr Saad",
+  "category_raw": "Device Industry - C0012",
+  "commenter_type": "Device industry",
+  "type_inferred": false,
+  "org": "Pallas Kliniken",
+  "domain": "Clinical decision support",
+  "q_cited": [
+   14
+  ],
+  "q_addr": [
+   14
+  ],
+  "topics": [
+   "Human oversight and automation bias",
+   "Liability and accountability",
+   "Reliance, sycophancy, and affective harms"
+  ],
+  "tags": [
+   "workflow position of output",
+   "patient trust",
+   "clinician accountability"
+  ],
+  "summary": "Using IDx-DR and a vignette experiment, argues the workflow position of AI output relative to clinician assessment must be fixed in intended use for team evaluation.",
+  "words": 1760,
+  "pages": 2,
+  "posted": "2026-09-09T04:00:00Z",
+  "received": "2026-09-07T04:00:00Z",
+  "unreadable": false
+ },
+ {
+  "id": "FDA-2026-N-7874-0071",
+  "title": "Comment from Alexandria Hamilton",
+  "category_raw": "Private Industry - C0003",
+  "commenter_type": "Private industry (non-device)",
+  "type_inferred": false,
+  "org": "Orinyx",
+  "domain": "Clinical decision support",
+  "q_cited": [
+   16,
+   19,
+   20,
+   22,
+   26
+  ],
+  "q_addr": [
+   16,
+   19,
+   20,
+   22,
+   26
+  ],
+  "topics": [
+   "Runtime controls and kill switches"
+  ],
+  "tags": [
+   "runtime output verification"
+  ],
+  "summary": "Verification infrastructure startup argues for structurally independent third-party and evaluator models, continuous per-output verification, risk-tiered change gating, and agentic scope checks.",
+  "words": 2320,
+  "pages": 6,
+  "posted": "2026-09-09T04:00:00Z",
+  "received": "2026-09-07T04:00:00Z",
+  "unreadable": false
+ },
+ {
+  "id": "FDA-2026-N-7874-0072",
+  "title": "Comment from UpDoc, Inc.",
+  "category_raw": null,
+  "commenter_type": "Device industry",
+  "type_inferred": true,
+  "org": "UpDoc, Inc.",
+  "domain": "General / cross-cutting",
+  "q_cited": [],
+  "q_addr": [],
+  "topics": [
+   "Human oversight and automation bias",
+   "Regulatory process and harmonization"
+  ],
+  "tags": [
+   "regulatory terminology clarity",
+   "clinical judgment boundary"
+  ],
+  "summary": "FDA-cleared developer asks for clearer terminology and a defined boundary between AI communicating clinician plans and AI exercising independent judgment, with proportionate evidence.",
+  "words": 440,
+  "pages": 1,
+  "posted": "2026-09-09T04:00:00Z",
+  "received": "2026-09-07T04:00:00Z",
+  "unreadable": false
+ },
+ {
+  "id": "FDA-2026-N-7874-0073",
+  "title": "Comment from Joel Grunhut",
+  "category_raw": null,
+  "commenter_type": "Individual",
+  "type_inferred": true,
+  "org": "",
+  "domain": "General / cross-cutting",
+  "q_cited": [],
+  "q_addr": [],
+  "topics": [],
+  "tags": [
+   "no original content"
+  ],
+  "summary": "Attachment is an unmodified copy of FDA's own discussion paper; the commenter adds no original commentary.",
+  "words": 12730,
+  "pages": 31,
+  "posted": "2026-09-09T04:00:00Z",
+  "received": "2026-09-07T04:00:00Z",
+  "unreadable": false
+ },
+ {
+  "id": "FDA-2026-N-7874-0074",
+  "title": "Comment from WhaleTeq Co., Ltd.",
+  "category_raw": "Device Industry - C0012",
+  "commenter_type": "Device industry",
+  "type_inferred": false,
+  "org": "WhaleTeq Co., Ltd.",
+  "domain": "Other",
+  "q_cited": [
+   7,
+   9,
+   10,
+   11,
+   12,
+   13,
+   19,
+   22
+  ],
+  "q_addr": [
+   7,
+   9,
+   10,
+   13,
+   22
+  ],
+  "topics": [
+   "Regulatory process and harmonization"
+  ],
+  "tags": [
+   "system-level verification",
+   "physiological signal simulation"
+  ],
+  "summary": "Sensor-device testing firm urges whole-pathway verification, complementary simulated and real data, fit-for-purpose benchmarks, and reusable premarket benchmarks as regression baselines.",
+  "words": 1200,
+  "pages": 2,
+  "posted": "2026-09-09T04:00:00Z",
+  "received": "2026-09-08T04:00:00Z",
+  "unreadable": false
+ },
+ {
+  "id": "FDA-2026-N-7874-0075",
+  "title": "Comment from Brandon Kaplan",
+  "category_raw": "Individual Consumer",
+  "commenter_type": "Individual",
+  "type_inferred": false,
+  "org": "",
+  "domain": "General / cross-cutting",
+  "q_cited": [
+   18,
+   19,
+   20,
+   21,
+   22,
+   24,
+   26
+  ],
+  "q_addr": [
+   18,
+   19,
+   20,
+   21,
+   22,
+   24,
+   26
+  ],
+  "topics": [
+   "Audit trails, provenance, and records",
+   "Runtime controls and kill switches"
+  ],
+  "tags": [
+   "authorization controls",
+   "audit trails and reconstructability",
+   "incident response"
+  ],
+  "summary": "Software engineer recommends enforced authorization for agent actions, decision-linked monitoring, rehearsed interventions, impact-based change assessment, supplier fallback plans, and protected investigation records.",
+  "words": 2810,
+  "pages": 6,
+  "posted": "2026-09-09T04:00:00Z",
+  "received": "2026-09-08T04:00:00Z",
+  "unreadable": false
+ },
+ {
+  "id": "FDA-2026-N-7874-0076",
+  "title": "Comment from Navid Farr",
+  "category_raw": "Individual Consumer",
+  "commenter_type": "Individual",
+  "type_inferred": false,
+  "org": "",
+  "domain": "General / cross-cutting",
+  "q_cited": [
+   1,
+   2,
+   3,
+   5,
+   6,
+   7,
+   8,
+   9,
+   10,
+   11,
+   12,
+   13,
+   14,
+   15,
+   16,
+   18,
+   19,
+   20,
+   21,
+   22,
+   23,
+   24,
+   25,
+   26
+  ],
+  "q_addr": [
+   1,
+   2,
+   3,
+   5,
+   6,
+   7,
+   9,
+   10,
+   12,
+   13,
+   14,
+   15,
+   16,
+   18,
+   19,
+   20,
+   21,
+   22,
+   23,
+   24,
+   25,
+   26
+  ],
+  "topics": [
+   "Liability and accountability",
+   "Privacy and consent",
+   "Regulatory process and harmonization",
+   "Transparency and public participation"
+  ],
+  "tags": [
+   "data privacy",
+   "eu regulatory alignment",
+   "authorization suspension",
+   "patient transparency"
+  ],
+  "summary": "Device professional endorses key paper positions and urges data exposure as a risk dimension, limited premarket-postmarket tradeoffs, mandatory foundation model transparency, version pinning, and standard-of-care comparators.",
+  "words": 5150,
+  "pages": 9,
+  "posted": "2026-09-09T04:00:00Z",
+  "received": "2026-09-08T04:00:00Z",
+  "unreadable": false
+ },
+ {
+  "id": "FDA-2026-N-7874-0077",
+  "title": "Comment from The Christman AI Project & Robotics Division",
+  "category_raw": "Device Industry - C0012",
+  "commenter_type": "Device industry",
+  "type_inferred": false,
+  "org": "The Christman AI Project and Robotics Division",
+  "domain": "Other",
+  "q_cited": [
+   18
+  ],
+  "q_addr": [
+   18
+  ],
+  "topics": [
+   "Audit trails, provenance, and records",
+   "Deployment settings and infrastructure",
+   "Equity, access, and disability"
+  ],
+  "tags": [
+   "neurodivergent users",
+   "assistive technology",
+   "offline operation",
+   "independent monitoring records"
+  ],
+  "summary": "Assistive tech developer argues reduced premarket evidence requires demonstrated detection, and should be unavailable for users who cannot self-report, offline devices, or irreversible harms.",
+  "words": 3250,
+  "pages": 6,
+  "posted": "2026-09-09T04:00:00Z",
+  "received": "2026-09-08T04:00:00Z",
+  "unreadable": false
+ },
+ {
+  "id": "FDA-2026-N-7874-0078",
+  "title": "Comment from The Christman AI Project & Robotics Division",
+  "category_raw": "Device Industry - C0012",
+  "commenter_type": "Device industry",
+  "type_inferred": false,
+  "org": "The Christman AI Project and Robotics Division",
+  "domain": "General / cross-cutting",
+  "q_cited": [
+   9
+  ],
+  "q_addr": [
+   9
+  ],
+  "topics": [
+   "Audit trails, provenance, and records",
+   "Cybersecurity",
+   "Equity, access, and disability"
+  ],
+  "tags": [
+   "input integrity",
+   "output provenance",
+   "assistive technology users"
+  ],
+  "summary": "Endorses benchmark elements but asks for specified in-session sampling position, a new input-integrity safety element, broader prompt-injection coverage, and independent provenance records.",
+  "words": 4900,
+  "pages": 9,
+  "posted": "2026-09-09T04:00:00Z",
+  "received": "2026-09-08T04:00:00Z",
+  "unreadable": false
+ },
+ {
+  "id": "FDA-2026-N-7874-0079",
+  "title": "Comment from The Christman AI Project & Robotics Division",
+  "category_raw": "Device Industry - C0012",
+  "commenter_type": "Device industry",
+  "type_inferred": false,
+  "org": "The Christman AI Project & Robotics Division",
+  "domain": "General / cross-cutting",
+  "q_cited": [
+   25
+  ],
+  "q_addr": [
+   25
+  ],
+  "topics": [
+   "Audit trails, provenance, and records",
+   "Deployment settings and infrastructure"
+  ],
+  "tags": [
+   "model execution locality",
+   "user-side provenance records"
+  ],
+  "summary": "Assistive AI developer reports measured hosted-model substitution, arguing master files cannot stay current and proposing execution locality fields, user-side records, and device-held lineage.",
+  "words": 3530,
+  "pages": 7,
+  "posted": "2026-09-09T04:00:00Z",
+  "received": "2026-09-08T04:00:00Z",
+  "unreadable": false
+ },
+ {
+  "id": "FDA-2026-N-7874-0080",
+  "title": "Comment from Oura",
+  "category_raw": "Private Industry - C0003",
+  "commenter_type": "Private industry (non-device)",
+  "type_inferred": false,
+  "org": "Oura",
+  "domain": "Patient-facing information",
+  "q_cited": [],
+  "q_addr": [
+   1,
+   2,
+   3
+  ],
+  "topics": [
+   "Deployment settings and infrastructure",
+   "Liability and accountability",
+   "Regulatory process and harmonization"
+  ],
+  "tags": [
+   "general wellness policy",
+   "enforcement discretion",
+   "wearables",
+   "deployer-neutral regulation"
+  ],
+  "summary": "Wearable maker asks FDA to treat informational non-directive consumer GenAI functions as non-devices or under enforcement discretion, reconcile with wellness policy, and regulate regardless of deployer.",
+  "words": 1700,
+  "pages": 4,
+  "posted": "2026-09-09T04:00:00Z",
+  "received": "2026-09-08T04:00:00Z",
+  "unreadable": false
+ },
+ {
+  "id": "FDA-2026-N-7874-0081",
+  "title": "Comment from Cory Stephens",
+  "category_raw": null,
+  "commenter_type": "Individual",
+  "type_inferred": true,
+  "org": "",
+  "domain": "General / cross-cutting",
+  "q_cited": [],
+  "q_addr": [
+   21
+  ],
+  "topics": [
+   "Transparency and public participation"
+  ],
+  "tags": [
+   "multistakeholder governance"
+  ],
+  "summary": "Brief comment urging that a broad range of stakeholders, including patients and clinicians, share oversight across the full AI lifecycle with defined accountability.",
+  "words": 110,
+  "pages": null,
+  "posted": "2026-09-09T04:00:00Z",
+  "received": "2026-09-08T04:00:00Z",
+  "unreadable": false
+ },
+ {
+  "id": "FDA-2026-N-7874-0082",
+  "title": "Comment from Sam Rosenthal",
+  "category_raw": "Private Industry - C0003",
+  "commenter_type": "Private industry (non-device)",
+  "type_inferred": false,
+  "org": "Red Kit",
+  "domain": "Patient-facing information",
+  "q_cited": [
+   1,
+   2,
+   3,
+   6,
+   10,
+   15,
+   19,
+   24
+  ],
+  "q_addr": [
+   1,
+   2,
+   3,
+   6,
+   10,
+   15,
+   19,
+   24
+  ],
+  "topics": [
+   "Deployment settings and infrastructure",
+   "Hallucination and output reliability",
+   "Small developer burden"
+  ],
+  "tags": [
+   "offline emergency settings",
+   "protocol fidelity",
+   "small developer burden",
+   "on-device models"
+  ],
+  "summary": "Solo developer of an offline bystander first-aid model asks FDA to address no-clinician settings, protocol fidelity, unaided-user comparators, and frozen on-device weights.",
+  "words": 1900,
+  "pages": 6,
+  "posted": "2026-09-09T04:00:00Z",
+  "received": "2026-09-09T04:00:00Z",
+  "unreadable": false
+ },
+ {
+  "id": "FDA-2026-N-7874-0083",
+  "title": "Comment from Sihem Khelifa",
+  "category_raw": "Health Professional - A0007",
+  "commenter_type": "Health professional",
+  "type_inferred": false,
+  "org": "",
+  "domain": "Other",
+  "q_cited": [
+   19,
+   21,
+   22,
+   24
+  ],
+  "q_addr": [
+   19,
+   21,
+   24
+  ],
+  "topics": [
+   "Human oversight and automation bias",
+   "Liability and accountability",
+   "Other"
+  ],
+  "tags": [
+   "liability allocation",
+   "clinician workload",
+   "pathology"
+  ],
+  "summary": "Pathologist asks FDA to keep accountability and model surveillance with manufacturers rather than shifting sign-out responsibility and monitoring burden for black-box foundation models onto laboratories.",
+  "words": 420,
+  "pages": 1,
+  "posted": "2026-09-09T04:00:00Z",
+  "received": "2026-09-09T04:00:00Z",
+  "unreadable": false
+ },
+ {
+  "id": "FDA-2026-N-7874-0084",
+  "title": "Comment from Jenna Chuan",
+  "category_raw": "Individual Consumer",
+  "commenter_type": "Individual",
+  "type_inferred": false,
+  "org": "",
+  "domain": "Patient-facing information",
+  "q_cited": [],
+  "q_addr": [
+   6
+  ],
+  "topics": [
+   "Equity, access, and disability"
+  ],
+  "tags": [
+   "health equity",
+   "access to care"
+  ],
+  "summary": "Premed student volunteer urges escalation thresholds be justified against each deployment population's care access and trust, citing costs of over-referral in screenings.",
+  "words": 270,
+  "pages": null,
+  "posted": "2026-09-15T04:00:00Z",
+  "received": "2026-09-09T04:00:00Z",
+  "unreadable": false
+ },
+ {
+  "id": "FDA-2026-N-7874-0085",
+  "title": "Comment from Princeton Medical Systems",
+  "category_raw": "Device Industry - C0012",
+  "commenter_type": "Device industry",
+  "type_inferred": false,
+  "org": "Princeton Medical Systems",
+  "domain": "Radiology / imaging",
+  "q_cited": [
+   9,
+   10,
+   12,
+   13,
+   16,
+   19,
+   22
+  ],
+  "q_addr": [
+   9,
+   10,
+   12,
+   13,
+   16,
+   19,
+   22
+  ],
+  "topics": [
+   "Audit trails, provenance, and records"
+  ],
+  "tags": [
+   "dataset documentation standards"
+  ],
+  "summary": "Steward of an imaging dataset standard recommends machine-checkable, versioned documentation of benchmark datasets, kept separate from performance judgments, including data-origin declarations for synthetic data.",
+  "words": 2400,
+  "pages": 6,
+  "posted": "2026-09-15T04:00:00Z",
+  "received": "2026-09-10T04:00:00Z",
+  "unreadable": false
+ },
+ {
+  "id": "FDA-2026-N-7874-0086",
+  "title": "Comment from Michelle Bernabe, RN, BSN",
+  "category_raw": "Health Professional - A0007",
+  "commenter_type": "Health professional",
+  "type_inferred": false,
+  "org": "",
+  "domain": "General / cross-cutting",
+  "q_cited": [
+   1,
+   2,
+   3,
+   4,
+   5,
+   6,
+   10,
+   11,
+   12,
+   13,
+   14,
+   15,
+   16,
+   18,
+   19,
+   20,
+   21,
+   24,
+   26
+  ],
+  "q_addr": [
+   1,
+   11,
+   14,
+   15,
+   18,
+   19,
+   20,
+   21,
+   24,
+   26
+  ],
+  "topics": [
+   "Deployment settings and infrastructure",
+   "Equity, access, and disability",
+   "Privacy and consent",
+   "Runtime controls and kill switches"
+  ],
+  "tags": [
+   "nurse staffing",
+   "clinician override protections",
+   "disclosure and consent",
+   "automation bias"
+  ],
+  "summary": "Nurse urges risk assessment reflecting real care conditions, prospective validation of high-risk systems, nurse-inclusive human-AI evaluation, strong postmarket monitoring, and enforceable model-change controls.",
+  "words": 720,
+  "pages": null,
+  "posted": "2026-09-15T04:00:00Z",
+  "received": "2026-09-10T04:00:00Z",
+  "unreadable": false
+ },
+ {
+  "id": "FDA-2026-N-7874-0087",
+  "title": "Comment from S. Joseph Sirintrapun",
+  "category_raw": "Federal Government - G0007",
+  "commenter_type": "Government",
+  "type_inferred": false,
+  "org": "",
+  "domain": "General / cross-cutting",
+  "q_cited": [],
+  "q_addr": [
+   1,
+   7,
+   10,
+   11,
+   14,
+   19,
+   21,
+   22,
+   23,
+   24,
+   25,
+   26
+  ],
+  "topics": [
+   "Audit trails, provenance, and records",
+   "Cybersecurity",
+   "Deployment settings and infrastructure",
+   "Regulatory process and harmonization"
+  ],
+  "tags": [
+   "local site validation",
+   "interoperability",
+   "cybersecurity",
+   "audit trails",
+   "technology-neutral regulation"
+  ],
+  "summary": "Pathologist supports function-based, technology-neutral regulation, meaningful human review as a risk modifier, human-AI team evaluation, lifecycle governance, and explicit control over irreversible agentic actions.",
+  "words": 2290,
+  "pages": 5,
+  "posted": "2026-09-15T04:00:00Z",
+  "received": "2026-09-10T04:00:00Z",
+  "unreadable": false
+ },
+ {
+  "id": "FDA-2026-N-7874-0088",
+  "title": "Comment from Qiong Liu",
+  "category_raw": "Individual Consumer",
+  "commenter_type": "Individual",
+  "type_inferred": false,
+  "org": "",
+  "domain": "Clinical decision support",
+  "q_cited": [
+   1,
+   5,
+   6,
+   7,
+   9,
+   10,
+   16,
+   19,
+   22,
+   24
+  ],
+  "q_addr": [
+   1,
+   5,
+   7,
+   9,
+   10,
+   16,
+   22,
+   24
+  ],
+  "topics": [
+   "Hallucination and output reliability"
+  ],
+  "tags": [
+   "hallucination detection",
+   "output reproducibility",
+   "instruction adherence"
+  ],
+  "summary": "Prototype builder reports multi-turn failure modes and asks for case-locked history completeness scoring, replay consistency, instruction-lock tests, and re-testing after model changes.",
+  "words": 1380,
+  "pages": 3,
+  "posted": "2026-09-15T04:00:00Z",
+  "received": "2026-09-11T04:00:00Z",
+  "unreadable": false
+ },
+ {
+  "id": "FDA-2026-N-7874-0089",
+  "title": "Comment from Daniel Fagbuyi",
+  "category_raw": "Health Professional - A0007",
+  "commenter_type": "Health professional",
+  "type_inferred": false,
+  "org": "",
+  "domain": "General / cross-cutting",
+  "q_cited": [],
+  "q_addr": [
+   1,
+   26
+  ],
+  "topics": [
+   "Audit trails, provenance, and records",
+   "Privacy and consent",
+   "Runtime controls and kill switches"
+  ],
+  "tags": [
+   "human authorization verification",
+   "audit trails and reconstructability",
+   "biometric privacy"
+  ],
+  "summary": "Emergency physician urges that agentic devices produce tamper-evident proof a present human authorized each consequential action, scaled by reversibility and consequence.",
+  "words": 1760,
+  "pages": 3,
+  "posted": "2026-09-15T04:00:00Z",
+  "received": "2026-09-11T04:00:00Z",
+  "unreadable": false
+ },
+ {
+  "id": "FDA-2026-N-7874-0090",
+  "title": "Comment from Sentir Health, INC.",
+  "category_raw": "Device Industry - C0012",
+  "commenter_type": "Device industry",
+  "type_inferred": false,
+  "org": "Sentir Health, Inc.",
+  "domain": "General / cross-cutting",
+  "q_cited": [
+   18,
+   19,
+   20,
+   22,
+   23,
+   24
+  ],
+  "q_addr": [
+   18,
+   19,
+   20,
+   22,
+   23,
+   24
+  ],
+  "topics": [
+   "Audit trails, provenance, and records",
+   "Regulatory process and harmonization"
+  ],
+  "tags": [
+   "PCCP empirical review",
+   "audit trails"
+  ],
+  "summary": "Drawing on 95 authorized PCCPs, argues postmarket monitoring must be continuous, prespecified, and verifiable, with validated supervisory agents and component-based modification categories.",
+  "words": 4330,
+  "pages": 6,
+  "posted": "2026-09-15T04:00:00Z",
+  "received": "2026-09-12T04:00:00Z",
+  "unreadable": false
+ },
+ {
+  "id": "FDA-2026-N-7874-0091",
+  "title": "Comment from Yassen Eltayeb",
+  "category_raw": "Private Industry - C0003",
+  "commenter_type": "Private industry (non-device)",
+  "type_inferred": false,
+  "org": "Conefia LLC",
+  "domain": "General / cross-cutting",
+  "q_cited": [
+   5,
+   6,
+   9,
+   10,
+   11,
+   12,
+   13,
+   16,
+   19,
+   22
+  ],
+  "q_addr": [
+   5,
+   6,
+   9,
+   10,
+   11,
+   12,
+   13,
+   16,
+   19,
+   22
+  ],
+  "topics": [
+   "Regulatory process and harmonization"
+  ],
+  "tags": [
+   "evaluation measurement variability"
+  ],
+  "summary": "Argues benchmark construct validity requires measurement-system qualification, including null self-comparisons, validated multi-turn windows, separate escalation error rates, and change-type-scaled re-benchmarking with versioned adjudicators.",
+  "words": 4500,
+  "pages": 8,
+  "posted": "2026-09-15T04:00:00Z",
+  "received": "2026-09-12T04:00:00Z",
+  "unreadable": false
+ },
+ {
+  "id": "FDA-2026-N-7874-0092",
+  "title": "Comment from Xiangyu Guo",
+  "category_raw": "Individual Consumer",
+  "commenter_type": "Individual",
+  "type_inferred": false,
+  "org": "",
+  "domain": "General / cross-cutting",
+  "q_cited": [
+   19,
+   21,
+   22,
+   26
+  ],
+  "q_addr": [
+   19,
+   21,
+   22,
+   26
+  ],
+  "topics": [
+   "Audit trails, provenance, and records",
+   "Liability and accountability"
+  ],
+  "tags": [
+   "audit trails",
+   "liability allocation",
+   "insurability"
+  ],
+  "summary": "Proposes an Expert Oversight Network with risk-tiered clinician review, layered responsibility allocation, incident reconstruction records, and reevaluation when agentic authority changes.",
+  "words": 6000,
+  "pages": 18,
+  "posted": "2026-09-15T04:00:00Z",
+  "received": "2026-09-13T04:00:00Z",
+  "unreadable": false
+ },
+ {
+  "id": "FDA-2026-N-7874-0093",
+  "title": "Comment from Steven Zhao",
+  "category_raw": null,
+  "commenter_type": "Individual",
+  "type_inferred": true,
+  "org": "",
+  "domain": "General / cross-cutting",
+  "q_cited": [
+   1,
+   2,
+   3,
+   4,
+   5,
+   6,
+   7,
+   8,
+   9,
+   10,
+   11,
+   12,
+   13,
+   14,
+   15,
+   16,
+   17,
+   18,
+   19,
+   20,
+   21,
+   22,
+   23,
+   24,
+   25,
+   26
+  ],
+  "q_addr": [
+   1,
+   2,
+   3,
+   4,
+   5,
+   6,
+   7,
+   8,
+   9,
+   10,
+   11,
+   12,
+   13,
+   14,
+   15,
+   16,
+   17,
+   18,
+   19,
+   20,
+   21,
+   22,
+   23,
+   24,
+   25,
+   26
+  ],
+  "topics": [],
+  "tags": [],
+  "summary": "Regulatory practitioner supports the framework, adding change dynamics as a dimension and operationalizing it through registered benchmarks, predetermined-gate PCCPs, and version chain of custody.",
+  "words": 4010,
+  "pages": 7,
+  "posted": "2026-09-15T04:00:00Z",
+  "received": "2026-09-14T04:00:00Z",
+  "unreadable": false
+ },
+ {
+  "id": "FDA-2026-N-7874-0094",
+  "title": "Comment from Profound Ventures | Guidance Global Consulting",
+  "category_raw": "Private Industry - C0003",
+  "commenter_type": "Private industry (non-device)",
+  "type_inferred": false,
+  "org": "Profound Ventures; Guidance Global Consulting",
+  "domain": "General / cross-cutting",
+  "q_cited": [
+   1,
+   3,
+   7,
+   9,
+   11,
+   13,
+   14,
+   16,
+   18,
+   19,
+   26
+  ],
+  "q_addr": [
+   1,
+   3,
+   7,
+   9,
+   11,
+   14,
+   16,
+   18,
+   19,
+   26
+  ],
+  "topics": [
+   "Deployment settings and infrastructure",
+   "Liability and accountability",
+   "Regulatory process and harmonization",
+   "Small developer burden"
+  ],
+  "tags": [
+   "clinical validity vs utility",
+   "small business burden",
+   "deployer capacity",
+   "laboratory-developed tests",
+   "financial conflicts of interest"
+  ],
+  "summary": "Venture studio urges least-burdensome oversight favoring postmarket monitoring, separating clinical validity from utility, voluntary third-party programs, CLIA-style precedents, and protecting early-stage company market entry.",
+  "words": 6470,
+  "pages": 11,
+  "posted": "2026-09-15T04:00:00Z",
+  "received": "2026-09-14T04:00:00Z",
+  "unreadable": false
+ },
+ {
+  "id": "FDA-2026-N-7874-0095",
+  "title": "Comment from Rohith Reddy Bellibatlu",
+  "category_raw": "Academia - E0007",
+  "commenter_type": "Academia",
+  "type_inferred": false,
+  "org": "",
+  "domain": "General / cross-cutting",
+  "q_cited": [
+   10,
+   12,
+   13,
+   19,
+   20,
+   26
+  ],
+  "q_addr": [
+   10,
+   12,
+   13,
+   19,
+   20,
+   26
+  ],
+  "topics": [
+   "Hallucination and output reliability"
+  ],
+  "tags": [
+   "output reproducibility"
+  ],
+  "summary": "Independent researcher asks sponsors to report a per-endpoint reproducibility floor from repeated identical runs and treat differences below it as uninformative across evaluation and monitoring.",
+  "words": 2200,
+  "pages": 4,
+  "posted": "2026-09-15T04:00:00Z",
+  "received": "2026-09-14T04:00:00Z",
+  "unreadable": false
+ },
+ {
+  "id": "FDA-2026-N-7874-0096",
+  "title": "Comment from Saurabh Sharma",
+  "category_raw": "Individual Consumer",
+  "commenter_type": "Individual",
+  "type_inferred": false,
+  "org": "",
+  "domain": "General / cross-cutting",
+  "q_cited": [
+   24
+  ],
+  "q_addr": [
+   22,
+   24
+  ],
+  "topics": [
+   "Deployment settings and infrastructure"
+  ],
+  "tags": [
+   "on-device models",
+   "multi-version deployment"
+  ],
+  "summary": "On third-party model updates, recommends on-device model locking, multi-version QMS lifecycle management, and automated drift detection for hosted foundation model APIs.",
+  "words": 470,
+  "pages": null,
+  "posted": "2026-09-15T04:00:00Z",
+  "received": "2026-09-14T04:00:00Z",
+  "unreadable": false
+ },
+ {
+  "id": "FDA-2026-N-7874-0097",
+  "title": "Comment from Stephanie Lewis",
+  "category_raw": "Health Professional - A0007",
+  "commenter_type": "Health professional",
+  "type_inferred": false,
+  "org": "",
+  "domain": "General / cross-cutting",
+  "q_cited": [],
+  "q_addr": [
+   1,
+   11,
+   19,
+   26
+  ],
+  "topics": [
+   "Deployment settings and infrastructure",
+   "Human oversight and automation bias",
+   "Liability and accountability",
+   "Transparency and public participation"
+  ],
+  "tags": [
+   "liability allocation",
+   "physician oversight",
+   "workforce displacement",
+   "patient transparency"
+  ],
+  "summary": "Physician urges preserving physician oversight of consequential decisions, prospective validation for autonomous AI, postmarket surveillance, and clear developer and institutional accountability.",
+  "words": 650,
+  "pages": null,
+  "posted": "2026-09-15T04:00:00Z",
+  "received": "2026-09-15T04:00:00Z",
+  "unreadable": false
+ },
+ {
+  "id": "FDA-2026-N-7874-0098",
+  "title": "Comment from Ray O'Sullivan",
+  "category_raw": "Academia - E0007",
+  "commenter_type": "Academia",
+  "type_inferred": false,
+  "org": "Vox / VoxMedical",
+  "domain": "Patient-facing information",
+  "q_cited": [
+   1,
+   2,
+   4,
+   5,
+   6,
+   9,
+   14,
+   16,
+   19,
+   20,
+   26
+  ],
+  "q_addr": [
+   1,
+   5,
+   6,
+   9,
+   14,
+   16,
+   19,
+   20,
+   26
+  ],
+  "topics": [
+   "Audit trails, provenance, and records",
+   "Human oversight and automation bias",
+   "Reliance, sycophancy, and affective harms",
+   "Runtime controls and kill switches"
+  ],
+  "tags": [
+   "human oversight quality",
+   "sycophancy",
+   "fail-closed design",
+   "audit logging",
+   "verification gate placement"
+  ],
+  "summary": "Distinguishes expert-in-the-loop from generic human oversight and proposes fail-closed escalation tests, cumulative drift gates, sycophancy benchmarks, LLM adjudicator independence, and decision logging.",
+  "words": 3150,
+  "pages": 7,
+  "posted": "2026-09-15T04:00:00Z",
+  "received": "2026-09-15T04:00:00Z",
+  "unreadable": false
+ },
+ {
+  "id": "FDA-2026-N-7874-0099",
+  "title": "Comment from Matthew Collins",
+  "category_raw": null,
+  "commenter_type": "Individual",
+  "type_inferred": true,
+  "org": "",
+  "domain": "General / cross-cutting",
+  "q_cited": [
+   1,
+   3,
+   4,
+   18,
+   21,
+   22,
+   23,
+   24,
+   25
+  ],
+  "q_addr": [
+   1,
+   3,
+   18,
+   21,
+   22,
+   24,
+   25
+  ],
+  "topics": [
+   "Human oversight and automation bias",
+   "Runtime controls and kill switches"
+  ],
+  "tags": [
+   "meaningful human review",
+   "prompt change control"
+  ],
+  "summary": "Quality executive urges reversibility as a gating risk factor, criteria for meaningful human review, retained manufacturer accountability, prompt changes under change control, and targeted postmarket monitoring.",
+  "words": 1400,
+  "pages": 3,
+  "posted": "2026-09-15T04:00:00Z",
+  "received": "2026-09-15T04:00:00Z",
+  "unreadable": false
+ },
+ {
+  "id": "FDA-2026-N-7874-0100",
+  "title": "Comment from Clearstep",
+  "category_raw": null,
+  "commenter_type": "Device industry",
+  "type_inferred": true,
+  "org": "Clearstep Inc.",
+  "domain": "General / cross-cutting",
+  "q_cited": [
+   1,
+   2,
+   3,
+   6,
+   7,
+   8,
+   9,
+   10,
+   14,
+   15,
+   16,
+   18,
+   19,
+   20,
+   21,
+   24,
+   25,
+   26
+  ],
+  "q_addr": [
+   1,
+   2,
+   3,
+   6,
+   7,
+   8,
+   9,
+   10,
+   14,
+   15,
+   16,
+   18,
+   19,
+   20,
+   21,
+   22,
+   24,
+   25,
+   26
+  ],
+  "topics": [
+   "Deployment settings and infrastructure",
+   "Human oversight and automation bias",
+   "Runtime controls and kill switches"
+  ],
+  "tags": [
+   "deterministic hybrid architecture",
+   "inter-rater variability",
+   "input population drift"
+  ],
+  "summary": "Triage platform maker supports the framework, urges credit for deterministic hybrid architectures, median-clinician comparators, bidirectional escalation reporting, and describes its production clinician review and model-change controls.",
+  "words": 3680,
+  "pages": 10,
+  "posted": "2026-09-15T04:00:00Z",
+  "received": "2026-09-15T04:00:00Z",
+  "unreadable": false
+ },
+ {
+  "id": "FDA-2026-N-7874-0101",
+  "title": "Comment from Oluwamodupe Akintan",
+  "category_raw": null,
+  "commenter_type": "Individual",
+  "type_inferred": true,
+  "org": "",
+  "domain": "General / cross-cutting",
+  "q_cited": [],
+  "q_addr": [
+   1,
+   19,
+   24,
+   26
+  ],
+  "topics": [
+   "Privacy and consent"
+  ],
+  "tags": [
+   "data privacy",
+   "data minimization"
+  ],
+  "summary": "Privacy engineer recommends data sensitivity as a risk modifier, data-access boundary testing for agents, privacy-preserving monitoring, and notification of third-party data-handling changes.",
+  "words": 370,
+  "pages": null,
+  "posted": "2026-09-21T04:00:00Z",
+  "received": "2026-09-15T04:00:00Z",
+  "unreadable": false
+ },
+ {
+  "id": "FDA-2026-N-7874-0102",
+  "title": "Comment from Tanisha Tejada Thoreau",
+  "category_raw": "Health Professional - A0007",
+  "commenter_type": "Health professional",
+  "type_inferred": false,
+  "org": "",
+  "domain": "General / cross-cutting",
+  "q_cited": [
+   1,
+   7,
+   10,
+   18,
+   20,
+   24,
+   26
+  ],
+  "q_addr": [
+   1,
+   10,
+   18,
+   20,
+   24,
+   26
+  ],
+  "topics": [
+   "Audit trails, provenance, and records",
+   "Cybersecurity",
+   "Runtime controls and kill switches"
+  ],
+  "tags": [
+   "prompt injection security",
+   "audit logging",
+   "data integrity",
+   "kill switch requirement"
+  ],
+  "summary": "Proposes an algorithmic chain-of-custody record, tiered automated kill-switches, indirect prompt-injection defenses, and vendor update sandboxes, conditioning reduced premarket evidence on runtime controls.",
+  "words": 1600,
+  "pages": 4,
+  "posted": "2026-09-21T04:00:00Z",
+  "received": "2026-09-15T04:00:00Z",
+  "unreadable": false
+ },
+ {
+  "id": "FDA-2026-N-7874-0103",
+  "title": "Comment from Sustwinability LLC",
+  "category_raw": "Private Industry - C0003",
+  "commenter_type": "Private industry (non-device)",
+  "type_inferred": false,
+  "org": "Sustwinability LLC (Kaelox)",
+  "domain": "General / cross-cutting",
+  "q_cited": [],
+  "q_addr": [
+   1,
+   7,
+   19,
+   22
+  ],
+  "topics": [
+   "Audit trails, provenance, and records",
+   "Privacy and consent",
+   "Runtime controls and kill switches"
+  ],
+  "tags": [
+   "deterministic verification layer",
+   "verifiable audit records",
+   "cross-border data transfer"
+  ],
+  "summary": "Startup argues a deterministic engine plus human sign-off should bound generative models, so regulators validate the constraint architecture and require independently verifiable postmarket records.",
+  "words": 1410,
+  "pages": 4,
+  "posted": "2026-09-21T04:00:00Z",
+  "received": "2026-09-16T04:00:00Z",
+  "unreadable": false
+ },
+ {
+  "id": "FDA-2026-N-7874-0104",
+  "title": "Comment from Nieleze",
+  "category_raw": "Other Organizations - E0003",
+  "commenter_type": "Other",
+  "type_inferred": false,
+  "org": "Nieleze",
+  "domain": "General / cross-cutting",
+  "q_cited": [
+   10,
+   13,
+   16,
+   19,
+   22,
+   26
+  ],
+  "q_addr": [
+   10,
+   16,
+   19
+  ],
+  "topics": [
+   "Reliance, sycophancy, and affective harms"
+  ],
+  "tags": [
+   "evidence independence"
+  ],
+  "summary": "Proposes an evidence-independence assessment, warning that benchmarks, third-party evaluators, and monitoring sharing the same reference standards may add evidence volume without independent failure detection.",
+  "words": 780,
+  "pages": 3,
+  "posted": "2026-09-21T04:00:00Z",
+  "received": "2026-09-16T04:00:00Z",
+  "unreadable": false
+ },
+ {
+  "id": "FDA-2026-N-7874-0105",
+  "title": "Comment from C.D. Rowsell Jr.",
+  "category_raw": null,
+  "commenter_type": "Individual",
+  "type_inferred": true,
+  "org": "",
+  "domain": "General / cross-cutting",
+  "q_cited": [
+   1,
+   5,
+   18,
+   19,
+   20,
+   21,
+   22,
+   23,
+   24,
+   25,
+   26
+  ],
+  "q_addr": [
+   1,
+   5,
+   18,
+   19,
+   20,
+   21,
+   22,
+   23,
+   24,
+   25,
+   26
+  ],
+  "topics": [
+   "Audit trails, provenance, and records",
+   "Runtime controls and kill switches"
+  ],
+  "tags": [
+   "execution-time authorization",
+   "audit trails",
+   "fail-closed safeguards"
+  ],
+  "summary": "Proposes a mandatory execution-time gate (lookback and revalidation) so prior authorization never survives material change; devices must act, suspend, or escalate.",
+  "words": 3250,
+  "pages": 8,
+  "posted": "2026-09-21T04:00:00Z",
+  "received": "2026-09-17T04:00:00Z",
+  "unreadable": false
+ },
+ {
+  "id": "FDA-2026-N-7874-0106",
+  "title": "Comment from Denise Bowen",
+  "category_raw": "Individual Consumer",
+  "commenter_type": "Individual",
+  "type_inferred": false,
+  "org": "",
+  "domain": "General / cross-cutting",
+  "q_cited": [
+   7,
+   10,
+   20,
+   25
+  ],
+  "q_addr": [
+   7,
+   10,
+   14,
+   20,
+   25
+  ],
+  "topics": [
+   "Hallucination and output reliability"
+  ],
+  "tags": [
+   "hallucination evidence"
+  ],
+  "summary": "Literature-based support for the framework, urging clinician-panel reliability reporting, contamination disclosures, safety benchmarking of supervisory agents, and mandatory foundation model disclosure.",
+  "words": 1050,
+  "pages": 3,
+  "posted": "2026-09-21T04:00:00Z",
+  "received": "2026-09-20T04:00:00Z",
+  "unreadable": false
+ },
+ {
+  "id": "FDA-2026-N-7874-0107",
+  "title": "Comment from Ben Hyams",
+  "category_raw": "Device Industry - C0012",
+  "commenter_type": "Device industry",
+  "type_inferred": false,
+  "org": "",
+  "domain": "General / cross-cutting",
+  "q_cited": [],
+  "q_addr": [
+   7,
+   8,
+   10,
+   11
+  ],
+  "topics": [
+   "Regulatory process and harmonization",
+   "Reliance, sycophancy, and affective harms"
+  ],
+  "tags": [
+   "clinical outcome endpoints",
+   "surrogate measure concerns",
+   "510(k) evidence standards",
+   "sycophancy risks"
+  ],
+  "summary": "Argues benchmarking is a surrogate measure and prospective clinical studies with patient outcomes should be the main evidence for devices that influence patient care.",
+  "words": 1380,
+  "pages": 4,
+  "posted": "2026-09-21T04:00:00Z",
+  "received": "2026-09-20T04:00:00Z",
+  "unreadable": false
+ },
+ {
+  "id": "FDA-2026-N-7874-0108",
+  "title": "Comment from Siddharth Vohra",
+  "category_raw": "Academia - E0007",
+  "commenter_type": "Academia",
+  "type_inferred": false,
+  "org": "",
+  "domain": "Radiology / imaging",
+  "q_cited": [],
+  "q_addr": [
+   9,
+   17
+  ],
+  "topics": [
+   "Audit trails, provenance, and records",
+   "Equity, access, and disability",
+   "Hallucination and output reliability"
+  ],
+  "tags": [
+   "missing input abstention",
+   "demographic bias",
+   "structured output auditing"
+  ],
+  "summary": "Experiment shows multimodal LLMs diagnose without the image depending on demographics, so benchmarks must test missing inputs and abstention across all output channels.",
+  "words": 850,
+  "pages": null,
+  "posted": "2026-09-21T04:00:00Z",
+  "received": "2026-09-20T04:00:00Z",
+  "unreadable": false
+ },
+ {
+  "id": "FDA-2026-N-7874-0109",
+  "title": "Comment from DNA Healthlink, Inc.",
+  "category_raw": "Private Industry - C0003",
+  "commenter_type": "Private industry (non-device)",
+  "type_inferred": false,
+  "org": "DNA Healthlink, Inc.",
+  "domain": "General / cross-cutting",
+  "q_cited": [],
+  "q_addr": [
+   26
+  ],
+  "topics": [
+   "Regulatory process and harmonization",
+   "Runtime controls and kill switches"
+  ],
+  "tags": [
+   "kill switch requirement",
+   "gene therapy precedent"
+  ],
+  "summary": "Essay arguing FDA should require embedded kill switches for autonomous AI, drawing on cell and gene therapy safety-switch regulation as precedent.",
+  "words": 2090,
+  "pages": 4,
+  "posted": "2026-09-21T04:00:00Z",
+  "received": "2026-09-21T04:00:00Z",
+  "unreadable": false
+ },
+ {
+  "id": "FDA-2026-N-7874-0110",
+  "title": "Comment from Dmytro Negodiuk",
+  "category_raw": "Private Industry - C0003",
+  "commenter_type": "Private industry (non-device)",
+  "type_inferred": false,
+  "org": "Negodiuk LLC",
+  "domain": "General / cross-cutting",
+  "q_cited": [
+   19,
+   20,
+   21,
+   24
+  ],
+  "q_addr": [
+   19,
+   20,
+   21,
+   24
+  ],
+  "topics": [
+   "Deployment settings and infrastructure"
+  ],
+  "tags": [
+   "deployer capacity"
+  ],
+  "summary": "AI operations builder urges daily system checks, independent cross-vendor AI checkers with human review, and same-day re-checks and practice notification when underlying models change.",
+  "words": 420,
+  "pages": null,
+  "posted": "2026-09-24T04:00:00Z",
+  "received": "2026-09-21T04:00:00Z",
+  "unreadable": false
+ },
+ {
+  "id": "FDA-2026-N-7874-0111",
+  "title": "Comment from The Fires Within",
+  "category_raw": "Individual Consumer",
+  "commenter_type": "Individual",
+  "type_inferred": false,
+  "org": "The Fires Within",
+  "domain": "Mental and behavioral health",
+  "q_cited": [
+   1,
+   2,
+   5,
+   6,
+   9,
+   16,
+   18,
+   19,
+   20,
+   26
+  ],
+  "q_addr": [
+   1,
+   2,
+   5,
+   6,
+   9,
+   16,
+   18,
+   19,
+   20,
+   26
+  ],
+  "topics": [
+   "Deployment settings and infrastructure",
+   "Equity, access, and disability",
+   "Reliance, sycophancy, and affective harms",
+   "Small developer burden"
+  ],
+  "tags": [
+   "sycophancy and concordance",
+   "degraded connectivity",
+   "small developer burden",
+   "veteran population"
+  ],
+  "summary": "Veteran developer of a PTSD companion proposes concordance as a risk dimension, architectural safety enforcement, device-generated integrity metrics, and caution on supervisor reliability.",
+  "words": 2800,
+  "pages": 5,
+  "posted": "2026-09-24T04:00:00Z",
+  "received": "2026-09-21T04:00:00Z",
+  "unreadable": false
+ },
+ {
+  "id": "FDA-2026-N-7874-0112",
+  "title": "Comment from Tolulope Apena",
+  "category_raw": "Health Professional - A0007",
+  "commenter_type": "Health professional",
+  "type_inferred": false,
+  "org": "Syntheka",
+  "domain": "Other",
+  "q_cited": [
+   3,
+   7,
+   14
+  ],
+  "q_addr": [
+   1,
+   7,
+   19
+  ],
+  "topics": [
+   "Audit trails, provenance, and records",
+   "Deployment settings and infrastructure",
+   "Human oversight and automation bias"
+  ],
+  "tags": [
+   "clinical research settings",
+   "audit trail transparency",
+   "operator ai literacy"
+  ],
+  "summary": "Clinical research founder urges FDA to cover GCP-regulated non-device AI, add regulatory harm to the consequence axis, set operator competency standards, and require audit trails.",
+  "words": 1290,
+  "pages": 3,
+  "posted": "2026-09-24T04:00:00Z",
+  "received": "2026-09-22T04:00:00Z",
+  "unreadable": false
+ },
+ {
+  "id": "FDA-2026-N-7874-0113",
+  "title": "Comment from Tamiko Eto",
+  "category_raw": "Device Industry - C0012",
+  "commenter_type": "Device industry",
+  "type_inferred": false,
+  "org": "TechInHSR LLC",
+  "domain": "General / cross-cutting",
+  "q_cited": [
+   1,
+   2,
+   3,
+   4,
+   5,
+   6,
+   7,
+   8,
+   9,
+   10,
+   11,
+   12,
+   13,
+   14,
+   15,
+   16,
+   17,
+   18,
+   19,
+   20,
+   21,
+   22,
+   23,
+   24,
+   25,
+   26
+  ],
+  "q_addr": [
+   1,
+   2,
+   3,
+   4,
+   5,
+   6,
+   7,
+   8,
+   9,
+   10,
+   11,
+   12,
+   13,
+   14,
+   15,
+   16,
+   17,
+   18,
+   19,
+   20,
+   21,
+   22,
+   23,
+   24,
+   25,
+   26
+  ],
+  "topics": [
+   "Deployment settings and infrastructure",
+   "Equity, access, and disability",
+   "Liability and accountability",
+   "Regulatory process and harmonization",
+   "Transparency and public participation"
+  ],
+  "tags": [
+   "liability allocation",
+   "human rights alignment",
+   "clinical association prerequisite",
+   "health equity",
+   "institutional readiness"
+  ],
+  "summary": "Answers all 26 questions, insisting clinical association precede benchmarking, postmarket monitoring not replace premarket evidence, mandatory foundation model disclosure, and clear manufacturer liability.",
+  "words": 8300,
+  "pages": 18,
+  "posted": "2026-09-24T04:00:00Z",
+  "received": "2026-09-22T04:00:00Z",
+  "unreadable": false
+ },
+ {
+  "id": "FDA-2026-N-7874-0114",
+  "title": "Comment from Infiligence Inc",
+  "category_raw": "Private Industry - C0003",
+  "commenter_type": "Private industry (non-device)",
+  "type_inferred": false,
+  "org": "Infiligence Inc",
+  "domain": "General / cross-cutting",
+  "q_cited": [],
+  "q_addr": [
+   5,
+   7,
+   9,
+   10,
+   16,
+   19,
+   22,
+   25,
+   26
+  ],
+  "topics": [
+   "Audit trails, provenance, and records",
+   "Runtime controls and kill switches"
+  ],
+  "tags": [
+   "competency profile disclosure",
+   "validation as code",
+   "safety competency floors"
+  ],
+  "summary": "Supports competency evaluation and proposes competency envelopes, trajectory stress testing, non-compensable safety floors, public competency profiles, and impact-based requalification.",
+  "words": 1700,
+  "pages": 4,
+  "posted": "2026-09-24T04:00:00Z",
+  "received": "2026-09-22T04:00:00Z",
+  "unreadable": false
+ },
+ {
+  "id": "FDA-2026-N-7874-0115",
+  "title": "Comment from I-GENTIC AI",
+  "category_raw": null,
+  "commenter_type": "Private industry (non-device)",
+  "type_inferred": true,
+  "org": "i-GENTIC AI",
+  "domain": "General / cross-cutting",
+  "q_cited": [
+   1,
+   2,
+   3,
+   4,
+   5,
+   6,
+   7,
+   8,
+   9,
+   10,
+   11,
+   12,
+   13,
+   14,
+   15,
+   16,
+   17,
+   18,
+   19,
+   20,
+   21,
+   22,
+   23,
+   24,
+   25,
+   26
+  ],
+  "q_addr": [
+   1,
+   3,
+   5,
+   6,
+   10,
+   13,
+   16,
+   18,
+   19,
+   20,
+   24,
+   25,
+   26
+  ],
+  "topics": [
+   "Audit trails, provenance, and records",
+   "Runtime controls and kill switches"
+  ],
+  "tags": [
+   "runtime governance",
+   "audit logging",
+   "agent identity controls"
+  ],
+  "summary": "Urges continuous runtime governance with a minimum evidence package, controllability risk modifiers, event-triggered reassessment, bounded supervisory agents, and agent identity and authority controls.",
+  "words": 1990,
+  "pages": 5,
+  "posted": "2026-09-24T04:00:00Z",
+  "received": "2026-09-23T04:00:00Z",
+  "unreadable": false
+ },
+ {
+  "id": "FDA-2026-N-7874-0116",
+  "title": "Comment from Congress of Neurological Surgeons",
+  "category_raw": null,
+  "commenter_type": "Health care association",
+  "type_inferred": true,
+  "org": "Congress of Neurological Surgeons",
+  "domain": "General / cross-cutting",
+  "q_cited": [
+   6,
+   10,
+   16,
+   18,
+   19,
+   20,
+   21,
+   22,
+   23,
+   24
+  ],
+  "q_addr": [
+   6,
+   10,
+   16,
+   18,
+   19,
+   20,
+   21,
+   22,
+   23,
+   24
+  ],
+  "topics": [
+   "Audit trails, provenance, and records",
+   "Deployment settings and infrastructure",
+   "Regulatory process and harmonization"
+  ],
+  "tags": [
+   "outcome-linked registries",
+   "fda-cms coordination",
+   "non-device cds exemption"
+  ],
+  "summary": "Neurosurgical society urges mandatory, independently governed, outcome-linked postmarket data systems for higher-risk GenAI devices, built on professional society registries, with FDA-CMS coordination.",
+  "words": 4700,
+  "pages": 10,
+  "posted": "2026-09-24T04:00:00Z",
+  "received": "2026-09-23T04:00:00Z",
+  "unreadable": false
+ },
+ {
+  "id": "FDA-2026-N-7874-0117",
+  "title": "Comment from Tanisha Thoreau",
+  "category_raw": "Health Professional - A0007",
+  "commenter_type": "Health professional",
+  "type_inferred": false,
+  "org": "",
+  "domain": "General / cross-cutting",
+  "q_cited": [
+   1,
+   7,
+   10,
+   18,
+   20,
+   24,
+   26
+  ],
+  "q_addr": [
+   1,
+   7,
+   10,
+   18,
+   19,
+   20,
+   24,
+   25,
+   26
+  ],
+  "topics": [
+   "Audit trails, provenance, and records",
+   "Cybersecurity",
+   "Runtime controls and kill switches"
+  ],
+  "tags": [
+   "prompt injection security",
+   "data integrity audit trails",
+   "automated kill switches"
+  ],
+  "summary": "QA auditor endorses competency-based approach but demands runtime kill-switches, immutable chain-of-custody records, prompt-injection defenses, and vendor sandbox notification windows for foundation model updates.",
+  "words": 1600,
+  "pages": 4,
+  "posted": "2026-09-24T04:00:00Z",
+  "received": "2026-09-23T04:00:00Z",
+  "unreadable": false
+ },
+ {
+  "id": "FDA-2026-N-7874-0118",
+  "title": "Comment from American College of Allergy, Asthma & Immunology",
+  "category_raw": "Device Industry - C0012",
+  "commenter_type": "Device industry",
+  "type_inferred": false,
+  "org": "American College of Allergy, Asthma & Immunology",
+  "domain": "General / cross-cutting",
+  "q_cited": [
+   1,
+   2,
+   3,
+   4,
+   5,
+   6,
+   7,
+   8,
+   9,
+   10,
+   11,
+   12,
+   13,
+   14,
+   15,
+   16,
+   17,
+   18,
+   19,
+   20,
+   21,
+   22,
+   23,
+   24,
+   25,
+   26
+  ],
+  "q_addr": [
+   1,
+   2,
+   3,
+   4,
+   5,
+   6,
+   7,
+   8,
+   9,
+   10,
+   11,
+   12,
+   13,
+   14,
+   15,
+   16,
+   17,
+   18,
+   19,
+   20,
+   21,
+   22,
+   23,
+   24,
+   25,
+   26
+  ],
+  "topics": [
+   "Equity, access, and disability",
+   "Liability and accountability",
+   "Regulatory process and harmonization",
+   "Runtime controls and kill switches",
+   "Transparency and public participation"
+  ],
+  "tags": [
+   "liability allocation",
+   "transparency to clinicians",
+   "kill switch",
+   "health equity",
+   "specialist involvement in development"
+  ],
+  "summary": "Specialty society answers all questions with allergy examples, urging asymmetric escalation criteria, specialist review panels, kill switches, clinician transparency, and physician liability protections.",
+  "words": 5450,
+  "pages": 10,
+  "posted": "2026-09-25T04:00:00Z",
+  "received": "2026-09-25T04:00:00Z",
+  "unreadable": false
+ },
+ {
+  "id": "FDA-2026-N-7874-0119",
+  "title": "Comment from Cassiana Souza Meyer",
+  "category_raw": "Health Professional - A0007",
+  "commenter_type": "Health professional",
+  "type_inferred": false,
+  "org": "",
+  "domain": "General / cross-cutting",
+  "q_cited": [
+   1,
+   6,
+   21,
+   22,
+   23,
+   24,
+   25
+  ],
+  "q_addr": [
+   1,
+   6,
+   21,
+   23,
+   24,
+   25
+  ],
+  "topics": [
+   "Coverage and reimbursement",
+   "Liability and accountability",
+   "Regulatory process and harmonization"
+  ],
+  "tags": [
+   "liability allocation",
+   "state ai law",
+   "payer coverage decisions"
+  ],
+  "summary": "Physician analyzes CMS and state AI coverage-decision laws to show duties fall on deployers, proposing supplier-information mechanisms and a three-question test for accountability assignments.",
+  "words": 4900,
+  "pages": 12,
+  "posted": "2026-09-30T04:00:00Z",
+  "received": "2026-09-25T04:00:00Z",
+  "unreadable": false
+ },
+ {
+  "id": "FDA-2026-N-7874-0120",
+  "title": "Comment from Total Medical Imaging, LLC and RADIN, LLC",
+  "category_raw": "Health Professional - A0007",
+  "commenter_type": "Health professional",
+  "type_inferred": false,
+  "org": "Total Medical Imaging, LLC; RADIN, LLC",
+  "domain": "Radiology / imaging",
+  "q_cited": [
+   1,
+   2,
+   3,
+   4,
+   5,
+   6,
+   7,
+   8,
+   9,
+   10,
+   11,
+   12,
+   13,
+   14,
+   15,
+   16,
+   17,
+   18,
+   19,
+   20,
+   21,
+   22,
+   23,
+   24,
+   25,
+   26
+  ],
+  "q_addr": [
+   1,
+   2,
+   3,
+   4,
+   5,
+   6,
+   7,
+   8,
+   9,
+   10,
+   11,
+   12,
+   13,
+   14,
+   15,
+   16,
+   17,
+   18,
+   19,
+   20,
+   21,
+   22,
+   23,
+   24,
+   25,
+   26
+  ],
+  "topics": [
+   "Deployment settings and infrastructure",
+   "Equity, access, and disability",
+   "Liability and accountability"
+  ],
+  "tags": [
+   "enforcement discretion",
+   "automation bias",
+   "local validation",
+   "radiology workforce shortage"
+  ],
+  "summary": "Radiology practice and platform vendor request premarket enforcement discretion for sequestered, radiologist-supervised VLM report pre-drafting, answering all 26 questions.",
+  "words": 14500,
+  "pages": 30,
+  "posted": "2026-09-30T04:00:00Z",
+  "received": "2026-09-25T04:00:00Z",
+  "unreadable": false
+ },
+ {
+  "id": "FDA-2026-N-7874-0121",
+  "title": "Comment from STEVEN PAYNE",
+  "category_raw": "Health Professional - A0007",
+  "commenter_type": "Health professional",
+  "type_inferred": false,
+  "org": "",
+  "domain": "General / cross-cutting",
+  "q_cited": [],
+  "q_addr": [],
+  "topics": [],
+  "tags": [],
+  "summary": "Eleven image-only PDF and JPG attachments with no text layer and no inline substance; content could not be read.",
+  "words": 3,
+  "pages": 11,
+  "posted": "2026-09-30T04:00:00Z",
+  "received": "2026-09-26T04:00:00Z",
+  "unreadable": true
+ },
+ {
+  "id": "FDA-2026-N-7874-0122",
+  "title": "Comment from Steven Zhao",
+  "category_raw": null,
+  "commenter_type": "Individual",
+  "type_inferred": true,
+  "org": "",
+  "domain": "General / cross-cutting",
+  "q_cited": [],
+  "q_addr": [
+   19,
+   22,
+   24,
+   25,
+   26
+  ],
+  "topics": [
+   "Audit trails, provenance, and records",
+   "Runtime controls and kill switches"
+  ],
+  "tags": [
+   "audit trails",
+   "configuration registration"
+  ],
+  "summary": "Supplemental comment proposing entity registration for agentic devices, evidence-gated change transitions, named silent-failure monitoring patterns, and human-authorized capability expansion.",
+  "words": 1640,
+  "pages": 3,
+  "posted": "2026-09-30T04:00:00Z",
+  "received": "2026-09-26T04:00:00Z",
+  "unreadable": false
+ },
+ {
+  "id": "FDA-2026-N-7874-0123",
+  "title": "Comment from Alfredo Di Giovanni",
+  "category_raw": "Health Professional - A0007",
+  "commenter_type": "Health professional",
+  "type_inferred": false,
+  "org": "ASL Napoli 2 Nord",
+  "domain": "Radiology / imaging",
+  "q_cited": [
+   7,
+   8,
+   9,
+   10,
+   12,
+   14,
+   15,
+   16,
+   17,
+   19,
+   20,
+   21,
+   22,
+   24,
+   25
+  ],
+  "q_addr": [
+   7,
+   9,
+   10,
+   12,
+   14,
+   17,
+   22,
+   24
+  ],
+  "topics": [
+   "Other",
+   "Regulatory process and harmonization",
+   "Reliance, sycophancy, and affective harms"
+  ],
+  "tags": [
+   "sycophancy and user deference",
+   "psychometric validity",
+   "persistent memory risks",
+   "ophthalmology"
+  ],
+  "summary": "Ophthalmologist applies psychometrics to competency evaluation, proposing a user-conditioned drift benchmark, validity arguments, case-level statistics, team performance criteria, and image-ablation tests.",
+  "words": 3950,
+  "pages": 8,
+  "posted": "2026-09-30T04:00:00Z",
+  "received": "2026-09-26T04:00:00Z",
+  "unreadable": false
+ },
+ {
+  "id": "FDA-2026-N-7874-0124",
+  "title": "Comment from Primordial Origin",
+  "category_raw": "Health Care Association - D0022",
+  "commenter_type": "Health care association",
+  "type_inferred": false,
+  "org": "Primordial Origin",
+  "domain": "General / cross-cutting",
+  "q_cited": [],
+  "q_addr": [
+   7,
+   19,
+   22,
+   24
+  ],
+  "topics": [
+   "Regulatory process and harmonization",
+   "Transparency and public participation"
+  ],
+  "tags": [
+   "product promotion",
+   "modular regulatory units"
+  ],
+  "summary": "Promotional comment supporting competency-based evaluation, modular regulatory units, foundation model lineage and drift detection, and continuous telemetry, presenting the submitter's orchestration platform.",
+  "words": 1080,
+  "pages": 8,
+  "posted": "2026-09-30T04:00:00Z",
+  "received": "2026-09-26T04:00:00Z",
+  "unreadable": false
+ },
+ {
+  "id": "FDA-2026-N-7874-0125",
+  "title": "Comment from shane Fisher",
+  "category_raw": "Drug Association - D0012",
+  "commenter_type": "Drug industry",
+  "type_inferred": false,
+  "org": "",
+  "domain": "General / cross-cutting",
+  "q_cited": [],
+  "q_addr": [
+   7,
+   19,
+   22,
+   25
+  ],
+  "topics": [
+   "Regulatory process and harmonization",
+   "Transparency and public participation"
+  ],
+  "tags": [
+   "modular regulatory units",
+   "product promotion"
+  ],
+  "summary": "Supports competency-based evaluation and risk-tiered monitoring, proposes modular component-level regulation and foundation model provenance tracking, largely promoting the PrimordiaOS platform as an example.",
+  "words": 610,
+  "pages": 3,
+  "posted": "2026-09-30T04:00:00Z",
+  "received": "2026-09-27T04:00:00Z",
+  "unreadable": false
+ },
+ {
+  "id": "FDA-2026-N-7874-0126",
+  "title": "Comment from UltraAI",
+  "category_raw": "Device Industry - C0012",
+  "commenter_type": "Device industry",
+  "type_inferred": false,
+  "org": "UltraAI",
+  "domain": "Radiology / imaging",
+  "q_cited": [
+   1,
+   2,
+   3,
+   4,
+   5,
+   6,
+   7,
+   8,
+   9,
+   10,
+   11,
+   12,
+   13,
+   14,
+   15,
+   16,
+   17,
+   18,
+   19,
+   20,
+   24,
+   25,
+   26
+  ],
+  "q_addr": [
+   1,
+   2,
+   3,
+   4,
+   5,
+   6,
+   7,
+   8,
+   9,
+   10,
+   12,
+   13,
+   14,
+   15,
+   16,
+   17,
+   18,
+   19,
+   20,
+   24,
+   25
+  ],
+  "topics": [
+   "Hallucination and output reliability",
+   "Regulatory process and harmonization",
+   "Runtime controls and kill switches"
+  ],
+  "tags": [
+   "substantial equivalence",
+   "synthetic benchmarks",
+   "architectural safeguards",
+   "autonomous function regulation",
+   "output bounding"
+  ],
+  "summary": "Imaging AI firm proposes a four-dimension risk model based on generated versus presented claims, claim-level evaluation, output bounding, architectural safeguards, and validated synthetic benchmarks.",
+  "words": 20000,
+  "pages": 45,
+  "posted": "2026-09-30T04:00:00Z",
+  "received": "2026-09-28T04:00:00Z",
+  "unreadable": false
+ },
+ {
+  "id": "FDA-2026-N-7874-0127",
+  "title": "Comment from Synapstak Ltd",
+  "category_raw": "International Industry - I0022",
+  "commenter_type": "International industry",
+  "type_inferred": false,
+  "org": "Synapstak Ltd",
+  "domain": "General / cross-cutting",
+  "q_cited": [
+   1,
+   2,
+   5,
+   7,
+   9,
+   18,
+   19,
+   20,
+   21,
+   22,
+   23,
+   24,
+   25,
+   26
+  ],
+  "q_addr": [
+   1,
+   2,
+   5,
+   9,
+   18,
+   19,
+   20,
+   22,
+   24,
+   25,
+   26
+  ],
+  "topics": [
+   "Audit trails, provenance, and records",
+   "Runtime controls and kill switches"
+  ],
+  "tags": [
+   "architectural safety controls",
+   "record integrity"
+  ],
+  "summary": "Proposes a write-authority partition limiting what generative components can record or initiate, as an auditable basis for risk placement, benchmarking, change triggers, monitoring, and agentic gating.",
+  "words": 4900,
+  "pages": 9,
+  "posted": "2026-09-30T04:00:00Z",
+  "received": "2026-09-28T04:00:00Z",
+  "unreadable": false
+ },
+ {
+  "id": "FDA-2026-N-7874-0128",
+  "title": "Comment from Tianrui Huang",
+  "category_raw": "Device Industry - C0012",
+  "commenter_type": "Device industry",
+  "type_inferred": false,
+  "org": "",
+  "domain": "Mental and behavioral health",
+  "q_cited": [
+   2,
+   4,
+   9,
+   12,
+   17
+  ],
+  "q_addr": [
+   2,
+   4,
+   9,
+   12,
+   17
+  ],
+  "topics": [
+   "Human oversight and automation bias",
+   "Reliance, sycophancy, and affective harms",
+   "Small developer burden"
+  ],
+  "tags": [
+   "therapeutic distress induction",
+   "small sponsor burden",
+   "clinician-in-the-loop review"
+  ],
+  "summary": "VR exposure-therapy developer asks for lower risk for clinician-approved outputs, distress-calibration benchmarks, combined evidence tracks for small sponsors, and separating world models from content generators.",
+  "words": 1000,
+  "pages": 3,
+  "posted": "2026-09-30T04:00:00Z",
+  "received": "2026-09-28T04:00:00Z",
+  "unreadable": false
+ },
+ {
+  "id": "FDA-2026-N-7874-0129",
+  "title": "Comment from Tianrui Huang",
+  "category_raw": "Device Industry - C0012",
+  "commenter_type": "Device industry",
+  "type_inferred": false,
+  "org": "",
+  "domain": "Mental and behavioral health",
+  "q_cited": [
+   2,
+   4,
+   9,
+   12,
+   17
+  ],
+  "q_addr": [
+   2,
+   4,
+   9,
+   12,
+   17
+  ],
+  "topics": [
+   "Regulatory process and harmonization",
+   "Small developer burden"
+  ],
+  "tags": [
+   "exposure therapy calibration",
+   "small sponsor burden"
+  ],
+  "summary": "VR exposure-therapy developer asks for lower risk when clinicians approve outputs, a therapeutic-calibration benchmark, combined evidence pathways for small sponsors, and separate world-model treatment.",
+  "words": 1035,
+  "pages": 3,
+  "posted": "2026-09-30T04:00:00Z",
+  "received": "2026-09-28T04:00:00Z",
+  "unreadable": false
+ },
+ {
+  "id": "FDA-2026-N-7874-0130",
+  "title": "Comment from Skovos",
+  "category_raw": "Private Industry - C0003",
+  "commenter_type": "Private industry (non-device)",
+  "type_inferred": false,
+  "org": "Skovos",
+  "domain": "General / cross-cutting",
+  "q_cited": [
+   18,
+   19,
+   20,
+   21,
+   22,
+   24,
+   26
+  ],
+  "q_addr": [
+   18,
+   19,
+   20,
+   21,
+   22,
+   24,
+   26
+  ],
+  "topics": [
+   "Audit trails, provenance, and records",
+   "Deployment settings and infrastructure",
+   "Runtime controls and kill switches"
+  ],
+  "tags": [
+   "deployer governance controls",
+   "audit trails and reconstructability",
+   "institutional stop control"
+  ],
+  "summary": "Says deploying institutions must be able to inventory, permission, log, and stop GenAI devices, and FDA should require manufacturers to enable these capabilities.",
+  "words": 1240,
+  "pages": 3,
+  "posted": "2026-09-30T04:00:00Z",
+  "received": "2026-09-29T04:00:00Z",
+  "unreadable": false
+ },
+ {
+  "id": "FDA-2026-N-7874-0131",
+  "title": "Comment from ALEXANDER BARRETT",
+  "category_raw": "Academia - E0007",
+  "commenter_type": "Academia",
+  "type_inferred": false,
+  "org": "Verida Charter Foundation",
+  "domain": "General / cross-cutting",
+  "q_cited": [
+   1,
+   2,
+   5,
+   18,
+   19,
+   20,
+   23,
+   24,
+   25,
+   26
+  ],
+  "q_addr": [
+   1,
+   2,
+   5,
+   19,
+   20,
+   24,
+   25,
+   26
+  ],
+  "topics": [
+   "Audit trails, provenance, and records"
+  ],
+  "tags": [
+   "decision provenance records",
+   "hash commitments"
+  ],
+  "summary": "Fellow proposes reversibility as a gate on reduced premarket evidence, a choice-set directiveness ladder, declared denominators, and hash-anchored records for oversight and master files.",
+  "words": 4100,
+  "pages": 7,
+  "posted": "2026-09-30T04:00:00Z",
+  "received": "2026-09-30T04:00:00Z",
+  "unreadable": false
+ }
+]

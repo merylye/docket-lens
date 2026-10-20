@@ -1,0 +1,4 @@
+pipeline/raw/
+.env
+*.key
+.DS_Store

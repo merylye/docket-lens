@@ -1,0 +1,274 @@
+{
+ "updated": "2026-10-20T18:17:03.943616+00:00",
+ "questions": [
+  {
+   "n": 1,
+   "section": "IV",
+   "label": "Two-axis risk framework (device activity x consequence of relying on incorrect output); other risk dimensions"
+  },
+  {
+   "n": 2,
+   "section": "IV",
+   "label": "Spectrum from non-directive to action-directing informational outputs; output characteristics as risk modifiers"
+  },
+  {
+   "n": 3,
+   "section": "IV",
+   "label": "Patient-facing vs HCP-facing clinical information; safeguards when users lack domain knowledge"
+  },
+  {
+   "n": 4,
+   "section": "IV",
+   "label": "Generalist vs specialist physicians as users of HCP-facing functions"
+  },
+  {
+   "n": 5,
+   "section": "IV",
+   "label": "Multi-turn conversational devices that drift toward action-directing output; risk across conversational trajectories"
+  },
+  {
+   "n": 6,
+   "section": "IV",
+   "label": "Care escalation functions; under- vs over-escalation"
+  },
+  {
+   "n": 7,
+   "section": "V",
+   "label": "Is benchmarking followed by clinical confirmation an appropriate framework"
+  },
+  {
+   "n": 8,
+   "section": "V",
+   "label": "How the risk framework sets the level of premarket evidence"
+  },
+  {
+   "n": 9,
+   "section": "V",
+   "label": "Adequacy and structure of the benchmark elements (knowledge, analysis, safety, communication, generalizability); external standards"
+  },
+  {
+   "n": 10,
+   "section": "V",
+   "label": "Benchmark validity: contamination, saturation, construct validity, sponsor-developed benchmarks"
+  },
+  {
+   "n": 11,
+   "section": "V",
+   "label": "Clinical confirmation approaches short of prospective studies; selecting and justifying them"
+  },
+  {
+   "n": 12,
+   "section": "V",
+   "label": "Statistically meaningful performance measurement; combining synthetic and real data"
+  },
+  {
+   "n": 13,
+   "section": "V",
+   "label": "Where synthetic data is suited or inadequate; same-class-model synthetic data risks"
+  },
+  {
+   "n": 14,
+   "section": "V",
+   "label": "Comparators and acceptance criteria for open-ended outputs; clinician panels; human-AI team performance"
+  },
+  {
+   "n": 15,
+   "section": "V",
+   "label": "Comparing against care likely in the device's absence (delayed care, no intervention)"
+  },
+  {
+   "n": 16,
+   "section": "V",
+   "label": "Independent third-party involvement in benchmarking/confirmation; qualifications; competition concerns"
+  },
+  {
+   "n": 17,
+   "section": "V",
+   "label": "Applying the approach to other architectures (vision-language, world models)"
+  },
+  {
+   "n": 18,
+   "section": "VI",
+   "label": "Accepting greater premarket uncertainty with more postmarket monitoring"
+  },
+  {
+   "n": 19,
+   "section": "VI",
+   "label": "Postmarket approaches: re-benchmarking, clinician sample review, degradation monitoring; cadence and triggers"
+  },
+  {
+   "n": 20,
+   "section": "VI",
+   "label": "Machine-based supervisory agents for monitoring; their reliability"
+  },
+  {
+   "n": 21,
+   "section": "VI",
+   "label": "Roles of clinicians, institutions, societies, standards bodies without diffusing manufacturer accountability"
+  },
+  {
+   "n": 22,
+   "section": "VI",
+   "label": "Scaling re-evaluation to modifications; QMS vs premarket review; PCCP-eligible changes"
+  },
+  {
+   "n": 23,
+   "section": "VI",
+   "label": "Adapting PCCP/change control when future modifications cannot be prespecified"
+  },
+  {
+   "n": 24,
+   "section": "VI",
+   "label": "Third-party foundation model changes; detection and contractual/technical mechanisms"
+  },
+  {
+   "n": 25,
+   "section": "VII",
+   "label": "Voluntary Foundation Model Master Access Files; alternatives for foundation model information"
+  },
+  {
+   "n": 26,
+   "section": "VII",
+   "label": "Agentic GenAI devices: autonomous multi-step action, tool use, reduced human review"
+  }
+ ],
+ "sections": [
+  {
+   "key": "IV",
+   "label": "Assessment of risk"
+  },
+  {
+   "key": "V",
+   "label": "Competency-based premarket evaluation"
+  },
+  {
+   "key": "VI",
+   "label": "Postmarket monitoring"
+  },
+  {
+   "key": "VII",
+   "label": "Other topics"
+  }
+ ],
+ "topics": [
+  {
+   "key": "Reliance, sycophancy, and affective harms"
+  },
+  {
+   "key": "Hallucination and output reliability"
+  },
+  {
+   "key": "Runtime controls and kill switches"
+  },
+  {
+   "key": "Audit trails, provenance, and records"
+  },
+  {
+   "key": "Cybersecurity"
+  },
+  {
+   "key": "Privacy and consent"
+  },
+  {
+   "key": "Liability and accountability"
+  },
+  {
+   "key": "Equity, access, and disability"
+  },
+  {
+   "key": "Human oversight and automation bias"
+  },
+  {
+   "key": "Small developer burden"
+  },
+  {
+   "key": "Coverage and reimbursement"
+  },
+  {
+   "key": "Deployment settings and infrastructure"
+  },
+  {
+   "key": "Transparency and public participation"
+  },
+  {
+   "key": "Regulatory process and harmonization"
+  },
+  {
+   "key": "Opposition to AI use"
+  },
+  {
+   "key": "Other"
+  }
+ ],
+ "aria": {
+  "name": "NSF AI Research Institute on Interaction for AI Assistants (ARIA)",
+  "q_cited": [
+   1,
+   2,
+   3,
+   5,
+   6,
+   7,
+   8,
+   9,
+   10,
+   11,
+   12,
+   13,
+   14,
+   15,
+   16,
+   18,
+   19,
+   20,
+   21,
+   22,
+   23,
+   24,
+   25,
+   26
+  ],
+  "q_addr": [
+   1,
+   2,
+   3,
+   5,
+   6,
+   7,
+   8,
+   9,
+   10,
+   11,
+   12,
+   13,
+   14,
+   15,
+   16,
+   18,
+   19,
+   20,
+   21,
+   22,
+   23,
+   24,
+   25
+  ],
+  "tags": [
+   "dependence and reliance",
+   "sycophancy",
+   "help-seeking and access to care",
+   "privacy of interaction data",
+   "stakeholder participation of people with lived experience",
+   "equity for underrepresented groups"
+  ],
+  "pages": 12,
+  "summary": "Risk depends on how people come to use and rely on conversational AI over time; recommends trajectory testing, care-connection outcomes, simulation standards, postmarket reassessment, and independent evaluation.",
+  "topics": [
+   "Equity, access, and disability",
+   "Privacy and consent",
+   "Reliance, sycophancy, and affective harms",
+   "Transparency and public participation"
+  ]
+ },
+ "method": "129 posted comments read in full, including attachments, and coded against the codebook. A question counts as addressed when a comment discusses it substantively, cited or not. Comment types come from Regulations.gov; those with no category were assigned from content and are marked inferred."
+}
