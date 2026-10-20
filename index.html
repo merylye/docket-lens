@@ -103,6 +103,8 @@ td.num { font-variant-numeric: tabular-nums; text-align: right; }
 .aria-row td { background: #e0fbfc; }
 .cmp { font: 700 12px var(--sans); padding: 3px 9px; border-radius: 3px; border: 1px solid var(--teal); background: transparent; color: var(--teal); cursor: pointer; white-space: nowrap; }
 .cmp[aria-pressed="true"] { background: var(--teal); color: var(--white); }
+.sortby { display: inline-flex; align-items: center; gap: 8px; }
+.select { font: 700 13px var(--sans); padding: 5px 8px; border: 1.5px solid var(--ink); border-radius: 3px; background: var(--white); color: var(--ink); }
 .filters { display: flex; flex-wrap: wrap; gap: 12px; align-items: center; margin-bottom: 14px; }
 .empty { color: var(--muted); padding: 28px; text-align: center; }
 .more { margin-top: 12px; }
@@ -206,6 +208,14 @@ footer p { margin: 0; }
       <h2>Comments</h2>
       <div class="filters">
         <input class="field" id="search" type="search" placeholder="Search comments" aria-label="Search comments">
+        <label class="sortby"><span class="label" style="min-width:0">Sort</span>
+          <select id="sort" class="select" aria-label="Sort comments">
+            <option value="earliest">Earliest</option>
+            <option value="latest">Latest</option>
+            <option value="alpha">Alphabetical</option>
+            <option value="least">Least coverage</option>
+            <option value="most">Most coverage</option>
+          </select></label>
         <span id="selNote" class="note"></span>
         <button type="button" class="textbtn" id="clear" hidden>Clear selection</button>
       </div>
@@ -219,7 +229,7 @@ footer p { margin: 0; }
 </div>
 
 <script>
-const state = { lens: "questions", weight: "count", types: new Set(), sel: null, cat: null, q: "", all: false, pinned: [], hidden: new Set(), gcols: "questions" };
+const state = { sort: "earliest", lens: "questions", weight: "count", types: new Set(), sel: null, cat: null, q: "", all: false, pinned: [], hidden: new Set(), gcols: "questions" };
 let D = null, META = null, BYID = {};
 
 const esc = s => String(s ?? "").replace(/[&<>"']/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
@@ -409,19 +419,30 @@ function renderTable() {
       <div class="facet"><span>Question groups</span>${chips(groups)}</div>
       <div class="facet"><span>Additional themes</span>${themes.length ? `<span>${themes.map(esc).join(" · ")}</span>` : `<span class="none">None</span>`}</div>`;
   };
-  const ariaRow = ariaShow ? `<article class="card aria"><div class="top"><span class="who">ARIA</span>
-      <button type="button" class="cmp" data-id="ARIA" aria-pressed="${state.pinned.includes("ARIA")}">${state.pinned.includes("ARIA") ? "In grid" : "Add to grid"}</button></div>
-    <div class="meta"><span>Academia</span><span>Received Oct 19, 2026</span><span>Posting pending</span></div>
-    ${facets(a.q_addr, a.topics)}</article>` : "";
-  const more = document.getElementById("more"), limit = 40;
-  more.hidden = state.all || rows.length <= limit; more.textContent = `Show all ${rows.length} comments`;
-  const shown = state.all ? rows : rows.slice(0, limit);
   const fmtD = d => d ? new Date(d).toLocaleDateString("en-US", { month: "short", day: "numeric", year: "numeric" }) : "";
-  document.getElementById("rows").innerHTML = (rows.length ? shown.map(c => `
-    <article class="card"><div class="top"><span class="who">${esc(nameOf(c))}</span>
-      <button type="button" class="cmp" data-id="${esc(c.id)}" aria-pressed="${state.pinned.includes(c.id)}">${state.pinned.includes(c.id) ? "In grid" : "Add to grid"}</button></div>
-    <div class="meta"><a href="https://www.regulations.gov/comment/${esc(c.id)}" target="_blank" rel="noopener">${esc(short(c.id))}</a><span>${esc(c.commenter_type)}${c.type_inferred ? " (inferred)" : ""}</span><span>Received ${fmtD(c.received)}</span></div>
-    ${c.unreadable ? '<div class="themes">Attachment unreadable, not coded</div>' : facets(c.q_addr, c.topics || [])}</article>`).join("") : (ariaRow ? "" : `<p class="empty">No comments match.</p>`)) + (shown.length === rows.length ? ariaRow : "");
+  const items = rows.map(c => ({ c, name: nameOf(c), date: c.received || c.posted || "", cov: c.unreadable ? -1 : c.q_addr.length + (c.topics || []).length / 100 }));
+  if (ariaShow) items.push({ aria: true, name: "ARIA", date: "2026-10-19T23:00:00Z", cov: a.q_addr.length + a.topics.length / 100 });
+  const cmpName = (x, y) => x.name.localeCompare(y.name, "en", { sensitivity: "base" });
+  const sorters = {
+    earliest: (x, y) => x.date.localeCompare(y.date) || cmpName(x, y),
+    latest: (x, y) => y.date.localeCompare(x.date) || cmpName(x, y),
+    alpha: cmpName,
+    least: (x, y) => x.cov - y.cov || cmpName(x, y),
+    most: (x, y) => y.cov - x.cov || cmpName(x, y),
+  };
+  items.sort(sorters[state.sort]);
+  const more = document.getElementById("more"), limit = 40;
+  more.hidden = state.all || items.length <= limit; more.textContent = `Show all ${items.length} comments`;
+  const shown = state.all ? items : items.slice(0, limit);
+  const btn = (id) => `<button type="button" class="cmp" data-id="${esc(id)}" aria-pressed="${state.pinned.includes(id)}">${state.pinned.includes(id) ? "In grid" : "Add to grid"}</button>`;
+  const card = it => it.aria
+    ? `<article class="card aria"><div class="top"><span class="who">ARIA</span>${btn("ARIA")}</div>
+      <div class="meta"><span>Academia</span><span>Received Oct 19, 2026</span><span>Posting pending</span></div>
+      ${facets(a.q_addr, a.topics)}</article>`
+    : `<article class="card"><div class="top"><span class="who">${esc(it.name)}</span>${btn(it.c.id)}</div>
+      <div class="meta"><a href="https://www.regulations.gov/comment/${esc(it.c.id)}" target="_blank" rel="noopener">${esc(short(it.c.id))}</a><span>${esc(it.c.commenter_type)}${it.c.type_inferred ? " (inferred)" : ""}</span><span>Received ${fmtD(it.c.received)}</span></div>
+      ${it.c.unreadable ? '<div class="themes">Attachment unreadable, not coded</div>' : facets(it.c.q_addr, it.c.topics || [])}</article>`;
+  document.getElementById("rows").innerHTML = shown.length ? shown.map(card).join("") : `<p class="empty">No comments match.</p>`;
   document.querySelectorAll("#rows .cmp").forEach(b => b.onclick = () => {
     const adding = !state.pinned.includes(b.dataset.id);
     togglePin(b.dataset.id);
@@ -470,6 +491,7 @@ function init() {
   document.getElementById("catClear").onclick = () => { state.types.clear(); render(); };
   document.querySelectorAll("#lens .pill").forEach(b => b.onclick = () => { state.lens = b.dataset.v; state.sel = null; state.cat = null; render(); });
   document.getElementById("search").addEventListener("input", e => { state.q = e.target.value; renderTable(); });
+  document.getElementById("sort").addEventListener("change", e => { state.sort = e.target.value; state.all = false; renderTable(); document.getElementById("side").scrollTo({ top: 0 }); });
   document.getElementById("clear").onclick = () => { state.sel = null; state.cat = null; state.types.clear(); render(); };
   document.getElementById("more").onclick = () => { state.all = true; renderTable(); };
   document.querySelectorAll("#gcols .pill").forEach(b => b.onclick = () => { state.gcols = b.dataset.v; render(); });
