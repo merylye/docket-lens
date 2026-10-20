@@ -110,6 +110,7 @@ footer p { margin: 0; }
 .split { display: grid; gap: 40px; padding-block: 32px 0; }
 .split > * { min-width: 0; }
 #gridSection { scroll-margin-top: calc(var(--ctl-h, 70px) + 16px); }
+#grid { scroll-margin-bottom: 16px; }
 .left { display: grid; gap: 48px; align-content: start; min-width: 0; padding-bottom: 8px; }
 .side { min-width: 0; }
 .side h2 { margin-bottom: 8px; }
@@ -420,7 +421,7 @@ function renderTable() {
   document.querySelectorAll("#rows .cmp").forEach(b => b.onclick = () => {
     const adding = !state.pinned.includes(b.dataset.id);
     togglePin(b.dataset.id);
-    if (adding) document.getElementById("gridSection").scrollIntoView({ behavior: "smooth", block: "start" });
+    if (adding) document.getElementById("grid").scrollIntoView({ behavior: "smooth", block: "end" });
   });
 }
 
