@@ -121,6 +121,9 @@ footer p { margin: 0; }
 .card .sum { font-size: 14px; margin: 0; }
 .card.aria { background: #e0fbfc; padding-inline: 10px; }
 .themes { font-size: 12px; color: var(--muted); }
+.facet { display: grid; grid-template-columns: 112px minmax(0, 1fr); gap: 8px; align-items: baseline; font-size: 13px; }
+.facet > span:first-child { font: 600 12px var(--cond); letter-spacing: .06em; text-transform: uppercase; color: var(--muted); }
+.facet .none { color: var(--muted); }
 @media (min-width: 1100px) {
   .split { grid-template-columns: minmax(0, 1.55fr) minmax(360px, 1fr); }
   .split { align-items: start; }
@@ -384,17 +387,24 @@ function renderTable() {
   let rows = D.filter(c => state.types.size === 0 || state.types.has(c.commenter_type));
   if (state.cat) rows = rows.filter(c => c.commenter_type === state.cat);
   if (state.sel) rows = rows.filter(c => itemsFor(c, state.sel.lens).includes(state.sel.key));
-  if (q) rows = rows.filter(c => [c.id, c.org, c.title, c.summary, c.commenter_type, ...(c.topics || []), ...(c.tags || [])].join(" ").toLowerCase().includes(q));
+  if (q) rows = rows.filter(c => [c.id, c.org, c.title, c.commenter_type, ...(c.topics || []), ...(c.tags || [])].join(" ").toLowerCase().includes(q));
   const note = document.getElementById("selNote"), clear = document.getElementById("clear");
   if (state.sel) {
     const it = catalog(state.sel.lens).find(i => i.key === state.sel.key);
     note.textContent = `${rows.length} comments${state.cat ? " from " + state.cat : ""} addressing ${it ? it.label : state.sel.key}`; clear.hidden = false;
   } else { note.textContent = `${rows.length} comments`; clear.hidden = true; }
-  const a = META.aria, ariaShow = state.pinned.includes("ARIA") && (!state.sel || ariaItems(state.sel.lens).includes(state.sel.key)) && !state.cat && (!q || "aria".includes(q) || a.summary.toLowerCase().includes(q));
-  const qchips = arr => `<div class="qs">${arr.map(n => `<span class="q">Q${n}</span>`).join("")}</div>`;
+  const a = META.aria, ariaShow = state.pinned.includes("ARIA") && (!state.sel || ariaItems(state.sel.lens).includes(state.sel.key)) && !state.cat && (!q || "aria".includes(q));
+  const SHORT = { IV: "Risk", V: "Premarket", VI: "Postmarket", VII: "Other" };
+  const chips = arr => arr.length ? `<div class="qs">${arr.map(x => `<span class="q">${esc(x)}</span>`).join("")}</div>` : `<span class="none">None</span>`;
+  const facets = (qs, themes) => {
+    const groups = META.sections.filter(s => qs.some(n => sectionOf(n) === s.key)).map(s => SHORT[s.key]);
+    return `<div class="facet"><span>Docket questions</span>${chips(qs.map(n => "Q" + n))}</div>
+      <div class="facet"><span>Question groups</span>${chips(groups)}</div>
+      <div class="facet"><span>Additional themes</span>${themes.length ? `<span>${themes.map(esc).join(" · ")}</span>` : `<span class="none">None</span>`}</div>`;
+  };
   const ariaRow = ariaShow ? `<article class="card aria"><div class="top"><span class="who">ARIA</span></div>
     <div class="meta"><span>Academia</span><span>Received Oct 19, 2026</span><span>Posting pending</span></div>
-    ${qchips(a.q_addr)}${a.topics.length ? `<div class="themes">${a.topics.map(esc).join(" · ")}</div>` : ""}<p class="sum">${esc(a.summary)}</p></article>` : "";
+    ${facets(a.q_addr, a.topics)}</article>` : "";
   const more = document.getElementById("more"), limit = 40;
   more.hidden = state.all || rows.length <= limit; more.textContent = `Show all ${rows.length} comments`;
   const shown = state.all ? rows : rows.slice(0, limit);
@@ -403,9 +413,7 @@ function renderTable() {
     <article class="card"><div class="top"><span class="who">${esc(nameOf(c))}</span>
       <button type="button" class="cmp" data-id="${esc(c.id)}" aria-pressed="${state.pinned.includes(c.id)}">${state.pinned.includes(c.id) ? "In grid" : "Compare"}</button></div>
     <div class="meta"><a href="https://www.regulations.gov/comment/${esc(c.id)}" target="_blank" rel="noopener">${esc(short(c.id))}</a><span>${esc(c.commenter_type)}${c.type_inferred ? " (inferred)" : ""}</span><span>Received ${fmtD(c.received)}</span></div>
-    ${c.unreadable ? '<div class="themes">Attachment unreadable</div>' : qchips(c.q_addr)}
-    ${(c.topics || []).length ? `<div class="themes">${c.topics.map(esc).join(" · ")}</div>` : ""}
-    <p class="sum">${esc(c.summary)}</p></article>`).join("") : (ariaRow ? "" : `<p class="empty">No comments match.</p>`));
+    ${c.unreadable ? '<div class="themes">Attachment unreadable, not coded</div>' : facets(c.q_addr, c.topics || [])}</article>`).join("") : (ariaRow ? "" : `<p class="empty">No comments match.</p>`));
   document.querySelectorAll("#rows .cmp").forEach(b => b.onclick = () => { togglePin(b.dataset.id); });
 }
 
