@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-21T20:24:23.803970+00:00",
+ "updated": "2026-10-21T20:40:27.921285+00:00",
  "questions": [
   {
    "n": 1,
@@ -842,10 +842,6 @@
     "label": "Set monitoring frequency by risk"
    },
    {
-    "key": "manufacturer_duty",
-    "label": "Keep manufacturers responsible for monitoring"
-   },
-   {
     "key": "other",
     "label": "Other conditions"
    }
@@ -1421,11 +1417,6 @@
     "id": "FDA-2026-N-7874-0076",
     "reason": "A PCCP is the wrong instrument for changes the sponsor cannot predetermine",
     "alternative": ""
-   },
-   {
-    "id": "FDA-2026-N-7874-0086",
-    "reason": "Material model changes should be caught before affecting care and get revalidation and FDA review",
-    "alternative": ""
    }
   ],
   "no_care_comparator": [
@@ -1453,7 +1444,8 @@
     "reason": "A device that bounds its inputs, outputs, and output variability should be evaluable by established methods",
     "alternative": ""
    }
-  ]
+  ],
+  "postmarket_methods": []
  },
  "nopos": [
   {
@@ -1555,6 +1547,11 @@
    "id": "FDA-2026-N-7874-0104",
    "kind": "outside_framing",
    "point": "Assess whether evaluation and monitoring layers provide truly independent evidence about device failure"
+  },
+  {
+   "id": "FDA-2026-N-7874-0083",
+   "kind": "outside_framing",
+   "point": "Keep responsibility for model validity, drift, and monitoring with model makers, not pathology labs"
   }
  ],
  "open_questions": [
@@ -1792,8 +1789,8 @@
   },
   {
    "key": "audit_trail",
-   "label": "Keep tamper evident records including model version",
-   "desc": "Keep tamper-evident logs that can reconstruct events, including the model version, configuration, and human decisions behind each output."
+   "label": "Keep records for audit and incident review",
+   "desc": "Keep logs that can reconstruct events, including the model version, configuration, and human decisions behind each output."
   },
   {
    "key": "human_approval",

@@ -171,11 +171,6 @@
     "id": "FDA-2026-N-7874-0076",
     "reason": "A PCCP is the wrong instrument for changes the sponsor cannot predetermine",
     "alternative": ""
-   },
-   {
-    "id": "FDA-2026-N-7874-0086",
-    "reason": "Material model changes should be caught before affecting care and get revalidation and FDA review",
-    "alternative": ""
    }
   ],
   "no_care_comparator": [
@@ -203,7 +198,8 @@
     "reason": "A device that bounds its inputs, outputs, and output variability should be evaluable by established methods",
     "alternative": ""
    }
-  ]
+  ],
+  "postmarket_methods": []
  },
  "nopos": [
   {
@@ -305,6 +301,11 @@
    "id": "FDA-2026-N-7874-0104",
    "kind": "outside_framing",
    "point": "Assess whether evaluation and monitoring layers provide truly independent evidence about device failure"
+  },
+  {
+   "id": "FDA-2026-N-7874-0083",
+   "kind": "outside_framing",
+   "point": "Keep responsibility for model validity, drift, and monitoring with model makers, not pathology labs"
   }
  ],
  "open_questions": [

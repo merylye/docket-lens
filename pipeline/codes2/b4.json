@@ -173,7 +173,7 @@
    "synthetic_data": null,
    "median_clinician_comparator": null,
    "no_care_comparator": null,
-   "third_party": "conditional",
+   "third_party": null,
    "postmarket_tradeoff": null,
    "postmarket_methods": "conditional",
    "supervisory_agents": null,

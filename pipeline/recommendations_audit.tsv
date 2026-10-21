@@ -285,7 +285,7 @@ FDA-2026-N-7874-0010	pccp_bounded	Reframe PCCPs around locked evaluation invaria
 FDA-2026-N-7874-0010	comparator_realistic	Reject median clinician in practice as the primary performance standard
 FDA-2026-N-7874-0010	postmarket_plans	Make postmarket monitoring an enforceable condition with automatic consequences
 FDA-2026-N-7874-0010	error_reporting	Resolve MDR reportability for caught generative output errors
-FDA-2026-N-7874-0010	model_disclosure	Place full model characterization burden on manufacturers when no MAF exists
+FDA-2026-N-7874-0010	accountability	Place full model characterization burden on manufacturers when no MAF exists
 FDA-2026-N-7874-0025	none	Expand risk assessment beyond incorrect output to omissions and missed needs
 FDA-2026-N-7874-0025	none	Add a competency for recognizing latent clinical need in administrative requests
 FDA-2026-N-7874-0025	multi_turn	Test multi-turn scenarios where key clinical information is not volunteered
@@ -446,7 +446,7 @@ FDA-2026-N-7874-0076	model_disclosure	Make model cards for marketed device model
 FDA-2026-N-7874-0076	version_pinning	Require version pinning and no silent model updates
 FDA-2026-N-7874-0076	rebenchmark_on_change	Re-benchmark before new model versions reach patients
 FDA-2026-N-7874-0076	error_reporting	Create a patient channel for reporting incorrect outputs
-FDA-2026-N-7874-0076	kill_switch	Create a process to suspend device authorization
+FDA-2026-N-7874-0076	none	Create a process to suspend device authorization
 FDA-2026-N-7874-0076	comparator_realistic	Use the standard of care, not the median clinician, as comparator
 FDA-2026-N-7874-0076	human_approval	Require human checkpoints before irreversible agentic actions
 FDA-2026-N-7874-0056	risk_factors	Add error detectability and independent reviewability to risk assessment

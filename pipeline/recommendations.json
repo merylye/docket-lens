@@ -147,8 +147,8 @@
   },
   {
    "key": "audit_trail",
-   "label": "Keep tamper evident records including model version",
-   "desc": "Keep tamper-evident logs that can reconstruct events, including the model version, configuration, and human decisions behind each output."
+   "label": "Keep records for audit and incident review",
+   "desc": "Keep logs that can reconstruct events, including the model version, configuration, and human decisions behind each output."
   },
   {
    "key": "human_approval",
@@ -450,7 +450,7 @@
    "comparator_realistic",
    "postmarket_plans",
    "error_reporting",
-   "model_disclosure"
+   "accountability"
   ],
   "FDA-2026-N-7874-0025": [
    "multi_turn",
@@ -586,7 +586,6 @@
    "version_pinning",
    "rebenchmark_on_change",
    "error_reporting",
-   "kill_switch",
    "comparator_realistic",
    "human_approval"
   ],

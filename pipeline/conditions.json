@@ -72,10 +72,6 @@
     "label": "Set monitoring frequency by risk"
    },
    {
-    "key": "manufacturer_duty",
-    "label": "Keep manufacturers responsible for monitoring"
-   },
-   {
     "key": "other",
     "label": "Other conditions"
    }
@@ -1664,12 +1660,8 @@
     "setting"
    ],
    "postmarket_methods": [
-    "manufacturer_duty",
     "other",
     "outcomes"
-   ],
-   "confirmation_flex": [
-    "scale_to_risk"
    ],
    "supervisory_agents": [
     "human_final"
@@ -2049,12 +2041,7 @@
     "variability"
    ]
   },
-  "FDA-2026-N-7874-0083": {
-   "postmarket_methods": [
-    "manufacturer_duty",
-    "other"
-   ]
-  },
+  "FDA-2026-N-7874-0083": {},
   "FDA-2026-N-7874-0116": {
    "postmarket_methods": [
     "event_triggers",
@@ -2167,15 +2154,10 @@
    "agentic_oversight": [
     "audit_records",
     "human_confirm"
-   ],
-   "third_party": [
-    "conflict",
-    "roles"
    ]
   },
   "FDA-2026-N-7874-0050": {
    "postmarket_methods": [
-    "manufacturer_duty",
     "other"
    ],
    "voluntary_model_files": [
@@ -2312,12 +2294,7 @@
     "other"
    ]
   },
-  "FDA-2026-N-7874-0107": {
-   "competency_eval": [
-    "clinical_evidence",
-    "other"
-   ]
-  },
+  "FDA-2026-N-7874-0107": {},
   "FDA-2026-N-7874-0108": {
    "competency_eval": [
     "hard_cases",

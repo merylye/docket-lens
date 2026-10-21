@@ -181,7 +181,7 @@
    "trajectory_risk": null,
    "escalation_errors": "support",
    "competency_eval": "conditional",
-   "confirmation_flex": "conditional",
+   "confirmation_flex": null,
    "synthetic_data": null,
    "median_clinician_comparator": null,
    "no_care_comparator": "oppose",
@@ -189,7 +189,7 @@
    "postmarket_tradeoff": "oppose",
    "postmarket_methods": "conditional",
    "supervisory_agents": "conditional",
-   "flexible_change_control": "oppose",
+   "flexible_change_control": null,
    "voluntary_model_files": null,
    "agentic_oversight": "support"
   },

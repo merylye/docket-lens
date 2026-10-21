@@ -704,7 +704,7 @@
    "comparator_realistic",
    "postmarket_plans",
    "error_reporting",
-   "model_disclosure"
+   "accountability"
   ],
   "also_filed": [
    "FDA-2026-N-7874-0013"
@@ -3245,7 +3245,6 @@
   "also_filed": [],
   "conds": {
    "postmarket_methods": [
-    "manufacturer_duty",
     "other"
    ],
    "voluntary_model_files": [
@@ -4415,7 +4414,6 @@
    "risk_framework": "support",
    "escalation_errors": "support",
    "competency_eval": "support",
-   "third_party": "conditional",
    "postmarket_methods": "conditional",
    "flexible_change_control": "support",
    "agentic_oversight": "conditional"
@@ -4438,10 +4436,6 @@
    "agentic_oversight": [
     "audit_records",
     "human_confirm"
-   ],
-   "third_party": [
-    "conflict",
-    "roles"
    ]
   }
  },
@@ -4899,7 +4893,6 @@
    "version_pinning",
    "rebenchmark_on_change",
    "error_reporting",
-   "kill_switch",
    "comparator_realistic",
    "human_approval"
   ],
@@ -5260,19 +5253,12 @@
   "posted": "2026-09-09T04:00:00Z",
   "received": "2026-09-09T04:00:00Z",
   "unreadable": false,
-  "pos": {
-   "postmarket_methods": "conditional"
-  },
+  "pos": {},
   "recs": [
    "accountability"
   ],
   "also_filed": [],
-  "conds": {
-   "postmarket_methods": [
-    "manufacturer_duty",
-    "other"
-   ]
-  }
+  "conds": {}
  },
  {
   "id": "FDA-2026-N-7874-0084",
@@ -5418,12 +5404,10 @@
    "risk_framework": "conditional",
    "escalation_errors": "support",
    "competency_eval": "conditional",
-   "confirmation_flex": "conditional",
    "no_care_comparator": "oppose",
    "postmarket_tradeoff": "oppose",
    "postmarket_methods": "conditional",
    "supervisory_agents": "conditional",
-   "flexible_change_control": "oppose",
    "agentic_oversight": "support"
   },
   "recs": [
@@ -5444,12 +5428,8 @@
     "setting"
    ],
    "postmarket_methods": [
-    "manufacturer_duty",
     "other",
     "outcomes"
-   ],
-   "confirmation_flex": [
-    "scale_to_risk"
    ],
    "supervisory_agents": [
     "human_final"
@@ -6973,7 +6953,6 @@
   "received": "2026-09-20T04:00:00Z",
   "unreadable": false,
   "pos": {
-   "competency_eval": "conditional",
    "confirmation_flex": "oppose"
   },
   "recs": [
@@ -6982,12 +6961,7 @@
    "sequestered_benchmarks"
   ],
   "also_filed": [],
-  "conds": {
-   "competency_eval": [
-    "clinical_evidence",
-    "other"
-   ]
-  }
+  "conds": {}
  },
  {
   "id": "FDA-2026-N-7874-0108",
