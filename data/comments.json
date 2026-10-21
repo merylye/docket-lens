@@ -3258,70 +3258,9 @@
    "model_disclosure",
    "populations_settings"
   ],
-  "also_filed": []
- },
- {
-  "id": "FDA-2026-N-7874-0058",
-  "title": "Comment from Wen Hsien Ethan Huang",
-  "category_raw": null,
-  "commenter_type": "Health professional",
-  "type_inferred": true,
-  "org": "",
-  "domain": "General / cross-cutting",
-  "q_cited": [
-   1,
-   2,
-   9,
-   10,
-   11,
-   14,
-   19,
-   22,
-   23,
-   25
-  ],
-  "q_addr": [
-   1,
-   2,
-   9,
-   10,
-   11,
-   14,
-   19,
-   22,
-   23,
-   25
-  ],
-  "topics": [
-   "Equity, access, and disability"
-  ],
-  "tags": [
-   "user authority bias",
-   "automation bias"
-  ],
-  "summary": "Clinician-educator recommends benchmarking sensitivity to claimed user seniority, testing real human override behavior, periodic re-credentialing-style re-examination, and MAFs disclosing refusal and stability behavior.",
-  "words": 1950,
-  "pages": 6,
-  "posted": "2026-09-04T04:00:00Z",
-  "received": "2026-09-03T04:00:00Z",
-  "unreadable": false,
-  "pos": {
-   "risk_framework": "conditional",
-   "directiveness_continuum": "support",
-   "competency_eval": "support",
-   "postmarket_methods": "support",
-   "flexible_change_control": "conditional",
-   "voluntary_model_files": "support"
-  },
-  "recs": [
-   "sycophancy",
-   "oversight_demonstrated",
-   "postmarket_plans",
-   "rebenchmark_on_change",
-   "model_disclosure",
-   "populations_settings"
-  ],
-  "also_filed": []
+  "also_filed": [
+   "FDA-2026-N-7874-0058"
+  ]
  },
  {
   "id": "FDA-2026-N-7874-0059",
