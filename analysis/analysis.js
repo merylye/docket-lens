@@ -14,7 +14,7 @@
     contest: 0.2,   // share opposing
     minN: 15,       // minimum comments with a position for the consensus and contention lists
   };
-  let view = "findings", prop = null;
+  let view = "findings", prop = null, showAria = false;
 
   const pool = () => readable().filter(c => !c.hidden || true);
   const people = () => readable();
@@ -99,16 +99,18 @@
       <article class="brief af">
         <div class="block"><p class="note">${esc(tip.title || Q(p))}</p><h2>${esc(p.label)}</h2>
           ${tip.quote ? `<p class="quote">“${esc(tip.quote)}”</p>` : ""}${tip.body ? `<p style="margin:0">${esc(tip.body)}</p>` : ""}</div>
-        <div class="block"><h3>Responses</h3>${legend}
+        <div class="block"><h3>Commenter positions</h3>${legend}
           <div class="row"><span class="lab">All commenters</span>${sbar(n)}<span class="num">${n.total}</span></div>
           <p class="note">${n.total} of ${rows.length} comments took a position. ${n.support} supported, ${n.conditional} supported with conditions, and ${n.oppose} opposed.</p>
           <div style="display:flex;gap:16px;flex-wrap:wrap">${["support", "conditional", "oppose"].filter(s => n[s]).map(s => `<button class="go" data-go="${esc(p.key)}:${s}">${n[s]} ${s === "conditional" ? "with conditions" : s === "support" ? "supporting" : "opposing"}</button>`).join("")}</div></div>
         <div class="block"><h3>Responses by commenter group</h3>${groups}<p class="note">The number is how many comments in each group took a position.</p></div>
         ${cg.length ? `<div class="block"><h3>Added conditions</h3>${cg.map(x => `<div class="row click" data-go="${esc(p.key)}:conditional:${esc(x.g.key)}" tabindex="0" role="button"><span class="lab">${esc(x.g.label)}</span>${lbar(x.n, cmax)}<span class="num">${x.n}</span></div>`).join("")}<p class="note">Named by the ${cond.length} comments that supported it with conditions. A comment can name more than one. Select a row to read them.</p></div>` : ""}
-        <div class="block"><h3>ARIA</h3><p style="margin:0">${av ? word[av] : "ARIA took no position on this proposal."}</p>${aq.map(q => `<p class="quote">“${esc(q)}”</p>`).join("")}</div>
+        <div class="block"><button type="button" class="pill small" id="ariaTog" aria-pressed="${showAria}">${showAria ? "Hide" : "Show"} ARIA's position</button>
+          ${showAria ? `<p style="margin:0">${av ? word[av] : "ARIA took no position on this proposal."}</p>${aq.map(q => `<p class="quote">“${esc(q)}”</p>`).join("")}` : ""}</div>
       </article></div>${footer()}`;
     const el = document.getElementById("view-proposals");
     el.querySelectorAll(".plist button").forEach(b => b.onclick = () => { prop = b.dataset.p; proposals(); setHash(); el.scrollIntoView({ block: "start" }); });
+    el.querySelector("#ariaTog").onclick = () => { showAria = !showAria; proposals(); };
     el.querySelector("#psel").onchange = e => { prop = e.target.value; proposals(); setHash(); };
     bind(el);
   }
