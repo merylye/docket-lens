@@ -6,7 +6,7 @@ Site: https://merylye.github.io/docket-lens/
 
 ## What the site shows
 
-**Position distribution.** Where commenters stood on 17 proposals in FDA's discussion paper, listed in the order of the docket questions they come from. Each bar's length shows how many comments gave a view on that proposal, and its segments show the share that supported it, supported it with conditions, or opposed it. A category view breaks this out by commenter category.
+**Position distribution.** Where commenters stood on 17 proposals in FDA's discussion paper, listed in the order of the docket questions they come from. Each bar's length shows how many comments gave a view on that proposal, and its segments show the share that supported it, supported it with conditions, or opposed it. A category view breaks this out by commenter category. Selecting a "support with conditions" segment opens the conditions those commenters attached, grouped and counted, and selecting a condition lists the comments that named it.
 
 **Top recommendations.** The concrete asks that recurred across comments, grouped into 40 recommendations and ranked by how many comments made each, colored by commenter category.
 
@@ -34,6 +34,7 @@ Site: https://merylye.github.io/docket-lens/
 | `pipeline/codes2/*.json` | Each comment's positions on FDA's proposals and its recommendations. |
 | `pipeline/recommendations.json` | The 40 recommendation groups and which comments made each. |
 | `pipeline/recommendations_audit.tsv` | Every extracted recommendation and the group it was assigned to, for checking. |
+| `pipeline/conditions.json` | The conditions attached to each "support with conditions" code, grouped by proposal. |
 | `pipeline/aria.json` | ARIA's comment, coded the same way. It appears on the site before it is posted to Regulations.gov. |
 | `pipeline/pull.py` | Downloads comment text and metadata from the Regulations.gov API. |
 | `pipeline/check_new.py`, `pipeline/known_comments.txt` | The daily check for new comments, and hashed IDs of comments already on the site. |
@@ -57,5 +58,7 @@ One commenter asked that their comment not be used this way. It is counted in th
 Two documents were each filed twice (0102 and 0117; 0057 and 0058). Each is counted once, under the earlier filing, whose card links to the second (`DUPLICATES` in `merge.py`).
 
 Positions were coded with Claude Opus 5.5. Codes the first coder was unsure of were recoded by two independent coders: where they agreed, that code was used; where they disagreed, the code is "conditional" if either said conditional and "no position" if either said no position. A blind recode of 15 randomly drawn comments matched the other codes on 92% of the codes where either coder gave a stance (97% of all codes, Cohen's kappa 0.95). Every mismatch was between support and conditional, or between conditional and no position.
+
+Conditions were extracted from each comment with the passage that states them, grouped within each proposal, and then checked by a separate coder who saw only the passage and the group label. The 10% of assignments that coder rejected are counted under "Other conditions," and groups named by fewer than three comments were folded into it.
 
 Coding is approximate. Check a comment's original text before quoting or citing it. Commenter categories come from Regulations.gov; comments filed without a category were assigned one from their content and are marked "inferred." Some comments are filed under a category that does not match their content, and the site keeps the filed category.

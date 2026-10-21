@@ -391,24 +391,28 @@ function stackedBar(x, y, w, h, n, key, out, sel) {
     xx += ww;
   });
 }
-function condPanel(p, pool, x, bw, y0, out, aria) {
+function condPanel(p, pool, lw, bw, y0, out, aria) {
   const gs = condsOf(p.key), cond = pool.filter(c => (c.pos || {})[p.key] === "conditional");
   const rows = gs.map(g => ({ g, n: cond.filter(c => ((c.conds || {})[p.key] || []).includes(g.key)).length })).filter(r => r.n);
   const ah = aria && META.aria.conds ? (META.aria.conds[p.key] || []) : [];
-  const lh = 22, top = y0 + 4, lblW = Math.round(bw * .62), barX = x + lblW + 8, barMax = Math.max(40, bw - lblW - 50), mx = Math.max(1, ...rows.map(r => r.n));
-  out.push(`<rect x="${x - 2}" y="${top}" width="3" height="${(rows.length + 1) * lh + (rows.length ? 22 : 0)}" fill="#00dfe9"></rect>`);
-  out.push(`<text x="${x + 10}" y="${top + 15}" font-size="12" fill="#555555" ${ff}>${rows.length ? `Conditions named by the ${cond.length} comments that support it with conditions` : "No conditions recorded for these comments"}</text>`);
+  const lh = 22, top = y0 + 4, x = 12, barMax = Math.max(60, bw * .55), mx = Math.max(1, ...rows.map(r => r.n)), h = (rows.length + 1) * lh + (rows.length ? 52 : 8);
+  out.push(`<rect x="0" y="${top}" width="3" height="${h - 8}" fill="#00dfe9"></rect>`);
+  out.push(`<text x="${x}" y="${top + 15}" font-size="12" fill="#555555" ${ff}>${rows.length ? `Conditions named by the ${cond.length} comments that support it with conditions` : "No conditions recorded for these comments"}</text>`);
   const sel = state.sel && state.sel.key;
   rows.forEach((r, j) => {
     const yy = top + (j + 1) * lh, key = p.key + ":conditional:" + r.g.key, on = sel === key, star = ah.includes(r.g.key);
     out.push(`<g class="cnd" data-key="${esc(key)}" tabindex="0" role="button" aria-label="${esc(r.g.label)}: ${r.n} comments" style="cursor:pointer">
-      <rect x="${x + 4}" y="${yy}" width="${bw - 4}" height="${lh - 2}" fill="${on ? "#e6fbfc" : "transparent"}"></rect>
-      <text x="${x + 10}" y="${yy + 15}" font-size="13" fill="#111111" ${on ? 'font-weight="700"' : ""} ${ff}>${esc(r.g.label)}${star ? '<tspan fill="#00848a" font-weight="700"> *</tspan>' : ""}</text>
-      <rect x="${barX}" y="${yy + 5}" width="${Math.max(2, r.n / mx * barMax)}" height="${lh - 12}" fill="${SCOL.conditional}"></rect>
-      <text x="${barX + r.n / mx * barMax + 6}" y="${yy + 15}" font-size="12" fill="#555555" ${ff}>${r.n}</text></g>`);
+      <rect x="6" y="${yy}" width="${lw + bw - 6}" height="${lh - 2}" fill="${on ? "#e6fbfc" : "transparent"}"></rect>
+      <text x="${x}" y="${yy + 15}" font-size="13" fill="#111111" ${on ? 'font-weight="700"' : ""} ${ff}>${esc(r.g.label)}${star ? '<tspan fill="#00848a" font-weight="700"> *</tspan>' : ""}</text>
+      <rect x="${lw}" y="${yy + 5}" width="${Math.max(2, r.n / mx * barMax)}" height="${lh - 12}" fill="${SCOL.conditional}"></rect>
+      <text x="${lw + r.n / mx * barMax + 6}" y="${yy + 15}" font-size="12" fill="#555555" ${ff}>${r.n}</text></g>`);
   });
-  if (rows.length) out.push(`<text x="${x + 10}" y="${top + (rows.length + 1) * lh + 14}" font-size="11" fill="#555555" ${ff}>A comment can name more than one condition.${ah.length ? " * ARIA named this condition." : ""} Select a condition to view those comments</text>`);
-  return (rows.length + 1) * lh + (rows.length ? 30 : 8);
+  if (rows.length) {
+    const fy = top + (rows.length + 1) * lh + 12;
+    out.push(`<text x="${x}" y="${fy}" font-size="11" fill="#555555" ${ff}>A comment can name more than one condition.${ah.length ? " * ARIA named this condition." : ""}</text>`);
+    out.push(`<text x="${x}" y="${fy + 15}" font-size="11" fill="#555555" ${ff}>Select a condition to view those comments. Select the gray segment again to close.</text>`);
+  }
+  return h;
 }
 function labelW(props) {
   const c = labelW.c || (labelW.c = document.createElement("canvas").getContext("2d"));

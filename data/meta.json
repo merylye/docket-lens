@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-21T13:00:38.706755+00:00",
+ "updated": "2026-10-21T13:16:25.610025+00:00",
  "questions": [
   {
    "n": 1,
@@ -370,7 +370,43 @@
    "independent_eval",
    "error_reporting"
   ],
-  "conds": {}
+  "conds": {
+   "risk_framework": [
+    "other"
+   ],
+   "competency_eval": [
+    "other"
+   ],
+   "synthetic_data": [
+    "separate",
+    "validate"
+   ],
+   "postmarket_tradeoff": [
+    "plan"
+   ],
+   "supervisory_agents": [
+    "change_control",
+    "validate_supervisor"
+   ],
+   "escalation_errors": [
+    "after",
+    "separate"
+   ],
+   "median_clinician_comparator": [
+    "standard_floor"
+   ],
+   "no_care_comparator": [
+    "local"
+   ],
+   "postmarket_methods": [
+    "event_triggers",
+    "reporting"
+   ],
+   "voluntary_model_files": [
+    "fallback",
+    "resp"
+   ]
+  }
  },
  "tips": {
   "q": {
@@ -733,7 +769,494 @@
    "desc": "Stricter acceptance criteria and oversight for devices that act autonomously across steps (Q26)"
   }
  ],
- "conditions": {},
+ "conditions": {
+  "risk_framework": [
+   {
+    "key": "reversibility",
+    "label": "Add reversibility of harm as a risk factor"
+   },
+   {
+    "key": "real_oversight",
+    "label": "Credit human review and safeguards only when real"
+   },
+   {
+    "key": "traceability",
+    "label": "Add traceability of outputs to their sources"
+   },
+   {
+    "key": "detectability",
+    "label": "Add whether users can catch wrong outputs"
+   },
+   {
+    "key": "setting",
+    "label": "Weigh time pressure and the real setting of use"
+   },
+   {
+    "key": "autonomy",
+    "label": "Account for how much the system can do alone"
+   },
+   {
+    "key": "framework_use",
+    "label": "Keep the two axes as a simple starting guide"
+   },
+   {
+    "key": "broader_harms",
+    "label": "Count omissions and harms beyond a single wrong answer"
+   },
+   {
+    "key": "dependencies",
+    "label": "Account for outside models and services it relies on"
+   },
+   {
+    "key": "other",
+    "label": "Other conditions"
+   }
+  ],
+  "postmarket_methods": [
+   {
+    "key": "event_triggers",
+    "label": "Add event triggers on top of scheduled reviews"
+   },
+   {
+    "key": "outcomes",
+    "label": "Track patient outcomes, overrides, and near misses"
+   },
+   {
+    "key": "set_responses",
+    "label": "Tie each warning sign to a planned response"
+   },
+   {
+    "key": "reporting",
+    "label": "Open reporting channels and share results publicly"
+   },
+   {
+    "key": "records",
+    "label": "Keep records the device itself cannot alter"
+   },
+   {
+    "key": "targeted_sampling",
+    "label": "Focus clinician review on high risk cases"
+   },
+   {
+    "key": "risk_cadence",
+    "label": "Set monitoring frequency by risk"
+   },
+   {
+    "key": "manufacturer_duty",
+    "label": "Keep manufacturers responsible for monitoring"
+   },
+   {
+    "key": "other",
+    "label": "Other conditions"
+   }
+  ],
+  "directiveness_continuum": [
+   {
+    "key": "clear_limits",
+    "label": "Set and test clear limits on directive outputs"
+   },
+   {
+    "key": "other",
+    "label": "Other conditions"
+   }
+  ],
+  "confirmation_flex": [
+   {
+    "key": "scale_to_risk",
+    "label": "Require stronger confirmation for higher risk devices"
+   },
+   {
+    "key": "real_populations",
+    "label": "Test in real settings and intended populations"
+   },
+   {
+    "key": "other",
+    "label": "Other conditions"
+   }
+  ],
+  "median_clinician_comparator": [
+   {
+    "key": "specialists",
+    "label": "Use specialists as the reference for specialist tasks"
+   },
+   {
+    "key": "standard_floor",
+    "label": "Keep the standard of care as the safety floor"
+   },
+   {
+    "key": "measure_median",
+    "label": "Sample and prespecify the clinician comparator"
+   },
+   {
+    "key": "other",
+    "label": "Other conditions"
+   }
+  ],
+  "trajectory_risk": [
+   {
+    "key": "scope_drift",
+    "label": "Define conversation limits and detect drift"
+   },
+   {
+    "key": "long_use",
+    "label": "Test long conversations and use across sessions"
+   },
+   {
+    "key": "user_pressure",
+    "label": "Test how user pressure and emotion sway the device"
+   },
+   {
+    "key": "report_timing",
+    "label": "Report timing and changes across the conversation"
+   },
+   {
+    "key": "other",
+    "label": "Other conditions"
+   }
+  ],
+  "agentic_oversight": [
+   {
+    "key": "human_confirm",
+    "label": "Require human approval before irreversible actions"
+   },
+   {
+    "key": "audit_records",
+    "label": "Keep complete audit records of agent actions"
+   },
+   {
+    "key": "least_privilege",
+    "label": "Limit agents to declared tools and permissions"
+   },
+   {
+    "key": "stop_rollback",
+    "label": "Provide a way to stop or reverse the agent"
+   },
+   {
+    "key": "full_sequence",
+    "label": "Evaluate the whole action sequence and task"
+   },
+   {
+    "key": "authority_level",
+    "label": "Match oversight to the agent's authority to act"
+   },
+   {
+    "key": "outside_model",
+    "label": "Enforce safeguards outside the model's control"
+   },
+   {
+    "key": "not_device_alone",
+    "label": "Apply it only to functions that are devices"
+   },
+   {
+    "key": "other",
+    "label": "Other conditions"
+   }
+  ],
+  "supervisory_agents": [
+   {
+    "key": "validate_supervisor",
+    "label": "Validate the supervisor's own performance"
+   },
+   {
+    "key": "independent",
+    "label": "Build the supervisor independently from the device"
+   },
+   {
+    "key": "human_final",
+    "label": "Keep humans in charge of final judgments"
+   },
+   {
+    "key": "define_role",
+    "label": "Define and limit what the supervisor may do"
+   },
+   {
+    "key": "records",
+    "label": "Record what the supervisor saw and decided"
+   },
+   {
+    "key": "fail_safe",
+    "label": "Fail safe when the supervisor fails or is unsure"
+   },
+   {
+    "key": "change_control",
+    "label": "Revalidate the supervisor after every change"
+   },
+   {
+    "key": "responsibility",
+    "label": "Keep the deploying company responsible for safety"
+   },
+   {
+    "key": "other",
+    "label": "Other conditions"
+   }
+  ],
+  "competency_eval": [
+   {
+    "key": "benchmark_validity",
+    "label": "Show benchmarks are valid and set in advance"
+   },
+   {
+    "key": "deployed_system",
+    "label": "Test the complete deployed system and configuration"
+   },
+   {
+    "key": "new_elements",
+    "label": "Add new elements to the competency list"
+   },
+   {
+    "key": "hard_cases",
+    "label": "Test hard, missing, and adversarial inputs"
+   },
+   {
+    "key": "clinical_evidence",
+    "label": "Require clinical evidence for higher risk devices"
+   },
+   {
+    "key": "one_part",
+    "label": "Treat benchmarks as one part of the evidence"
+   },
+   {
+    "key": "failure_limits",
+    "label": "Set separate limits for each serious failure"
+   },
+   {
+    "key": "variability",
+    "label": "Report how results vary across repeated runs"
+   },
+   {
+    "key": "human_ai_team",
+    "label": "Evaluate clinicians and the AI together"
+   },
+   {
+    "key": "other",
+    "label": "Other conditions"
+   }
+  ],
+  "postmarket_tradeoff": [
+   {
+    "key": "low",
+    "label": "Exclude high risk, autonomous, or irreversible uses"
+   },
+   {
+    "key": "detect",
+    "label": "Prove monitoring catches failures before harm occurs"
+   },
+   {
+    "key": "enforce",
+    "label": "Make monitoring enforceable with rollback and suspension"
+   },
+   {
+    "key": "plan",
+    "label": "Set the monitoring plan and thresholds in advance"
+   },
+   {
+    "key": "indep",
+    "label": "Keep monitoring records independent and verifiable"
+   },
+   {
+    "key": "nosub",
+    "label": "Keep monitoring from replacing needed premarket evidence"
+   },
+   {
+    "key": "staged",
+    "label": "Start with limited, staged deployment"
+   },
+   {
+    "key": "other",
+    "label": "Other conditions"
+   }
+  ],
+  "flexible_change_control": [
+   {
+    "key": "rebench",
+    "label": "Retest safety against a locked benchmark after changes"
+   },
+   {
+    "key": "pin",
+    "label": "Pin model versions and block silent swaps"
+   },
+   {
+    "key": "bounds",
+    "label": "Set clear limits on which changes are allowed"
+   },
+   {
+    "key": "review",
+    "label": "Require FDA review for major or out of scope changes"
+   },
+   {
+    "key": "tier",
+    "label": "Sort changes by their risk and impact"
+   },
+   {
+    "key": "rollback",
+    "label": "Prespecify rollback and suspension for bad changes"
+   },
+   {
+    "key": "invariant",
+    "label": "Define safety properties that must never change"
+   },
+   {
+    "key": "other",
+    "label": "Other conditions"
+   }
+  ],
+  "synthetic_data": [
+   {
+    "key": "noreplace",
+    "label": "Supplement real patient data and never replace it"
+   },
+   {
+    "key": "separate",
+    "label": "Report synthetic and real results separately"
+   },
+   {
+    "key": "indep",
+    "label": "Use generators independent of the device's model"
+   },
+   {
+    "key": "disclose",
+    "label": "Disclose how the synthetic data was made"
+   },
+   {
+    "key": "subgroup",
+    "label": "Base subgroup claims on real patient data"
+   },
+   {
+    "key": "validate",
+    "label": "Check synthetic data against real world distributions"
+   },
+   {
+    "key": "other",
+    "label": "Other conditions"
+   }
+  ],
+  "voluntary_model_files": [
+   {
+    "key": "resp",
+    "label": "Keep the device maker responsible for final safety"
+   },
+   {
+    "key": "current",
+    "label": "Keep files current and tied to model versions"
+   },
+   {
+    "key": "contract",
+    "label": "Back files with supplier contracts and change notice"
+   },
+   {
+    "key": "fallback",
+    "label": "Set rules for when no file is available"
+   },
+   {
+    "key": "content",
+    "label": "Specify what the file must contain"
+   },
+   {
+    "key": "other",
+    "label": "Other conditions"
+   }
+  ],
+  "patient_facing_risk": [
+   {
+    "key": "noauto",
+    "label": "Do not treat patient facing as automatically higher risk"
+   },
+   {
+    "key": "safeguards",
+    "label": "Lower the risk when safeguards are shown to work"
+   },
+   {
+    "key": "action",
+    "label": "Judge risk by what the output leads patients to do"
+   },
+   {
+    "key": "human",
+    "label": "Add human review and fixed emergency escalation"
+   },
+   {
+    "key": "access",
+    "label": "Protect patients' access to information"
+   },
+   {
+    "key": "cantcheck",
+    "label": "Raise risk when patients cannot check the output"
+   },
+   {
+    "key": "inform",
+    "label": "Tell patients about uncertainty and limitations"
+   },
+   {
+    "key": "other",
+    "label": "Other conditions"
+   }
+  ],
+  "third_party": [
+   {
+    "key": "conflict",
+    "label": "Disclose conflicts and keep assessors independent"
+   },
+   {
+    "key": "multiple",
+    "label": "Allow multiple qualified bodies with published criteria"
+   },
+   {
+    "key": "roles",
+    "label": "Use third parties for test sets and adjudication"
+   },
+   {
+    "key": "access",
+    "label": "Keep it affordable for smaller developers"
+   },
+   {
+    "key": "optional",
+    "label": "Keep third party review optional"
+   },
+   {
+    "key": "other",
+    "label": "Other conditions"
+   }
+  ],
+  "escalation_errors": [
+   {
+    "key": "asym",
+    "label": "Set stricter limits for under escalation"
+   },
+   {
+    "key": "justify",
+    "label": "Justify the chosen balance for the deployment setting"
+   },
+   {
+    "key": "separate",
+    "label": "Report under and over escalation separately"
+   },
+   {
+    "key": "after",
+    "label": "Track what happens after the escalation"
+   },
+   {
+    "key": "other",
+    "label": "Other conditions"
+   }
+  ],
+  "no_care_comparator": [
+   {
+    "key": "standard",
+    "label": "Keep standard comparators where they apply"
+   },
+   {
+    "key": "local",
+    "label": "Base the comparator on documented local care"
+   },
+   {
+    "key": "justify",
+    "label": "Prespecify and justify the comparator choice"
+   },
+   {
+    "key": "other",
+    "label": "Other conditions"
+   }
+  ]
+ },
  "recs": [
   {
    "key": "risk_factors",
