@@ -171,7 +171,7 @@ footer p { margin: 0; }
       <span><i class="sw" style="background:#00848a"></i>Support</span>
       <span><i class="sw" style="background:#bbbbbb"></i>Support with conditions</span>
       <span><i class="sw" style="background:#111111"></i>Oppose</span>
-      <span>Share of comments that took a position. Select a segment to view comments</span>
+      <span id="posNote">Bar length shows how many comments gave a view on each proposal. Percentages are out of those comments. Select a segment to view comments</span>
     </div>
     <div class="chart" id="pos"></div>
   </section>
@@ -316,11 +316,13 @@ function renderPos() {
   const cwid = el.clientWidth || 900, aria = state.pinned.includes("ARIA") ? META.aria.pos || {} : null;
   if (state.posView === "all") {
     const pool = filtered(), W = Math.max(560, cwid), lw = Math.min(300, Math.round(W * .34)), nw = 130, aw = aria ? 150 : 0, bw = W - lw - nw - aw - 10, rh = 34;
+    const maxT = Math.max(1, ...props.map(p => stanceCounts(pool, p.key).total));
     props.forEach((p, i) => {
       const y = i * rh, n = stanceCounts(pool, p.key);
       out.push(`<text x="0" y="${y + 21}" font-size="14" font-weight="500" fill="#111111" ${ff}>${esc(p.label)}<title>${esc(p.desc)}</title></text>`);
-      if (n.total) stackedBar(lw, y + 6, bw, rh - 12, n, p.key, out, state.sel);
-      out.push(`<text x="${lw + bw + 8}" y="${y + 21}" font-size="12" fill="#555555" ${ff}>${n.total} took a position</text>`);
+      const len = n.total / maxT * bw;
+      if (n.total) stackedBar(lw, y + 6, len, rh - 12, n, p.key, out, state.sel);
+      out.push(`<text x="${lw + len + 8}" y="${y + 21}" font-size="12" fill="#555555" ${ff}>${n.total} of ${pool.length} comments</text>`);
       if (aria) { const v = aria[p.key]; const short = { support: "supports", conditional: "with conditions", oppose: "opposes" };
         out.push(`<rect x="${W - aw + 8}" y="${y + 8}" width="12" height="${rh - 16}" fill="${v ? SCOL[v] : "none"}" stroke="${v ? "none" : "#bbbbbb"}"></rect><text x="${W - aw + 26}" y="${y + 21}" font-size="12" font-weight="700" fill="#111111" ${ff}>ARIA ${v ? short[v] : "no position"}</text>`); }
     });
@@ -340,12 +342,15 @@ function renderPos() {
         const n = stanceCounts(c.pool, p.key);
         if (!n.total) { out.push(`<text x="${x}" y="${y + 22}" font-size="11" fill="#555555" ${ff}>None</text>`); return; }
         stackedBar(x, y + 8, w, rh - 22, n, p.key, out, null);
-        out.push(`<text x="${x}" y="${y + rh - 2}" font-size="10" fill="#555555" ${ff}>n=${n.total}</text>`);
+        out.push(`<text x="${x}" y="${y + rh - 2}" font-size="10" fill="#555555" ${ff}>${n.total} of ${c.pool.length}</text>`);
       });
     });
     el.innerHTML = `<svg viewBox="0 0 ${W} ${hh + props.length * rh}" width="100%">${out.join("")}</svg>`;
   }
   el.querySelectorAll(".seg").forEach(s => bindPick(s, () => toggleSel(s.dataset.key, null, "pos")));
+  document.getElementById("posNote").textContent = state.posView === "all"
+    ? "Bar length shows how many comments gave a view on each proposal. Percentages are out of those comments. Select a segment to view comments"
+    : "Percentages are out of the comments in each column that gave a view on the proposal.";
 }
 
 /* Top recommendations */
