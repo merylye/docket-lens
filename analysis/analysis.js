@@ -25,7 +25,8 @@
   const pc = (a, b) => b ? Math.round(100 * a / b) + "%" : "0%";
   const sbar = n => n.total ? `<div class="sbar" aria-hidden="true">${["support", "conditional", "oppose"].map(s => n[s] ? `<i style="width:${100 * n[s] / n.total}%;background:${COL[s]}"></i>` : "").join("")}</div>` : `<div class="sbar"></div>`;
   const lbar = (v, max) => `<div class="sbar" aria-hidden="true"><i style="width:${max ? 100 * v / max : 0}%;background:${COL.conditional}"></i></div>`;
-  const legend = `<div class="legend2"><span><i style="background:${COL.support}"></i>Support</span><span><i style="background:${COL.conditional}"></i>Support with conditions</span><span><i style="background:${COL.oppose}"></i>Oppose</span></div>`;
+  const legend = `<div class="legend2" style="margin-bottom:-4px"><span><i style="background:${COL.support}"></i>Support</span><span><i style="background:${COL.conditional}"></i>Support with conditions</span><span><i style="background:${COL.oppose}"></i>Oppose</span></div>`;
+  const defn = `<p class="note">Support with conditions means the comment accepts the proposal only if specific requirements are met. Select it to see the requirements.</p>`;
   const Q = p => { const m = p.desc.match(/\((Q[^)]*)\)\s*$/); return m ? m[1] : ""; };
   const condLabel = (k, g) => (condsOf(k).find(x => x.key === g) || {}).label || g;
 
@@ -73,7 +74,7 @@
     const catRows = Object.entries(cats).sort((a, b) => b[1] - a[1]);
     const gN = GROUPS.map(([g]) => [g, rows.filter(c => groupOf(c) === g).length]);
 
-    const DIS = META.dissent || {}, who = id => { const c = BYID[id]; return c ? `${esc(nameOf(c))}, ${esc(c.commenter_type)}` : ""; };
+    const DIS = META.dissent || {}, who = id => { const c = BYID[id]; return c ? `${esc(c.commenter_type)}, <a href="https://www.regulations.gov/comment/${esc(id)}" target="_blank" rel="noopener">read comment</a>` : ""; };
     const reasons = k => (DIS[k] || []).map(r => `<li><span>${esc(r.reason)}</span> <span class="note">(${who(r.id)})</span></li>`).join("");
     const contestedKeys = new Set(contested.map(x => x.p.key));
     const others = META.proposals.map(p => ({ p, n: counts(rows, p.key) })).filter(x => x.n.oppose && !contestedKeys.has(x.p.key)).sort((a, b) => b.n.oppose - a.n.oppose);
@@ -86,12 +87,13 @@
     const OQ = META.open_questions || [];
 
     document.getElementById("view-findings").innerHTML = `<div class="af">
+      <section class="intro"><p>This page summarizes the public comments on FDA's discussion paper. Each comment counts once, so the numbers show how many comments took a view, not how many people hold it. Most commenters build or deploy devices. Coding was done by AI and has not been checked by a person.</p></section>
       <section><h2>Commenters</h2><div class="cards"><div class="card" style="grid-column:1/-1">
         <p style="margin:0">Of the ${rows.length} comments, ${gN.map(([g, n], i) => `${esc(g).toLowerCase()} filed ${n}`).join(", ").replace(/, ([^,]*)$/, ", and $1")}. Industry here means device makers, drug makers, other private companies, and international industry.</p>
         <div class="cats">${catRows.map(([t, n]) => `<div class="row"><span class="lab">${esc(t)}</span>${lbar(n, rows.length)}<span class="num">${n}</span></div>`).join("")}</div>
-        <p class="note">Every count on this page treats each comment as one, whatever its length or who filed it. A view shared by many industry comments can look like consensus, so consensus rows also show industry and everyone else separately.</p>
+        <p class="note">Categories are as filed on Regulations.gov. Some comments are filed under a category that does not match their content, so these shares are approximate.</p><p class="note">Every count on this page treats each comment as one, whatever its length or who filed it. A view shared by many industry comments can look like consensus, so consensus rows also show industry and everyone else separately.</p>
       </div></div></section>
-      <section><h2>Points of consensus</h2>${legend}<div class="cards">
+      <section><h2>Points of consensus</h2>${legend}${defn}<div class="cards">
         <div class="card"><h3>Largely endorsed as written in the docket</h3>${endorsed.map(x => crow(x, "support")).join("") || '<p class="note">None at this threshold.</p>'}
           <p class="note">Share of comments that took a position and supported the proposal without conditions. Listed when it is at least ${T.endorse * 100}%.</p></div>
         <div class="card"><h3>Accepted with added conditions</h3>${condd.map(x => crow(x, "conditional")).join("") || '<p class="note">None at this threshold.</p>'}
@@ -138,7 +140,7 @@
       <article class="brief af">
         <div class="block"><p class="note">${esc(tip.title || Q(p))}</p><h2>${esc(p.label)}</h2>
           ${tip.quote ? `<p class="quote">“${esc(tip.quote)}”</p>` : ""}${tip.body ? `<p style="margin:0">${esc(tip.body)}</p>` : ""}</div>
-        <div class="block"><h3>Commenter positions</h3>${legend}
+        <div class="block"><h3>Commenter positions</h3>${legend}${defn}
           <div class="row"><span class="lab">All commenters</span>${sbar(n)}<span class="num">${n.total}</span></div>
           <p class="note">${n.total} of ${rows.length} comments took a position. ${n.support} supported, ${n.conditional} supported with conditions, and ${n.oppose} opposed.</p>
           <div style="display:flex;gap:16px;flex-wrap:wrap">${["support", "conditional", "oppose"].filter(s => n[s]).map(s => `<button class="go" data-go="${esc(p.key)}:${s}">${n[s]} ${s === "conditional" ? "with conditions" : s === "support" ? "supporting" : "opposing"}</button>`).join("")}</div></div>
