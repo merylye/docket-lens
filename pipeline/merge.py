@@ -85,6 +85,8 @@ PROPOSALS = [  # in docket question order
 
 CONDS = json.load(open(os.path.join(HERE, "conditions.json"))) if os.path.exists(os.path.join(HERE, "conditions.json")) else {"groups": {}, "map": {}, "aria": {}}
 
+DISSENT = json.load(open(os.path.join(HERE, "dissent.json"))) if os.path.exists(os.path.join(HERE, "dissent.json")) else {}
+
 out, unmapped = [], set()
 for cid, r in sorted(raw.items()):
     c = codes.get(cid)
@@ -131,6 +133,9 @@ meta = {
     "tips": json.load(open(os.path.join(HERE, "tooltips.json"))),
     "proposals": [{"key": k, "label": l, "desc": d} for k, l, d in PROPOSALS],
     "conditions": CONDS["groups"],
+    "dissent": DISSENT.get("dissent", {}),
+    "nopos": DISSENT.get("nopos", []),
+    "open_questions": DISSENT.get("open_questions", []),
     "recs": RECS["groups"],
     "method": f"{len(out)} posted comments read in full, including attachments, and coded against the codebook. "
               "A question counts as addressed when a comment discusses it substantively, cited or not. "

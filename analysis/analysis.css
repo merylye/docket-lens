@@ -44,3 +44,8 @@ header { padding-bottom: 0; }
 .bp .quote { margin: 0; padding-left: 12px; border-left: 3px solid var(--cyan); }
 .bp .block { display: grid; gap: 10px; }
 .bp .block h3 { margin: 0; font-size: 16px; font-weight: 500; }
+
+.af .sub { margin: -6px 0 2px; font-size: 12px; }
+.af ul.rs { margin: 0; padding-left: 18px; display: grid; gap: 6px; font-size: 14px; }
+.af .oth { display: grid; gap: 4px; }
+.af .cats { display: grid; gap: 4px; }

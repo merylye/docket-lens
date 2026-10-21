@@ -62,15 +62,44 @@
     const thMax = Math.max(1, ...themes.map(t => t.n));
     const qs = META.questions.map(q => ({ q, n: rows.filter(c => c.q_addr.includes(q.n)).length })).sort((a, b) => a.n - b.n).slice(0, 4);
 
+    const isInd = c => groupOf(c) === GROUPS[0][0];
+    const share = (rs, k, st) => { const n = counts(rs, k); return n.total ? pc(n[st], n.total) : "none"; };
+    const splitLine = (k, st) => `<div class="note sub">Industry ${share(rows.filter(isInd), k, st)} · Everyone else ${share(rows.filter(c => !isInd(c)), k, st)}</div>`;
+    const crow = (x, st) => row(x, 0, x.p.key + ":" + st, pc(x.n[st], x.n.total)) + splitLine(x.p.key, st);
+
+    const cats = {}; rows.forEach(c => cats[c.commenter_type] = (cats[c.commenter_type] || 0) + 1);
+    const catRows = Object.entries(cats).sort((a, b) => b[1] - a[1]);
+    const gN = GROUPS.map(([g]) => [g, rows.filter(c => groupOf(c) === g).length]);
+
+    const DIS = META.dissent || {}, who = id => { const c = BYID[id]; return c ? `${esc(nameOf(c))}, ${esc(c.commenter_type)}` : ""; };
+    const reasons = k => (DIS[k] || []).map(r => `<li><span>${esc(r.reason)}</span>${r.alternative ? `<span class="note"> Instead: ${esc(r.alternative)}.</span>` : ""} <span class="note">(${who(r.id)})</span></li>`).join("");
+    const contestedKeys = new Set(contested.map(x => x.p.key));
+    const others = META.proposals.map(p => ({ p, n: counts(rows, p.key) })).filter(x => x.n.oppose && !contestedKeys.has(x.p.key)).sort((a, b) => b.n.oppose - a.n.oppose);
+    const diverge = [];
+    META.proposals.forEach(p => { const all = counts(rows, p.key); if (contestedKeys.has(p.key) || !all.total) return;
+      GROUPS.forEach(([g]) => { const n = counts(rows.filter(c => groupOf(c) === g), p.key); if (n.total >= 4 && n.oppose >= 2 && n.oppose / n.total >= 0.3) diverge.push({ p, g, n, all }); }); });
+
+    const NP = (META.nopos || []).filter(x => x.kind === "outside_framing" || x.kind === "general_objection");
+    const npKinds = {}; (META.nopos || []).forEach(x => npKinds[x.kind] = (npKinds[x.kind] || 0) + 1);
+    const OQ = META.open_questions || [];
+
     document.getElementById("view-findings").innerHTML = `<div class="af">
+      <section><h2>Commenters</h2><div class="cards"><div class="card" style="grid-column:1/-1">
+        <p style="margin:0">Of the ${rows.length} comments, ${gN.map(([g, n], i) => `${esc(g).toLowerCase()} filed ${n}`).join(", ").replace(/, ([^,]*)$/, ", and $1")}. Industry here means device makers, drug makers, other private companies, and international industry.</p>
+        <div class="cats">${catRows.map(([t, n]) => `<div class="row"><span class="lab">${esc(t)}</span>${lbar(n, rows.length)}<span class="num">${n}</span></div>`).join("")}</div>
+        <p class="note">Every count on this page treats each comment as one, whatever its length or who filed it. A view shared by many industry comments can look like consensus, so consensus rows also show industry and everyone else separately.</p>
+      </div></div></section>
       <section><h2>Points of consensus</h2>${legend}<div class="cards">
-        <div class="card"><h3>Largely endorsed as written in the docket</h3>${endorsed.map(x => row(x, x.n.support, x.p.key + ":support", pc(x.n.support, x.n.total))).join("") || '<p class="note">None at this threshold.</p>'}
+        <div class="card"><h3>Largely endorsed as written in the docket</h3>${endorsed.map(x => crow(x, "support")).join("") || '<p class="note">None at this threshold.</p>'}
           <p class="note">Share of comments that took a position and supported the proposal without conditions. Listed when it is at least ${T.endorse * 100}%.</p></div>
-        <div class="card"><h3>Accepted with added conditions</h3>${condd.map(x => row(x, x.n.conditional, x.p.key + ":conditional", pc(x.n.conditional, x.n.total))).join("") || '<p class="note">None at this threshold.</p>'}
+        <div class="card"><h3>Accepted with added conditions</h3>${condd.map(x => crow(x, "conditional")).join("") || '<p class="note">None at this threshold.</p>'}
           <p class="note">Select a bar to see added conditions. Listed when at least ${T.cond * 100}% supported with conditions.</p></div>
       </div></section>
-      <section><h2>Points of contention</h2><p class="note">Proposals where at least ${T.contest * 100}% of comments that took a position opposed it.</p><div class="cards">
-        ${split || '<p class="note">None at this threshold.</p>'}
+      <section><h2>Points of dissent</h2><p class="note">Proposals where at least ${T.contest * 100}% of comments that took a position opposed it, with each opposing comment's reason.</p><div class="cards">
+        ${contested.map(x => { const lines = GROUPS.map(([g]) => { const n = counts(rows.filter(c => groupOf(c) === g), x.p.key); return n.total ? `<div class="row"><span class="lab">${esc(g)}</span>${sbar(n)}<span class="num">${n.oppose} of ${n.total}</span></div>` : ""; }).join("");
+          return `<div class="card"><h3>${esc(x.p.label)}</h3><div class="row"><span class="lab"><b>All commenters</b></span>${sbar(x.n)}<span class="num">${x.n.oppose} of ${x.n.total}</span></div>${lines}<p class="note">Comments opposing, out of those in each group that took a position.</p>${reasons(x.p.key) ? `<p class="note">Reasons given</p><ul class="rs">${reasons(x.p.key)}</ul>` : ""}<button class="go" data-go="${esc(x.p.key)}:oppose">Read the ${x.n.oppose} opposing comments</button></div>`; }).join("") || '<p class="note">None at this threshold.</p>'}
+        ${diverge.length ? `<div class="card"><h3>Opposition within one group</h3>${diverge.map(d => `<div class="row click" data-go="${esc(d.p.key)}:oppose" tabindex="0" role="button"><span class="lab">${esc(d.p.label)}, ${esc(d.g)}</span>${sbar(d.n)}<span class="num">${d.n.oppose} of ${d.n.total}</span></div>`).join("")}<p class="note">Proposals below the threshold overall where at least 30% of one group opposed, with at least 2 opposing and 4 taking a position.</p></div>` : ""}
+        ${others.length ? `<div class="card" style="grid-column:1/-1"><h3>Opposition on other proposals</h3>${others.map(x => `<div class="oth"><button class="go" data-go="${esc(x.p.key)}:oppose">${esc(x.p.label)}, ${x.n.oppose} of ${x.n.total}</button>${reasons(x.p.key) ? `<ul class="rs">${reasons(x.p.key)}</ul>` : ""}</div>`).join("")}</div>` : ""}
       </div></section>
       <section><h2>Top added conditions</h2><div class="cards"><div class="card" style="grid-column:1/-1">
         ${top.map(t => `<div class="row click" data-go="${esc(t.p.key)}:conditional:${esc(t.g)}" tabindex="0" role="button" style="grid-template-columns:minmax(0,1fr) minmax(0,1.3fr) minmax(70px,.6fr) 70px"><span class="lab">${esc(t.p.label)}</span><span>${esc(condLabel(t.p.key, t.g))}</span>${lbar(t.n, topMax)}<span class="num">${t.n} of ${t.of}</span></div>`).join("")}
@@ -78,7 +107,15 @@
       <section><h2>Topics outside the docket questions</h2><div class="cards">
         <div class="card"><h3>Additional themes</h3>${themes.map(t => `<div class="row click" data-theme="${esc(t.key)}" tabindex="0" role="button"><span class="lab">${esc(t.key)}</span>${lbar(t.n, thMax)}<span class="num">${t.n}</span></div>`).join("")}<p class="note">Themes none of FDA's 26 questions asked about. Number of comments raising each.</p></div>
         <div class="card"><h3>Least addressed questions</h3>${qs.map(x => `<div class="row click" data-q="${x.q.n}" tabindex="0" role="button"><span class="lab">Q${x.q.n} ${esc(x.q.label)}</span>${lbar(x.n, rows.length)}<span class="num">${pc(x.n, rows.length)}</span></div>`).join("")}<p class="note">Share of all comments that substantively addressed the question.</p></div>
+        ${(META.nopos || []).length ? `<div class="card" style="grid-column:1/-1"><h3>Comments outside the 17 proposals</h3><p class="note">${(META.nopos || []).length} comments took no position on any proposal. These ${NP.length} raised a concern or objection the proposals do not cover.</p><ul class="rs">${NP.map(x => `<li><span>${esc(x.point)}</span> <span class="note">(${who(x.id)})</span></li>`).join("")}</ul></div>` : ""}
       </div></section>
+      ${OQ.length ? `<section><h2>Open questions</h2><div class="cards">${OQ.map(q => `<div class="card"><h3>${esc(q.question)}</h3>${(q.sides || []).map(sd => `<div class="oth"><span>${esc(sd.label)}</span> <span class="note">${sd.ids.length} comment${sd.ids.length === 1 ? "" : "s"}</span></div>`).join("")}${q.go ? `<button class="go" data-go="${esc(q.go)}">Read the comments</button>` : ""}</div>`).join("")}</div></section>` : ""}
+      <section><h2>Methods</h2><div class="card"><ul class="rs">
+        <li>Comments were read in full, including attachments, and coded by Claude Opus 5.5 against written codebooks. Separate model instances checked uncertain codes and the condition groups. No codes have been checked by a person yet.</li>
+        <li>Each comment counts once. Duplicate filings of the same document are counted once.</li>
+        <li>"Support with conditions" includes comments that endorsed a proposal while listing requirements they treated as necessary. Where coders disagreed, the code leans toward support with conditions or no position.</li>
+        <li>Reasons for opposition and summaries of other comments are short paraphrases. Check a comment's original text before quoting or citing it.</li>
+      </ul></div></section>
       ${footer()}</div>`;
     bind(document.getElementById("view-findings"));
   }
