@@ -159,6 +159,30 @@ footer p { margin: 0; }
 
 <main class="split">
 <div class="left">
+  <section id="posSection">
+    <h2>Position distribution</h2>
+    <div class="adder">
+      <span id="posView" class="group">
+        <button type="button" class="pill small" data-v="all" aria-pressed="true">All commenters</button>
+        <button type="button" class="pill small" data-v="cat" aria-pressed="false">By category</button>
+      </span>
+    </div>
+    <div class="legend">
+      <span><i class="sw" style="background:#00848a"></i>Support</span>
+      <span><i class="sw" style="background:#bbbbbb"></i>Support with conditions</span>
+      <span><i class="sw" style="background:#111111"></i>Oppose</span>
+      <span>Share of comments that took a position. Select a segment to view comments</span>
+    </div>
+    <div class="chart" id="pos"></div>
+  </section>
+
+  <section id="recSection">
+    <h2>Top recommendations</h2>
+    <div class="legend" id="recLegend"></div>
+    <div class="chart" id="recs"></div>
+    <button type="button" class="pill small" id="recMore" style="margin-top:10px">Show all recommendations</button>
+  </section>
+
   <section>
     <h2>Overview</h2>
     <div class="panel">
@@ -228,7 +252,7 @@ footer p { margin: 0; }
 </div>
 
 <script>
-const state = { sort: "latest", lens: "questions", weight: "count", types: new Set(), sel: null, cat: null, q: "", all: false, pinned: [], hidden: new Set(), gcols: "questions" };
+const state = { posView: "all", recAll: false, sort: "latest", lens: "questions", weight: "count", types: new Set(), sel: null, cat: null, q: "", all: false, pinned: [], hidden: new Set(), gcols: "questions" };
 let D = null, META = null, BYID = {};
 
 const esc = s => String(s ?? "").replace(/[&<>"']/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
@@ -240,9 +264,14 @@ function sectionOf(n) { return META.questions.find(q => q.n === n).section; }
 function itemsFor(c, lens) {
   if (lens === "questions") return c.q_addr.map(String);
   if (lens === "sections") return [...new Set(c.q_addr.map(sectionOf))];
+  if (lens === "pos") return Object.entries(c.pos || {}).filter(([, v]) => v).map(([k, v]) => k + ":" + v);
+  if (lens === "recs") return c.recs || [];
   return c.topics;
 }
+const STANCE = { support: "support", conditional: "support with conditions", oppose: "oppose" };
 function catalog(lens) {
+  if (lens === "pos") return META.proposals.flatMap(p => Object.keys(STANCE).map(s => ({ key: p.key + ":" + s, label: `${STANCE[s]} on ${p.label.toLowerCase()}` })));
+  if (lens === "recs") return META.recs.map(x => ({ key: x.key, label: x.label }));
   if (lens === "questions") return META.questions.map(q => ({ key: String(q.n), label: "Q" + q.n, desc: q.label, group: q.section }));
   if (lens === "sections") return META.sections.map(s => ({ key: s.key, label: s.label, desc: "Section " + s.key }));
   return META.topics.map(t => ({ key: t.key, label: t.key, desc: "" }));
@@ -251,6 +280,8 @@ function ariaItems(lens) {
   const a = META.aria;
   if (lens === "questions") return a.q_addr.map(String);
   if (lens === "sections") return [...new Set(a.q_addr.map(sectionOf))];
+  if (lens === "pos") return Object.entries(a.pos || {}).filter(([, v]) => v).map(([k, v]) => k + ":" + v);
+  if (lens === "recs") return a.recs || [];
   return a.topics;
 }
 const w = () => 1;
@@ -260,6 +291,83 @@ function shareOf(pool, key, lens) {
   const total = pool.reduce((s, c) => s + w(c), 0);
   if (!total) return null;
   return pool.filter(c => itemsFor(c, lens).includes(key)).reduce((s, c) => s + w(c), 0) / total;
+}
+
+/* Position distribution */
+const SCOL = { support: "#00848a", conditional: "#bbbbbb", oppose: "#111111" };
+function stanceCounts(pool, key) {
+  const n = { support: 0, conditional: 0, oppose: 0 };
+  pool.forEach(c => { const v = (c.pos || {})[key]; if (v) n[v]++; });
+  n.total = n.support + n.conditional + n.oppose; return n;
+}
+const ff = 'font-family="Fira Sans, Arial, sans-serif"';
+function stackedBar(x, y, w, h, n, key, out, sel) {
+  let xx = x;
+  ["support", "conditional", "oppose"].forEach(s => {
+    if (!n[s]) return;
+    const ww = n[s] / n.total * w, on = sel && sel.lens === "pos" && sel.key === key + ":" + s;
+    out.push(`<rect class="seg" data-key="${key}:${s}" tabindex="0" role="button" x="${xx}" y="${y}" width="${Math.max(ww - 1, 1)}" height="${h}" fill="${SCOL[s]}" stroke="${on ? "#00dfe9" : "none"}" stroke-width="3" style="cursor:pointer"><title>${n[s]} of ${n.total} ${STANCE[s]}</title></rect>`);
+    if (ww > 30) out.push(`<text x="${xx + ww / 2}" y="${y + h / 2 + 4}" font-size="12" text-anchor="middle" fill="${s === "conditional" ? "#111111" : "#ffffff"}" ${ff} style="pointer-events:none">${Math.round(n[s] / n.total * 100)}%</text>`);
+    xx += ww;
+  });
+}
+function renderPos() {
+  const el = document.getElementById("pos"), out = [], props = META.proposals;
+  const cwid = el.clientWidth || 900, aria = state.pinned.includes("ARIA") ? META.aria.pos || {} : null;
+  if (state.posView === "all") {
+    const pool = filtered(), W = Math.max(560, cwid), lw = Math.min(300, Math.round(W * .34)), nw = 70, bw = W - lw - nw - (aria ? 120 : 10), rh = 34;
+    props.forEach((p, i) => {
+      const y = i * rh, n = stanceCounts(pool, p.key);
+      out.push(`<text x="0" y="${y + 21}" font-size="14" font-weight="500" fill="#111111" ${ff}>${esc(p.label)}<title>${esc(p.desc)}</title></text>`);
+      if (n.total) stackedBar(lw, y + 6, bw, rh - 12, n, p.key, out, state.sel);
+      out.push(`<text x="${lw + bw + 8}" y="${y + 21}" font-size="12" fill="#555555" ${ff}>${n.total} took a position</text>`);
+      if (aria) { const v = aria[p.key]; out.push(`<text x="${W - 4}" y="${y + 21}" font-size="12" font-weight="700" text-anchor="end" fill="${v ? SCOL[v] === "#bbbbbb" ? "#555555" : SCOL[v] : "#555555"}" ${ff}>ARIA: ${v ? STANCE[v] : "no position"}</text>`); }
+    });
+    el.innerHTML = `<svg viewBox="0 0 ${W} ${props.length * rh}" width="100%">${out.join("")}</svg>`;
+  } else {
+    let cats = state.types.size ? [...state.types] : [...new Set(readable().map(c => c.commenter_type))].map(t => [t, readable().filter(c => c.commenter_type === t).length]).sort((a, b) => b[1] - a[1]).slice(0, 4).map(x => x[0]);
+    const cols = [{ label: "All", pool: filtered() }, ...cats.map(t => ({ label: t, pool: readable().filter(c => c.commenter_type === t) }))];
+    if (aria) cols.push({ label: "ARIA", aria: true });
+    const W = Math.max(640, cwid), lw = 230, cw = (W - lw) / cols.length, rh = 40, hh = 34;
+    cols.forEach((c, j) => out.push(`<text x="${lw + j * cw + 4}" y="14" font-size="12" font-weight="700" fill="#111111" ${ff}>${esc(c.label.replace(" (non-device)", ""))}</text>${c.pool ? `<text x="${lw + j * cw + 4}" y="28" font-size="11" fill="#555555" ${ff}>${c.pool.length} comments</text>` : ""}`));
+    props.forEach((p, i) => {
+      const y = hh + i * rh;
+      out.push(`<text x="0" y="${y + 22}" font-size="13" font-weight="500" fill="#111111" ${ff}>${esc(p.label)}<title>${esc(p.desc)}</title></text>`);
+      cols.forEach((c, j) => {
+        const x = lw + j * cw + 4, w = cw - 12;
+        if (c.aria) { const v = aria[p.key]; out.push(v ? `<rect x="${x}" y="${y + 8}" width="${w}" height="${rh - 16}" fill="${SCOL[v]}"><title>ARIA: ${STANCE[v]}</title></rect>` : `<text x="${x}" y="${y + 22}" font-size="11" fill="#555555" ${ff}>No position</text>`); return; }
+        const n = stanceCounts(c.pool, p.key);
+        if (!n.total) { out.push(`<text x="${x}" y="${y + 22}" font-size="11" fill="#555555" ${ff}>None</text>`); return; }
+        stackedBar(x, y + 8, w * Math.min(1, .35 + n.total / 20), rh - 22, n, p.key, out, null);
+        out.push(`<text x="${x}" y="${y + rh - 2}" font-size="10" fill="#555555" ${ff}>n=${n.total}</text>`);
+      });
+    });
+    el.innerHTML = `<svg viewBox="0 0 ${W} ${hh + props.length * rh}" width="100%">${out.join("")}</svg>`;
+  }
+  el.querySelectorAll(".seg").forEach(s => bindPick(s, () => toggleSel(s.dataset.key, null, "pos")));
+}
+
+/* Top recommendations */
+function renderRecs() {
+  const el = document.getElementById("recs"), pool = filtered(), out = [];
+  const cats = [...new Set(readable().map(c => c.commenter_type))].map(t => [t, readable().filter(c => c.commenter_type === t).length]).sort((a, b) => b[1] - a[1]).slice(0, 4).map(x => x[0]);
+  const DOT = ["#111111", "#00848a", "#7fb9bc", "#bbbbbb"], aria = state.pinned.includes("ARIA") ? new Set(META.aria.recs || []) : null;
+  let rows = META.recs.map(r => { const hit = pool.filter(c => (c.recs || []).includes(r.key)); return { ...r, n: hit.length, by: cats.map(t => hit.filter(c => c.commenter_type === t).length), other: hit.filter(c => !cats.includes(c.commenter_type)).length }; }).filter(r => r.n > 0 || (aria && aria.has(r.key))).sort((a, b) => b.n - a.n);
+  const total = rows.length; if (!state.recAll) rows = rows.slice(0, 15);
+  const W = Math.max(560, el.clientWidth || 900), lw = Math.min(360, Math.round(W * .42)), bw = W - lw - 60, rh = 30, max = Math.max(1, ...rows.map(r => r.n));
+  rows.forEach((r, i) => {
+    const y = i * rh, on = state.sel && state.sel.lens === "recs" && state.sel.key === r.key;
+    out.push(`<g class="row${on ? " on" : ""}" data-key="${esc(r.key)}" tabindex="0" role="button" aria-label="${esc(r.label)}: ${r.n} comments">
+      <rect class="hit" x="0" y="${y}" width="${W}" height="${rh}" fill="transparent"></rect>
+      <text x="0" y="${y + 20}" font-size="14" fill="#111111" ${ff}>${aria && aria.has(r.key) ? '<tspan font-weight="700" fill="#00848a">ARIA · </tspan>' : ""}${esc(r.label)}<title>${esc(r.label)}</title></text>`);
+    let x = lw;
+    [...r.by, r.other].forEach((v, j) => { if (!v) return; const ww = v / max * bw; out.push(`<rect x="${x}" y="${y + 8}" width="${ww}" height="${rh - 16}" fill="${j < 4 ? DOT[j] : "#e6e6e6"}" stroke="${on ? "#00dfe9" : "none"}" stroke-width="2"><title>${j < 4 ? cats[j] : "Other categories"}: ${v}</title></rect>`); x += ww; });
+    out.push(`<text x="${x + 8}" y="${y + 20}" font-size="13" fill="#111111" ${ff} style="font-variant-numeric:tabular-nums">${r.n}</text></g>`);
+  });
+  el.innerHTML = rows.length ? `<svg viewBox="0 0 ${W} ${rows.length * rh}" width="100%">${out.join("")}</svg>` : `<p class="empty">No recommendations in this selection.</p>`;
+  el.querySelectorAll(".row").forEach(g => bindPick(g, () => toggleSel(g.dataset.key, null, "recs")));
+  document.getElementById("recLegend").innerHTML = cats.map((t, j) => `<span><i class="sw" style="background:${DOT[j]}"></i>${esc(t)}</span>`).join("") + `<span><i class="sw" style="background:#e6e6e6"></i>Other categories</span><span>Number of comments making each recommendation. Select a row to view comments</span>`;
+  const more = document.getElementById("recMore"); more.hidden = total <= 15; more.textContent = state.recAll ? "Show top 15" : `Show all ${total} recommendations`;
 }
 
 /* Main chart */
@@ -479,7 +587,7 @@ function renderControls() {
   document.querySelectorAll("#catMenu input").forEach(i => i.checked = state.types.has(i.dataset.v));
   document.querySelector("#catDD summary").textContent = state.types.size === 0 ? "All categories" : state.types.size === 1 ? [...state.types][0] : `${state.types.size} categories`;
 }
-function render() { renderControls(); renderMain(); renderGrid(); renderTypes(); renderTable(); renderAddMenu(); }
+function render() { renderControls(); renderPos(); renderRecs(); renderMain(); renderGrid(); renderTypes(); renderTable(); renderAddMenu(); }
 
 function init() {
   D.forEach(c => BYID[c.id] = c);
@@ -493,6 +601,8 @@ function init() {
   document.getElementById("sort").addEventListener("change", e => { state.sort = e.target.value; state.all = false; renderTable(); document.getElementById("side").scrollTo({ top: 0 }); });
   document.getElementById("clear").onclick = () => { state.sel = null; state.cat = null; state.types.clear(); render(); };
   document.getElementById("more").onclick = () => { state.all = true; renderTable(); };
+  document.querySelectorAll("#posView .pill").forEach(b => b.onclick = () => { state.posView = b.dataset.v; document.querySelectorAll("#posView .pill").forEach(x => x.setAttribute("aria-pressed", String(x.dataset.v === state.posView))); renderPos(); });
+  document.getElementById("recMore").onclick = () => { state.recAll = !state.recAll; renderRecs(); };
   document.querySelectorAll("#gcols .pill").forEach(b => b.onclick = () => { state.gcols = b.dataset.v; render(); });
   document.getElementById("addSearch").addEventListener("input", renderAddMenu);
   document.addEventListener("click", e => document.querySelectorAll(".dd[open]").forEach(d => { if (!d.contains(e.target)) d.open = false; }));
@@ -509,7 +619,7 @@ function init() {
     side.style.maxHeight = Math.max(240, window.innerHeight - top - 12) + "px";
   };
   window.addEventListener("scroll", fitSide, { passive: true }); window.addEventListener("resize", fitSide); fitSide();
-  render(); fitTitle(); let rt; window.addEventListener("resize", () => { fitTitle(); clearTimeout(rt); rt = setTimeout(() => { renderMain(); renderGrid(); }, 150); });
+  render(); fitTitle(); let rt; window.addEventListener("resize", () => { fitTitle(); clearTimeout(rt); rt = setTimeout(() => { renderPos(); renderRecs(); renderMain(); renderGrid(); }, 150); });
   if (document.fonts) document.fonts.ready.then(() => { fitTitle(); fitSide(); });
   requestAnimationFrame(fitSide);
 }

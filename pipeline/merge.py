@@ -51,6 +51,20 @@ for line in open(os.path.join(HERE, "codebook.md")):
 raw = {r["id"]: r for r in json.load(open(os.path.join(HERE, "raw", "comments.json")))}
 codes = {r["id"]: r for f in sorted(glob.glob(os.path.join(HERE, "codes", "*.json"))) for r in json.load(open(f))}
 aria = json.load(open(os.path.join(HERE, "aria.json")))
+codes2 = {r["id"]: r for f in sorted(glob.glob(os.path.join(HERE, "codes2", "*.json"))) for r in json.load(open(f))}
+recfile = os.path.join(HERE, "recommendations.json")
+RECS = json.load(open(recfile)) if os.path.exists(recfile) else {"groups": [], "map": {}}
+PROPOSALS = [
+    ("risk_framework", "Two-axis risk framework", "FDA's framework rating risk by device activity and the consequence of relying on an incorrect output (Q1)"),
+    ("competency_eval", "Benchmarks plus clinical confirmation", "Competency-based premarket evaluation: device benchmarking followed by clinical confirmation (Q7, Q9)"),
+    ("confirmation_flex", "Confirmation without a prospective study", "Clinical confirmation that does not always require a prospective clinical study (Q11)"),
+    ("synthetic_data", "Synthetic data in evaluation", "Using synthetic data to supplement real-world data (Q12, Q13)"),
+    ("third_party", "Independent third-party evaluation", "Involving independent third parties in benchmarking or clinical confirmation (Q16)"),
+    ("postmarket_tradeoff", "Less premarket, more postmarket", "Accepting more premarket uncertainty in exchange for stronger postmarket monitoring (Q18)"),
+    ("supervisory_agents", "AI monitoring AI after release", "Machine-based supervisory agents for postmarket monitoring (Q20)"),
+    ("flexible_change_control", "Flexible change control", "Adapting PCCPs or other change control for modifications that cannot be fully prespecified (Q22, Q23)"),
+    ("voluntary_model_files", "Voluntary foundation model disclosure", "Relying on voluntary Foundation Model Master Files from model developers (Q25)"),
+]
 
 out, unmapped = [], set()
 for cid, r in sorted(raw.items()):
@@ -69,9 +83,13 @@ for cid, r in sorted(raw.items()):
         "topics": topics, "tags": tags, "summary": c.get("summary") or "",
         "words": c.get("words"), "pages": c.get("pages") or None,
         "posted": r["posted"], "received": r["received"], "unreadable": bool(c.get("unreadable")),
+        "pos": {k: v for k, v in (codes2.get(cid, {}).get("positions") or {}).items() if v},
+        "recs": RECS["map"].get(cid, []),
     })
 
 aria["topics"] = sorted({t for t in map(topic_for, aria.get("tags", [])) if t})
+aria["pos"] = {k: v for k, v in (aria.get("positions") or {}).items() if v}
+aria["recs"] = RECS["map"].get("ARIA", [])
 used = {t for row in out for t in row["topics"]} | set(aria["topics"])
 meta = {
     "updated": datetime.datetime.now(datetime.timezone.utc).isoformat(),
@@ -79,6 +97,8 @@ meta = {
     "sections": [{"key": s, "label": label} for s, label, _ in SECTIONS],
     "topics": [{"key": name} for name, _ in TOPICS if name in used] + ([{"key": "Other"}] if "Other" in used else []),
     "aria": aria,
+    "proposals": [{"key": k, "label": l, "desc": d} for k, l, d in PROPOSALS],
+    "recs": RECS["groups"],
     "method": f"{len(out)} posted comments read in full, including attachments, and coded against the codebook. "
               "A question counts as addressed when a comment discusses it substantively, cited or not. "
               "Comment types come from Regulations.gov; those with no category were assigned from content and are marked inferred.",

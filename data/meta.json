@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-20T20:22:44.998021+00:00",
+ "updated": "2026-10-21T09:17:33.160386+00:00",
  "questions": [
   {
    "n": 1,
@@ -263,12 +263,97 @@
   ],
   "pages": 12,
   "summary": "Risk depends on how people come to use and rely on conversational AI over time; recommends trajectory testing, care-connection outcomes, simulation standards, postmarket reassessment, and independent evaluation.",
+  "positions": {
+   "risk_framework": "conditional",
+   "competency_eval": "conditional",
+   "confirmation_flex": "conditional",
+   "synthetic_data": "conditional",
+   "third_party": "support",
+   "postmarket_tradeoff": "conditional",
+   "supervisory_agents": "conditional",
+   "flexible_change_control": "conditional",
+   "voluntary_model_files": "oppose"
+  },
+  "recommendations": [
+   "Add anticipated patterns of use as a risk factor",
+   "Test devices across realistic multi-turn conversations",
+   "Require longer premarket studies for heavily used devices",
+   "Require evidence that users understand responses, not just disclaimers",
+   "Report under- and over-escalation and whether referrals reach care",
+   "Track changes in users' help-seeking from people and professionals",
+   "Validate synthetic users against data from real users",
+   "Report synthetic and real-user results separately",
+   "Require a postmarket study when premarket evidence is reduced",
+   "Retest against the premarket baseline when the model changes",
+   "Require independent evaluation of patient-facing conversational devices",
+   "Clarify adverse-event reporting for gradual conversational harms"
+  ],
   "topics": [
    "Equity, access, and disability",
    "Privacy and consent",
    "Reliance, sycophancy, and affective harms",
    "Transparency and public participation"
-  ]
+  ],
+  "pos": {
+   "risk_framework": "conditional",
+   "competency_eval": "conditional",
+   "confirmation_flex": "conditional",
+   "synthetic_data": "conditional",
+   "third_party": "support",
+   "postmarket_tradeoff": "conditional",
+   "supervisory_agents": "conditional",
+   "flexible_change_control": "conditional",
+   "voluntary_model_files": "oppose"
+  },
+  "recs": []
  },
+ "proposals": [
+  {
+   "key": "risk_framework",
+   "label": "Two-axis risk framework",
+   "desc": "FDA's framework rating risk by device activity and the consequence of relying on an incorrect output (Q1)"
+  },
+  {
+   "key": "competency_eval",
+   "label": "Benchmarks plus clinical confirmation",
+   "desc": "Competency-based premarket evaluation: device benchmarking followed by clinical confirmation (Q7, Q9)"
+  },
+  {
+   "key": "confirmation_flex",
+   "label": "Confirmation without a prospective study",
+   "desc": "Clinical confirmation that does not always require a prospective clinical study (Q11)"
+  },
+  {
+   "key": "synthetic_data",
+   "label": "Synthetic data in evaluation",
+   "desc": "Using synthetic data to supplement real-world data (Q12, Q13)"
+  },
+  {
+   "key": "third_party",
+   "label": "Independent third-party evaluation",
+   "desc": "Involving independent third parties in benchmarking or clinical confirmation (Q16)"
+  },
+  {
+   "key": "postmarket_tradeoff",
+   "label": "Less premarket, more postmarket",
+   "desc": "Accepting more premarket uncertainty in exchange for stronger postmarket monitoring (Q18)"
+  },
+  {
+   "key": "supervisory_agents",
+   "label": "AI monitoring AI after release",
+   "desc": "Machine-based supervisory agents for postmarket monitoring (Q20)"
+  },
+  {
+   "key": "flexible_change_control",
+   "label": "Flexible change control",
+   "desc": "Adapting PCCPs or other change control for modifications that cannot be fully prespecified (Q22, Q23)"
+  },
+  {
+   "key": "voluntary_model_files",
+   "label": "Voluntary foundation model disclosure",
+   "desc": "Relying on voluntary Foundation Model Master Files from model developers (Q25)"
+  }
+ ],
+ "recs": [],
  "method": "129 posted comments read in full, including attachments, and coded against the codebook. A question counts as addressed when a comment discusses it substantively, cited or not. Comment types come from Regulations.gov; those with no category were assigned from content and are marked inferred."
 }
