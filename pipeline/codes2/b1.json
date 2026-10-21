@@ -183,7 +183,7 @@
    "competency_eval": "conditional",
    "confirmation_flex": "conditional",
    "synthetic_data": null,
-   "median_clinician_comparator": "oppose",
+   "median_clinician_comparator": null,
    "no_care_comparator": "oppose",
    "third_party": null,
    "postmarket_tradeoff": "oppose",

@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-21T20:20:56.875613+00:00",
+ "updated": "2026-10-21T20:24:23.803970+00:00",
  "questions": [
   {
    "n": 1,
@@ -1274,11 +1274,6 @@
    {
     "id": "FDA-2026-N-7874-0076",
     "reason": "A median clinician comparator would normalize existing gaps in care as an acceptable ceiling",
-    "alternative": ""
-   },
-   {
-    "id": "FDA-2026-N-7874-0086",
-    "reason": "Understaffed practice as a comparator can make a product appear beneficial",
     "alternative": ""
    }
   ],

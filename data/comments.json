@@ -5419,7 +5419,6 @@
    "escalation_errors": "support",
    "competency_eval": "conditional",
    "confirmation_flex": "conditional",
-   "median_clinician_comparator": "oppose",
    "no_care_comparator": "oppose",
    "postmarket_tradeoff": "oppose",
    "postmarket_methods": "conditional",
