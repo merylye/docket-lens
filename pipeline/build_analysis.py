@@ -36,6 +36,8 @@ s = swap(s, "</body>", '<script src="analysis.js"></script>\n</body>')
 s = swap(s, '      <button type="button" class="pill" data-v="topics" aria-pressed="false">Additional themes</button>\n', '')
 s = swap(s, '</div>\n      <div class="facet"><span>Additional themes</span>${themes.length ? `<span>${themes.map(esc).join(" · ")}</span>` : `<span class="none">None</span>`}</div>`;', '</div>`;')
 
+s = swap(s, "[c.id, c.org, c.title, c.commenter_type, ...(c.topics || []), ...(c.tags || [])]", "[c.id, c.org, c.title, c.commenter_type]")
+
 # Recommendation grouping only partly fit its labels in 24% of a checked sample.
 s = swap(s, "Number of comments making each recommendation. Select a row to view comments", "Number of comments making each recommendation. Counts are approximate. Select a row to view comments")
 

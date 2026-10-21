@@ -61,8 +61,6 @@
     }).filter(Boolean);
     const topMax = Math.max(1, ...top.map(t => t.of));
 
-    const themes = META.topics.map(t => ({ key: t.key, n: rows.filter(c => (c.topics || []).includes(t.key)).length })).filter(t => t.key !== "Other" && t.n).sort((a, b) => b.n - a.n).slice(0, 6);
-    const thMax = Math.max(1, ...themes.map(t => t.n));
     const qs = META.questions.map(q => ({ q, n: rows.filter(c => c.q_addr.includes(q.n)).length })).sort((a, b) => a.n - b.n).slice(0, 4);
 
     const isInd = c => groupOf(c) === GROUPS[0][0];
@@ -160,10 +158,9 @@
   function bind(root) {
     const act = el => {
       if (el.dataset.go) goPos(el.dataset.go);
-      else if (el.dataset.theme) go({ lens: "topics", key: el.dataset.theme }, "topics");
       else if (el.dataset.q) go({ lens: "questions", key: el.dataset.q }, "questions");
     };
-    root.querySelectorAll("[data-go],[data-theme],[data-q]").forEach(el => {
+    root.querySelectorAll("[data-go],[data-q]").forEach(el => {
       el.addEventListener("click", () => act(el));
       el.addEventListener("keydown", e => { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); act(el); } });
     });
