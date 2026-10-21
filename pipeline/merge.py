@@ -63,7 +63,7 @@ RECS["map"].update(PRIV["recs_map"])
 NO_CARD = set(PRIV["no_card"])
 PROPOSALS = [
     ("risk_framework", "Two-axis risk framework", "FDA's framework rating risk by device activity and the consequence of relying on an incorrect output (Q1)"),
-    ("competency_eval", "Benchmarks plus clinical confirmation", "Competency-based premarket evaluation: device benchmarking followed by clinical confirmation (Q7, Q9)"),
+    ("competency_eval", "Benchmarks with clinical confirmation", "Competency-based premarket evaluation: device benchmarking followed by clinical confirmation (Q7, Q9)"),
     ("confirmation_flex", "Confirmation without a prospective study", "Clinical confirmation that does not always require a prospective clinical study (Q11)"),
     ("synthetic_data", "Synthetic data in evaluation", "Using synthetic data to supplement real-world data (Q12, Q13)"),
     ("third_party", "Independent third-party evaluation", "Involving independent third parties in benchmarking or clinical confirmation (Q16)"),
