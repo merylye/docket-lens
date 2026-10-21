@@ -54,4 +54,6 @@ FDA posts comments after review, so the docket keeps growing after the comment p
 
 One commenter asked that their comment not be used this way. It is counted in the charts but has no card, and its coding is kept in `pipeline/private/`, which is not committed. Running `merge.py` without that folder leaves it out of the counts.
 
+One memo was filed twice (0102 and 0117). It is counted once, under the earlier filing, whose card links to the second (`DUPLICATES` in `merge.py`).
+
 Coding is approximate and was done with Claude Opus 5.5. Check a comment's original text before quoting or citing it. Commenter categories come from Regulations.gov; comments filed without a category were assigned one from their content and are marked "inferred." Some comments are filed under a category that does not match their content, and the site keeps the filed category.

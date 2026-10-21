@@ -71,7 +71,7 @@
   "supervisory_agents": "conditional",
   "flexible_change_control": null,
   "voluntary_model_files": "oppose",
-  "directiveness_continuum": "conditional",
+  "directiveness_continuum": "support",
   "patient_facing_risk": null,
   "trajectory_risk": "support",
   "escalation_errors": "conditional",

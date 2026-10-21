@@ -5,7 +5,7 @@
    "risk_framework": "conditional",
    "directiveness_continuum": "conditional",
    "patient_facing_risk": "conditional",
-   "trajectory_risk": null,
+   "trajectory_risk": "conditional",
    "escalation_errors": "support",
    "competency_eval": "conditional",
    "confirmation_flex": "conditional",
@@ -270,7 +270,7 @@
    "postmarket_tradeoff": "conditional",
    "postmarket_methods": "conditional",
    "supervisory_agents": "conditional",
-   "flexible_change_control": null,
+   "flexible_change_control": "conditional",
    "voluntary_model_files": "conditional",
    "agentic_oversight": "conditional"
   },
@@ -391,10 +391,10 @@
    "no_care_comparator": null,
    "third_party": "support",
    "postmarket_tradeoff": "conditional",
-   "postmarket_methods": null,
+   "postmarket_methods": "conditional",
    "supervisory_agents": "conditional",
    "flexible_change_control": null,
-   "voluntary_model_files": null,
+   "voluntary_model_files": "conditional",
    "agentic_oversight": "conditional"
   },
   "recommendations": [

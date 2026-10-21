@@ -56,7 +56,7 @@
   "id": "FDA-2026-N-7874-0037",
   "positions": {
    "risk_framework": "conditional",
-   "directiveness_continuum": null,
+   "directiveness_continuum": "conditional",
    "patient_facing_risk": "oppose",
    "trajectory_risk": null,
    "escalation_errors": null,
@@ -131,7 +131,7 @@
    "supervisory_agents": "conditional",
    "flexible_change_control": null,
    "voluntary_model_files": null,
-   "agentic_oversight": null
+   "agentic_oversight": "conditional"
   },
   "recommendations": [
    "Require reporting a per-endpoint reproducibility floor on identical inputs",
@@ -273,7 +273,7 @@
    "patient_facing_risk": "conditional",
    "trajectory_risk": null,
    "escalation_errors": "support",
-   "competency_eval": null,
+   "competency_eval": "conditional",
    "confirmation_flex": null,
    "synthetic_data": null,
    "median_clinician_comparator": null,

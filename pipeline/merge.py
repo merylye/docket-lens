@@ -61,6 +61,8 @@ for row in PRIV["codes"]: codes[row["id"]] = row
 for row in PRIV["codes2"]: codes2[row["id"]] = row
 RECS["map"].update(PRIV["recs_map"])
 NO_CARD = set(PRIV["no_card"])
+# The same document filed twice: count it once, under the earlier filing.
+DUPLICATES = {"FDA-2026-N-7874-0117": "FDA-2026-N-7874-0102"}
 PROPOSALS = [  # in docket question order
     ("risk_framework", "Two-axis risk framework", "FDA's framework rating risk by device activity and the consequence of relying on an incorrect output (Q1)"),
     ("directiveness_continuum", "Directiveness as a continuum", "Treating how directive an output is as a matter of degree, with wording and personalization as risk modifiers (Q2)"),
@@ -90,6 +92,8 @@ for cid, r in sorted(raw.items()):
     tags = c.get("emergent_topics") or []
     topics = sorted({t for t in map(topic_for, tags) if t})
     unmapped |= {t for t in tags if topic_for(t) == "Other"}
+    if cid in DUPLICATES:
+        continue
     if cid in NO_CARD:
         out.append({"id": f"withheld-{len([o for o in out if o.get('hidden')]) + 1}", "hidden": True,
                     "commenter_type": c["commenter_type"], "type_inferred": False,
@@ -108,6 +112,7 @@ for cid, r in sorted(raw.items()):
         "posted": r["posted"], "received": r["received"], "unreadable": bool(c.get("unreadable")),
         "pos": {k: v for k, v in (codes2.get(cid, {}).get("positions") or {}).items() if v},
         "recs": RECS["map"].get(cid, []),
+        "also_filed": sorted(d for d, k in DUPLICATES.items() if k == cid),
     })
 
 aria["topics"] = sorted({t for t in map(topic_for, aria.get("tags", [])) if t})

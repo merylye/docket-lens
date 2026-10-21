@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-21T11:02:03.471227+00:00",
+ "updated": "2026-10-21T11:11:15.207255+00:00",
  "questions": [
   {
    "n": 1,
@@ -273,7 +273,7 @@
    "supervisory_agents": "conditional",
    "flexible_change_control": null,
    "voluntary_model_files": "oppose",
-   "directiveness_continuum": "conditional",
+   "directiveness_continuum": "support",
    "patient_facing_risk": null,
    "trajectory_risk": "support",
    "escalation_errors": "conditional",
@@ -352,7 +352,7 @@
    "postmarket_tradeoff": "conditional",
    "supervisory_agents": "conditional",
    "voluntary_model_files": "oppose",
-   "directiveness_continuum": "conditional",
+   "directiveness_continuum": "support",
    "trajectory_risk": "support",
    "escalation_errors": "conditional",
    "median_clinician_comparator": "conditional",
@@ -933,5 +933,5 @@
    "desc": "Use consistent AI terminology across FDA and other agencies and harmonize with international and existing standards."
   }
  ],
- "method": "129 posted comments read in full, including attachments, and coded against the codebook. A question counts as addressed when a comment discusses it substantively, cited or not. Comment types come from Regulations.gov; those with no category were assigned from content and are marked inferred."
+ "method": "128 posted comments read in full, including attachments, and coded against the codebook. A question counts as addressed when a comment discusses it substantively, cited or not. Comment types come from Regulations.gov; those with no category were assigned from content and are marked inferred."
 }

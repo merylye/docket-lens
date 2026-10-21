@@ -637,7 +637,7 @@ function renderTable() {
       <div class="meta"><span>Academia</span><span>Received Oct 19, 2026</span><span>Posting pending</span></div>
       ${facets(a.q_addr, a.topics)}</article>`
     : `<article class="card"><div class="top"><span class="who">${esc(it.name)}</span>${btn(it.c.id)}</div>
-      <div class="meta"><a href="https://www.regulations.gov/comment/${esc(it.c.id)}" target="_blank" rel="noopener">${esc(short(it.c.id))}</a><span>${esc(it.c.commenter_type)}${it.c.type_inferred ? " (inferred)" : ""}</span><span>Received ${fmtD(it.c.received)}</span></div>
+      <div class="meta"><a href="https://www.regulations.gov/comment/${esc(it.c.id)}" target="_blank" rel="noopener">${esc(short(it.c.id))}</a><span>${esc(it.c.commenter_type)}${it.c.type_inferred ? " (inferred)" : ""}</span><span>Received ${fmtD(it.c.received)}</span>${(it.c.also_filed || []).map(d => `<span>Also filed as <a href="https://www.regulations.gov/comment/${esc(d)}" target="_blank" rel="noopener">${esc(short(d))}</a></span>`).join("")}</div>
       ${it.c.unreadable ? '<div class="themes">Attachment unreadable, not coded</div>' : facets(it.c.q_addr, it.c.topics || [])}</article>`;
   document.getElementById("rows").innerHTML = shown.length ? shown.map(card).join("") : `<p class="empty">No comments match.</p>`;
   document.querySelectorAll("#rows .cmp").forEach(b => b.onclick = () => {

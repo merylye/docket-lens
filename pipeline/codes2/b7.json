@@ -14,10 +14,10 @@
    "no_care_comparator": null,
    "third_party": "support",
    "postmarket_tradeoff": "conditional",
-   "postmarket_methods": null,
+   "postmarket_methods": "conditional",
    "supervisory_agents": "conditional",
    "flexible_change_control": null,
-   "voluntary_model_files": "oppose",
+   "voluntary_model_files": "conditional",
    "agentic_oversight": "conditional"
   },
   "recommendations": [
@@ -125,7 +125,7 @@
    "directiveness_continuum": null,
    "patient_facing_risk": null,
    "trajectory_risk": null,
-   "escalation_errors": null,
+   "escalation_errors": "conditional",
    "competency_eval": null,
    "confirmation_flex": null,
    "synthetic_data": null,
@@ -198,7 +198,7 @@
    "postmarket_methods": null,
    "supervisory_agents": null,
    "flexible_change_control": null,
-   "voluntary_model_files": null,
+   "voluntary_model_files": "conditional",
    "agentic_oversight": null
   },
   "recommendations": [
