@@ -327,27 +327,6 @@
    ]
   },
   {
-   "question": "What should a device's performance be compared against?",
-   "sides": [
-    {
-     "label": "A typical clinician in practice",
-     "sel": "median_clinician_comparator:support"
-    },
-    {
-     "label": "Specialists, for specialist tasks",
-     "sel": "median_clinician_comparator:conditional:specialists"
-    },
-    {
-     "label": "The standard of care, not a typical clinician",
-     "sel": "median_clinician_comparator:oppose"
-    },
-    {
-     "label": "What patients would get without the device",
-     "sel": "no_care_comparator:support"
-    }
-   ]
-  },
-  {
    "question": "Can voluntary disclosure from model developers give FDA what it needs?",
    "sides": [
     {

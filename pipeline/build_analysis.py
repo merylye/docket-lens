@@ -32,6 +32,10 @@ s = swap(s, 'fetch("data/meta.json")', 'fetch("../data/meta.json")')
 s = swap(s, "D = c; META = m; init(); })", "D = c; META = m; init(); if (window.analysisInit) analysisInit(); })")
 s = swap(s, "</body>", '<script src="analysis.js"></script>\n</body>')
 
+# Theme coding matched only 39% in a blind check, so the analysis page leaves themes out.
+s = swap(s, '      <button type="button" class="pill" data-v="topics" aria-pressed="false">Additional themes</button>\n', '')
+s = swap(s, '</div>\n      <div class="facet"><span>Additional themes</span>${themes.length ? `<span>${themes.map(esc).join(" · ")}</span>` : `<span class="none">None</span>`}</div>`;', '</div>`;')
+
 os.makedirs(os.path.join(ROOT, "analysis"), exist_ok=True)
 open(os.path.join(ROOT, "analysis", "index.html"), "w", encoding="utf-8").write(s)
 print("wrote analysis/index.html")

@@ -165,7 +165,6 @@ svg .infoi:hover circle, svg .infoi:focus circle, .ic:hover, .ic:focus { stroke:
     <span id="lens" class="group">
       <button type="button" class="pill" data-v="questions" aria-pressed="true">Docket questions</button>
       <button type="button" class="pill" data-v="sections" aria-pressed="false">Question groups</button>
-      <button type="button" class="pill" data-v="topics" aria-pressed="false">Additional themes</button>
     </span>
   </div>
   <div class="group"><span class="label">Category</span>
@@ -664,8 +663,7 @@ function renderTable() {
   const facets = (qs, themes) => {
     const groups = META.sections.filter(s => qs.some(n => sectionOf(n) === s.key)).map(s => SHORT[s.key]);
     return `<div class="facet"><span>Docket questions</span>${chips(qs.map(n => "Q" + n))}</div>
-      <div class="facet"><span>Question groups</span>${chips(groups)}</div>
-      <div class="facet"><span>Additional themes</span>${themes.length ? `<span>${themes.map(esc).join(" · ")}</span>` : `<span class="none">None</span>`}</div>`;
+      <div class="facet"><span>Question groups</span>${chips(groups)}</div>`;
   };
   const fmtD = d => d ? new Date(d).toLocaleDateString("en-US", { month: "short", day: "numeric", year: "numeric" }) : "";
   const items = rows.map(c => ({ c, name: nameOf(c), date: c.received || c.posted || "", cov: c.unreadable ? -1 : c.q_addr.length + (c.topics || []).length / 100 }));

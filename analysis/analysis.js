@@ -13,6 +13,8 @@
     cond: 0.8,      // share supporting with conditions
     contest: 0.2,   // share opposing
     minN: 15,       // minimum comments with a position for the consensus and contention lists
+    minGroup: 5,    // minimum comments with a position before a group split is shown
+    minCond: 5,     // minimum comments naming a condition before it is listed as the top condition
   };
   let view = "findings", prop = null, showAria = false;
 
@@ -46,7 +48,7 @@
     const contested = P.filter(x => x.n.oppose / x.n.total >= T.contest).sort((a, b) => b.n.oppose / b.n.total - a.n.oppose / a.n.total);
 
     const split = contested.map(x => {
-      const lines = GROUPS.map(([g]) => { const n = counts(rows.filter(c => groupOf(c) === g), x.p.key); return n.total ? `<div class="row"><span class="lab">${esc(g)}</span>${sbar(n)}<span class="num">${n.oppose} of ${n.total}</span></div>` : ""; }).join("");
+      const lines = GROUPS.map(([g]) => { const n = counts(rows.filter(c => groupOf(c) === g), x.p.key); return !n.total ? "" : n.total < T.minGroup ? `<div class="row"><span class="lab">${esc(g)}</span><span class="note">Fewer than ${T.minGroup} took a position</span><span class="num">${n.total}</span></div>` : `<div class="row"><span class="lab">${esc(g)}</span>${sbar(n)}<span class="num">${n.oppose} of ${n.total}</span></div>`; }).join("");
       return `<div class="card"><h3>${esc(x.p.label)}</h3><div class="row"><span class="lab"><b>All commenters</b></span>${sbar(x.n)}<span class="num">${x.n.oppose} of ${x.n.total}</span></div>${lines}<p class="note">Number of comments opposing, out of those in each group that took a position.</p><button class="go" data-go="${esc(x.p.key)}:oppose">See the ${x.n.oppose} opposing comments</button></div>`;
     }).join("");
 
@@ -54,7 +56,7 @@
       const cond = rows.filter(c => (c.pos || {})[p.key] === "conditional");
       const tally = {}; cond.forEach(c => ((c.conds || {})[p.key] || []).forEach(g => { if (g !== "other") tally[g] = (tally[g] || 0) + 1; }));
       const best = Object.entries(tally).sort((a, b) => b[1] - a[1])[0];
-      return best && best[1] >= 3 ? { p, g: best[0], n: best[1], of: cond.length } : null;
+      return best && best[1] >= T.minCond ? { p, g: best[0], n: best[1], of: cond.length } : null;
     }).filter(Boolean);
     const topMax = Math.max(1, ...top.map(t => t.of));
 
@@ -96,14 +98,14 @@
           <p class="note">Select a bar to see added conditions. Listed when at least ${T.cond * 100}% supported with conditions.</p></div>
       </div></section>
       <section><h2>Points of dissent</h2><p class="note">Proposals where at least ${T.contest * 100}% of comments that took a position opposed it, with each opposing comment's reason.</p><div class="cards">
-        ${contested.map(x => { const lines = GROUPS.map(([g]) => { const n = counts(rows.filter(c => groupOf(c) === g), x.p.key); return n.total ? `<div class="row"><span class="lab">${esc(g)}</span>${sbar(n)}<span class="num">${n.oppose} of ${n.total}</span></div>` : ""; }).join("");
+        ${contested.map(x => { const lines = GROUPS.map(([g]) => { const n = counts(rows.filter(c => groupOf(c) === g), x.p.key); return !n.total ? "" : n.total < T.minGroup ? `<div class="row"><span class="lab">${esc(g)}</span><span class="note">Fewer than ${T.minGroup} took a position</span><span class="num">${n.total}</span></div>` : `<div class="row"><span class="lab">${esc(g)}</span>${sbar(n)}<span class="num">${n.oppose} of ${n.total}</span></div>`; }).join("");
           return `<div class="card"><h3>${esc(x.p.label)}</h3><div class="row"><span class="lab"><b>All commenters</b></span>${sbar(x.n)}<span class="num">${x.n.oppose} of ${x.n.total}</span></div>${lines}<p class="note">Comments opposing, out of those in each group that took a position.</p>${reasons(x.p.key) ? `<p class="note">Reasons given</p><ul class="rs">${reasons(x.p.key)}</ul>` : ""}<button class="go" data-go="${esc(x.p.key)}:oppose">Read the ${x.n.oppose} opposing comments</button></div>`; }).join("") || '<p class="note">None at this threshold.</p>'}
         ${diverge.length ? `<div class="card"><h3>Opposition within one group</h3>${diverge.map(d => `<div class="row click" data-go="${esc(d.p.key)}:oppose" tabindex="0" role="button"><span class="lab">${esc(d.p.label)}, ${esc(d.g)}</span>${sbar(d.n)}<span class="num">${d.n.oppose} of ${d.n.total}</span></div>`).join("")}<p class="note">Proposals below the threshold overall where at least 30% of one group opposed, with at least 2 opposing and 4 taking a position.</p></div>` : ""}
         ${others.length ? `<div class="card" style="grid-column:1/-1"><h3>Opposition on other proposals</h3>${others.map(x => `<div class="oth"><button class="go" data-go="${esc(x.p.key)}:oppose">${esc(x.p.label)}, ${x.n.oppose} of ${x.n.total}</button>${reasons(x.p.key) ? `<ul class="rs">${reasons(x.p.key)}</ul>` : ""}</div>`).join("")}</div>` : ""}
       </div></section>
       <section><h2>Top added conditions</h2><div class="cards"><div class="card" style="grid-column:1/-1">
         ${top.map(t => `<div class="row click" data-go="${esc(t.p.key)}:conditional:${esc(t.g)}" tabindex="0" role="button" style="grid-template-columns:minmax(0,1fr) minmax(0,1.3fr) minmax(70px,.6fr) 70px"><span class="lab">${esc(t.p.label)}</span><span>${esc(condLabel(t.p.key, t.g))}</span>${lbar(t.n, topMax)}<span class="num">${t.n} of ${t.of}</span></div>`).join("")}
-        <p class="note">For each proposal, the condition named most often by comments that supported it with conditions. Shown when at least 3 comments named it. Select a row to read them.</p></div></div></section>
+        <p class="note">For each proposal, the condition named most often by comments that supported it with conditions. Shown when at least ${T.minCond} comments named it. Select a row to read them.</p></div></div></section>
       <section><h2>Coverage gaps</h2><div class="cards">
         <div class="card"><h3>Least addressed questions</h3>${qs.map(x => `<div class="row click" data-q="${x.q.n}" tabindex="0" role="button"><span class="lab">Q${x.q.n} ${esc(x.q.label)}</span>${lbar(x.n, rows.length)}<span class="num">${pc(x.n, rows.length)}</span></div>`).join("")}<p class="note">Share of all comments that substantively addressed the question.</p></div>
         ${(META.nopos || []).length ? `<div class="card" style="grid-column:1/-1"><h3>Comments outside the 17 proposals</h3><p class="note">${rows.filter(c => !Object.values(c.pos || {}).some(Boolean)).length} comments took no position on any proposal. These ${NP.length} raised a concern or objection the proposals do not cover.</p><ul class="rs">${NP.map(x => `<li><span>${esc(x.point)}</span> <span class="note">(${who(x.id)})</span></li>`).join("")}</ul></div>` : ""}
@@ -130,7 +132,7 @@
     const cmax = Math.max(1, ...cg.map(x => x.n));
     const A = META.aria, av = (A.pos || {})[p.key], aq = (A.position_quotes || {})[p.key] || [];
     const word = { support: "Support", conditional: "Support with conditions", oppose: "Oppose" };
-    const groups = GROUPS.map(([g]) => { const m = counts(rows.filter(c => groupOf(c) === g), p.key); return m.total ? `<div class="row"><span class="lab">${esc(g)}</span>${sbar(m)}<span class="num">${m.total}</span></div>` : ""; }).join("");
+    const groups = GROUPS.map(([g]) => { const m = counts(rows.filter(c => groupOf(c) === g), p.key); return !m.total ? "" : m.total < T.minGroup ? `<div class="row"><span class="lab">${esc(g)}</span><span class="note">Fewer than ${T.minGroup} took a position</span><span class="num">${m.total}</span></div>` : `<div class="row"><span class="lab">${esc(g)}</span>${sbar(m)}<span class="num">${m.total}</span></div>`; }).join("");
     document.getElementById("view-proposals").innerHTML = `<div class="bp">
       <label class="psel"><span class="note">Proposal</span><select id="psel" class="select">${P.map(x => `<option value="${esc(x.key)}" ${x.key === prop ? "selected" : ""}>${esc(Q(x))} ${esc(x.label)}</option>`).join("")}</select></label><nav class="plist" aria-label="Proposals">${P.map(x => `<button type="button" data-p="${esc(x.key)}" aria-current="${x.key === prop}"><span class="qn">${esc(Q(x))}</span>${esc(x.label)}</button>`).join("")}</nav>
       <article class="brief af">
@@ -142,7 +144,7 @@
           <div style="display:flex;gap:16px;flex-wrap:wrap">${["support", "conditional", "oppose"].filter(s => n[s]).map(s => `<button class="go" data-go="${esc(p.key)}:${s}">${n[s]} ${s === "conditional" ? "with conditions" : s === "support" ? "supporting" : "opposing"}</button>`).join("")}</div></div>
         <div class="block"><h3>Responses by commenter group</h3>${groups}<p class="note">The number is how many comments in each group took a position.</p></div>
         ${cg.length ? `<div class="block"><h3>Added conditions</h3>${cg.map(x => `<div class="row click" data-go="${esc(p.key)}:conditional:${esc(x.g.key)}" tabindex="0" role="button"><span class="lab">${esc(x.g.label)}</span>${lbar(x.n, cmax)}<span class="num">${x.n}</span></div>`).join("")}<p class="note">Named by the ${cond.length} comments that supported it with conditions. A comment can name more than one. Select a row to read them.</p></div>` : ""}
-        <div class="block"><button type="button" class="pill small" id="ariaTog" aria-pressed="${showAria}">${showAria ? "Hide" : "Show"} ARIA's position</button>
+        <div class="block"><button type="button" class="pill small" id="ariaTog" style="justify-self:start" aria-pressed="${showAria}">${showAria ? "Hide" : "Show"} ARIA's position</button>
           ${showAria ? `<p style="margin:0">${av ? word[av] : "ARIA took no position on this proposal."}</p>${aq.map(q => `<p class="quote">“${esc(q)}”</p>`).join("")}` : ""}</div>
       </article></div>${footer()}`;
     const el = document.getElementById("view-proposals");

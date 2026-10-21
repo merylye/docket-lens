@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-21T20:40:27.921285+00:00",
+ "updated": "2026-10-21T20:46:31.117404+00:00",
  "questions": [
   {
    "n": 1,
@@ -1569,27 +1569,6 @@
     {
      "label": "No, risk depends on whether users can check the output",
      "sel": "patient_facing_risk:oppose"
-    }
-   ]
-  },
-  {
-   "question": "What should a device's performance be compared against?",
-   "sides": [
-    {
-     "label": "A typical clinician in practice",
-     "sel": "median_clinician_comparator:support"
-    },
-    {
-     "label": "Specialists, for specialist tasks",
-     "sel": "median_clinician_comparator:conditional:specialists"
-    },
-    {
-     "label": "The standard of care, not a typical clinician",
-     "sel": "median_clinician_comparator:oppose"
-    },
-    {
-     "label": "What patients would get without the device",
-     "sel": "no_care_comparator:support"
     }
    ]
   },
