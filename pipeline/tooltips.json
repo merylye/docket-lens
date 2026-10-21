@@ -127,7 +127,7 @@
   "risk_framework": {
    "title": "Question 1",
    "quote": "Does the two-axis risk framework, organized around device activity and the consequence of relying on an incorrect output, appropriately capture the dimensions most relevant to the risk of a GenAI-enabled software function?",
-   "body": "FDA proposes rating risk on two dimensions. One is how much the device does on its own, from giving information, to directing action, to acting autonomously. The other is how much harm would follow from relying on a wrong output. Most comments that supported it with conditions wanted more dimensions added."
+   "body": "FDA proposes rating risk on two dimensions. One is how much the device does on its own, from giving information, to directing action, to acting autonomously. The other is how much harm would follow from relying on a wrong output."
   },
   "directiveness_continuum": {
    "title": "Question 2",
@@ -162,12 +162,12 @@
   "synthetic_data": {
    "title": "Question 12",
    "quote": "Where synthetically generated inputs supplement real patient data, how should sponsors account for differences between the synthetic and real-world distributions when estimating performance",
-   "body": "Using computer-generated test cases or simulated patients alongside real patient data when evaluating a device. Most comments accepted this only with safeguards, most often that synthetic data supplement real patient data and never replace it."
+   "body": "Using computer-generated test cases or simulated patients alongside real patient data when evaluating a device."
   },
   "median_clinician_comparator": {
    "title": "Question 14",
    "quote": "When a panel of qualified clinicians serves as the comparator, how should the applicable standard (for example, the standard of care versus the performance of a median clinician in practice) be defined and justified?",
-   "body": "Whether a device should be compared with what a typical clinician actually does in practice, or only with the standard of care. Supporting comments accepted the typical clinician as the benchmark. Opposing comments held devices to the standard of care or to expert performance."
+   "body": "Whether a device should be compared with what a typical clinician actually does in practice, or only with the standard of care."
   },
   "no_care_comparator": {
    "title": "Question 15",
@@ -182,7 +182,7 @@
   "postmarket_tradeoff": {
    "title": "Question 18",
    "quote": "CDRH is considering whether it may be appropriate to accept greater premarket uncertainty regarding a GenAI-enabled device’s benefit-risk profile through greater reliance on postmarket monitoring.",
-   "body": "Letting a device reach the market with less evidence up front, in exchange for closer monitoring after release. Most comments accepted this only for limited cases with strong monitoring in place."
+   "body": "Letting a device reach the market with less evidence up front, in exchange for closer monitoring after release."
   },
   "postmarket_methods": {
    "title": "Question 19",
@@ -202,7 +202,7 @@
   "voluntary_model_files": {
    "title": "Question 25",
    "quote": "Would voluntary Foundation Model MAFs be practical for foundation model developers to provide and to keep current, and what content might they include?",
-   "body": "Companies that build the underlying AI models could voluntarily give FDA confidential information about their models in a master file (MAF), which device makers could then reference. Opposing comments called voluntary files insufficient, and some asked for required disclosure instead."
+   "body": "Companies that build the underlying AI models could voluntarily give FDA confidential information about their models in a master file (MAF), which device makers could then reference."
   },
   "agentic_oversight": {
    "title": "Question 26",
