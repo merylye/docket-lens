@@ -69,7 +69,7 @@
   "third_party": "support",
   "postmarket_tradeoff": "conditional",
   "supervisory_agents": "conditional",
-  "flexible_change_control": "conditional",
+  "flexible_change_control": null,
   "voluntary_model_files": "oppose"
  },
  "recommendations": [
@@ -104,10 +104,6 @@
   ],
   "supervisory_agents": [
    "Automated monitoring systems should be validated before their results are relied on (Q20)."
-  ],
-  "flexible_change_control": [
-   "Model changes should trigger reassessment against the premarket baseline (Q22, Q23, Q24).",
-   "a predetermined change control plan should state which changes are allowed and which tests will be rerun."
   ],
   "voluntary_model_files": [
    "Voluntary Foundation Model Master Files would support review, but voluntary disclosure alone is not enough."
