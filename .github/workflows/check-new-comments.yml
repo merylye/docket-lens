@@ -1,0 +1,60 @@
+name: Check for new comments
+
+on:
+  schedule:
+    - cron: "17 13 * * *"   # daily, 9:17 a.m. Eastern (EDT)
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  issues: write
+
+env:
+  STOP_AFTER: "2026-11-21"   # the daily check ends after this date
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Skip after the end date
+        id: window
+        run: |
+          if [ "$(date -u +%F)" \> "$STOP_AFTER" ]; then echo "active=false" >> "$GITHUB_OUTPUT"; else echo "active=true" >> "$GITHUB_OUTPUT"; fi
+
+      - uses: actions/checkout@v4
+        if: steps.window.outputs.active == 'true'
+
+      - name: Find new comments
+        if: steps.window.outputs.active == 'true'
+        id: check
+        env:
+          REGULATIONS_GOV_API_KEY: ${{ secrets.REGULATIONS_GOV_API_KEY }}
+        run: |
+          python3 pipeline/check_new.py > new.txt
+          echo "count=$(grep -c . new.txt || true)" >> "$GITHUB_OUTPUT"
+
+      - name: Open or update an issue
+        if: steps.window.outputs.active == 'true' && steps.check.outputs.count != '0'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          existing=$(gh issue list --state open --label new-comments --json number --jq '.[0].number' 2>/dev/null || true)
+          if [ -n "$existing" ]; then
+            gh issue view "$existing" --json body,comments --jq '.body, .comments[].body' > seen.txt
+            grep -v -F -f <(grep -o 'FDA-2026-N-7874-[0-9]*' seen.txt | sort -u) new.txt > fresh.txt || true
+            mv fresh.txt new.txt
+            if [ ! -s new.txt ]; then echo "Already reported"; exit 0; fi
+          fi
+          {
+            echo "New comments are posted on [Docket FDA-2026-N-7874](https://www.regulations.gov/docket/FDA-2026-N-7874/comments) and are not yet on the site."
+            echo
+            while read -r id; do echo "- [$id](https://www.regulations.gov/comment/$id)"; done < new.txt
+            echo
+            echo "To add them, ask Claude to code these comments and update the site."
+          } > body.md
+          if [ -n "$existing" ]; then
+            gh issue comment "$existing" --body-file body.md
+          else
+            gh label create new-comments --color 00DFE9 --description "Comments posted but not yet coded" 2>/dev/null || true
+            gh issue create --title "New comments to code ($(date -u +%F))" --label new-comments --body-file body.md
+          fi

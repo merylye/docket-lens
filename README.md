@@ -36,17 +36,19 @@ Site: https://merylye.github.io/docket-lens/
 | `pipeline/recommendations_audit.tsv` | Every extracted recommendation and the group it was assigned to, for checking. |
 | `pipeline/aria.json` | ARIA's comment, coded the same way. It appears on the site before it is posted to Regulations.gov. |
 | `pipeline/pull.py` | Downloads comment text and metadata from the Regulations.gov API. |
+| `pipeline/check_new.py`, `pipeline/known_comments.txt` | The daily check for new comments, and hashed IDs of comments already on the site. |
 | `pipeline/merge.py` | Joins the raw comments with the codes, groups theme tags, and writes `data/`. |
 
 ## Updating
 
-FDA posts comments after review, so the docket keeps growing after the comment period closes.
+FDA posts comments after review, so the docket keeps growing after the comment period closes. A GitHub Action (`.github/workflows/check-new-comments.yml`) checks the docket daily through November 21, 2026, and opens an issue listing any comments that are posted but not yet on the site. It needs the API key saved as a repository secret named `REGULATIONS_GOV_API_KEY`.
 
 1. Get a free API key at [api.data.gov/signup](https://api.data.gov/signup).
 2. Run `REGULATIONS_GOV_API_KEY=... python pipeline/pull.py` to download every posted comment into `pipeline/raw/`, which is not committed.
 3. Code any new comments against `pipeline/codebook.md` and `pipeline/codebook_positions.md`, add them to `pipeline/codes/` and `pipeline/codes2/`, and assign their recommendations to groups in `pipeline/recommendations.json`. Attachments are hosted on `downloads.regulations.gov`, which blocks many cloud servers, so read them from a normal browser. Scanned attachments need OCR.
 4. Run `python pipeline/merge.py` to regenerate `data/`. New theme tags that match no group show up in its output as "Other"; add a pattern in `TOPICS` if they deserve their own group.
-5. Commit and push. GitHub Pages republishes the site.
+5. Run `REGULATIONS_GOV_API_KEY=... python pipeline/check_new.py --update` so the daily check treats the new comments as known.
+6. Commit and push. GitHub Pages republishes the site, and you can close the open "New comments to code" issue.
 
 ## Caveats
 
