@@ -1,0 +1,276 @@
+{
+ "q": {
+  "1": {
+   "title": "Question 1",
+   "quote": "Does the two-axis risk framework, organized around device activity and the consequence of relying on an incorrect output, appropriately capture the dimensions most relevant to the risk of a GenAI-enabled software function? If there are additional dimensions—such as the reversibility of a resulting action, the availability of downstream safeguards, the time pressure of the deployment setting, or the traceability of the output (i.e., to primary source materials)—that should be represented in a risk framework, please describe and provide examples of how they should be represented."
+  },
+  "2": {
+   "title": "Question 2",
+   "quote": "CDRH seeks input on how to account for the spectrum of GenAI-enabled informational functions that vary in the degree to which they direct a user to a particular action (i.e., between “non-directive” and “action-directing”). What characteristics of an output—such as its wording, specificity, personalization, or context—could be considered as modifiers of the risk associated with an informational function, after accounting for the device’s overall functionality and intended use? What additional information would provide manufacturers with sufficient clarity and predictability around risk assessment for informational functions while recognizing that directiveness may exist along a continuum rather than as a binary distinction?"
+  },
+  "3": {
+   "title": "Question 3",
+   "quote": "CDRH seeks input on whether and when a GenAI-enabled function that results in delivery of clinical information to patients, as opposed to HCPs, could present different or higher risks, while also recognizing the potential benefits associated with improved patient empowerment, engagement, and access to clinical information. What device characteristics, output features, or safeguards might mitigate risks that could arise when a user lacks the domain knowledge to independently evaluate an output, without unnecessarily underestimating patient capability?"
+  },
+  "4": {
+   "title": "Question 4",
+   "quote": "CDRH seeks input on whether and how the distinction between generalist and specialist physicians might inform the assessment of risk for HCP-facing GenAI-enabled functions. Under what circumstances, if any, might risk be affected when an HCP who lacks the relevant clinical specialist knowledge receives information that falls within a specialist area of practice? What device characteristics or safeguards might mitigate such risks?"
+  },
+  "5": {
+   "title": "Question 5",
+   "quote": "For multi-turn conversational GenAI-enabled devices that may migrate from providing “non-directive” information to “action-directing” information over the course of an exchange, how should risk be assessed across realistic conversational trajectories? How could the intended use of such a device be characterized when its behavior is emergent across a conversation?"
+  },
+  "6": {
+   "title": "Question 6",
+   "quote": "For GenAI-enabled care escalation functions, CDRH is considering how the evaluation may account for both under-escalation and over-escalation. How could manufacturers characterize and weigh these two directions of error, given that they may not be commensurable and that acceptable trade-offs may vary by clinical context?"
+  },
+  "7": {
+   "title": "Question 7",
+   "quote": "Is the competency-based approach described above, i.e., device benchmarking followed by clinical confirmation, a useful and appropriate framework for evaluating GenAI-enabled devices?"
+  },
+  "8": {
+   "title": "Question 8",
+   "quote": "How might the two-axis risk framework described in Section IV be considered within the competency-based approach described above to help determine the level of evidence needed for a premarket submission?"
+  },
+  "9": {
+   "title": "Question 9",
+   "quote": "Would a benchmarking structure such as the one described above be likely to provide adequate evidence of clinical knowledge, analytic capabilities, safety behavior, communication, and generalizability to support a reasonable assurance of safety and effectiveness? Are there elements that are missing, redundant, or inappropriately categorized? Are there externally developed standards that could be leveraged?"
+  },
+  "10": {
+   "title": "Question 10",
+   "quote": "CDRH recognizes that publicly available benchmarking assets may be subject to data contamination, saturation, and limited real-world representativeness. How should a sponsor establish that performance on a given benchmark predicts safe and effective real-world behavior for the device’s intended use? What evidence should support the construct validity of a benchmark used to gate device evaluation, and what role should sponsor-developed benchmarks play given potential concerns around independence and optimization to the test?"
+  },
+  "11": {
+   "title": "Question 11",
+   "quote": "CDRH is considering that clinical confirmation for a GenAI-enabled device might not require a prospective clinical study in every case, and has described above a range of approaches of increasing rigor and patient exposure. How might a sponsor select and justify a confirmation approach tailored to a device’s intended use and proportionate to the device’s risk profile? Are there device types or risk profiles for which one or more of these approaches would be insufficient or inappropriate? How might the anticipated distribution of real-world inputs be taken into consideration? Are there other methods of clinical confirmation that might help inform the evaluation of GenAI-enabled devices?"
+  },
+  "12": {
+   "title": "Question 12",
+   "quote": "How should sponsors achieve statistically meaningful performance measurement for GenAI-enabled devices? Where synthetically generated inputs supplement real patient data, how should sponsors account for differences between the synthetic and real-world distributions when estimating performance, and under what conditions, if any, is it appropriate to combine benchmarking evidence and clinical confirmation evidence to support a single performance estimate?"
+  },
+  "13": {
+   "title": "Question 13",
+   "quote": "For which clinical domains, device functions, or subpopulations is synthetic data particularly well-suited, or particularly inadequate, as a supplement to real-world evidence? What safeguards would mitigate the risk that synthetic data generated by models of the same class as the device under evaluation reproduces the very performance gaps the evaluation is intended to detect, particularly for underrepresented subgroups?"
+  },
+  "14": {
+   "title": "Question 14",
+   "quote": "For open-ended device outputs, how should performance comparators and acceptance criteria be selected? When a panel of qualified clinicians serves as the comparator, how should the applicable standard (for example, the standard of care versus the performance of a median clinician in practice) be defined and justified? Should generalist or specialist physicians be used as a performance standard? When should human-AI team performance, rather than the device operating alone, serve as the basis for evaluation?"
+  },
+  "15": {
+   "title": "Question 15",
+   "quote": "Are there ways in which performance might be assessed relative to the care, technology, or course of action likely to occur in the absence of the device, rather than to the comparators described in this section? What approaches might be used to identify and justify a comparator such as unaided clinical judgment, delayed specialist review, or no intervention?"
+  },
+  "16": {
+   "title": "Question 16",
+   "quote": "Should independent third parties be involved in some or all aspects of a competency-based approach, including device benchmarking and clinical confirmation? If so, in what ways might qualified, independent third-party participation contribute to this approach, and what qualifications and independence criteria should apply? Are there aspects of the assessment for which third-party involvement would be impractical or inadvisable? What safeguards or program design features would be critical to prevent third-party participation from limiting competition or preventing innovation?"
+  },
+  "17": {
+   "title": "Question 17",
+   "quote": "CDRH is exploring whether a competency-based approach could be applied to devices that incorporate a variety of underlying model architectures, such as multimodal vision-language models and generative or predictive world models. Are there aspects of the described approach that might be ineffective or inapplicable to these devices? What additional or distinct considerations might need to be addressed?"
+  },
+  "18": {
+   "title": "Question 18",
+   "quote": "CDRH is considering whether it may be appropriate to accept greater premarket uncertainty regarding a GenAI-enabled device’s benefit-risk profile through greater reliance on postmarket monitoring. Under what conditions might such an approach be appropriate, and what characteristics of a monitoring program would need to be in place to justify reduced premarket evidence? Are there device types or risk profiles for which this approach would not be appropriate?"
+  },
+  "19": {
+   "title": "Question 19",
+   "quote": "Please comment on the potential approaches to postmarket performance evaluation, including periodic re-benchmarking, sample-based clinician review, and performance degradation monitoring. What additional approaches should CDRH consider, and how should the cadence and triggering events for reassessment be determined?"
+  },
+  "20": {
+   "title": "Question 20",
+   "quote": "Please comment on whether the proposed approaches to postmarket monitoring can be facilitated by machine-based supervisory agents. What considerations, including the evaluation and reliability of the supervisory agent itself, should CDRH take into account for such an approach?"
+  },
+  "21": {
+   "title": "Question 21",
+   "quote": "What roles might clinicians, healthcare institutions, professional societies, standards-setting bodies, and other stakeholders appropriately play in postmarket monitoring, and how can these roles be structured without diffusing manufacturer accountability?"
+  },
+  "22": {
+   "title": "Question 22",
+   "quote": "CDRH envisions that a manufacturer’s premarket competency-based assessment might serve as a baseline against which post-deployment modifications could be re-evaluated. How might the extent of re-benchmarking or other evidence be scaled to the nature and expected impact of a given modification? For example, are there categories of change that might not significantly affect safety or effectiveness of a GenAI-enabled device, or might be appropriately managed within a sponsor’s quality management system versus requiring FDA premarket review and authorization before implementation? Are there categories of changes that might be appropriate for inclusion in a PCCP?"
+  },
+  "23": {
+   "title": "Question 23",
+   "quote": "How might PCCP concepts or other change-control approaches be adapted for GenAI-enabled devices when the nature or scope of future modifications cannot be fully prespecified?"
+  },
+  "24": {
+   "title": "Question 24",
+   "quote": "For devices built on third-party foundation models, changes to the underlying model may be initiated by the third-party model developer rather than the device manufacturer. How can a manufacturer detect, evaluate, and respond to such changes in a timely manner? What mechanisms—for example, contractual, technical, or through a PCCP—could provide reasonable assurance that third-party developer-initiated changes do not compromise the safety or effectiveness of the device?"
+  },
+  "25": {
+   "title": "Question 25",
+   "quote": "Would voluntary Foundation Model MAFs be practical for foundation model developers to provide and to keep current, and what content might they include? Given that participation would be voluntary and that model developers may have limited incentive to disclose safety-relevant information, what would make such a program sufficiently useful for premarket review? Are there alternative mechanisms CDRH should consider for obtaining information about underlying foundation models?"
+  },
+  "26": {
+   "title": "Question 26",
+   "quote": "Are there additional considerations that inform the premarket and postmarket evaluation of agentic GenAI-enabled devices, beyond those applicable to non-agentic GenAI-enabled devices? How should the elevated risk associated with autonomous multi-step action, tool use, and reduced opportunity for human review be reflected in acceptance criteria and oversight?"
+  }
+ },
+ "sec": {
+  "IV": {
+   "title": "Section IV, Assessment of Risk",
+   "body": "Questions 1 to 6. How FDA should rate the risk of a GenAI-enabled function, including what it does on its own, who receives its output, and how risk changes over a conversation."
+  },
+  "V": {
+   "title": "Section V, Competency-Based Premarket Evaluation",
+   "body": "Questions 7 to 17. How devices should be tested before reaching the market, including benchmarks, clinical confirmation, synthetic data, comparators, and third-party evaluators."
+  },
+  "VI": {
+   "title": "Section VI, Postmarket Monitoring",
+   "body": "Questions 18 to 24. How devices should be watched and re-evaluated after release, including monitoring, model updates, and change control."
+  },
+  "VII": {
+   "title": "Section VII, Other Topics",
+   "body": "Questions 25 and 26. Information from foundation model developers, and agentic devices that take multi-step actions."
+  }
+ },
+ "pos": {
+  "risk_framework": {
+   "title": "Question 1",
+   "quote": "Does the two-axis risk framework, organized around device activity and the consequence of relying on an incorrect output, appropriately capture the dimensions most relevant to the risk of a GenAI-enabled software function?",
+   "body": "FDA proposes rating risk on two dimensions. One is how much the device does on its own, from giving information, to directing action, to acting autonomously. The other is how much harm would follow from relying on a wrong output. Most comments that supported it with conditions wanted more dimensions added."
+  },
+  "competency_eval": {
+   "title": "Question 7",
+   "quote": "Is the competency-based approach described above, i.e., device benchmarking followed by clinical confirmation, a useful and appropriate framework for evaluating GenAI-enabled devices?",
+   "body": "Modeled loosely on how physicians are trained and examined. A device would first be scored on benchmarks of clinical knowledge, safety behavior, communication, and generalizability, then its performance would be confirmed in clinical use as actually configured."
+  },
+  "confirmation_flex": {
+   "title": "Question 11",
+   "quote": "CDRH is considering that clinical confirmation for a GenAI-enabled device might not require a prospective clinical study in every case, and has described above a range of approaches of increasing rigor and patient exposure.",
+   "body": "FDA suggests that lower-risk devices could confirm performance with lighter methods, such as retrospective review, running silently alongside clinicians, or clinician adjudication, before or instead of a new prospective study."
+  },
+  "synthetic_data": {
+   "title": "Question 12",
+   "quote": "Where synthetically generated inputs supplement real patient data, how should sponsors account for differences between the synthetic and real-world distributions when estimating performance",
+   "body": "Using computer-generated test cases or simulated patients alongside real patient data when evaluating a device. Most comments accepted this only with safeguards, such as validating synthetic data against real data."
+  },
+  "third_party": {
+   "title": "Question 16",
+   "quote": "Should independent third parties be involved in some or all aspects of a competency-based approach, including device benchmarking and clinical confirmation?",
+   "body": "Having organizations independent of the manufacturer run or check some of the benchmarking or clinical confirmation, instead of relying only on the manufacturer's own testing."
+  },
+  "postmarket_tradeoff": {
+   "title": "Question 18",
+   "quote": "CDRH is considering whether it may be appropriate to accept greater premarket uncertainty regarding a GenAI-enabled device’s benefit-risk profile through greater reliance on postmarket monitoring.",
+   "body": "Letting a device reach the market with less evidence up front, in exchange for closer monitoring after release. Most comments accepted this only for limited cases with strong monitoring in place."
+  },
+  "supervisory_agents": {
+   "title": "Question 20",
+   "quote": "Please comment on whether the proposed approaches to postmarket monitoring can be facilitated by machine-based supervisory agents.",
+   "body": "Using AI systems to monitor a deployed device's outputs after release, for example flagging errors or drift for human review."
+  },
+  "flexible_change_control": {
+   "title": "Question 23",
+   "quote": "How might PCCP concepts or other change-control approaches be adapted for GenAI-enabled devices when the nature or scope of future modifications cannot be fully prespecified?",
+   "body": "A predetermined change control plan (PCCP) lets a manufacturer get approval in advance for planned updates, so they don't each need new FDA review. FDA asks how this could cover updates to generative models that can't be fully spelled out ahead of time."
+  },
+  "voluntary_model_files": {
+   "title": "Question 25",
+   "quote": "Would voluntary Foundation Model MAFs be practical for foundation model developers to provide and to keep current, and what content might they include?",
+   "body": "Companies that build the underlying AI models could voluntarily give FDA confidential information about their models in a master file (MAF), which device makers could then reference. Opposition usually meant calling for required disclosure instead."
+  }
+ },
+ "cat": {
+  "Device industry": {
+   "title": "Regulations.gov category: Device Industry",
+   "body": "Typically medical device manufacturers and developers, or people writing from that perspective. Commenters choose their own category from a list when they submit, and FDA does not publish definitions for these categories. This description is ours."
+  },
+  "Health professional": {
+   "title": "Regulations.gov category: Health Professional",
+   "body": "Typically clinicians and other health care workers. Commenters choose their own category from a list when they submit, and FDA does not publish definitions for these categories. This description is ours."
+  },
+  "Individual": {
+   "title": "Regulations.gov category: Individual Consumer",
+   "body": "People commenting in a personal capacity. Commenters choose their own category from a list when they submit, and FDA does not publish definitions for these categories. This description is ours."
+  },
+  "Private industry (non-device)": {
+   "title": "Regulations.gov category: Private Industry",
+   "body": "Companies outside the device industry, such as AI, software, and consulting firms. Commenters choose their own category from a list when they submit, and FDA does not publish definitions for these categories. This description is ours."
+  },
+  "Academia": {
+   "title": "Regulations.gov category: Academia",
+   "body": "Universities, research institutes, and academic researchers. Commenters choose their own category from a list when they submit, and FDA does not publish definitions for these categories. This description is ours."
+  },
+  "Health care association": {
+   "title": "Regulations.gov category: Health Care Association",
+   "body": "Professional and trade associations in health care. Commenters choose their own category from a list when they submit, and FDA does not publish definitions for these categories. This description is ours."
+  },
+  "Drug industry": {
+   "title": "Regulations.gov category: Drug Industry, Drug Association",
+   "body": "Pharmaceutical companies and associations. The two Regulations.gov categories are combined here. Commenters choose their own category from a list when they submit, and FDA does not publish definitions for these categories. This description is ours."
+  },
+  "Other": {
+   "title": "Regulations.gov category: Other Organizations",
+   "body": "Organizations that chose none of the more specific categories. Commenters choose their own category from a list when they submit, and FDA does not publish definitions for these categories. This description is ours."
+  },
+  "Government": {
+   "title": "Regulations.gov category: Federal Government",
+   "body": "Federal agencies or their staff. Commenters choose their own category from a list when they submit, and FDA does not publish definitions for these categories. This description is ours."
+  },
+  "International industry": {
+   "title": "Regulations.gov category: International Industry",
+   "body": "Companies based outside the United States. Commenters choose their own category from a list when they submit, and FDA does not publish definitions for these categories. This description is ours."
+  }
+ },
+ "theme": {
+  "Reliance, sycophancy, and affective harms": {
+   "body": "Users coming to depend on AI, AI telling users what they want to hear, and emotional harms."
+  },
+  "Hallucination and output reliability": {
+   "body": "Made-up or inconsistent output, and outputs that drift or change between runs."
+  },
+  "Runtime controls and kill switches": {
+   "body": "Controls that limit or stop a device while it runs, such as permission checks, hard limits, and off switches."
+  },
+  "Audit trails, provenance, and records": {
+   "body": "Records that show what a device did, with which model version, and based on what sources."
+  },
+  "Cybersecurity": {
+   "body": "Attacks on devices, including prompt injection, and the integrity of their inputs."
+  },
+  "Privacy and consent": {
+   "body": "Protecting patient data, limits on its use, and patient consent."
+  },
+  "Liability and accountability": {
+   "body": "Who is legally responsible when AI contributes to harm, and how accountability is enforced."
+  },
+  "Equity, access, and disability": {
+   "body": "Performance across populations, access to care, and users with disabilities."
+  },
+  "Human oversight and automation bias": {
+   "body": "Whether human review works in practice, including clinicians over-trusting AI and clinician workload."
+  },
+  "Small developer burden": {
+   "body": "Costs and requirements that fall hardest on small companies."
+  },
+  "Coverage and reimbursement": {
+   "body": "Insurance coverage and payment for AI-enabled care."
+  },
+  "Deployment settings and infrastructure": {
+   "body": "Where and how devices run, such as hospitals, homes, offline settings, and local validation."
+  },
+  "Transparency and public participation": {
+   "body": "Disclosure to patients and the public, labeling, and involving stakeholders in oversight."
+  },
+  "Regulatory process and harmonization": {
+   "body": "Regulatory pathways, standards, terminology, and coordination with other agencies and countries."
+  },
+  "Opposition to AI use": {
+   "body": "Objections to using generative AI in health care at all."
+  },
+  "Other": {
+   "body": "Specialty-specific or one-off topics that fit no other theme."
+  }
+ },
+ "stance": {
+  "support": {
+   "body": "Endorses the proposal as described, or with minor tweaks."
+  },
+  "conditional": {
+   "body": "Supports the proposal only with substantial conditions, limits, or safeguards the comment treats as necessary."
+  },
+  "oppose": {
+   "body": "Argues against the proposal, says it is insufficient or inappropriate, or calls for a materially different approach."
+  }
+ }
+}

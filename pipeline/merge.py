@@ -112,6 +112,7 @@ meta = {
     "sections": [{"key": s, "label": label} for s, label, _ in SECTIONS],
     "topics": [{"key": name} for name, _ in TOPICS if name in used] + ([{"key": "Other"}] if "Other" in used else []),
     "aria": aria,
+    "tips": json.load(open(os.path.join(HERE, "tooltips.json"))),
     "proposals": [{"key": k, "label": l, "desc": d} for k, l, d in PROPOSALS],
     "recs": RECS["groups"],
     "method": f"{len(out)} posted comments read in full, including attachments, and coded against the codebook. "
