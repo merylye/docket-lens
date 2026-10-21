@@ -739,7 +739,7 @@ function init() {
   document.addEventListener("keydown", e => { if (e.key === "Escape") document.querySelectorAll(".dd[open]").forEach(d => d.open = false); });
   const unread = D.filter(c => c.unreadable).length;
   const upd = new Date(META.updated).toLocaleDateString("en-US", { month: "long", day: "numeric", year: "numeric" });
-  document.getElementById("facts").innerHTML = `<span><b>${D.length + dupCount()}</b> comments posted, <b>${D.length}</b> after counting duplicate filings once</span><span>Last updated <b>${esc(upd)}</b></span>`;
+  document.getElementById("facts").innerHTML = `<span><b>${D.length + dupCount()}</b> comments posted</span><span>Last updated <b>${esc(upd)}</b></span>`;
   const ctl = document.querySelector(".controls"), setH = () => document.documentElement.style.setProperty("--ctl-h", ctl.offsetHeight + "px");
   setH(); if (window.ResizeObserver) new ResizeObserver(setH).observe(ctl);
   const side = document.getElementById("side"), wide = matchMedia("(min-width: 1100px)");
