@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-21T13:16:25.610025+00:00",
+ "updated": "2026-10-21T17:19:00.700738+00:00",
  "questions": [
   {
    "n": 1,
@@ -572,7 +572,7 @@
    "synthetic_data": {
     "title": "Question 12",
     "quote": "Where synthetically generated inputs supplement real patient data, how should sponsors account for differences between the synthetic and real-world distributions when estimating performance",
-    "body": "Using computer-generated test cases or simulated patients alongside real patient data when evaluating a device. Most comments accepted this only with safeguards, such as validating synthetic data against real data."
+    "body": "Using computer-generated test cases or simulated patients alongside real patient data when evaluating a device. Most comments accepted this only with safeguards, most often that synthetic data supplement real patient data and never replace it."
    },
    "median_clinician_comparator": {
     "title": "Question 14",
