@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-21T20:46:31.117404+00:00",
+ "updated": "2026-10-21T22:18:45.819508+00:00",
  "questions": [
   {
    "n": 1,
@@ -1147,7 +1147,7 @@
   "patient_facing_risk": [
    {
     "key": "noauto",
-    "label": "Do not treat patient facing as automatically higher risk"
+    "label": "Higher risk only in some cases, not automatically"
    },
    {
     "key": "safeguards",

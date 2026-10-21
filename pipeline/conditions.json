@@ -377,7 +377,7 @@
   "patient_facing_risk": [
    {
     "key": "noauto",
-    "label": "Do not treat patient facing as automatically higher risk"
+    "label": "Higher risk only in some cases, not automatically"
    },
    {
     "key": "safeguards",
