@@ -2,3 +2,4 @@ pipeline/raw/
 .env
 *.key
 .DS_Store
+pipeline/private/

@@ -475,7 +475,7 @@ function renderRowToggles(rows) {
 }
 function renderAddMenu() {
   const q = (document.getElementById("addSearch").value || "").trim().toLowerCase();
-  const list = D.filter(c => !q || (short(c.id) + " " + nameOf(c) + " " + c.commenter_type).toLowerCase().includes(q));
+  const list = D.filter(c => !c.hidden).filter(c => !q || (short(c.id) + " " + nameOf(c) + " " + c.commenter_type).toLowerCase().includes(q));
   const ariaOpt = (!q || "aria nsf ai research institute on interaction for ai assistants".includes(q)) ? `<label><input type="checkbox" data-id="ARIA" ${state.pinned.includes("ARIA") ? "checked" : ""}><span><span class="num">Pending</span> ARIA</span></label>` : "";
   const menu = document.getElementById("addMenu");
   menu.innerHTML = (list.length || ariaOpt) ? ariaOpt + list.map(c => `<label><input type="checkbox" data-id="${esc(c.id)}" ${state.pinned.includes(c.id) ? "checked" : ""}><span><span class="num">${esc(short(c.id))}</span> ${esc(nameOf(c))}</span></label>`).join("") : `<p class="note" style="margin:6px">No comments match.</p>`;
@@ -509,13 +509,15 @@ function renderTable() {
   let rows = D.filter(c => state.types.size === 0 || state.types.has(c.commenter_type));
   if (state.cat) rows = rows.filter(c => c.commenter_type === state.cat);
   if (state.sel) rows = rows.filter(c => itemsFor(c, state.sel.lens).includes(state.sel.key));
-  if (q) rows = rows.filter(c => [c.id, c.org, c.title, c.commenter_type, ...(c.topics || []), ...(c.tags || [])].join(" ").toLowerCase().includes(q));
+  if (q) rows = rows.filter(c => !c.hidden && [c.id, c.org, c.title, c.commenter_type, ...(c.topics || []), ...(c.tags || [])].join(" ").toLowerCase().includes(q));
+  const withheld = rows.filter(c => c.hidden).length; rows = rows.filter(c => !c.hidden);
   const note = document.getElementById("selNote"), clear = document.getElementById("clear");
   if (state.sel) {
     const it = catalog(state.sel.lens).find(i => i.key === state.sel.key);
     note.textContent = `${rows.length} comments${state.cat ? " from " + state.cat : ""} ${it && it.phrase ? it.phrase : "addressing " + (it ? it.label : state.sel.key)}`; clear.hidden = false;
   } else { note.textContent = `${rows.length} comments`; clear.hidden = state.types.size === 0; }
   if (state.types.size) note.textContent += ` · ${[...state.types].join(", ")}`;
+  if (withheld) note.textContent += ` · ${withheld} not shown at the author's request`;
   const a = META.aria, ariaText = ["aria", a.name, "academia", ...a.topics].join(" ").toLowerCase();
   const ariaShow = (!state.sel || ariaItems(state.sel.lens).includes(state.sel.key)) && (state.types.size === 0 || state.types.has("Academia")) && (!q || ariaText.includes(q));
   if (ariaShow) note.textContent = note.textContent.replace(/^\d+/, n => +n + 1);

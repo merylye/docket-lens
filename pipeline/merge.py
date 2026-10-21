@@ -54,6 +54,13 @@ aria = json.load(open(os.path.join(HERE, "aria.json")))
 codes2 = {r["id"]: r for f in sorted(glob.glob(os.path.join(HERE, "codes2", "*.json"))) for r in json.load(open(f))}
 recfile = os.path.join(HERE, "recommendations.json")
 RECS = json.load(open(recfile)) if os.path.exists(recfile) else {"groups": [], "map": {}}
+# Comments whose authors asked not to be used this way: kept in counts, shown with no card or identifying data.
+privfile = os.path.join(HERE, "private", "withheld.json")
+PRIV = json.load(open(privfile)) if os.path.exists(privfile) else {"codes": [], "codes2": [], "recs_map": {}, "no_card": []}
+for row in PRIV["codes"]: codes[row["id"]] = row
+for row in PRIV["codes2"]: codes2[row["id"]] = row
+RECS["map"].update(PRIV["recs_map"])
+NO_CARD = set(PRIV["no_card"])
 PROPOSALS = [
     ("risk_framework", "Two-axis risk framework", "FDA's framework rating risk by device activity and the consequence of relying on an incorrect output (Q1)"),
     ("competency_eval", "Benchmarks plus clinical confirmation", "Competency-based premarket evaluation: device benchmarking followed by clinical confirmation (Q7, Q9)"),
@@ -75,6 +82,14 @@ for cid, r in sorted(raw.items()):
     tags = c.get("emergent_topics") or []
     topics = sorted({t for t in map(topic_for, tags) if t})
     unmapped |= {t for t in tags if topic_for(t) == "Other"}
+    if cid in NO_CARD:
+        out.append({"id": f"withheld-{len([o for o in out if o.get('hidden')]) + 1}", "hidden": True,
+                    "commenter_type": c["commenter_type"], "type_inferred": False,
+                    "q_addr": sorted(set(c.get("questions_addressed") or [])), "q_cited": [],
+                    "topics": sorted({t for t in map(topic_for, c.get("emergent_topics") or []) if t}),
+                    "pos": {k: v for k, v in (codes2.get(cid, {}).get("positions") or {}).items() if v},
+                    "recs": RECS["map"].get(cid, []), "unreadable": False})
+        continue
     out.append({
         "id": cid, "title": r["title"], "category_raw": r["category"],
         "commenter_type": c["commenter_type"], "type_inferred": bool(c.get("type_inferred")),

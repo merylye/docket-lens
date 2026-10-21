@@ -971,6 +971,35 @@
   ]
  },
  {
+  "id": "withheld-1",
+  "hidden": true,
+  "commenter_type": "Drug industry",
+  "type_inferred": false,
+  "q_addr": [
+   1,
+   11
+  ],
+  "q_cited": [],
+  "topics": [
+   "Opposition to AI use",
+   "Other",
+   "Privacy and consent",
+   "Transparency and public participation"
+  ],
+  "pos": {
+   "risk_framework": "oppose",
+   "competency_eval": "conditional",
+   "confirmation_flex": "oppose",
+   "third_party": "support"
+  },
+  "recs": [
+   "prospective_outcomes",
+   "data_privacy",
+   "human_approval"
+  ],
+  "unreadable": false
+ },
+ {
   "id": "FDA-2026-N-7874-0020",
   "title": "Comment from Mark Simonian MD FAAP",
   "category_raw": "Health Professional - A0007",
