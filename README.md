@@ -6,59 +6,59 @@ Site: https://merylye.github.io/docket-lens/
 
 ## What the site shows
 
-**Position distribution.** Where commenters stood on 17 proposals in FDA's discussion paper, listed in the order of the docket questions they come from. Each bar's length shows how many comments gave a view on that proposal, and its segments show the share that supported it, supported it with conditions, or opposed it. A category view breaks this out by commenter category. Selecting a "support with conditions" segment opens the conditions those commenters attached, grouped and counted, and selecting a condition lists the comments that named it.
+**Position distribution.** Where commenters stood on 17 proposals from the discussion paper, in docket question order. Bar length shows how many comments gave a view, and the segments show support, support with conditions, and opposition. Selecting a "support with conditions" segment lists the conditions those commenters attached. A category view splits each proposal by commenter category.
 
-**Top recommendations.** The concrete asks that recurred across comments, grouped into 40 recommendations and ranked by how many comments made each, colored by commenter category.
+**Top recommendations.** The asks that recurred across comments, grouped into 40 recommendations and ranked by how many comments made each.
 
-**Coverage.** The share of comments addressing each part of the discussion paper. The Focus buttons switch between three views, and the heading changes to match (Coverage by question, by question group, or by theme):
+**Coverage.** The share of comments addressing each of the paper's 26 questions, its four question groups, or themes FDA's questions did not ask about. The Focus buttons switch between these views.
 
-- **Docket questions.** Which of the paper's 26 questions a comment substantively addressed, whether or not it cited them by number.
-- **Question groups.** The paper's four groups of questions: risk, premarket evaluation, postmarket monitoring, and other topics.
-- **Additional themes.** Topics commenters raised that none of FDA's questions asked about.
-
-**By category.** A grid of commenter categories against questions or question groups, shaded by the share of each category's comments that addressed each one. Rows can be turned on or off, and individual comments, including ARIA's, can be added as rows for comparison.
+**By category.** Commenter categories against questions or question groups, shaded by the share of each category's comments that addressed each one. Individual comments, including ARIA's, can be added as rows.
 
 **Commenter category.** How many comments came from each category.
 
-**Comments.** Every comment, with its commenter, category, date received, and the questions, question groups, and themes it covered. The list can be searched and sorted by date, name, or coverage. Selecting a bar, grid cell, or category filters the list.
+**Comments.** Every comment with its commenter, category, date, and coverage. Selecting anything in the charts filters this list.
+
+## How comments were coded
+
+All coding was done with Claude Opus 5.5, and every check was done by a separate instance of the same model. No codes have been checked by a person yet.
+
+- **Coverage and themes.** Each comment was read in full, including attachments, and coded against `pipeline/codebook.md`. A question counts as addressed when a comment discusses it substantively, cited or not.
+- **Positions.** Coded against `pipeline/codebook_positions.md`. Codes the first coder was unsure of went to two independent coders. Where they agreed, that code was used. Where they disagreed, the code is "support with conditions" if either said so and "no position" if either said no position. A blind recode of 15 random comments matched 97% of codes, or 92% of codes where either coder gave a stance (Cohen's kappa 0.95). Every mismatch was between support and support with conditions, or between support with conditions and no position.
+- **Conditions.** Each condition was extracted with the passage that states it and grouped within its proposal. A separate coder who saw only the passage and the group label rejected 10% of assignments. Rejected assignments, and groups named by fewer than three comments, count under "Other conditions."
+- **ARIA.** ARIA's comment was coded the same way, and each of its position markers links to a sentence from the submitted PDF. It appears on the site before it is posted to Regulations.gov.
+
+Coding is approximate. Check a comment's original text before quoting or citing it.
+
+## Counts and categories
+
+The docket has 129 posted comments. The charts count 127, because two documents were each filed twice (0102 and 0117, 0057 and 0058). Each is counted once under the earlier filing, whose card links to the second.
+
+One commenter asked that their comment not be used this way. It is counted in the charts but has no card, and its coding is kept in `pipeline/private/`, which is not committed.
+
+Categories come from Regulations.gov. Comments filed without one were assigned a category from their content and are marked "inferred." A few comments are filed under a category that does not match their content, and the site keeps the filed category.
 
 ## Repository layout
 
 | Path | What it is |
 | --- | --- |
 | `index.html` | The site. Static, no build step. |
-| `data/comments.json`, `data/meta.json` | The data the site reads, generated by `pipeline/merge.py`. |
-| `pipeline/codebook.md` | The rules every comment was coded against. |
-| `pipeline/codes/*.json` | One coded record per comment: questions, themes, and category. |
-| `pipeline/codebook_positions.md` | The rules for coding positions and recommendations. |
-| `pipeline/codes2/*.json` | Each comment's positions on FDA's proposals and its recommendations. |
-| `pipeline/recommendations.json` | The 40 recommendation groups and which comments made each. |
-| `pipeline/recommendations_audit.tsv` | Every extracted recommendation and the group it was assigned to, for checking. |
-| `pipeline/conditions.json` | The conditions attached to each "support with conditions" code, grouped by proposal. |
-| `pipeline/aria.json` | ARIA's comment, coded the same way. It appears on the site before it is posted to Regulations.gov. |
-| `pipeline/pull.py` | Downloads comment text and metadata from the Regulations.gov API. |
+| `data/` | The data the site reads, generated by `pipeline/merge.py`. |
+| `pipeline/codebook.md`, `pipeline/codes/` | Coverage and theme rules, and one coded record per comment. |
+| `pipeline/codebook_positions.md`, `pipeline/codes2/` | Position and recommendation rules, and each comment's positions and recommendations. |
+| `pipeline/recommendations.json`, `pipeline/recommendations_audit.tsv` | The 40 recommendation groups, and every extracted recommendation with its group. |
+| `pipeline/conditions.json` | The conditions behind each "support with conditions" code, grouped by proposal. |
+| `pipeline/aria.json` | ARIA's comment, coded the same way. |
+| `pipeline/tooltips.py` | FDA's question text and the explanations shown in tooltips. |
+| `pipeline/merge.py` | Joins the raw comments with the codes and writes `data/`. Duplicate filings are listed in `DUPLICATES`. |
+| `pipeline/pull.py` | Downloads comments from the Regulations.gov API. |
 | `pipeline/check_new.py`, `pipeline/known_comments.txt` | The daily check for new comments, and hashed IDs of comments already on the site. |
-| `pipeline/merge.py` | Joins the raw comments with the codes, groups theme tags, and writes `data/`. |
 
 ## Updating
 
-FDA posts comments after review, so the docket keeps growing after the comment period closes. A GitHub Action (`.github/workflows/check-new-comments.yml`) checks the docket daily through November 21, 2026, and opens an issue listing any comments that are posted but not yet on the site. It needs the API key saved as a repository secret named `REGULATIONS_GOV_API_KEY`.
+FDA posts comments after review, so the docket can keep growing. A GitHub Action checks it daily through November 21, 2026, and opens a "New comments to code" issue when it finds any. It reads the API key from a repository secret named `REGULATIONS_GOV_API_KEY` (free at [api.data.gov/signup](https://api.data.gov/signup)).
 
-1. Get a free API key at [api.data.gov/signup](https://api.data.gov/signup).
-2. Run `REGULATIONS_GOV_API_KEY=... python pipeline/pull.py` to download every posted comment into `pipeline/raw/`, which is not committed.
-3. Code any new comments against `pipeline/codebook.md` and `pipeline/codebook_positions.md`, add them to `pipeline/codes/` and `pipeline/codes2/`, and assign their recommendations to groups in `pipeline/recommendations.json`. Attachments are hosted on `downloads.regulations.gov`, which blocks many cloud servers, so read them from a normal browser. Scanned attachments need OCR.
-4. Run `python pipeline/merge.py` to regenerate `data/`. New theme tags that match no group show up in its output as "Other"; add a pattern in `TOPICS` if they deserve their own group.
-5. Run `REGULATIONS_GOV_API_KEY=... python pipeline/check_new.py --update` so the daily check treats the new comments as known.
-6. Commit and push. GitHub Pages republishes the site, and you can close the open "New comments to code" issue.
-
-## Caveats
-
-One commenter asked that their comment not be used this way. It is counted in the charts but has no card, and its coding is kept in `pipeline/private/`, which is not committed. Running `merge.py` without that folder leaves it out of the counts.
-
-Two documents were each filed twice (0102 and 0117; 0057 and 0058). Each is counted once, under the earlier filing, whose card links to the second (`DUPLICATES` in `merge.py`).
-
-Positions were coded with Claude Opus 5.5. Codes the first coder was unsure of were recoded by two independent coders: where they agreed, that code was used; where they disagreed, the code is "conditional" if either said conditional and "no position" if either said no position. A blind recode of 15 randomly drawn comments matched the other codes on 92% of the codes where either coder gave a stance (97% of all codes, Cohen's kappa 0.95). Every mismatch was between support and conditional, or between conditional and no position.
-
-Conditions were extracted from each comment with the passage that states them, grouped within each proposal, and then checked by a separate coder who saw only the passage and the group label. The 10% of assignments that coder rejected are counted under "Other conditions," and groups named by fewer than three comments were folded into it.
-
-Coding is approximate. Check a comment's original text before quoting or citing it. Commenter categories come from Regulations.gov; comments filed without a category were assigned one from their content and are marked "inferred." Some comments are filed under a category that does not match their content, and the site keeps the filed category.
+1. Run `REGULATIONS_GOV_API_KEY=... python pipeline/pull.py` to download comments into `pipeline/raw/`, which is not committed.
+2. Code new comments against both codebooks and add them to `pipeline/codes/`, `pipeline/codes2/`, `pipeline/recommendations.json`, and `pipeline/conditions.json`. Attachments on `downloads.regulations.gov` block many cloud servers, so read them from a normal browser. Scanned attachments need OCR.
+3. Run `python pipeline/merge.py`. Theme tags that match no group print as "Other". Add a pattern to `TOPICS` if they deserve their own group.
+4. Run `REGULATIONS_GOV_API_KEY=... python pipeline/check_new.py --update` so the daily check treats them as known.
+5. Commit and push. GitHub Pages republishes the site. Close the open issue.
