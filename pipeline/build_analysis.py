@@ -38,6 +38,9 @@ s = swap(s, '</div>\n      <div class="facet"><span>Additional themes</span>${th
 
 s = swap(s, "[c.id, c.org, c.title, c.commenter_type, ...(c.topics || []), ...(c.tags || [])]", "[c.id, c.org, c.title, c.commenter_type]")
 
+s = swap(s, "<p>Coding is approximate and was done with Claude Opus 5.5. Check a comment's original text before quoting or citing it.</p>",
+         "<p>This page is exploratory and is not legal or regulatory advice. Positions and summaries were coded with AI assistance and may contain errors. Read the original comments before relying on any finding.</p>")
+
 # Recommendation grouping only partly fit its labels in 24% of a checked sample.
 s = swap(s, "Number of comments making each recommendation. Select a row to view comments", "Number of comments making each recommendation. Counts are approximate. Select a row to view comments")
 
