@@ -6,7 +6,7 @@ Site: https://merylye.github.io/docket-lens/
 
 ## What the site shows
 
-**Position distribution.** Where commenters stood on nine proposals in FDA's discussion paper. Each bar's length shows how many comments gave a view on that proposal, and its segments show the share that supported it, supported it with conditions, or opposed it. A category view breaks this out by commenter category, and adding ARIA through "Add comments" shows ARIA's stance beside each proposal.
+**Position distribution.** Where commenters stood on nine proposals in FDA's discussion paper. Each bar's length shows how many comments gave a view on that proposal, and its segments show the share that supported it, supported it with conditions, or opposed it. A category view breaks this out by commenter category.
 
 **Top recommendations.** The concrete asks that recurred across comments, grouped into 40 recommendations and ranked by how many comments made each, colored by commenter category.
 
