@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-21T10:30:50.157301+00:00",
+ "updated": "2026-10-21T10:32:22.017695+00:00",
  "questions": [
   {
    "n": 1,
@@ -266,7 +266,7 @@
   "positions": {
    "risk_framework": "conditional",
    "competency_eval": "conditional",
-   "confirmation_flex": "conditional",
+   "confirmation_flex": null,
    "synthetic_data": "conditional",
    "third_party": "support",
    "postmarket_tradeoff": "conditional",
@@ -294,9 +294,6 @@
    ],
    "competency_eval": [
     "We support benchmarking followed by clinical confirmation (Q7), with two additions for conversational devices."
-   ],
-   "confirmation_flex": [
-    "Before authorization, the FDA should require evidence from actual use over a set period (Q8). A study of isolated encounters cannot show that a device is safe and effective for sustained use."
    ],
    "synthetic_data": [
     "Sponsors should justify the type of synthetic data they use and validate synthetic users against human data (Q13)."
@@ -327,7 +324,6 @@
   "pos": {
    "risk_framework": "conditional",
    "competency_eval": "conditional",
-   "confirmation_flex": "conditional",
    "synthetic_data": "conditional",
    "third_party": "support",
    "postmarket_tradeoff": "conditional",
