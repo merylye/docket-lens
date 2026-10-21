@@ -70,7 +70,7 @@
   "postmarket_tradeoff": "conditional",
   "supervisory_agents": "conditional",
   "flexible_change_control": null,
-  "voluntary_model_files": "oppose",
+  "voluntary_model_files": "conditional",
   "directiveness_continuum": "support",
   "patient_facing_risk": null,
   "trajectory_risk": "support",
@@ -114,7 +114,8 @@
    "Automated monitoring systems should be validated before their results are relied on (Q20)."
   ],
   "voluntary_model_files": [
-   "Voluntary Foundation Model Master Files would support review, but voluntary disclosure alone is not enough."
+   "Voluntary Foundation Model Master Files would support review, but voluntary disclosure alone is not enough.",
+   "Where a developer will not disclose safety-relevant information or commit to advance notice of updates, the FDA should require the manufacturer to make up for it through more extensive testing and monitoring."
   ],
   "directiveness_continuum": [
    "The FDA should not treat disclaimers as sufficient mitigation when assessing whether a response is action-directing, and should require evidence that intended users understand the device’s responses (Q2)."
