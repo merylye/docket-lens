@@ -422,7 +422,7 @@ function renderRecs() {
     const y = i * rh, on = state.sel && state.sel.lens === "recs" && state.sel.key === r.key;
     out.push(`<g class="row${on ? " on" : ""}" data-key="${esc(r.key)}" tabindex="0" role="button" aria-label="${esc(r.label)}: ${r.n} comments">
       <rect class="hit" x="0" y="${y}" width="${W}" height="${rh}" fill="transparent"></rect>
-      <text x="0" y="${y + 16}" font-size="14" font-weight="500" fill="#111111" ${ff} data-tip="rec:${esc(r.key)}" data-icon="1">${esc(r.label)}${aria && aria.has(r.key) ? '<tspan font-weight="700" fill="#00848a">  · also ARIA</tspan>' : ""}</text>`);
+      <text x="0" y="${y + 16}" font-size="14" font-weight="500" fill="#111111" ${ff} data-tip="rec:${esc(r.key)}" data-icon="1">${esc(r.label)}${aria && aria.has(r.key) ? '<tspan font-weight="700" fill="#00848a"> *</tspan>' : ""}</text>`);
     let x = lw;
     [...r.by, r.other].forEach((v, j) => { if (!v) return; const ww = v / max * bw; out.push(`<rect x="${x}" y="${y + 23}" width="${ww}" height="14" fill="${j < 4 ? DOT[j] : "#e6e6e6"}" stroke="${on ? "#00dfe9" : "none"}" stroke-width="2"><title>${j < 4 ? cats[j] : "Other categories"}: ${v}</title></rect>`); x += ww; });
     out.push(`<text x="${x + 8}" y="${y + 35}" font-size="13" fill="#111111" ${ff} style="font-variant-numeric:tabular-nums">${r.n}</text></g>`);
@@ -430,7 +430,7 @@ function renderRecs() {
   el.innerHTML = rows.length ? `<svg viewBox="0 0 ${W} ${rows.length * rh}" width="100%">${out.join("")}</svg>` : `<p class="empty">No recommendations in this selection.</p>`;
   el.querySelectorAll(".row").forEach(g => bindPick(g, () => toggleSel(g.dataset.key, null, "recs")));
   addIcons(el);
-  document.getElementById("recLegend").innerHTML = cats.map((t, j) => `<span><i class="sw" style="background:${DOT[j]}"></i>${esc(t)}</span>`).join("") + `<span><i class="sw" style="background:#e6e6e6"></i>Other categories</span><span>Number of comments making each recommendation. Select a row to view comments</span>`;
+  document.getElementById("recLegend").innerHTML = cats.map((t, j) => `<span><i class="sw" style="background:${DOT[j]}"></i>${esc(t)}</span>`).join("") + `<span><i class="sw" style="background:#e6e6e6"></i>Other categories</span><span style="flex-basis:100%;display:block">Number of comments making each recommendation. Select a row to view comments${aria ? '<br><b style="color:#00848a">*</b> indicates ARIA made this recommendation. No asterisk does not mean ARIA opposed it.' : ""}</span>`;
   const more = document.getElementById("recMore"); more.hidden = total <= 15; more.textContent = state.recAll ? "Show top 15" : `Show all ${total} recommendations`;
 }
 
