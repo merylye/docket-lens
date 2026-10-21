@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-21T10:35:20.012252+00:00",
+ "updated": "2026-10-21T10:37:14.707578+00:00",
  "questions": [
   {
    "n": 1,
@@ -604,7 +604,7 @@
   },
   {
    "key": "supervisory_agents",
-   "label": "AI monitoring AI after release",
+   "label": "Agentic monitoring of devices after release",
    "desc": "Machine-based supervisory agents for postmarket monitoring (Q20)"
   },
   {

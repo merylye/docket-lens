@@ -68,7 +68,7 @@ PROPOSALS = [
     ("synthetic_data", "Synthetic data in evaluation", "Using synthetic data to supplement real-world data (Q12, Q13)"),
     ("third_party", "Independent third-party evaluation", "Involving independent third parties in benchmarking or clinical confirmation (Q16)"),
     ("postmarket_tradeoff", "Less premarket, more postmarket", "Accepting more premarket uncertainty in exchange for stronger postmarket monitoring (Q18)"),
-    ("supervisory_agents", "AI monitoring AI after release", "Machine-based supervisory agents for postmarket monitoring (Q20)"),
+    ("supervisory_agents", "Agentic monitoring of devices after release", "Machine-based supervisory agents for postmarket monitoring (Q20)"),
     ("flexible_change_control", "Flexible change control", "Adapting PCCPs or other change control for modifications that cannot be fully prespecified (Q22, Q23)"),
     ("voluntary_model_files", "Voluntary foundation model disclosure", "Relying on voluntary Foundation Model Master Files from model developers (Q25)"),
 ]
