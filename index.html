@@ -184,7 +184,7 @@ footer p { margin: 0; }
   </section>
 
   <section>
-    <h2>Overview</h2>
+    <h2 id="covTitle">Coverage by question</h2>
     <div class="panel">
       <div class="legend">
         <span>Select a row to view comments</span>
@@ -373,6 +373,7 @@ function renderRecs() {
 
 /* Main chart */
 function renderMain() {
+  document.getElementById("covTitle").textContent = { questions: "Coverage by question", sections: "Coverage by question group", topics: "Coverage by theme" }[state.lens];
   const t = {
     questions: ["Share of comments addressing each question", "A comment counts toward a question if it discusses that question substantively (at least a paragraph or a concrete recommendation), whether or not it cites the question number."],
     sections: ["Share of comments addressing each section", "A comment counts toward a section if it substantively addresses any question in it."],
