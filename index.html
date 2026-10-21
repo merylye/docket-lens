@@ -180,7 +180,7 @@ svg .infoi:hover circle, svg .infoi:focus circle, .ic:hover, .ic:focus { stroke:
       <span><i class="sw" style="background:#00848a"></i>Support<span class="ic" tabindex="0" role="button" aria-label="What counts as support" data-tip="stance:support">i</span></span>
       <span><i class="sw" style="background:#bbbbbb"></i>Support with conditions<span class="ic" tabindex="0" role="button" aria-label="What counts as support with conditions" data-tip="stance:conditional">i</span></span>
       <span><i class="sw" style="background:#111111"></i>Oppose<span class="ic" tabindex="0" role="button" aria-label="What counts as oppose" data-tip="stance:oppose">i</span></span>
-      <span id="ariaMark" hidden><svg width="14" height="10" aria-hidden="true"><path d="M 1 1 L 13 1 L 7 9 Z" fill="#00dfe9" stroke="#111111" stroke-width="1.2"></path></svg>ARIA's position</span>
+      <span id="ariaMark" hidden><svg width="14" height="10" aria-hidden="true"><path d="M 1 1 L 13 1 L 7 9 Z" fill="#00dfe9"></path></svg>ARIA's position</span>
       <span id="posNote" style="flex-basis:100%;display:block">Bar length indicates how many comments gave a view on each proposal. Percentages are calculated from only those comments.<br>Select a segment to view comments</span>
     </div>
     <div class="chart" id="pos"></div>
@@ -385,10 +385,10 @@ function renderPos() {
         const order = ["support", "conditional", "oppose"], k = order.indexOf(v);
         let start = 0; for (let j = 0; j < k; j++) start += n[order[j]];
         const cx = lw + (start + n[v] / 2) / n.total * len, top = y - 3;
-        out.push(`<path d="M ${cx - 6} ${top} L ${cx + 6} ${top} L ${cx} ${top + 8} Z" fill="#00dfe9" stroke="#111111" stroke-width="1.2"><title>ARIA: ${STANCE[v]}</title></path>`);
+        out.push(`<path d="M ${cx - 6} ${top} L ${cx + 6} ${top} L ${cx} ${top + 8} Z" fill="#00dfe9"><title>ARIA: ${STANCE[v]}</title></path>`);
       }
     });
-    el.innerHTML = `<svg viewBox="0 0 ${W} ${props.length * rh}" width="100%">${out.join("")}</svg>`;
+    el.innerHTML = `<svg viewBox="0 -10 ${W} ${props.length * rh + 10}" width="100%">${out.join("")}</svg>`;
   } else {
     let cats = state.types.size ? [...state.types] : [...new Set(readable().map(c => c.commenter_type))].map(t => [t, readable().filter(c => c.commenter_type === t).length]).sort((a, b) => b[1] - a[1]).slice(0, 4).map(x => x[0]);
     const cols = [{ label: "All", pool: filtered() }, ...cats.map(t => ({ label: t, pool: readable().filter(c => c.commenter_type === t) }))];
