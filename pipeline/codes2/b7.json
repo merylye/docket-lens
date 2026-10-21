@@ -156,7 +156,7 @@
   "id": "FDA-2026-N-7874-0080",
   "positions": {
    "risk_framework": "support",
-   "directiveness_continuum": "conditional",
+   "directiveness_continuum": null,
    "patient_facing_risk": "oppose",
    "trajectory_risk": null,
    "escalation_errors": null,
@@ -244,7 +244,7 @@
   "id": "FDA-2026-N-7874-0058",
   "positions": {
    "risk_framework": "conditional",
-   "directiveness_continuum": "conditional",
+   "directiveness_continuum": "support",
    "patient_facing_risk": null,
    "trajectory_risk": null,
    "escalation_errors": null,

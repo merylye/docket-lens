@@ -393,7 +393,7 @@ function renderPos() {
   const el = document.getElementById("pos"), out = [], props = META.proposals;
   const cwid = el.clientWidth || 900, aria = state.pinned.includes("ARIA") ? META.aria.pos || {} : null;
   if (state.posView === "all") {
-    const pool = filtered(), W = Math.max(560, cwid), lw = Math.min(Math.round(W * .42), labelW(props)), nw = 130, aw = 0, bw = W - lw - nw - 10, rh = 34;
+    const pool = filtered(), W = Math.max(560, cwid), lw = Math.min(Math.round(W * .46), labelW(props)), nw = 130, aw = 0, bw = W - lw - nw - 10, rh = 34;
     const maxT = Math.max(1, ...props.map(p => stanceCounts(pool, p.key).total));
     props.forEach((p, i) => {
       const y = i * rh, n = stanceCounts(pool, p.key);
