@@ -87,7 +87,7 @@
     document.getElementById("view-findings").innerHTML = `<div class="af">
       <section class="intro"><p>This page summarizes the public comments on FDA's discussion paper. Each comment counts once, so the numbers show how many comments took a view, not how many people hold it. Most commenters build or deploy devices. Coding was done by AI and has not been checked by a person.</p></section>
       <section><h2>Commenters</h2><div class="cards"><div class="card" style="grid-column:1/-1">
-        <p style="margin:0">Of the ${rows.length} comments, ${gN.map(([g, n], i) => `${esc(g).toLowerCase()} filed ${n}`).join(", ").replace(/, ([^,]*)$/, ", and $1")}. Industry here means device makers, drug makers, other private companies, and international industry.</p>
+        <p style="margin:0">Of the ${rows.length} comments, ${gN.map(([g, n]) => `${n} came from ${esc(g).toLowerCase()}`).join("; ")}. Industry here means device makers, drug makers, other private companies, and international industry.</p>
         <div class="cats">${catRows.map(([t, n]) => `<div class="row"><span class="lab">${esc(t)}</span>${lbar(n, rows.length)}<span class="num">${n}</span></div>`).join("")}</div>
         <p class="note">Categories are as filed on Regulations.gov. Some comments are filed under a category that does not match their content, so these shares are approximate.</p><p class="note">Every count on this page treats each comment as one, whatever its length or who filed it. A view shared by many industry comments can look like consensus, so consensus rows also show industry and everyone else separately.</p>
       </div></div></section>
