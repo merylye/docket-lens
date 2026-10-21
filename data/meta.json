@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-21T10:37:14.707578+00:00",
+ "updated": "2026-10-21T10:50:50.877919+00:00",
  "questions": [
   {
    "n": 1,
@@ -272,7 +272,15 @@
    "postmarket_tradeoff": "conditional",
    "supervisory_agents": "conditional",
    "flexible_change_control": null,
-   "voluntary_model_files": "oppose"
+   "voluntary_model_files": "oppose",
+   "directiveness_continuum": "conditional",
+   "patient_facing_risk": null,
+   "trajectory_risk": "support",
+   "escalation_errors": "conditional",
+   "median_clinician_comparator": "conditional",
+   "no_care_comparator": "conditional",
+   "postmarket_methods": "conditional",
+   "agentic_oversight": null
   },
   "recommendations": [
    "Add anticipated patterns of use as a risk factor",
@@ -309,6 +317,25 @@
    ],
    "voluntary_model_files": [
     "Voluntary Foundation Model Master Files would support review, but voluntary disclosure alone is not enough."
+   ],
+   "directiveness_continuum": [
+    "The FDA should not treat disclaimers as sufficient mitigation when assessing whether a response is action-directing, and should require evidence that intended users understand the device\u2019s responses (Q2)."
+   ],
+   "trajectory_risk": [
+    "Safety benchmarks should evaluate conversational trajectories (Q5)."
+   ],
+   "escalation_errors": [
+    "Sponsors of care escalation functions should report both under- and over-escalation and show that referrals work for the intended population (Q3, Q6)."
+   ],
+   "median_clinician_comparator": [
+    "When clinicians serve as the comparator, sponsors should report performance against both the standard of care and the median clinician the intended population would realistically see, and the FDA should set acceptance criteria against the standard of care for devices people are expected to rely on heavily."
+   ],
+   "no_care_comparator": [
+    "The FDA should only allow sponsors to compare a device against delayed care or no care when they show with population-level data, such as coverage, cost, or waitlist data, that this is what intended users would otherwise receive (Q15)."
+   ],
+   "postmarket_methods": [
+    "Postmarket monitoring should combine user reports with clinician review that protects privacy (Q19).",
+    "Re-benchmarking can detect degradation against the capabilities measured before authorization, but it can miss problems that arise when the deployment context changes."
    ]
   },
   "topics": [
@@ -324,7 +351,13 @@
    "third_party": "support",
    "postmarket_tradeoff": "conditional",
    "supervisory_agents": "conditional",
-   "voluntary_model_files": "oppose"
+   "voluntary_model_files": "oppose",
+   "directiveness_continuum": "conditional",
+   "trajectory_risk": "support",
+   "escalation_errors": "conditional",
+   "median_clinician_comparator": "conditional",
+   "no_care_comparator": "conditional",
+   "postmarket_methods": "conditional"
   },
   "recs": [
    "multi_turn",
@@ -468,6 +501,26 @@
     "quote": "Does the two-axis risk framework, organized around device activity and the consequence of relying on an incorrect output, appropriately capture the dimensions most relevant to the risk of a GenAI-enabled software function?",
     "body": "FDA proposes rating risk on two dimensions. One is how much the device does on its own, from giving information, to directing action, to acting autonomously. The other is how much harm would follow from relying on a wrong output. Most comments that supported it with conditions wanted more dimensions added."
    },
+   "directiveness_continuum": {
+    "title": "Question 2",
+    "quote": "What additional information would provide manufacturers with sufficient clarity and predictability around risk assessment for informational functions while recognizing that directiveness may exist along a continuum rather than as a binary distinction?",
+    "body": "FDA suggests that how strongly an output steers a user toward an action is a matter of degree, and that features such as wording, specificity, and personalization could raise or lower the risk of an informational function."
+   },
+   "patient_facing_risk": {
+    "title": "Question 3",
+    "quote": "CDRH seeks input on whether and when a GenAI-enabled function that results in delivery of clinical information to patients, as opposed to HCPs, could present different or higher risks, while also recognizing the potential benefits associated with improved patient empowerment, engagement, and access to clinical information.",
+    "body": "Whether a device that gives clinical information directly to patients, who may not be able to judge whether it is right, should be treated as riskier than one used by clinicians, and what safeguards would help without underestimating patients."
+   },
+   "trajectory_risk": {
+    "title": "Question 5",
+    "quote": "For multi-turn conversational GenAI-enabled devices that may migrate from providing \u201cnon-directive\u201d information to \u201caction-directing\u201d information over the course of an exchange, how should risk be assessed across realistic conversational trajectories?",
+    "body": "Judging a conversational device by how whole conversations unfold, since a chat that starts with general information can drift toward telling the user what to do, instead of judging each response on its own."
+   },
+   "escalation_errors": {
+    "title": "Question 6",
+    "quote": "For GenAI-enabled care escalation functions, CDRH is considering how the evaluation may account for both under-escalation and over-escalation.",
+    "body": "For devices that decide when to send a user to a clinician or emergency care, measuring both failures to escalate when needed and escalations that were not needed, and weighing the two by clinical context."
+   },
    "competency_eval": {
     "title": "Question 7",
     "quote": "Is the competency-based approach described above, i.e., device benchmarking followed by clinical confirmation, a useful and appropriate framework for evaluating GenAI-enabled devices?",
@@ -483,6 +536,16 @@
     "quote": "Where synthetically generated inputs supplement real patient data, how should sponsors account for differences between the synthetic and real-world distributions when estimating performance",
     "body": "Using computer-generated test cases or simulated patients alongside real patient data when evaluating a device. Most comments accepted this only with safeguards, such as validating synthetic data against real data."
    },
+   "median_clinician_comparator": {
+    "title": "Question 14",
+    "quote": "When a panel of qualified clinicians serves as the comparator, how should the applicable standard (for example, the standard of care versus the performance of a median clinician in practice) be defined and justified?",
+    "body": "Whether a device should be compared with what a typical clinician actually does in practice, or only with the standard of care. Supporting comments accepted the typical clinician as the benchmark. Opposing comments held devices to the standard of care or to expert performance."
+   },
+   "no_care_comparator": {
+    "title": "Question 15",
+    "quote": "Are there ways in which performance might be assessed relative to the care, technology, or course of action likely to occur in the absence of the device, rather than to the comparators described in this section?",
+    "body": "Comparing a device with what patients would likely get without it, such as unaided judgment, a long wait for a specialist, or no care at all, instead of with clinicians."
+   },
    "third_party": {
     "title": "Question 16",
     "quote": "Should independent third parties be involved in some or all aspects of a competency-based approach, including device benchmarking and clinical confirmation?",
@@ -492,6 +555,11 @@
     "title": "Question 18",
     "quote": "CDRH is considering whether it may be appropriate to accept greater premarket uncertainty regarding a GenAI-enabled device\u2019s benefit-risk profile through greater reliance on postmarket monitoring.",
     "body": "Letting a device reach the market with less evidence up front, in exchange for closer monitoring after release. Most comments accepted this only for limited cases with strong monitoring in place."
+   },
+   "postmarket_methods": {
+    "title": "Question 19",
+    "quote": "Please comment on the potential approaches to postmarket performance evaluation, including periodic re-benchmarking, sample-based clinician review, and performance degradation monitoring.",
+    "body": "FDA's proposed ways of checking a device after release: rerunning benchmarks periodically, having clinicians review a sample of outputs, and watching for declines in performance."
    },
    "supervisory_agents": {
     "title": "Question 20",
@@ -507,6 +575,11 @@
     "title": "Question 25",
     "quote": "Would voluntary Foundation Model MAFs be practical for foundation model developers to provide and to keep current, and what content might they include?",
     "body": "Companies that build the underlying AI models could voluntarily give FDA confidential information about their models in a master file (MAF), which device makers could then reference. Opposition usually meant calling for required disclosure instead."
+   },
+   "agentic_oversight": {
+    "title": "Question 26",
+    "quote": "How should the elevated risk associated with autonomous multi-step action, tool use, and reduced opportunity for human review be reflected in acceptance criteria and oversight?",
+    "body": "Whether devices that act on their own across several steps, use other software tools, or leave less room for human review should face stricter acceptance criteria and oversight than other generative AI devices."
    }
   },
   "theme": {
@@ -578,6 +651,26 @@
    "desc": "FDA's framework rating risk by device activity and the consequence of relying on an incorrect output (Q1)"
   },
   {
+   "key": "directiveness_continuum",
+   "label": "Directiveness as a continuum",
+   "desc": "Treating how directive an output is as a matter of degree, with wording and personalization as risk modifiers (Q2)"
+  },
+  {
+   "key": "patient_facing_risk",
+   "label": "Higher risk for patient-facing use",
+   "desc": "Treating clinical information delivered to patients, rather than clinicians, as potentially higher risk (Q3)"
+  },
+  {
+   "key": "trajectory_risk",
+   "label": "Risk across whole conversations",
+   "desc": "Assessing multi-turn devices across realistic conversational trajectories (Q5)"
+  },
+  {
+   "key": "escalation_errors",
+   "label": "Counting under- and over-escalation",
+   "desc": "Evaluating care escalation for both under-escalation and over-escalation (Q6)"
+  },
+  {
    "key": "competency_eval",
    "label": "Benchmarks with clinical confirmation",
    "desc": "Competency-based premarket evaluation: device benchmarking followed by clinical confirmation (Q7, Q9)"
@@ -593,6 +686,16 @@
    "desc": "Using synthetic data to supplement real-world data (Q12, Q13)"
   },
   {
+   "key": "median_clinician_comparator",
+   "label": "Typical clinician as comparator",
+   "desc": "Accepting a median clinician's performance in practice, not only the standard of care, as the comparator (Q14)"
+  },
+  {
+   "key": "no_care_comparator",
+   "label": "Comparing with no or delayed care",
+   "desc": "Assessing performance against what would likely happen without the device (Q15)"
+  },
+  {
    "key": "third_party",
    "label": "Independent third-party evaluation",
    "desc": "Involving independent third parties in benchmarking or clinical confirmation (Q16)"
@@ -601,6 +704,11 @@
    "key": "postmarket_tradeoff",
    "label": "Less premarket, more postmarket",
    "desc": "Accepting more premarket uncertainty in exchange for stronger postmarket monitoring (Q18)"
+  },
+  {
+   "key": "postmarket_methods",
+   "label": "Re-benchmarking and clinician review after release",
+   "desc": "Periodic re-benchmarking, sample-based clinician review, and degradation monitoring (Q19)"
   },
   {
    "key": "supervisory_agents",
@@ -616,6 +724,11 @@
    "key": "voluntary_model_files",
    "label": "Voluntary foundation model disclosure",
    "desc": "Relying on voluntary Foundation Model Master Files from model developers (Q25)"
+  },
+  {
+   "key": "agentic_oversight",
+   "label": "Stricter oversight for agentic devices",
+   "desc": "Stricter acceptance criteria and oversight for devices that act autonomously across steps (Q26)"
   }
  ],
  "recs": [

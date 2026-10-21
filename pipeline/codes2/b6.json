@@ -2,15 +2,23 @@
  {
   "id": "FDA-2026-N-7874-0113",
   "positions": {
-   "risk_framework": "conditional",
+   "risk_framework": null,
+   "directiveness_continuum": "conditional",
+   "patient_facing_risk": "conditional",
+   "trajectory_risk": null,
+   "escalation_errors": "support",
    "competency_eval": "conditional",
-   "confirmation_flex": "conditional",
+   "confirmation_flex": null,
    "synthetic_data": "conditional",
+   "median_clinician_comparator": "conditional",
+   "no_care_comparator": "conditional",
    "third_party": "support",
    "postmarket_tradeoff": "oppose",
+   "postmarket_methods": "conditional",
    "supervisory_agents": "conditional",
-   "flexible_change_control": "conditional",
-   "voluntary_model_files": "oppose"
+   "flexible_change_control": null,
+   "voluntary_model_files": "oppose",
+   "agentic_oversight": "conditional"
   },
   "recommendations": [
    "Establish clinical association before analytical benchmarking",
@@ -29,14 +37,22 @@
   "id": "FDA-2026-N-7874-0022",
   "positions": {
    "risk_framework": null,
+   "directiveness_continuum": null,
+   "patient_facing_risk": null,
+   "trajectory_risk": null,
+   "escalation_errors": null,
    "competency_eval": null,
    "confirmation_flex": null,
    "synthetic_data": null,
+   "median_clinician_comparator": null,
+   "no_care_comparator": null,
    "third_party": null,
    "postmarket_tradeoff": null,
+   "postmarket_methods": null,
    "supervisory_agents": null,
    "flexible_change_control": null,
-   "voluntary_model_files": null
+   "voluntary_model_files": null,
+   "agentic_oversight": null
   },
   "recommendations": [
    "Hold device developers and sellers legally liable for failures",
@@ -48,14 +64,22 @@
   "id": "FDA-2026-N-7874-0061",
   "positions": {
    "risk_framework": null,
-   "competency_eval": "support",
+   "directiveness_continuum": null,
+   "patient_facing_risk": null,
+   "trajectory_risk": null,
+   "escalation_errors": null,
+   "competency_eval": null,
    "confirmation_flex": null,
    "synthetic_data": null,
+   "median_clinician_comparator": null,
+   "no_care_comparator": null,
    "third_party": null,
    "postmarket_tradeoff": null,
+   "postmarket_methods": null,
    "supervisory_agents": null,
    "flexible_change_control": null,
-   "voluntary_model_files": null
+   "voluntary_model_files": null,
+   "agentic_oversight": null
   },
   "recommendations": [
    "Score agent step reports against an independent execution record",
@@ -71,14 +95,22 @@
   "id": "FDA-2026-N-7874-0082",
   "positions": {
    "risk_framework": "conditional",
+   "directiveness_continuum": null,
+   "patient_facing_risk": null,
+   "trajectory_risk": null,
+   "escalation_errors": null,
    "competency_eval": null,
    "confirmation_flex": null,
    "synthetic_data": null,
-   "third_party": "oppose",
+   "median_clinician_comparator": null,
+   "no_care_comparator": "support",
+   "third_party": null,
    "postmarket_tradeoff": null,
+   "postmarket_methods": null,
    "supervisory_agents": null,
    "flexible_change_control": null,
-   "voluntary_model_files": null
+   "voluntary_model_files": null,
+   "agentic_oversight": null
   },
   "recommendations": [
    "Make time pressure and downstream safeguards first-class risk dimensions",
@@ -96,14 +128,22 @@
   "id": "FDA-2026-N-7874-0115",
   "positions": {
    "risk_framework": "conditional",
-   "competency_eval": "conditional",
+   "directiveness_continuum": null,
+   "patient_facing_risk": null,
+   "trajectory_risk": "support",
+   "escalation_errors": "support",
+   "competency_eval": null,
    "confirmation_flex": "support",
-   "synthetic_data": "conditional",
-   "third_party": "conditional",
+   "synthetic_data": null,
+   "median_clinician_comparator": null,
+   "no_care_comparator": null,
+   "third_party": "support",
    "postmarket_tradeoff": "conditional",
+   "postmarket_methods": "conditional",
    "supervisory_agents": "conditional",
    "flexible_change_control": null,
-   "voluntary_model_files": "conditional"
+   "voluntary_model_files": null,
+   "agentic_oversight": "conditional"
   },
   "recommendations": [
    "Define a minimum runtime governance evidence package for higher-risk devices",
@@ -122,14 +162,22 @@
   "id": "FDA-2026-N-7874-0072",
   "positions": {
    "risk_framework": null,
+   "directiveness_continuum": null,
+   "patient_facing_risk": null,
+   "trajectory_risk": null,
+   "escalation_errors": null,
    "competency_eval": null,
    "confirmation_flex": null,
    "synthetic_data": null,
+   "median_clinician_comparator": null,
+   "no_care_comparator": null,
    "third_party": null,
    "postmarket_tradeoff": null,
+   "postmarket_methods": null,
    "supervisory_agents": null,
    "flexible_change_control": null,
-   "voluntary_model_files": null
+   "voluntary_model_files": null,
+   "agentic_oversight": null
   },
   "recommendations": [
    "Clarify boundary between plan-supporting AI and independent clinical judgment",
@@ -142,14 +190,22 @@
   "id": "FDA-2026-N-7874-0098",
   "positions": {
    "risk_framework": "conditional",
-   "competency_eval": "support",
+   "directiveness_continuum": null,
+   "patient_facing_risk": null,
+   "trajectory_risk": "conditional",
+   "escalation_errors": null,
+   "competency_eval": null,
    "confirmation_flex": null,
    "synthetic_data": null,
-   "third_party": "conditional",
+   "median_clinician_comparator": null,
+   "no_care_comparator": null,
+   "third_party": null,
    "postmarket_tradeoff": null,
-   "supervisory_agents": "conditional",
+   "postmarket_methods": "conditional",
+   "supervisory_agents": null,
    "flexible_change_control": null,
-   "voluntary_model_files": null
+   "voluntary_model_files": null,
+   "agentic_oversight": "conditional"
   },
   "recommendations": [
    "Require human oversight claims to meet domain-match and independence criteria",
@@ -167,14 +223,22 @@
   "id": "FDA-2026-N-7874-0121",
   "positions": {
    "risk_framework": "conditional",
-   "competency_eval": "support",
+   "directiveness_continuum": null,
+   "patient_facing_risk": null,
+   "trajectory_risk": null,
+   "escalation_errors": null,
+   "competency_eval": null,
    "confirmation_flex": null,
    "synthetic_data": null,
+   "median_clinician_comparator": null,
+   "no_care_comparator": null,
    "third_party": null,
    "postmarket_tradeoff": null,
+   "postmarket_methods": "conditional",
    "supervisory_agents": null,
    "flexible_change_control": null,
-   "voluntary_model_files": null
+   "voluntary_model_files": null,
+   "agentic_oversight": null
   },
   "recommendations": [
    "Add reversibility, time-to-detection, and licensed authenticator as risk modifiers",
@@ -193,14 +257,22 @@
   "id": "FDA-2026-N-7874-0055",
   "positions": {
    "risk_framework": "oppose",
-   "competency_eval": "support",
+   "directiveness_continuum": "oppose",
+   "patient_facing_risk": "conditional",
+   "trajectory_risk": "support",
+   "escalation_errors": "conditional",
+   "competency_eval": null,
    "confirmation_flex": "support",
    "synthetic_data": "conditional",
-   "third_party": "conditional",
+   "median_clinician_comparator": "conditional",
+   "no_care_comparator": "support",
+   "third_party": "support",
    "postmarket_tradeoff": "conditional",
+   "postmarket_methods": null,
    "supervisory_agents": "conditional",
-   "flexible_change_control": "conditional",
-   "voluntary_model_files": "conditional"
+   "flexible_change_control": null,
+   "voluntary_model_files": "conditional",
+   "agentic_oversight": "conditional"
   },
   "recommendations": [
    "Use three separate assurance layers: competency, clinical confirmation, operations",
@@ -219,14 +291,22 @@
   "id": "FDA-2026-N-7874-0028",
   "positions": {
    "risk_framework": "conditional",
+   "directiveness_continuum": null,
+   "patient_facing_risk": "conditional",
+   "trajectory_risk": "support",
+   "escalation_errors": "support",
    "competency_eval": "support",
    "confirmation_flex": "support",
    "synthetic_data": "conditional",
+   "median_clinician_comparator": "support",
+   "no_care_comparator": null,
    "third_party": "support",
    "postmarket_tradeoff": "conditional",
+   "postmarket_methods": null,
    "supervisory_agents": "conditional",
    "flexible_change_control": null,
-   "voluntary_model_files": null
+   "voluntary_model_files": null,
+   "agentic_oversight": null
   },
   "recommendations": [
    "Add reversibility, safeguards, time pressure, and traceability as risk modifiers",
@@ -245,14 +325,22 @@
   "id": "FDA-2026-N-7874-0057",
   "positions": {
    "risk_framework": "conditional",
+   "directiveness_continuum": null,
+   "patient_facing_risk": null,
+   "trajectory_risk": null,
+   "escalation_errors": null,
    "competency_eval": "support",
    "confirmation_flex": null,
    "synthetic_data": null,
+   "median_clinician_comparator": null,
+   "no_care_comparator": null,
    "third_party": null,
    "postmarket_tradeoff": null,
+   "postmarket_methods": "support",
    "supervisory_agents": null,
-   "flexible_change_control": "conditional",
-   "voluntary_model_files": "support"
+   "flexible_change_control": null,
+   "voluntary_model_files": null,
+   "agentic_oversight": null
   },
   "recommendations": [
    "Test output sensitivity to claimed speaker authority and seniority",
@@ -269,14 +357,22 @@
   "id": "FDA-2026-N-7874-0040",
   "positions": {
    "risk_framework": null,
+   "directiveness_continuum": null,
+   "patient_facing_risk": null,
+   "trajectory_risk": null,
+   "escalation_errors": null,
    "competency_eval": null,
    "confirmation_flex": null,
    "synthetic_data": null,
+   "median_clinician_comparator": null,
+   "no_care_comparator": null,
    "third_party": null,
    "postmarket_tradeoff": null,
+   "postmarket_methods": null,
    "supervisory_agents": null,
    "flexible_change_control": null,
-   "voluntary_model_files": null
+   "voluntary_model_files": null,
+   "agentic_oversight": null
   },
   "recommendations": []
  },
@@ -284,14 +380,22 @@
   "id": "FDA-2026-N-7874-0102",
   "positions": {
    "risk_framework": "conditional",
+   "directiveness_continuum": "support",
+   "patient_facing_risk": null,
+   "trajectory_risk": null,
+   "escalation_errors": null,
    "competency_eval": "support",
    "confirmation_flex": null,
    "synthetic_data": null,
-   "third_party": "support",
+   "median_clinician_comparator": null,
+   "no_care_comparator": null,
+   "third_party": null,
    "postmarket_tradeoff": "conditional",
+   "postmarket_methods": null,
    "supervisory_agents": "conditional",
-   "flexible_change_control": "support",
-   "voluntary_model_files": "oppose"
+   "flexible_change_control": null,
+   "voluntary_model_files": null,
+   "agentic_oversight": "conditional"
   },
   "recommendations": [
    "Mandate an immutable algorithmic chain-of-custody record for outputs",
@@ -309,14 +413,22 @@
   "id": "FDA-2026-N-7874-0096",
   "positions": {
    "risk_framework": null,
+   "directiveness_continuum": null,
+   "patient_facing_risk": null,
+   "trajectory_risk": null,
+   "escalation_errors": null,
    "competency_eval": null,
    "confirmation_flex": null,
    "synthetic_data": null,
+   "median_clinician_comparator": null,
+   "no_care_comparator": null,
    "third_party": null,
    "postmarket_tradeoff": null,
+   "postmarket_methods": null,
    "supervisory_agents": null,
    "flexible_change_control": null,
-   "voluntary_model_files": null
+   "voluntary_model_files": null,
+   "agentic_oversight": null
   },
   "recommendations": [
    "Recognize local model version locking as acceptable risk mitigation",
@@ -330,14 +442,22 @@
   "id": "FDA-2026-N-7874-0047",
   "positions": {
    "risk_framework": null,
+   "directiveness_continuum": null,
+   "patient_facing_risk": null,
+   "trajectory_risk": null,
+   "escalation_errors": null,
    "competency_eval": null,
    "confirmation_flex": null,
    "synthetic_data": null,
+   "median_clinician_comparator": null,
+   "no_care_comparator": null,
    "third_party": "support",
    "postmarket_tradeoff": null,
+   "postmarket_methods": null,
    "supervisory_agents": null,
    "flexible_change_control": null,
-   "voluntary_model_files": null
+   "voluntary_model_files": null,
+   "agentic_oversight": null
   },
   "recommendations": [
    "Require independent premarket testing and recurring third-party audits",
