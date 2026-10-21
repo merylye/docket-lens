@@ -72,7 +72,7 @@
     const gN = GROUPS.map(([g]) => [g, rows.filter(c => groupOf(c) === g).length]);
 
     const DIS = META.dissent || {}, who = id => { const c = BYID[id]; return c ? `${esc(nameOf(c))}, ${esc(c.commenter_type)}` : ""; };
-    const reasons = k => (DIS[k] || []).map(r => `<li><span>${esc(r.reason)}</span>${r.alternative ? `<span class="note"> Instead: ${esc(r.alternative)}.</span>` : ""} <span class="note">(${who(r.id)})</span></li>`).join("");
+    const reasons = k => (DIS[k] || []).map(r => `<li><span>${esc(r.reason)}</span> <span class="note">(${who(r.id)})</span></li>`).join("");
     const contestedKeys = new Set(contested.map(x => x.p.key));
     const others = META.proposals.map(p => ({ p, n: counts(rows, p.key) })).filter(x => x.n.oppose && !contestedKeys.has(x.p.key)).sort((a, b) => b.n.oppose - a.n.oppose);
     const diverge = [];
