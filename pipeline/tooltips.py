@@ -55,18 +55,6 @@ PROPOSALS = {
  "voluntary_model_files": (25, "Would voluntary Foundation Model MAFs be practical for foundation model developers to provide and to keep current, and what content might they include?",
    "Companies that build the underlying AI models could voluntarily give FDA confidential information about their models in a master file (MAF), which device makers could then reference. Opposition usually meant calling for required disclosure instead."),
 }
-CATEGORIES = {
- "Device industry": ("Device Industry", "Typically medical device manufacturers and developers, or people writing from that perspective."),
- "Health professional": ("Health Professional", "Typically clinicians and other health care workers."),
- "Individual": ("Individual Consumer", "People commenting in a personal capacity."),
- "Private industry (non-device)": ("Private Industry", "Companies outside the device industry, such as AI, software, and consulting firms."),
- "Academia": ("Academia", "Universities, research institutes, and academic researchers."),
- "Health care association": ("Health Care Association", "Professional and trade associations in health care."),
- "Drug industry": ("Drug Industry, Drug Association", "Pharmaceutical companies and associations. The two Regulations.gov categories are combined here."),
- "Other": ("Other Organizations", "Organizations that chose none of the more specific categories."),
- "Government": ("Federal Government", "Federal agencies or their staff."),
- "International industry": ("International Industry", "Companies based outside the United States."),
-}
 THEMES = {
  "Reliance, sycophancy, and affective harms": "Users coming to depend on AI, AI telling users what they want to hear, and emotional harms.",
  "Hallucination and output reliability": "Made-up or inconsistent output, and outputs that drift or change between runs.",
@@ -94,7 +82,6 @@ out = {
  "q": {str(n): {"title": f"Question {n}", "quote": t} for n, t in Q.items()},
  "sec": {k: {"title": a, "body": b} for k, (a, b) in SECTIONS.items()},
  "pos": {k: {"title": f"Question {n}", "quote": q, "body": b} for k, (n, q, b) in PROPOSALS.items()},
- "cat": {k: {"title": f"Regulations.gov category: {a}", "body": b + " Commenters choose their own category from a list when they submit, and FDA does not publish definitions for these categories. This description is ours."} for k, (a, b) in CATEGORIES.items()},
  "theme": {k: {"body": v} for k, v in THEMES.items()},
  "stance": {k: {"body": v} for k, v in STANCE.items()},
 }

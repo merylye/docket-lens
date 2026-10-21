@@ -311,7 +311,6 @@ function tipHTML(key) {
   if (kind === "sec" && T.sec[id]) return `<div class="tt">${esc(T.sec[id].title)}</div><div>${esc(T.sec[id].body)}</div>`;
   if (kind === "pos" && T.pos[id]) { const p = META.proposals.find(x => x.key === id); return `<div class="tt">${esc(p ? p.label : id)}</div><div class="qt">${esc(T.pos[id].quote)}</div><div class="src">${esc(T.pos[id].title)}</div><div class="lab">Explanation</div><div>${esc(T.pos[id].body)}</div>`; }
   if (kind === "rec") { const g = META.recs.find(x => x.key === id); return g ? `<div class="tt">${esc(g.label)}</div><div>${esc(g.desc || "")}</div>` : ""; }
-  if (kind === "cat" && T.cat[id]) return `<div class="tt">${esc(T.cat[id].title)}</div><div>${esc(T.cat[id].body)}</div>`;
   if (kind === "theme" && T.theme[id]) return `<div class="tt">${esc(id)}</div><div>${esc(T.theme[id].body)}</div>`;
   if (kind === "stance" && T.stance[id]) return `<div class="tt">${esc({ support: "Support", conditional: "Support with conditions", oppose: "Oppose" }[id])}</div><div>${esc(T.stance[id].body)}</div>`;
   return "";
@@ -320,11 +319,27 @@ function addIcons(root) {
   root.querySelectorAll("svg text[data-icon]").forEach(t => {
     let b; try { b = t.getBBox(); } catch (e) { return; }
     if (!b.width) return;
-    const g = document.createElementNS("http://www.w3.org/2000/svg", "g"), cx = b.x + b.width + 11, cy = b.y + b.height / 2 + 1;
+    const mw = +t.getAttribute("data-maxw") || Infinity, g = document.createElementNS("http://www.w3.org/2000/svg", "g"), cx = b.x + Math.min(b.width, mw) + 11, cy = b.y + b.height / 2 + 1;
     g.setAttribute("class", "infoi"); g.setAttribute("data-tip", t.getAttribute("data-tip")); g.setAttribute("tabindex", "0"); g.setAttribute("role", "button"); g.setAttribute("aria-label", "More information");
     g.innerHTML = `<circle cx="${cx}" cy="${cy}" r="7" fill="#ffffff" stroke="#555555" stroke-width="1.2"></circle><text x="${cx}" y="${cy + 3.5}" font-size="10" font-weight="700" text-anchor="middle" fill="#555555" font-family="Fira Sans, Arial, sans-serif" style="pointer-events:none">i</text>`;
-    t.removeAttribute("data-tip"); t.parentNode.insertBefore(g, t.nextSibling);
+    t.removeAttribute("data-tip");
+    const host = t.parentNode.getAttribute("clip-path") ? t.parentNode : t;
+    host.parentNode.insertBefore(g, host.nextSibling);
+    if (isFinite(mw) && b.width > mw) {
+      t.classList.add("over"); t.dataset.shift = Math.ceil(b.width - mw + 8);
+      const fade = document.createElementNS("http://www.w3.org/2000/svg", "rect");
+      fade.setAttribute("x", b.x + mw - 36); fade.setAttribute("y", b.y - 2); fade.setAttribute("width", 37); fade.setAttribute("height", b.height + 4);
+      fade.setAttribute("fill", "url(#qfade)"); fade.setAttribute("class", "ell"); fade.style.pointerEvents = "none"; fade.style.transition = "opacity .2s";
+      host.parentNode.insertBefore(fade, g);
+    }
   });
+}
+function initScroll() {
+  const reduce = matchMedia("(prefers-reduced-motion: reduce)").matches;
+  const start = t => { if (reduce || !t.dataset.shift) return; const d = +t.dataset.shift; t.style.transition = `transform ${Math.max(1.5, d / 45)}s linear .35s`; t.style.transform = `translateX(-${d}px)`; const e = t.closest("g.row") && t.closest("g.row").querySelector(".ell"); if (e) e.style.opacity = 0; };
+  const stop = t => { t.style.transition = "transform .3s ease"; t.style.transform = "none"; const e = t.closest("g.row") && t.closest("g.row").querySelector(".ell"); if (e) e.style.opacity = 1; };
+  document.addEventListener("mouseover", e => { const row = e.target.closest && e.target.closest("#main g.row"); if (!row) return; const t = row.querySelector("text.qscroll.over"); if (t && !row.contains(e.relatedTarget)) start(t); });
+  document.addEventListener("mouseout", e => { const row = e.target.closest && e.target.closest("#main g.row"); if (!row || row.contains(e.relatedTarget)) return; const t = row.querySelector("text.qscroll.over"); if (t) stop(t); });
 }
 let tipPinned = null;
 function showTip(el) {
@@ -394,7 +409,7 @@ function renderPos() {
     const cols = [{ label: "All", pool: filtered() }, ...cats.map(t => ({ label: t, pool: readable().filter(c => c.commenter_type === t) }))];
     if (aria) cols.push({ label: "ARIA", aria: true });
     const W = Math.max(700, cwid), lw = 290, cw = (W - lw) / cols.length, rh = 40, hh = 34;
-    cols.forEach((c, j) => out.push(`<text x="${lw + j * cw + 4}" y="14" font-size="${cw < 130 ? 11 : 12}" font-weight="700" fill="#111111" ${ff} ${c.pool && c.label !== "All" ? `data-tip="cat:${esc(c.label)}" tabindex="0"` : ""}>${esc(({ "Health professional": "Health prof.", "Private industry (non-device)": "Private industry", "Health care association": "Health care assns.", "International industry": "Intl. industry" })[c.label] || c.label)}</text>${c.pool ? `<text x="${lw + j * cw + 4}" y="28" font-size="11" fill="#555555" ${ff}>${c.pool.length} comments</text>` : ""}`));
+    cols.forEach((c, j) => out.push(`<text x="${lw + j * cw + 4}" y="14" font-size="${cw < 130 ? 11 : 12}" font-weight="700" fill="#111111" ${ff}>${esc(({ "Health professional": "Health prof.", "Private industry (non-device)": "Private industry", "Health care association": "Health care assns.", "International industry": "Intl. industry" })[c.label] || c.label)}</text>${c.pool ? `<text x="${lw + j * cw + 4}" y="28" font-size="11" fill="#555555" ${ff}>${c.pool.length} comments</text>` : ""}`));
     props.forEach((p, i) => {
       const y = hh + i * rh;
       out.push(`<text x="0" y="${y + 22}" font-size="13" font-weight="500" fill="#111111" ${ff} data-tip="pos:${p.key}" data-icon="1">${esc(p.label)}</text>`);
@@ -468,13 +483,13 @@ function renderMain() {
     out.push(`<g class="row${on ? " on" : ""}" data-key="${esc(r.key)}" tabindex="0" role="button" aria-label="${esc(r.label)}: ${pct(r.share)} of comments">
       <rect class="hit" x="0" y="${y}" width="${W}" height="${rowH}" fill="transparent"></rect>
       <text x="0" y="${y + 20}" font-size="15" font-weight="${state.lens === "questions" ? 700 : 500}" fill="#111111" font-family="Fira Sans, Arial, sans-serif" ${descW ? "" : `data-tip="${state.lens === "questions" ? "q:" + r.key : state.lens === "sections" ? "sec:" + r.key : "theme:" + esc(r.key)}" data-icon="1"`}>${esc(r.label)}</text>
-      ${descW ? `<text x="${labelW}" y="${y + 20}" font-size="14" fill="#555555" font-family="Fira Sans, Arial, sans-serif" data-tip="q:${r.key}" data-icon="1">${esc(r.desc.length > Math.floor(descW / 7.4) - 3 ? r.desc.slice(0, Math.floor(descW / 7.4) - 5) + "…" : r.desc)}</text>` : ""}
+      ${descW ? `<clipPath id="qclip${r.key}"><rect x="${labelW}" y="${y}" width="${descW - 26}" height="${rowH}"></rect></clipPath><g clip-path="url(#qclip${r.key})"><text class="qscroll" x="${labelW}" y="${y + 20}" font-size="14" fill="#555555" font-family="Fira Sans, Arial, sans-serif" data-tip="q:${r.key}" data-icon="1" data-maxw="${descW - 26}">${esc(r.desc)}</text></g>` : ""}
       <rect class="bar" x="${x0}" y="${y + 7}" width="${bw}" height="${rowH - 14}" fill="#00848a" stroke="${on ? "#00dfe9" : "none"}" stroke-width="3"></rect>
       <text x="${x0 + bw + 8}" y="${y + 20}" font-size="14" fill="#111111" font-family="Fira Sans, Arial, sans-serif" style="font-variant-numeric:tabular-nums">${pct(r.share)}</text>
     </g>`);
     y += rowH;
   });
-  document.getElementById("main").innerHTML = rows.length ? `<svg viewBox="0 0 ${W} ${y + 4}" width="100%">${out.join("")}</svg>` : `<p class="empty">No comments match this selection.</p>`;
+  document.getElementById("main").innerHTML = rows.length ? `<svg viewBox="0 0 ${W} ${y + 4}" width="100%"><defs><linearGradient id="qfade"><stop offset="0" stop-color="#ffffff" stop-opacity="0"></stop><stop offset="1" stop-color="#ffffff"></stop></linearGradient></defs>${out.join("")}</svg>` : `<p class="empty">No comments match this selection.</p>`;
   document.querySelectorAll("#main .row").forEach(g => bindPick(g, () => { const k = g.dataset.key; toggleSel(k, null); }));
   addIcons(document.getElementById("main"));
 }
@@ -519,7 +534,7 @@ function renderGrid() {
     if (r.kind === "all" || (r.kind === "pin" && prevKind !== "pin")) y += 8;
     prevKind = r.kind;
     const bold = r.kind !== "cat" && r.kind !== "pin";
-    out.push(`<text x="0" y="${y + 20}" font-size="14" font-weight="${bold ? 700 : 400}" fill="#111111" font-family="Fira Sans, Arial, sans-serif" ${r.kind === "cat" ? `data-tip="cat:${esc(r.key)}"` : ""}>${esc(r.label.length > 30 ? r.label.slice(0, 28) + "…" : r.label)}${r.n ? ` <tspan fill="#555555" font-weight="400">(${r.n})</tspan>` : ""}</text>`);
+    out.push(`<text x="0" y="${y + 20}" font-size="14" font-weight="${bold ? 700 : 400}" fill="#111111" font-family="Fira Sans, Arial, sans-serif">${esc(r.label.length > 30 ? r.label.slice(0, 28) + "…" : r.label)}${r.n ? ` <tspan fill="#555555" font-weight="400">(${r.n})</tspan>` : ""}</text>`);
     if (r.kind === "pin") out.push(`<g class="unpin" data-id="${esc(r.key)}" tabindex="0" role="button" aria-label="Remove row" style="cursor:pointer"><circle cx="${lw - 14}" cy="${y + 15}" r="9" fill="#f2f2f2"></circle><text x="${lw - 14}" y="${y + 19.5}" font-size="13" text-anchor="middle" fill="#555555">×</text></g>`);
     cols.forEach((c, i) => {
       const v = r.val(c.key), on = state.sel && state.sel.lens === L && state.sel.key === c.key && (state.types.size === 1 ? (r.kind === "cat" && state.types.has(r.key)) : r.kind === "all");
@@ -563,7 +578,7 @@ function renderTypes() {
     const full = v.n / max * barW, inf = v.inf / max * barW, on = state.types.has(t);
     const g = `<g class="row${on ? " on" : ""}" data-type="${esc(t)}" tabindex="0" role="button" aria-label="${esc(t)}: ${v.n} comments">
       <rect class="hit" x="0" y="${y}" width="${W}" height="${rowH}" fill="transparent"></rect>
-      <text x="0" y="${y + 19}" font-size="14" font-weight="${on ? 700 : 400}" fill="#111111" font-family="Fira Sans, Arial, sans-serif" data-tip="cat:${esc(t)}" data-icon="1">${esc(t)}</text>
+      <text x="0" y="${y + 19}" font-size="14" font-weight="${on ? 700 : 400}" fill="#111111" font-family="Fira Sans, Arial, sans-serif">${esc(t)}</text>
       <g opacity="${state.types.size && !on ? .3 : 1}">
       <rect x="${x0}" y="${y + 7}" width="${full - inf}" height="${rowH - 14}" fill="${on ? "#00848a" : "#111111"}"></rect>
       <rect x="${x0 + full - inf}" y="${y + 7}" width="${inf}" height="${rowH - 14}" fill="${on ? "#7fb9bc" : "#bbbbbb"}"></rect></g>
@@ -693,7 +708,7 @@ function init() {
     side.style.maxHeight = Math.max(240, window.innerHeight - top - 12) + "px";
   };
   window.addEventListener("scroll", fitSide, { passive: true }); window.addEventListener("resize", fitSide); fitSide();
-  initTips(); render(); fitTitle(); let rt; window.addEventListener("resize", () => { fitTitle(); clearTimeout(rt); rt = setTimeout(() => { renderPos(); renderRecs(); renderMain(); renderGrid(); }, 150); });
+  initTips(); initScroll(); render(); fitTitle(); let rt; window.addEventListener("resize", () => { fitTitle(); clearTimeout(rt); rt = setTimeout(() => { renderPos(); renderRecs(); renderMain(); renderGrid(); }, 150); });
   if (document.fonts) document.fonts.ready.then(() => { fitTitle(); fitSide(); render(); });
   requestAnimationFrame(fitSide);
 }
