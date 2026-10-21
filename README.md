@@ -18,6 +18,10 @@ Site: https://merylye.github.io/docket-lens/
 
 **Comments.** Every comment with its commenter, category, date, and coverage. Selecting anything in the charts filters this list.
 
+## Analysis page
+
+https://merylye.github.io/docket-lens/analysis/ adds two tabs to the site. **Key findings** lists points of consensus and contention, the most common added condition for each proposal, themes and questions outside the main focus, and where ARIA stands. **By proposal** summarizes each proposal on one page. Both are computed from the same data at load time, and each list states its threshold. Rows open the Explore tab with that filter applied. The page is generated from `index.html` by `pipeline/build_analysis.py`, with its own code in `analysis/`.
+
 ## How comments were coded
 
 All coding was done with Claude Opus 5.5, and every check was done by a separate instance of the same model. No codes have been checked by a person yet.
