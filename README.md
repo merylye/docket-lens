@@ -6,11 +6,11 @@ Site: https://merylye.github.io/docket-lens/
 
 ## What the site shows
 
-**Position distribution.** For nine proposals in FDA's discussion paper, the share of comments that supported, supported with conditions, or opposed each one, among comments that took a position. A category view breaks this out by commenter category.
+**Position distribution.** Where commenters stood on nine proposals in FDA's discussion paper. Each bar's length shows how many comments gave a view on that proposal, and its segments show the share that supported it, supported it with conditions, or opposed it. A category view breaks this out by commenter category, and adding ARIA through "Add comments" shows ARIA's stance beside each proposal.
 
 **Top recommendations.** The concrete asks that recurred across comments, grouped into 40 recommendations and ranked by how many comments made each, colored by commenter category.
 
-**Overview.** The share of comments addressing each part of the discussion paper. The Focus buttons switch between three views:
+**Coverage.** The share of comments addressing each part of the discussion paper. The Focus buttons switch between three views, and the heading changes to match (Coverage by question, by question group, or by theme):
 
 - **Docket questions.** Which of the paper's 26 questions a comment substantively addressed, whether or not it cited them by number.
 - **Question groups.** The paper's four groups of questions: risk, premarket evaluation, postmarket monitoring, and other topics.
