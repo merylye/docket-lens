@@ -5,7 +5,7 @@
    "risk_framework": "conditional",
    "directiveness_continuum": null,
    "patient_facing_risk": null,
-   "trajectory_risk": null,
+   "trajectory_risk": "conditional",
    "escalation_errors": null,
    "competency_eval": null,
    "confirmation_flex": null,
@@ -112,9 +112,9 @@
  {
   "id": "FDA-2026-N-7874-0046",
   "positions": {
-   "risk_framework": null,
+   "risk_framework": "conditional",
    "directiveness_continuum": null,
-   "patient_facing_risk": null,
+   "patient_facing_risk": "support",
    "trajectory_risk": null,
    "escalation_errors": null,
    "competency_eval": "support",
@@ -124,11 +124,11 @@
    "no_care_comparator": null,
    "third_party": null,
    "postmarket_tradeoff": null,
-   "postmarket_methods": null,
+   "postmarket_methods": "conditional",
    "supervisory_agents": null,
    "flexible_change_control": null,
    "voluntary_model_files": null,
-   "agentic_oversight": null
+   "agentic_oversight": "conditional"
   },
   "recommendations": [
    "Treat named human review as a risk-lowering variable",
@@ -179,17 +179,17 @@
    "directiveness_continuum": null,
    "patient_facing_risk": null,
    "trajectory_risk": null,
-   "escalation_errors": null,
-   "competency_eval": null,
+   "escalation_errors": "support",
+   "competency_eval": "conditional",
    "confirmation_flex": null,
    "synthetic_data": null,
-   "median_clinician_comparator": null,
+   "median_clinician_comparator": "oppose",
    "no_care_comparator": "oppose",
    "third_party": null,
    "postmarket_tradeoff": "oppose",
-   "postmarket_methods": null,
+   "postmarket_methods": "conditional",
    "supervisory_agents": "conditional",
-   "flexible_change_control": null,
+   "flexible_change_control": "oppose",
    "voluntary_model_files": null,
    "agentic_oversight": "support"
   },
@@ -209,7 +209,7 @@
  {
   "id": "FDA-2026-N-7874-0101",
   "positions": {
-   "risk_framework": null,
+   "risk_framework": "conditional",
    "directiveness_continuum": null,
    "patient_facing_risk": null,
    "trajectory_risk": null,
@@ -225,7 +225,7 @@
    "supervisory_agents": null,
    "flexible_change_control": null,
    "voluntary_model_files": null,
-   "agentic_oversight": null
+   "agentic_oversight": "conditional"
   },
   "recommendations": [
    "Add data sensitivity as a risk modifier",
@@ -239,10 +239,10 @@
   "positions": {
    "risk_framework": null,
    "directiveness_continuum": null,
-   "patient_facing_risk": null,
+   "patient_facing_risk": "support",
    "trajectory_risk": null,
    "escalation_errors": null,
-   "competency_eval": null,
+   "competency_eval": "conditional",
    "confirmation_flex": null,
    "synthetic_data": null,
    "median_clinician_comparator": null,
@@ -267,11 +267,11 @@
  {
   "id": "FDA-2026-N-7874-0009",
   "positions": {
-   "risk_framework": null,
+   "risk_framework": "conditional",
    "directiveness_continuum": null,
    "patient_facing_risk": null,
    "trajectory_risk": null,
-   "escalation_errors": null,
+   "escalation_errors": "support",
    "competency_eval": null,
    "confirmation_flex": "support",
    "synthetic_data": null,
@@ -337,9 +337,9 @@
    "no_care_comparator": "support",
    "third_party": null,
    "postmarket_tradeoff": "conditional",
-   "postmarket_methods": null,
+   "postmarket_methods": "conditional",
    "supervisory_agents": "conditional",
-   "flexible_change_control": null,
+   "flexible_change_control": "support",
    "voluntary_model_files": "conditional",
    "agentic_oversight": "conditional"
   },
@@ -374,7 +374,7 @@
    "postmarket_methods": "conditional",
    "supervisory_agents": null,
    "flexible_change_control": "conditional",
-   "voluntary_model_files": null,
+   "voluntary_model_files": "conditional",
    "agentic_oversight": "conditional"
   },
   "recommendations": [
@@ -396,12 +396,12 @@
    "risk_framework": "conditional",
    "directiveness_continuum": "conditional",
    "patient_facing_risk": "support",
-   "trajectory_risk": null,
+   "trajectory_risk": "support",
    "escalation_errors": "conditional",
-   "competency_eval": null,
+   "competency_eval": "conditional",
    "confirmation_flex": "conditional",
    "synthetic_data": "conditional",
-   "median_clinician_comparator": null,
+   "median_clinician_comparator": "conditional",
    "no_care_comparator": "conditional",
    "third_party": "conditional",
    "postmarket_tradeoff": "conditional",
@@ -427,7 +427,7 @@
  {
   "id": "FDA-2026-N-7874-0087",
   "positions": {
-   "risk_framework": null,
+   "risk_framework": "conditional",
    "directiveness_continuum": null,
    "patient_facing_risk": null,
    "trajectory_risk": null,

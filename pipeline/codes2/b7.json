@@ -52,7 +52,7 @@
    "supervisory_agents": null,
    "flexible_change_control": null,
    "voluntary_model_files": null,
-   "agentic_oversight": null
+   "agentic_oversight": "support"
   },
   "recommendations": [
    "Distinguish initial authorization from evidence for continued reliance",
@@ -133,9 +133,9 @@
    "no_care_comparator": null,
    "third_party": "support",
    "postmarket_tradeoff": "conditional",
-   "postmarket_methods": null,
+   "postmarket_methods": "conditional",
    "supervisory_agents": "conditional",
-   "flexible_change_control": null,
+   "flexible_change_control": "oppose",
    "voluntary_model_files": null,
    "agentic_oversight": null
   },
@@ -156,8 +156,8 @@
   "id": "FDA-2026-N-7874-0080",
   "positions": {
    "risk_framework": "support",
-   "directiveness_continuum": null,
-   "patient_facing_risk": null,
+   "directiveness_continuum": "conditional",
+   "patient_facing_risk": "oppose",
    "trajectory_risk": null,
    "escalation_errors": null,
    "competency_eval": null,
@@ -221,14 +221,14 @@
    "escalation_errors": null,
    "competency_eval": "support",
    "confirmation_flex": null,
-   "synthetic_data": null,
+   "synthetic_data": "support",
    "median_clinician_comparator": null,
    "no_care_comparator": null,
    "third_party": null,
    "postmarket_tradeoff": null,
    "postmarket_methods": "support",
-   "supervisory_agents": null,
-   "flexible_change_control": null,
+   "supervisory_agents": "support",
+   "flexible_change_control": "support",
    "voluntary_model_files": null,
    "agentic_oversight": null
   },
@@ -243,8 +243,8 @@
  {
   "id": "FDA-2026-N-7874-0058",
   "positions": {
-   "risk_framework": null,
-   "directiveness_continuum": null,
+   "risk_framework": "conditional",
+   "directiveness_continuum": "conditional",
    "patient_facing_risk": null,
    "trajectory_risk": null,
    "escalation_errors": null,
@@ -255,9 +255,9 @@
    "no_care_comparator": null,
    "third_party": null,
    "postmarket_tradeoff": null,
-   "postmarket_methods": null,
+   "postmarket_methods": "support",
    "supervisory_agents": null,
-   "flexible_change_control": null,
+   "flexible_change_control": "conditional",
    "voluntary_model_files": "support",
    "agentic_oversight": null
   },
@@ -275,7 +275,7 @@
  {
   "id": "FDA-2026-N-7874-0030",
   "positions": {
-   "risk_framework": null,
+   "risk_framework": "conditional",
    "directiveness_continuum": null,
    "patient_facing_risk": "oppose",
    "trajectory_risk": null,
@@ -334,7 +334,7 @@
   "positions": {
    "risk_framework": null,
    "directiveness_continuum": null,
-   "patient_facing_risk": null,
+   "patient_facing_risk": "support",
    "trajectory_risk": null,
    "escalation_errors": null,
    "competency_eval": null,
@@ -360,7 +360,7 @@
  {
   "id": "FDA-2026-N-7874-0042",
   "positions": {
-   "risk_framework": null,
+   "risk_framework": "conditional",
    "directiveness_continuum": null,
    "patient_facing_risk": null,
    "trajectory_risk": null,
@@ -376,7 +376,7 @@
    "supervisory_agents": "conditional",
    "flexible_change_control": null,
    "voluntary_model_files": null,
-   "agentic_oversight": null
+   "agentic_oversight": "support"
   },
   "recommendations": [
    "Add attribution traceability as a risk framework dimension",
@@ -448,19 +448,19 @@
  {
   "id": "FDA-2026-N-7874-0051",
   "positions": {
-   "risk_framework": null,
+   "risk_framework": "conditional",
    "directiveness_continuum": "support",
    "patient_facing_risk": "conditional",
    "trajectory_risk": "support",
    "escalation_errors": "support",
    "competency_eval": "support",
    "confirmation_flex": "support",
-   "synthetic_data": null,
+   "synthetic_data": "conditional",
    "median_clinician_comparator": null,
    "no_care_comparator": "support",
    "third_party": "support",
-   "postmarket_tradeoff": null,
-   "postmarket_methods": null,
+   "postmarket_tradeoff": "conditional",
+   "postmarket_methods": "support",
    "supervisory_agents": null,
    "flexible_change_control": "support",
    "voluntary_model_files": null,
