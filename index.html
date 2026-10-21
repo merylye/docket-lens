@@ -307,9 +307,9 @@ function shareOf(pool, key, lens) {
 /* Information tooltips */
 function tipHTML(key) {
   const i = key.indexOf(":"), kind = key.slice(0, i), id = key.slice(i + 1), T = META.tips || {};
-  if (kind === "q" && T.q[id]) return `<div class="tt">${esc(T.q[id].title)}</div><div class="qt">${esc(T.q[id].quote)}</div><div class="src">Verbatim from FDA's discussion paper</div>`;
+  if (kind === "q" && T.q[id]) return `<div class="tt">${esc(T.q[id].title)}</div><div class="qt">${esc(T.q[id].quote)}</div>`;
   if (kind === "sec" && T.sec[id]) return `<div class="tt">${esc(T.sec[id].title)}</div><div>${esc(T.sec[id].body)}</div>`;
-  if (kind === "pos" && T.pos[id]) { const p = META.proposals.find(x => x.key === id); return `<div class="tt">${esc(p ? p.label : id)}</div><div class="qt">${esc(T.pos[id].quote)}</div><div class="src">${esc(T.pos[id].title)}, verbatim from FDA's discussion paper</div><div class="lab">What it means</div><div>${esc(T.pos[id].body)}</div>`; }
+  if (kind === "pos" && T.pos[id]) { const p = META.proposals.find(x => x.key === id); return `<div class="tt">${esc(p ? p.label : id)}</div><div class="qt">${esc(T.pos[id].quote)}</div><div class="src">${esc(T.pos[id].title)}</div><div class="lab">Explanation</div><div>${esc(T.pos[id].body)}</div>`; }
   if (kind === "rec") { const g = META.recs.find(x => x.key === id); return g ? `<div class="tt">${esc(g.label)}</div><div>${esc(g.desc || "")}</div>` : ""; }
   if (kind === "cat" && T.cat[id]) return `<div class="tt">${esc(T.cat[id].title)}</div><div>${esc(T.cat[id].body)}</div>`;
   if (kind === "theme" && T.theme[id]) return `<div class="tt">${esc(id)}</div><div>${esc(T.theme[id].body)}</div>`;
