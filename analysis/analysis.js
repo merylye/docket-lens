@@ -62,11 +62,6 @@
     const thMax = Math.max(1, ...themes.map(t => t.n));
     const qs = META.questions.map(q => ({ q, n: rows.filter(c => c.q_addr.includes(q.n)).length })).sort((a, b) => a.n - b.n).slice(0, 4);
 
-    const A = META.aria.pos || {};
-    const cmp = META.proposals.filter(p => A[p.key]).map(p => { const n = counts(rows, p.key); const mode = ["support", "conditional", "oppose"].sort((a, b) => n[b] - n[a])[0]; return { p, a: A[p.key], mode, n }; });
-    const same = cmp.filter(x => x.a === x.mode), diff = cmp.filter(x => x.a !== x.mode);
-    const word = { support: "support", conditional: "support with conditions", oppose: "oppose" };
-
     document.getElementById("view-findings").innerHTML = `<div class="af">
       <section><h2>Points of consensus</h2>${legend}<div class="cards">
         <div class="card"><h3>Largely endorsed as written in the docket</h3>${endorsed.map(x => row(x, x.n.support, x.p.key + ":support", pc(x.n.support, x.n.total))).join("") || '<p class="note">None at this threshold.</p>'}
@@ -77,17 +72,13 @@
       <section><h2>Points of contention</h2><p class="note">Proposals where at least ${T.contest * 100}% of comments that took a position opposed it.</p><div class="cards">
         ${split || '<p class="note">None at this threshold.</p>'}
       </div></section>
-      <section><h2>Most common added condition</h2><div class="cards"><div class="card" style="grid-column:1/-1">
+      <section><h2>Top added conditions</h2><div class="cards"><div class="card" style="grid-column:1/-1">
         ${top.map(t => `<div class="row click" data-go="${esc(t.p.key)}:conditional:${esc(t.g)}" tabindex="0" role="button" style="grid-template-columns:minmax(0,1fr) minmax(0,1.3fr) minmax(70px,.6fr) 70px"><span class="lab">${esc(t.p.label)}</span><span>${esc(condLabel(t.p.key, t.g))}</span>${lbar(t.n, topMax)}<span class="num">${t.n} of ${t.of}</span></div>`).join("")}
         <p class="note">For each proposal, the condition named most often by comments that supported it with conditions. Shown when at least 3 comments named it. Select a row to read them.</p></div></div></section>
-      <section><h2>Beyond FDA's questions</h2><div class="cards">
-        <div class="card"><h3>Themes commenters raised that none of the 26 questions asked about</h3>${themes.map(t => `<div class="row click" data-theme="${esc(t.key)}" tabindex="0" role="button"><span class="lab">${esc(t.key)}</span>${lbar(t.n, thMax)}<span class="num">${t.n}</span></div>`).join("")}<p class="note">Number of comments raising each theme.</p></div>
-        <div class="card"><h3>Questions the fewest comments addressed</h3>${qs.map(x => `<div class="row click" data-q="${x.q.n}" tabindex="0" role="button"><span class="lab">Q${x.q.n} ${esc(x.q.label)}</span>${lbar(x.n, rows.length)}<span class="num">${pc(x.n, rows.length)}</span></div>`).join("")}<p class="note">Share of all comments that substantively addressed the question.</p></div>
+      <section><h2>Topics outside the docket questions</h2><div class="cards">
+        <div class="card"><h3>Additional themes</h3>${themes.map(t => `<div class="row click" data-theme="${esc(t.key)}" tabindex="0" role="button"><span class="lab">${esc(t.key)}</span>${lbar(t.n, thMax)}<span class="num">${t.n}</span></div>`).join("")}<p class="note">Themes none of FDA's 26 questions asked about. Number of comments raising each.</p></div>
+        <div class="card"><h3>Least addressed questions</h3>${qs.map(x => `<div class="row click" data-q="${x.q.n}" tabindex="0" role="button"><span class="lab">Q${x.q.n} ${esc(x.q.label)}</span>${lbar(x.n, rows.length)}<span class="num">${pc(x.n, rows.length)}</span></div>`).join("")}<p class="note">Share of all comments that substantively addressed the question.</p></div>
       </div></section>
-      <section><h2>Where ARIA stands</h2><div class="cards"><div class="card" style="grid-column:1/-1">
-        <p style="margin:0">ARIA took a position on ${cmp.length} of ${META.proposals.length} proposals. On ${same.length} of them its position matches the most common view among commenters.</p>
-        ${diff.length ? `<p class="note">Where ARIA differs from the most common view</p>${diff.map(x => `<div class="row click" data-go="${esc(x.p.key)}:${x.a}" tabindex="0" role="button" style="grid-template-columns:minmax(0,1fr) minmax(0,1.2fr) minmax(90px,.8fr)"><span class="lab">${esc(x.p.label)}</span><span>ARIA: ${word[x.a]}. Most commenters: ${word[x.mode]}.</span>${sbar(x.n)}</div>`).join("")}` : ""}
-      </div></div></section>
       ${footer()}</div>`;
     bind(document.getElementById("view-findings"));
   }
@@ -108,11 +99,11 @@
       <article class="brief af">
         <div class="block"><p class="note">${esc(tip.title || Q(p))}</p><h2>${esc(p.label)}</h2>
           ${tip.quote ? `<p class="quote">“${esc(tip.quote)}”</p>` : ""}${tip.body ? `<p style="margin:0">${esc(tip.body)}</p>` : ""}</div>
-        <div class="block"><h3>How commenters responded</h3>${legend}
+        <div class="block"><h3>Responses</h3>${legend}
           <div class="row"><span class="lab">All commenters</span>${sbar(n)}<span class="num">${n.total}</span></div>
           <p class="note">${n.total} of ${rows.length} comments took a position. ${n.support} supported, ${n.conditional} supported with conditions, and ${n.oppose} opposed.</p>
           <div style="display:flex;gap:16px;flex-wrap:wrap">${["support", "conditional", "oppose"].filter(s => n[s]).map(s => `<button class="go" data-go="${esc(p.key)}:${s}">${n[s]} ${s === "conditional" ? "with conditions" : s === "support" ? "supporting" : "opposing"}</button>`).join("")}</div></div>
-        <div class="block"><h3>By commenter group</h3>${groups}<p class="note">The number is how many comments in each group took a position.</p></div>
+        <div class="block"><h3>Responses by commenter group</h3>${groups}<p class="note">The number is how many comments in each group took a position.</p></div>
         ${cg.length ? `<div class="block"><h3>Added conditions</h3>${cg.map(x => `<div class="row click" data-go="${esc(p.key)}:conditional:${esc(x.g.key)}" tabindex="0" role="button"><span class="lab">${esc(x.g.label)}</span>${lbar(x.n, cmax)}<span class="num">${x.n}</span></div>`).join("")}<p class="note">Named by the ${cond.length} comments that supported it with conditions. A comment can name more than one. Select a row to read them.</p></div>` : ""}
         <div class="block"><h3>ARIA</h3><p style="margin:0">${av ? word[av] : "ARIA took no position on this proposal."}</p>${aq.map(q => `<p class="quote">“${esc(q)}”</p>`).join("")}</div>
       </article></div>${footer()}`;
