@@ -67,7 +67,7 @@ PROPOSALS = {
  "flexible_change_control": (23, "How might PCCP concepts or other change-control approaches be adapted for GenAI-enabled devices when the nature or scope of future modifications cannot be fully prespecified?",
    "A predetermined change control plan (PCCP) lets a manufacturer get approval in advance for planned updates, so they don't each need new FDA review. FDA asks how this could cover updates to generative models that can't be fully spelled out ahead of time."),
  "voluntary_model_files": (25, "Would voluntary Foundation Model MAFs be practical for foundation model developers to provide and to keep current, and what content might they include?",
-   "Companies that build the underlying AI models could voluntarily give FDA confidential information about their models in a master file (MAF), which device makers could then reference. Opposition usually meant calling for required disclosure instead."),
+   "Companies that build the underlying AI models could voluntarily give FDA confidential information about their models in a master file (MAF), which device makers could then reference. Opposing comments called voluntary files insufficient, and some asked for required disclosure instead."),
  "agentic_oversight": (26, "How should the elevated risk associated with autonomous multi-step action, tool use, and reduced opportunity for human review be reflected in acceptance criteria and oversight?",
    "Whether devices that act on their own across several steps, use other software tools, or leave less room for human review should face stricter acceptance criteria and oversight than other generative AI devices."),
 }

@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-21T11:11:15.207255+00:00",
+ "updated": "2026-10-21T11:11:57.865449+00:00",
  "questions": [
   {
    "n": 1,
@@ -574,7 +574,7 @@
    "voluntary_model_files": {
     "title": "Question 25",
     "quote": "Would voluntary Foundation Model MAFs be practical for foundation model developers to provide and to keep current, and what content might they include?",
-    "body": "Companies that build the underlying AI models could voluntarily give FDA confidential information about their models in a master file (MAF), which device makers could then reference. Opposition usually meant calling for required disclosure instead."
+    "body": "Companies that build the underlying AI models could voluntarily give FDA confidential information about their models in a master file (MAF), which device makers could then reference. Opposing comments called voluntary files insufficient, and some asked for required disclosure instead."
    },
    "agentic_oversight": {
     "title": "Question 26",

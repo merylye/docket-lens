@@ -384,11 +384,16 @@ function stackedBar(x, y, w, h, n, key, out, sel) {
     xx += ww;
   });
 }
+function labelW(props) {
+  const c = labelW.c || (labelW.c = document.createElement("canvas").getContext("2d"));
+  c.font = "500 14px 'Fira Sans', Arial, sans-serif";
+  return Math.ceil(Math.max(...props.map(p => c.measureText(p.label).width))) + 44;
+}
 function renderPos() {
   const el = document.getElementById("pos"), out = [], props = META.proposals;
   const cwid = el.clientWidth || 900, aria = state.pinned.includes("ARIA") ? META.aria.pos || {} : null;
   if (state.posView === "all") {
-    const pool = filtered(), W = Math.max(560, cwid), lw = Math.min(300, Math.round(W * .34)), nw = 130, aw = 0, bw = W - lw - nw - 10, rh = 34;
+    const pool = filtered(), W = Math.max(560, cwid), lw = Math.min(Math.round(W * .42), labelW(props)), nw = 130, aw = 0, bw = W - lw - nw - 10, rh = 34;
     const maxT = Math.max(1, ...props.map(p => stanceCounts(pool, p.key).total));
     props.forEach((p, i) => {
       const y = i * rh, n = stanceCounts(pool, p.key);
@@ -409,7 +414,7 @@ function renderPos() {
     let cats = state.types.size ? [...state.types] : [...new Set(readable().map(c => c.commenter_type))].map(t => [t, readable().filter(c => c.commenter_type === t).length]).sort((a, b) => b[1] - a[1]).slice(0, 4).map(x => x[0]);
     const cols = [{ label: "All", pool: filtered() }, ...cats.map(t => ({ label: t, pool: readable().filter(c => c.commenter_type === t) }))];
     if (aria) cols.push({ label: "ARIA", aria: true });
-    const W = Math.max(700, cwid), lw = 290, cw = (W - lw) / cols.length, rh = 40, hh = 34;
+    const W = Math.max(700, cwid), lw = Math.max(290, labelW(props)), cw = (W - lw) / cols.length, rh = 40, hh = 34;
     cols.forEach((c, j) => out.push(`<text x="${lw + j * cw + 4}" y="14" font-size="${cw < 130 ? 11 : 12}" font-weight="700" fill="#111111" ${ff}>${esc(({ "Health professional": "Health prof.", "Private industry (non-device)": "Private industry", "Health care association": "Health care assns.", "International industry": "Intl. industry" })[c.label] || c.label)}</text>${c.pool ? `<text x="${lw + j * cw + 4}" y="28" font-size="11" fill="#555555" ${ff}>${c.pool.length} comments</text>` : ""}`));
     props.forEach((p, i) => {
       const y = hh + i * rh;
