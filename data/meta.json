@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-21T09:21:45.076807+00:00",
+ "updated": "2026-10-21T09:24:18.365877+00:00",
  "questions": [
   {
    "n": 1,
@@ -305,7 +305,16 @@
    "flexible_change_control": "conditional",
    "voluntary_model_files": "oppose"
   },
-  "recs": []
+  "recs": [
+   "multi_turn",
+   "directiveness_behavior",
+   "escalation_separate",
+   "synthetic_separate",
+   "reduced_evidence_limits",
+   "rebenchmark_on_change",
+   "independent_eval",
+   "error_reporting"
+  ]
  },
  "proposals": [
   {
@@ -354,6 +363,207 @@
    "desc": "Relying on voluntary Foundation Model Master Files from model developers (Q25)"
   }
  ],
- "recs": [],
+ "recs": [
+  {
+   "key": "risk_factors",
+   "label": "Add reversibility, detectability, and traceability to risk ratings",
+   "desc": "Expand the two-axis risk framework with factors such as reversibility, time to harm, error detectability, human review, and traceability to source evidence."
+  },
+  {
+   "key": "directiveness_behavior",
+   "label": "Judge directiveness by behavior and discount disclaimers",
+   "desc": "Classify how directive a device is from what its outputs do, with rubrics or worked examples, and give no risk credit for disclaimers or labels alone."
+  },
+  {
+   "key": "lower_burden_supervised",
+   "label": "Ease rules for clinician supervised and informational tools",
+   "desc": "Place clinician-supervised or purely informational functions in lower risk tiers, streamlined pathways, or enforcement discretion."
+  },
+  {
+   "key": "risk_evidence_map",
+   "label": "Publish a map from risk tier to required evidence",
+   "desc": "Publish guidance linking each risk position to the minimum evidence and clinical confirmation expected."
+  },
+  {
+   "key": "multi_turn",
+   "label": "Test devices across long conversations and repeated sessions",
+   "desc": "Evaluate behavior over whole conversations, late turns, repeated sessions, and stored user state instead of single prompts."
+  },
+  {
+   "key": "sycophancy",
+   "label": "Test whether outputs shift under user pressure",
+   "desc": "Benchmark whether advice changes with user affect, displeasure, reassurance, claimed authority, or beliefs when the clinical facts stay the same."
+  },
+  {
+   "key": "missing_input",
+   "label": "Test for made up output when input is missing",
+   "desc": "Check that devices do not produce confident output when sensor, image, or other input is missing, broken, or null, and log such cases."
+  },
+  {
+   "key": "escalation_separate",
+   "label": "Report under and over escalation separately",
+   "desc": "Report missed and unnecessary escalations as separate rates with prespecified, justified tolerances."
+  },
+  {
+   "key": "safety_floors",
+   "label": "Set separate pass or fail limits for critical failures",
+   "desc": "Set non-averageable thresholds for named high-consequence failures that a device must meet regardless of overall scores."
+  },
+  {
+   "key": "deterministic_controls",
+   "label": "Enforce safety rules outside the generative model",
+   "desc": "Use deterministic architecture and controls outside the model, and avoid relying on prompts, for scope limits and safety behaviors."
+  },
+  {
+   "key": "security_dependencies",
+   "label": "Test for prompt injection, security, and dependency failures",
+   "desc": "Test resistance to prompt injection and cyber threats and verify safe behavior when connectivity, suppliers, or dependencies fail."
+  },
+  {
+   "key": "benchmark_validity",
+   "label": "Show benchmarks and reference ratings are valid and reliable",
+   "desc": "Require evidence that benchmarks measure what they claim, results reproduce across runs, datasets are documented, and human reference panels are qualified and agree."
+  },
+  {
+   "key": "sequestered_benchmarks",
+   "label": "Use sequestered shared benchmarks and check contamination",
+   "desc": "Hold out sequestered or shared standard test sets, including ones qualified through FDA programs, and check for training-data contamination."
+  },
+  {
+   "key": "synthetic_separate",
+   "label": "Keep synthetic and real data results separate",
+   "desc": "Report synthetic and real-world results separately, validate synthetic data against real data, and do not let synthetic data alone set performance rates."
+  },
+  {
+   "key": "comparator_realistic",
+   "label": "Compare devices against realistic standards of care",
+   "desc": "Choose comparators that reflect the realistic alternative a patient would face, such as standard of care or no device, instead of a median clinician default."
+  },
+  {
+   "key": "human_ai_team",
+   "label": "Evaluate clinicians and AI together as deployed",
+   "desc": "Measure performance of the human and device working together in the real workflow, alongside device-alone results."
+  },
+  {
+   "key": "oversight_demonstrated",
+   "label": "Show that human oversight works in practice",
+   "desc": "Credit human review only when testing shows users catch and override errors, including human factors and automation bias testing."
+  },
+  {
+   "key": "deployed_config",
+   "label": "Evaluate the full deployed system including prompts",
+   "desc": "Treat the exact deployed configuration, including prompts, retrieval, tools, and orchestration, as the thing tested and controlled."
+  },
+  {
+   "key": "populations_settings",
+   "label": "Test across populations, settings, and atypical cases",
+   "desc": "Evaluate performance across subgroups, children, rural and low-resource settings, and hard or out-of-distribution cases."
+  },
+  {
+   "key": "prospective_outcomes",
+   "label": "Require prospective outcome studies for high risk devices",
+   "desc": "Require prospective clinical studies measuring patient outcomes or clinical utility for high-risk or action-directing devices."
+  },
+  {
+   "key": "reduced_evidence_limits",
+   "label": "Restrict trading premarket evidence for postmarket monitoring",
+   "desc": "Allow reduced premarket evidence only for low-risk functions where failures are detectable and reversible and monitoring is in place."
+  },
+  {
+   "key": "postmarket_plans",
+   "label": "Prespecify postmarket triggers, thresholds, and responses",
+   "desc": "Make postmarket monitoring plans enforceable with set metrics, thresholds, cadence, event triggers, and corrective actions."
+  },
+  {
+   "key": "drift_monitoring",
+   "label": "Monitor for drift and unannounced model changes",
+   "desc": "Detect performance drift and silent upstream model changes after launch with canary tests, golden suites, or output monitoring."
+  },
+  {
+   "key": "independent_records",
+   "label": "Monitor with records the device cannot alter",
+   "desc": "Base monitoring and evidence on independent records outside the device's control instead of the device's own self-reports."
+  },
+  {
+   "key": "rebenchmark_on_change",
+   "label": "Retest against the baseline whenever the model changes",
+   "desc": "Re-run benchmarks against the premarket baseline before deploying any model, prompt, or configuration change."
+  },
+  {
+   "key": "version_pinning",
+   "label": "Pin model versions and require notice of changes",
+   "desc": "Lock foundation model versions, forbid silent updates, and require advance notice of supplier model changes."
+  },
+  {
+   "key": "pccp_bounded",
+   "label": "Limit preapproved change plans to bounded changes",
+   "desc": "Define predetermined change control plans as bounded envelopes or categories of change with set verification and rollback."
+  },
+  {
+   "key": "model_disclosure",
+   "label": "Require model developers to share model information",
+   "desc": "Require foundation model developers to disclose model information through master files, contracts, or model cards, with manufacturers characterizing models otherwise."
+  },
+  {
+   "key": "accountability",
+   "label": "Keep accountability clear and centered on manufacturers",
+   "desc": "Keep manufacturers responsible for model validity and monitoring despite master files or deployers, and assign clear legal accountability for harms."
+  },
+  {
+   "key": "audit_trail",
+   "label": "Keep tamper evident records including model version",
+   "desc": "Keep tamper-evident logs that can reconstruct events, including the model version, configuration, and human decisions behind each output."
+  },
+  {
+   "key": "human_approval",
+   "label": "Require human approval before consequential or irreversible actions",
+   "desc": "Require a qualified human to approve consequential clinical decisions and irreversible agentic actions before they happen."
+  },
+  {
+   "key": "agent_authority",
+   "label": "Define and enforce limits on agent authority",
+   "desc": "Specify what agentic devices may access and do, enforce least privilege, and check permissions at the time of each action."
+  },
+  {
+   "key": "agent_sequences",
+   "label": "Test agents across the full sequence of actions",
+   "desc": "Evaluate agentic systems on their whole action trajectory, including retries and delegation, beyond final endpoints."
+  },
+  {
+   "key": "supervisor_validation",
+   "label": "Validate supervisory AI agents and keep human review",
+   "desc": "Validate AI monitors independently of the device they supervise, using different models, and keep them below human review."
+  },
+  {
+   "key": "kill_switch",
+   "label": "Require a tested off switch and rollback",
+   "desc": "Require tested ways to stop, suspend, or roll back a device or agent quickly."
+  },
+  {
+   "key": "patient_disclosure",
+   "label": "Tell patients when AI shapes their care",
+   "desc": "Disclose to patients, and seek consent where needed, when AI substantially participates in their care."
+  },
+  {
+   "key": "data_privacy",
+   "label": "Protect patient data and limit secondary use",
+   "desc": "Protect patient data, treat data sensitivity as a risk factor, and limit collection, retention, and secondary uses such as training."
+  },
+  {
+   "key": "error_reporting",
+   "label": "Clarify and expand reporting of AI errors and harms",
+   "desc": "Clarify adverse event reporting for generative errors and gradual harms and give patients and clinicians channels to report problems."
+  },
+  {
+   "key": "independent_eval",
+   "label": "Require independent third party evaluation",
+   "desc": "Require or accredit independent evaluators, free of conflicts, to test devices instead of relying only on sponsor testing."
+  },
+  {
+   "key": "align_standards",
+   "label": "Align terms and standards across agencies and countries",
+   "desc": "Use consistent AI terminology across FDA and other agencies and harmonize with international and existing standards."
+  }
+ ],
  "method": "129 posted comments read in full, including attachments, and coded against the codebook. A question counts as addressed when a comment discusses it substantively, cited or not. Comment types come from Regulations.gov; those with no category were assigned from content and are marked inferred."
 }

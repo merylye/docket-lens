@@ -1,0 +1,915 @@
+FDA-2026-N-7874-0103	deterministic_controls	Let applicants show architecture structurally caps the activity axis
+FDA-2026-N-7874-0103	deterministic_controls	Evaluate the deterministic constraint configuration rather than the model
+FDA-2026-N-7874-0103	independent_records	Require postmarket AI records be independently verifiable and tamper-evident
+FDA-2026-N-7874-0103	pccp_bounded	Record each PCCP change as a verifiable bounded envelope
+FDA-2026-N-7874-0103	none	Track verifiable evidence across sites, suppliers, and jurisdictions
+FDA-2026-N-7874-0103	none	Develop a common verifiable attestation standard for constrained AI
+FDA-2026-N-7874-0037	risk_factors	Add architectural connectedness and agentic coupling as a risk dimension
+FDA-2026-N-7874-0037	risk_factors	Add reversibility, safeguards, time pressure, and traceability to risk framework
+FDA-2026-N-7874-0037	none	Treat directiveness as a modifier of harm probability
+FDA-2026-N-7874-0037	none	Require risk-scaled user competency affirmation before enabling functions
+FDA-2026-N-7874-0037	none	Replace patient versus HCP categories with device-specific competency
+FDA-2026-N-7874-0037	directiveness_behavior	Give mitigation credit for traceability and uncertainty, not disclaimers
+FDA-2026-N-7874-0037	none	Evaluate across the real distribution of user knowledge
+FDA-2026-N-7874-0037	none	Impose higher oversight on devices that can migrate to directive output
+FDA-2026-N-7874-0064	comparator_realistic	Use absence-of-device comparator as a pass/fail floor test
+FDA-2026-N-7874-0064	comparator_realistic	Require absence comparator where users cannot contest outputs
+FDA-2026-N-7874-0064	missing_input	Test sensor-input devices with null input for fabricated output
+FDA-2026-N-7874-0064	missing_input	Treat confidence that input was received under benchmark element S.3
+FDA-2026-N-7874-0095	benchmark_validity	Require reporting a per-endpoint reproducibility floor on identical inputs
+FDA-2026-N-7874-0095	benchmark_validity	Treat differences within the floor as uninformative
+FDA-2026-N-7874-0095	benchmark_validity	Document a reproducibility floor for benchmarks gating regulatory decisions
+FDA-2026-N-7874-0095	benchmark_validity	Require minimum detectable difference for null subgroup results
+FDA-2026-N-7874-0095	postmarket_plans	Set monitoring triggers and sampling from the reproducibility floor
+FDA-2026-N-7874-0095	rebenchmark_on_change	Re-establish the floor after any model change
+FDA-2026-N-7874-0095	none	Place supervisory agent prompts under change control
+FDA-2026-N-7874-0095	supervisor_validation	Do not assume supervisor and device errors are independent
+FDA-2026-N-7874-0095	none	Set agentic acceptance criteria per action
+FDA-2026-N-7874-0059	none	Add evidence-quality calibration to device evaluation
+FDA-2026-N-7874-0059	none	Benchmark models on literature preceding historical medical reversals
+FDA-2026-N-7874-0059	populations_settings	Frame subgroup evaluation as usability and safety testing
+FDA-2026-N-7874-0059	none	Avoid requiring mathematical parity of subgroup error rates
+FDA-2026-N-7874-0083	accountability	Clarify pathologist accountability for unreviewable model outputs
+FDA-2026-N-7874-0083	accountability	Keep manufacturers accountable for model validity, drift, and changes
+FDA-2026-N-7874-0083	accountability	Separate manufacturer model surveillance from laboratory quality control
+FDA-2026-N-7874-0083	none	Limit laboratory QC to risk-based local performance checks
+FDA-2026-N-7874-0083	none	Assess staffing and sign-out burden in benefit-risk evaluation
+FDA-2026-N-7874-0100	risk_factors	Add traceability and reversibility as risk modifiers
+FDA-2026-N-7874-0100	deterministic_controls	Credit deterministic architectural risk controls in benchmarking
+FDA-2026-N-7874-0100	escalation_separate	Require prespecified escalation operating point with acuity-stratified reporting
+FDA-2026-N-7874-0100	none	Default comparator to median clinician, permit counterfactual comparators
+FDA-2026-N-7874-0100	independent_eval	Accredit multiple third-party bodies with capped fees and self-assessment option
+FDA-2026-N-7874-0100	accountability	Clarify that monitoring participation does not make institutions manufacturers
+FDA-2026-N-7874-0100	version_pinning	Expect version pinning, contractual notice, and shadow-mode regression gating
+FDA-2026-N-7874-0100	pccp_bounded	Cover foundation model version changes within PCCPs
+FDA-2026-N-7874-0100	none	Ensure absence of a model MAF creates no presumption
+FDA-2026-N-7874-0100	human_approval	Require non-bypassable human checkpoints before irreversible agentic actions
+FDA-2026-N-7874-0128	lower_burden_supervised	Place clinician-approved generative output lower on the activity axis
+FDA-2026-N-7874-0128	none	Allow restricting users by specialty training to lower risk tier
+FDA-2026-N-7874-0128	none	Add a therapeutic calibration benchmark for exposure-therapy devices
+FDA-2026-N-7874-0128	none	Let feasibility studies serve as both benchmarking and confirmation
+FDA-2026-N-7874-0128	none	Distinguish world-model devices from content-generation devices in benchmarking
+FDA-2026-N-7874-0054	deployed_config	Evaluate the complete deployed sociotechnical system, not the model
+FDA-2026-N-7874-0054	risk_factors	Add traceability, reviewability, reversibility, time-to-harm as risk modifiers
+FDA-2026-N-7874-0054	none	Add evidence fidelity and provenance as an explicit competency
+FDA-2026-N-7874-0054	escalation_separate	Measure under- and over-escalation separately with severity weighting
+FDA-2026-N-7874-0054	oversight_demonstrated	Assess effectiveness of human oversight and automation bias
+FDA-2026-N-7874-0054	rebenchmark_on_change	Trigger revalidation on any material system or behavior change
+FDA-2026-N-7874-0054	agent_authority	Regulate agentic systems by their authority to act
+FDA-2026-N-7874-0054	accountability	Keep downstream manufacturer responsible despite foundation model MAFs
+FDA-2026-N-7874-0008	model_disclosure	Require MAF filers to disclose their internal detection methodology
+FDA-2026-N-7874-0008	postmarket_plans	Require affirmative evidence of postmarket monitoring coverage
+FDA-2026-N-7874-0008	independent_records	Require degradation detection independent of the device's own reporting
+FDA-2026-N-7874-0024	risk_factors	Add autonomy, error detectability, reversibility, and population vulnerability to risk
+FDA-2026-N-7874-0024	none	Define competency as task-specific evidentiary requirements
+FDA-2026-N-7874-0024	populations_settings	Benchmark on difficult, out-of-distribution, adversarial, and ambiguous cases
+FDA-2026-N-7874-0024	oversight_demonstrated	Require human factors validation including automation bias
+FDA-2026-N-7874-0024	audit_trail	Set traceability expectations for foundation model lineage and configuration
+FDA-2026-N-7874-0024	agent_authority	Require enforceable autonomy limits and audit records for agentic systems
+FDA-2026-N-7874-0024	reduced_evidence_limits	Keep adequate premarket evidence for high-consequence devices
+FDA-2026-N-7874-0024	pccp_bounded	Specify bounded modifications, verification, and rollback in PCCPs
+FDA-2026-N-7874-0024	align_standards	Pursue international harmonization through IMDRF
+FDA-2026-N-7874-0043	risk_factors	Add detectability and human oversight to the risk framework
+FDA-2026-N-7874-0043	none	Label directive outputs as for information only
+FDA-2026-N-7874-0043	none	Flag outputs designed for specialists when shown to generalists
+FDA-2026-N-7874-0043	none	Block emergent directive advice to patients with a warning
+FDA-2026-N-7874-0043	none	Strengthen the agentic capabilities benchmarking element
+FDA-2026-N-7874-0043	sequestered_benchmarks	Provide sponsors a starting data framework against contamination
+FDA-2026-N-7874-0043	none	Derive synthetic data from meta-analyses rather than single studies
+FDA-2026-N-7874-0043	none	Use mixed generalist and specialist panels as performance standards
+FDA-2026-N-7874-0043	comparator_realistic	Use no-intervention as the comparator
+FDA-2026-N-7874-0084	escalation_separate	Require justifying escalation thresholds against deployment population and access
+FDA-2026-N-7874-0069	align_standards	Clarify which AI-enabled devices count as generative
+FDA-2026-N-7874-0069	none	Develop a parallel regulatory proposal for causal AI
+FDA-2026-N-7874-0053	risk_factors	Add physical output and reversibility as a risk dimension
+FDA-2026-N-7874-0053	deployed_config	Evaluate the validated production system for physical-output functions
+FDA-2026-N-7874-0053	none	Define a generative design envelope with physical confirmation testing
+FDA-2026-N-7874-0053	reduced_evidence_limits	Exclude permanent-implant functions from postmarket reliance
+FDA-2026-N-7874-0053	none	Couple change control across model and manufacturing parameters
+FDA-2026-N-7874-0053	version_pinning	Pin foundation model versions behind a release gate
+FDA-2026-N-7874-0053	human_approval	Require separate surgeon approval and manufacturing release signatures
+FDA-2026-N-7874-0053	audit_trail	Require a digital manufacturing record linking configuration to outcome
+FDA-2026-N-7874-0105	agent_authority	Add execution-time authorization integrity as a mandatory gate
+FDA-2026-N-7874-0105	rebenchmark_on_change	Require lookback and revalidation after any material change
+FDA-2026-N-7874-0105	kill_switch	Suspend device functions when change impact cannot be established
+FDA-2026-N-7874-0105	multi_turn	Treat multi-turn conversations as changing system state
+FDA-2026-N-7874-0105	postmarket_plans	Use event-triggered reassessment alongside a fixed review cadence
+FDA-2026-N-7874-0105	supervisor_validation	Separate supervisory agents from action-producing functions with fail-closed behavior
+FDA-2026-N-7874-0105	agent_authority	Require authority-lineage records and role matrices for accountability
+FDA-2026-N-7874-0105	version_pinning	Require version pinning and change notification for foundation models
+FDA-2026-N-7874-0105	human_approval	Require human confirmation before irreversible agentic actions
+FDA-2026-N-7874-0105	audit_trail	Require post-action reconciliation records for agentic systems
+FDA-2026-N-7874-0068	none	Require medical AI to retrieve evidence beyond U.S. databases
+FDA-2026-N-7874-0068	none	Include international and complementary medicine research in evidence retrieval
+FDA-2026-N-7874-0068	none	Grade evidence consistently by study type and replication
+FDA-2026-N-7874-0068	none	Evaluate conventional and complementary treatments by the same standards
+FDA-2026-N-7874-0068	none	Make evidence and uncertainty behind AI recommendations transparent
+FDA-2026-N-7874-0068	none	Identify research gaps for promising treatments
+FDA-2026-N-7874-0046	risk_factors	Treat named human review as a risk-lowering variable
+FDA-2026-N-7874-0046	risk_factors	Treat reversibility as a first-class risk variable
+FDA-2026-N-7874-0046	none	Tie the CDS boundary to independent review of the basis
+FDA-2026-N-7874-0046	human_ai_team	Evaluate the human-AI team as deployed in clinical confirmation
+FDA-2026-N-7874-0046	audit_trail	Require tamper-evident records of human review decisions
+FDA-2026-N-7874-0046	human_approval	Anchor agentic oversight to human sign-off on consequential actions
+FDA-2026-N-7874-0046	accountability	Keep manufacturer responsibility central despite master files
+FDA-2026-N-7874-0062	audit_trail	Require devices to emit a runtime component manifest per inference
+FDA-2026-N-7874-0062	version_pinning	Make version pinning a condition of clearance
+FDA-2026-N-7874-0062	pccp_bounded	Limit PCCPs to bounded sets of pinned, re-benchmarked versions
+FDA-2026-N-7874-0062	missing_input	Monitor input integrity separately from model behavior
+FDA-2026-N-7874-0062	missing_input	Require logging of missing input and premature session termination
+FDA-2026-N-7874-0062	missing_input	Add a benchmark for confabulation over null input
+FDA-2026-N-7874-0062	supervisor_validation	Validate supervisory agents against failure residue mimicking normal behavior
+FDA-2026-N-7874-0062	missing_input	Extend false-confidence safety element to whether input was received
+FDA-2026-N-7874-0086	prospective_outcomes	Require prospective clinical validation for high-risk systems
+FDA-2026-N-7874-0086	none	Assess risk using real conditions of care including staffing
+FDA-2026-N-7874-0086	human_ai_team	Evaluate the human-AI team including registered nurses
+FDA-2026-N-7874-0086	comparator_realistic	Compare devices against safe, adequately staffed care
+FDA-2026-N-7874-0086	none	Protect clinicians who override or report unsafe AI
+FDA-2026-N-7874-0086	patient_disclosure	Disclose to patients when AI shapes their care
+FDA-2026-N-7874-0086	supervisor_validation	Do not let machines be the sole supervisor of devices
+FDA-2026-N-7874-0086	audit_trail	Trace every clinical output to a specific model version
+FDA-2026-N-7874-0086	rebenchmark_on_change	Require revalidation and FDA review after material model changes
+FDA-2026-N-7874-0086	kill_switch	Give health systems prompt suspension and rollback controls
+FDA-2026-N-7874-0101	data_privacy	Add data sensitivity as a risk modifier
+FDA-2026-N-7874-0101	agent_authority	Test agentic systems for data-access and permission boundaries
+FDA-2026-N-7874-0101	data_privacy	Build data minimization and retention limits into postmarket monitoring
+FDA-2026-N-7874-0101	data_privacy	Include privacy-related changes in foundation model change notifications
+FDA-2026-N-7874-0129	lower_burden_supervised	Place clinician-approved generative output lower on the activity axis
+FDA-2026-N-7874-0129	none	Let sponsors restrict users by specialist training to lower risk
+FDA-2026-N-7874-0129	none	Add a therapeutic calibration benchmark for exposure therapy devices
+FDA-2026-N-7874-0129	none	Define safety acceptance criteria by each device's therapeutic mechanism
+FDA-2026-N-7874-0129	none	Let one prospective study serve benchmarking and clinical confirmation
+FDA-2026-N-7874-0129	none	Distinguish world-model devices from content-generation devices in benchmarking
+FDA-2026-N-7874-0009	risk_factors	Add reversibility, depth of human review, and traceability dimensions
+FDA-2026-N-7874-0009	none	Create a user tier for trained non-clinical health workers
+FDA-2026-N-7874-0009	none	Recognize routing to an accountable care channel as distinct activity
+FDA-2026-N-7874-0009	escalation_separate	Require separate reporting of under- and over-escalation rates
+FDA-2026-N-7874-0009	benchmark_validity	Define adjudicator qualifications by task rather than physician default
+FDA-2026-N-7874-0009	benchmark_validity	Require disclosure of whether adjudication was blinded to output
+FDA-2026-N-7874-0009	benchmark_validity	Report inter-rater agreement within human reference panels
+FDA-2026-N-7874-0009	comparator_realistic	Permit evaluation against actual prevailing practice
+FDA-2026-N-7874-0009	none	Give health plans a defined role in postmarket monitoring
+FDA-2026-N-7874-0034	none	Require formal requirements, verification, and validation before clearance
+FDA-2026-N-7874-0005	risk_factors	Add a multidimensional boundary ledger beyond the two axes
+FDA-2026-N-7874-0005	safety_floors	Define non-averagable hard gates for catastrophic or irreversible failures
+FDA-2026-N-7874-0005	sequestered_benchmarks	Require benchmark construct validity with sequestered, contamination-checked assets
+FDA-2026-N-7874-0005	synthetic_separate	Report synthetic and real-world estimates separately unless justified
+FDA-2026-N-7874-0005	reduced_evidence_limits	Allow postmarket reliance only when detection precedes harm
+FDA-2026-N-7874-0005	supervisor_validation	Validate supervisory agents independently and test common-mode blind spots
+FDA-2026-N-7874-0005	pccp_bounded	Define PCCPs as prespecified envelopes of allowable change
+FDA-2026-N-7874-0005	drift_monitoring	Detect third-party model changes with fingerprints and canary tests
+FDA-2026-N-7874-0005	oversight_demonstrated	Require measurable criteria for meaningful human oversight
+FDA-2026-N-7874-0005	agent_sequences	Evaluate agentic systems across the entire action sequence
+FDA-2026-N-7874-0027	none	Add model compression as a named change category
+FDA-2026-N-7874-0027	deployed_config	Validate the exact deployed artifact after compression changes
+FDA-2026-N-7874-0027	none	Use active adversarial re-benchmarking for safety and robustness elements
+FDA-2026-N-7874-0027	none	Compare re-benchmarking results at constituent failure-mode level
+FDA-2026-N-7874-0027	multi_turn	Make multi-turn trajectory testing a required distinct behavior
+FDA-2026-N-7874-0027	none	Conduct subgroup evaluation on the fine-tuned artifact
+FDA-2026-N-7874-0027	none	Require submissions to document downstream transformations of MAF models
+FDA-2026-N-7874-0027	sequestered_benchmarks	Require contamination analysis for adversarial benchmark assets
+FDA-2026-N-7874-0027	none	Disclose attack taxonomy and scoring rubric for sponsor benchmarks
+FDA-2026-N-7874-0027	none	Tie agentic acceptance criteria to action surface and reversibility
+FDA-2026-N-7874-0118	risk_factors	Add reversibility, time pressure, and traceability to risk assessment
+FDA-2026-N-7874-0118	none	Require persistent disclaimers on patient-facing advice devices
+FDA-2026-N-7874-0118	escalation_separate	Require separate, asymmetric reporting of under- and over-escalation
+FDA-2026-N-7874-0118	prospective_outcomes	Bar retrospective-only confirmation for severe-consequence action functions
+FDA-2026-N-7874-0118	synthetic_separate	Require independent non-synthetic reference data where synthetic data is used
+FDA-2026-N-7874-0118	reduced_evidence_limits	Limit reduced premarket evidence to low-risk devices
+FDA-2026-N-7874-0118	kill_switch	Require human kill switches for devices and agentic systems
+FDA-2026-N-7874-0118	pccp_bounded	Exclude open-ended foundation model changes from PCCPs
+FDA-2026-N-7874-0118	rebenchmark_on_change	Require advance notice and safety re-benchmarking for foundation model updates
+FDA-2026-N-7874-0118	none	Share training, validation, and performance data with clinician users
+FDA-2026-N-7874-0087	risk_factors	Treat meaningful human review as a major risk modifier
+FDA-2026-N-7874-0087	risk_factors	Consider traceability to source evidence in risk assessment
+FDA-2026-N-7874-0087	deployed_config	Evaluate the deployed system rather than the foundation model
+FDA-2026-N-7874-0087	human_ai_team	Permit evaluation of clinician plus AI versus clinician alone
+FDA-2026-N-7874-0087	postmarket_plans	Scale postmarket monitoring requirements to clinical risk
+FDA-2026-N-7874-0087	none	Apply risk-based reassessment rather than automatic full revalidation
+FDA-2026-N-7874-0087	pccp_bounded	Let PCCPs describe categories and boundaries of change
+FDA-2026-N-7874-0087	version_pinning	Require foundation model developers to give advance change notice
+FDA-2026-N-7874-0087	audit_trail	Require auditability sufficient to reconstruct consequential events
+FDA-2026-N-7874-0087	human_approval	Require human authorization before irreversible agentic actions
+FDA-2026-N-7874-0107	prospective_outcomes	Make prospective clinical studies the principal evidence for care-influencing devices
+FDA-2026-N-7874-0107	prospective_outcomes	Require prospective clinical scrutiny for action-directing and action-taking devices
+FDA-2026-N-7874-0107	prospective_outcomes	Evaluate devices on patient-centered clinical outcomes, not benchmark surrogates
+FDA-2026-N-7874-0107	prospective_outcomes	Use non-inferiority trials on prespecified clinical outcomes where feasible
+FDA-2026-N-7874-0107	none	Pair outcome measures with independent clinician adjudication of real cases for broad-scope devices
+FDA-2026-N-7874-0107	reduced_evidence_limits	Limit benchmark-only clearance to lower-risk informational devices
+FDA-2026-N-7874-0107	sequestered_benchmarks	Treat benchmark results cautiously given contamination and limited test sets
+FDA-2026-N-7874-0107	none	Use GenAI rules to strengthen evidence standards for all devices
+FDA-2026-N-7874-0006	risk_factors	Add counterfactual care environment and duration of reliance to risk assessment
+FDA-2026-N-7874-0006	comparator_realistic	Anchor comparators to the realistic deployment context, including usual information environment
+FDA-2026-N-7874-0006	risk_evidence_map	Publish presumptive clinical confirmation tiers keyed to the two-axis framework
+FDA-2026-N-7874-0006	multi_turn	Test conversations via adversarial longitudinal simulation with standardized personas
+FDA-2026-N-7874-0006	none	Require sponsors to declare and report violations of a conversational envelope
+FDA-2026-N-7874-0006	escalation_separate	Prespecify asymmetric under- and over-escalation tolerances and report both rates
+FDA-2026-N-7874-0006	directiveness_behavior	Publish worked examples along the directiveness gradient
+FDA-2026-N-7874-0006	version_pinning	Treat foundation model version pinning as a baseline design expectation
+FDA-2026-N-7874-0006	pccp_bounded	Define a PCCP category for re-benchmarked like-for-like model upgrades
+FDA-2026-N-7874-0006	none	Scale third-party certification fees to sponsor size
+FDA-2026-N-7874-0044	data_privacy	Require informed patient consent before using voice prints to train AI
+FDA-2026-N-7874-0044	data_privacy	Enforce HIPAA, HITECH, and Safe Harbor compliance for AI voice data
+FDA-2026-N-7874-0044	data_privacy	Prohibit covert audio recording of patients in healthcare settings
+FDA-2026-N-7874-0070	human_ai_team	Use human-AI team performance when an accountable clinician sees output
+FDA-2026-N-7874-0070	none	Specify the output's workflow position in the intended use
+FDA-2026-N-7874-0070	none	Specify whether independent clinician assessment is recorded before output display
+FDA-2026-N-7874-0070	accountability	Identify the accountable person when no clinician assessment precedes output
+FDA-2026-N-7874-0070	none	Check which ordering was tested and whether the device enforces it
+FDA-2026-N-7874-0049	risk_factors	Add traceability, reversibility, time pressure, and execution authority as risk modifiers
+FDA-2026-N-7874-0049	audit_trail	Require a reconstructable event record for higher-consequence devices
+FDA-2026-N-7874-0049	deployed_config	Complement competency benchmarking with system assurance of context and configuration
+FDA-2026-N-7874-0049	postmarket_plans	Use periodic plus event-triggered postmarket reassessment
+FDA-2026-N-7874-0049	supervisor_validation	Evaluate supervisory agents independently and define their intervention authority
+FDA-2026-N-7874-0049	version_pinning	Require version identification, change notification, and fail-safe handling for foundation models
+FDA-2026-N-7874-0049	synthetic_separate	Report synthetic and real-world performance separately with provenance
+FDA-2026-N-7874-0049	agent_authority	Require agentic sponsors to characterize tool permissions, action authority, and checkpoints
+FDA-2026-N-7874-0049	accountability	Define technical control responsibilities for each ecosystem stakeholder
+FDA-2026-N-7874-0049	pccp_bounded	Allow PCCPs to prespecify bounded classes of change and governance processes
+FDA-2026-N-7874-0063	independent_records	Verify device self-reports against an independent machine-produced access record
+FDA-2026-N-7874-0063	drift_monitoring	Monitor degradation within sessions by elapsed time and turn count
+FDA-2026-N-7874-0063	independent_records	Trigger reassessment on divergence between device claims and independent records
+FDA-2026-N-7874-0063	independent_records	Treat device silence and absence claims as reportable triggers
+FDA-2026-N-7874-0063	none	Report divergence between presentation quality and accuracy
+FDA-2026-N-7874-0063	none	Notify a designated caregiver or clinician of detected fabrication at session end
+FDA-2026-N-7874-0063	none	Keep periodic re-benchmarking for post-change confirmation only
+FDA-2026-N-7874-0088	none	Score history completeness against a prespecified case-locked question list
+FDA-2026-N-7874-0088	none	Prohibit self-graded completeness in benchmarking
+FDA-2026-N-7874-0088	none	Score repeated questions on resolved items as reliability failures
+FDA-2026-N-7874-0088	benchmark_validity	Require same-transcript consistency metrics on action-relevant fields
+FDA-2026-N-7874-0088	multi_turn	Include instruction-lock guardrail tests that must hold across turns
+FDA-2026-N-7874-0088	none	Pair source-conditioned hallucination checks with sampled clinician review
+FDA-2026-N-7874-0088	rebenchmark_on_change	Re-run benchmarks when foundation model or prompt template changes
+FDA-2026-N-7874-0088	sequestered_benchmarks	Use shared item definitions with a hidden holdout set
+FDA-2026-N-7874-0108	missing_input	Include missing-image cases in multimodal device benchmarks
+FDA-2026-N-7874-0108	missing_input	Explicitly specify missing- and broken-input benchmarking in evaluation criteria
+FDA-2026-N-7874-0108	missing_input	Assess population consistency under missing and broken inputs
+FDA-2026-N-7874-0108	none	Measure abstention in every output channel, including structured fields
+FDA-2026-N-7874-0108	missing_input	Do not accept model self-reported input adequacy as evidence
+FDA-2026-N-7874-0130	none	Require deployers to keep an inventory of generative AI functions
+FDA-2026-N-7874-0130	agent_authority	Require written permissions checked at the time of each action
+FDA-2026-N-7874-0130	audit_trail	Require an institution-owned tamper-evident audit trail
+FDA-2026-N-7874-0130	kill_switch	Require an institution-controlled stop for each device
+FDA-2026-N-7874-0130	none	Require manufacturers to make these four capabilities possible for deployers
+FDA-2026-N-7874-0130	version_pinning	Require advance notice to deployers of model, prompt, or tool changes
+FDA-2026-N-7874-0130	version_pinning	Let manufacturers pin or roll back foundation model versions for deployers
+FDA-2026-N-7874-0130	rebenchmark_on_change	Include deployer-side changes as reassessment triggers
+FDA-2026-N-7874-0130	none	Sample denied or out-of-scope actions in postmarket review
+FDA-2026-N-7874-0130	none	Place supervisors at the point of action, configured by institutions
+FDA-2026-N-7874-0003	risk_evidence_map	Publish a decision matrix linking risk tier to pathway and evidence
+FDA-2026-N-7874-0003	none	Coordinate with CMS to align evidence standards with coverage and coding
+FDA-2026-N-7874-0003	none	Create a dedicated GenAI pre-submission program with small manufacturer support
+FDA-2026-N-7874-0003	model_disclosure	Raise premarket evidence burden for devices built on models without MAFs
+FDA-2026-N-7874-0003	pccp_bounded	Establish three PCCP change categories with published example lists
+FDA-2026-N-7874-0003	postmarket_plans	Require prespecified, enforceable postmarket monitoring plans at authorization
+FDA-2026-N-7874-0003	version_pinning	Require 90-day contractual notice of foundation model changes
+FDA-2026-N-7874-0003	version_pinning	Prohibit unvalidated automatic foundation model updates to deployed devices
+FDA-2026-N-7874-0003	sequestered_benchmarks	Create a sequestered national benchmark repository with NIST
+FDA-2026-N-7874-0003	independent_eval	Expand ASCA to qualified AI benchmarking organizations with published fees
+FDA-2026-N-7874-0035	deployed_config	Treat the authorized system configuration, not the model, as unit of assurance
+FDA-2026-N-7874-0035	none	Require a versioned lifecycle assurance case linking claims, tests, and changes
+FDA-2026-N-7874-0035	audit_trail	Add a risk-proportionate AI System Bill of Materials
+FDA-2026-N-7874-0035	risk_factors	Add control effectiveness and operational context as risk modifiers
+FDA-2026-N-7874-0035	deterministic_controls	Enforce safety invariants deterministically outside the generative model
+FDA-2026-N-7874-0035	deployed_config	Bind benchmark results to a uniquely identified system configuration
+FDA-2026-N-7874-0035	data_privacy	Require explicit governance of collected and derived data
+FDA-2026-N-7874-0035	supervisor_validation	Require independent or diversely implemented supervision where risk warrants
+FDA-2026-N-7874-0035	agent_authority	Require declared authority envelopes and least privilege for agentic devices
+FDA-2026-N-7874-0035	none	Pilot the assurance framework through public workshops and voluntary pilots
+FDA-2026-N-7874-0010	risk_evidence_map	Publish a risk-tier-to-minimum-evidence mapping
+FDA-2026-N-7874-0010	risk_factors	Add detectability to the risk framework and reconcile it with ISO 14971
+FDA-2026-N-7874-0010	synthetic_separate	Prohibit synthetic data from establishing performance rates
+FDA-2026-N-7874-0010	supervisor_validation	Require supervisory agents built on a different model family
+FDA-2026-N-7874-0010	version_pinning	Treat foundation model version pinning as a design control expectation
+FDA-2026-N-7874-0010	pccp_bounded	Reframe PCCPs around locked evaluation invariants
+FDA-2026-N-7874-0010	comparator_realistic	Reject median clinician in practice as the primary performance standard
+FDA-2026-N-7874-0010	postmarket_plans	Make postmarket monitoring an enforceable condition with automatic consequences
+FDA-2026-N-7874-0010	error_reporting	Resolve MDR reportability for caught generative output errors
+FDA-2026-N-7874-0010	model_disclosure	Place full model characterization burden on manufacturers when no MAF exists
+FDA-2026-N-7874-0025	none	Expand risk assessment beyond incorrect output to omissions and missed needs
+FDA-2026-N-7874-0025	none	Add a competency for recognizing latent clinical need in administrative requests
+FDA-2026-N-7874-0025	multi_turn	Test multi-turn scenarios where key clinical information is not volunteered
+FDA-2026-N-7874-0025	none	Ground triage and level-of-care functions in curated evidence-based clinical sources
+FDA-2026-N-7874-0025	comparator_realistic	Compare AI against evidence-based standards, current practice, and human-AI teams
+FDA-2026-N-7874-0025	postmarket_plans	Monitor patient consequences and near misses postmarket
+FDA-2026-N-7874-0025	error_reporting	Create accessible channels for patients and clinicians to report AI problems
+FDA-2026-N-7874-0025	rebenchmark_on_change	Define safety invariants that cannot change without revalidation
+FDA-2026-N-7874-0025	none	Monitor litigation and state laws as external safety signals
+FDA-2026-N-7874-0025	align_standards	Create an interagency framework for clinical-adjacent AI outside FDA jurisdiction
+FDA-2026-N-7874-0114	none	Require sponsors to define a competency envelope for each device
+FDA-2026-N-7874-0114	none	Evaluate safe failure and recovery as an explicit gating competency
+FDA-2026-N-7874-0114	multi_turn	Use trajectory competency testing and stress testing across conditions
+FDA-2026-N-7874-0114	safety_floors	Set non-compensable minimum floors for safety-critical competencies
+FDA-2026-N-7874-0114	none	Map dependencies among capabilities for safety-critical functions
+FDA-2026-N-7874-0114	sequestered_benchmarks	Combine public, sequestered, and sponsor benchmarks with clinical confirmation
+FDA-2026-N-7874-0114	sequestered_benchmarks	Create a standardized public Clinical AI Competency Profile
+FDA-2026-N-7874-0114	none	Make benchmark suites machine-executable regulatory assets
+FDA-2026-N-7874-0114	rebenchmark_on_change	Establish a configuration baseline and run competency delta testing on changes
+FDA-2026-N-7874-0114	postmarket_plans	Set risk-based requalification triggers for each competency
+FDA-2026-N-7874-0089	audit_trail	Require a tamper-evident record of human authorization for consequential agent actions
+FDA-2026-N-7874-0089	risk_factors	Distinguish agentic risk by reversibility and consequence of autonomous actions
+FDA-2026-N-7874-0089	audit_trail	Demonstrate authorization records premarket for each class of consequential action
+FDA-2026-N-7874-0089	audit_trail	Require retention and auditability of authorization evidence postmarket
+FDA-2026-N-7874-0089	none	Prove authorization without collecting biometric identifiers
+FDA-2026-N-7874-0089	human_approval	Require agents to fail safe without verifiable human authorization
+FDA-2026-N-7874-0075	deterministic_controls	Enforce agent authorization in software independent of the model
+FDA-2026-N-7874-0075	agent_sequences	Test complete action sequences, including retries, duplicates, and delegation
+FDA-2026-N-7874-0075	security_dependencies	Test prompt injection through inputs, retrieved content, and tool results
+FDA-2026-N-7874-0075	safety_floors	Prespecify critical constraints and report violations separately from task scores
+FDA-2026-N-7874-0075	none	Compare time to harm against time to detect and contain failures
+FDA-2026-N-7874-0075	postmarket_plans	Assign investigators, intervention conditions, and response times for each signal
+FDA-2026-N-7874-0075	deployed_config	Assess change impact across the full deployed configuration
+FDA-2026-N-7874-0075	security_dependencies	Test fallbacks for supplier model retirement
+FDA-2026-N-7874-0075	supervisor_validation	Evaluate supervisory agents by role, missed failures, and added contribution
+FDA-2026-N-7874-0075	audit_trail	Retain protected records sufficient to reconstruct agent actions
+FDA-2026-N-7874-0106	model_disclosure	Make Foundation Model Master Files mandatory for higher-consequence devices
+FDA-2026-N-7874-0106	supervisor_validation	Require supervisory agents to pass the same safety benchmarks
+FDA-2026-N-7874-0106	sequestered_benchmarks	Require sponsors to disclose benchmark contamination and saturation safeguards
+FDA-2026-N-7874-0106	benchmark_validity	Require clinician comparator panels to report inter-rater reliability
+FDA-2026-N-7874-0015	risk_factors	Expand the risk framework to four axes
+FDA-2026-N-7874-0015	risk_factors	Add degree of human oversight at output delivery as an axis
+FDA-2026-N-7874-0015	risk_factors	Add traceability of output to verifiable source data as an axis
+FDA-2026-N-7874-0015	align_standards	Align the risk framework with IMDRF lifecycle management guidance
+FDA-2026-N-7874-0122	audit_trail	Register and version agents, models, tools, and qualification datasets
+FDA-2026-N-7874-0122	none	Treat device changes as evidence-gated state transitions
+FDA-2026-N-7874-0122	none	Name silent failure patterns explicitly in postmarket guidance
+FDA-2026-N-7874-0122	drift_monitoring	Monitor input-distribution drift as a first-class signal
+FDA-2026-N-7874-0122	human_approval	Require human authorization for any capability tier expansion
+FDA-2026-N-7874-0122	audit_trail	Keep hash-chained audit records of configuration changes
+FDA-2026-N-7874-0122	none	Resume paused devices only through a new evidence gate
+FDA-2026-N-7874-0074	deployed_config	Verify the complete sensor-to-output device pathway, not just the model
+FDA-2026-N-7874-0074	none	Use real patient data and controlled simulation as complementary evidence
+FDA-2026-N-7874-0074	none	State the test purpose and limits of simulated signals
+FDA-2026-N-7874-0074	benchmark_validity	Judge benchmarks by credibility and traceability, not dataset size
+FDA-2026-N-7874-0074	rebenchmark_on_change	Design premarket benchmarks as reusable post-change regression baselines
+FDA-2026-N-7874-0074	none	Scale re-verification to the risk of each device change
+FDA-2026-N-7874-0052	none	Separate initial criticality stratification from ISO 14971 risk management
+FDA-2026-N-7874-0052	risk_factors	Add factors like reversibility, time criticality, and intended user to stratification
+FDA-2026-N-7874-0052	none	Credit safeguards only when enforceable and verified
+FDA-2026-N-7874-0052	multi_turn	Expand benchmarking into dynamic multi-turn and risk-enriched evaluation suites
+FDA-2026-N-7874-0052	human_ai_team	Compare human-plus-device against human-alone using an independent reference standard
+FDA-2026-N-7874-0052	none	Allow staged deployment with prespecified evidence gates and rollback
+FDA-2026-N-7874-0052	synthetic_separate	Keep synthetic data results separate from real-world performance estimates
+FDA-2026-N-7874-0052	reduced_evidence_limits	Allow reduced premarket evidence only where failures are detectable and reversible
+FDA-2026-N-7874-0052	supervisor_validation	Keep periodic qualified human review alongside supervisory agents
+FDA-2026-N-7874-0052	audit_trail	Require case-level reconstructability of device configuration
+FDA-2026-N-7874-0065	multi_turn	Assess risk across conversational trajectories, not single turns
+FDA-2026-N-7874-0065	directiveness_behavior	Classify devices by the highest-risk output reachable in a trajectory
+FDA-2026-N-7874-0065	sycophancy	Test directiveness by varying user affect with fixed clinical content
+FDA-2026-N-7874-0065	multi_turn	Report unsolicited-directive rate as a function of turn index
+FDA-2026-N-7874-0065	multi_turn	Evaluate at matched early and late turns and report divergence
+FDA-2026-N-7874-0065	multi_turn	Require disclosure and evaluation of persistent cross-session user state
+FDA-2026-N-7874-0065	deterministic_controls	Demonstrate scope boundaries without relying on prompt instructions
+FDA-2026-N-7874-0065	sycophancy	Label the affective triggers that change device behavior
+FDA-2026-N-7874-0092	none	Combine random clinician review sampling with risk-based escalation
+FDA-2026-N-7874-0092	human_approval	Require human sign-off for outputs that authorize consequential clinical action
+FDA-2026-N-7874-0092	none	Make output review status visible and machine-readable
+FDA-2026-N-7874-0092	accountability	Keep manufacturer responsibility clear when external clinicians review outputs
+FDA-2026-N-7874-0092	audit_trail	Support incident reconstruction with risk-scaled record keeping
+FDA-2026-N-7874-0092	rebenchmark_on_change	Trigger reevaluation when authority or execution pathways change
+FDA-2026-N-7874-0092	agent_authority	Separate recommendation, authority, and execution permission in agentic systems
+FDA-2026-N-7874-0109	kill_switch	Require a verifiable built-in kill switch for autonomous AI systems
+FDA-2026-N-7874-0109	kill_switch	Require developers to demonstrate shutdown before deployment
+FDA-2026-N-7874-0045	none	Adopt a staged clinical AI licensure pathway with graduated autonomy
+FDA-2026-N-7874-0045	none	Expand risk assessment to five axes including clinical agency
+FDA-2026-N-7874-0045	none	Set numeric thresholds for provisional and independent authorization
+FDA-2026-N-7874-0045	sequestered_benchmarks	Use public, sequestered, and real-world benchmark layers
+FDA-2026-N-7874-0045	risk_evidence_map	Require a tiered clinical confirmation evidence ladder scaled to risk
+FDA-2026-N-7874-0045	independent_eval	Accredit multiple independent third-party evaluators with conflict rules
+FDA-2026-N-7874-0045	none	Tier modifications by clinical behavior change, not code size
+FDA-2026-N-7874-0045	model_disclosure	Pair Foundation Model Master Files with contractual disclosure requirements
+FDA-2026-N-7874-0045	supervisor_validation	Require independent validation and audit trails for supervisory AI
+FDA-2026-N-7874-0045	none	Adopt a clinical agency ladder for agentic AI
+FDA-2026-N-7874-0036	none	Allow AI stroke CT reads in rural hospitals without radiologists
+FDA-2026-N-7874-0011	accountability	Bar GenAI medical devices until liability questions are resolved
+FDA-2026-N-7874-0011	accountability	Hold manufacturers financially and legally accountable for all harms
+FDA-2026-N-7874-0011	none	Require congressional oversight before public deployment
+FDA-2026-N-7874-0026	escalation_separate	Treat under-escalation as riskier than over-escalation in triage devices
+FDA-2026-N-7874-0026	none	Permit triage devices to prioritize high sensitivity
+FDA-2026-N-7874-0026	escalation_separate	Require manufacturers to justify their escalation balance
+FDA-2026-N-7874-0026	sequestered_benchmarks	Establish a standardized out-of-domain testing dataset
+FDA-2026-N-7874-0026	none	Require a predefined clinical deferral threshold for out-of-scope scenarios
+FDA-2026-N-7874-0026	none	Evaluate over-deferral within the device's validated scope
+FDA-2026-N-7874-0123	sycophancy	Add a benchmark element for invariance to user state and belief
+FDA-2026-N-7874-0123	sycophancy	Require a clinician-prespecified perturbation taxonomy in both directions
+FDA-2026-N-7874-0123	benchmark_validity	Require a validity argument for every gating benchmark
+FDA-2026-N-7874-0123	sequestered_benchmarks	Use sequestered, independently governed benchmark item banks
+FDA-2026-N-7874-0123	benchmark_validity	Treat the case as the unit of statistical inference
+FDA-2026-N-7874-0123	benchmark_validity	Report reference panel reliability and use conjunctive safety standards
+FDA-2026-N-7874-0123	human_ai_team	Make human-AI team performance the primary criterion when clinicians are in the loop
+FDA-2026-N-7874-0123	missing_input	Require image-ablation and image-substitution tests for vision-language devices
+FDA-2026-N-7874-0123	rebenchmark_on_change	Treat each foundation model version as presumptively a new candidate
+FDA-2026-N-7874-0123	version_pinning	Require version pinning and deprecation notice from model providers
+FDA-2026-N-7874-0090	postmarket_plans	Require postmarket monitoring continuous from first deployment
+FDA-2026-N-7874-0090	postmarket_plans	Prespecify monitoring analyses, thresholds, cadence, and consequences
+FDA-2026-N-7874-0090	independent_records	Keep monitoring records append-only and independently verifiable
+FDA-2026-N-7874-0090	reduced_evidence_limits	Make failure detectability an eligibility criterion for reduced premarket evidence
+FDA-2026-N-7874-0090	none	Combine re-benchmarking, clinician review, and degradation monitoring
+FDA-2026-N-7874-0090	postmarket_plans	Use event-driven evaluation with a calendar-based floor
+FDA-2026-N-7874-0090	supervisor_validation	Validate supervisory agents against human adjudication and version them
+FDA-2026-N-7874-0090	supervisor_validation	Qualify supervisory monitoring methods through MDDT
+FDA-2026-N-7874-0090	pccp_bounded	Define PCCP modification categories by system component changed
+FDA-2026-N-7874-0090	drift_monitoring	Detect foundation model changes with a fixed canary probe set
+FDA-2026-N-7874-0077	reduced_evidence_limits	Grant premarket reductions only against demonstrated failure detection
+FDA-2026-N-7874-0077	independent_records	Require monitoring records independent of the device's self-report
+FDA-2026-N-7874-0077	none	Require a named recipient notified within the harm window
+FDA-2026-N-7874-0077	reduced_evidence_limits	Exclude the tradeoff for users who cannot self-report
+FDA-2026-N-7874-0077	reduced_evidence_limits	Exclude the tradeoff for devices operating without connectivity
+FDA-2026-N-7874-0077	reduced_evidence_limits	Exclude the tradeoff where harm is irreversible within detection interval
+FDA-2026-N-7874-0077	reduced_evidence_limits	Exclude the tradeoff for single-user long-duration deployments
+FDA-2026-N-7874-0077	none	Avoid standards that depend on developer intent
+FDA-2026-N-7874-0110	supervisor_validation	Use a checker model from a different developer than the device
+FDA-2026-N-7874-0110	supervisor_validation	Keep human review alongside AI-based monitoring
+FDA-2026-N-7874-0110	none	Check deployed systems daily rather than quarterly
+FDA-2026-N-7874-0110	rebenchmark_on_change	Re-run checks whenever the underlying model changes
+FDA-2026-N-7874-0110	version_pinning	Notify the practice the same day a model changes
+FDA-2026-N-7874-0018	version_pinning	Require locked foundation model versions
+FDA-2026-N-7874-0018	rebenchmark_on_change	Define triggered revalidation criteria for foundation model updates
+FDA-2026-N-7874-0018	security_dependencies	Add a dedicated cybersecurity competency area
+FDA-2026-N-7874-0018	none	Provide multiple-function device examples and boundary controls
+FDA-2026-N-7874-0018	none	Require evidence separating regulated and non-regulated functions
+FDA-2026-N-7874-0018	none	Define separate validation for model, retrieval, and orchestrator layers
+FDA-2026-N-7874-0018	oversight_demonstrated	Make human factors validation a standalone evaluation pillar
+FDA-2026-N-7874-0018	none	Offer practical statistical approaches for acceptance criteria
+FDA-2026-N-7874-0018	human_approval	Require approval checkpoints, audit trails, and rollback for agentic AI
+FDA-2026-N-7874-0018	version_pinning	Mandate model version traceability and supplier quality agreements
+FDA-2026-N-7874-0125	none	Treat modular AI components as distinct regulatory units
+FDA-2026-N-7874-0125	version_pinning	Require foundation model lineage and provenance tracking
+FDA-2026-N-7874-0125	version_pinning	Require immutable version identifiers for each model state
+FDA-2026-N-7874-0125	drift_monitoring	Require automated drift detection for foundation models
+FDA-2026-N-7874-0125	postmarket_plans	Implement risk-tiered continuous postmarket monitoring
+FDA-2026-N-7874-0125	none	Encourage lifecycle-native architectures with built-in governance
+FDA-2026-N-7874-0076	data_privacy	Add data exposure as a risk dimension
+FDA-2026-N-7874-0076	reduced_evidence_limits	Limit premarket-for-postmarket tradeoffs to the lowest-risk quadrant
+FDA-2026-N-7874-0076	model_disclosure	Make foundation model documentation a condition of submission
+FDA-2026-N-7874-0076	model_disclosure	Make model cards for marketed device models public
+FDA-2026-N-7874-0076	version_pinning	Require version pinning and no silent model updates
+FDA-2026-N-7874-0076	rebenchmark_on_change	Re-benchmark before new model versions reach patients
+FDA-2026-N-7874-0076	error_reporting	Create a patient channel for reporting incorrect outputs
+FDA-2026-N-7874-0076	kill_switch	Create a process to suspend device authorization
+FDA-2026-N-7874-0076	comparator_realistic	Use the standard of care, not the median clinician, as comparator
+FDA-2026-N-7874-0076	human_approval	Require human checkpoints before irreversible agentic actions
+FDA-2026-N-7874-0056	risk_factors	Add error detectability and independent reviewability to risk assessment
+FDA-2026-N-7874-0056	comparator_realistic	Use specialist comparators for specialty functions
+FDA-2026-N-7874-0056	human_ai_team	Evaluate both device-alone and human-device team performance
+FDA-2026-N-7874-0056	oversight_demonstrated	Test that users can detect errors before crediting oversight
+FDA-2026-N-7874-0056	benchmark_validity	Require independent specialty-matched adjudication for high-consequence functions
+FDA-2026-N-7874-0056	safety_floors	Set ceilings for critical errors and failures to escalate
+FDA-2026-N-7874-0056	postmarket_plans	Combine periodic postmarket review with change-triggered reassessment
+FDA-2026-N-7874-0056	accountability	Keep manufacturers responsible for funding and running monitoring
+FDA-2026-N-7874-0056	human_approval	Require hard human checkpoints for irreversible agentic actions
+FDA-2026-N-7874-0056	agent_authority	Define autonomy boundaries and least-privilege access for agents
+FDA-2026-N-7874-0067	none	Explain GenAI handling in combination products led by other centers
+FDA-2026-N-7874-0067	align_standards	Use one shared risk vocabulary across FDA centers
+FDA-2026-N-7874-0067	escalation_separate	Prespecify and justify weighting of under- and over-escalation
+FDA-2026-N-7874-0067	deployed_config	Add a test article and configuration definition element
+FDA-2026-N-7874-0067	oversight_demonstrated	Link E.4 to existing human factors framework
+FDA-2026-N-7874-0067	sequestered_benchmarks	Require provenance dating and canary items for public benchmarks
+FDA-2026-N-7874-0067	sequestered_benchmarks	Qualify benchmark suites through the MDDT program
+FDA-2026-N-7874-0067	postmarket_plans	Prespecify alert and action limits in monitoring plans
+FDA-2026-N-7874-0067	none	Map change categories to affected benchmarking elements
+FDA-2026-N-7874-0067	human_approval	Require human confirmation gates for irreversible agentic actions
+FDA-2026-N-7874-0094	prospective_outcomes	Separate clinical validity and clinical utility as evidentiary bars
+FDA-2026-N-7874-0094	prospective_outcomes	Reserve prospective studies for the highest-risk functions
+FDA-2026-N-7874-0094	none	Make postmarket reliance the default outside the highest-risk band
+FDA-2026-N-7874-0094	none	Keep third-party and master file programs voluntary and non-gating
+FDA-2026-N-7874-0094	risk_factors	Add evidentiary traceability as a risk dimension
+FDA-2026-N-7874-0094	lower_burden_supervised	Default to enforcement discretion for low-risk informational functions
+FDA-2026-N-7874-0094	lower_burden_supervised	Recognize CLIA/CAP accreditation for laboratory-embedded GenAI functions
+FDA-2026-N-7874-0094	none	Address minimum deploying-site capacity for higher-tier functions
+FDA-2026-N-7874-0094	none	Require disclosure of compensation structures affecting device use
+FDA-2026-N-7874-0094	oversight_demonstrated	Define a test for meaningful human review of agentic actions
+FDA-2026-N-7874-0119	model_disclosure	Obtain foundation model information through manufacturer purchasing controls
+FDA-2026-N-7874-0119	model_disclosure	Let suppliers produce model information directly to FDA
+FDA-2026-N-7874-0119	accountability	Keep the manufacturer's duty undischarged by supplier attestations
+FDA-2026-N-7874-0119	none	Consider whether HCP supervision is enforceable in each setting
+FDA-2026-N-7874-0119	risk_factors	Keep time pressure as an explicit risk modifier
+FDA-2026-N-7874-0119	accountability	Write stakeholder roles as inputs, not substitute duties
+FDA-2026-N-7874-0119	none	Make postmarket triggers neutral to outcome direction
+FDA-2026-N-7874-0119	accountability	Name the duty bearer in each operative sentence
+FDA-2026-N-7874-0050	none	Structure the institutional role around receiving and reporting
+FDA-2026-N-7874-0050	none	Specify information manufacturers must supply to deploying institutions
+FDA-2026-N-7874-0050	version_pinning	Notify deploying institutions of material model changes
+FDA-2026-N-7874-0050	model_disclosure	Create a tiered, partly public Foundation Model Master File
+FDA-2026-N-7874-0050	accountability	Place more monitoring burden on manufacturers than institutions
+FDA-2026-N-7874-0017	risk_factors	Add irreversibility, time to harm, and rescue opportunity to risk
+FDA-2026-N-7874-0017	human_ai_team	Evaluate the human-AI team in realistic clinical workflows
+FDA-2026-N-7874-0017	reduced_evidence_limits	Bar reduced premarket evidence for invasive irreversible functions
+FDA-2026-N-7874-0017	postmarket_plans	Require version-, subgroup-, and setting-specific postmarket surveillance
+FDA-2026-N-7874-0017	none	Treat foundation model changes as safety-relevant supply-chain events
+FDA-2026-N-7874-0017	version_pinning	Require contracts giving advance notice and update suspension rights
+FDA-2026-N-7874-0017	model_disclosure	Expect Master File access when sponsors rely on third-party models
+FDA-2026-N-7874-0017	agent_authority	Require action boundaries, stop conditions, and immutable logs for agents
+FDA-2026-N-7874-0017	data_privacy	Disclose data capture and secondary uses including model training
+FDA-2026-N-7874-0017	populations_settings	Require evidence across rural, community, and lower-resource settings
+FDA-2026-N-7874-0039	safety_floors	Define clinically meaningful metrics, thresholds, and critical-error criteria
+FDA-2026-N-7874-0039	risk_factors	Expand the risk framework with autonomy, reversibility, and detectability
+FDA-2026-N-7874-0039	none	Set documentation requirements for model retraining
+FDA-2026-N-7874-0039	drift_monitoring	Monitor drift, near misses, and clinician overrides postmarket
+FDA-2026-N-7874-0039	rebenchmark_on_change	Define risk-based reassessment triggers including foundation model changes
+FDA-2026-N-7874-0039	rebenchmark_on_change	Re-benchmark against the original premarket baseline
+FDA-2026-N-7874-0039	none	Adopt a continuous risk-adaptive total product lifecycle framework
+FDA-2026-N-7874-0012	none	Advance the discussion paper into draft guidance
+FDA-2026-N-7874-0012	lower_burden_supervised	Establish streamlined pathways for HCP-supervised AI tools
+FDA-2026-N-7874-0012	lower_burden_supervised	Classify scribing and supervised imaging second-reads as lower risk
+FDA-2026-N-7874-0012	none	Prioritize safety escalation and quantitative analysis benchmarks
+FDA-2026-N-7874-0012	model_disclosure	Fully operationalize Foundation Model Master Files
+FDA-2026-N-7874-0012	none	Enable supervisory agents and flexible PCCPs for model drift
+FDA-2026-N-7874-0032	security_dependencies	Validate safe device behavior during dependency failures
+FDA-2026-N-7874-0032	security_dependencies	Add a cybersecurity and dependency-integrity benchmarking element
+FDA-2026-N-7874-0032	none	Require serviceability and lifecycle-support plans
+FDA-2026-N-7874-0032	none	Require disclosure of end-of-support and provider-exit plans
+FDA-2026-N-7874-0032	security_dependencies	Require a connectivity and dependency profile before acquisition
+FDA-2026-N-7874-0032	risk_factors	Treat connectivity dependence and time-to-harm as risk modifiers
+FDA-2026-N-7874-0032	none	Distinguish AI calibration from physical device calibration
+FDA-2026-N-7874-0032	none	Disclose ownership, licensing, and remote-disable controls
+FDA-2026-N-7874-0032	none	Assess fleet-level common-mode failure risk
+FDA-2026-N-7874-0032	none	Include HTM and clinical engineering stakeholders in framework development
+FDA-2026-N-7874-0127	none	Base activity-axis placement on component write authority
+FDA-2026-N-7874-0127	none	Distinguish computed from generated confidence in S.3
+FDA-2026-N-7874-0127	none	Add a Record Integrity benchmarking element
+FDA-2026-N-7874-0127	deployed_config	Bind competency evidence to a whole-configuration build fingerprint
+FDA-2026-N-7874-0127	rebenchmark_on_change	Trigger re-benchmarking whenever the build fingerprint changes
+FDA-2026-N-7874-0127	independent_records	Allow postmarket reliance only on records the device cannot write
+FDA-2026-N-7874-0127	supervisor_validation	Require supervisory agents to pass a passivity test
+FDA-2026-N-7874-0127	none	Gate irreversible agentic actions on witnessed state
+FDA-2026-N-7874-0127	audit_trail	Keep agent audit logs outside the agent's write access
+FDA-2026-N-7874-0127	none	Add a write-authority declaration to model cards
+FDA-2026-N-7874-0091	benchmark_validity	Require measurement-system qualification evidence for gating benchmarks
+FDA-2026-N-7874-0091	benchmark_validity	Require a null comparison of the unchanged configuration
+FDA-2026-N-7874-0091	multi_turn	Treat the multi-turn observation window as a validated parameter
+FDA-2026-N-7874-0091	escalation_separate	Report under- and over-escalation with separate denominators
+FDA-2026-N-7874-0091	rebenchmark_on_change	Scale re-benchmarking to modification type with an invariant safety core
+FDA-2026-N-7874-0091	postmarket_plans	Keep periodic postmarket assessment alongside change-triggered re-benchmarking
+FDA-2026-N-7874-0091	none	Require bridge testing when the automated adjudicator changes
+FDA-2026-N-7874-0091	synthetic_separate	Avoid pooling synthetic and real evidence without stated conditions
+FDA-2026-N-7874-0091	synthetic_separate	Verify synthetic case labels independently of the generating model
+FDA-2026-N-7874-0091	none	Prefer open methods with targeted independent adjudication over certification
+FDA-2026-N-7874-0078	missing_input	Add an input-integrity element under Safety
+FDA-2026-N-7874-0078	multi_turn	Specify sampling position within sessions when scoring elements
+FDA-2026-N-7874-0078	multi_turn	Report trajectory across encounters, not only aggregates
+FDA-2026-N-7874-0078	security_dependencies	Move retrieved-content injection testing from A.1 to Safety
+FDA-2026-N-7874-0078	oversight_demonstrated	Attach automation bias consideration to Safety as well
+FDA-2026-N-7874-0078	independent_records	Allow device-independent records as benchmark evidence
+FDA-2026-N-7874-0078	none	State model execution locality as a required field
+FDA-2026-N-7874-0078	none	Consider per-output provenance as a competency
+FDA-2026-N-7874-0078	none	Treat display captures as evidence in adverse event investigations
+FDA-2026-N-7874-0112	none	Add regulatory harm as a consequence class in the risk framework
+FDA-2026-N-7874-0112	none	Create a supplementary risk category for AI in GCP-regulated research settings
+FDA-2026-N-7874-0112	none	Extend competency standards to operator-level research site staff
+FDA-2026-N-7874-0112	none	Require sponsors to provide site staff with defined competency standards for evaluating AI outputs
+FDA-2026-N-7874-0112	audit_trail	Require audit trails recording AI recommendations and operator review decisions
+FDA-2026-N-7874-0020	risk_factors	Add error detectability, exposure, and irreversibility as risk dimensions
+FDA-2026-N-7874-0020	risk_evidence_map	Link required strength of evidence explicitly to risk tier
+FDA-2026-N-7874-0020	prospective_outcomes	Require evidence of clinical utility, not just competency, for high-risk devices
+FDA-2026-N-7874-0020	prospective_outcomes	Require prospective comparative evidence for high-risk autonomous functions
+FDA-2026-N-7874-0020	populations_settings	Prespecify statistical standards including worst-case and subgroup performance
+FDA-2026-N-7874-0020	synthetic_separate	Use synthetic data only to augment independent real-patient validation
+FDA-2026-N-7874-0020	reduced_evidence_limits	Limit premarket-for-postmarket tradeoffs to reversible, low-consequence functions
+FDA-2026-N-7874-0020	populations_settings	Require age- and development-stratified validation for pediatric use
+FDA-2026-N-7874-0020	comparator_realistic	Choose comparators that reflect the realistic counterfactual of care
+FDA-2026-N-7874-0126	none	Classify functions by whether they generate or present clinical claims
+FDA-2026-N-7874-0126	none	Assess risk on four dimensions including user and characterizability
+FDA-2026-N-7874-0126	deterministic_controls	Make bounding of input and output space the primary regulatory expectation
+FDA-2026-N-7874-0126	none	Evaluate generated clinical claims against a reference standard, in structured form
+FDA-2026-N-7874-0126	reduced_evidence_limits	Treat postmarket monitoring as a complement, not a substitute, for premarket evidence
+FDA-2026-N-7874-0126	none	Require uncertainty quantification, independent safety-net paths, and structured deferral for high-risk functions
+FDA-2026-N-7874-0126	comparator_realistic	Set comparators by local standard of care with prespecified absolute thresholds
+FDA-2026-N-7874-0126	none	Recognize validated synthetic benchmarks as evidence of generalizability via MDDT
+FDA-2026-N-7874-0126	supervisor_validation	Treat supervisory monitoring agents as device software functions needing their own validation
+FDA-2026-N-7874-0126	version_pinning	Require version pinning and re-benchmarking on any foundation model change
+FDA-2026-N-7874-0081	none	Include patients, clinicians, and other stakeholders in AI governance and oversight
+FDA-2026-N-7874-0081	none	Involve stakeholders across the full AI lifecycle through retirement
+FDA-2026-N-7874-0081	accountability	Define clear accountability and meaningful human oversight
+FDA-2026-N-7874-0111	sycophancy	Add concordance (sycophancy) behavior as a named risk dimension
+FDA-2026-N-7874-0111	sycophancy	Test multi-turn devices with adversarial trajectories where users minimize or reassure
+FDA-2026-N-7874-0111	escalation_separate	Report under-escalation and over-escalation separately
+FDA-2026-N-7874-0111	deterministic_controls	Assess whether safety behaviors are enforced outside the generative model's influence
+FDA-2026-N-7874-0111	none	Treat corpus closure and record-verified assertions as premarket risk characteristics
+FDA-2026-N-7874-0111	none	Accept device-generated integrity metrics as a postmarket monitoring approach
+FDA-2026-N-7874-0111	supervisor_validation	Validate supervisory agents for false positives as well as false negatives
+FDA-2026-N-7874-0111	supervisor_validation	Deploy supervisory agents in observation-only mode before granting authority
+FDA-2026-N-7874-0111	none	Scope postmarket obligations so small developers can meet them
+FDA-2026-N-7874-0111	security_dependencies	Evaluate device safety behavior under degraded or absent connectivity
+FDA-2026-N-7874-0071	independent_eval	Require independent third-party evaluation of safety-critical escalation and calibration elements
+FDA-2026-N-7874-0071	independent_eval	Require organizational and evaluator-model independence for third-party evaluators
+FDA-2026-N-7874-0071	independent_eval	Use open accreditation criteria rather than a closed evaluator panel
+FDA-2026-N-7874-0071	none	Add continuous per-output verification against authoritative sources
+FDA-2026-N-7874-0071	benchmark_validity	Build reliability profiles from repeated runs of prespecified test bundles
+FDA-2026-N-7874-0071	supervisor_validation	Require supervisory agents to be evaluated by architecturally separate evaluators
+FDA-2026-N-7874-0071	agent_sequences	Assess agentic trajectories, not only endpoints, in postmarket evaluation
+FDA-2026-N-7874-0071	none	Tier modifications by reversibility and blast radius
+FDA-2026-N-7874-0071	rebenchmark_on_change	Re-benchmark changes touching safety-critical elements before deployment
+FDA-2026-N-7874-0071	none	Test whether agents recognize mid-session changes in their own scope
+FDA-2026-N-7874-0097	human_approval	Preserve meaningful physician oversight for consequential clinical decisions
+FDA-2026-N-7874-0097	prospective_outcomes	Require rigorous prospective clinical validation for high-consequence autonomous AI
+FDA-2026-N-7874-0097	populations_settings	Test AI under realistic conditions including atypical and complex patients
+FDA-2026-N-7874-0097	error_reporting	Require post-market surveillance and reporting of significant AI adverse events
+FDA-2026-N-7874-0097	accountability	Establish clear developer and institutional accountability for AI-associated harm
+FDA-2026-N-7874-0097	none	Protect physicians' authority to override AI recommendations
+FDA-2026-N-7874-0097	patient_disclosure	Disclose to patients when AI substantially participates in their care
+FDA-2026-N-7874-0120	lower_burden_supervised	Exercise enforcement discretion for radiologist-supervised private VLM pre-drafting
+FDA-2026-N-7874-0120	risk_factors	Add output disposition, reversibility, verifiability, and enforced review as risk modifiers
+FDA-2026-N-7874-0120	none	Recognize a supervised-operation stage within the competency framework
+FDA-2026-N-7874-0120	human_ai_team	Evaluate human-AI team performance against realistic unaided practice
+FDA-2026-N-7874-0120	none	Measure errors prevented as well as errors introduced by AI assistance
+FDA-2026-N-7874-0120	none	Do not require randomized trials for every supervised pre-drafting function
+FDA-2026-N-7874-0120	synthetic_separate	Report synthetic and real-world results separately
+FDA-2026-N-7874-0120	none	Keep third-party involvement risk-proportionate rather than universally mandatory
+FDA-2026-N-7874-0120	version_pinning	Prohibit silent replacement of deployed foundation models
+FDA-2026-N-7874-0120	supervisor_validation	Use machine supervisory agents only as a supplement to human adjudication
+FDA-2026-N-7874-0048	risk_factors	Add risk modifiers such as reversibility, detectability, and traceability
+FDA-2026-N-7874-0048	directiveness_behavior	Judge directiveness by observed behavior rather than interface labels
+FDA-2026-N-7874-0048	none	Require claim-specific, traceable competency evidence
+FDA-2026-N-7874-0048	independent_eval	Require external adjudication or preregistration when sponsors control testing
+FDA-2026-N-7874-0048	synthetic_separate	Keep synthetic and real-data results separate
+FDA-2026-N-7874-0048	reduced_evidence_limits	Accept residual premarket uncertainty only when failures are detectable and reversible
+FDA-2026-N-7874-0048	postmarket_plans	Require versioned baselines, investigation thresholds, and rollback rules in lifecycle monitoring
+FDA-2026-N-7874-0048	version_pinning	Require versioned dependency inventories for third-party foundation models
+FDA-2026-N-7874-0048	agent_sequences	Evaluate action-sequence safety for agentic systems
+FDA-2026-N-7874-0021	none	Add omission and harmful affirmation as failure types in the risk framework
+FDA-2026-N-7874-0021	populations_settings	Benchmark reasonably foreseeable use, not just labeled indication
+FDA-2026-N-7874-0021	safety_floors	Set separate pass/fail floors for named high-consequence failures
+FDA-2026-N-7874-0021	multi_turn	Evaluate multi-turn safety over days and months and across sessions
+FDA-2026-N-7874-0021	none	Require sponsors to show end-to-end escalation handoffs and response times
+FDA-2026-N-7874-0021	none	Require risk-proportionate discontinuation plans in authorizations
+FDA-2026-N-7874-0021	rebenchmark_on_change	Re-benchmark sycophancy and boundary-keeping after every upstream model change
+FDA-2026-N-7874-0021	none	Create a pooled cross-manufacturer sentinel monitoring network
+FDA-2026-N-7874-0021	none	Treat relational features as risk modifiers
+FDA-2026-N-7874-0021	populations_settings	Create a distinct pediatric pathway with age-banded testing
+FDA-2026-N-7874-0038	none	Add model-risk and lifecycle-risk layers to the two-axis framework
+FDA-2026-N-7874-0038	directiveness_behavior	Treat action-directing outputs as higher risk regardless of disclaimers
+FDA-2026-N-7874-0038	align_standards	Develop consensus definitions of AI terms across agencies
+FDA-2026-N-7874-0038	none	Adopt a developer-to-user approach to upstream GenAI risks
+FDA-2026-N-7874-0038	align_standards	Harmonize GenAI standards with international regulators
+FDA-2026-N-7874-0038	none	Encourage patient engagement in development and evaluation
+FDA-2026-N-7874-0038	none	Include ethics expertise in FDA review processes
+FDA-2026-N-7874-0038	none	Add hallucination, bias, drift, and human-factors testing to clinical confirmation
+FDA-2026-N-7874-0038	version_pinning	Notify users when a model has been updated
+FDA-2026-N-7874-0013	version_pinning	Treat model version pinning as a design control expectation
+FDA-2026-N-7874-0013	risk_evidence_map	Publish a mapping from risk tier to minimum evidence
+FDA-2026-N-7874-0013	risk_factors	Add detectability as a risk dimension and reconcile with ISO 14971
+FDA-2026-N-7874-0013	synthetic_separate	Prohibit synthetic data from establishing performance rates
+FDA-2026-N-7874-0013	comparator_realistic	Reject the median clinician as the primary performance standard
+FDA-2026-N-7874-0013	supervisor_validation	Require architectural independence for supervisory agents used as evidence
+FDA-2026-N-7874-0013	pccp_bounded	Build PCCPs for GenAI around locked invariants rather than change lists
+FDA-2026-N-7874-0013	postmarket_plans	Make postmarket monitoring an enforceable condition of authorization
+FDA-2026-N-7874-0013	model_disclosure	Pair voluntary master files with a manufacturer-side characterization default
+FDA-2026-N-7874-0013	error_reporting	Clarify MDR reportability for generative outputs
+FDA-2026-N-7874-0033	none	Require sponsors to characterize what their monitoring can and cannot detect
+FDA-2026-N-7874-0033	benchmark_validity	Write adjudication criteria as explicit decision rules
+FDA-2026-N-7874-0033	benchmark_validity	Measure and report inter-adjudicator agreement
+FDA-2026-N-7874-0033	benchmark_validity	Calibrate and recalibrate clinician adjudicators periodically
+FDA-2026-N-7874-0033	benchmark_validity	Keep adjudication records reconstructable
+FDA-2026-N-7874-0033	supervisor_validation	Define context of use and validation for supervisory agents
+FDA-2026-N-7874-0033	supervisor_validation	Retain human authority to reject supervisory agent determinations
+FDA-2026-N-7874-0033	none	Have professional societies build shared adjudicator calibration materials
+FDA-2026-N-7874-0033	error_reporting	Clarify what counts as a malfunction for generative outputs
+FDA-2026-N-7874-0131	reduced_evidence_limits	Make irreversible functions ineligible for reduced premarket evidence
+FDA-2026-N-7874-0131	none	Define the activity axis by effect on the user's choice set
+FDA-2026-N-7874-0131	none	Add an omission rung to the directiveness continuum
+FDA-2026-N-7874-0131	none	Require stated populations for all postmarket performance figures
+FDA-2026-N-7874-0131	supervisor_validation	Ensure supervisory agent records cannot be read as human judgment
+FDA-2026-N-7874-0131	drift_monitoring	Recognize deployer-observed model change notices as evidence
+FDA-2026-N-7874-0131	drift_monitoring	Require demonstrated detection capability for upstream model changes
+FDA-2026-N-7874-0131	none	Make resumption of reliance on withdrawn model versions fail-closed
+FDA-2026-N-7874-0131	none	Structure master files around hash commitments to specific results
+FDA-2026-N-7874-0131	audit_trail	Require agentic records to distinguish skipped checkpoints from passed ones
+FDA-2026-N-7874-0093	none	Add change dynamics as a third risk dimension
+FDA-2026-N-7874-0093	risk_evidence_map	Publish a non-binding mapping from risk position to evidence expectations
+FDA-2026-N-7874-0093	none	Add a provenance and source-attribution benchmarking element
+FDA-2026-N-7874-0093	align_standards	Recognize external AI standards such as ISO/IEC 42001 and NIST AI RMF
+FDA-2026-N-7874-0093	pccp_bounded	Shift PCCPs to predetermined gates for change types
+FDA-2026-N-7874-0093	none	Use a three-tier change taxonomy for re-benchmarking
+FDA-2026-N-7874-0093	model_disclosure	Publish a structured content template for foundation model master files
+FDA-2026-N-7874-0093	model_disclosure	Require sponsors to document foundation model identity regardless of master files
+FDA-2026-N-7874-0093	independent_eval	Model third-party participation on ASCA and MDDT without exclusivity
+FDA-2026-N-7874-0093	drift_monitoring	Require canary probes and output monitoring to detect silent model changes
+FDA-2026-N-7874-0079	none	Limit master files to stable content and not credit version currency
+FDA-2026-N-7874-0079	none	Require execution locality as a stated field in submissions
+FDA-2026-N-7874-0079	audit_trail	Require serving systems to report machine-readable version identifiers
+FDA-2026-N-7874-0079	audit_trail	Treat the answering model's identity as a continuously produced record
+FDA-2026-N-7874-0079	independent_records	Accept independent user-side records as evidence of model provenance
+FDA-2026-N-7874-0079	audit_trail	Require devices to carry a self-reported lineage record
+FDA-2026-N-7874-0079	none	State in authorizations when device inference is remote
+FDA-2026-N-7874-0113	prospective_outcomes	Establish clinical association before analytical benchmarking
+FDA-2026-N-7874-0113	model_disclosure	Require mandatory disclosure from foundation model developers
+FDA-2026-N-7874-0113	independent_eval	Require independent third-party verification for medium- and high-risk devices
+FDA-2026-N-7874-0113	risk_evidence_map	Require risk-proportionate clinical confirmation for all devices
+FDA-2026-N-7874-0113	prospective_outcomes	Require prospective clinical evidence for high-risk devices
+FDA-2026-N-7874-0113	risk_factors	Add intended use, reversibility, and time pressure to risk assessment
+FDA-2026-N-7874-0113	multi_turn	Evaluate multi-turn conversations and agentic workflows holistically
+FDA-2026-N-7874-0113	reduced_evidence_limits	Use postmarket monitoring to verify, not replace, premarket evidence
+FDA-2026-N-7874-0113	populations_settings	Require fairness assessments using real data for high-risk devices
+FDA-2026-N-7874-0113	pccp_bounded	Adopt tiered PCCPs with subgroup accuracy thresholds
+FDA-2026-N-7874-0022	accountability	Hold device developers and sellers legally liable for failures
+FDA-2026-N-7874-0022	kill_switch	Require an enforceable off switch for autonomous AI devices
+FDA-2026-N-7874-0022	directiveness_behavior	Reject disclaimers as a substitute for accountability
+FDA-2026-N-7874-0061	independent_records	Score agent step reports against an independent execution record
+FDA-2026-N-7874-0061	none	Require agents to report search scope for absence claims
+FDA-2026-N-7874-0061	multi_turn	Evaluate persistent user memory as part of the device
+FDA-2026-N-7874-0061	none	Let users inspect and correct stored assertions about them
+FDA-2026-N-7874-0061	sycophancy	Test recommendation drift under varied user displeasure
+FDA-2026-N-7874-0061	missing_input	Treat fluent output from no-signal input as a failure
+FDA-2026-N-7874-0061	deterministic_controls	Do not credit competencies shown only via system prompts
+FDA-2026-N-7874-0082	risk_factors	Make time pressure and downstream safeguards first-class risk dimensions
+FDA-2026-N-7874-0082	none	Recognize a protocol delivery sub-category judged on protocol fidelity
+FDA-2026-N-7874-0082	deterministic_controls	Credit deterministic protocol selection as a risk mitigant
+FDA-2026-N-7874-0082	none	Score redirection rather than bare refusal when no clinician exists
+FDA-2026-N-7874-0082	none	Require premise-aware benchmark items with human adjudication
+FDA-2026-N-7874-0082	none	Require full disclosure of sponsor-developed benchmarks
+FDA-2026-N-7874-0082	comparator_realistic	Use the unaided user as comparator when no professional is available
+FDA-2026-N-7874-0082	none	Distinguish frozen on-device models from hosted models postmarket
+FDA-2026-N-7874-0082	version_pinning	Recognize hash-verified on-device weights as resolving third-party changes
+FDA-2026-N-7874-0115	none	Define a minimum runtime governance evidence package for higher-risk devices
+FDA-2026-N-7874-0115	risk_factors	Add autonomy, reversibility, traceability, and changeability as risk modifiers
+FDA-2026-N-7874-0115	deployed_config	Verify the tested configuration is the deployed configuration
+FDA-2026-N-7874-0115	none	Set acceptance criteria at outcome, process, and control levels
+FDA-2026-N-7874-0115	postmarket_plans	Require event-triggered reassessment in addition to scheduled review
+FDA-2026-N-7874-0115	supervisor_validation	Validate supervisory agents as independent safety-relevant components
+FDA-2026-N-7874-0115	agent_authority	Require agent identity and authority records for agentic devices
+FDA-2026-N-7874-0115	kill_switch	Require tested kill switch and rollback for agentic devices
+FDA-2026-N-7874-0115	synthetic_separate	Report synthetic data separately from real-world evidence
+FDA-2026-N-7874-0115	model_disclosure	Supplement voluntary model files with supplier contracts and version manifests
+FDA-2026-N-7874-0072	none	Clarify boundary between plan-supporting AI and independent clinical judgment
+FDA-2026-N-7874-0072	none	Clarify how GenAI risks map to controls and evidence
+FDA-2026-N-7874-0072	risk_evidence_map	Scale evidence expectations to risk of intended function
+FDA-2026-N-7874-0072	align_standards	Develop consistent terminology for autonomy and human oversight
+FDA-2026-N-7874-0098	oversight_demonstrated	Require human oversight claims to meet domain-match and independence criteria
+FDA-2026-N-7874-0098	security_dependencies	Test fail-open versus fail-closed escalation under fault conditions
+FDA-2026-N-7874-0098	multi_turn	Run multi-turn scope-drift testing over cumulative conversation state
+FDA-2026-N-7874-0098	sycophancy	Add a benchmark element for resistance to sycophantic validation
+FDA-2026-N-7874-0098	benchmark_validity	Disclose model lineage and decoding mode of LLM adjudicators
+FDA-2026-N-7874-0098	none	Require three-state output classification with mandatory deferral
+FDA-2026-N-7874-0098	none	Disclose verification-gate placement relative to user-facing display
+FDA-2026-N-7874-0098	audit_trail	Require persistent structured logging of safety-relevant decisions
+FDA-2026-N-7874-0098	human_approval	Require expert-in-the-loop checkpoints before irreversible agentic actions
+FDA-2026-N-7874-0121	risk_factors	Add reversibility, time-to-detection, and licensed authenticator as risk modifiers
+FDA-2026-N-7874-0121	deployed_config	Evaluate the deployed configuration including prompts, retrieval, and escalation rules
+FDA-2026-N-7874-0121	none	Treat care-plan generators as decision support only without orders or diagnoses
+FDA-2026-N-7874-0121	none	Require competency evidence for high-consequence recognition tasks
+FDA-2026-N-7874-0121	postmarket_plans	Require postmarket clinician review, override tracking, and subgroup performance
+FDA-2026-N-7874-0121	none	Align payment with CPT Appendix S
+FDA-2026-N-7874-0121	none	Block autonomous diagnosis hidden inside documentation tools
+FDA-2026-N-7874-0121	none	Preserve nursing as a distinct accountable profession in labeling
+FDA-2026-N-7874-0121	patient_disclosure	Disclose AI use to patients
+FDA-2026-N-7874-0121	audit_trail	Require version stamps on model, prompt pack, and guideline library
+FDA-2026-N-7874-0055	none	Use three separate assurance layers: competency, clinical confirmation, operations
+FDA-2026-N-7874-0055	none	Base risk analysis on probability and severity of harm
+FDA-2026-N-7874-0055	directiveness_behavior	Treat patient-specific output as potentially action-directing
+FDA-2026-N-7874-0055	deployed_config	Test the final device configuration including prompts and tools
+FDA-2026-N-7874-0055	safety_floors	Set separate acceptance limits for each high-consequence failure
+FDA-2026-N-7874-0055	escalation_separate	Measure failed escalation handoffs alongside under- and over-escalation
+FDA-2026-N-7874-0055	deterministic_controls	Use deterministic controls outside the model for measurable scope boundaries
+FDA-2026-N-7874-0055	postmarket_plans	Link every monitoring signal to a specified corrective action
+FDA-2026-N-7874-0055	none	Support a confidential multi-site postmarket monitoring network
+FDA-2026-N-7874-0055	model_disclosure	Require another disclosure method when model providers withhold information
+FDA-2026-N-7874-0028	risk_factors	Add reversibility, safeguards, time pressure, and traceability as risk modifiers
+FDA-2026-N-7874-0028	directiveness_behavior	Provide a decision tree for classifying directiveness
+FDA-2026-N-7874-0028	none	Add an interoperability and context-integrity benchmark element
+FDA-2026-N-7874-0028	populations_settings	Embed subgroup results in safety acceptance criteria
+FDA-2026-N-7874-0028	benchmark_validity	Require construct validity evidence for benchmarks
+FDA-2026-N-7874-0028	sequestered_benchmarks	Develop consensus benchmarks through the MDDT pathway
+FDA-2026-N-7874-0028	synthetic_separate	Validate synthetic data against real-world distributions and disclose generation methods
+FDA-2026-N-7874-0028	human_ai_team	Use human-AI team performance as primary evidence
+FDA-2026-N-7874-0028	independent_eval	Pilot third-party adjudication through ASCA and MDDT
+FDA-2026-N-7874-0028	postmarket_plans	Make periodic re-benchmarking the default postmarket expectation
+FDA-2026-N-7874-0057	sycophancy	Test output sensitivity to claimed speaker authority and seniority
+FDA-2026-N-7874-0057	oversight_demonstrated	Demonstrate human oversight under realistic override conditions
+FDA-2026-N-7874-0057	oversight_demonstrated	Measure clinician override and error-detection rates in representative workflows
+FDA-2026-N-7874-0057	postmarket_plans	Re-examine devices on the original competency set on a fixed cycle
+FDA-2026-N-7874-0057	rebenchmark_on_change	Prespecify the re-examination that follows any change
+FDA-2026-N-7874-0057	rebenchmark_on_change	Re-run safety and robustness elements fully after model or guardrail changes
+FDA-2026-N-7874-0057	model_disclosure	Include refusal behavior and output stability in model master files
+FDA-2026-N-7874-0057	populations_settings	Test populations differing in disease distribution, not only demographics
+FDA-2026-N-7874-0102	audit_trail	Mandate an immutable algorithmic chain-of-custody record for outputs
+FDA-2026-N-7874-0102	kill_switch	Require automated kill switches for high-materiality anomalies
+FDA-2026-N-7874-0102	reduced_evidence_limits	Make reduced premarket evidence contingent on runtime boundary controls
+FDA-2026-N-7874-0102	security_dependencies	Require pre-ingestion sanitization against indirect prompt injection
+FDA-2026-N-7874-0102	version_pinning	Require 14-day vendor update notice with sandbox testing
+FDA-2026-N-7874-0102	risk_factors	Add reversibility and traceability to the risk matrix
+FDA-2026-N-7874-0102	sequestered_benchmarks	Require sequestered test sets evaluated by independent clinician panels
+FDA-2026-N-7874-0102	supervisor_validation	Keep supervisory agents subordinate to credentialed human oversight
+FDA-2026-N-7874-0102	human_approval	Require non-bypassable human checkpoints before irreversible agentic actions
+FDA-2026-N-7874-0096	version_pinning	Recognize local model version locking as acceptable risk mitigation
+FDA-2026-N-7874-0096	none	Define validation standards for automated benchmarking of hosted APIs
+FDA-2026-N-7874-0096	none	Set documentation expectations for multi-version active deployments
+FDA-2026-N-7874-0096	none	Expect backward-compatibility testing and deprecation schedules in the QMS
+FDA-2026-N-7874-0096	drift_monitoring	Run golden benchmark suites regularly to detect upstream drift
+FDA-2026-N-7874-0047	independent_eval	Require independent premarket testing and recurring third-party audits
+FDA-2026-N-7874-0047	human_approval	Require licensed clinician approval for diagnosis, prescribing, and triage
+FDA-2026-N-7874-0047	audit_trail	Require tamper-resistant decision logs with model version
+FDA-2026-N-7874-0047	patient_disclosure	Require patient disclosure and consent when AI influences care
+FDA-2026-N-7874-0047	error_reporting	Require mandatory incident reporting and rapid disable or recall
+FDA-2026-N-7874-0047	none	Impose financial penalties for noncompliance
+FDA-2026-N-7874-0047	rebenchmark_on_change	Independently revalidate material changes before broader deployment
+FDA-2026-N-7874-0047	accountability	Assign defined legal responsibilities across developers and deployers
+FDA-2026-N-7874-0047	populations_settings	Apply stricter validation for pediatric and vulnerable populations
+FDA-2026-N-7874-0117	audit_trail	Require immutable chain-of-custody records for GenAI clinical outputs
+FDA-2026-N-7874-0117	reduced_evidence_limits	Make reduced premarket evidence contingent on automated runtime kill-switches
+FDA-2026-N-7874-0117	kill_switch	Adopt tiered materiality escalation with fail-closed cutoffs
+FDA-2026-N-7874-0117	security_dependencies	Require pre-ingestion sanitization against indirect prompt injection
+FDA-2026-N-7874-0117	version_pinning	Require advance vendor notice and sandbox testing of foundation model updates
+FDA-2026-N-7874-0117	risk_factors	Add output reversibility and traceability to the risk framework
+FDA-2026-N-7874-0117	sequestered_benchmarks	Use sequestered test sets evaluated by independent clinician panels
+FDA-2026-N-7874-0117	supervisor_validation	Keep supervisory agents qualified and subordinate to human oversight
+FDA-2026-N-7874-0117	human_approval	Mandate non-bypassable human checkpoints before irreversible agentic actions
+FDA-2026-N-7874-0117	data_privacy	Require isolated vector index partitioning to prevent cross-tenant data bleed
+FDA-2026-N-7874-0029	none	Distinguish initial authorization from evidence for continued reliance
+FDA-2026-N-7874-0029	none	Require sponsors to prespecify assumptions, dependencies, and change triggers
+FDA-2026-N-7874-0029	none	Define evidentiary standard for continued reliance on third-party foundation models
+FDA-2026-N-7874-0029	agent_authority	Evaluate whether agentic devices were authorized for each specific action
+FDA-2026-N-7874-0029	none	Scale evidence for continued reliance with activity and consequence
+FDA-2026-N-7874-0029	postmarket_plans	Require periodic re-benchmarking and defined reassessment triggers
+FDA-2026-N-7874-0060	none	Require full-loop auditing of how clinician feedback on outputs is used
+FDA-2026-N-7874-0060	none	Require documented reasons when clinician feedback is dismissed
+FDA-2026-N-7874-0085	benchmark_validity	Accompany benchmark validity evidence with structured dataset documentation
+FDA-2026-N-7874-0085	benchmark_validity	Establish machine-checkable minimum documentation standard for evaluation datasets
+FDA-2026-N-7874-0085	benchmark_validity	Require dataset version identity for re-benchmarking comparisons
+FDA-2026-N-7874-0085	synthetic_separate	Require origin declarations distinguishing real, synthetic, and simulated data
+FDA-2026-N-7874-0085	model_disclosure	Structure training-data provenance documentation in foundation model files
+FDA-2026-N-7874-0116	none	Require participation in qualified independent postmarket data systems for higher-risk functions
+FDA-2026-N-7874-0116	reduced_evidence_limits	Require monitoring infrastructure operational at launch before reducing premarket evidence
+FDA-2026-N-7874-0116	prospective_outcomes	Keep premarket clinical trials for high-consequence irreversible functions
+FDA-2026-N-7874-0116	none	Set qualification criteria for independent postmarket data systems
+FDA-2026-N-7874-0116	none	Study informational and non-device CDS tools through similar data systems
+FDA-2026-N-7874-0116	accountability	Preserve manufacturer accountability for signals and corrective action
+FDA-2026-N-7874-0116	supervisor_validation	Independently validate supervisory agents against clinician adjudication
+FDA-2026-N-7874-0116	none	Treat performance envelopes as monitoring tools, not authorization for change
+FDA-2026-N-7874-0116	version_pinning	Combine vendor notification with version pinning and rollback for foundation models
+FDA-2026-N-7874-0116	none	Coordinate FDA and CMS data requirements for surveillance
+FDA-2026-N-7874-0080	lower_burden_supervised	Treat informational non-directive functions as non-devices or under enforcement discretion
+FDA-2026-N-7874-0080	none	Clarify how the framework intersects with General Wellness policy
+FDA-2026-N-7874-0080	lower_burden_supervised	Confirm prompts to consult clinicians do not make functions devices
+FDA-2026-N-7874-0080	none	Regulate functions by intended use regardless of who deploys them
+FDA-2026-N-7874-0099	risk_factors	Make reversibility an explicit gating factor in risk assessment
+FDA-2026-N-7874-0099	oversight_demonstrated	Credit human review only when reviewers can meaningfully evaluate outputs
+FDA-2026-N-7874-0099	oversight_demonstrated	Require documentation of what human reviewers verified
+FDA-2026-N-7874-0099	accountability	Keep manufacturers accountable for foundation model changes across lifecycle
+FDA-2026-N-7874-0099	deployed_config	Treat prompt, retrieval, and orchestration changes as controlled device changes
+FDA-2026-N-7874-0099	postmarket_plans	Require monitoring targeted to failure modes left unresolved premarket
+FDA-2026-N-7874-0099	none	Make decision criteria for these controls explicit in guidance
+FDA-2026-N-7874-0124	none	Treat modular AI components as distinct regulatory units
+FDA-2026-N-7874-0124	version_pinning	Require foundation model lineage tracking and versioned identifiers
+FDA-2026-N-7874-0124	drift_monitoring	Require automated drift detection for foundation models
+FDA-2026-N-7874-0124	postmarket_plans	Implement risk-tiered continuous postmarket monitoring
+FDA-2026-N-7874-0124	none	Encourage lifecycle-native device architectures
+FDA-2026-N-7874-0058	sycophancy	Benchmark sensitivity to claimed speaker identity and authority
+FDA-2026-N-7874-0058	oversight_demonstrated	Require evidence that users detect and override incorrect outputs in practice
+FDA-2026-N-7874-0058	oversight_demonstrated	Treat human oversight as demonstrated property, not labeling claim
+FDA-2026-N-7874-0058	postmarket_plans	Re-examine devices on original competency set on fixed cycle
+FDA-2026-N-7874-0058	rebenchmark_on_change	Prespecify re-examination following any change in PCCPs
+FDA-2026-N-7874-0058	rebenchmark_on_change	Re-run full safety and robustness benchmarks after any model change
+FDA-2026-N-7874-0058	model_disclosure	Include refusal behavior and output stability in foundation model files
+FDA-2026-N-7874-0058	populations_settings	Test on populations differing in disease distribution from training data
+FDA-2026-N-7874-0030	none	Use two-axis framework as screening tool, not classification matrix
+FDA-2026-N-7874-0030	none	Consider adaptive communication to user understanding as a risk control
+FDA-2026-N-7874-0030	none	Do not presume patient-facing use is higher risk
+FDA-2026-N-7874-0030	align_standards	Manage foundation models using existing SOUP principles like IEC 62304
+FDA-2026-N-7874-0030	version_pinning	Use supplier notification, version control, and regression benchmarking for model changes
+FDA-2026-N-7874-0030	drift_monitoring	Develop mechanisms to detect unannounced foundation model behavior changes
+FDA-2026-N-7874-0016	pccp_bounded	Create a Performance-Bounded PCCP category for GenAI devices
+FDA-2026-N-7874-0016	pccp_bounded	Prespecify competency benchmarks and maximum performance deviation bounds
+FDA-2026-N-7874-0016	pccp_bounded	Require rollback or new submission when bounds are exceeded
+FDA-2026-N-7874-0023	human_approval	Never use AI devices without human oversight
+FDA-2026-N-7874-0023	none	Regulate AI therapists claiming to treat psychiatric conditions
+FDA-2026-N-7874-0023	none	Require minimum accuracy standard before approval
+FDA-2026-N-7874-0023	data_privacy	Address storage and breach protections for device health data
+FDA-2026-N-7874-0042	risk_factors	Add attribution traceability as a risk framework dimension
+FDA-2026-N-7874-0042	none	Ensure audit records can express supervisory agent relationships before relying on them
+FDA-2026-N-7874-0042	agent_authority	Require agentic devices to emit attribution of acting and authorizing identities
+FDA-2026-N-7874-0042	audit_trail	Make unattributed agent actions positively recorded and distinguishable
+FDA-2026-N-7874-0042	audit_trail	Require records to state strength of attribution
+FDA-2026-N-7874-0042	none	Support open standards work on attribution semantics
+FDA-2026-N-7874-0042	drift_monitoring	Monitor drift in actual human involvement after deployment
+FDA-2026-N-7874-0104	independent_eval	Require evidence-independence assessment for higher-risk devices
+FDA-2026-N-7874-0104	independent_eval	Distinguish operational independence from institutional independence of evaluators
+FDA-2026-N-7874-0066	supervisor_validation	Require supervisory agents to state evidence source and timestamp with findings
+FDA-2026-N-7874-0066	supervisor_validation	Treat stale evidence as failure condition for supervisory agents
+FDA-2026-N-7874-0066	independent_records	Exclude self-assessment and shared-source corroboration as evidence
+FDA-2026-N-7874-0066	supervisor_validation	Validate supervisory agents where outputs cannot be independently checked
+FDA-2026-N-7874-0066	none	Require machine-readable evidence class for each agent assertion
+FDA-2026-N-7874-0066	none	Specify escalation paths not dependent on operator knowledge
+FDA-2026-N-7874-0066	supervisor_validation	Evaluate supervisory agents on observable properties, not intent
+FDA-2026-N-7874-0051	risk_factors	Treat extra risk dimensions as modifiers, including error detectability
+FDA-2026-N-7874-0051	risk_evidence_map	Publish illustrative mapping from risk position to expected evidence
+FDA-2026-N-7874-0051	directiveness_behavior	Publish anchored directiveness rubric with worked examples
+FDA-2026-N-7874-0051	sequestered_benchmarks	Require independent sequestered test sets and contamination testing
+FDA-2026-N-7874-0051	none	Require transportability assessment for real-world and foreign data
+FDA-2026-N-7874-0051	synthetic_separate	Anchor subgroup performance claims in a core of real data
+FDA-2026-N-7874-0051	prospective_outcomes	Add outcome-linked surveillance using real-world data
+FDA-2026-N-7874-0051	pccp_bounded	Adopt change-envelope PCCPs prespecifying verification protocols
+FDA-2026-N-7874-0051	escalation_separate	Report under- and over-escalation errors separately
+FDA-2026-N-7874-0051	align_standards	Pursue international alignment through IMDRF
+ARIA	none	Add anticipated patterns of use as a risk factor
+ARIA	multi_turn	Test devices across realistic multi-turn conversations
+ARIA	none	Require longer premarket studies for heavily used devices
+ARIA	directiveness_behavior	Require evidence that users understand responses, not just disclaimers
+ARIA	escalation_separate	Report under- and over-escalation and whether referrals reach care
+ARIA	none	Track changes in users' help-seeking from people and professionals
+ARIA	synthetic_separate	Validate synthetic users against data from real users
+ARIA	synthetic_separate	Report synthetic and real-user results separately
+ARIA	reduced_evidence_limits	Require a postmarket study when premarket evidence is reduced
+ARIA	rebenchmark_on_change	Retest against the premarket baseline when the model changes
+ARIA	independent_eval	Require independent evaluation of patient-facing conversational devices
+ARIA	error_reporting	Clarify adverse-event reporting for gradual conversational harms

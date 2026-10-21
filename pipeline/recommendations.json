@@ -1,0 +1,995 @@
+{
+ "groups": [
+  {
+   "key": "risk_factors",
+   "label": "Add reversibility, detectability, and traceability to risk ratings",
+   "desc": "Expand the two-axis risk framework with factors such as reversibility, time to harm, error detectability, human review, and traceability to source evidence."
+  },
+  {
+   "key": "directiveness_behavior",
+   "label": "Judge directiveness by behavior and discount disclaimers",
+   "desc": "Classify how directive a device is from what its outputs do, with rubrics or worked examples, and give no risk credit for disclaimers or labels alone."
+  },
+  {
+   "key": "lower_burden_supervised",
+   "label": "Ease rules for clinician supervised and informational tools",
+   "desc": "Place clinician-supervised or purely informational functions in lower risk tiers, streamlined pathways, or enforcement discretion."
+  },
+  {
+   "key": "risk_evidence_map",
+   "label": "Publish a map from risk tier to required evidence",
+   "desc": "Publish guidance linking each risk position to the minimum evidence and clinical confirmation expected."
+  },
+  {
+   "key": "multi_turn",
+   "label": "Test devices across long conversations and repeated sessions",
+   "desc": "Evaluate behavior over whole conversations, late turns, repeated sessions, and stored user state instead of single prompts."
+  },
+  {
+   "key": "sycophancy",
+   "label": "Test whether outputs shift under user pressure",
+   "desc": "Benchmark whether advice changes with user affect, displeasure, reassurance, claimed authority, or beliefs when the clinical facts stay the same."
+  },
+  {
+   "key": "missing_input",
+   "label": "Test for made up output when input is missing",
+   "desc": "Check that devices do not produce confident output when sensor, image, or other input is missing, broken, or null, and log such cases."
+  },
+  {
+   "key": "escalation_separate",
+   "label": "Report under and over escalation separately",
+   "desc": "Report missed and unnecessary escalations as separate rates with prespecified, justified tolerances."
+  },
+  {
+   "key": "safety_floors",
+   "label": "Set separate pass or fail limits for critical failures",
+   "desc": "Set non-averageable thresholds for named high-consequence failures that a device must meet regardless of overall scores."
+  },
+  {
+   "key": "deterministic_controls",
+   "label": "Enforce safety rules outside the generative model",
+   "desc": "Use deterministic architecture and controls outside the model, and avoid relying on prompts, for scope limits and safety behaviors."
+  },
+  {
+   "key": "security_dependencies",
+   "label": "Test for prompt injection, security, and dependency failures",
+   "desc": "Test resistance to prompt injection and cyber threats and verify safe behavior when connectivity, suppliers, or dependencies fail."
+  },
+  {
+   "key": "benchmark_validity",
+   "label": "Show benchmarks and reference ratings are valid and reliable",
+   "desc": "Require evidence that benchmarks measure what they claim, results reproduce across runs, datasets are documented, and human reference panels are qualified and agree."
+  },
+  {
+   "key": "sequestered_benchmarks",
+   "label": "Use sequestered shared benchmarks and check contamination",
+   "desc": "Hold out sequestered or shared standard test sets, including ones qualified through FDA programs, and check for training-data contamination."
+  },
+  {
+   "key": "synthetic_separate",
+   "label": "Keep synthetic and real data results separate",
+   "desc": "Report synthetic and real-world results separately, validate synthetic data against real data, and do not let synthetic data alone set performance rates."
+  },
+  {
+   "key": "comparator_realistic",
+   "label": "Compare devices against realistic standards of care",
+   "desc": "Choose comparators that reflect the realistic alternative a patient would face, such as standard of care or no device, instead of a median clinician default."
+  },
+  {
+   "key": "human_ai_team",
+   "label": "Evaluate clinicians and AI together as deployed",
+   "desc": "Measure performance of the human and device working together in the real workflow, alongside device-alone results."
+  },
+  {
+   "key": "oversight_demonstrated",
+   "label": "Show that human oversight works in practice",
+   "desc": "Credit human review only when testing shows users catch and override errors, including human factors and automation bias testing."
+  },
+  {
+   "key": "deployed_config",
+   "label": "Evaluate the full deployed system including prompts",
+   "desc": "Treat the exact deployed configuration, including prompts, retrieval, tools, and orchestration, as the thing tested and controlled."
+  },
+  {
+   "key": "populations_settings",
+   "label": "Test across populations, settings, and atypical cases",
+   "desc": "Evaluate performance across subgroups, children, rural and low-resource settings, and hard or out-of-distribution cases."
+  },
+  {
+   "key": "prospective_outcomes",
+   "label": "Require prospective outcome studies for high risk devices",
+   "desc": "Require prospective clinical studies measuring patient outcomes or clinical utility for high-risk or action-directing devices."
+  },
+  {
+   "key": "reduced_evidence_limits",
+   "label": "Restrict trading premarket evidence for postmarket monitoring",
+   "desc": "Allow reduced premarket evidence only for low-risk functions where failures are detectable and reversible and monitoring is in place."
+  },
+  {
+   "key": "postmarket_plans",
+   "label": "Prespecify postmarket triggers, thresholds, and responses",
+   "desc": "Make postmarket monitoring plans enforceable with set metrics, thresholds, cadence, event triggers, and corrective actions."
+  },
+  {
+   "key": "drift_monitoring",
+   "label": "Monitor for drift and unannounced model changes",
+   "desc": "Detect performance drift and silent upstream model changes after launch with canary tests, golden suites, or output monitoring."
+  },
+  {
+   "key": "independent_records",
+   "label": "Monitor with records the device cannot alter",
+   "desc": "Base monitoring and evidence on independent records outside the device's control instead of the device's own self-reports."
+  },
+  {
+   "key": "rebenchmark_on_change",
+   "label": "Retest against the baseline whenever the model changes",
+   "desc": "Re-run benchmarks against the premarket baseline before deploying any model, prompt, or configuration change."
+  },
+  {
+   "key": "version_pinning",
+   "label": "Pin model versions and require notice of changes",
+   "desc": "Lock foundation model versions, forbid silent updates, and require advance notice of supplier model changes."
+  },
+  {
+   "key": "pccp_bounded",
+   "label": "Limit preapproved change plans to bounded changes",
+   "desc": "Define predetermined change control plans as bounded envelopes or categories of change with set verification and rollback."
+  },
+  {
+   "key": "model_disclosure",
+   "label": "Require model developers to share model information",
+   "desc": "Require foundation model developers to disclose model information through master files, contracts, or model cards, with manufacturers characterizing models otherwise."
+  },
+  {
+   "key": "accountability",
+   "label": "Keep accountability clear and centered on manufacturers",
+   "desc": "Keep manufacturers responsible for model validity and monitoring despite master files or deployers, and assign clear legal accountability for harms."
+  },
+  {
+   "key": "audit_trail",
+   "label": "Keep tamper evident records including model version",
+   "desc": "Keep tamper-evident logs that can reconstruct events, including the model version, configuration, and human decisions behind each output."
+  },
+  {
+   "key": "human_approval",
+   "label": "Require human approval before consequential or irreversible actions",
+   "desc": "Require a qualified human to approve consequential clinical decisions and irreversible agentic actions before they happen."
+  },
+  {
+   "key": "agent_authority",
+   "label": "Define and enforce limits on agent authority",
+   "desc": "Specify what agentic devices may access and do, enforce least privilege, and check permissions at the time of each action."
+  },
+  {
+   "key": "agent_sequences",
+   "label": "Test agents across the full sequence of actions",
+   "desc": "Evaluate agentic systems on their whole action trajectory, including retries and delegation, beyond final endpoints."
+  },
+  {
+   "key": "supervisor_validation",
+   "label": "Validate supervisory AI agents and keep human review",
+   "desc": "Validate AI monitors independently of the device they supervise, using different models, and keep them below human review."
+  },
+  {
+   "key": "kill_switch",
+   "label": "Require a tested off switch and rollback",
+   "desc": "Require tested ways to stop, suspend, or roll back a device or agent quickly."
+  },
+  {
+   "key": "patient_disclosure",
+   "label": "Tell patients when AI shapes their care",
+   "desc": "Disclose to patients, and seek consent where needed, when AI substantially participates in their care."
+  },
+  {
+   "key": "data_privacy",
+   "label": "Protect patient data and limit secondary use",
+   "desc": "Protect patient data, treat data sensitivity as a risk factor, and limit collection, retention, and secondary uses such as training."
+  },
+  {
+   "key": "error_reporting",
+   "label": "Clarify and expand reporting of AI errors and harms",
+   "desc": "Clarify adverse event reporting for generative errors and gradual harms and give patients and clinicians channels to report problems."
+  },
+  {
+   "key": "independent_eval",
+   "label": "Require independent third party evaluation",
+   "desc": "Require or accredit independent evaluators, free of conflicts, to test devices instead of relying only on sponsor testing."
+  },
+  {
+   "key": "align_standards",
+   "label": "Align terms and standards across agencies and countries",
+   "desc": "Use consistent AI terminology across FDA and other agencies and harmonize with international and existing standards."
+  }
+ ],
+ "map": {
+  "FDA-2026-N-7874-0103": [
+   "deterministic_controls",
+   "independent_records",
+   "pccp_bounded"
+  ],
+  "FDA-2026-N-7874-0037": [
+   "risk_factors",
+   "directiveness_behavior"
+  ],
+  "FDA-2026-N-7874-0064": [
+   "comparator_realistic",
+   "missing_input"
+  ],
+  "FDA-2026-N-7874-0095": [
+   "benchmark_validity",
+   "postmarket_plans",
+   "rebenchmark_on_change",
+   "supervisor_validation"
+  ],
+  "FDA-2026-N-7874-0059": [
+   "populations_settings"
+  ],
+  "FDA-2026-N-7874-0083": [
+   "accountability"
+  ],
+  "FDA-2026-N-7874-0100": [
+   "risk_factors",
+   "deterministic_controls",
+   "escalation_separate",
+   "independent_eval",
+   "accountability",
+   "version_pinning",
+   "pccp_bounded",
+   "human_approval"
+  ],
+  "FDA-2026-N-7874-0128": [
+   "lower_burden_supervised"
+  ],
+  "FDA-2026-N-7874-0054": [
+   "deployed_config",
+   "risk_factors",
+   "escalation_separate",
+   "oversight_demonstrated",
+   "rebenchmark_on_change",
+   "agent_authority",
+   "accountability"
+  ],
+  "FDA-2026-N-7874-0008": [
+   "model_disclosure",
+   "postmarket_plans",
+   "independent_records"
+  ],
+  "FDA-2026-N-7874-0024": [
+   "risk_factors",
+   "populations_settings",
+   "oversight_demonstrated",
+   "audit_trail",
+   "agent_authority",
+   "reduced_evidence_limits",
+   "pccp_bounded",
+   "align_standards"
+  ],
+  "FDA-2026-N-7874-0043": [
+   "risk_factors",
+   "sequestered_benchmarks",
+   "comparator_realistic"
+  ],
+  "FDA-2026-N-7874-0084": [
+   "escalation_separate"
+  ],
+  "FDA-2026-N-7874-0069": [
+   "align_standards"
+  ],
+  "FDA-2026-N-7874-0053": [
+   "risk_factors",
+   "deployed_config",
+   "reduced_evidence_limits",
+   "version_pinning",
+   "human_approval",
+   "audit_trail"
+  ],
+  "FDA-2026-N-7874-0105": [
+   "agent_authority",
+   "rebenchmark_on_change",
+   "kill_switch",
+   "multi_turn",
+   "postmarket_plans",
+   "supervisor_validation",
+   "version_pinning",
+   "human_approval",
+   "audit_trail"
+  ],
+  "FDA-2026-N-7874-0046": [
+   "risk_factors",
+   "human_ai_team",
+   "audit_trail",
+   "human_approval",
+   "accountability"
+  ],
+  "FDA-2026-N-7874-0062": [
+   "audit_trail",
+   "version_pinning",
+   "pccp_bounded",
+   "missing_input",
+   "supervisor_validation"
+  ],
+  "FDA-2026-N-7874-0086": [
+   "prospective_outcomes",
+   "human_ai_team",
+   "comparator_realistic",
+   "patient_disclosure",
+   "supervisor_validation",
+   "audit_trail",
+   "rebenchmark_on_change",
+   "kill_switch"
+  ],
+  "FDA-2026-N-7874-0101": [
+   "data_privacy",
+   "agent_authority"
+  ],
+  "FDA-2026-N-7874-0129": [
+   "lower_burden_supervised"
+  ],
+  "FDA-2026-N-7874-0009": [
+   "risk_factors",
+   "escalation_separate",
+   "benchmark_validity",
+   "comparator_realistic"
+  ],
+  "FDA-2026-N-7874-0005": [
+   "risk_factors",
+   "safety_floors",
+   "sequestered_benchmarks",
+   "synthetic_separate",
+   "reduced_evidence_limits",
+   "supervisor_validation",
+   "pccp_bounded",
+   "drift_monitoring",
+   "oversight_demonstrated",
+   "agent_sequences"
+  ],
+  "FDA-2026-N-7874-0027": [
+   "deployed_config",
+   "multi_turn",
+   "sequestered_benchmarks"
+  ],
+  "FDA-2026-N-7874-0118": [
+   "risk_factors",
+   "escalation_separate",
+   "prospective_outcomes",
+   "synthetic_separate",
+   "reduced_evidence_limits",
+   "kill_switch",
+   "pccp_bounded",
+   "rebenchmark_on_change"
+  ],
+  "FDA-2026-N-7874-0087": [
+   "risk_factors",
+   "deployed_config",
+   "human_ai_team",
+   "postmarket_plans",
+   "pccp_bounded",
+   "version_pinning",
+   "audit_trail",
+   "human_approval"
+  ],
+  "FDA-2026-N-7874-0107": [
+   "prospective_outcomes",
+   "reduced_evidence_limits",
+   "sequestered_benchmarks"
+  ],
+  "FDA-2026-N-7874-0006": [
+   "risk_factors",
+   "comparator_realistic",
+   "risk_evidence_map",
+   "multi_turn",
+   "escalation_separate",
+   "directiveness_behavior",
+   "version_pinning",
+   "pccp_bounded"
+  ],
+  "FDA-2026-N-7874-0044": [
+   "data_privacy"
+  ],
+  "FDA-2026-N-7874-0070": [
+   "human_ai_team",
+   "accountability"
+  ],
+  "FDA-2026-N-7874-0049": [
+   "risk_factors",
+   "audit_trail",
+   "deployed_config",
+   "postmarket_plans",
+   "supervisor_validation",
+   "version_pinning",
+   "synthetic_separate",
+   "agent_authority",
+   "accountability",
+   "pccp_bounded"
+  ],
+  "FDA-2026-N-7874-0063": [
+   "independent_records",
+   "drift_monitoring"
+  ],
+  "FDA-2026-N-7874-0088": [
+   "benchmark_validity",
+   "multi_turn",
+   "rebenchmark_on_change",
+   "sequestered_benchmarks"
+  ],
+  "FDA-2026-N-7874-0108": [
+   "missing_input"
+  ],
+  "FDA-2026-N-7874-0130": [
+   "agent_authority",
+   "audit_trail",
+   "kill_switch",
+   "version_pinning",
+   "rebenchmark_on_change"
+  ],
+  "FDA-2026-N-7874-0003": [
+   "risk_evidence_map",
+   "model_disclosure",
+   "pccp_bounded",
+   "postmarket_plans",
+   "version_pinning",
+   "sequestered_benchmarks",
+   "independent_eval"
+  ],
+  "FDA-2026-N-7874-0035": [
+   "deployed_config",
+   "audit_trail",
+   "risk_factors",
+   "deterministic_controls",
+   "data_privacy",
+   "supervisor_validation",
+   "agent_authority"
+  ],
+  "FDA-2026-N-7874-0010": [
+   "risk_evidence_map",
+   "risk_factors",
+   "synthetic_separate",
+   "supervisor_validation",
+   "version_pinning",
+   "pccp_bounded",
+   "comparator_realistic",
+   "postmarket_plans",
+   "error_reporting",
+   "model_disclosure"
+  ],
+  "FDA-2026-N-7874-0025": [
+   "multi_turn",
+   "comparator_realistic",
+   "postmarket_plans",
+   "error_reporting",
+   "rebenchmark_on_change",
+   "align_standards"
+  ],
+  "FDA-2026-N-7874-0114": [
+   "multi_turn",
+   "safety_floors",
+   "sequestered_benchmarks",
+   "rebenchmark_on_change",
+   "postmarket_plans"
+  ],
+  "FDA-2026-N-7874-0089": [
+   "audit_trail",
+   "risk_factors",
+   "human_approval"
+  ],
+  "FDA-2026-N-7874-0075": [
+   "deterministic_controls",
+   "agent_sequences",
+   "security_dependencies",
+   "safety_floors",
+   "postmarket_plans",
+   "deployed_config",
+   "supervisor_validation",
+   "audit_trail"
+  ],
+  "FDA-2026-N-7874-0106": [
+   "model_disclosure",
+   "supervisor_validation",
+   "sequestered_benchmarks",
+   "benchmark_validity"
+  ],
+  "FDA-2026-N-7874-0015": [
+   "risk_factors",
+   "align_standards"
+  ],
+  "FDA-2026-N-7874-0122": [
+   "audit_trail",
+   "drift_monitoring",
+   "human_approval"
+  ],
+  "FDA-2026-N-7874-0074": [
+   "deployed_config",
+   "benchmark_validity",
+   "rebenchmark_on_change"
+  ],
+  "FDA-2026-N-7874-0052": [
+   "risk_factors",
+   "multi_turn",
+   "human_ai_team",
+   "synthetic_separate",
+   "reduced_evidence_limits",
+   "supervisor_validation",
+   "audit_trail"
+  ],
+  "FDA-2026-N-7874-0065": [
+   "multi_turn",
+   "directiveness_behavior",
+   "sycophancy",
+   "deterministic_controls"
+  ],
+  "FDA-2026-N-7874-0092": [
+   "human_approval",
+   "accountability",
+   "audit_trail",
+   "rebenchmark_on_change",
+   "agent_authority"
+  ],
+  "FDA-2026-N-7874-0109": [
+   "kill_switch"
+  ],
+  "FDA-2026-N-7874-0045": [
+   "sequestered_benchmarks",
+   "risk_evidence_map",
+   "independent_eval",
+   "model_disclosure",
+   "supervisor_validation"
+  ],
+  "FDA-2026-N-7874-0011": [
+   "accountability"
+  ],
+  "FDA-2026-N-7874-0026": [
+   "escalation_separate",
+   "sequestered_benchmarks"
+  ],
+  "FDA-2026-N-7874-0123": [
+   "sycophancy",
+   "benchmark_validity",
+   "sequestered_benchmarks",
+   "human_ai_team",
+   "missing_input",
+   "rebenchmark_on_change",
+   "version_pinning"
+  ],
+  "FDA-2026-N-7874-0090": [
+   "postmarket_plans",
+   "independent_records",
+   "reduced_evidence_limits",
+   "supervisor_validation",
+   "pccp_bounded",
+   "drift_monitoring"
+  ],
+  "FDA-2026-N-7874-0077": [
+   "reduced_evidence_limits",
+   "independent_records"
+  ],
+  "FDA-2026-N-7874-0110": [
+   "supervisor_validation",
+   "rebenchmark_on_change",
+   "version_pinning"
+  ],
+  "FDA-2026-N-7874-0018": [
+   "version_pinning",
+   "rebenchmark_on_change",
+   "security_dependencies",
+   "oversight_demonstrated",
+   "human_approval"
+  ],
+  "FDA-2026-N-7874-0125": [
+   "version_pinning",
+   "drift_monitoring",
+   "postmarket_plans"
+  ],
+  "FDA-2026-N-7874-0076": [
+   "data_privacy",
+   "reduced_evidence_limits",
+   "model_disclosure",
+   "version_pinning",
+   "rebenchmark_on_change",
+   "error_reporting",
+   "kill_switch",
+   "comparator_realistic",
+   "human_approval"
+  ],
+  "FDA-2026-N-7874-0056": [
+   "risk_factors",
+   "comparator_realistic",
+   "human_ai_team",
+   "oversight_demonstrated",
+   "benchmark_validity",
+   "safety_floors",
+   "postmarket_plans",
+   "accountability",
+   "human_approval",
+   "agent_authority"
+  ],
+  "FDA-2026-N-7874-0067": [
+   "align_standards",
+   "escalation_separate",
+   "deployed_config",
+   "oversight_demonstrated",
+   "sequestered_benchmarks",
+   "postmarket_plans",
+   "human_approval"
+  ],
+  "FDA-2026-N-7874-0094": [
+   "prospective_outcomes",
+   "risk_factors",
+   "lower_burden_supervised",
+   "oversight_demonstrated"
+  ],
+  "FDA-2026-N-7874-0119": [
+   "model_disclosure",
+   "accountability",
+   "risk_factors"
+  ],
+  "FDA-2026-N-7874-0050": [
+   "version_pinning",
+   "model_disclosure",
+   "accountability"
+  ],
+  "FDA-2026-N-7874-0017": [
+   "risk_factors",
+   "human_ai_team",
+   "reduced_evidence_limits",
+   "postmarket_plans",
+   "version_pinning",
+   "model_disclosure",
+   "agent_authority",
+   "data_privacy",
+   "populations_settings"
+  ],
+  "FDA-2026-N-7874-0039": [
+   "safety_floors",
+   "risk_factors",
+   "drift_monitoring",
+   "rebenchmark_on_change"
+  ],
+  "FDA-2026-N-7874-0012": [
+   "lower_burden_supervised",
+   "model_disclosure"
+  ],
+  "FDA-2026-N-7874-0032": [
+   "security_dependencies",
+   "risk_factors"
+  ],
+  "FDA-2026-N-7874-0127": [
+   "deployed_config",
+   "rebenchmark_on_change",
+   "independent_records",
+   "supervisor_validation",
+   "audit_trail"
+  ],
+  "FDA-2026-N-7874-0091": [
+   "benchmark_validity",
+   "multi_turn",
+   "escalation_separate",
+   "rebenchmark_on_change",
+   "postmarket_plans",
+   "synthetic_separate"
+  ],
+  "FDA-2026-N-7874-0078": [
+   "missing_input",
+   "multi_turn",
+   "security_dependencies",
+   "oversight_demonstrated",
+   "independent_records"
+  ],
+  "FDA-2026-N-7874-0112": [
+   "audit_trail"
+  ],
+  "FDA-2026-N-7874-0020": [
+   "risk_factors",
+   "risk_evidence_map",
+   "prospective_outcomes",
+   "populations_settings",
+   "synthetic_separate",
+   "reduced_evidence_limits",
+   "comparator_realistic"
+  ],
+  "FDA-2026-N-7874-0126": [
+   "deterministic_controls",
+   "reduced_evidence_limits",
+   "comparator_realistic",
+   "supervisor_validation",
+   "version_pinning"
+  ],
+  "FDA-2026-N-7874-0081": [
+   "accountability"
+  ],
+  "FDA-2026-N-7874-0111": [
+   "sycophancy",
+   "escalation_separate",
+   "deterministic_controls",
+   "supervisor_validation",
+   "security_dependencies"
+  ],
+  "FDA-2026-N-7874-0071": [
+   "independent_eval",
+   "benchmark_validity",
+   "supervisor_validation",
+   "agent_sequences",
+   "rebenchmark_on_change"
+  ],
+  "FDA-2026-N-7874-0097": [
+   "human_approval",
+   "prospective_outcomes",
+   "populations_settings",
+   "error_reporting",
+   "accountability",
+   "patient_disclosure"
+  ],
+  "FDA-2026-N-7874-0120": [
+   "lower_burden_supervised",
+   "risk_factors",
+   "human_ai_team",
+   "synthetic_separate",
+   "version_pinning",
+   "supervisor_validation"
+  ],
+  "FDA-2026-N-7874-0048": [
+   "risk_factors",
+   "directiveness_behavior",
+   "independent_eval",
+   "synthetic_separate",
+   "reduced_evidence_limits",
+   "postmarket_plans",
+   "version_pinning",
+   "agent_sequences"
+  ],
+  "FDA-2026-N-7874-0021": [
+   "populations_settings",
+   "safety_floors",
+   "multi_turn",
+   "rebenchmark_on_change"
+  ],
+  "FDA-2026-N-7874-0038": [
+   "directiveness_behavior",
+   "align_standards",
+   "version_pinning"
+  ],
+  "FDA-2026-N-7874-0013": [
+   "version_pinning",
+   "risk_evidence_map",
+   "risk_factors",
+   "synthetic_separate",
+   "comparator_realistic",
+   "supervisor_validation",
+   "pccp_bounded",
+   "postmarket_plans",
+   "model_disclosure",
+   "error_reporting"
+  ],
+  "FDA-2026-N-7874-0033": [
+   "benchmark_validity",
+   "supervisor_validation",
+   "error_reporting"
+  ],
+  "FDA-2026-N-7874-0131": [
+   "reduced_evidence_limits",
+   "supervisor_validation",
+   "drift_monitoring",
+   "audit_trail"
+  ],
+  "FDA-2026-N-7874-0093": [
+   "risk_evidence_map",
+   "align_standards",
+   "pccp_bounded",
+   "model_disclosure",
+   "independent_eval",
+   "drift_monitoring"
+  ],
+  "FDA-2026-N-7874-0079": [
+   "audit_trail",
+   "independent_records"
+  ],
+  "FDA-2026-N-7874-0113": [
+   "prospective_outcomes",
+   "model_disclosure",
+   "independent_eval",
+   "risk_evidence_map",
+   "risk_factors",
+   "multi_turn",
+   "reduced_evidence_limits",
+   "populations_settings",
+   "pccp_bounded"
+  ],
+  "FDA-2026-N-7874-0022": [
+   "accountability",
+   "kill_switch",
+   "directiveness_behavior"
+  ],
+  "FDA-2026-N-7874-0061": [
+   "independent_records",
+   "multi_turn",
+   "sycophancy",
+   "missing_input",
+   "deterministic_controls"
+  ],
+  "FDA-2026-N-7874-0082": [
+   "risk_factors",
+   "deterministic_controls",
+   "comparator_realistic",
+   "version_pinning"
+  ],
+  "FDA-2026-N-7874-0115": [
+   "risk_factors",
+   "deployed_config",
+   "postmarket_plans",
+   "supervisor_validation",
+   "agent_authority",
+   "kill_switch",
+   "synthetic_separate",
+   "model_disclosure"
+  ],
+  "FDA-2026-N-7874-0072": [
+   "risk_evidence_map",
+   "align_standards"
+  ],
+  "FDA-2026-N-7874-0098": [
+   "oversight_demonstrated",
+   "security_dependencies",
+   "multi_turn",
+   "sycophancy",
+   "benchmark_validity",
+   "audit_trail",
+   "human_approval"
+  ],
+  "FDA-2026-N-7874-0121": [
+   "risk_factors",
+   "deployed_config",
+   "postmarket_plans",
+   "patient_disclosure",
+   "audit_trail"
+  ],
+  "FDA-2026-N-7874-0055": [
+   "directiveness_behavior",
+   "deployed_config",
+   "safety_floors",
+   "escalation_separate",
+   "deterministic_controls",
+   "postmarket_plans",
+   "model_disclosure"
+  ],
+  "FDA-2026-N-7874-0028": [
+   "risk_factors",
+   "directiveness_behavior",
+   "populations_settings",
+   "benchmark_validity",
+   "sequestered_benchmarks",
+   "synthetic_separate",
+   "human_ai_team",
+   "independent_eval",
+   "postmarket_plans"
+  ],
+  "FDA-2026-N-7874-0057": [
+   "sycophancy",
+   "oversight_demonstrated",
+   "postmarket_plans",
+   "rebenchmark_on_change",
+   "model_disclosure",
+   "populations_settings"
+  ],
+  "FDA-2026-N-7874-0102": [
+   "audit_trail",
+   "kill_switch",
+   "reduced_evidence_limits",
+   "security_dependencies",
+   "version_pinning",
+   "risk_factors",
+   "sequestered_benchmarks",
+   "supervisor_validation",
+   "human_approval"
+  ],
+  "FDA-2026-N-7874-0096": [
+   "version_pinning",
+   "drift_monitoring"
+  ],
+  "FDA-2026-N-7874-0047": [
+   "independent_eval",
+   "human_approval",
+   "audit_trail",
+   "patient_disclosure",
+   "error_reporting",
+   "rebenchmark_on_change",
+   "accountability",
+   "populations_settings"
+  ],
+  "FDA-2026-N-7874-0117": [
+   "audit_trail",
+   "reduced_evidence_limits",
+   "kill_switch",
+   "security_dependencies",
+   "version_pinning",
+   "risk_factors",
+   "sequestered_benchmarks",
+   "supervisor_validation",
+   "human_approval",
+   "data_privacy"
+  ],
+  "FDA-2026-N-7874-0029": [
+   "agent_authority",
+   "postmarket_plans"
+  ],
+  "FDA-2026-N-7874-0085": [
+   "benchmark_validity",
+   "synthetic_separate",
+   "model_disclosure"
+  ],
+  "FDA-2026-N-7874-0116": [
+   "reduced_evidence_limits",
+   "prospective_outcomes",
+   "accountability",
+   "supervisor_validation",
+   "version_pinning"
+  ],
+  "FDA-2026-N-7874-0080": [
+   "lower_burden_supervised"
+  ],
+  "FDA-2026-N-7874-0099": [
+   "risk_factors",
+   "oversight_demonstrated",
+   "accountability",
+   "deployed_config",
+   "postmarket_plans"
+  ],
+  "FDA-2026-N-7874-0124": [
+   "version_pinning",
+   "drift_monitoring",
+   "postmarket_plans"
+  ],
+  "FDA-2026-N-7874-0058": [
+   "sycophancy",
+   "oversight_demonstrated",
+   "postmarket_plans",
+   "rebenchmark_on_change",
+   "model_disclosure",
+   "populations_settings"
+  ],
+  "FDA-2026-N-7874-0030": [
+   "align_standards",
+   "version_pinning",
+   "drift_monitoring"
+  ],
+  "FDA-2026-N-7874-0016": [
+   "pccp_bounded"
+  ],
+  "FDA-2026-N-7874-0023": [
+   "human_approval",
+   "data_privacy"
+  ],
+  "FDA-2026-N-7874-0042": [
+   "risk_factors",
+   "agent_authority",
+   "audit_trail",
+   "drift_monitoring"
+  ],
+  "FDA-2026-N-7874-0104": [
+   "independent_eval"
+  ],
+  "FDA-2026-N-7874-0066": [
+   "supervisor_validation",
+   "independent_records"
+  ],
+  "FDA-2026-N-7874-0051": [
+   "risk_factors",
+   "risk_evidence_map",
+   "directiveness_behavior",
+   "sequestered_benchmarks",
+   "synthetic_separate",
+   "prospective_outcomes",
+   "pccp_bounded",
+   "escalation_separate",
+   "align_standards"
+  ],
+  "ARIA": [
+   "multi_turn",
+   "directiveness_behavior",
+   "escalation_separate",
+   "synthetic_separate",
+   "reduced_evidence_limits",
+   "rebenchmark_on_change",
+   "independent_eval",
+   "error_reporting"
+  ]
+ }
+}

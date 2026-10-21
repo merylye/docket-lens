@@ -315,13 +315,14 @@ function renderPos() {
   const el = document.getElementById("pos"), out = [], props = META.proposals;
   const cwid = el.clientWidth || 900, aria = state.pinned.includes("ARIA") ? META.aria.pos || {} : null;
   if (state.posView === "all") {
-    const pool = filtered(), W = Math.max(560, cwid), lw = Math.min(300, Math.round(W * .34)), nw = 130, bw = W - lw - nw - (aria ? 120 : 10), rh = 34;
+    const pool = filtered(), W = Math.max(560, cwid), lw = Math.min(300, Math.round(W * .34)), nw = 130, aw = aria ? 150 : 0, bw = W - lw - nw - aw - 10, rh = 34;
     props.forEach((p, i) => {
       const y = i * rh, n = stanceCounts(pool, p.key);
       out.push(`<text x="0" y="${y + 21}" font-size="14" font-weight="500" fill="#111111" ${ff}>${esc(p.label)}<title>${esc(p.desc)}</title></text>`);
       if (n.total) stackedBar(lw, y + 6, bw, rh - 12, n, p.key, out, state.sel);
       out.push(`<text x="${lw + bw + 8}" y="${y + 21}" font-size="12" fill="#555555" ${ff}>${n.total} took a position</text>`);
-      if (aria) { const v = aria[p.key]; out.push(`<text x="${W - 4}" y="${y + 21}" font-size="12" font-weight="700" text-anchor="end" fill="${v ? SCOL[v] === "#bbbbbb" ? "#555555" : SCOL[v] : "#555555"}" ${ff}>ARIA: ${v ? STANCE[v] : "no position"}</text>`); }
+      if (aria) { const v = aria[p.key]; const short = { support: "supports", conditional: "with conditions", oppose: "opposes" };
+        out.push(`<rect x="${W - aw + 8}" y="${y + 8}" width="12" height="${rh - 16}" fill="${v ? SCOL[v] : "none"}" stroke="${v ? "none" : "#bbbbbb"}"></rect><text x="${W - aw + 26}" y="${y + 21}" font-size="12" font-weight="700" fill="#111111" ${ff}>ARIA ${v ? short[v] : "no position"}</text>`); }
     });
     el.innerHTML = `<svg viewBox="0 0 ${W} ${props.length * rh}" width="100%">${out.join("")}</svg>`;
   } else {
@@ -354,15 +355,15 @@ function renderRecs() {
   const DOT = ["#111111", "#00848a", "#7fb9bc", "#bbbbbb"], aria = state.pinned.includes("ARIA") ? new Set(META.aria.recs || []) : null;
   let rows = META.recs.map(r => { const hit = pool.filter(c => (c.recs || []).includes(r.key)); return { ...r, n: hit.length, by: cats.map(t => hit.filter(c => c.commenter_type === t).length), other: hit.filter(c => !cats.includes(c.commenter_type)).length }; }).filter(r => r.n > 0 || (aria && aria.has(r.key))).sort((a, b) => b.n - a.n);
   const total = rows.length; if (!state.recAll) rows = rows.slice(0, 15);
-  const W = Math.max(560, el.clientWidth || 900), lw = Math.min(360, Math.round(W * .42)), bw = W - lw - 60, rh = 30, max = Math.max(1, ...rows.map(r => r.n));
+  const W = Math.max(360, el.clientWidth || 900), lw = 0, bw = W - 50, rh = 46, max = Math.max(1, ...rows.map(r => r.n));
   rows.forEach((r, i) => {
     const y = i * rh, on = state.sel && state.sel.lens === "recs" && state.sel.key === r.key;
     out.push(`<g class="row${on ? " on" : ""}" data-key="${esc(r.key)}" tabindex="0" role="button" aria-label="${esc(r.label)}: ${r.n} comments">
       <rect class="hit" x="0" y="${y}" width="${W}" height="${rh}" fill="transparent"></rect>
-      <text x="0" y="${y + 20}" font-size="14" fill="#111111" ${ff}>${aria && aria.has(r.key) ? '<tspan font-weight="700" fill="#00848a">ARIA · </tspan>' : ""}${esc(r.label)}<title>${esc(r.label)}</title></text>`);
+      <text x="0" y="${y + 16}" font-size="14" font-weight="500" fill="#111111" ${ff}>${esc(r.label)}${aria && aria.has(r.key) ? '<tspan font-weight="700" fill="#00848a">  · also ARIA</tspan>' : ""}<title>${esc(r.desc || r.label)}</title></text>`);
     let x = lw;
-    [...r.by, r.other].forEach((v, j) => { if (!v) return; const ww = v / max * bw; out.push(`<rect x="${x}" y="${y + 8}" width="${ww}" height="${rh - 16}" fill="${j < 4 ? DOT[j] : "#e6e6e6"}" stroke="${on ? "#00dfe9" : "none"}" stroke-width="2"><title>${j < 4 ? cats[j] : "Other categories"}: ${v}</title></rect>`); x += ww; });
-    out.push(`<text x="${x + 8}" y="${y + 20}" font-size="13" fill="#111111" ${ff} style="font-variant-numeric:tabular-nums">${r.n}</text></g>`);
+    [...r.by, r.other].forEach((v, j) => { if (!v) return; const ww = v / max * bw; out.push(`<rect x="${x}" y="${y + 23}" width="${ww}" height="14" fill="${j < 4 ? DOT[j] : "#e6e6e6"}" stroke="${on ? "#00dfe9" : "none"}" stroke-width="2"><title>${j < 4 ? cats[j] : "Other categories"}: ${v}</title></rect>`); x += ww; });
+    out.push(`<text x="${x + 8}" y="${y + 35}" font-size="13" fill="#111111" ${ff} style="font-variant-numeric:tabular-nums">${r.n}</text></g>`);
   });
   el.innerHTML = rows.length ? `<svg viewBox="0 0 ${W} ${rows.length * rh}" width="100%">${out.join("")}</svg>` : `<p class="empty">No recommendations in this selection.</p>`;
   el.querySelectorAll(".row").forEach(g => bindPick(g, () => toggleSel(g.dataset.key, null, "recs")));
