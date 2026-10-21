@@ -180,6 +180,7 @@ svg .infoi:hover circle, svg .infoi:focus circle, .ic:hover, .ic:focus { stroke:
       <span><i class="sw" style="background:#00848a"></i>Support<span class="ic" tabindex="0" role="button" aria-label="What counts as support" data-tip="stance:support">i</span></span>
       <span><i class="sw" style="background:#bbbbbb"></i>Support with conditions<span class="ic" tabindex="0" role="button" aria-label="What counts as support with conditions" data-tip="stance:conditional">i</span></span>
       <span><i class="sw" style="background:#111111"></i>Oppose<span class="ic" tabindex="0" role="button" aria-label="What counts as oppose" data-tip="stance:oppose">i</span></span>
+      <span id="ariaMark" hidden><svg width="14" height="10" aria-hidden="true"><path d="M 1 1 L 13 1 L 7 9 Z" fill="#00dfe9" stroke="#111111" stroke-width="1.2"></path></svg>ARIA's position</span>
       <span id="posNote" style="flex-basis:100%;display:block">Bar length indicates how many comments gave a view on each proposal. Percentages are calculated from only those comments.<br>Select a segment to view comments</span>
     </div>
     <div class="chart" id="pos"></div>
@@ -371,7 +372,7 @@ function renderPos() {
   const el = document.getElementById("pos"), out = [], props = META.proposals;
   const cwid = el.clientWidth || 900, aria = state.pinned.includes("ARIA") ? META.aria.pos || {} : null;
   if (state.posView === "all") {
-    const pool = filtered(), W = Math.max(560, cwid), lw = Math.min(300, Math.round(W * .34)), nw = 130, aw = aria ? 150 : 0, bw = W - lw - nw - aw - 10, rh = 34;
+    const pool = filtered(), W = Math.max(560, cwid), lw = Math.min(300, Math.round(W * .34)), nw = 130, aw = 0, bw = W - lw - nw - 10, rh = 34;
     const maxT = Math.max(1, ...props.map(p => stanceCounts(pool, p.key).total));
     props.forEach((p, i) => {
       const y = i * rh, n = stanceCounts(pool, p.key);
@@ -379,8 +380,13 @@ function renderPos() {
       const len = n.total / maxT * bw;
       if (n.total) stackedBar(lw, y + 6, len, rh - 12, n, p.key, out, state.sel);
       out.push(`<text x="${lw + len + 8}" y="${y + 21}" font-size="12" fill="#555555" ${ff}>${n.total} of ${pool.length} comments</text>`);
-      if (aria) { const v = aria[p.key]; const short = { support: "supports", conditional: "with conditions", oppose: "opposes" };
-        out.push(`<rect x="${W - aw + 8}" y="${y + 8}" width="12" height="${rh - 16}" fill="${v ? SCOL[v] : "none"}" stroke="${v ? "none" : "#bbbbbb"}"></rect><text x="${W - aw + 26}" y="${y + 21}" font-size="12" font-weight="700" fill="#111111" ${ff}>ARIA ${v ? short[v] : "no position"}</text>`); }
+      const v = aria ? aria[p.key] : null;
+      if (v && n.total) {
+        const order = ["support", "conditional", "oppose"], k = order.indexOf(v);
+        let start = 0; for (let j = 0; j < k; j++) start += n[order[j]];
+        const cx = lw + (start + n[v] / 2) / n.total * len, top = y - 3;
+        out.push(`<path d="M ${cx - 6} ${top} L ${cx + 6} ${top} L ${cx} ${top + 8} Z" fill="#00dfe9" stroke="#111111" stroke-width="1.2"><title>ARIA: ${STANCE[v]}</title></path>`);
+      }
     });
     el.innerHTML = `<svg viewBox="0 0 ${W} ${props.length * rh}" width="100%">${out.join("")}</svg>`;
   } else {
@@ -405,6 +411,7 @@ function renderPos() {
   }
   el.querySelectorAll(".seg").forEach(s => bindPick(s, () => toggleSel(s.dataset.key, null, "pos")));
   addIcons(el);
+  document.getElementById("ariaMark").hidden = !(aria && state.posView === "all");
   document.getElementById("posNote").innerHTML = state.posView === "all"
     ? "Bar length indicates how many comments gave a view on each proposal. Percentages are calculated from only those comments.<br>Select a segment to view comments"
     : "Percentages are out of the comments in each column that gave a view on the proposal.";
