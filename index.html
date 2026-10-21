@@ -171,7 +171,7 @@ footer p { margin: 0; }
       <span><i class="sw" style="background:#00848a"></i>Support</span>
       <span><i class="sw" style="background:#bbbbbb"></i>Support with conditions</span>
       <span><i class="sw" style="background:#111111"></i>Oppose</span>
-      <span id="posNote">Bar length shows how many comments gave a view on each proposal. Percentages are out of those comments. Select a segment to view comments</span>
+      <span id="posNote">Bar length indicates how many comments gave a view on each proposal. Percentages are calculated from only those comments. Select a segment to view comments</span>
     </div>
     <div class="chart" id="pos"></div>
   </section>
@@ -349,7 +349,7 @@ function renderPos() {
   }
   el.querySelectorAll(".seg").forEach(s => bindPick(s, () => toggleSel(s.dataset.key, null, "pos")));
   document.getElementById("posNote").textContent = state.posView === "all"
-    ? "Bar length shows how many comments gave a view on each proposal. Percentages are out of those comments. Select a segment to view comments"
+    ? "Bar length indicates how many comments gave a view on each proposal. Percentages are calculated from only those comments. Select a segment to view comments"
     : "Percentages are out of the comments in each column that gave a view on the proposal.";
 }
 
