@@ -263,7 +263,7 @@ svg .infoi:hover circle, svg .infoi:focus circle, .ic:hover, .ic:focus { stroke:
 </div>
 
 <script>
-const state = { posView: "all", recAll: false, sort: "latest", lens: "questions", weight: "count", types: new Set(), sel: null, cat: null, q: "", all: false, pinned: [], hidden: new Set(), gcols: "questions" };
+const state = { posView: "all", recAll: false, sort: "latest", lens: "questions", weight: "count", types: new Set(), sel: null, cat: null, q: "", all: false, pinned: ["ARIA"], hidden: new Set(), gcols: "questions" };
 let D = null, META = null, BYID = {};
 
 const esc = s => String(s ?? "").replace(/[&<>"']/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
