@@ -61,16 +61,24 @@ for row in PRIV["codes"]: codes[row["id"]] = row
 for row in PRIV["codes2"]: codes2[row["id"]] = row
 RECS["map"].update(PRIV["recs_map"])
 NO_CARD = set(PRIV["no_card"])
-PROPOSALS = [
+PROPOSALS = [  # in docket question order
     ("risk_framework", "Two-axis risk framework", "FDA's framework rating risk by device activity and the consequence of relying on an incorrect output (Q1)"),
+    ("directiveness_continuum", "Directiveness as a continuum", "Treating how directive an output is as a matter of degree, with wording and personalization as risk modifiers (Q2)"),
+    ("patient_facing_risk", "Higher risk for patient-facing use", "Treating clinical information delivered to patients, rather than clinicians, as potentially higher risk (Q3)"),
+    ("trajectory_risk", "Risk across whole conversations", "Assessing multi-turn devices across realistic conversational trajectories (Q5)"),
+    ("escalation_errors", "Counting under- and over-escalation", "Evaluating care escalation for both under-escalation and over-escalation (Q6)"),
     ("competency_eval", "Benchmarks with clinical confirmation", "Competency-based premarket evaluation: device benchmarking followed by clinical confirmation (Q7, Q9)"),
     ("confirmation_flex", "Confirmation without a prospective study", "Clinical confirmation that does not always require a prospective clinical study (Q11)"),
     ("synthetic_data", "Synthetic data in evaluation", "Using synthetic data to supplement real-world data (Q12, Q13)"),
+    ("median_clinician_comparator", "Typical clinician as comparator", "Accepting a median clinician's performance in practice, not only the standard of care, as the comparator (Q14)"),
+    ("no_care_comparator", "Comparing with no or delayed care", "Assessing performance against what would likely happen without the device (Q15)"),
     ("third_party", "Independent third-party evaluation", "Involving independent third parties in benchmarking or clinical confirmation (Q16)"),
     ("postmarket_tradeoff", "Less premarket, more postmarket", "Accepting more premarket uncertainty in exchange for stronger postmarket monitoring (Q18)"),
+    ("postmarket_methods", "Re-benchmarking and clinician review after release", "Periodic re-benchmarking, sample-based clinician review, and degradation monitoring (Q19)"),
     ("supervisory_agents", "Agentic monitoring of devices after release", "Machine-based supervisory agents for postmarket monitoring (Q20)"),
     ("flexible_change_control", "Flexible change control", "Adapting PCCPs or other change control for modifications that cannot be fully prespecified (Q22, Q23)"),
     ("voluntary_model_files", "Voluntary foundation model disclosure", "Relying on voluntary Foundation Model Master Files from model developers (Q25)"),
+    ("agentic_oversight", "Stricter oversight for agentic devices", "Stricter acceptance criteria and oversight for devices that act autonomously across steps (Q26)"),
 ]
 
 out, unmapped = [], set()

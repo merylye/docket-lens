@@ -70,7 +70,15 @@
   "postmarket_tradeoff": "conditional",
   "supervisory_agents": "conditional",
   "flexible_change_control": null,
-  "voluntary_model_files": "oppose"
+  "voluntary_model_files": "oppose",
+  "directiveness_continuum": "conditional",
+  "patient_facing_risk": null,
+  "trajectory_risk": "support",
+  "escalation_errors": "conditional",
+  "median_clinician_comparator": "conditional",
+  "no_care_comparator": "conditional",
+  "postmarket_methods": "conditional",
+  "agentic_oversight": null
  },
  "recommendations": [
   "Add anticipated patterns of use as a risk factor",
@@ -107,6 +115,25 @@
   ],
   "voluntary_model_files": [
    "Voluntary Foundation Model Master Files would support review, but voluntary disclosure alone is not enough."
+  ],
+  "directiveness_continuum": [
+   "The FDA should not treat disclaimers as sufficient mitigation when assessing whether a response is action-directing, and should require evidence that intended users understand the device’s responses (Q2)."
+  ],
+  "trajectory_risk": [
+   "Safety benchmarks should evaluate conversational trajectories (Q5)."
+  ],
+  "escalation_errors": [
+   "Sponsors of care escalation functions should report both under- and over-escalation and show that referrals work for the intended population (Q3, Q6)."
+  ],
+  "median_clinician_comparator": [
+   "When clinicians serve as the comparator, sponsors should report performance against both the standard of care and the median clinician the intended population would realistically see, and the FDA should set acceptance criteria against the standard of care for devices people are expected to rely on heavily."
+  ],
+  "no_care_comparator": [
+   "The FDA should only allow sponsors to compare a device against delayed care or no care when they show with population-level data, such as coverage, cost, or waitlist data, that this is what intended users would otherwise receive (Q15)."
+  ],
+  "postmarket_methods": [
+   "Postmarket monitoring should combine user reports with clinician review that protects privacy (Q19).",
+   "Re-benchmarking can detect degradation against the capabilities measured before authorization, but it can miss problems that arise when the deployment context changes."
   ]
  }
 }
