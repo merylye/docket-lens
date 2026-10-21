@@ -270,8 +270,8 @@ function itemsFor(c, lens) {
 }
 const STANCE = { support: "support", conditional: "support with conditions", oppose: "oppose" };
 function catalog(lens) {
-  if (lens === "pos") return META.proposals.flatMap(p => Object.keys(STANCE).map(s => ({ key: p.key + ":" + s, label: `${STANCE[s]} on ${p.label.toLowerCase()}` })));
-  if (lens === "recs") return META.recs.map(x => ({ key: x.key, label: x.label }));
+  if (lens === "pos") return META.proposals.flatMap(p => Object.keys(STANCE).map(s => ({ key: p.key + ":" + s, label: `${STANCE[s]} on ${p.label.toLowerCase()}`, phrase: `that ${({ support: "support", conditional: "support with conditions", oppose: "oppose" })[s]} “${p.label}”` })));
+  if (lens === "recs") return META.recs.map(x => ({ key: x.key, label: x.label, phrase: `recommending “${x.label}”` }));
   if (lens === "questions") return META.questions.map(q => ({ key: String(q.n), label: "Q" + q.n, desc: q.label, group: q.section }));
   if (lens === "sections") return META.sections.map(s => ({ key: s.key, label: s.label, desc: "Section " + s.key }));
   return META.topics.map(t => ({ key: t.key, label: t.key, desc: "" }));
@@ -315,7 +315,7 @@ function renderPos() {
   const el = document.getElementById("pos"), out = [], props = META.proposals;
   const cwid = el.clientWidth || 900, aria = state.pinned.includes("ARIA") ? META.aria.pos || {} : null;
   if (state.posView === "all") {
-    const pool = filtered(), W = Math.max(560, cwid), lw = Math.min(300, Math.round(W * .34)), nw = 70, bw = W - lw - nw - (aria ? 120 : 10), rh = 34;
+    const pool = filtered(), W = Math.max(560, cwid), lw = Math.min(300, Math.round(W * .34)), nw = 130, bw = W - lw - nw - (aria ? 120 : 10), rh = 34;
     props.forEach((p, i) => {
       const y = i * rh, n = stanceCounts(pool, p.key);
       out.push(`<text x="0" y="${y + 21}" font-size="14" font-weight="500" fill="#111111" ${ff}>${esc(p.label)}<title>${esc(p.desc)}</title></text>`);
@@ -328,8 +328,8 @@ function renderPos() {
     let cats = state.types.size ? [...state.types] : [...new Set(readable().map(c => c.commenter_type))].map(t => [t, readable().filter(c => c.commenter_type === t).length]).sort((a, b) => b[1] - a[1]).slice(0, 4).map(x => x[0]);
     const cols = [{ label: "All", pool: filtered() }, ...cats.map(t => ({ label: t, pool: readable().filter(c => c.commenter_type === t) }))];
     if (aria) cols.push({ label: "ARIA", aria: true });
-    const W = Math.max(640, cwid), lw = 230, cw = (W - lw) / cols.length, rh = 40, hh = 34;
-    cols.forEach((c, j) => out.push(`<text x="${lw + j * cw + 4}" y="14" font-size="12" font-weight="700" fill="#111111" ${ff}>${esc(c.label.replace(" (non-device)", ""))}</text>${c.pool ? `<text x="${lw + j * cw + 4}" y="28" font-size="11" fill="#555555" ${ff}>${c.pool.length} comments</text>` : ""}`));
+    const W = Math.max(700, cwid), lw = 290, cw = (W - lw) / cols.length, rh = 40, hh = 34;
+    cols.forEach((c, j) => out.push(`<text x="${lw + j * cw + 4}" y="14" font-size="${cw < 130 ? 11 : 12}" font-weight="700" fill="#111111" ${ff}>${esc(({ "Health professional": "Health prof.", "Private industry (non-device)": "Private industry", "Health care association": "Health care assns.", "International industry": "Intl. industry" })[c.label] || c.label)}<title>${esc(c.label)}</title></text>${c.pool ? `<text x="${lw + j * cw + 4}" y="28" font-size="11" fill="#555555" ${ff}>${c.pool.length} comments</text>` : ""}`));
     props.forEach((p, i) => {
       const y = hh + i * rh;
       out.push(`<text x="0" y="${y + 22}" font-size="13" font-weight="500" fill="#111111" ${ff}>${esc(p.label)}<title>${esc(p.desc)}</title></text>`);
@@ -338,7 +338,7 @@ function renderPos() {
         if (c.aria) { const v = aria[p.key]; out.push(v ? `<rect x="${x}" y="${y + 8}" width="${w}" height="${rh - 16}" fill="${SCOL[v]}"><title>ARIA: ${STANCE[v]}</title></rect>` : `<text x="${x}" y="${y + 22}" font-size="11" fill="#555555" ${ff}>No position</text>`); return; }
         const n = stanceCounts(c.pool, p.key);
         if (!n.total) { out.push(`<text x="${x}" y="${y + 22}" font-size="11" fill="#555555" ${ff}>None</text>`); return; }
-        stackedBar(x, y + 8, w * Math.min(1, .35 + n.total / 20), rh - 22, n, p.key, out, null);
+        stackedBar(x, y + 8, w, rh - 22, n, p.key, out, null);
         out.push(`<text x="${x}" y="${y + rh - 2}" font-size="10" fill="#555555" ${ff}>n=${n.total}</text>`);
       });
     });
@@ -512,7 +512,7 @@ function renderTable() {
   const note = document.getElementById("selNote"), clear = document.getElementById("clear");
   if (state.sel) {
     const it = catalog(state.sel.lens).find(i => i.key === state.sel.key);
-    note.textContent = `${rows.length} comments${state.cat ? " from " + state.cat : ""} addressing ${it ? it.label : state.sel.key}`; clear.hidden = false;
+    note.textContent = `${rows.length} comments${state.cat ? " from " + state.cat : ""} ${it && it.phrase ? it.phrase : "addressing " + (it ? it.label : state.sel.key)}`; clear.hidden = false;
   } else { note.textContent = `${rows.length} comments`; clear.hidden = state.types.size === 0; }
   if (state.types.size) note.textContent += ` · ${[...state.types].join(", ")}`;
   const a = META.aria, ariaText = ["aria", a.name, "academia", ...a.topics].join(" ").toLowerCase();

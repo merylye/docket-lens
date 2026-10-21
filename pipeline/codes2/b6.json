@@ -1,0 +1,354 @@
+[
+ {
+  "id": "FDA-2026-N-7874-0113",
+  "positions": {
+   "risk_framework": "conditional",
+   "competency_eval": "conditional",
+   "confirmation_flex": "conditional",
+   "synthetic_data": "conditional",
+   "third_party": "support",
+   "postmarket_tradeoff": "oppose",
+   "supervisory_agents": "conditional",
+   "flexible_change_control": "conditional",
+   "voluntary_model_files": "oppose"
+  },
+  "recommendations": [
+   "Establish clinical association before analytical benchmarking",
+   "Require mandatory disclosure from foundation model developers",
+   "Require independent third-party verification for medium- and high-risk devices",
+   "Require risk-proportionate clinical confirmation for all devices",
+   "Require prospective clinical evidence for high-risk devices",
+   "Add intended use, reversibility, and time pressure to risk assessment",
+   "Evaluate multi-turn conversations and agentic workflows holistically",
+   "Use postmarket monitoring to verify, not replace, premarket evidence",
+   "Require fairness assessments using real data for high-risk devices",
+   "Adopt tiered PCCPs with subgroup accuracy thresholds"
+  ]
+ },
+ {
+  "id": "FDA-2026-N-7874-0022",
+  "positions": {
+   "risk_framework": null,
+   "competency_eval": null,
+   "confirmation_flex": null,
+   "synthetic_data": null,
+   "third_party": null,
+   "postmarket_tradeoff": null,
+   "supervisory_agents": null,
+   "flexible_change_control": null,
+   "voluntary_model_files": null
+  },
+  "recommendations": [
+   "Hold device developers and sellers legally liable for failures",
+   "Require an enforceable off switch for autonomous AI devices",
+   "Reject disclaimers as a substitute for accountability"
+  ]
+ },
+ {
+  "id": "FDA-2026-N-7874-0061",
+  "positions": {
+   "risk_framework": null,
+   "competency_eval": "support",
+   "confirmation_flex": null,
+   "synthetic_data": null,
+   "third_party": null,
+   "postmarket_tradeoff": null,
+   "supervisory_agents": null,
+   "flexible_change_control": null,
+   "voluntary_model_files": null
+  },
+  "recommendations": [
+   "Score agent step reports against an independent execution record",
+   "Require agents to report search scope for absence claims",
+   "Evaluate persistent user memory as part of the device",
+   "Let users inspect and correct stored assertions about them",
+   "Test recommendation drift under varied user displeasure",
+   "Treat fluent output from no-signal input as a failure",
+   "Do not credit competencies shown only via system prompts"
+  ]
+ },
+ {
+  "id": "FDA-2026-N-7874-0082",
+  "positions": {
+   "risk_framework": "conditional",
+   "competency_eval": null,
+   "confirmation_flex": null,
+   "synthetic_data": null,
+   "third_party": "oppose",
+   "postmarket_tradeoff": null,
+   "supervisory_agents": null,
+   "flexible_change_control": null,
+   "voluntary_model_files": null
+  },
+  "recommendations": [
+   "Make time pressure and downstream safeguards first-class risk dimensions",
+   "Recognize a protocol delivery sub-category judged on protocol fidelity",
+   "Credit deterministic protocol selection as a risk mitigant",
+   "Score redirection rather than bare refusal when no clinician exists",
+   "Require premise-aware benchmark items with human adjudication",
+   "Require full disclosure of sponsor-developed benchmarks",
+   "Use the unaided user as comparator when no professional is available",
+   "Distinguish frozen on-device models from hosted models postmarket",
+   "Recognize hash-verified on-device weights as resolving third-party changes"
+  ]
+ },
+ {
+  "id": "FDA-2026-N-7874-0115",
+  "positions": {
+   "risk_framework": "conditional",
+   "competency_eval": "conditional",
+   "confirmation_flex": "support",
+   "synthetic_data": "conditional",
+   "third_party": "conditional",
+   "postmarket_tradeoff": "conditional",
+   "supervisory_agents": "conditional",
+   "flexible_change_control": null,
+   "voluntary_model_files": "conditional"
+  },
+  "recommendations": [
+   "Define a minimum runtime governance evidence package for higher-risk devices",
+   "Add autonomy, reversibility, traceability, and changeability as risk modifiers",
+   "Verify the tested configuration is the deployed configuration",
+   "Set acceptance criteria at outcome, process, and control levels",
+   "Require event-triggered reassessment in addition to scheduled review",
+   "Validate supervisory agents as independent safety-relevant components",
+   "Require agent identity and authority records for agentic devices",
+   "Require tested kill switch and rollback for agentic devices",
+   "Report synthetic data separately from real-world evidence",
+   "Supplement voluntary model files with supplier contracts and version manifests"
+  ]
+ },
+ {
+  "id": "FDA-2026-N-7874-0072",
+  "positions": {
+   "risk_framework": null,
+   "competency_eval": null,
+   "confirmation_flex": null,
+   "synthetic_data": null,
+   "third_party": null,
+   "postmarket_tradeoff": null,
+   "supervisory_agents": null,
+   "flexible_change_control": null,
+   "voluntary_model_files": null
+  },
+  "recommendations": [
+   "Clarify boundary between plan-supporting AI and independent clinical judgment",
+   "Clarify how GenAI risks map to controls and evidence",
+   "Scale evidence expectations to risk of intended function",
+   "Develop consistent terminology for autonomy and human oversight"
+  ]
+ },
+ {
+  "id": "FDA-2026-N-7874-0098",
+  "positions": {
+   "risk_framework": "conditional",
+   "competency_eval": "support",
+   "confirmation_flex": null,
+   "synthetic_data": null,
+   "third_party": "conditional",
+   "postmarket_tradeoff": null,
+   "supervisory_agents": "conditional",
+   "flexible_change_control": null,
+   "voluntary_model_files": null
+  },
+  "recommendations": [
+   "Require human oversight claims to meet domain-match and independence criteria",
+   "Test fail-open versus fail-closed escalation under fault conditions",
+   "Run multi-turn scope-drift testing over cumulative conversation state",
+   "Add a benchmark element for resistance to sycophantic validation",
+   "Disclose model lineage and decoding mode of LLM adjudicators",
+   "Require three-state output classification with mandatory deferral",
+   "Disclose verification-gate placement relative to user-facing display",
+   "Require persistent structured logging of safety-relevant decisions",
+   "Require expert-in-the-loop checkpoints before irreversible agentic actions"
+  ]
+ },
+ {
+  "id": "FDA-2026-N-7874-0121",
+  "positions": {
+   "risk_framework": "conditional",
+   "competency_eval": "support",
+   "confirmation_flex": null,
+   "synthetic_data": null,
+   "third_party": null,
+   "postmarket_tradeoff": null,
+   "supervisory_agents": null,
+   "flexible_change_control": null,
+   "voluntary_model_files": null
+  },
+  "recommendations": [
+   "Add reversibility, time-to-detection, and licensed authenticator as risk modifiers",
+   "Evaluate the deployed configuration including prompts, retrieval, and escalation rules",
+   "Treat care-plan generators as decision support only without orders or diagnoses",
+   "Require competency evidence for high-consequence recognition tasks",
+   "Require postmarket clinician review, override tracking, and subgroup performance",
+   "Align payment with CPT Appendix S",
+   "Block autonomous diagnosis hidden inside documentation tools",
+   "Preserve nursing as a distinct accountable profession in labeling",
+   "Disclose AI use to patients",
+   "Require version stamps on model, prompt pack, and guideline library"
+  ]
+ },
+ {
+  "id": "FDA-2026-N-7874-0055",
+  "positions": {
+   "risk_framework": "oppose",
+   "competency_eval": "support",
+   "confirmation_flex": "support",
+   "synthetic_data": "conditional",
+   "third_party": "conditional",
+   "postmarket_tradeoff": "conditional",
+   "supervisory_agents": "conditional",
+   "flexible_change_control": "conditional",
+   "voluntary_model_files": "conditional"
+  },
+  "recommendations": [
+   "Use three separate assurance layers: competency, clinical confirmation, operations",
+   "Base risk analysis on probability and severity of harm",
+   "Treat patient-specific output as potentially action-directing",
+   "Test the final device configuration including prompts and tools",
+   "Set separate acceptance limits for each high-consequence failure",
+   "Measure failed escalation handoffs alongside under- and over-escalation",
+   "Use deterministic controls outside the model for measurable scope boundaries",
+   "Link every monitoring signal to a specified corrective action",
+   "Support a confidential multi-site postmarket monitoring network",
+   "Require another disclosure method when model providers withhold information"
+  ]
+ },
+ {
+  "id": "FDA-2026-N-7874-0028",
+  "positions": {
+   "risk_framework": "conditional",
+   "competency_eval": "support",
+   "confirmation_flex": "support",
+   "synthetic_data": "conditional",
+   "third_party": "support",
+   "postmarket_tradeoff": "conditional",
+   "supervisory_agents": "conditional",
+   "flexible_change_control": null,
+   "voluntary_model_files": null
+  },
+  "recommendations": [
+   "Add reversibility, safeguards, time pressure, and traceability as risk modifiers",
+   "Provide a decision tree for classifying directiveness",
+   "Add an interoperability and context-integrity benchmark element",
+   "Embed subgroup results in safety acceptance criteria",
+   "Require construct validity evidence for benchmarks",
+   "Develop consensus benchmarks through the MDDT pathway",
+   "Validate synthetic data against real-world distributions and disclose generation methods",
+   "Use human-AI team performance as primary evidence",
+   "Pilot third-party adjudication through ASCA and MDDT",
+   "Make periodic re-benchmarking the default postmarket expectation"
+  ]
+ },
+ {
+  "id": "FDA-2026-N-7874-0057",
+  "positions": {
+   "risk_framework": "conditional",
+   "competency_eval": "support",
+   "confirmation_flex": null,
+   "synthetic_data": null,
+   "third_party": null,
+   "postmarket_tradeoff": null,
+   "supervisory_agents": null,
+   "flexible_change_control": "conditional",
+   "voluntary_model_files": "support"
+  },
+  "recommendations": [
+   "Test output sensitivity to claimed speaker authority and seniority",
+   "Demonstrate human oversight under realistic override conditions",
+   "Measure clinician override and error-detection rates in representative workflows",
+   "Re-examine devices on the original competency set on a fixed cycle",
+   "Prespecify the re-examination that follows any change",
+   "Re-run safety and robustness elements fully after model or guardrail changes",
+   "Include refusal behavior and output stability in model master files",
+   "Test populations differing in disease distribution, not only demographics"
+  ]
+ },
+ {
+  "id": "FDA-2026-N-7874-0040",
+  "positions": {
+   "risk_framework": null,
+   "competency_eval": null,
+   "confirmation_flex": null,
+   "synthetic_data": null,
+   "third_party": null,
+   "postmarket_tradeoff": null,
+   "supervisory_agents": null,
+   "flexible_change_control": null,
+   "voluntary_model_files": null
+  },
+  "recommendations": []
+ },
+ {
+  "id": "FDA-2026-N-7874-0102",
+  "positions": {
+   "risk_framework": "conditional",
+   "competency_eval": "support",
+   "confirmation_flex": null,
+   "synthetic_data": null,
+   "third_party": "support",
+   "postmarket_tradeoff": "conditional",
+   "supervisory_agents": "conditional",
+   "flexible_change_control": "support",
+   "voluntary_model_files": "oppose"
+  },
+  "recommendations": [
+   "Mandate an immutable algorithmic chain-of-custody record for outputs",
+   "Require automated kill switches for high-materiality anomalies",
+   "Make reduced premarket evidence contingent on runtime boundary controls",
+   "Require pre-ingestion sanitization against indirect prompt injection",
+   "Require 14-day vendor update notice with sandbox testing",
+   "Add reversibility and traceability to the risk matrix",
+   "Require sequestered test sets evaluated by independent clinician panels",
+   "Keep supervisory agents subordinate to credentialed human oversight",
+   "Require non-bypassable human checkpoints before irreversible agentic actions"
+  ]
+ },
+ {
+  "id": "FDA-2026-N-7874-0096",
+  "positions": {
+   "risk_framework": null,
+   "competency_eval": null,
+   "confirmation_flex": null,
+   "synthetic_data": null,
+   "third_party": null,
+   "postmarket_tradeoff": null,
+   "supervisory_agents": null,
+   "flexible_change_control": null,
+   "voluntary_model_files": null
+  },
+  "recommendations": [
+   "Recognize local model version locking as acceptable risk mitigation",
+   "Define validation standards for automated benchmarking of hosted APIs",
+   "Set documentation expectations for multi-version active deployments",
+   "Expect backward-compatibility testing and deprecation schedules in the QMS",
+   "Run golden benchmark suites regularly to detect upstream drift"
+  ]
+ },
+ {
+  "id": "FDA-2026-N-7874-0047",
+  "positions": {
+   "risk_framework": null,
+   "competency_eval": null,
+   "confirmation_flex": null,
+   "synthetic_data": null,
+   "third_party": "support",
+   "postmarket_tradeoff": null,
+   "supervisory_agents": null,
+   "flexible_change_control": null,
+   "voluntary_model_files": null
+  },
+  "recommendations": [
+   "Require independent premarket testing and recurring third-party audits",
+   "Require licensed clinician approval for diagnosis, prescribing, and triage",
+   "Require tamper-resistant decision logs with model version",
+   "Require patient disclosure and consent when AI influences care",
+   "Require mandatory incident reporting and rapid disable or recall",
+   "Impose financial penalties for noncompliance",
+   "Independently revalidate material changes before broader deployment",
+   "Assign defined legal responsibilities across developers and deployers",
+   "Apply stricter validation for pediatric and vulnerable populations"
+  ]
+ }
+]
