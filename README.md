@@ -56,4 +56,6 @@ One commenter asked that their comment not be used this way. It is counted in th
 
 Two documents were each filed twice (0102 and 0117; 0057 and 0058). Each is counted once, under the earlier filing, whose card links to the second (`DUPLICATES` in `merge.py`).
 
-Coding is approximate and was done with Claude Opus 5.5. Check a comment's original text before quoting or citing it. Commenter categories come from Regulations.gov; comments filed without a category were assigned one from their content and are marked "inferred." Some comments are filed under a category that does not match their content, and the site keeps the filed category.
+Positions were coded with Claude Opus 5.5. Codes the first coder was unsure of were recoded by two independent coders: where they agreed, that code was used; where they disagreed, the code is "conditional" if either said conditional and "no position" if either said no position. A blind recode of 15 randomly drawn comments matched the other codes on 92% of the codes where either coder gave a stance (97% of all codes, Cohen's kappa 0.95). Every mismatch was between support and conditional, or between conditional and no position.
+
+Coding is approximate. Check a comment's original text before quoting or citing it. Commenter categories come from Regulations.gov; comments filed without a category were assigned one from their content and are marked "inferred." Some comments are filed under a category that does not match their content, and the site keeps the filed category.
