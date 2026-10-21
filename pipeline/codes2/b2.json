@@ -358,7 +358,7 @@
    "trajectory_risk": "support",
    "escalation_errors": "conditional",
    "competency_eval": "conditional",
-   "confirmation_flex": "support",
+   "confirmation_flex": "conditional",
    "synthetic_data": "conditional",
    "median_clinician_comparator": "oppose",
    "no_care_comparator": "conditional",
@@ -367,7 +367,7 @@
    "postmarket_methods": "conditional",
    "supervisory_agents": "conditional",
    "flexible_change_control": "conditional",
-   "voluntary_model_files": "support",
+   "voluntary_model_files": "conditional",
    "agentic_oversight": "conditional"
   },
   "recommendations": [

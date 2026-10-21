@@ -62,7 +62,9 @@ for row in PRIV["codes2"]: codes2[row["id"]] = row
 RECS["map"].update(PRIV["recs_map"])
 NO_CARD = set(PRIV["no_card"])
 # The same document filed twice: count it once, under the earlier filing (lower number when filed the same day).
-DUPLICATES = {"FDA-2026-N-7874-0117": "FDA-2026-N-7874-0102", "FDA-2026-N-7874-0058": "FDA-2026-N-7874-0057"}
+DUPLICATES = {"FDA-2026-N-7874-0117": "FDA-2026-N-7874-0102", "FDA-2026-N-7874-0058": "FDA-2026-N-7874-0057",
+              "FDA-2026-N-7874-0013": "FDA-2026-N-7874-0010", "FDA-2026-N-7874-0129": "FDA-2026-N-7874-0128",
+              "FDA-2026-N-7874-0041": "FDA-2026-N-7874-0040"}
 PROPOSALS = [  # in docket question order
     ("risk_framework", "Two-axis risk framework", "FDA's framework rating risk by device activity and the consequence of relying on an incorrect output (Q1)"),
     ("directiveness_continuum", "Directiveness as a continuum", "Treating how directive an output is as a matter of degree, with wording and personalization as risk modifiers (Q2)"),

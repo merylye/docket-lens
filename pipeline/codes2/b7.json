@@ -135,7 +135,7 @@
    "postmarket_tradeoff": "conditional",
    "postmarket_methods": "conditional",
    "supervisory_agents": "conditional",
-   "flexible_change_control": "oppose",
+   "flexible_change_control": "conditional",
    "voluntary_model_files": null,
    "agentic_oversight": null
   },
@@ -157,7 +157,7 @@
   "positions": {
    "risk_framework": "support",
    "directiveness_continuum": null,
-   "patient_facing_risk": "oppose",
+   "patient_facing_risk": null,
    "trajectory_risk": null,
    "escalation_errors": null,
    "competency_eval": null,

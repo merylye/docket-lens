@@ -1,0 +1,402 @@
+{
+ "dissent": {
+  "median_clinician_comparator": [
+   {
+    "id": "FDA-2026-N-7874-0003",
+    "reason": "Median clinician performance may replicate suboptimal care at scale without ensuring patient benefit",
+    "alternative": "Board-certified specialist performance in the device's intended clinical domain"
+   },
+   {
+    "id": "FDA-2026-N-7874-0010",
+    "reason": "Median clinician performance is unmeasured, shifting, and anchors the bar to practice rather than patient benefit",
+    "alternative": "Prespecified acceptance criteria based on consequences, with validated clinician panels as adjudicators"
+   },
+   {
+    "id": "FDA-2026-N-7874-0021",
+    "reason": "A model's miss repeats across every patient, so median clinician performance does not mean median risk",
+    "alternative": "Minimum floors for each high-consequence failure and comparison against the standard of care"
+   },
+   {
+    "id": "FDA-2026-N-7874-0056",
+    "reason": "Median generalist performance should not define acceptable safety for specialty tasks",
+    "alternative": "Qualified specialist panel defines the reference standard for specialty functions"
+   },
+   {
+    "id": "FDA-2026-N-7874-0076",
+    "reason": "Median clinician is below the standard of care and would normalize existing gaps in care",
+    "alternative": "Standard of care as the floor with prespecified non-inferiority margins"
+   },
+   {
+    "id": "FDA-2026-N-7874-0086",
+    "reason": "Comparisons should use safe, adequately staffed care, not understaffed practice",
+    "alternative": "Compare against safe, adequately staffed care"
+   }
+  ],
+  "voluntary_model_files": [
+   {
+    "id": "FDA-2026-N-7874-0003",
+    "reason": "Developers have strong competitive incentives to withhold information, so voluntary files will not work",
+    "alternative": "Higher premarket evidence burden for devices lacking a complete master file"
+   },
+   {
+    "id": "FDA-2026-N-7874-0079",
+    "reason": "Hosted models change every few minutes, so no master file can stay current",
+    "alternative": "User-side records of which model answered and device-held lineage records"
+   },
+   {
+    "id": "FDA-2026-N-7874-0106",
+    "reason": "Model developers have limited commercial incentive to disclose safety-relevant limitations of their models",
+    "alternative": "Mandatory foundation model disclosure for higher-consequence devices"
+   },
+   {
+    "id": "FDA-2026-N-7874-0113",
+    "reason": "Foundation model developers have no incentive to participate in a voluntary program",
+    "alternative": "Mandatory foundation model disclosure for any model in regulated devices"
+   },
+   {
+    "id": "FDA-2026-N-7874-0076",
+    "reason": "Voluntary files draw disclosure only from developers with little to hide",
+    "alternative": "Mandatory developer documentation or the sponsor carries the full evidence burden"
+   }
+  ],
+  "patient_facing_risk": [
+   {
+    "id": "FDA-2026-N-7874-0010",
+    "reason": "Risk depends on the user's verification path, not on whether the user is a patient",
+    "alternative": "Assess risk by the availability and latency of the user's verification path"
+   },
+   {
+    "id": "FDA-2026-N-7874-0030",
+    "reason": "Patient-facing use should not by itself create a presumption of higher risk",
+    "alternative": "Treat user comprehension and adaptive communication as potential risk controls"
+   },
+   {
+    "id": "FDA-2026-N-7874-0006",
+    "reason": "Patient-facing should not be a per se risk elevation when the alternative is unvetted internet content",
+    "alternative": "Credit verifiable behaviors like non-directive frames and forced deferral"
+   },
+   {
+    "id": "FDA-2026-N-7874-0037",
+    "reason": "Credentials are a poor proxy for the ability to evaluate outputs, and patients can be expert",
+    "alternative": "Device-specific competency affirmation scaled to risk instead of user categories"
+   },
+   {
+    "id": "FDA-2026-N-7874-0045",
+    "reason": "Patient-facing AI is not automatically higher risk and should not be penalized by default",
+    "alternative": "Scale burden to clinical consequence with patient-specific safeguards"
+   },
+   {
+    "id": "FDA-2026-N-7874-0115",
+    "reason": "User status is a poor proxy for risk compared with reviewability and verification time",
+    "alternative": "Assess reviewability, certainty, verification time, and capacity for action"
+   }
+  ],
+  "directiveness_continuum": [
+   {
+    "id": "FDA-2026-N-7874-0043",
+    "reason": "Directive outputs amount to medical advice, so all outputs need required informational modifiers",
+    "alternative": "Require linguistic modifiers marking unapproved outputs as for information only"
+   },
+   {
+    "id": "FDA-2026-N-7874-0055",
+    "reason": "Wording and tone are hard to define and manufacturers can change wording without changing function",
+    "alternative": "One division between general and patient-specific output, then classify by consequence"
+   },
+   {
+    "id": "FDA-2026-N-7874-0065",
+    "reason": "Directiveness varied with user affect rather than with the function or its intended use",
+    "alternative": "Assign the highest risk class reachable on a trajectory and test varying affect"
+   },
+   {
+    "id": "FDA-2026-N-7874-0131",
+    "reason": "An axis based on output wording can be moved by rewording without changing user options",
+    "alternative": "Define the axis by the function's effect on the user's choice set"
+   },
+   {
+    "id": "FDA-2026-N-7874-0126",
+    "reason": "Risk should follow what an output asserts, not how directive it sounds",
+    "alternative": "Grade outputs by significance, whether they present or generate claims"
+   }
+  ],
+  "third_party": [
+   {
+    "id": "FDA-2026-N-7874-0043",
+    "reason": "A third-party requirement invites organizations to game the system and profit from prolonged testing",
+    "alternative": ""
+   },
+   {
+    "id": "FDA-2026-N-7874-0082",
+    "reason": "Requiring independent benchmarks would leave small developers in novel domains with no benchmark",
+    "alternative": "Full public disclosure of sponsor-developed benchmarks, rubrics, and outputs"
+   }
+  ],
+  "risk_framework": [
+   {
+    "id": "FDA-2026-N-7874-0055",
+    "reason": "Device activity does not equal probability of harm, so the two axes are insufficient",
+    "alternative": "Standard probability and severity risk analysis with modifiers like reversibility"
+   }
+  ],
+  "escalation_errors": [
+   {
+    "id": "FDA-2026-N-7874-0082",
+    "reason": "For protocol delivery, escalation is a protocol step, not a trade-off between two error rates",
+    "alternative": "Evaluate escalation ordering per scenario as a protocol fidelity item"
+   }
+  ],
+  "postmarket_tradeoff": [
+   {
+    "id": "FDA-2026-N-7874-0113",
+    "reason": "Postmarket monitoring should verify premarket claims, not substitute for inadequate premarket evidence",
+    "alternative": "Risk-tiered premarket evidence, with prospective clinical studies for high-risk devices"
+   },
+   {
+    "id": "FDA-2026-N-7874-0023",
+    "reason": "Postmarket review is not enough for a new technology with many unknowns",
+    "alternative": "Require manufacturers to prove minimum accuracy before approval"
+   },
+   {
+    "id": "FDA-2026-N-7874-0076",
+    "reason": "Accepting premarket uncertainty shifts risk to patients, and postmarket surveillance cannot detect GenAI failures",
+    "alternative": "Limit relief to the lowest-risk quadrant with GenAI-specific reporting safeguards"
+   },
+   {
+    "id": "FDA-2026-N-7874-0086",
+    "reason": "Postmarket monitoring must supplement strong premarket evidence so patients are not test subjects",
+    "alternative": "Strong premarket evidence supplemented by postmarket monitoring"
+   },
+   {
+    "id": "FDA-2026-N-7874-0126",
+    "reason": "Reduced premarket evidence moves discovery of uncertainty onto patients through harm",
+    "alternative": "Postmarket monitoring as a complement to premarket evidence"
+   }
+  ],
+  "flexible_change_control": [
+   {
+    "id": "FDA-2026-N-7874-0076",
+    "reason": "A PCCP cannot cover foundation model changes the sponsor does not control",
+    "alternative": "Version pinning, change notification, no silent updates, and re-benchmarking"
+   },
+   {
+    "id": "FDA-2026-N-7874-0086",
+    "reason": "Material model changes should be caught before affecting care and get revalidation and FDA review",
+    "alternative": "Version traceability, revalidation, FDA review, suspension and rollback controls"
+   }
+  ],
+  "no_care_comparator": [
+   {
+    "id": "FDA-2026-N-7874-0086",
+    "reason": "Weak real-world care as a comparator can make a product appear beneficial",
+    "alternative": "Compare against safe, adequately staffed care"
+   },
+   {
+    "id": "FDA-2026-N-7874-0126",
+    "reason": "An unavailable alternative changes a device's benefit, not the consequence of its errors",
+    "alternative": "Absolute prespecified thresholds informed by specialist standard of care"
+   }
+  ],
+  "confirmation_flex": [
+   {
+    "id": "FDA-2026-N-7874-0107",
+    "reason": "Benchmarks cannot capture real human interaction, so prospective studies should establish safety",
+    "alternative": "Prospective clinical studies for devices that directly influence patient care"
+   }
+  ],
+  "competency_eval": [
+   {
+    "id": "FDA-2026-N-7874-0126",
+    "reason": "Open-endedness is a design choice, so bounded devices should use established methods",
+    "alternative": "Make bounding the primary expectation and justify competency evaluation otherwise"
+   }
+  ]
+ },
+ "nopos": [
+  {
+   "id": "FDA-2026-N-7874-0004",
+   "kind": "outside_framing",
+   "point": "Medical AI may carry demographic and subjective bias and erode patient agency and personhood"
+  },
+  {
+   "id": "FDA-2026-N-7874-0007",
+   "kind": "general_objection",
+   "point": "Generative AI in health care is too risky now because of hallucinations and privacy"
+  },
+  {
+   "id": "FDA-2026-N-7874-0011",
+   "kind": "general_objection",
+   "point": "Devices should not be used until bias, privacy, and legal liability questions are settled"
+  },
+  {
+   "id": "FDA-2026-N-7874-0014",
+   "kind": "too_brief",
+   "point": "Internet connectivity is an issue for some families"
+  },
+  {
+   "id": "FDA-2026-N-7874-0031",
+   "kind": "general_objection",
+   "point": "Product liability law already holds AI makers accountable, so markets rather than regulators should constrain AI"
+  },
+  {
+   "id": "FDA-2026-N-7874-0034",
+   "kind": "outside_framing",
+   "point": "Devices should be cleared only after formal requirements, specifications, verification, and definitive validation"
+  },
+  {
+   "id": "FDA-2026-N-7874-0036",
+   "kind": "outside_framing",
+   "point": "Rural hospitals need receiving facilities and insurers to accept AI stroke CT reads for transfers"
+  },
+  {
+   "id": "FDA-2026-N-7874-0040",
+   "kind": "off_topic",
+   "point": "Personal grievance about alleged fraud, paternity orders, and loss of control over identity and records"
+  },
+  {
+   "id": "FDA-2026-N-7874-0044",
+   "kind": "outside_framing",
+   "point": "Patients must consent to voice print use in AI training because voice prints cannot be deidentified"
+  },
+  {
+   "id": "FDA-2026-N-7874-0059",
+   "kind": "outside_framing",
+   "point": "Test whether devices recognize when medical evidence is weak, using historical medical reversals as benchmarks"
+  },
+  {
+   "id": "FDA-2026-N-7874-0060",
+   "kind": "outside_framing",
+   "point": "Audit how clinician responses to AI outputs are used, and record reasons when dismissed"
+  },
+  {
+   "id": "FDA-2026-N-7874-0068",
+   "kind": "outside_framing",
+   "point": "Medical AI should impartially weigh global evidence, including complementary and traditional medicine, by equal standards"
+  },
+  {
+   "id": "FDA-2026-N-7874-0069",
+   "kind": "outside_framing",
+   "point": "Clarify what counts as generative AI and consider a parallel proposal for causal AI"
+  },
+  {
+   "id": "FDA-2026-N-7874-0070",
+   "kind": "outside_framing",
+   "point": "Treat where the output appears in the clinician workflow as part of the device being evaluated"
+  },
+  {
+   "id": "FDA-2026-N-7874-0072",
+   "kind": "outside_framing",
+   "point": "Clarify the boundary between AI that conveys a clinician's plan and AI exercising independent judgment"
+  },
+  {
+   "id": "FDA-2026-N-7874-0073",
+   "kind": "copy_of_fda_paper",
+   "point": "Attachment reproduces FDA's discussion paper with no added commentary"
+  },
+  {
+   "id": "FDA-2026-N-7874-0081",
+   "kind": "outside_framing",
+   "point": "Involve patients, clinicians, and many other stakeholders in oversight throughout the AI lifecycle"
+  },
+  {
+   "id": "FDA-2026-N-7874-0085",
+   "kind": "outside_framing",
+   "point": "Require standardized, machine checkable documentation and versioning of datasets used in device evaluation"
+  },
+  {
+   "id": "FDA-2026-N-7874-0096",
+   "kind": "outside_framing",
+   "point": "Manage silent third party model updates through local model locking and automated drift detection"
+  },
+  {
+   "id": "FDA-2026-N-7874-0104",
+   "kind": "outside_framing",
+   "point": "Assess whether evaluation and monitoring layers provide truly independent evidence about device failure"
+  }
+ ],
+ "open_questions": [
+  {
+   "question": "Should patient-facing use raise a device's risk level?",
+   "sides": [
+    {
+     "label": "Yes",
+     "sel": "patient_facing_risk:support"
+    },
+    {
+     "label": "Yes, in some cases or with safeguards",
+     "sel": "patient_facing_risk:conditional"
+    },
+    {
+     "label": "No, risk depends on whether users can check the output",
+     "sel": "patient_facing_risk:oppose"
+    }
+   ]
+  },
+  {
+   "question": "What should a device's performance be compared against?",
+   "sides": [
+    {
+     "label": "A typical clinician in practice",
+     "sel": "median_clinician_comparator:support"
+    },
+    {
+     "label": "Specialists, for specialist tasks",
+     "sel": "median_clinician_comparator:conditional:specialists"
+    },
+    {
+     "label": "The standard of care, not a typical clinician",
+     "sel": "median_clinician_comparator:oppose"
+    },
+    {
+     "label": "What patients would get without the device",
+     "sel": "no_care_comparator:support"
+    }
+   ]
+  },
+  {
+   "question": "Can voluntary disclosure from model developers give FDA what it needs?",
+   "sides": [
+    {
+     "label": "Yes",
+     "sel": "voluntary_model_files:support"
+    },
+    {
+     "label": "Yes, if the device maker stays responsible for safety",
+     "sel": "voluntary_model_files:conditional:resp"
+    },
+    {
+     "label": "No, disclosure should be required or the evidence burden raised",
+     "sel": "voluntary_model_files:oppose"
+    }
+   ]
+  },
+  {
+   "question": "How far can postmarket monitoring stand in for premarket evidence?",
+   "sides": [
+    {
+     "label": "Only for lower-risk, reversible uses",
+     "sel": "postmarket_tradeoff:conditional:low"
+    },
+    {
+     "label": "Only if monitoring is shown to catch failures before harm",
+     "sel": "postmarket_tradeoff:conditional:detect"
+    },
+    {
+     "label": "It cannot replace premarket evidence",
+     "sel": "postmarket_tradeoff:oppose"
+    }
+   ]
+  },
+  {
+   "question": "Should directiveness be judged by an output's wording or by its effect?",
+   "sides": [
+    {
+     "label": "By degree, including wording, specificity, and context",
+     "sel": "directiveness_continuum:support"
+    },
+    {
+     "label": "By what the output claims or does, since wording is easy to change",
+     "sel": "directiveness_continuum:oppose"
+    }
+   ]
+  }
+ ]
+}

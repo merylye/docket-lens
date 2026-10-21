@@ -208,10 +208,6 @@
     "label": "Fail safe when the supervisor fails or is unsure"
    },
    {
-    "key": "change_control",
-    "label": "Revalidate the supervisor after every change"
-   },
-   {
     "key": "responsibility",
     "label": "Keep the deploying company responsible for safety"
    },
@@ -320,10 +316,6 @@
    {
     "key": "rollback",
     "label": "Prespecify rollback and suspension for bad changes"
-   },
-   {
-    "key": "invariant",
-    "label": "Define safety properties that must never change"
    },
    {
     "key": "other",
@@ -614,10 +606,10 @@
     "other"
    ],
    "supervisory_agents": [
-    "change_control",
     "define_role",
     "fail_safe",
-    "independent"
+    "independent",
+    "other"
    ],
    "postmarket_tradeoff": [
     "low"
@@ -766,9 +758,9 @@
     "least_privilege"
    ],
    "supervisory_agents": [
-    "change_control",
     "human_final",
     "independent",
+    "other",
     "validate_supervisor"
    ],
    "competency_eval": [
@@ -783,7 +775,7 @@
     "low"
    ],
    "flexible_change_control": [
-    "invariant",
+    "other",
     "rebench",
     "rollback"
    ],
@@ -1238,9 +1230,9 @@
     "least_privilege"
    ],
    "supervisory_agents": [
-    "change_control",
     "human_final",
     "independent",
+    "other",
     "validate_supervisor"
    ],
    "competency_eval": [
@@ -1253,7 +1245,7 @@
     "low"
    ],
    "flexible_change_control": [
-    "invariant",
+    "other",
     "rebench",
     "rollback"
    ],
@@ -1274,6 +1266,16 @@
    "no_care_comparator": [
     "local",
     "other"
+   ],
+   "confirmation_flex": [
+    "real_populations",
+    "scale_to_risk"
+   ],
+   "voluntary_model_files": [
+    "content",
+    "current",
+    "fallback",
+    "resp"
    ]
   },
   "FDA-2026-N-7874-0005": {
@@ -1762,7 +1764,7 @@
     "other"
    ],
    "flexible_change_control": [
-    "invariant"
+    "other"
    ],
    "voluntary_model_files": [
     "other",
@@ -2073,6 +2075,9 @@
     "after",
     "other",
     "separate"
+   ],
+   "flexible_change_control": [
+    "bounds"
    ]
   },
   "FDA-2026-N-7874-0055": {
@@ -2374,7 +2379,7 @@
    "plan"
   ],
   "supervisory_agents": [
-   "change_control",
+   "other",
    "validate_supervisor"
   ],
   "escalation_errors": [

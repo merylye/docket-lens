@@ -245,7 +245,7 @@
    "trajectory_risk": null,
    "escalation_errors": null,
    "competency_eval": "conditional",
-   "confirmation_flex": "support",
+   "confirmation_flex": null,
    "synthetic_data": null,
    "median_clinician_comparator": null,
    "no_care_comparator": null,
