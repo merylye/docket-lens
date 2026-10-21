@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-21T12:44:48.552052+00:00",
+ "updated": "2026-10-21T13:00:38.706755+00:00",
  "questions": [
   {
    "n": 1,
@@ -369,7 +369,8 @@
    "rebenchmark_on_change",
    "independent_eval",
    "error_reporting"
-  ]
+  ],
+  "conds": {}
  },
  "tips": {
   "q": {
@@ -732,6 +733,7 @@
    "desc": "Stricter acceptance criteria and oversight for devices that act autonomously across steps (Q26)"
   }
  ],
+ "conditions": {},
  "recs": [
   {
    "key": "risk_factors",

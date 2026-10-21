@@ -275,13 +275,20 @@ function sectionOf(n) { return META.questions.find(q => q.n === n).section; }
 function itemsFor(c, lens) {
   if (lens === "questions") return c.q_addr.map(String);
   if (lens === "sections") return [...new Set(c.q_addr.map(sectionOf))];
-  if (lens === "pos") return Object.entries(c.pos || {}).filter(([, v]) => v).map(([k, v]) => k + ":" + v);
+  if (lens === "pos") return posItems(c);
   if (lens === "recs") return c.recs || [];
   return c.topics;
 }
 const STANCE = { support: "support", conditional: "support with conditions", oppose: "oppose" };
+function posItems(c) {
+  const out = Object.entries(c.pos || {}).filter(([, v]) => v).map(([k, v]) => k + ":" + v);
+  for (const [k, gs] of Object.entries(c.conds || {})) for (const g of gs) out.push(k + ":conditional:" + g);
+  return out;
+}
+const condsOf = key => (META.conditions || {})[key] || [];
 function catalog(lens) {
-  if (lens === "pos") return META.proposals.flatMap(p => Object.keys(STANCE).map(s => ({ key: p.key + ":" + s, label: `${STANCE[s]} on ${p.label.toLowerCase()}`, phrase: `that ${({ support: "support", conditional: "support with conditions", oppose: "oppose" })[s]} “${p.label}”` })));
+  if (lens === "pos") return META.proposals.flatMap(p => [...Object.keys(STANCE).map(s => ({ key: p.key + ":" + s, label: `${STANCE[s]} on ${p.label.toLowerCase()}`, phrase: `that ${({ support: "support", conditional: "support with conditions", oppose: "oppose" })[s]} “${p.label}”` })),
+    ...condsOf(p.key).map(g => ({ key: p.key + ":conditional:" + g.key, label: g.label, phrase: `that support “${p.label}” on the condition “${g.label}”` }))]);
   if (lens === "recs") return META.recs.map(x => ({ key: x.key, label: x.label, phrase: `recommending “${x.label}”` }));
   if (lens === "questions") return META.questions.map(q => ({ key: String(q.n), label: "Q" + q.n, desc: q.label, group: q.section }));
   if (lens === "sections") return META.sections.map(s => ({ key: s.key, label: s.label, desc: "Section " + s.key }));
@@ -291,7 +298,7 @@ function ariaItems(lens) {
   const a = META.aria;
   if (lens === "questions") return a.q_addr.map(String);
   if (lens === "sections") return [...new Set(a.q_addr.map(sectionOf))];
-  if (lens === "pos") return Object.entries(a.pos || {}).filter(([, v]) => v).map(([k, v]) => k + ":" + v);
+  if (lens === "pos") return posItems(a);
   if (lens === "recs") return a.recs || [];
   return a.topics;
 }
@@ -378,11 +385,30 @@ function stackedBar(x, y, w, h, n, key, out, sel) {
   let xx = x;
   ["support", "conditional", "oppose"].forEach(s => {
     if (!n[s]) return;
-    const ww = n[s] / n.total * w, on = sel && sel.lens === "pos" && sel.key === key + ":" + s;
+    const ww = n[s] / n.total * w, on = sel && sel.lens === "pos" && (sel.key === key + ":" + s || sel.key.startsWith(key + ":" + s + ":"));
     out.push(`<rect class="seg" data-key="${key}:${s}" tabindex="0" role="button" x="${xx}" y="${y}" width="${Math.max(ww - 1, 1)}" height="${h}" fill="${SCOL[s]}" stroke="${on ? "#00dfe9" : "none"}" stroke-width="3" style="cursor:pointer"><title>${n[s]} of ${n.total} ${STANCE[s]}</title></rect>`);
     if (ww > 30) out.push(`<text x="${xx + ww / 2}" y="${y + h / 2 + 4}" font-size="12" text-anchor="middle" fill="${s === "conditional" ? "#111111" : "#ffffff"}" ${ff} style="pointer-events:none">${Math.round(n[s] / n.total * 100)}%</text>`);
     xx += ww;
   });
+}
+function condPanel(p, pool, x, bw, y0, out, aria) {
+  const gs = condsOf(p.key), cond = pool.filter(c => (c.pos || {})[p.key] === "conditional");
+  const rows = gs.map(g => ({ g, n: cond.filter(c => ((c.conds || {})[p.key] || []).includes(g.key)).length })).filter(r => r.n);
+  const ah = aria && META.aria.conds ? (META.aria.conds[p.key] || []) : [];
+  const lh = 22, top = y0 + 4, lblW = Math.round(bw * .62), barX = x + lblW + 8, barMax = Math.max(40, bw - lblW - 50), mx = Math.max(1, ...rows.map(r => r.n));
+  out.push(`<rect x="${x - 2}" y="${top}" width="3" height="${(rows.length + 1) * lh + (rows.length ? 22 : 0)}" fill="#00dfe9"></rect>`);
+  out.push(`<text x="${x + 10}" y="${top + 15}" font-size="12" fill="#555555" ${ff}>${rows.length ? `Conditions named by the ${cond.length} comments that support it with conditions` : "No conditions recorded for these comments"}</text>`);
+  const sel = state.sel && state.sel.key;
+  rows.forEach((r, j) => {
+    const yy = top + (j + 1) * lh, key = p.key + ":conditional:" + r.g.key, on = sel === key, star = ah.includes(r.g.key);
+    out.push(`<g class="cnd" data-key="${esc(key)}" tabindex="0" role="button" aria-label="${esc(r.g.label)}: ${r.n} comments" style="cursor:pointer">
+      <rect x="${x + 4}" y="${yy}" width="${bw - 4}" height="${lh - 2}" fill="${on ? "#e6fbfc" : "transparent"}"></rect>
+      <text x="${x + 10}" y="${yy + 15}" font-size="13" fill="#111111" ${on ? 'font-weight="700"' : ""} ${ff}>${esc(r.g.label)}${star ? '<tspan fill="#00848a" font-weight="700"> *</tspan>' : ""}</text>
+      <rect x="${barX}" y="${yy + 5}" width="${Math.max(2, r.n / mx * barMax)}" height="${lh - 12}" fill="${SCOL.conditional}"></rect>
+      <text x="${barX + r.n / mx * barMax + 6}" y="${yy + 15}" font-size="12" fill="#555555" ${ff}>${r.n}</text></g>`);
+  });
+  if (rows.length) out.push(`<text x="${x + 10}" y="${top + (rows.length + 1) * lh + 14}" font-size="11" fill="#555555" ${ff}>A comment can name more than one condition.${ah.length ? " * ARIA named this condition." : ""} Select a condition to view those comments</text>`);
+  return (rows.length + 1) * lh + (rows.length ? 30 : 8);
 }
 function labelW(props) {
   const c = labelW.c || (labelW.c = document.createElement("canvas").getContext("2d"));
@@ -395,8 +421,10 @@ function renderPos() {
   if (state.posView === "all") {
     const pool = filtered(), W = Math.max(560, cwid), lw = Math.min(Math.round(W * .46), labelW(props)), nw = 130, aw = 0, bw = W - lw - nw - 10, rh = 34;
     const maxT = Math.max(1, ...props.map(p => stanceCounts(pool, p.key).total));
+    const sk = state.sel && state.sel.lens === "pos" ? state.sel.key : "", openKey = sk.includes(":conditional") ? sk.split(":")[0] : null;
+    let yoff = 0;
     props.forEach((p, i) => {
-      const y = i * rh, n = stanceCounts(pool, p.key);
+      const y = i * rh + yoff, n = stanceCounts(pool, p.key);
       out.push(`<text x="0" y="${y + 21}" font-size="14" font-weight="500" fill="#111111" ${ff} data-tip="pos:${p.key}" data-icon="1">${esc(p.label)}</text>`);
       const len = n.total / maxT * bw;
       if (n.total) stackedBar(lw, y + 6, len, rh - 12, n, p.key, out, state.sel);
@@ -408,8 +436,9 @@ function renderPos() {
         const cx = lw + (start + n[v] / 2) / n.total * len, top = y - 3;
         out.push(`<g data-tip="aria:${p.key}" tabindex="0" role="button" aria-label="ARIA's position" style="cursor:help"><rect x="${cx - 9}" y="${top - 3}" width="18" height="13" fill="transparent"></rect><path d="M ${cx - 6} ${top} L ${cx + 6} ${top} L ${cx} ${top + 8} Z" fill="#00dfe9"></path></g>`);
       }
+      if (openKey === p.key) yoff += condPanel(p, pool, lw, bw, y + rh, out, aria);
     });
-    el.innerHTML = `<svg viewBox="0 -10 ${W} ${props.length * rh + 10}" width="100%">${out.join("")}</svg>`;
+    el.innerHTML = `<svg viewBox="0 -10 ${W} ${props.length * rh + yoff + 10}" width="100%">${out.join("")}</svg>`;
   } else {
     let cats = state.types.size ? [...state.types] : [...new Set(readable().map(c => c.commenter_type))].map(t => [t, readable().filter(c => c.commenter_type === t).length]).sort((a, b) => b[1] - a[1]).slice(0, 4).map(x => x[0]);
     const cols = [{ label: "All", pool: filtered() }, ...cats.map(t => ({ label: t, pool: readable().filter(c => c.commenter_type === t) }))];
@@ -431,10 +460,11 @@ function renderPos() {
     el.innerHTML = `<svg viewBox="0 0 ${W} ${hh + props.length * rh}" width="100%">${out.join("")}</svg>`;
   }
   el.querySelectorAll(".seg").forEach(s => bindPick(s, () => toggleSel(s.dataset.key, null, "pos")));
+  el.querySelectorAll(".cnd").forEach(s => bindPick(s, () => toggleSel(s.dataset.key, null, "pos")));
   addIcons(el);
   document.getElementById("ariaMark").hidden = !(aria && state.posView === "all");
   document.getElementById("posNote").innerHTML = state.posView === "all"
-    ? "Bar length indicates how many comments gave a view on each proposal. Percentages are calculated from only those comments.<br>Select a segment to view comments"
+    ? "Bar length indicates how many comments gave a view on each proposal. Percentages are calculated from only those comments.<br>Select a segment to view comments. Select a gray segment to also see the conditions commenters attached"
     : "Percentages are out of the comments in each column that gave a view on the proposal.";
 }
 

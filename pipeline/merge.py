@@ -83,6 +83,8 @@ PROPOSALS = [  # in docket question order
     ("agentic_oversight", "Stricter oversight for agentic devices", "Stricter acceptance criteria and oversight for devices that act autonomously across steps (Q26)"),
 ]
 
+CONDS = json.load(open(os.path.join(HERE, "conditions.json"))) if os.path.exists(os.path.join(HERE, "conditions.json")) else {"groups": {}, "map": {}, "aria": {}}
+
 out, unmapped = [], set()
 for cid, r in sorted(raw.items()):
     c = codes.get(cid)
@@ -113,6 +115,7 @@ for cid, r in sorted(raw.items()):
         "pos": {k: v for k, v in (codes2.get(cid, {}).get("positions") or {}).items() if v},
         "recs": RECS["map"].get(cid, []),
         "also_filed": sorted(d for d, k in DUPLICATES.items() if k == cid),
+        "conds": CONDS["map"].get(cid, {}),
     })
 
 aria["topics"] = sorted({t for t in map(topic_for, aria.get("tags", [])) if t})
@@ -124,9 +127,10 @@ meta = {
     "questions": [{"n": n, "section": s, "label": QUESTIONS[n]} for s, _, rng in SECTIONS for n in rng],
     "sections": [{"key": s, "label": label} for s, label, _ in SECTIONS],
     "topics": [{"key": name} for name, _ in TOPICS if name in used] + ([{"key": "Other"}] if "Other" in used else []),
-    "aria": aria,
+    "aria": {**aria, "conds": CONDS["aria"]},
     "tips": json.load(open(os.path.join(HERE, "tooltips.json"))),
     "proposals": [{"key": k, "label": l, "desc": d} for k, l, d in PROPOSALS],
+    "conditions": CONDS["groups"],
     "recs": RECS["groups"],
     "method": f"{len(out)} posted comments read in full, including attachments, and coded against the codebook. "
               "A question counts as addressed when a comment discusses it substantively, cited or not. "
