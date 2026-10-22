@@ -49,4 +49,4 @@ header { padding-bottom: 0; }
 .af ul.rs { margin: 0; padding-left: 18px; display: grid; gap: 6px; font-size: 14px; }
 .af .oth { display: grid; gap: 4px; }
 .af .cats { display: grid; gap: 4px; }
-.af .intro p { margin: 0; font-size: 17px; line-height: 1.5; max-width: 72ch; }
+.af .intro p { margin: 0; font-size: 17px; line-height: 1.5; max-width: none; }

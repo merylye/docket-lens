@@ -93,7 +93,7 @@
     const OQ = META.open_questions || [];
 
     document.getElementById("view-findings").innerHTML = `<div class="af">
-      <section class="intro"><p>This page provides an AI-assisted summary of the public comments on Docket FDA-2026-N-7874. Each comment counts once, so the numbers show how many comments took a view, not how many people hold it. ${pc(rows.filter(c => groupOf(c) === GROUPS[0][0]).length, rows.length)} of comments came from industry. The coding has not been checked by a person.</p></section>
+      <section class="intro"><p>This page provides an AI-assisted summary of the public comments on Docket FDA-2026-N-7874. This page is exploratory and is not legal or regulatory advice. Positions and summaries were coded with AI assistance and may contain errors. Read the original comments before relying on any finding.</p></section>
       <section><h2>Summary</h2><div class="card"><ul class="rs">${sum.map(x => `<li>${x}</li>`).join("")}</ul><p class="note">Generated from the data on this page, so it updates as comments are added.</p></div></section>
       <section><h2>Commenters</h2><div class="cards"><div class="card" style="grid-column:1/-1">
         <p style="margin:0">Of the ${rows.length} comments, ${gN.map(([g, n]) => `${n} came from ${esc(g).toLowerCase()}`).join("; ")}. Industry here means device makers, drug makers, other private companies, and international industry.</p>
