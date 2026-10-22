@@ -57,3 +57,16 @@ header { padding-bottom: 0; }
 .af details.methods[open] > summary::before { content: "▾"; }
 .af details.methods[open] > summary { margin-bottom: 14px; }
 .af details.methods > summary h2 { display: inline; }
+
+/* Larger type. Nothing below 14px in HTML. */
+body { font-size: 17px; }
+.eyebrow, .facts, .insight, .menu label, .field, table, footer, .card .meta, .card .sum, .af .row, .af .legend2, .af ul.rs { font-size: 15px; }
+h2 { font-size: 26px; }
+.lede { font-size: 20px; }
+.note, .af .note, .legend, .pill.small, .textbtn, .select, .facet, .af .sub, .bp .plist .qn, .tipbox .src, .tipbox .lab, .q, .tag, .inferred, .themes { font-size: 14px; }
+.label, th, .cmp, .insight strong, .facet > span:first-child { font-size: 14px; }
+.pill, .card .who, .bp .plist button { font-size: 16px; }
+.af .card h3 { font-size: 19px; }
+.bp .block h3 { font-size: 19px; }
+.af .row { grid-template-columns: minmax(0, 1fr) minmax(90px, 1.1fr) 56px; }
+.dd summary::after { font-size: 14px; }

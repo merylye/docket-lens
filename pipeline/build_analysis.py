@@ -29,7 +29,7 @@ s = swap(s, "</main>\n", '</main>\n</div>\n<div id="view-findings" class="view" 
                          '<div id="view-proposals" class="view" role="tabpanel" hidden></div>\n')
 s = swap(s, 'fetch("data/comments.json")', 'fetch("../data/comments.json")')
 s = swap(s, 'fetch("data/meta.json")', 'fetch("../data/meta.json")')
-s = swap(s, "D = c; META = m; init(); })", "D = c; META = m; init(); if (window.analysisInit) analysisInit(); })")
+s = swap(s, "D = c; META = m; init(); })", "D = c; META = m; document.fonts.ready.then(() => { init(); if (window.analysisInit) analysisInit(); }); })")
 s = swap(s, "</body>", '<script src="analysis.js"></script>\n</body>')
 
 # Theme coding matched only 39% in a blind check, so the analysis page leaves themes out.
@@ -41,6 +41,20 @@ s = swap(s, "[c.id, c.org, c.title, c.commenter_type, ...(c.topics || []), ...(c
 # The disclaimer sits in the Key findings intro, so the footer drops the coding line.
 s = swap(s, "  <p>Coding is approximate and was done with Claude Opus 5.5. Check a comment's original text before quoting or citing it.</p>\n", "")
 
+
+# Public Sans, with larger text. The smallest HTML text is 14px and the smallest chart text is 13px.
+import re
+s = swap(s, "family=Fira+Sans:wght@400;500;700", "family=Public+Sans:wght@400;500;700")
+s = swap(s, '--sans: "Fira Sans", Arial, sans-serif;', '--sans: "Public Sans", Arial, sans-serif;')
+s = swap(s, "c.font = \"500 14px 'Fira Sans', Arial, sans-serif\";", "c.font = \"500 16px 'Public Sans', Arial, sans-serif\";")
+s = s.replace("Fira Sans, Arial, sans-serif", "Public Sans, Arial, sans-serif")
+s = swap(s, 'font-size="${cw < 130 ? 11 : 12}"', 'font-size="${cw < 130 ? 13 : 14}"')
+s = re.sub(r'font-size="(\d+)"', lambda m: f'font-size="{max(13, int(m.group(1)) + 2)}"', s)
+
+s = swap(s, "many = cols.length > 8, lw = 230,", "many = cols.length > 8, lw = 280,")
+s = swap(s, "const W = 560, x0 = 220, barW = W - x0 - 40, rowH = 28,", "const W = 600, x0 = 255, barW = W - x0 - 40, rowH = 30,")
+
+s = swap(s, "lw = Math.min(Math.round(W * .46), labelW(props))", "lw = Math.min(Math.round(W * .55), labelW(props))")
 
 os.makedirs(os.path.join(ROOT, "analysis"), exist_ok=True)
 open(os.path.join(ROOT, "analysis", "index.html"), "w", encoding="utf-8").write(s)

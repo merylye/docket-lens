@@ -6,7 +6,7 @@
 <title>Docket Lens Analysis</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@400;500;700&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500;700&display=swap">
 <style>
 /* Layout: full-bleed cyan title band, condensed caps headings, square black controls on white, then the overview chart, the category grid, the category bar chart, and the comment table. Single light theme in ARIA's cyan and teal. */
 :root {
@@ -22,7 +22,7 @@
   --gold: #ffd996;
   --cond: "Fira Sans Condensed", "Arial Narrow", Arial, sans-serif;
   --serif: "Newsreader", Georgia, "Times New Roman", serif;
-  --sans: "Fira Sans", Arial, sans-serif;
+  --sans: "Public Sans", Arial, sans-serif;
   color-scheme: light;
 }
 * { box-sizing: border-box; }
@@ -339,7 +339,7 @@ function addIcons(root) {
     if (!b.width) return;
     const mw = +t.getAttribute("data-maxw") || Infinity, g = document.createElementNS("http://www.w3.org/2000/svg", "g"), cx = b.x + Math.min(b.width, mw) + 11, cy = b.y + b.height / 2 + 1;
     g.setAttribute("class", "infoi"); g.setAttribute("data-tip", t.getAttribute("data-tip")); g.setAttribute("tabindex", "0"); g.setAttribute("role", "button"); g.setAttribute("aria-label", "More information");
-    g.innerHTML = `<circle cx="${cx}" cy="${cy}" r="7" fill="#ffffff" stroke="#555555" stroke-width="1.2"></circle><text x="${cx}" y="${cy + 3.5}" font-size="10" font-weight="700" text-anchor="middle" fill="#555555" font-family="Fira Sans, Arial, sans-serif" style="pointer-events:none">i</text>`;
+    g.innerHTML = `<circle cx="${cx}" cy="${cy}" r="7" fill="#ffffff" stroke="#555555" stroke-width="1.2"></circle><text x="${cx}" y="${cy + 3.5}" font-size="13" font-weight="700" text-anchor="middle" fill="#555555" font-family="Public Sans, Arial, sans-serif" style="pointer-events:none">i</text>`;
     t.removeAttribute("data-tip");
     const host = t.parentNode.getAttribute("clip-path") ? t.parentNode : t;
     host.parentNode.insertBefore(g, host.nextSibling);
@@ -390,14 +390,14 @@ function stanceCounts(pool, key) {
   pool.forEach(c => { const v = (c.pos || {})[key]; if (v) n[v]++; });
   n.total = n.support + n.conditional + n.oppose; return n;
 }
-const ff = 'font-family="Fira Sans, Arial, sans-serif"';
+const ff = 'font-family="Public Sans, Arial, sans-serif"';
 function stackedBar(x, y, w, h, n, key, out, sel) {
   let xx = x;
   ["support", "conditional", "oppose"].forEach(s => {
     if (!n[s]) return;
     const ww = n[s] / n.total * w, on = sel && sel.lens === "pos" && (sel.key === key + ":" + s || sel.key.startsWith(key + ":" + s + ":"));
     out.push(`<rect class="seg" data-key="${key}:${s}" tabindex="0" role="button" x="${xx}" y="${y}" width="${Math.max(ww - 1, 1)}" height="${h}" fill="${SCOL[s]}" stroke="${on ? "#00dfe9" : "none"}" stroke-width="3" style="cursor:pointer"><title>${n[s]} of ${n.total} ${STANCE[s]}</title></rect>`);
-    if (ww > 30) out.push(`<text x="${xx + ww / 2}" y="${y + h / 2 + 4}" font-size="12" text-anchor="middle" fill="${s === "conditional" ? "#111111" : "#ffffff"}" ${ff} style="pointer-events:none">${Math.round(n[s] / n.total * 100)}%</text>`);
+    if (ww > 30) out.push(`<text x="${xx + ww / 2}" y="${y + h / 2 + 4}" font-size="14" text-anchor="middle" fill="${s === "conditional" ? "#111111" : "#ffffff"}" ${ff} style="pointer-events:none">${Math.round(n[s] / n.total * 100)}%</text>`);
     xx += ww;
   });
 }
@@ -407,42 +407,42 @@ function condPanel(p, pool, lw, bw, y0, out, aria) {
   const ah = aria && META.aria.conds ? (META.aria.conds[p.key] || []) : [];
   const lh = 22, top = y0 + 4, x = 12, barMax = Math.max(60, bw * .55), mx = Math.max(1, ...rows.map(r => r.n)), h = (rows.length + 1) * lh + (rows.length ? 52 : 8);
   out.push(`<rect x="0" y="${top}" width="3" height="${h - 8}" fill="#00dfe9"></rect>`);
-  out.push(`<text x="${x}" y="${top + 15}" font-size="12" fill="#555555" ${ff}>${rows.length ? `Conditions named by the ${cond.length} comments that support it with conditions` : "No conditions recorded for these comments"}</text>`);
+  out.push(`<text x="${x}" y="${top + 15}" font-size="14" fill="#555555" ${ff}>${rows.length ? `Conditions named by the ${cond.length} comments that support it with conditions` : "No conditions recorded for these comments"}</text>`);
   const sel = state.sel && state.sel.key;
   rows.forEach((r, j) => {
     const yy = top + (j + 1) * lh, key = p.key + ":conditional:" + r.g.key, on = sel === key, star = ah.includes(r.g.key);
     out.push(`<g class="cnd" data-key="${esc(key)}" tabindex="0" role="button" aria-label="${esc(r.g.label)}: ${r.n} comments" style="cursor:pointer">
       <rect x="6" y="${yy}" width="${lw + bw - 6}" height="${lh - 2}" fill="${on ? "#e6fbfc" : "transparent"}"></rect>
-      <text x="${x}" y="${yy + 15}" font-size="13" fill="#111111" ${on ? 'font-weight="700"' : ""} ${ff}>${esc(r.g.label)}${star ? '<tspan fill="#00848a" font-weight="700"> *</tspan>' : ""}</text>
+      <text x="${x}" y="${yy + 15}" font-size="15" fill="#111111" ${on ? 'font-weight="700"' : ""} ${ff}>${esc(r.g.label)}${star ? '<tspan fill="#00848a" font-weight="700"> *</tspan>' : ""}</text>
       <rect x="${lw}" y="${yy + 5}" width="${Math.max(2, r.n / mx * barMax)}" height="${lh - 12}" fill="${SCOL.conditional}"></rect>
-      <text x="${lw + r.n / mx * barMax + 6}" y="${yy + 15}" font-size="12" fill="#555555" ${ff}>${r.n}</text></g>`);
+      <text x="${lw + r.n / mx * barMax + 6}" y="${yy + 15}" font-size="14" fill="#555555" ${ff}>${r.n}</text></g>`);
   });
   if (rows.length) {
     const fy = top + (rows.length + 1) * lh + 12;
-    out.push(`<text x="${x}" y="${fy}" font-size="11" fill="#555555" ${ff}>A comment can name more than one condition.${ah.length ? " * ARIA named this condition." : ""}</text>`);
-    out.push(`<text x="${x}" y="${fy + 15}" font-size="11" fill="#555555" ${ff}>Select a condition to view those comments. Select the gray segment again to close.</text>`);
+    out.push(`<text x="${x}" y="${fy}" font-size="13" fill="#555555" ${ff}>A comment can name more than one condition.${ah.length ? " * ARIA named this condition." : ""}</text>`);
+    out.push(`<text x="${x}" y="${fy + 15}" font-size="13" fill="#555555" ${ff}>Select a condition to view those comments. Select the gray segment again to close.</text>`);
   }
   return h;
 }
 function labelW(props) {
   const c = labelW.c || (labelW.c = document.createElement("canvas").getContext("2d"));
-  c.font = "500 14px 'Fira Sans', Arial, sans-serif";
+  c.font = "500 16px 'Public Sans', Arial, sans-serif";
   return Math.ceil(Math.max(...props.map(p => c.measureText(p.label).width))) + 44;
 }
 function renderPos() {
   const el = document.getElementById("pos"), out = [], props = META.proposals;
   const cwid = el.clientWidth || 900, aria = state.pinned.includes("ARIA") ? META.aria.pos || {} : null;
   if (state.posView === "all") {
-    const pool = filtered(), W = Math.max(560, cwid), lw = Math.min(Math.round(W * .46), labelW(props)), nw = 130, aw = 0, bw = W - lw - nw - 10, rh = 34;
+    const pool = filtered(), W = Math.max(560, cwid), lw = Math.min(Math.round(W * .55), labelW(props)), nw = 130, aw = 0, bw = W - lw - nw - 10, rh = 34;
     const maxT = Math.max(1, ...props.map(p => stanceCounts(pool, p.key).total));
     const sk = state.sel && state.sel.lens === "pos" ? state.sel.key : "", openKey = sk.includes(":conditional") ? sk.split(":")[0] : null;
     let yoff = 0;
     props.forEach((p, i) => {
       const y = i * rh + yoff, n = stanceCounts(pool, p.key);
-      out.push(`<text x="0" y="${y + 21}" font-size="14" font-weight="500" fill="#111111" ${ff} data-tip="pos:${p.key}" data-icon="1">${esc(p.label)}</text>`);
+      out.push(`<text x="0" y="${y + 21}" font-size="16" font-weight="500" fill="#111111" ${ff} data-tip="pos:${p.key}" data-icon="1">${esc(p.label)}</text>`);
       const len = n.total / maxT * bw;
       if (n.total) stackedBar(lw, y + 6, len, rh - 12, n, p.key, out, state.sel);
-      out.push(`<text x="${lw + len + 8}" y="${y + 21}" font-size="12" fill="#555555" ${ff}>${n.total} of ${pool.length} comments</text>`);
+      out.push(`<text x="${lw + len + 8}" y="${y + 21}" font-size="14" fill="#555555" ${ff}>${n.total} of ${pool.length} comments</text>`);
       const v = aria ? aria[p.key] : null;
       if (v && n.total) {
         const order = ["support", "conditional", "oppose"], k = order.indexOf(v);
@@ -458,17 +458,17 @@ function renderPos() {
     const cols = [{ label: "All", pool: filtered() }, ...cats.map(t => ({ label: t, pool: readable().filter(c => c.commenter_type === t) }))];
     if (aria) cols.push({ label: "ARIA", aria: true });
     const W = Math.max(700, cwid), lw = Math.max(290, labelW(props)), cw = (W - lw) / cols.length, rh = 40, hh = 34;
-    cols.forEach((c, j) => out.push(`<text x="${lw + j * cw + 4}" y="14" font-size="${cw < 130 ? 11 : 12}" font-weight="700" fill="#111111" ${ff}>${esc(({ "Health professional": "Health prof.", "Private industry (non-device)": "Private industry", "Health care association": "Health care assns.", "International industry": "Intl. industry" })[c.label] || c.label)}</text>${c.pool ? `<text x="${lw + j * cw + 4}" y="28" font-size="11" fill="#555555" ${ff}>${c.pool.length} comments</text>` : ""}`));
+    cols.forEach((c, j) => out.push(`<text x="${lw + j * cw + 4}" y="14" font-size="${cw < 130 ? 13 : 14}" font-weight="700" fill="#111111" ${ff}>${esc(({ "Health professional": "Health prof.", "Private industry (non-device)": "Private industry", "Health care association": "Health care assns.", "International industry": "Intl. industry" })[c.label] || c.label)}</text>${c.pool ? `<text x="${lw + j * cw + 4}" y="28" font-size="13" fill="#555555" ${ff}>${c.pool.length} comments</text>` : ""}`));
     props.forEach((p, i) => {
       const y = hh + i * rh;
-      out.push(`<text x="0" y="${y + 22}" font-size="13" font-weight="500" fill="#111111" ${ff} data-tip="pos:${p.key}" data-icon="1">${esc(p.label)}</text>`);
+      out.push(`<text x="0" y="${y + 22}" font-size="15" font-weight="500" fill="#111111" ${ff} data-tip="pos:${p.key}" data-icon="1">${esc(p.label)}</text>`);
       cols.forEach((c, j) => {
         const x = lw + j * cw + 4, w = cw - 12;
-        if (c.aria) { const v = aria[p.key]; out.push(v ? `<rect x="${x}" y="${y + 8}" width="${w}" height="${rh - 16}" fill="${SCOL[v]}" data-tip="aria:${p.key}" tabindex="0"></rect>` : `<text x="${x}" y="${y + 22}" font-size="11" fill="#555555" ${ff}>No position</text>`); return; }
+        if (c.aria) { const v = aria[p.key]; out.push(v ? `<rect x="${x}" y="${y + 8}" width="${w}" height="${rh - 16}" fill="${SCOL[v]}" data-tip="aria:${p.key}" tabindex="0"></rect>` : `<text x="${x}" y="${y + 22}" font-size="13" fill="#555555" ${ff}>No position</text>`); return; }
         const n = stanceCounts(c.pool, p.key);
-        if (!n.total) { out.push(`<text x="${x}" y="${y + 22}" font-size="11" fill="#555555" ${ff}>None</text>`); return; }
+        if (!n.total) { out.push(`<text x="${x}" y="${y + 22}" font-size="13" fill="#555555" ${ff}>None</text>`); return; }
         stackedBar(x, y + 8, w, rh - 22, n, p.key, out, null);
-        out.push(`<text x="${x}" y="${y + rh - 2}" font-size="10" fill="#555555" ${ff}>${n.total} of ${c.pool.length}</text>`);
+        out.push(`<text x="${x}" y="${y + rh - 2}" font-size="13" fill="#555555" ${ff}>${n.total} of ${c.pool.length}</text>`);
       });
     });
     el.innerHTML = `<svg viewBox="0 0 ${W} ${hh + props.length * rh}" width="100%">${out.join("")}</svg>`;
@@ -494,10 +494,10 @@ function renderRecs() {
     const y = i * rh, on = state.sel && state.sel.lens === "recs" && state.sel.key === r.key;
     out.push(`<g class="row${on ? " on" : ""}" data-key="${esc(r.key)}" tabindex="0" role="button" aria-label="${esc(r.label)}: ${r.n} comments">
       <rect class="hit" x="0" y="${y}" width="${W}" height="${rh}" fill="transparent"></rect>
-      <text x="0" y="${y + 16}" font-size="14" font-weight="500" fill="#111111" ${ff} data-tip="rec:${esc(r.key)}" data-icon="1">${esc(r.label)}${aria && aria.has(r.key) ? '<tspan font-weight="700" fill="#00848a"> *</tspan>' : ""}</text>`);
+      <text x="0" y="${y + 16}" font-size="16" font-weight="500" fill="#111111" ${ff} data-tip="rec:${esc(r.key)}" data-icon="1">${esc(r.label)}${aria && aria.has(r.key) ? '<tspan font-weight="700" fill="#00848a"> *</tspan>' : ""}</text>`);
     let x = lw;
     [...r.by, r.other].forEach((v, j) => { if (!v) return; const ww = v / max * bw; out.push(`<rect x="${x}" y="${y + 23}" width="${ww}" height="14" fill="${j < 4 ? DOT[j] : "#e6e6e6"}" stroke="${on ? "#00dfe9" : "none"}" stroke-width="2"><title>${j < 4 ? cats[j] : "Other categories"}: ${v}</title></rect>`); x += ww; });
-    out.push(`<text x="${x + 8}" y="${y + 35}" font-size="13" fill="#111111" ${ff} style="font-variant-numeric:tabular-nums">${r.n}</text></g>`);
+    out.push(`<text x="${x + 8}" y="${y + 35}" font-size="15" fill="#111111" ${ff} style="font-variant-numeric:tabular-nums">${r.n}</text></g>`);
   });
   el.innerHTML = rows.length ? `<svg viewBox="0 0 ${W} ${rows.length * rh}" width="100%">${out.join("")}</svg>` : `<p class="empty">No recommendations in this selection.</p>`;
   el.querySelectorAll(".row").forEach(g => bindPick(g, () => toggleSel(g.dataset.key, null, "recs")));
@@ -526,16 +526,16 @@ function renderMain() {
     if (r.group && r.group !== last) {
       if (last !== null) y += 10;
       const sec = META.sections.find(s => s.key === r.group);
-      out.push(`<text x="0" y="${y + 18}" font-size="12" font-weight="700" letter-spacing="1" fill="#00848a" font-family="Fira Sans, Arial, sans-serif">${esc(sec.label.toUpperCase())}</text>`);
+      out.push(`<text x="0" y="${y + 18}" font-size="14" font-weight="700" letter-spacing="1" fill="#00848a" font-family="Public Sans, Arial, sans-serif">${esc(sec.label.toUpperCase())}</text>`);
       y += 28; last = r.group;
     }
     const bw = r.share ? Math.max(2, r.share / max * barW) : 0, on = state.sel && state.sel.lens === state.lens && state.sel.key === r.key;
     out.push(`<g class="row${on ? " on" : ""}" data-key="${esc(r.key)}" tabindex="0" role="button" aria-label="${esc(r.label)}: ${pct(r.share)} of comments">
       <rect class="hit" x="0" y="${y}" width="${W}" height="${rowH}" fill="transparent"></rect>
-      <text x="0" y="${y + 20}" font-size="15" font-weight="${state.lens === "questions" ? 700 : 500}" fill="#111111" font-family="Fira Sans, Arial, sans-serif" ${descW ? "" : `data-tip="${state.lens === "questions" ? "q:" + r.key : state.lens === "sections" ? "sec:" + r.key : "theme:" + esc(r.key)}" data-icon="1"`}>${esc(r.label)}</text>
-      ${descW ? `<clipPath id="qclip${r.key}"><rect x="${labelW}" y="${y}" width="${descW - 26}" height="${rowH}"></rect></clipPath><g clip-path="url(#qclip${r.key})"><text class="qscroll" x="${labelW}" y="${y + 20}" font-size="14" fill="#555555" font-family="Fira Sans, Arial, sans-serif" data-tip="q:${r.key}" data-icon="1" data-maxw="${descW - 26}">${esc(r.desc)}</text></g>` : ""}
+      <text x="0" y="${y + 20}" font-size="17" font-weight="${state.lens === "questions" ? 700 : 500}" fill="#111111" font-family="Public Sans, Arial, sans-serif" ${descW ? "" : `data-tip="${state.lens === "questions" ? "q:" + r.key : state.lens === "sections" ? "sec:" + r.key : "theme:" + esc(r.key)}" data-icon="1"`}>${esc(r.label)}</text>
+      ${descW ? `<clipPath id="qclip${r.key}"><rect x="${labelW}" y="${y}" width="${descW - 26}" height="${rowH}"></rect></clipPath><g clip-path="url(#qclip${r.key})"><text class="qscroll" x="${labelW}" y="${y + 20}" font-size="16" fill="#555555" font-family="Public Sans, Arial, sans-serif" data-tip="q:${r.key}" data-icon="1" data-maxw="${descW - 26}">${esc(r.desc)}</text></g>` : ""}
       <rect class="bar" x="${x0}" y="${y + 7}" width="${bw}" height="${rowH - 14}" fill="#00848a" stroke="${on ? "#00dfe9" : "none"}" stroke-width="3"></rect>
-      <text x="${x0 + bw + 8}" y="${y + 20}" font-size="14" fill="#111111" font-family="Fira Sans, Arial, sans-serif" style="font-variant-numeric:tabular-nums">${pct(r.share)}</text>
+      <text x="${x0 + bw + 8}" y="${y + 20}" font-size="16" fill="#111111" font-family="Public Sans, Arial, sans-serif" style="font-variant-numeric:tabular-nums">${pct(r.share)}</text>
     </g>`);
     y += rowH;
   });
@@ -567,25 +567,25 @@ function renderGrid() {
     if (id === "ARIA") { const s = new Set(ariaItems(L)); rows.push({ kind: "pin", key: "ARIA", label: "ARIA", val: k => s.has(k) ? 1 : 0 }); return; }
     const c = BYID[id]; if (c) { const s = new Set(itemsFor(c, L)); rows.push({ kind: "pin", key: id, label: `${short(id)} · ${nameOf(c)}`, val: k => c.unreadable ? null : (s.has(k) ? 1 : 0) }); } });
 
-  const avail = Math.max(600, document.getElementById("grid").clientWidth || 900), many = cols.length > 8, lw = 230, cw = many ? Math.max(22, Math.floor((avail - lw - 12) / cols.length)) : Math.max(70, Math.min(140, (avail - lw - 12) / cols.length)), rh = 30, headH = many ? 46 : 36;
+  const avail = Math.max(600, document.getElementById("grid").clientWidth || 900), many = cols.length > 8, lw = 280, cw = many ? Math.max(22, Math.floor((avail - lw - 12) / cols.length)) : Math.max(70, Math.min(140, (avail - lw - 12) / cols.length)), rh = 30, headH = many ? 46 : 36;
   const W = lw + cols.length * cw + 12;
   const out = [];
   if (L === "questions") {
-    META.sections.forEach(s => { const first = cols.findIndex(c => c.group === s.key); if (first >= 0) out.push(`<text x="${lw + first * cw}" y="14" font-size="12" font-weight="700" letter-spacing="1" fill="#00848a" font-family="Fira Sans, Arial, sans-serif">${esc(s.label.split(" ").slice(-1)[0].toUpperCase())}</text>`); });
+    META.sections.forEach(s => { const first = cols.findIndex(c => c.group === s.key); if (first >= 0) out.push(`<text x="${lw + first * cw}" y="14" font-size="14" font-weight="700" letter-spacing="1" fill="#00848a" font-family="Public Sans, Arial, sans-serif">${esc(s.label.split(" ").slice(-1)[0].toUpperCase())}</text>`); });
   }
   cols.forEach((c, i) => {
     const x = lw + i * cw + cw / 2;
     out.push(many
-      ? `<text x="${x}" y="${headH - 8}" font-size="13" font-weight="700" text-anchor="middle" fill="#111111" font-family="Fira Sans, Arial, sans-serif" data-tip="${L === "questions" ? "q:" : "theme:"}${esc(c.key)}" tabindex="0">${esc(L === "questions" ? c.key : c.key)}</text>`
-      : `<text x="${x}" y="${headH - 10}" font-size="14" font-weight="700" text-anchor="middle" fill="#111111" font-family="Fira Sans, Arial, sans-serif" data-tip="sec:${c.key}" tabindex="0">${esc({ IV: "Risk", V: "Premarket", VI: "Postmarket", VII: "Other" }[c.key] || c.label)}</text>`);
+      ? `<text x="${x}" y="${headH - 8}" font-size="15" font-weight="700" text-anchor="middle" fill="#111111" font-family="Public Sans, Arial, sans-serif" data-tip="${L === "questions" ? "q:" : "theme:"}${esc(c.key)}" tabindex="0">${esc(L === "questions" ? c.key : c.key)}</text>`
+      : `<text x="${x}" y="${headH - 10}" font-size="16" font-weight="700" text-anchor="middle" fill="#111111" font-family="Public Sans, Arial, sans-serif" data-tip="sec:${c.key}" tabindex="0">${esc({ IV: "Risk", V: "Premarket", VI: "Postmarket", VII: "Other" }[c.key] || c.label)}</text>`);
   });
   let y = headH, prevKind = null;
   rows.forEach(r => {
     if (r.kind === "all" || (r.kind === "pin" && prevKind !== "pin")) y += 8;
     prevKind = r.kind;
     const bold = r.kind !== "cat" && r.kind !== "pin";
-    out.push(`<text x="0" y="${y + 20}" font-size="14" font-weight="${bold ? 700 : 400}" fill="#111111" font-family="Fira Sans, Arial, sans-serif">${esc(r.label.length > 30 ? r.label.slice(0, 28) + "…" : r.label)}${r.n ? ` <tspan fill="#555555" font-weight="400">(${r.n})</tspan>` : ""}</text>`);
-    if (r.kind === "pin") out.push(`<g class="unpin" data-id="${esc(r.key)}" tabindex="0" role="button" aria-label="Remove row" style="cursor:pointer"><circle cx="${lw - 14}" cy="${y + 15}" r="9" fill="#f2f2f2"></circle><text x="${lw - 14}" y="${y + 19.5}" font-size="13" text-anchor="middle" fill="#555555">×</text></g>`);
+    out.push(`<text x="0" y="${y + 20}" font-size="16" font-weight="${bold ? 700 : 400}" fill="#111111" font-family="Public Sans, Arial, sans-serif">${esc(r.label.length > 30 ? r.label.slice(0, 28) + "…" : r.label)}${r.n ? ` <tspan fill="#555555" font-weight="400">(${r.n})</tspan>` : ""}</text>`);
+    if (r.kind === "pin") out.push(`<g class="unpin" data-id="${esc(r.key)}" tabindex="0" role="button" aria-label="Remove row" style="cursor:pointer"><circle cx="${lw - 14}" cy="${y + 15}" r="9" fill="#f2f2f2"></circle><text x="${lw - 14}" y="${y + 19.5}" font-size="15" text-anchor="middle" fill="#555555">×</text></g>`);
     cols.forEach((c, i) => {
       const v = r.val(c.key), on = state.sel && state.sel.lens === L && state.sel.key === c.key && (state.types.size === 1 ? (r.kind === "cat" && state.types.has(r.key)) : r.kind === "all");
       const tip = v === null ? `${r.label}: unreadable` : `${r.label}, ${c.label}: ${r.kind === "aria" || r.kind === "pin" ? (v ? "addressed" : "not addressed") : pct(v)}`;
@@ -623,16 +623,16 @@ function renderAddMenu() {
 function renderTypes() {
   const counts = {}; D.forEach(c => { const t = c.commenter_type || "Other"; counts[t] = counts[t] || { n: 0, inf: 0 }; counts[t].n++; if (c.type_inferred) counts[t].inf++; });
   const rows = Object.entries(counts).sort((a, b) => b[1].n - a[1].n);
-  const W = 560, x0 = 220, barW = W - x0 - 40, rowH = 28, max = Math.max(...rows.map(r => r[1].n));
+  const W = 600, x0 = 255, barW = W - x0 - 40, rowH = 30, max = Math.max(...rows.map(r => r[1].n));
   let y = 0; const out = rows.map(([t, v]) => {
     const full = v.n / max * barW, inf = v.inf / max * barW, on = state.types.has(t);
     const g = `<g class="row${on ? " on" : ""}" data-type="${esc(t)}" tabindex="0" role="button" aria-label="${esc(t)}: ${v.n} comments">
       <rect class="hit" x="0" y="${y}" width="${W}" height="${rowH}" fill="transparent"></rect>
-      <text x="0" y="${y + 19}" font-size="14" font-weight="${on ? 700 : 400}" fill="#111111" font-family="Fira Sans, Arial, sans-serif">${esc(t)}</text>
+      <text x="0" y="${y + 19}" font-size="16" font-weight="${on ? 700 : 400}" fill="#111111" font-family="Public Sans, Arial, sans-serif">${esc(t)}</text>
       <g opacity="${state.types.size && !on ? .3 : 1}">
       <rect x="${x0}" y="${y + 7}" width="${full - inf}" height="${rowH - 14}" fill="${on ? "#00848a" : "#111111"}"></rect>
       <rect x="${x0 + full - inf}" y="${y + 7}" width="${inf}" height="${rowH - 14}" fill="${on ? "#7fb9bc" : "#bbbbbb"}"></rect></g>
-      <text x="${x0 + full + 8}" y="${y + 19}" font-size="14" fill="#111111" font-family="Fira Sans, Arial, sans-serif" style="font-variant-numeric:tabular-nums">${v.n}</text></g>`;
+      <text x="${x0 + full + 8}" y="${y + 19}" font-size="16" fill="#111111" font-family="Public Sans, Arial, sans-serif" style="font-variant-numeric:tabular-nums">${v.n}</text></g>`;
     y += rowH; return g;
   });
   const el = document.getElementById("types-chart");
@@ -769,7 +769,7 @@ function fitTitle() {
 }
 
 Promise.all([fetch("../data/comments.json").then(r => r.json()), fetch("../data/meta.json").then(r => r.json())])
-  .then(([c, m]) => { D = c; META = m; init(); if (window.analysisInit) analysisInit(); })
+  .then(([c, m]) => { D = c; META = m; document.fonts.ready.then(() => { init(); if (window.analysisInit) analysisInit(); }); })
   .catch(() => { document.getElementById("facts").textContent = "Could not load the comment data. If you opened this file directly, serve the folder over HTTP instead."; });
 </script>
 <div class="tipbox" id="tipbox" role="tooltip" hidden></div>
