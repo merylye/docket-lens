@@ -502,7 +502,7 @@ function renderRecs() {
   el.innerHTML = rows.length ? `<svg viewBox="0 0 ${W} ${rows.length * rh}" width="100%">${out.join("")}</svg>` : `<p class="empty">No recommendations in this selection.</p>`;
   el.querySelectorAll(".row").forEach(g => bindPick(g, () => toggleSel(g.dataset.key, null, "recs")));
   addIcons(el);
-  document.getElementById("recLegend").innerHTML = cats.map((t, j) => `<span><i class="sw" style="background:${DOT[j]}"></i>${esc(t)}</span>`).join("") + `<span><i class="sw" style="background:#e6e6e6"></i>Other categories</span><span style="flex-basis:100%;display:block">Number of comments making each recommendation. Counts are approximate. Select a row to view comments${aria ? '<br><b style="color:#00848a">*</b> indicates ARIA made this recommendation. No asterisk does not mean ARIA opposed it.' : ""}</span>`;
+  document.getElementById("recLegend").innerHTML = cats.map((t, j) => `<span><i class="sw" style="background:${DOT[j]}"></i>${esc(t)}</span>`).join("") + `<span><i class="sw" style="background:#e6e6e6"></i>Other categories</span><span style="flex-basis:100%;display:block">Number of comments making each recommendation. Select a row to view comments${aria ? '<br><b style="color:#00848a">*</b> indicates ARIA made this recommendation. No asterisk does not mean ARIA opposed it.' : ""}</span>`;
   const more = document.getElementById("recMore"); more.hidden = total <= 15; more.textContent = state.recAll ? "Show top 15" : `Show all ${total} recommendations`;
 }
 

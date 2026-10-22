@@ -41,8 +41,6 @@ s = swap(s, "[c.id, c.org, c.title, c.commenter_type, ...(c.topics || []), ...(c
 # The disclaimer sits in the Key findings intro, so the footer drops the coding line.
 s = swap(s, "  <p>Coding is approximate and was done with Claude Opus 5.5. Check a comment's original text before quoting or citing it.</p>\n", "")
 
-# Recommendation grouping only partly fit its labels in 24% of a checked sample.
-s = swap(s, "Number of comments making each recommendation. Select a row to view comments", "Number of comments making each recommendation. Counts are approximate. Select a row to view comments")
 
 os.makedirs(os.path.join(ROOT, "analysis"), exist_ok=True)
 open(os.path.join(ROOT, "analysis", "index.html"), "w", encoding="utf-8").write(s)

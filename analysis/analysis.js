@@ -94,11 +94,11 @@
 
     document.getElementById("view-findings").innerHTML = `<div class="af">
       <section class="intro"><p>This page provides an AI-assisted summary of the public comments on Docket FDA-2026-N-7874. This page is exploratory and is not legal or regulatory advice. Positions and summaries were coded with AI assistance and may contain errors. Read the original comments before relying on any finding.</p></section>
-      <section><h2>Summary</h2><div class="card"><ul class="rs">${sum.map(x => `<li>${x}</li>`).join("")}</ul><p class="note">Generated from the data on this page, so it updates as comments are added.</p></div></section>
+      <section><h2>Summary</h2><div class="card"><ul class="rs">${sum.map(x => `<li>${x}</li>`).join("")}</ul></div></section>
       <section><h2>Commenters</h2><div class="cards"><div class="card" style="grid-column:1/-1">
         <p style="margin:0">Of the ${rows.length} comments, ${gN.map(([g, n]) => `${n} came from ${esc(g).toLowerCase()}`).join("; ")}. Industry here means device makers, drug makers, other private companies, and international industry.</p>
         <div class="cats">${catRows.map(([t, n]) => `<div class="row"><span class="lab">${esc(t)}</span>${lbar(n, rows.length)}<span class="num">${n}</span></div>`).join("")}</div>
-        <p class="note">Categories are as filed on Regulations.gov. Some comments are filed under a category that does not match their content, so these shares are approximate.</p><p class="note">Every count on this page treats each comment as one, whatever its length or who filed it. A view shared by many industry comments can look like consensus, so consensus rows also show industry and everyone else separately.</p>
+        
       </div></div></section>
       <section><h2>Points of consensus</h2>${legend}${defn}<div class="cards">
         <div class="card"><h3>Largely endorsed as written in the docket</h3>${endorsed.map(x => crow(x, "support")).join("") || '<p class="note">None at this threshold.</p>'}
