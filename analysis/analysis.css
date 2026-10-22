@@ -70,3 +70,11 @@ h2 { font-size: 26px; }
 .bp .block h3 { font-size: 19px; }
 .af .row { grid-template-columns: minmax(0, 1fr) minmax(90px, 1.1fr) 56px; }
 .dd summary::after { font-size: 14px; }
+
+/* Phones see a notice instead of the site. */
+.mobile-only { display: none; }
+@media (max-width: 700px) {
+  body > *:not(.mobile-only) { display: none !important; }
+  .mobile-only { display: flex; position: fixed; inset: 0; z-index: 1000; align-items: center; justify-content: center; padding: 24px; text-align: center; background: var(--cyan); }
+  .mobile-only p { margin: 0; font-size: 22px; font-weight: 700; line-height: 1.35; max-width: 18ch; }
+}

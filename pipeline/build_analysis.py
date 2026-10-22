@@ -56,6 +56,9 @@ s = swap(s, "const W = 560, x0 = 220, barW = W - x0 - 40, rowH = 28,", "const W 
 
 s = swap(s, "lw = Math.min(Math.round(W * .46), labelW(props))", "lw = Math.min(Math.round(W * .55), labelW(props))")
 
+# Phones get a notice in place of the site.
+s = swap(s, "<body>\n", '<body>\n<div class="mobile-only"><p>Please view this website on a computer.</p></div>\n')
+
 os.makedirs(os.path.join(ROOT, "analysis"), exist_ok=True)
 open(os.path.join(ROOT, "analysis", "index.html"), "w", encoding="utf-8").write(s)
 print("wrote analysis/index.html")
