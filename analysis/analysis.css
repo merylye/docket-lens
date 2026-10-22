@@ -78,3 +78,17 @@ h2 { font-size: 26px; }
   .mobile-only { display: flex; position: fixed; inset: 0; z-index: 1000; align-items: center; justify-content: center; padding: 24px; text-align: center; background: var(--cyan); }
   .mobile-only p { margin: 0; font-size: 22px; font-weight: 700; line-height: 1.35; max-width: 18ch; }
 }
+
+/* Layout: shared label column per box, stacked cards, readable line length, darker helper text. */
+.af .row { grid-template-columns: var(--lw, minmax(0, 1fr)) minmax(0, 1fr) 84px; gap: 16px; }
+.af .measuring > .row { grid-template-columns: max-content minmax(0, 1fr) 84px; }
+.af .measuring > .row > .lab { white-space: nowrap; }
+.af .cards.stack { grid-template-columns: minmax(0, 1fr); }
+.af .card ul.rs:not(.sumlist) li { max-width: 100ch; }
+.af .note, .note, .af .sub, .legend, .tag, .inferred, .bp .plist .qn { color: #3d3d3d; }
+.af .row { grid-template-columns: minmax(0, var(--lw, 40%)) minmax(120px, 480px) 84px; justify-content: start; }
+.af .measuring > .row { grid-template-columns: max-content minmax(0, 480px) 84px; }
+.af .duo > .row { grid-template-columns: minmax(0, var(--lw)) minmax(0, var(--lw2)) minmax(120px, 360px) 84px; }
+.af .measuring.duo > .row, .af .measuring > .row:has(.lab2) { grid-template-columns: max-content max-content minmax(0, 360px) 84px; }
+.af .measuring > .row > .lab2 { white-space: nowrap; }
+.af .row .num { text-align: left; }
