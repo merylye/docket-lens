@@ -94,15 +94,14 @@
 
     document.getElementById("view-findings").innerHTML = `<div class="af">
       <section class="intro"><p>This page provides an AI-assisted summary of the public comments on Docket FDA-2026-N-7874. This page is exploratory and is not legal or regulatory advice. Positions and summaries were coded with AI assistance and may contain errors. Read the original comments before relying on any finding.</p></section>
-      <section><h2>Summary</h2><div class="card"><ul class="rs">${sum.map(x => `<li>${x}</li>`).join("")}</ul></div></section>
+      <section><h2>Summary</h2><div class="card"><ul class="rs sumlist">${sum.map(x => `<li>${x}</li>`).join("")}</ul></div></section>
       <section><h2>Commenters</h2><div class="cards"><div class="card" style="grid-column:1/-1">
         <p style="margin:0">Of the ${rows.length} comments, ${gN.map(([g, n]) => `${n} came from ${esc(g).toLowerCase()}`).join("; ")}. Industry here means device makers, drug makers, other private companies, and international industry.</p>
         <div class="cats">${catRows.map(([t, n]) => `<div class="row"><span class="lab">${esc(t)}</span>${lbar(n, rows.length)}<span class="num">${n}</span></div>`).join("")}</div>
         
       </div></div></section>
       <section><h2>Points of consensus</h2>${legend}${defn}<div class="cards">
-        <div class="card"><h3>Largely endorsed as written in the docket</h3>${endorsed.map(x => crow(x, "support")).join("") || '<p class="note">None at this threshold.</p>'}
-          <p class="note">Share of comments that took a position and supported the proposal without conditions. Listed when it is at least ${T.endorse * 100}%.</p></div>
+        <div class="card"><h3>Largely endorsed as written in the docket</h3>${endorsed.map(x => crow(x, "support")).join("") || '<p class="note">None at this threshold.</p>'}</div>
         <div class="card"><h3>Accepted with added conditions</h3>${condd.map(x => crow(x, "conditional")).join("") || '<p class="note">None at this threshold.</p>'}
           <p class="note">Select a bar to see added conditions. Listed when at least ${T.cond * 100}% supported with conditions.</p></div>
       </div></section>
@@ -119,14 +118,14 @@
         <div class="card"><h3>Least addressed questions</h3>${qs.map(x => `<div class="row click" data-q="${x.q.n}" tabindex="0" role="button"><span class="lab">Q${x.q.n} ${esc(x.q.label)}</span>${lbar(x.n, rows.length)}<span class="num">${pc(x.n, rows.length)}</span></div>`).join("")}<p class="note">Share of all comments that substantively addressed the question.</p></div>
         ${(META.nopos || []).length ? `<div class="card" style="grid-column:1/-1"><h3>Comments outside the 17 proposals</h3><p class="note">${rows.filter(c => !Object.values(c.pos || {}).some(Boolean)).length} comments took no position on any proposal. These ${NP.length} raised a concern or objection the proposals do not cover.</p><ul class="rs">${NP.map(x => `<li><span>${esc(x.point)}</span> <span class="note">(${who(x.id)})</span></li>`).join("")}</ul></div>` : ""}
       </div></section>
-      ${OQ.length ? `<section><h2>Open questions</h2><p class="note">Questions where commenters gave different answers. Counts are comments, and a comment can appear on more than one side.</p><div class="cards">${OQ.map(q => { const sd = (q.sides || []).map(x => ({ ...x, n: rows.filter(c => posItems(c).includes(x.sel)).length })); const mx = Math.max(1, ...sd.map(x => x.n));
+      ${OQ.length ? `<section><h2>Open questions</h2><p class="note">Questions where commenters gave different answers.</p><div class="cards">${OQ.map(q => { const sd = (q.sides || []).map(x => ({ ...x, n: rows.filter(c => posItems(c).includes(x.sel)).length })); const mx = Math.max(1, ...sd.map(x => x.n));
           return `<div class="card"><h3>${esc(q.question)}</h3>${sd.map(x => `<div class="row click" data-go="${esc(x.sel)}" tabindex="0" role="button"><span class="lab">${esc(x.label)}</span>${lbar(x.n, mx)}<span class="num">${x.n}</span></div>${x.sel.endsWith(":oppose") && x.n ? `<button class="go sub" data-prop="${esc(x.sel.split(":")[0])}">See their reasons</button>` : ""}`).join("")}<p class="note">Select a row to read those comments.</p></div>`; }).join("")}</div></section>` : ""}
-      <section><h2>Methods</h2><div class="card"><ul class="rs">
+      <section><details class="methods"><summary><h2>Methods</h2></summary><div class="card"><ul class="rs">
         <li>Comments were read in full, including attachments, and coded by Claude Opus 5.5 against written codebooks. Separate model instances checked uncertain codes, condition groups, opposition reasons, and two random samples of comments. No codes have been checked by a person yet.</li>
         <li>Each comment counts once. Duplicate filings of the same document are counted once.</li>
         <li>"Support with conditions" includes comments that endorsed a proposal while listing requirements they treated as necessary. Where coders disagreed, the code leans toward support with conditions or no position.</li>
         <li>Reasons for opposition and summaries of other comments are short paraphrases. Check a comment's original text before quoting or citing it.</li>
-      </ul></div></section>
+      </ul></div></details></section>
       ${footer()}</div>`;
     bind(document.getElementById("view-findings"));
   }

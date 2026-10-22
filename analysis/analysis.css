@@ -50,3 +50,10 @@ header { padding-bottom: 0; }
 .af .oth { display: grid; gap: 4px; }
 .af .cats { display: grid; gap: 4px; }
 .af .intro p { margin: 0; font-size: 17px; line-height: 1.5; max-width: none; }
+.af ul.rs.sumlist { font-size: 17px; line-height: 1.5; gap: 10px; }
+.af details.methods > summary { cursor: pointer; list-style: none; display: flex; align-items: center; gap: 10px; }
+.af details.methods > summary::-webkit-details-marker { display: none; }
+.af details.methods > summary::before { content: "▸"; font-size: 18px; color: var(--muted); }
+.af details.methods[open] > summary::before { content: "▾"; }
+.af details.methods[open] > summary { margin-bottom: 14px; }
+.af details.methods > summary h2 { display: inline; }
