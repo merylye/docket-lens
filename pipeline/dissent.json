@@ -153,7 +153,7 @@
    },
    {
     "id": "FDA-2026-N-7874-0180",
-    "reason": "The two axes are too simple for real-world use and ignore population-level harm",
+    "reason": "The two-axis framework is too simple for real-world use; it should represent population-level and community harm.",
     "alternative": "Tiered risk categories modeled on the EU AI Act"
    }
   ],
@@ -201,11 +201,6 @@
     "id": "FDA-2026-N-7874-0076",
     "reason": "A PCCP is the wrong instrument for changes the sponsor cannot predetermine",
     "alternative": ""
-   },
-   {
-    "id": "FDA-2026-N-7874-0136",
-    "reason": "Changes an AI directs to itself, with scope not describable in advance, should not be preapproved",
-    "alternative": "Record, re-benchmark, and require named human sign-off for every self-proposed change"
    }
   ],
   "no_care_comparator": [
@@ -355,7 +350,7 @@
   {
    "id": "FDA-2026-N-7874-0137",
    "kind": "general_objection",
-   "point": "Accuracy, bias, and privacy risks of generative AI outweigh its benefits"
+   "point": "Doubts that, given hospital and regulator resources, generative AI's benefits outweigh its accuracy, bias, and privacy risks"
   },
   {
    "id": "FDA-2026-N-7874-0138",
@@ -395,7 +390,7 @@
   {
    "id": "FDA-2026-N-7874-0166",
    "kind": "outside_framing",
-   "point": "AI needs constant human correction, lacks context, and cannot replace human relationships"
+   "point": "AI needs human oversight and correction, is not always contextual, and lacks human relationships."
   },
   {
    "id": "FDA-2026-N-7874-0170",

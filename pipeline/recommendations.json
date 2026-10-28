@@ -1334,9 +1334,6 @@
    "kill_switch",
    "postmarket_plans"
   ],
-  "FDA-2026-N-7874-0198": [
-   "independent_eval"
-  ],
   "FDA-2026-N-7874-0143": [
    "oversight_demonstrated",
    "synthetic_separate",
@@ -1397,7 +1394,6 @@
    "risk_evidence_map",
    "comparator_realistic",
    "pccp_bounded",
-   "independent_eval",
    "model_disclosure",
    "postmarket_plans",
    "escalation_separate",

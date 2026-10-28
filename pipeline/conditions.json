@@ -2041,7 +2041,6 @@
     "variability"
    ]
   },
-  "FDA-2026-N-7874-0083": {},
   "FDA-2026-N-7874-0116": {
    "postmarket_methods": [
     "event_triggers",
@@ -2294,7 +2293,6 @@
     "other"
    ]
   },
-  "FDA-2026-N-7874-0107": {},
   "FDA-2026-N-7874-0108": {
    "competency_eval": [
     "hard_cases",
@@ -2372,12 +2370,10 @@
     "real_oversight",
     "reversibility",
     "detectability",
-    "traceability",
     "other"
    ],
    "postmarket_tradeoff": [
-    "nosub",
-    "low"
+    "nosub"
    ],
    "agentic_oversight": [
     "human_confirm",
@@ -2395,7 +2391,7 @@
   },
   "FDA-2026-N-7874-0193": {
    "risk_framework": [
-    "real_oversight"
+    "other"
    ],
    "postmarket_tradeoff": [
     "other"
@@ -2497,7 +2493,6 @@
    ],
    "supervisory_agents": [
     "validate_supervisor",
-    "independent",
     "human_final",
     "fail_safe",
     "records"
@@ -2559,10 +2554,6 @@
     "rebench",
     "review",
     "rollback"
-   ],
-   "postmarket_methods": [
-    "event_triggers",
-    "other"
    ]
   },
   "FDA-2026-N-7874-0195": {
@@ -2612,7 +2603,6 @@
    ],
    "supervisory_agents": [
     "validate_supervisor",
-    "human_final",
     "other"
    ],
    "flexible_change_control": [
@@ -2740,14 +2730,12 @@
     "plan",
     "enforce",
     "detect",
-    "low",
-    "indep"
+    "low"
    ],
    "postmarket_methods": [
     "event_triggers",
     "risk_cadence",
-    "set_responses",
-    "records"
+    "set_responses"
    ],
    "supervisory_agents": [
     "validate_supervisor",
@@ -2840,8 +2828,7 @@
     "plan"
    ],
    "supervisory_agents": [
-    "validate_supervisor",
-    "independent"
+    "validate_supervisor"
    ],
    "agentic_oversight": [
     "human_confirm",
@@ -2885,8 +2872,7 @@
     "other"
    ],
    "supervisory_agents": [
-    "validate_supervisor",
-    "independent"
+    "validate_supervisor"
    ]
   },
   "FDA-2026-N-7874-0202": {
@@ -2895,7 +2881,6 @@
     "detectability",
     "reversibility",
     "real_oversight",
-    "setting",
     "autonomy",
     "other"
    ],
@@ -2947,8 +2932,7 @@
     "other"
    ],
    "synthetic_data": [
-    "subgroup",
-    "noreplace"
+    "subgroup"
    ],
    "third_party": [
     "optional",
@@ -3025,7 +3009,6 @@
     "real_oversight"
    ],
    "postmarket_methods": [
-    "outcomes",
     "event_triggers"
    ]
   },
@@ -3105,7 +3088,6 @@
     "other"
    ],
    "postmarket_tradeoff": [
-    "detect",
     "indep"
    ],
    "third_party": [
@@ -3152,8 +3134,7 @@
    ],
    "postmarket_methods": [
     "event_triggers",
-    "set_responses",
-    "targeted_sampling"
+    "set_responses"
    ],
    "supervisory_agents": [
     "independent",
@@ -3311,7 +3292,6 @@
     "detectability"
    ],
    "competency_eval": [
-    "new_elements",
     "human_ai_team"
    ],
    "confirmation_flex": [
@@ -3364,7 +3344,6 @@
    ],
    "supervisory_agents": [
     "validate_supervisor",
-    "independent",
     "define_role",
     "records"
    ],
@@ -3382,12 +3361,9 @@
   },
   "FDA-2026-N-7874-0142": {
    "supervisory_agents": [
-    "validate_supervisor",
-    "independent",
-    "fail_safe"
+    "validate_supervisor"
    ],
    "agentic_oversight": [
-    "authority_level",
     "full_sequence",
     "audit_records"
    ],
@@ -3438,15 +3414,13 @@
    "synthetic_data": [
     "validate",
     "disclose",
-    "subgroup",
-    "noreplace"
+    "subgroup"
    ],
    "third_party": [
     "optional"
    ],
    "supervisory_agents": [
-    "validate_supervisor",
-    "human_final"
+    "validate_supervisor"
    ],
    "flexible_change_control": [
     "rebench",
@@ -3496,8 +3470,7 @@
    ],
    "voluntary_model_files": [
     "content",
-    "fallback",
-    "resp"
+    "fallback"
    ],
    "escalation_errors": [
     "justify",
@@ -3526,7 +3499,6 @@
    ],
    "supervisory_agents": [
     "independent",
-    "define_role",
     "human_final",
     "validate_supervisor",
     "fail_safe"
@@ -3592,7 +3564,6 @@
    "agentic_oversight": [
     "audit_records",
     "authority_level",
-    "full_sequence",
     "other"
    ],
    "flexible_change_control": [

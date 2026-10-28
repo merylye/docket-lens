@@ -226,7 +226,7 @@
   "emergent_topics": [
    "documentation errors"
   ],
-  "summary": "Progressive care nurse reports that AI tools she uses, including scribes and alerts, sometimes produce confusing or nonsensical output.",
+  "summary": "Progressive care nurse who uses AI scribes, alerts, patient chatbots, and triage tools reports that AI has several times written confusing or nonsensical content.",
   "words": 120,
   "pages": 0,
   "unreadable": false
@@ -242,7 +242,7 @@
   "emergent_topics": [
    "incomplete ai summaries"
   ],
-  "summary": "Hospital clinician reports that AI-generated summaries and notes miss important labs, consultations, and recommendations.",
+  "summary": "Commenter working in a hospital reports that AI-generated summaries and notes miss or misinterpret important labs, notes, consultations, and recommendations.",
   "words": 40,
   "pages": 0,
   "unreadable": false
@@ -613,7 +613,7 @@
    "human connection",
    "clinician trust"
   ],
-  "summary": "Nurse says AI needs constant correction like a student, lacks context and human connection, and will require a long trust-building curve.",
+  "summary": "Nurse says AI needs oversight and correction like a nursing student, is not always contextual, lacks human relationships, and will take time to earn trust.",
   "words": 150,
   "pages": 0,
   "unreadable": false
@@ -630,7 +630,7 @@
    "data privacy",
    "hallucination concerns"
   ],
-  "summary": "Commenter doubts generative AI's accuracy and privacy safeguards and believes its long-run risks outweigh benefits even under strict regulation.",
+  "summary": "Commenter raises concerns about generative AI's accuracy, bias, and privacy and doubts that, with available resources, its long-run benefits outweigh the risks.",
   "words": 95,
   "pages": 0,
   "unreadable": false
@@ -1006,7 +1006,7 @@
    "reference standard reliability",
    "outsourced design controls"
   ],
-  "summary": "Device regulatory consultant argues directiveness erodes over repeated use, benchmarks need construct validity, uncertainty shifting should stay case-level, and foundation model sourcing needs defined boundaries.",
+  "summary": "Device regulatory consultant hypothesizes directiveness erodes across repeated use, and argues benchmarks need construct validity, uncertainty shifting should stay case-level, and foundation model sourcing needs boundaries.",
   "words": 7000,
   "pages": 19,
   "unreadable": false
@@ -1050,7 +1050,7 @@
    "cross-site generalizability",
    "cost-effectiveness evidence"
   ],
-  "summary": "Biostatisticians urge FDA to match evidence to each specific claim using target-trial thinking, explicit generalizability analysis, separate reporting of data sources, and change-scaled revalidation.",
+  "summary": "Health policy and statistics researchers urge FDA to match evidence to each specific claim using target-trial thinking, explicit generalizability analysis, separate reporting of data sources, and change-scaled revalidation.",
   "words": 4600,
   "pages": 8,
   "unreadable": false
@@ -1291,7 +1291,7 @@
    "user training",
    "incident investigation"
   ],
-  "summary": "Health professional urges postmarket surveillance that involves all stakeholders, preserves full interaction logs for incident investigation, and requires manufacturers to state device limits and training needs.",
+  "summary": "Commenter urges postmarket surveillance involving all stakeholders, preserved interaction logs for incident investigation, and manufacturer statements of device limits, target population, and training needs.",
   "words": 430,
   "pages": 0,
   "unreadable": false
@@ -2096,7 +2096,7 @@
    "risk management alignment",
    "eu regulatory alignment"
   ],
-  "summary": "Pharmaceutical engineering society answers all 26 questions, favoring risk-proportionate, technology-agnostic, outcome-based expectations with sponsor-justified evidence and optional third-party review.",
+  "summary": "Pharmaceutical engineering society responds question by question, favoring risk-proportionate, technology-agnostic expectations with sponsor-justified evidence, optional third-party review, and manufacturer accountability.",
   "words": 5900,
   "pages": 14,
   "unreadable": false
@@ -2268,7 +2268,7 @@
    "software bill of materials",
    "prompt injection security"
   ],
-  "summary": "Cybersecurity documentation firm notes the paper omits section 524B and argues existing SBOM, monitoring, and patch obligations should address foundation model changes and prompt injection.",
+  "summary": "Cybersecurity documentation firm notes the paper omits section 524B, argues existing 524B duties partly answer Question 24, and says prompt injection belongs in threat models.",
   "words": 1100,
   "pages": 2,
   "unreadable": false

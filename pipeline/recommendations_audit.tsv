@@ -940,7 +940,7 @@ FDA-2026-N-7874-0204	accountability	Keep manufacturers primarily responsible for
 FDA-2026-N-7874-0204	none	Involve CRNAs directly in developing AI regulations
 FDA-2026-N-7874-0204	none	Bar AI tools from expanding supervision of CRNAs
 FDA-2026-N-7874-0193	lower_burden_supervised	Place clinician-signed drafting functions at the lowest activity level
-FDA-2026-N-7874-0193	none	Accept retrospective and shadow evaluation for low-activity confirmation
+FDA-2026-N-7874-0193	lower_burden_supervised	Accept retrospective and shadow evaluation for low-activity confirmation
 FDA-2026-N-7874-0193	none	Weight omission rate and calibration above knowledge scores
 FDA-2026-N-7874-0193	none	Score correct deferral on insufficient input as a correct output
 FDA-2026-N-7874-0193	data_privacy	Keep monitoring data inside the developer's HIPAA boundary
@@ -1069,7 +1069,7 @@ FDA-2026-N-7874-0180	none	Adopt EU AI Act-style tiered risk categories
 FDA-2026-N-7874-0180	risk_factors	Represent population-level and community harm in the risk framework
 FDA-2026-N-7874-0180	none	Anchor the severity scale to established harm rating scales
 FDA-2026-N-7874-0180	none	Treat autonomous, semi-autonomous, and supervised systems as distinct categories
-FDA-2026-N-7874-0180	none	Make patient versus professional audience a separate risk dimension
+FDA-2026-N-7874-0180	risk_factors	Make patient versus professional audience a separate risk dimension
 FDA-2026-N-7874-0180	populations_settings	Require subpopulation performance metrics before market entry
 FDA-2026-N-7874-0180	none	Open a separate comment period on licensing AI tools
 FDA-2026-N-7874-0182	version_pinning	Require contractual advance notice of foundation model changes
@@ -1092,7 +1092,6 @@ FDA-2026-N-7874-0171	accountability	Keep manufacturers accountable when third pa
 FDA-2026-N-7874-0150	risk_factors	Represent oversight staffing explicitly in the risk framework
 FDA-2026-N-7874-0150	none	Record reviewer role, caseload, escalation path, and adjacent channels
 FDA-2026-N-7874-0150	oversight_demonstrated	Account for caseload-driven automation bias in oversight
-FDA-2026-N-7874-0150	none	Give reviewers authority to halt workflows and reach clinicians
 FDA-2026-N-7874-0163	deployed_config	Evaluate the whole care workflow, not only AI answers
 FDA-2026-N-7874-0163	risk_factors	Add reversibility, time pressure, safeguards, and traceability to risk
 FDA-2026-N-7874-0163	oversight_demonstrated	Credit human approval only when timely intervention is shown
@@ -1155,7 +1154,6 @@ FDA-2026-N-7874-0192	independent_eval	Disclose assessor independence by function
 FDA-2026-N-7874-0192	rebenchmark_on_change	Keep version records and run paired regression tests on updates
 FDA-2026-N-7874-0132	none	Evaluate readers who move between differently configured deployments
 FDA-2026-N-7874-0132	none	Provide manufacturer-supported shared evaluation for smaller practices
-FDA-2026-N-7874-0132	none	Fund protected time for sample-based clinician review
 FDA-2026-N-7874-0132	accountability	Assign each monitoring function an owner, access, and escalation route
 FDA-2026-N-7874-0132	audit_trail	Require manufacturers to supply logging, version traceability, and degradation tools
 FDA-2026-N-7874-0132	error_reporting	Build quick in-workflow tools for clinicians to flag AI problems
@@ -1299,7 +1297,6 @@ FDA-2026-N-7874-0198	none	Establish an academia-government-industry regulatory s
 FDA-2026-N-7874-0198	none	Use academic health systems as distributed evaluation testbeds
 FDA-2026-N-7874-0198	none	Build a longitudinal GenAI regulatory talent pipeline
 FDA-2026-N-7874-0198	none	Pair workforce development with funded regulatory science research
-FDA-2026-N-7874-0198	independent_eval	Develop competency standards and training for third-party evaluators
 FDA-2026-N-7874-0143	oversight_demonstrated	Test whether reviewers can actually interrupt the path to harm
 FDA-2026-N-7874-0143	synthetic_separate	Keep generated challenge cases separate from empirical estimates
 FDA-2026-N-7874-0143	synthetic_separate	Report unsupported subgroup estimates as limitations, not synthetic results
@@ -1320,7 +1317,7 @@ FDA-2026-N-7874-0142	agent_authority	Account for all execution routes and creden
 FDA-2026-N-7874-0142	human_approval	Test that released actions match what was reviewed
 FDA-2026-N-7874-0142	audit_trail	Separate evidence of authorization, dispatch, response, and effect
 FDA-2026-N-7874-0142	supervisor_validation	Measure supervisor errors against separately established reference observations
-FDA-2026-N-7874-0142	none	Report monitoring outages separately from negative findings
+FDA-2026-N-7874-0142	supervisor_validation	Report monitoring outages separately from negative findings
 FDA-2026-N-7874-0142	security_dependencies	Test prompt injection across all accessible execution interfaces
 FDA-2026-N-7874-0142	none	Handle unknown post-dispatch outcomes without assuming non-occurrence
 FDA-2026-N-7874-0142	rebenchmark_on_change	Reassess when credentials, tools, or permissions change
@@ -1368,7 +1365,7 @@ FDA-2026-N-7874-0176	none	Offer small sponsors binding classification feedback o
 FDA-2026-N-7874-0176	risk_evidence_map	Publish a presumptive map from risk cells to confirmation
 FDA-2026-N-7874-0176	comparator_realistic	Accept documented lack of access as a comparator baseline
 FDA-2026-N-7874-0176	pccp_bounded	Let PCCPs cover prompt, retrieval, guardrail, and model version changes
-FDA-2026-N-7874-0176	independent_eval	Keep third-party review optional with multiple accredited bodies
+FDA-2026-N-7874-0176	none	Keep third-party review optional with multiple accredited bodies
 FDA-2026-N-7874-0176	model_disclosure	Standardize model master files and reward sponsors who reference them
 FDA-2026-N-7874-0176	postmarket_plans	Prespecify postmarket thresholds and responses when easing premarket evidence
 FDA-2026-N-7874-0176	escalation_separate	Report under- and over-escalation rates separately

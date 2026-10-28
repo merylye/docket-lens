@@ -351,7 +351,7 @@
    "no_care_comparator": "support",
    "third_party": null,
    "postmarket_tradeoff": null,
-   "postmarket_methods": "conditional",
+   "postmarket_methods": null,
    "supervisory_agents": null,
    "flexible_change_control": "conditional",
    "voluntary_model_files": null,
@@ -818,8 +818,7 @@
   "recommendations": [
    "Represent oversight staffing explicitly in the risk framework",
    "Record reviewer role, caseload, escalation path, and adjacent channels",
-   "Account for caseload-driven automation bias in oversight",
-   "Give reviewers authority to halt workflows and reach clinicians"
+   "Account for caseload-driven automation bias in oversight"
   ]
  },
  {
@@ -1098,7 +1097,6 @@
   "recommendations": [
    "Evaluate readers who move between differently configured deployments",
    "Provide manufacturer-supported shared evaluation for smaller practices",
-   "Fund protected time for sample-based clinician review",
    "Assign each monitoring function an owner, access, and escalation route",
    "Require manufacturers to supply logging, version traceability, and degradation tools",
    "Build quick in-workflow tools for clinicians to flag AI problems",
@@ -1745,8 +1743,7 @@
    "Establish an academia-government-industry regulatory science consortium",
    "Use academic health systems as distributed evaluation testbeds",
    "Build a longitudinal GenAI regulatory talent pipeline",
-   "Pair workforce development with funded regulatory science research",
-   "Develop competency standards and training for third-party evaluators"
+   "Pair workforce development with funded regulatory science research"
   ]
  },
  {
@@ -2055,7 +2052,7 @@
    "postmarket_tradeoff": null,
    "postmarket_methods": "conditional",
    "supervisory_agents": "conditional",
-   "flexible_change_control": "oppose",
+   "flexible_change_control": null,
    "voluntary_model_files": null,
    "agentic_oversight": "conditional"
   },
