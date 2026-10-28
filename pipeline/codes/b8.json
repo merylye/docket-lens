@@ -1,0 +1,2394 @@
+[
+ {
+  "id": "FDA-2026-N-7874-0173",
+  "org": "",
+  "commenter_type": "Academia",
+  "type_inferred": false,
+  "domain": "General / cross-cutting",
+  "questions_cited": [
+   18,
+   19,
+   20,
+   21,
+   22,
+   23,
+   24,
+   25,
+   26
+  ],
+  "questions_addressed": [
+   18,
+   19,
+   20,
+   21,
+   22,
+   23,
+   24,
+   25,
+   26
+  ],
+  "emergent_topics": [
+   "model lineage tracking",
+   "configuration identity verification",
+   "adverse event database design",
+   "cryptographic commitments"
+  ],
+  "summary": "Policy researcher argues FDA databases cannot link devices sharing a foundation model and proposes upstream-model fields, lineage reporting, and a piloted configuration commitment registry.",
+  "words": 9000,
+  "pages": 93,
+  "unreadable": false
+ },
+ {
+  "id": "FDA-2026-N-7874-0144",
+  "org": "Association of periOperative Registered Nurses (AORN)",
+  "commenter_type": "Health care association",
+  "type_inferred": true,
+  "domain": "General / cross-cutting",
+  "questions_cited": [
+   1,
+   3,
+   18,
+   19,
+   21,
+   26
+  ],
+  "questions_addressed": [
+   1,
+   3,
+   18,
+   19,
+   21,
+   26
+  ],
+  "emergent_topics": [
+   "nursing role in ai governance",
+   "ai disclosure to patients",
+   "health equity",
+   "clinician education"
+  ],
+  "summary": "Perioperative nursing association supports the risk framework with added oversight factors, wants monitoring to complement premarket evidence, and seeks human checkpoints for agentic AI.",
+  "words": 1900,
+  "pages": 7,
+  "unreadable": false
+ },
+ {
+  "id": "FDA-2026-N-7874-0204",
+  "org": "American Association of Nurse Anesthesiology (AANA)",
+  "commenter_type": "Health care association",
+  "type_inferred": true,
+  "domain": "General / cross-cutting",
+  "questions_cited": [
+   4,
+   14,
+   21
+  ],
+  "questions_addressed": [
+   4,
+   14,
+   21
+  ],
+  "emergent_topics": [
+   "nursing role in ai governance",
+   "scope of practice",
+   "rural access"
+  ],
+  "summary": "Nurse anesthetist association asks FDA to use function-based clinician terms, include CRNAs as comparators and adjudicators, and involve professional societies in postmarket monitoring.",
+  "words": 1500,
+  "pages": 5,
+  "unreadable": false
+ },
+ {
+  "id": "FDA-2026-N-7874-0193",
+  "org": "",
+  "commenter_type": "Health professional",
+  "type_inferred": false,
+  "domain": "Radiology / imaging",
+  "questions_cited": [
+   18,
+   24,
+   25
+  ],
+  "questions_addressed": [
+   1,
+   9,
+   11,
+   18,
+   24,
+   25
+  ],
+  "emergent_topics": [
+   "small developer burden",
+   "hipaa compliance",
+   "omission errors"
+  ],
+  "summary": "Radiologist-developer asks that clinician-signed drafts sit at the lowest activity level, with retrospective and shadow confirmation, HIPAA-contained monitoring, and vendor version pinning.",
+  "words": 1350,
+  "pages": 2,
+  "unreadable": false
+ },
+ {
+  "id": "FDA-2026-N-7874-0183",
+  "org": "National Nurse Practitioner Entrepreneur Network (NNPEN)",
+  "commenter_type": "Device industry",
+  "type_inferred": false,
+  "domain": "General / cross-cutting",
+  "questions_cited": [
+   4,
+   6,
+   14,
+   15,
+   16,
+   18,
+   21,
+   24,
+   25
+  ],
+  "questions_addressed": [
+   4,
+   6,
+   14,
+   16,
+   21,
+   24,
+   25
+  ],
+  "emergent_topics": [
+   "nurse practitioner inclusion",
+   "small practice burden",
+   "end-user transparency",
+   "rural access"
+  ],
+  "summary": "Nurse practitioner network urges provider-neutral language, NP inclusion in evaluation panels, manufacturer accountability, end-user change notices, and affordable optional third-party review.",
+  "words": 950,
+  "pages": 3,
+  "unreadable": false
+ },
+ {
+  "id": "FDA-2026-N-7874-0177",
+  "org": "Glytec",
+  "commenter_type": "Device industry",
+  "type_inferred": true,
+  "domain": "Clinical decision support",
+  "questions_cited": [
+   1,
+   4,
+   18,
+   22,
+   23,
+   24
+  ],
+  "questions_addressed": [
+   1,
+   4,
+   18,
+   22,
+   23,
+   24
+  ],
+  "emergent_topics": [
+   "medication dosing",
+   "deterministic dosing engine"
+  ],
+  "summary": "Insulin dosing software maker argues time pressure raises risk, dose-determining functions need full premarket validation, and PCCPs should exclude model replacement for high-risk dosing.",
+  "words": 780,
+  "pages": 0,
+  "unreadable": false
+ },
+ {
+  "id": "FDA-2026-N-7874-0203",
+  "org": "B. Braun",
+  "commenter_type": "Device industry",
+  "type_inferred": false,
+  "domain": "General / cross-cutting",
+  "questions_cited": [],
+  "questions_addressed": [
+   7
+  ],
+  "emergent_topics": [
+   "technical vs clinical ai",
+   "scope of regulation"
+  ],
+  "summary": "Device maker asks FDA to separate interpretation-centered AI from performance-centered technical AI, evaluating the latter through engineering verification rather than clinician-like competencies.",
+  "words": 560,
+  "pages": 0,
+  "unreadable": false
+ },
+ {
+  "id": "FDA-2026-N-7874-0170",
+  "org": "",
+  "commenter_type": "Health professional",
+  "type_inferred": false,
+  "domain": "Clinical documentation",
+  "questions_cited": [
+   17
+  ],
+  "questions_addressed": [],
+  "emergent_topics": [
+   "documentation errors"
+  ],
+  "summary": "Progressive care nurse reports that AI tools she uses, including scribes and alerts, sometimes produce confusing or nonsensical output.",
+  "words": 120,
+  "pages": 0,
+  "unreadable": false
+ },
+ {
+  "id": "FDA-2026-N-7874-0156",
+  "org": "",
+  "commenter_type": "Health professional",
+  "type_inferred": false,
+  "domain": "Clinical documentation",
+  "questions_cited": [],
+  "questions_addressed": [],
+  "emergent_topics": [
+   "incomplete ai summaries"
+  ],
+  "summary": "Hospital clinician reports that AI-generated summaries and notes miss important labs, consultations, and recommendations.",
+  "words": 40,
+  "pages": 0,
+  "unreadable": false
+ },
+ {
+  "id": "FDA-2026-N-7874-0179",
+  "org": "Keystone Neuroinformatics",
+  "commenter_type": "Device industry",
+  "type_inferred": false,
+  "domain": "Mental and behavioral health",
+  "questions_cited": [
+   1,
+   2,
+   3,
+   4,
+   5,
+   6,
+   7,
+   8,
+   9,
+   10,
+   11,
+   12,
+   13,
+   14,
+   15,
+   16,
+   17,
+   18,
+   19,
+   20,
+   21,
+   22,
+   23,
+   24,
+   25,
+   26
+  ],
+  "questions_addressed": [
+   1,
+   2,
+   3,
+   4,
+   5,
+   6,
+   7,
+   8,
+   9,
+   10,
+   11,
+   12,
+   13,
+   14,
+   15,
+   16,
+   17,
+   18,
+   19,
+   20,
+   21,
+   22,
+   23,
+   24,
+   25,
+   26
+  ],
+  "emergent_topics": [
+   "stakeholder participation",
+   "health equity",
+   "delusion reinforcement",
+   "real-world evidence transportability"
+  ],
+  "summary": "Psychiatrist answers all 26 questions, urging psychiatry-specific functional evaluation, independently administered protected benchmarks with unaffiliated raters, and limits on trading premarket evidence for monitoring.",
+  "words": 9500,
+  "pages": 20,
+  "unreadable": false
+ },
+ {
+  "id": "FDA-2026-N-7874-0161",
+  "org": "Mauro Clinical Intelligence",
+  "commenter_type": "Health professional",
+  "type_inferred": false,
+  "domain": "General / cross-cutting",
+  "questions_cited": [
+   1,
+   4,
+   6,
+   7,
+   9,
+   11,
+   14,
+   15,
+   19,
+   21,
+   26
+  ],
+  "questions_addressed": [
+   1,
+   4,
+   6,
+   7,
+   9,
+   11,
+   14,
+   19,
+   21,
+   26
+  ],
+  "emergent_topics": [
+   "nursing workflow",
+   "deployer capacity",
+   "reporting infrastructure"
+  ],
+  "summary": "Nursing-focused group asks FDA to treat human oversight feasibility as a risk modifier, test nursing workflows, use overrides as safety signals, and bound agentic actions.",
+  "words": 4500,
+  "pages": 7,
+  "unreadable": false
+ },
+ {
+  "id": "FDA-2026-N-7874-0185",
+  "org": "Silicon Health Solutions, LLC (VoxelMD)",
+  "commenter_type": "Device industry",
+  "type_inferred": false,
+  "domain": "Radiology / imaging",
+  "questions_cited": [
+   1,
+   2,
+   9,
+   11,
+   14,
+   15,
+   17,
+   19,
+   21,
+   22,
+   24
+  ],
+  "questions_addressed": [
+   1,
+   9,
+   14,
+   15,
+   17,
+   19,
+   22,
+   24
+  ],
+  "emergent_topics": [
+   "automation bias",
+   "output traceability",
+   "omission errors"
+  ],
+  "summary": "Radiology report-drafting developer urges treating image grounding as a validated risk control, seeded-error reader studies, deterministic scoring, and draft-edit postmarket monitoring.",
+  "words": 3300,
+  "pages": 6,
+  "unreadable": false
+ },
+ {
+  "id": "FDA-2026-N-7874-0195",
+  "org": "Auriva Health",
+  "commenter_type": "Private industry (non-device)",
+  "type_inferred": false,
+  "domain": "General / cross-cutting",
+  "questions_cited": [
+   9,
+   10,
+   11,
+   12,
+   13,
+   16,
+   26
+  ],
+  "questions_addressed": [
+   9,
+   10,
+   11,
+   12,
+   13,
+   16,
+   26
+  ],
+  "emergent_topics": [
+   "synthetic environment qualification",
+   "evidence type disclosure"
+  ],
+  "summary": "Proposes independently qualifying reusable synthetic clinical environments for device evaluation, with sequestered scenarios, third-party providers, and disclosure of synthetic versus human evidence.",
+  "words": 2100,
+  "pages": 5,
+  "unreadable": false
+ },
+ {
+  "id": "FDA-2026-N-7874-0184",
+  "org": "",
+  "commenter_type": "Health professional",
+  "type_inferred": false,
+  "domain": "Clinical decision support",
+  "questions_cited": [
+   1,
+   3,
+   4,
+   5,
+   7,
+   8,
+   9,
+   13,
+   14,
+   18,
+   22
+  ],
+  "questions_addressed": [
+   1,
+   3,
+   4,
+   5,
+   7,
+   9,
+   14,
+   18,
+   19
+  ],
+  "emergent_topics": [
+   "sex differences in performance",
+   "autonomous prescribing",
+   "time-limited authorization"
+  ],
+  "summary": "Gastroenterologist backs the competency model but wants recredentialing-style ongoing review, specialist comparators, sex-stratified testing, and clinician approval before any AI prescription.",
+  "words": 1900,
+  "pages": 6,
+  "unreadable": false
+ },
+ {
+  "id": "FDA-2026-N-7874-0186",
+  "org": "EG14Y Systems Inc",
+  "commenter_type": "Private industry (non-device)",
+  "type_inferred": false,
+  "domain": "General / cross-cutting",
+  "questions_cited": [
+   1,
+   8,
+   9,
+   10,
+   16,
+   19,
+   20,
+   22,
+   23,
+   24,
+   25,
+   26
+  ],
+  "questions_addressed": [
+   9,
+   10,
+   16,
+   20,
+   22,
+   23,
+   24,
+   25,
+   26
+  ],
+  "emergent_topics": [
+   "output reproducibility",
+   "enforcement verification"
+  ],
+  "summary": "Assurance tooling firm recommends preserving premarket benchmarks as re-executable, version-pinned evidence records, with independence profiles, canary testing, and verified enforcement for agents.",
+  "words": 1400,
+  "pages": 1,
+  "unreadable": false
+ },
+ {
+  "id": "FDA-2026-N-7874-0165",
+  "org": "NurseVetted",
+  "commenter_type": "Health professional",
+  "type_inferred": false,
+  "domain": "General / cross-cutting",
+  "questions_cited": [],
+  "questions_addressed": [
+   1,
+   7,
+   19
+  ],
+  "emergent_topics": [
+   "nursing workflow",
+   "reporting infrastructure"
+  ],
+  "summary": "Nurse-led group asks FDA to name nurses as distinct users, require premarket evidence nurses can override outputs, and accept frontline reports bypassing manufacturers.",
+  "words": 1000,
+  "pages": 3,
+  "unreadable": false
+ },
+ {
+  "id": "FDA-2026-N-7874-0168",
+  "org": "",
+  "commenter_type": "Individual",
+  "type_inferred": true,
+  "domain": "General / cross-cutting",
+  "questions_cited": [
+   1,
+   2,
+   5,
+   9,
+   19,
+   21,
+   24,
+   26
+  ],
+  "questions_addressed": [
+   1,
+   9,
+   21,
+   24,
+   26
+  ],
+  "emergent_topics": [
+   "output traceability",
+   "interoperability",
+   "downstream routing"
+  ],
+  "summary": "Health data architect urges adding output traceability and downstream routing to risk assessment, evaluating configured systems, and using HL7 FHIR provenance standards.",
+  "words": 750,
+  "pages": 0,
+  "unreadable": false
+ },
+ {
+  "id": "FDA-2026-N-7874-0159",
+  "org": "",
+  "commenter_type": "Health professional",
+  "type_inferred": true,
+  "domain": "General / cross-cutting",
+  "questions_cited": [],
+  "questions_addressed": [],
+  "emergent_topics": [
+   "opposition to genai use",
+   "clinician workload"
+  ],
+  "summary": "Nurse angrily rejects the proposal, saying AI is unproven, biased, and would burden staff who lack time to catch its errors.",
+  "words": 330,
+  "pages": 0,
+  "unreadable": false
+ },
+ {
+  "id": "FDA-2026-N-7874-0139",
+  "org": "",
+  "commenter_type": "Health professional",
+  "type_inferred": false,
+  "domain": "General / cross-cutting",
+  "questions_cited": [],
+  "questions_addressed": [],
+  "emergent_topics": [
+   "design controls",
+   "opposition to deployment"
+  ],
+  "summary": "Retired clinical engineer questions whether existing device rules suffice and says self-changing AI should not enter practice until point-of-care verification is solved.",
+  "words": 290,
+  "pages": 0,
+  "unreadable": false
+ },
+ {
+  "id": "FDA-2026-N-7874-0166",
+  "org": "",
+  "commenter_type": "Health professional",
+  "type_inferred": false,
+  "domain": "General / cross-cutting",
+  "questions_cited": [],
+  "questions_addressed": [],
+  "emergent_topics": [
+   "human connection",
+   "clinician trust"
+  ],
+  "summary": "Nurse says AI needs constant correction like a student, lacks context and human connection, and will require a long trust-building curve.",
+  "words": 150,
+  "pages": 0,
+  "unreadable": false
+ },
+ {
+  "id": "FDA-2026-N-7874-0137",
+  "org": "",
+  "commenter_type": "Device industry",
+  "type_inferred": false,
+  "domain": "General / cross-cutting",
+  "questions_cited": [],
+  "questions_addressed": [],
+  "emergent_topics": [
+   "data privacy",
+   "hallucination concerns"
+  ],
+  "summary": "Commenter doubts generative AI's accuracy and privacy safeguards and believes its long-run risks outweigh benefits even under strict regulation.",
+  "words": 95,
+  "pages": 0,
+  "unreadable": false
+ },
+ {
+  "id": "FDA-2026-N-7874-0174",
+  "org": "Clara Health",
+  "commenter_type": "Private industry (non-device)",
+  "type_inferred": false,
+  "domain": "General / cross-cutting",
+  "questions_cited": [
+   1,
+   2,
+   3,
+   5,
+   6,
+   7,
+   9,
+   10,
+   11,
+   14,
+   15,
+   18,
+   19,
+   22,
+   24,
+   26
+  ],
+  "questions_addressed": [
+   1,
+   2,
+   3,
+   5,
+   6,
+   7,
+   9,
+   10,
+   11,
+   14,
+   15,
+   18,
+   19,
+   22,
+   24,
+   26
+  ],
+  "emergent_topics": [
+   "graduated autonomy",
+   "context integrity",
+   "care completion",
+   "state practice of medicine"
+  ],
+  "summary": "Primary care AI developer backs the framework with risk modifiers, whole-workflow testing, and real-care comparators, and seeks a clear evidence route to reduced clinician review.",
+  "words": 9000,
+  "pages": 27,
+  "unreadable": false
+ },
+ {
+  "id": "FDA-2026-N-7874-0169",
+  "org": "Solutions by Jewel",
+  "commenter_type": "Private industry (non-device)",
+  "type_inferred": false,
+  "domain": "General / cross-cutting",
+  "questions_cited": [
+   1,
+   5,
+   18,
+   19,
+   20,
+   21,
+   22,
+   23,
+   24,
+   26
+  ],
+  "questions_addressed": [
+   1,
+   5,
+   18,
+   19,
+   20,
+   21,
+   22,
+   23,
+   24,
+   26
+  ],
+  "emergent_topics": [
+   "audit trails",
+   "configuration attestation",
+   "operational-use drift",
+   "human oversight design"
+  ],
+  "summary": "AI governance firm proposes prespecified authorization conditions, configuration-bound evidence, change triggers, validated supervisory agents, and execution-level limits on agentic actions.",
+  "words": 4500,
+  "pages": 5,
+  "unreadable": false
+ },
+ {
+  "id": "FDA-2026-N-7874-0180",
+  "org": "CROSS Global Research Strategy, LLC",
+  "commenter_type": "Health professional",
+  "type_inferred": false,
+  "domain": "General / cross-cutting",
+  "questions_cited": [
+   1,
+   2,
+   3,
+   5,
+   7,
+   8,
+   10,
+   13,
+   16,
+   18,
+   19,
+   21
+  ],
+  "questions_addressed": [
+   1,
+   2,
+   3,
+   5,
+   7,
+   13,
+   16,
+   18,
+   19,
+   21
+  ],
+  "emergent_topics": [
+   "health equity",
+   "population-level harm",
+   "clinical AI licensure",
+   "eu regulatory alignment",
+   "adverse event reporting system"
+  ],
+  "summary": "Oncologist and AI governance advisor calls the two-axis framework too simple and urges defined surveillance intervals, a GenAI adverse event system, and equity safeguards.",
+  "words": 3700,
+  "pages": 9,
+  "unreadable": false
+ },
+ {
+  "id": "FDA-2026-N-7874-0182",
+  "org": "SANCIAN LLC",
+  "commenter_type": "Other",
+  "type_inferred": false,
+  "domain": "General / cross-cutting",
+  "questions_cited": [
+   16,
+   18,
+   21,
+   24,
+   25
+  ],
+  "questions_addressed": [
+   16,
+   18,
+   21,
+   24,
+   25
+  ],
+  "emergent_topics": [
+   "deployer notification",
+   "procurement contracts",
+   "small developer burden"
+  ],
+  "summary": "Health AI governance consultancy argues deploying facilities must receive notice of upstream model changes, favoring contractual obligations and deployer-facing disclosure alongside master files.",
+  "words": 2300,
+  "pages": 7,
+  "unreadable": false
+ },
+ {
+  "id": "FDA-2026-N-7874-0171",
+  "org": "Persistence Analytics Group LLC",
+  "commenter_type": "Private industry (non-device)",
+  "type_inferred": true,
+  "domain": "General / cross-cutting",
+  "questions_cited": [
+   19,
+   22,
+   24,
+   26
+  ],
+  "questions_addressed": [
+   19,
+   22,
+   24,
+   26
+  ],
+  "emergent_topics": [
+   "output reproducibility",
+   "continued reliance assurance"
+  ],
+  "summary": "Analytics firm supplements its earlier comment, urging that repeat-run variability be a detection baseline rather than an acceptability threshold, with revalidation after material changes.",
+  "words": 1900,
+  "pages": 3,
+  "unreadable": false
+ },
+ {
+  "id": "FDA-2026-N-7874-0150",
+  "org": "Xillium LLC",
+  "commenter_type": "Private industry (non-device)",
+  "type_inferred": false,
+  "domain": "General / cross-cutting",
+  "questions_cited": [
+   1,
+   6,
+   19,
+   21
+  ],
+  "questions_addressed": [
+   1,
+   6,
+   19,
+   21
+  ],
+  "emergent_topics": [
+   "human oversight design",
+   "automation bias",
+   "reviewer caseload"
+  ],
+  "summary": "Oversight staffing firm argues effective autonomy depends on deployment staffing and asks that postmarket records state reviewer role, caseload, escalation path, and adjacent channels.",
+  "words": 1450,
+  "pages": 4,
+  "unreadable": false
+ },
+ {
+  "id": "FDA-2026-N-7874-0163",
+  "org": "",
+  "commenter_type": "Health professional",
+  "type_inferred": false,
+  "domain": "Clinical decision support",
+  "questions_cited": [
+   1,
+   4,
+   6,
+   7,
+   9,
+   11,
+   14,
+   16,
+   18,
+   19,
+   20,
+   21,
+   22,
+   23,
+   24,
+   26
+  ],
+  "questions_addressed": [
+   1,
+   4,
+   7,
+   14,
+   18,
+   26
+  ],
+  "emergent_topics": [
+   "nursing role in evaluation",
+   "automation bias",
+   "human oversight design"
+  ],
+  "summary": "ICU nurse urges evaluating the whole care workflow, crediting oversight only when real, including nurses in evaluation, and enforcing human control over agentic actions.",
+  "words": 950,
+  "pages": 4,
+  "unreadable": false
+ },
+ {
+  "id": "FDA-2026-N-7874-0145",
+  "org": "",
+  "commenter_type": "Health professional",
+  "type_inferred": true,
+  "domain": "Clinical decision support",
+  "questions_cited": [],
+  "questions_addressed": [
+   1,
+   14
+  ],
+  "emergent_topics": [
+   "output traceability",
+   "longitudinal data integration",
+   "wearable data"
+  ],
+  "summary": "Physician recommends assessing error-containment architecture and human-AI team performance, with AI conclusions traceable to source data from longitudinal health records.",
+  "words": 700,
+  "pages": 0,
+  "unreadable": false
+ },
+ {
+  "id": "FDA-2026-N-7874-0181",
+  "org": "",
+  "commenter_type": "Health professional",
+  "type_inferred": false,
+  "domain": "Clinical documentation",
+  "questions_cited": [
+   19,
+   21
+  ],
+  "questions_addressed": [
+   19,
+   21
+  ],
+  "emergent_topics": [
+   "nursing role in evaluation",
+   "reporter protection"
+  ],
+  "summary": "Nurse reviewer supports clinician sample review and asks for a protected clinician reporting channel for output drift, with nurses included as adjudicators.",
+  "words": 540,
+  "pages": 0,
+  "unreadable": false
+ },
+ {
+  "id": "FDA-2026-N-7874-0146",
+  "org": "",
+  "commenter_type": "Individual",
+  "type_inferred": true,
+  "domain": "Patient-facing information",
+  "questions_cited": [],
+  "questions_addressed": [],
+  "emergent_topics": [
+   "patient autonomy",
+   "consumer chatbot scope"
+  ],
+  "summary": "Individual credits AI research with improving his care and asks FDA not to regulate general chatbots as devices or block health topics.",
+  "words": 210,
+  "pages": 0,
+  "unreadable": false
+ },
+ {
+  "id": "FDA-2026-N-7874-0167",
+  "org": "",
+  "commenter_type": "Individual",
+  "type_inferred": true,
+  "domain": "General / cross-cutting",
+  "questions_cited": [
+   1,
+   2,
+   3,
+   5,
+   7,
+   8,
+   10,
+   14,
+   18,
+   19,
+   20,
+   21,
+   22,
+   23,
+   24,
+   25,
+   26
+  ],
+  "questions_addressed": [
+   1,
+   2,
+   5,
+   8,
+   10,
+   14,
+   18,
+   19,
+   20,
+   21,
+   22,
+   24,
+   25
+  ],
+  "emergent_topics": [
+   "cross-session habituation",
+   "reference standard reliability",
+   "outsourced design controls"
+  ],
+  "summary": "Device regulatory consultant argues directiveness erodes over repeated use, benchmarks need construct validity, uncertainty shifting should stay case-level, and foundation model sourcing needs defined boundaries.",
+  "words": 7000,
+  "pages": 19,
+  "unreadable": false
+ },
+ {
+  "id": "FDA-2026-N-7874-0202",
+  "org": "The Dartmouth Institute for Health Policy and Clinical Practice",
+  "commenter_type": "Academia",
+  "type_inferred": false,
+  "domain": "General / cross-cutting",
+  "questions_cited": [
+   1,
+   7,
+   8,
+   9,
+   10,
+   11,
+   12,
+   14,
+   15,
+   19,
+   22
+  ],
+  "questions_addressed": [
+   1,
+   7,
+   8,
+   9,
+   10,
+   11,
+   12,
+   13,
+   14,
+   15,
+   18,
+   19,
+   22
+  ],
+  "emergent_topics": [
+   "target trial emulation",
+   "cross-site generalizability",
+   "cost-effectiveness evidence"
+  ],
+  "summary": "Biostatisticians urge FDA to match evidence to each specific claim using target-trial thinking, explicit generalizability analysis, separate reporting of data sources, and change-scaled revalidation.",
+  "words": 4600,
+  "pages": 8,
+  "unreadable": false
+ },
+ {
+  "id": "FDA-2026-N-7874-0200",
+  "org": "cliexa, Inc.",
+  "commenter_type": "Private industry (non-device)",
+  "type_inferred": true,
+  "domain": "Clinical decision support",
+  "questions_cited": [
+   1,
+   2,
+   3,
+   5,
+   6,
+   7,
+   8,
+   10,
+   13,
+   14,
+   15,
+   16,
+   18,
+   19,
+   20,
+   21,
+   22,
+   23,
+   24,
+   25,
+   26
+  ],
+  "questions_addressed": [
+   1,
+   2,
+   3,
+   5,
+   6,
+   8,
+   10,
+   16,
+   18,
+   19,
+   20,
+   22,
+   23,
+   24,
+   25,
+   26
+  ],
+  "emergent_topics": [
+   "system boundedness",
+   "hybrid deterministic architectures",
+   "agentic device scope"
+  ],
+  "summary": "Clinical reasoning software developer asks FDA to credit demonstrated boundedness and traceability as risk moderators, tier change control, support voluntary master files, and keep agentic non-device functions outside oversight.",
+  "words": 3700,
+  "pages": 7,
+  "unreadable": false
+ },
+ {
+  "id": "FDA-2026-N-7874-0192",
+  "org": "HealthRadar / Twenty Poms, LLC",
+  "commenter_type": "Health professional",
+  "type_inferred": false,
+  "domain": "Patient-facing information",
+  "questions_cited": [
+   6,
+   9,
+   10,
+   12,
+   13,
+   14,
+   16,
+   19,
+   20,
+   24
+  ],
+  "questions_addressed": [
+   6,
+   9,
+   10,
+   12,
+   13,
+   14,
+   16,
+   20,
+   24
+  ],
+  "emergent_topics": [
+   "evaluator reliability",
+   "clinically consequential failure endpoints",
+   "laboratory result interpretation"
+  ],
+  "summary": "Developer of lab-interpretation benchmarks urges measuring consequential clinical failure separately from answer quality and validating automated evaluators, citing its own synthetic Yardstick studies.",
+  "words": 3200,
+  "pages": 7,
+  "unreadable": false
+ },
+ {
+  "id": "FDA-2026-N-7874-0132",
+  "org": "RadFirst PLLC",
+  "commenter_type": "Health professional",
+  "type_inferred": false,
+  "domain": "Radiology / imaging",
+  "questions_cited": [
+   1,
+   4,
+   7,
+   11,
+   18,
+   19,
+   21,
+   22,
+   23,
+   24
+  ],
+  "questions_addressed": [
+   1,
+   4,
+   9,
+   11,
+   19,
+   21,
+   22,
+   23,
+   24
+  ],
+  "emergent_topics": [
+   "multi-site reader context",
+   "deployer monitoring burden",
+   "automation bias",
+   "in-workflow reporting"
+  ],
+  "summary": "Teleradiology practice asks FDA to account for readers moving across deployments, assign monitoring duties to parties with control, distinguish local evaluation from modification, and test automation bias realistically.",
+  "words": 1850,
+  "pages": 4,
+  "unreadable": false
+ },
+ {
+  "id": "FDA-2026-N-7874-0133",
+  "org": "",
+  "commenter_type": "Health professional",
+  "type_inferred": false,
+  "domain": "Radiology / imaging",
+  "questions_cited": [
+   1,
+   2,
+   3,
+   11,
+   15,
+   16,
+   18,
+   22,
+   24
+  ],
+  "questions_addressed": [
+   1,
+   2,
+   3,
+   11,
+   15,
+   16,
+   18,
+   22,
+   24
+  ],
+  "emergent_topics": [
+   "small developer access",
+   "underserved settings access"
+  ],
+  "summary": "Radiologist and AI founder urges least-burdensome rules: compare against care without the device, no default prospective studies, voluntary third parties, and QMS-managed model updates.",
+  "words": 1450,
+  "pages": 3,
+  "unreadable": false
+ },
+ {
+  "id": "FDA-2026-N-7874-0148",
+  "org": "",
+  "commenter_type": "Device industry",
+  "type_inferred": false,
+  "domain": "General / cross-cutting",
+  "questions_cited": [],
+  "questions_addressed": [
+   1,
+   16,
+   19,
+   21
+  ],
+  "emergent_topics": [
+   "verification burden",
+   "cognitive deskilling",
+   "health system ai governance"
+  ],
+  "summary": "Emergency physician and informatics officer urges adding verification burden as a risk axis, centralized certification of devices, and postmarket monitoring of clinician interaction behavior.",
+  "words": 1050,
+  "pages": 3,
+  "unreadable": false
+ },
+ {
+  "id": "FDA-2026-N-7874-0178",
+  "org": "",
+  "commenter_type": "Individual",
+  "type_inferred": true,
+  "domain": "General / cross-cutting",
+  "questions_cited": [],
+  "questions_addressed": [
+   7,
+   9,
+   16,
+   18,
+   19
+  ],
+  "emergent_topics": [
+   "health equity",
+   "task-specific credentialing",
+   "state regulatory sandboxes"
+  ],
+  "summary": "Commenter supports evaluating deployed systems but insists premarket testing of hallucination, consistency, and groundedness be a firm gate, backed by layered postmarket surveillance and third-party evaluators.",
+  "words": 700,
+  "pages": 0,
+  "unreadable": false
+ },
+ {
+  "id": "FDA-2026-N-7874-0138",
+  "org": "",
+  "commenter_type": "Health professional",
+  "type_inferred": false,
+  "domain": "General / cross-cutting",
+  "questions_cited": [],
+  "questions_addressed": [
+   19,
+   21
+  ],
+  "emergent_topics": [
+   "audit logging",
+   "user training",
+   "incident investigation"
+  ],
+  "summary": "Health professional urges postmarket surveillance that involves all stakeholders, preserves full interaction logs for incident investigation, and requires manufacturers to state device limits and training needs.",
+  "words": 430,
+  "pages": 0,
+  "unreadable": false
+ },
+ {
+  "id": "FDA-2026-N-7874-0152",
+  "org": "",
+  "commenter_type": "Health professional",
+  "type_inferred": false,
+  "domain": "General / cross-cutting",
+  "questions_cited": [
+   21
+  ],
+  "questions_addressed": [
+   14,
+   21,
+   26
+  ],
+  "emergent_topics": [
+   "nursing role"
+  ],
+  "summary": "Critical care nurse asks FDA to include nursing competency in AI benchmarking, require clinician review before irreversible agentic actions, and give nurses a reporting channel.",
+  "words": 210,
+  "pages": 0,
+  "unreadable": false
+ },
+ {
+  "id": "FDA-2026-N-7874-0154",
+  "org": "",
+  "commenter_type": "Health professional",
+  "type_inferred": false,
+  "domain": "General / cross-cutting",
+  "questions_cited": [],
+  "questions_addressed": [],
+  "emergent_topics": [
+   "nursing role"
+  ],
+  "summary": "Nurse argues nurses must be included in discussions on regulating generative AI devices because they use and explain them clinically.",
+  "words": 55,
+  "pages": 0,
+  "unreadable": false
+ },
+ {
+  "id": "FDA-2026-N-7874-0191",
+  "org": "",
+  "commenter_type": "Individual",
+  "type_inferred": true,
+  "domain": "General / cross-cutting",
+  "questions_cited": [
+   16,
+   18,
+   19,
+   21,
+   22,
+   23,
+   24,
+   25
+  ],
+  "questions_addressed": [
+   5,
+   7,
+   8,
+   16,
+   18,
+   19,
+   22,
+   23,
+   24,
+   25
+  ],
+  "emergent_topics": [
+   "qms integration",
+   "supplier quality agreements",
+   "least burdensome principle",
+   "remote regulatory assessment"
+  ],
+  "summary": "Quality engineer maps FDA's proposals onto QMSR and ISO 13485, proposing minimum master file content, supplier controls, CAPA-linked monitoring, and tiered PCCPs prespecifying verification methods.",
+  "words": 7300,
+  "pages": 12,
+  "unreadable": false
+ },
+ {
+  "id": "FDA-2026-N-7874-0158",
+  "org": "",
+  "commenter_type": "Health professional",
+  "type_inferred": true,
+  "domain": "General / cross-cutting",
+  "questions_cited": [
+   14,
+   19,
+   21,
+   26
+  ],
+  "questions_addressed": [
+   14,
+   19,
+   21,
+   26
+  ],
+  "emergent_topics": [
+   "nursing workflow",
+   "clinician workload",
+   "work redistribution",
+   "automation bias",
+   "human oversight design"
+  ],
+  "summary": "Nurse urges evaluating AI-enabled clinical workflows rather than models alone, function-matched comparators including nurses, measured human rescue and redistributed work, and operational agentic oversight.",
+  "words": 5000,
+  "pages": 16,
+  "unreadable": false
+ },
+ {
+  "id": "FDA-2026-N-7874-0151",
+  "org": "",
+  "commenter_type": "Individual",
+  "type_inferred": false,
+  "domain": "General / cross-cutting",
+  "questions_cited": [
+   1,
+   18,
+   24,
+   26
+  ],
+  "questions_addressed": [
+   18,
+   24,
+   26
+  ],
+  "emergent_topics": [
+   "audit trails and reconstructability",
+   "configuration attribution"
+  ],
+  "summary": "Independent researcher proposes linked records tying each output to its configuration, oversight state, action execution, and evidence coverage as a condition of postmarket reliance.",
+  "words": 3800,
+  "pages": 7,
+  "unreadable": false
+ },
+ {
+  "id": "FDA-2026-N-7874-0172",
+  "org": "Anchor Point Health Foundation",
+  "commenter_type": "Other",
+  "type_inferred": false,
+  "domain": "General / cross-cutting",
+  "questions_cited": [
+   7,
+   10,
+   11,
+   12,
+   18,
+   24
+  ],
+  "questions_addressed": [
+   7,
+   10,
+   18,
+   24
+  ],
+  "emergent_topics": [
+   "verified attestation",
+   "between-visit care governance",
+   "accreditation coordination",
+   "state law patchwork"
+  ],
+  "summary": "Nonprofit argues documented governance is not verified governance, urging independent review bodies, verified monitoring before premarket trade-offs, and accountability for between-visit AI outputs.",
+  "words": 2800,
+  "pages": 6,
+  "unreadable": false
+ },
+ {
+  "id": "FDA-2026-N-7874-0188",
+  "org": "",
+  "commenter_type": "Individual",
+  "type_inferred": true,
+  "domain": "General / cross-cutting",
+  "questions_cited": [
+   1,
+   5,
+   6,
+   7,
+   10,
+   12,
+   13,
+   16,
+   18,
+   19,
+   20,
+   22,
+   23,
+   24,
+   25,
+   26
+  ],
+  "questions_addressed": [
+   1,
+   5,
+   6,
+   7,
+   10,
+   12,
+   13,
+   16,
+   18,
+   19,
+   20,
+   22,
+   23,
+   24,
+   25,
+   26
+  ],
+  "emergent_topics": [
+   "ai bill of materials",
+   "sequential dependence",
+   "prompt injection security"
+  ],
+  "summary": "Agentic AI practitioner supports the approach, adding risk modifiers, trajectory-level testing, a versioned AI bill of materials, sequential drift detection, and tiered agent authorization.",
+  "words": 2050,
+  "pages": 5,
+  "unreadable": false
+ },
+ {
+  "id": "FDA-2026-N-7874-0140",
+  "org": "",
+  "commenter_type": "Academia",
+  "type_inferred": false,
+  "domain": "General / cross-cutting",
+  "questions_cited": [],
+  "questions_addressed": [
+   5,
+   6,
+   9,
+   11,
+   19
+  ],
+  "emergent_topics": [
+   "neurodivergent users",
+   "patient lived experience"
+  ],
+  "summary": "Researcher asks FDA to require subgroup evaluation and monitoring for autistic, ADHD, and neurodivergent patients, including realistic conversations and both escalation error directions.",
+  "words": 1600,
+  "pages": 2,
+  "unreadable": false
+ },
+ {
+  "id": "FDA-2026-N-7874-0162",
+  "org": "",
+  "commenter_type": "Academia",
+  "type_inferred": true,
+  "domain": "Clinical decision support",
+  "questions_cited": [],
+  "questions_addressed": [
+   1,
+   2,
+   6,
+   7,
+   9,
+   14,
+   25
+  ],
+  "emergent_topics": [
+   "nurse authority in care decisions",
+   "alert fatigue"
+  ],
+  "summary": "Nursing professor supports competency-based regulation but urges human-AI team evaluation, higher risk for action-directing outputs, NCJMM-aligned benchmarks, and required master file disclosures.",
+  "words": 1150,
+  "pages": 3,
+  "unreadable": false
+ },
+ {
+  "id": "FDA-2026-N-7874-0197",
+  "org": "",
+  "commenter_type": "Individual",
+  "type_inferred": false,
+  "domain": "General / cross-cutting",
+  "questions_cited": [
+   1,
+   8,
+   9
+  ],
+  "questions_addressed": [
+   1,
+   8,
+   9
+  ],
+  "emergent_topics": [
+   "safeguard independence",
+   "input extraction errors"
+  ],
+  "summary": "Commenter argues downstream checkers should earn risk-reduction credit only for failure modes their tests actually challenged, such as seeded upstream extraction errors.",
+  "words": 900,
+  "pages": 2,
+  "unreadable": false
+ },
+ {
+  "id": "FDA-2026-N-7874-0155",
+  "org": "",
+  "commenter_type": "Health professional",
+  "type_inferred": false,
+  "domain": "General / cross-cutting",
+  "questions_cited": [],
+  "questions_addressed": [],
+  "emergent_topics": [
+   "hallucination concerns",
+   "nurse competencies",
+   "health equity",
+   "patient disclosure and consent"
+  ],
+  "summary": "Nurse reports AI charting errors, argues current risks outweigh benefits, and asks for full monitoring, nurse competencies, and informing patients of device risks.",
+  "words": 330,
+  "pages": 0,
+  "unreadable": false
+ },
+ {
+  "id": "FDA-2026-N-7874-0194",
+  "org": "",
+  "commenter_type": "Health professional",
+  "type_inferred": false,
+  "domain": "General / cross-cutting",
+  "questions_cited": [
+   2,
+   3,
+   6,
+   17
+  ],
+  "questions_addressed": [],
+  "emergent_topics": [
+   "ai scribe accuracy",
+   "unregulated triage chatbots"
+  ],
+  "summary": "Bedside nurse briefly notes AI education helps patients, diagnosis should go to humans, call-center triage bots lack oversight, and scribes are about 70% accurate.",
+  "words": 260,
+  "pages": 0,
+  "unreadable": false
+ },
+ {
+  "id": "FDA-2026-N-7874-0196",
+  "org": "",
+  "commenter_type": "Health professional",
+  "type_inferred": false,
+  "domain": "General / cross-cutting",
+  "questions_cited": [
+   21
+  ],
+  "questions_addressed": [],
+  "emergent_topics": [
+   "nurse voice in oversight"
+  ],
+  "summary": "Nurse without direct GenAI experience asks that nurses' concerns be heard and taken seriously in monitoring AI tools.",
+  "words": 160,
+  "pages": 0,
+  "unreadable": false
+ },
+ {
+  "id": "FDA-2026-N-7874-0149",
+  "org": "ESSKA AI & Innovation Committee (European Society of Sports Traumatology, Knee Surgery and Arthroscopy)",
+  "commenter_type": "Health care association",
+  "type_inferred": false,
+  "domain": "Other",
+  "questions_cited": [
+   1,
+   2,
+   3,
+   4,
+   5,
+   6,
+   7,
+   8,
+   9,
+   10,
+   11,
+   12,
+   13,
+   14,
+   15,
+   16,
+   17,
+   18,
+   19,
+   20,
+   21,
+   22,
+   23,
+   24,
+   25,
+   26
+  ],
+  "questions_addressed": [
+   1,
+   2,
+   3,
+   4,
+   5,
+   6,
+   7,
+   8,
+   9,
+   10,
+   11,
+   12,
+   13,
+   14,
+   15,
+   16,
+   17,
+   18,
+   19,
+   20,
+   21,
+   22,
+   23,
+   24,
+   25,
+   26
+  ],
+  "emergent_topics": [
+   "comparator stability",
+   "clinician deskilling",
+   "outcome registries",
+   "staged deployment",
+   "workflow-level scoping"
+  ],
+  "summary": "Orthopaedic society committee supports the framework but asks FDA to require comparator agreement, provenance, and re-measurement, staged task-by-task release, registry-linked monitoring, and workflow-level agentic scoping.",
+  "words": 6800,
+  "pages": 13,
+  "unreadable": false
+ },
+ {
+  "id": "FDA-2026-N-7874-0157",
+  "org": "Istituto di Ricerche Farmacologiche Mario Negri IRCCS",
+  "commenter_type": "Academia",
+  "type_inferred": false,
+  "domain": "General / cross-cutting",
+  "questions_cited": [
+   1,
+   2,
+   3,
+   4,
+   5,
+   9,
+   11,
+   14,
+   19,
+   22
+  ],
+  "questions_addressed": [
+   1,
+   2,
+   3,
+   4,
+   5,
+   9,
+   11,
+   14,
+   19,
+   22
+  ],
+  "emergent_topics": [
+   "epistemic control",
+   "automation bias",
+   "user training"
+  ],
+  "summary": "Researcher proposes epistemic control as a cross-cutting consideration, arguing safety claims relying on human judgment need evidence from representative users interacting with the configured device.",
+  "words": 5300,
+  "pages": 7,
+  "unreadable": false
+ },
+ {
+  "id": "FDA-2026-N-7874-0189",
+  "org": "Operation Citizen",
+  "commenter_type": "Advocacy / nonprofit",
+  "type_inferred": true,
+  "domain": "General / cross-cutting",
+  "questions_cited": [
+   1,
+   2,
+   3,
+   4,
+   5,
+   6,
+   7,
+   8,
+   9,
+   10,
+   11,
+   12,
+   13,
+   14,
+   15,
+   16,
+   17,
+   18,
+   19,
+   20,
+   21,
+   22,
+   23,
+   24,
+   25,
+   26
+  ],
+  "questions_addressed": [
+   1,
+   9,
+   16,
+   19,
+   21,
+   22,
+   24,
+   26
+  ],
+  "emergent_topics": [
+   "financial incentives",
+   "effective recourse",
+   "output provenance",
+   "audit remediation closure"
+  ],
+  "summary": "Framework author urges treating GenAI devices as control systems, with records of purpose and incentives, configuration-tied evidence, traceable outputs, reconstructable agent actions, and tested recourse.",
+  "words": 4400,
+  "pages": 8,
+  "unreadable": false
+ },
+ {
+  "id": "FDA-2026-N-7874-0198",
+  "org": "University of Southern California, Department of Regulatory and Quality Sciences",
+  "commenter_type": "Academia",
+  "type_inferred": false,
+  "domain": "General / cross-cutting",
+  "questions_cited": [],
+  "questions_addressed": [
+   16
+  ],
+  "emergent_topics": [
+   "regulatory workforce development",
+   "regulatory science research",
+   "academic testbeds"
+  ],
+  "summary": "Academic department urges FDA to build GenAI regulatory capacity through a competency framework, cross-sector fellowships, a talent pipeline, and an academic-government-industry consortium and testbed network.",
+  "words": 2400,
+  "pages": 6,
+  "unreadable": false
+ },
+ {
+  "id": "FDA-2026-N-7874-0143",
+  "org": "VitaSignal LLC",
+  "commenter_type": "Private industry (non-device)",
+  "type_inferred": false,
+  "domain": "General / cross-cutting",
+  "questions_cited": [
+   1,
+   12,
+   13,
+   19,
+   20,
+   21,
+   22,
+   24,
+   26
+  ],
+  "questions_addressed": [
+   1,
+   12,
+   13,
+   19,
+   20,
+   21,
+   22,
+   24,
+   26
+  ],
+  "emergent_topics": [
+   "decision-time evidence",
+   "missing population data"
+  ],
+  "summary": "Startup founder offers conceptual test objectives on effective reviewer safeguards, separating synthetic from empirical evidence, event-triggered monitoring, supervisory agent evaluation, and agentic action sequences.",
+  "words": 1100,
+  "pages": 3,
+  "unreadable": false
+ },
+ {
+  "id": "FDA-2026-N-7874-0134",
+  "org": "",
+  "commenter_type": "Device industry",
+  "type_inferred": false,
+  "domain": "General / cross-cutting",
+  "questions_cited": [
+   20
+  ],
+  "questions_addressed": [
+   20
+  ],
+  "emergent_topics": [
+   "label contamination bias",
+   "statistical uncertainty reporting"
+  ],
+  "summary": "Engineer argues seeded-error probes cannot measure supervisory agent miss rates, asking for adjudicated labels, intervals, agreement terminology, and tested fail-closed behavior.",
+  "words": 1800,
+  "pages": 2,
+  "unreadable": false
+ },
+ {
+  "id": "FDA-2026-N-7874-0142",
+  "org": "Keel API, Inc.",
+  "commenter_type": "Private industry (non-device)",
+  "type_inferred": false,
+  "domain": "General / cross-cutting",
+  "questions_cited": [
+   1,
+   20,
+   26
+  ],
+  "questions_addressed": [
+   1,
+   20,
+   26
+  ],
+  "emergent_topics": [
+   "execution control evidence",
+   "agentic system security"
+  ],
+  "summary": "Agent authorization vendor asks that action-capable devices separately evidence authorization, dispatch, response, and effect, and that supervisory agents be evaluated against independent reference observations.",
+  "words": 1250,
+  "pages": 3,
+  "unreadable": false
+ },
+ {
+  "id": "FDA-2026-N-7874-0199",
+  "org": "",
+  "commenter_type": "Health professional",
+  "type_inferred": false,
+  "domain": "Radiology / imaging",
+  "questions_cited": [
+   1,
+   2,
+   4,
+   6,
+   7,
+   12,
+   13,
+   14,
+   15
+  ],
+  "questions_addressed": [
+   1,
+   2,
+   4,
+   6,
+   7,
+   12,
+   13,
+   14,
+   15
+  ],
+  "emergent_topics": [
+   "mandatory specialist review",
+   "off-label use",
+   "cost effectiveness"
+  ],
+  "summary": "Radiologist citing mammography CAD urges mandatory radiologist review of every imaging AI interpretation and clinical implementation evidence against standard-of-care comparators beyond reader studies.",
+  "words": 800,
+  "pages": 0,
+  "unreadable": false
+ },
+ {
+  "id": "FDA-2026-N-7874-0153",
+  "org": "",
+  "commenter_type": "Health professional",
+  "type_inferred": false,
+  "domain": "General / cross-cutting",
+  "questions_cited": [],
+  "questions_addressed": [
+   19,
+   21
+  ],
+  "emergent_topics": [
+   "nursing perspective",
+   "care transitions",
+   "clinician training",
+   "patient disclosure"
+  ],
+  "summary": "Veteran nurse asks that nurses be involved in evaluation and postmarket monitoring, with ways to question outputs, near-miss tracking, clinician training, and patient disclosure.",
+  "words": 800,
+  "pages": 0,
+  "unreadable": false
+ },
+ {
+  "id": "FDA-2026-N-7874-0160",
+  "org": "",
+  "commenter_type": "Individual",
+  "type_inferred": false,
+  "domain": "General / cross-cutting",
+  "questions_cited": [],
+  "questions_addressed": [],
+  "emergent_topics": [
+   "neurodivergent users",
+   "health equity"
+  ],
+  "summary": "Anonymous commenter asks that devices be tested with neurodivergent users, report subgroup performance, show uncertainty, hand off to humans, and be monitored for group-specific harms.",
+  "words": 100,
+  "pages": 0,
+  "unreadable": false
+ },
+ {
+  "id": "FDA-2026-N-7874-0164",
+  "org": "",
+  "commenter_type": "Academia",
+  "type_inferred": false,
+  "domain": "Radiology / imaging",
+  "questions_cited": [
+   9,
+   10,
+   11,
+   12,
+   14,
+   17,
+   18,
+   19,
+   22,
+   24
+  ],
+  "questions_addressed": [
+   9,
+   10,
+   11,
+   12,
+   14,
+   17,
+   18,
+   19,
+   22
+  ],
+  "emergent_topics": [
+   "input dependence testing",
+   "deferral reporting",
+   "statistical unit of analysis"
+  ],
+  "summary": "Medical imaging AI researcher supports benchmarking plus clinical confirmation but urges explicit tests that devices actually use patient-specific inputs, with patient-level statistics and deferral reporting.",
+  "words": 6500,
+  "pages": 16,
+  "unreadable": false
+ },
+ {
+  "id": "FDA-2026-N-7874-0205",
+  "org": "International Society for Pharmaceutical Engineering (ISPE)",
+  "commenter_type": "Drug industry",
+  "type_inferred": false,
+  "domain": "General / cross-cutting",
+  "questions_cited": [
+   1,
+   2,
+   3,
+   4,
+   5,
+   6,
+   7,
+   8,
+   9,
+   10,
+   11,
+   12,
+   13,
+   14,
+   15,
+   16,
+   17,
+   18,
+   19,
+   20,
+   21,
+   22,
+   23,
+   24,
+   25,
+   26
+  ],
+  "questions_addressed": [
+   2,
+   3,
+   4,
+   5,
+   6,
+   8,
+   9,
+   10,
+   11,
+   12,
+   13,
+   14,
+   16,
+   17,
+   18,
+   19,
+   20,
+   21,
+   22,
+   23,
+   24,
+   25,
+   26
+  ],
+  "emergent_topics": [
+   "technology-agnostic regulation",
+   "risk management alignment",
+   "eu regulatory alignment"
+  ],
+  "summary": "Pharmaceutical engineering society answers all 26 questions, favoring risk-proportionate, technology-agnostic, outcome-based expectations with sponsor-justified evidence and optional third-party review.",
+  "words": 5900,
+  "pages": 14,
+  "unreadable": false
+ },
+ {
+  "id": "FDA-2026-N-7874-0176",
+  "org": "Redesign Health",
+  "commenter_type": "Private industry (non-device)",
+  "type_inferred": false,
+  "domain": "General / cross-cutting",
+  "questions_cited": [
+   1,
+   2,
+   3,
+   5,
+   6,
+   8,
+   11,
+   14,
+   15,
+   16,
+   18,
+   19,
+   20,
+   22,
+   23,
+   24,
+   25,
+   26
+  ],
+  "questions_addressed": [
+   1,
+   2,
+   3,
+   5,
+   6,
+   8,
+   11,
+   14,
+   15,
+   16,
+   18,
+   19,
+   20,
+   22,
+   23,
+   24,
+   25,
+   26
+  ],
+  "emergent_topics": [
+   "regulatory predictability",
+   "small sponsor burden",
+   "binding classification feedback"
+  ],
+  "summary": "Healthcare venture investor argues unpredictable evidence requirements deter funding and asks for worked examples, a risk-to-evidence map, broad PCCPs, access-based comparators, and incentivized model files.",
+  "words": 3900,
+  "pages": 8,
+  "unreadable": false
+ },
+ {
+  "id": "FDA-2026-N-7874-0136",
+  "org": "",
+  "commenter_type": "Individual",
+  "type_inferred": false,
+  "domain": "General / cross-cutting",
+  "questions_cited": [
+   1,
+   10,
+   11,
+   19,
+   20,
+   21,
+   22,
+   23,
+   24,
+   26
+  ],
+  "questions_addressed": [
+   1,
+   10,
+   11,
+   19,
+   20,
+   21,
+   22,
+   23,
+   24,
+   26
+  ],
+  "emergent_topics": [
+   "agent containment",
+   "incident reporting deadlines",
+   "recursive self-improvement"
+  ],
+  "summary": "Data executive argues agentic devices must be provably controllable, urging reversibility in risk ratings, tested graduated brakes, isolated testing, human-approved self-changes, and fast incident reporting.",
+  "words": 2900,
+  "pages": 6,
+  "unreadable": false
+ },
+ {
+  "id": "FDA-2026-N-7874-0135",
+  "org": "",
+  "commenter_type": "Government",
+  "type_inferred": false,
+  "domain": "Other",
+  "questions_cited": [],
+  "questions_addressed": [
+   3,
+   5,
+   8,
+   12,
+   14,
+   15,
+   19,
+   22,
+   26
+  ],
+  "emergent_topics": [
+   "graduated autonomy",
+   "hallucination thresholds",
+   "persistent memory risks",
+   "patient disclosure and consent"
+  ],
+  "summary": "Orthopaedic surgeon and startup founder proposes a pathway for clinical AI to earn graduated autonomy through risk-specific error limits, action verification, longitudinal testing, and patient disclosure.",
+  "words": 1950,
+  "pages": 4,
+  "unreadable": false
+ },
+ {
+  "id": "FDA-2026-N-7874-0141",
+  "org": "Adams Healthcare AI Hub",
+  "commenter_type": "Health professional",
+  "type_inferred": false,
+  "domain": "Patient-facing information",
+  "questions_cited": [
+   3,
+   13
+  ],
+  "questions_addressed": [
+   3,
+   13
+  ],
+  "emergent_topics": [
+   "health literacy",
+   "medical tourism"
+  ],
+  "summary": "Attorney and clinical chaplain says patient-facing outputs carry higher risk and proposes literacy safeguards, and suggests synthetic data for rare conditions and medical tourists with validation.",
+  "words": 1500,
+  "pages": 5,
+  "unreadable": false
+ },
+ {
+  "id": "FDA-2026-N-7874-0190",
+  "org": "Vynix LLC (Omakyn)",
+  "commenter_type": "Device industry",
+  "type_inferred": false,
+  "domain": "General / cross-cutting",
+  "questions_cited": [
+   24,
+   25
+  ],
+  "questions_addressed": [
+   24,
+   25
+  ],
+  "emergent_topics": [
+   "cybersecurity",
+   "software bill of materials",
+   "prompt injection security"
+  ],
+  "summary": "Cybersecurity documentation firm notes the paper omits section 524B and argues existing SBOM, monitoring, and patch obligations should address foundation model changes and prompt injection.",
+  "words": 1100,
+  "pages": 2,
+  "unreadable": false
+ },
+ {
+  "id": "FDA-2026-N-7874-0187",
+  "org": "",
+  "commenter_type": "Health care association",
+  "type_inferred": false,
+  "domain": "Other",
+  "questions_cited": [],
+  "questions_addressed": [
+   6,
+   19
+  ],
+  "emergent_topics": [
+   "longitudinal outcome linkage",
+   "interoperability",
+   "audit trails"
+  ],
+  "summary": "Commenter proposes a conceptual HealthWallet architecture and urges FDA to document AI alerts, verify clinician responses, and link outputs to patient outcomes between visits.",
+  "words": 650,
+  "pages": 0,
+  "unreadable": false
+ },
+ {
+  "id": "FDA-2026-N-7874-0147",
+  "org": "",
+  "commenter_type": "Individual",
+  "type_inferred": false,
+  "domain": "General / cross-cutting",
+  "questions_cited": [
+   10,
+   16,
+   20,
+   26
+  ],
+  "questions_addressed": [
+   10,
+   16,
+   20,
+   26
+  ],
+  "emergent_topics": [
+   "action audit integrity",
+   "idempotent agent actions"
+  ],
+  "summary": "Independent developer draws on synthetic experiments to propose agentic action-boundary tests, proof that supervisory checks can fail, benchmark reach checks, and named levels of independence.",
+  "words": 800,
+  "pages": 0,
+  "unreadable": false
+ },
+ {
+  "id": "FDA-2026-N-7874-0201",
+  "org": "",
+  "commenter_type": "Individual",
+  "type_inferred": true,
+  "domain": "General / cross-cutting",
+  "questions_cited": [],
+  "questions_addressed": [],
+  "emergent_topics": [
+   "federal-state harmonization",
+   "standard datasets"
+  ],
+  "summary": "Commenter calls for federal leadership to set common healthcare AI standards, shared datasets, and legal certainty across states.",
+  "words": 110,
+  "pages": 0,
+  "unreadable": false
+ },
+ {
+  "id": "FDA-2026-N-7874-0175",
+  "org": "Clara Health",
+  "commenter_type": "Private industry (non-device)",
+  "type_inferred": false,
+  "domain": "General / cross-cutting",
+  "questions_cited": [
+   1,
+   2,
+   3,
+   5,
+   6,
+   7,
+   9,
+   10,
+   11,
+   14,
+   15,
+   18,
+   19,
+   22,
+   24,
+   26
+  ],
+  "questions_addressed": [
+   1,
+   2,
+   3,
+   5,
+   6,
+   7,
+   9,
+   10,
+   11,
+   14,
+   15,
+   18,
+   19,
+   22,
+   24,
+   26
+  ],
+  "emergent_topics": [
+   "graduated autonomy",
+   "context integrity",
+   "care completion",
+   "state practice of medicine"
+  ],
+  "summary": "Primary care AI developer backs the framework with risk modifiers, whole-workflow testing, and real-care comparators, and seeks a clear evidence route to reduced clinician review.",
+  "words": 9000,
+  "pages": 27,
+  "unreadable": false
+ }
+]

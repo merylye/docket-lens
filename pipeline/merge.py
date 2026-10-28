@@ -10,20 +10,20 @@ ROOT = os.path.dirname(HERE)
 
 # Emergent topic tags (free text from coding) grouped into display topics. First match wins.
 TOPICS = [
-    ("Reliance, sycophancy, and affective harms", r"sycophan|distress|persuasion|persistent memory|patient trust|dependence|relian|relational"),
-    ("Hallucination and output reliability", r"hallucinat|nondetermin|fabricat|abstention|instruction adherence|degradation|reproducib|null input|protocol fidelity|confidence calibration|output bounding"),
-    ("Runtime controls and kill switches", r"kill switch|stop control|fail-closed|deterministic|runtime|execution authority|architectural safety|layered safety|verification gate|scope control|authorization control|agent identity|human authorization|instruction-layer|graduated autonomy|staged deployment|configuration registration|execution-time|hard-gate|competency floors|override|design controls|architectural safeguards|autonomous function|prompt change control"),
-    ("Audit trails, provenance, and records", r"audit|trace|provenance|record|log\b|logs|reconstruct|hash commit|dataset documentation|soup|registries|failure logging|incident response|sbom|identity|validation as code|monitoring records|competency profile"),
+    ("Reliance, sycophancy, and affective harms", r"delusion|sycophan|distress|persuasion|persistent memory|patient trust|dependence|relian|relational"),
+    ("Hallucination and output reliability", r"omission errors|scribe accuracy|documentation errors|incomplete ai summaries|extraction errors|hallucinat|nondetermin|fabricat|abstention|instruction adherence|degradation|reproducib|null input|protocol fidelity|confidence calibration|output bounding"),
+    ("Runtime controls and kill switches", r"agent containment|boundedness|idempotent|recursive self-improvement|kill switch|stop control|fail-closed|deterministic|runtime|execution authority|architectural safety|layered safety|verification gate|scope control|authorization control|agent identity|human authorization|instruction-layer|graduated autonomy|staged deployment|configuration registration|execution-time|hard-gate|competency floors|override|design controls|architectural safeguards|autonomous function|prompt change control"),
+    ("Audit trails, provenance, and records", r"cryptographic|bill of materials|lineage|attestation|attribution|adverse event|incident|reporting infrastructure|audit|trace|provenance|record|log\b|logs|reconstruct|hash commit|dataset documentation|soup|registries|failure logging|incident response|sbom|identity|validation as code|monitoring records|competency profile"),
     ("Cybersecurity", r"cyber|security|adversarial|prompt injection|input integrity|data integrity"),
     ("Privacy and consent", r"privacy|consent|minimization|hipaa|biometric|surveillance|cross-border"),
     ("Liability and accountability", r"liabil|accountab|insurab|licensure|practice of medicine|legal authority|enforcement|suspension|personhood|conflicts of interest"),
-    ("Equity, access, and disability", r"equity|rural|underserved|access|neurodiverg|assistive|disab|pediatric|bias(?!.*automation)|algorithmic|demographic|latent clinical need|non-english|veteran"),
-    ("Human oversight and automation bias", r"automation bias|human factors|oversight|deskill|workload|in-the-loop|competency gating|clinical judgment|workflow|inter-rater|clinician accountability|caregiver|meaningful human review|literacy|clinician feedback"),
+    ("Equity, access, and disability", r"sex differences|patient lived experience|population-level|missing population|equity|rural|underserved|access|neurodiverg|assistive|disab|pediatric|bias(?!.*automation)|algorithmic|demographic|latent clinical need|non-english|veteran"),
+    ("Human oversight and automation bias", r"\btraining|education|alert fatigue|caseload|work redistribution|clinician trust|automation bias|human factors|oversight|deskill|workload|in-the-loop|competency gating|clinical judgment|workflow|inter-rater|clinician accountability|caregiver|meaningful human review|literacy|clinician feedback"),
     ("Small developer burden", r"small|burden"),
-    ("Coverage and reimbursement", r"insurance|payer|reimburse|coverage|utilization"),
+    ("Coverage and reimbursement", r"cost effectiveness|insurance|payer|reimburse|coverage|utilization"),
     ("Deployment settings and infrastructure", r"deployer|institutional|operational resilience|interoperab|on-device|offline|serviceab|obsolescence|multi-version|multi-site|common-mode|case-mix|drift|retrain|physical output|point-of-care|manufactur|local site|home and community|health workers|staffing|compression|fine-tuning|connectivity|local validation|execution locality|discontinuation|research settings|wearables|workforce"),
     ("Transparency and public participation", r"transparen|disclosure|disclaimer|promotion|public|stakeholder|human rights|labeling|patient autonomy|informed|patient engagement"),
-    ("Regulatory process and harmonization", r"harmoni|\beu\b|iso|international|interagency|pathway|510\(k\)|terminology|qms|mdr|cross-center|combination|laboratory|multiple function|modular|pccp|clearance|state ai|deregulation|boundary|scope definition|regulatory|guidelines|clinical association|evidence|endpoint|surrogate|validity|measurement|temporal fidelity|out-of-domain|psychometric|system-level|criticality|gene therapy|retrieval|causal|simulation|technology-neutral|decision support|clinical-adjacent|counterfactual|specialist|exposure therapy|self-detection|therapy regulation|consensus definitions|fda-cms|general wellness|substantial equivalence|synthetic benchmarks|foreseeable|ethics review"),
+    ("Regulatory process and harmonization", r"state law|scope of regulation|technology-agnostic|risk management|chatbot scope|device scope|classification|time-limited authorization|credentialing|target trial|statistical|generalizab|comparator stability|deferral reporting|harmoni|\beu\b|iso|international|interagency|pathway|510\(k\)|terminology|qms|mdr|cross-center|combination|laboratory|multiple function|modular|pccp|clearance|state ai|deregulation|boundary|scope definition|regulatory|guidelines|clinical association|evidence|endpoint|surrogate|validity|measurement|temporal fidelity|out-of-domain|psychometric|system-level|criticality|gene therapy|retrieval|causal|simulation|technology-neutral|decision support|clinical-adjacent|counterfactual|specialist|exposure therapy|self-detection|therapy regulation|consensus definitions|fda-cms|general wellness|substantial equivalence|synthetic benchmarks|foreseeable|ethics review"),
     ("Opposition to AI use", r"opposition"),
 ]
 NONTOPIC = r"off-topic|no original content"
@@ -64,7 +64,8 @@ NO_CARD = set(PRIV["no_card"])
 # The same document filed twice: count it once, under the earlier filing (lower number when filed the same day).
 DUPLICATES = {"FDA-2026-N-7874-0117": "FDA-2026-N-7874-0102", "FDA-2026-N-7874-0058": "FDA-2026-N-7874-0057",
               "FDA-2026-N-7874-0013": "FDA-2026-N-7874-0010", "FDA-2026-N-7874-0129": "FDA-2026-N-7874-0128",
-              "FDA-2026-N-7874-0041": "FDA-2026-N-7874-0040"}
+              "FDA-2026-N-7874-0041": "FDA-2026-N-7874-0040",
+              "FDA-2026-N-7874-0175": "FDA-2026-N-7874-0174"}
 PROPOSALS = [  # in docket question order
     ("risk_framework", "Two-axis risk framework", "FDA's framework rating risk by device activity and the consequence of relying on an incorrect output (Q1)"),
     ("directiveness_continuum", "Directiveness as a continuum", "Treating how directive an output is as a matter of degree, with wording and personalization as risk modifiers (Q2)"),

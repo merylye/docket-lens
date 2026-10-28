@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-21T22:18:45.819508+00:00",
+ "updated": "2026-10-28T23:18:12.673251+00:00",
  "questions": [
   {
    "n": 1,
@@ -1271,12 +1271,22 @@
     "id": "FDA-2026-N-7874-0076",
     "reason": "A median clinician comparator would normalize existing gaps in care as an acceptable ceiling",
     "alternative": ""
+   },
+   {
+    "id": "FDA-2026-N-7874-0184",
+    "reason": "Specialist-level tools should be benchmarked against specialists, not generalists or a median clinician",
+    "alternative": "Board-certified specialists in the relevant field"
    }
   ],
   "voluntary_model_files": [
    {
     "id": "FDA-2026-N-7874-0003",
     "reason": "Foundation model developers have strong competitive incentives to withhold provenance, architecture, and failure mode information",
+    "alternative": ""
+   },
+   {
+    "id": "FDA-2026-N-7874-0076",
+    "reason": "Voluntary files draw disclosure only from developers with little to hide",
     "alternative": ""
    },
    {
@@ -1295,12 +1305,17 @@
     "alternative": ""
    },
    {
-    "id": "FDA-2026-N-7874-0076",
-    "reason": "Voluntary files draw disclosure only from developers with little to hide",
-    "alternative": ""
+    "id": "FDA-2026-N-7874-0167",
+    "reason": "A voluntary file cannot replace binding change notice when developers lack incentive to disclose",
+    "alternative": "Binding change-notification obligation with a predefined response protocol"
    }
   ],
   "patient_facing_risk": [
+   {
+    "id": "FDA-2026-N-7874-0006",
+    "reason": "Patient-facing status should not automatically raise risk on the consequences axis",
+    "alternative": ""
+   },
    {
     "id": "FDA-2026-N-7874-0010",
     "reason": "What distinguishes risk is whether the user can realistically verify output at the moment of reliance",
@@ -1309,11 +1324,6 @@
    {
     "id": "FDA-2026-N-7874-0030",
     "reason": "Patient-facing use should not by itself create a presumption of higher risk",
-    "alternative": ""
-   },
-   {
-    "id": "FDA-2026-N-7874-0006",
-    "reason": "Patient-facing status should not automatically raise risk on the consequences axis",
     "alternative": ""
    },
    {
@@ -1329,6 +1339,16 @@
    {
     "id": "FDA-2026-N-7874-0115",
     "reason": "Patient-facing versus HCP-facing status should not serve as a categorical proxy for risk",
+    "alternative": ""
+   },
+   {
+    "id": "FDA-2026-N-7874-0133",
+    "reason": "FDA should not assume patients cannot handle clinical information",
+    "alternative": ""
+   },
+   {
+    "id": "FDA-2026-N-7874-0146",
+    "reason": "Patient information chatbots resemble libraries and should not be restricted like medical devices.",
     "alternative": ""
    }
   ],
@@ -1349,13 +1369,13 @@
     "alternative": ""
    },
    {
-    "id": "FDA-2026-N-7874-0131",
-    "reason": "An axis based on output wording can be moved by rewording without changing user options",
+    "id": "FDA-2026-N-7874-0126",
+    "reason": "Functions should be classified by what their output asserts, not how it is worded",
     "alternative": ""
    },
    {
-    "id": "FDA-2026-N-7874-0126",
-    "reason": "Functions should be classified by what their output asserts, not how it is worded",
+    "id": "FDA-2026-N-7874-0131",
+    "reason": "An axis based on output wording can be moved by rewording without changing user options",
     "alternative": ""
    }
   ],
@@ -1376,6 +1396,11 @@
     "id": "FDA-2026-N-7874-0055",
     "reason": "Device activity does not equal probability of harm, so the two axes are insufficient",
     "alternative": ""
+   },
+   {
+    "id": "FDA-2026-N-7874-0180",
+    "reason": "The two axes are too simple for real-world use and ignore population-level harm",
+    "alternative": "Tiered risk categories modeled on the EU AI Act"
    }
   ],
   "escalation_errors": [
@@ -1386,11 +1411,6 @@
    }
   ],
   "postmarket_tradeoff": [
-   {
-    "id": "FDA-2026-N-7874-0113",
-    "reason": "Postmarket monitoring should verify premarket claims, not substitute for inadequate premarket evidence",
-    "alternative": ""
-   },
    {
     "id": "FDA-2026-N-7874-0023",
     "reason": "Postmarket review is not enough for a new technology with many unknowns",
@@ -1407,9 +1427,19 @@
     "alternative": ""
    },
    {
+    "id": "FDA-2026-N-7874-0113",
+    "reason": "Postmarket monitoring should verify premarket claims, not substitute for inadequate premarket evidence",
+    "alternative": ""
+   },
+   {
     "id": "FDA-2026-N-7874-0126",
     "reason": "Reduced premarket evidence moves discovery of uncertainty onto patients through harm",
     "alternative": ""
+   },
+   {
+    "id": "FDA-2026-N-7874-0167",
+    "reason": "Uncertainty shifting should stay case by case under existing guidance, not apply to GenAI as a class",
+    "alternative": "Existing case-level uncertainty guidance with a preauthorized active data-collection plan"
    }
   ],
   "flexible_change_control": [
@@ -1417,6 +1447,11 @@
     "id": "FDA-2026-N-7874-0076",
     "reason": "A PCCP is the wrong instrument for changes the sponsor cannot predetermine",
     "alternative": ""
+   },
+   {
+    "id": "FDA-2026-N-7874-0136",
+    "reason": "Changes an AI directs to itself, with scope not describable in advance, should not be preapproved",
+    "alternative": "Record, re-benchmark, and require named human sign-off for every self-proposed change"
    }
   ],
   "no_care_comparator": [
@@ -1429,12 +1464,22 @@
     "id": "FDA-2026-N-7874-0126",
     "reason": "An unavailable alternative changes a device's benefit, not the consequence of its errors",
     "alternative": ""
+   },
+   {
+    "id": "FDA-2026-N-7874-0199",
+    "reason": "Access constraints should not justify unreviewed AI reads; no interpretation is not the only alternative",
+    "alternative": "Use standard-of-care comparators such as specialist review of images"
    }
   ],
   "confirmation_flex": [
    {
     "id": "FDA-2026-N-7874-0107",
     "reason": "Prospective clinical studies should be the main way to establish safety for devices influencing patient care",
+    "alternative": ""
+   },
+   {
+    "id": "FDA-2026-N-7874-0199",
+    "reason": "Requires real-world clinical implementation evidence; reader studies and controlled tests are insufficient.",
     "alternative": ""
    }
   ],
@@ -1534,6 +1579,11 @@
    "point": "Safe implementation of generative AI medical devices is a shared human responsibility"
   },
   {
+   "id": "FDA-2026-N-7874-0083",
+   "kind": "outside_framing",
+   "point": "Keep responsibility for model validity, drift, and monitoring with model makers, not pathology labs"
+  },
+  {
    "id": "FDA-2026-N-7874-0085",
    "kind": "outside_framing",
    "point": "Consider standardized, machine checkable minimum documentation for datasets used in benchmarking and clinical confirmation"
@@ -1549,9 +1599,84 @@
    "point": "Assess whether evaluation and monitoring layers provide truly independent evidence about device failure"
   },
   {
-   "id": "FDA-2026-N-7874-0083",
+   "id": "FDA-2026-N-7874-0137",
+   "kind": "general_objection",
+   "point": "Accuracy, bias, and privacy risks of generative AI outweigh its benefits"
+  },
+  {
+   "id": "FDA-2026-N-7874-0138",
    "kind": "outside_framing",
-   "point": "Keep responsibility for model validity, drift, and monitoring with model makers, not pathology labs"
+   "point": "Postmarket surveillance should involve all stakeholders and preserve full interaction logs for incident investigation"
+  },
+  {
+   "id": "FDA-2026-N-7874-0139",
+   "kind": "general_objection",
+   "point": "Self-changing AI should not enter practice until point-of-care verification and validation is solved"
+  },
+  {
+   "id": "FDA-2026-N-7874-0153",
+   "kind": "outside_framing",
+   "point": "Nurses should be involved in AI evaluation and postmarket monitoring, with near misses tracked"
+  },
+  {
+   "id": "FDA-2026-N-7874-0154",
+   "kind": "outside_framing",
+   "point": "Nurses must be included in discussions on regulating generative AI devices"
+  },
+  {
+   "id": "FDA-2026-N-7874-0155",
+   "kind": "general_objection",
+   "point": "Nurse says GenAI device risks now outweigh benefits, citing errors in AI-generated charts"
+  },
+  {
+   "id": "FDA-2026-N-7874-0156",
+   "kind": "too_brief",
+   "point": "AI-generated notes miss important labs, consultations, and recommendations"
+  },
+  {
+   "id": "FDA-2026-N-7874-0159",
+   "kind": "general_objection",
+   "point": "AI is unproven and biased and overburdened staff cannot catch its errors"
+  },
+  {
+   "id": "FDA-2026-N-7874-0166",
+   "kind": "outside_framing",
+   "point": "AI needs constant human correction, lacks context, and cannot replace human relationships"
+  },
+  {
+   "id": "FDA-2026-N-7874-0170",
+   "kind": "too_brief",
+   "point": "AI tools in nursing practice sometimes write confusing or nonsensical output"
+  },
+  {
+   "id": "FDA-2026-N-7874-0187",
+   "kind": "outside_framing",
+   "point": "Track whether AI alerts reach clinicians and link them to patient outcomes"
+  },
+  {
+   "id": "FDA-2026-N-7874-0190",
+   "kind": "outside_framing",
+   "point": "GenAI device guidance should connect to section 524B cybersecurity duties for foundation models"
+  },
+  {
+   "id": "FDA-2026-N-7874-0194",
+   "kind": "too_brief",
+   "point": "AI scribes are about 70% accurate and call-center triage bots lack FDA oversight"
+  },
+  {
+   "id": "FDA-2026-N-7874-0196",
+   "kind": "too_brief",
+   "point": "Nurses' concerns should be heard when monitoring AI tools"
+  },
+  {
+   "id": "FDA-2026-N-7874-0201",
+   "kind": "outside_framing",
+   "point": "Federal leadership should set common standards and datasets that states accept"
+  },
+  {
+   "id": "FDA-2026-N-7874-0204",
+   "kind": "outside_framing",
+   "point": "Wants CRNAs recognized as qualified clinicians, comparators, and partners in postmarket monitoring"
   }
  ],
  "open_questions": [
@@ -1822,5 +1947,5 @@
    "desc": "Use consistent AI terminology across FDA and other agencies and harmonize with international and existing standards."
   }
  ],
- "method": "124 posted comments read in full, including attachments, and coded against the codebook. A question counts as addressed when a comment discusses it substantively, cited or not. Comment types come from Regulations.gov; those with no category were assigned from content and are marked inferred."
+ "method": "197 posted comments read in full, including attachments, and coded against the codebook. A question counts as addressed when a comment discusses it substantively, cited or not. Comment types come from Regulations.gov; those with no category were assigned from content and are marked inferred."
 }
