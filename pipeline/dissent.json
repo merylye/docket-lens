@@ -15,19 +15,19 @@
   "confirmation_flex": [
    {
     "id": "FDA-2026-N-7874-0107",
-    "reason": "Argues prospective clinical studies should be the principal evidence for devices that influence patient care.",
+    "reason": "Prospective clinical studies should be the principal evidence for devices that influence patient care.",
     "alternative": ""
    },
    {
     "id": "FDA-2026-N-7874-0199",
-    "reason": "Argues reader studies are insufficient and clinical implementation evidence should be required.",
+    "reason": "Reader studies are insufficient and clinical implementation evidence should be required.",
     "alternative": ""
    }
   ],
   "directiveness_continuum": [
    {
     "id": "FDA-2026-N-7874-0043",
-    "reason": "Argues directive outputs should carry required 'for information only' disclaimers rather than relying on a continuum.",
+    "reason": "Directive outputs should carry required 'for information only' disclaimers rather than relying on a continuum.",
     "alternative": ""
    },
    {
@@ -76,7 +76,7 @@
    },
    {
     "id": "FDA-2026-N-7874-0139",
-    "reason": "Asks how practitioners can verify self-changing technology; says it should not enter practice until answered.",
+    "reason": "Self-changing technology should not enter practice until practitioners can verify it.",
     "alternative": ""
    }
   ],
@@ -142,12 +142,12 @@
   "patient_facing_risk": [
    {
     "id": "FDA-2026-N-7874-0037",
-    "reason": "Argues patient-versus-HCP is the wrong variable; risk should depend on device-specific user competency.",
+    "reason": "Patient-versus-HCP is the wrong variable; risk should depend on device-specific user competency.",
     "alternative": ""
    },
    {
     "id": "FDA-2026-N-7874-0080",
-    "reason": "Argues informational, non-directive consumer functions are low risk and belong outside device oversight or under enforcement discretion.",
+    "reason": "Informational, non-directive consumer functions are low risk and belong outside device oversight or under enforcement discretion.",
     "alternative": ""
    },
    {
@@ -191,7 +191,7 @@
    },
    {
     "id": "FDA-2026-N-7874-0155",
-    "reason": "Argues risks currently exceed benefits, so devices should not be widely released before risks are known.",
+    "reason": "Risks currently exceed benefits, so devices should not be widely released before risks are known.",
     "alternative": ""
    },
    {
@@ -262,7 +262,7 @@
    },
    {
     "id": "FDA-2026-N-7874-0148",
-    "reason": "Says master-file transparency is insufficient since health systems cannot interpret it; wants centralized FDA or accredited certification.",
+    "reason": "Master-file transparency is insufficient because health systems cannot interpret it; FDA or accredited bodies should certify instead.",
     "alternative": ""
    },
    {
@@ -350,7 +350,7 @@
   {
    "id": "FDA-2026-N-7874-0072",
    "kind": "outside_framing",
-   "point": "Asks for clearer terminology and risk-proportionate evidence without addressing specific proposals."
+   "point": "Asks for clearer terminology and risk-proportionate evidence."
   },
   {
    "id": "FDA-2026-N-7874-0073",
@@ -365,7 +365,7 @@
   {
    "id": "FDA-2026-N-7874-0085",
    "kind": "outside_framing",
-   "point": "Recommends standardized machine-checkable dataset documentation and explicitly takes no position on FDA's proposals."
+   "point": "Recommends standardized machine-checkable dataset documentation."
   },
   {
    "id": "FDA-2026-N-7874-0096",
@@ -375,7 +375,7 @@
   {
    "id": "FDA-2026-N-7874-0104",
    "kind": "outside_framing",
-   "point": "Proposes an evidence-independence assessment complementing FDA's measures without evaluating any specific proposal."
+   "point": "Proposes an evidence-independence assessment complementing FDA's measures."
   },
   {
    "id": "FDA-2026-N-7874-0109",
@@ -385,7 +385,7 @@
   {
    "id": "FDA-2026-N-7874-0132",
    "kind": "outside_framing",
-   "point": "Deployer perspective on distributed reading, monitoring responsibilities and local changes, without stances on proposals."
+   "point": "Deployer perspective on distributed reading, monitoring responsibilities and local changes."
   },
   {
    "id": "FDA-2026-N-7874-0137",
@@ -395,12 +395,12 @@
   {
    "id": "FDA-2026-N-7874-0138",
    "kind": "outside_framing",
-   "point": "Lists postmarket incident-investigation factors and logging elements without evaluating FDA's specific proposals."
+   "point": "Lists postmarket incident-investigation factors and logging elements."
   },
   {
    "id": "FDA-2026-N-7874-0143",
    "kind": "outside_framing",
-   "point": "Gives testing recommendations without saying whether FDA's proposals are acceptable"
+   "point": "Offers test objectives for reviewer safeguards, synthetic evidence, monitoring triggers, and agentic action sequences."
   },
   {
    "id": "FDA-2026-N-7874-0145",
@@ -410,7 +410,7 @@
   {
    "id": "FDA-2026-N-7874-0147",
    "kind": "outside_framing",
-   "point": "Suggests added evaluation methods for agentic actions, supervisors, benchmarks without judging FDA's proposals."
+   "point": "Suggests added evaluation methods for agentic actions, supervisors, and benchmarks."
   },
   {
    "id": "FDA-2026-N-7874-0153",
@@ -440,7 +440,7 @@
   {
    "id": "FDA-2026-N-7874-0170",
    "kind": "too_brief",
-   "point": "Nurse notes AI tools sometimes produce confusing output, without addressing FDA's proposals."
+   "point": "Nurse notes AI tools sometimes produce confusing output."
   },
   {
    "id": "FDA-2026-N-7874-0187",
@@ -450,7 +450,7 @@
   {
    "id": "FDA-2026-N-7874-0190",
    "kind": "outside_framing",
-   "point": "GenAI device guidance should connect to section 524B cybersecurity duties for foundation models"
+   "point": "GenAI device guidance should connect to section 524B cybersecurity duties for foundation models."
   },
   {
    "id": "FDA-2026-N-7874-0194",
