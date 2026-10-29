@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-29T00:24:48.845815+00:00",
+ "updated": "2026-10-29T00:27:40.333753+00:00",
  "questions": [
   {
    "n": 1,
@@ -1990,6 +1990,11 @@
    "key": "align_standards",
    "label": "Align terms and standards across agencies and countries",
    "desc": "Use consistent AI terminology across FDA and other agencies and harmonize with international and existing standards."
+  },
+  {
+   "key": "nonphysician_clinicians",
+   "label": "Include nurses and other non-physician clinicians in evaluation",
+   "desc": "Treat nurses, nurse practitioners, nurse anesthetists, and other non-physician clinicians as intended users, use function-based clinician terms, and include them as evaluators, comparators, and adjudicators and in developing rules."
   }
  ],
  "method": "197 posted comments read in full, including attachments, and coded against the codebook. A question counts as addressed when a comment discusses it substantively, cited or not. Comment types come from Regulations.gov; those with no category were assigned from content and are marked inferred."

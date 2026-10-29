@@ -199,6 +199,11 @@
    "key": "align_standards",
    "label": "Align terms and standards across agencies and countries",
    "desc": "Use consistent AI terminology across FDA and other agencies and harmonize with international and existing standards."
+  },
+  {
+   "key": "nonphysician_clinicians",
+   "label": "Include nurses and other non-physician clinicians in evaluation",
+   "desc": "Treat nurses, nurse practitioners, nurse anesthetists, and other non-physician clinicians as intended users, use function-based clinician terms, and include them as evaluators, comparators, and adjudicators and in developing rules."
   }
  ],
  "map": {
@@ -1013,6 +1018,7 @@
    "agent_sequences"
   ],
   "FDA-2026-N-7874-0204": [
+   "nonphysician_clinicians",
    "error_reporting",
    "accountability"
   ],
@@ -1025,6 +1031,7 @@
    "sequestered_benchmarks"
   ],
   "FDA-2026-N-7874-0183": [
+   "nonphysician_clinicians",
    "populations_settings",
    "accountability",
    "version_pinning"
@@ -1054,6 +1061,7 @@
   "FDA-2026-N-7874-0161": [
    "risk_factors",
    "escalation_separate",
+   "nonphysician_clinicians",
    "human_ai_team",
    "postmarket_plans",
    "agent_authority",
@@ -1096,6 +1104,7 @@
    "oversight_demonstrated"
   ],
   "FDA-2026-N-7874-0165": [
+   "nonphysician_clinicians",
    "oversight_demonstrated",
    "audit_trail",
    "error_reporting",
@@ -1164,6 +1173,7 @@
    "risk_factors",
    "oversight_demonstrated",
    "escalation_separate",
+   "nonphysician_clinicians",
    "human_approval",
    "kill_switch",
    "audit_trail",
@@ -1176,7 +1186,8 @@
    "drift_monitoring"
   ],
   "FDA-2026-N-7874-0181": [
-   "error_reporting"
+   "error_reporting",
+   "nonphysician_clinicians"
   ],
   "FDA-2026-N-7874-0146": [
    "lower_burden_supervised"
@@ -1249,6 +1260,7 @@
    "postmarket_plans"
   ],
   "FDA-2026-N-7874-0152": [
+   "nonphysician_clinicians",
    "human_approval",
    "error_reporting"
   ],
@@ -1264,7 +1276,7 @@
   ],
   "FDA-2026-N-7874-0158": [
    "human_ai_team",
-   "comparator_realistic",
+   "nonphysician_clinicians",
    "error_reporting",
    "accountability",
    "human_approval",
@@ -1312,7 +1324,8 @@
    "version_pinning"
   ],
   "FDA-2026-N-7874-0155": [
-   "patient_disclosure"
+   "patient_disclosure",
+   "nonphysician_clinicians"
   ],
   "FDA-2026-N-7874-0149": [
    "benchmark_validity",
@@ -1365,6 +1378,7 @@
    "benchmark_validity"
   ],
   "FDA-2026-N-7874-0153": [
+   "nonphysician_clinicians",
    "error_reporting",
    "patient_disclosure"
   ],
@@ -1444,6 +1458,9 @@
   ],
   "FDA-2026-N-7874-0201": [
    "align_standards"
+  ],
+  "FDA-2026-N-7874-0154": [
+   "nonphysician_clinicians"
   ]
  }
 }

@@ -933,11 +933,11 @@ FDA-2026-N-7874-0144	human_approval	Require human checkpoints before irreversibl
 FDA-2026-N-7874-0144	kill_switch	Let professionals interrupt, override, or reverse agent actions
 FDA-2026-N-7874-0144	agent_authority	Define functions agentic systems are not permitted to perform
 FDA-2026-N-7874-0144	agent_sequences	Evaluate multi-step agent tasks and error propagation
-FDA-2026-N-7874-0204	none	Use qualified clinicians with relevant expertise instead of physician-only terms
-FDA-2026-N-7874-0204	none	Include CRNAs as comparators and adjudicators for anesthesia devices
+FDA-2026-N-7874-0204	nonphysician_clinicians	Use qualified clinicians with relevant expertise instead of physician-only terms
+FDA-2026-N-7874-0204	nonphysician_clinicians	Include CRNAs as comparators and adjudicators for anesthesia devices
 FDA-2026-N-7874-0204	error_reporting	Create channels for clinicians and societies to report safety signals
 FDA-2026-N-7874-0204	accountability	Keep manufacturers primarily responsible for postmarket surveillance
-FDA-2026-N-7874-0204	none	Involve CRNAs directly in developing AI regulations
+FDA-2026-N-7874-0204	nonphysician_clinicians	Involve CRNAs directly in developing AI regulations
 FDA-2026-N-7874-0204	none	Bar AI tools from expanding supervision of CRNAs
 FDA-2026-N-7874-0193	lower_burden_supervised	Place clinician-signed drafting functions at the lowest activity level
 FDA-2026-N-7874-0193	lower_burden_supervised	Accept retrospective and shadow evaluation for low-activity confirmation
@@ -949,8 +949,8 @@ FDA-2026-N-7874-0193	model_disclosure	Tie master file benefits to version stabil
 FDA-2026-N-7874-0193	pccp_bounded	Allow PCCPs to cover re-benchmarked vendor model updates
 FDA-2026-N-7874-0193	sequestered_benchmarks	Publish or recognize reference benchmarks
 FDA-2026-N-7874-0193	none	Publish plain-language guidance for small physician-led developers
-FDA-2026-N-7874-0183	none	Use provider-neutral clinician language in future guidance
-FDA-2026-N-7874-0183	none	Include nurse practitioners as adjudicators and comparator panelists
+FDA-2026-N-7874-0183	nonphysician_clinicians	Use provider-neutral clinician language in future guidance
+FDA-2026-N-7874-0183	nonphysician_clinicians	Include nurse practitioners as adjudicators and comparator panelists
 FDA-2026-N-7874-0183	populations_settings	Validate devices with the clinicians who will actually use them
 FDA-2026-N-7874-0183	accountability	Keep manufacturers solely accountable for postmarket monitoring
 FDA-2026-N-7874-0183	none	Keep practice-level monitoring roles voluntary and low burden
@@ -982,9 +982,9 @@ FDA-2026-N-7874-0179	agent_authority	Specify agent permissions, human authorizat
 FDA-2026-N-7874-0179	directiveness_behavior	Publish annotated examples of increasing directiveness
 FDA-2026-N-7874-0161	risk_factors	Add human-oversight feasibility as an explicit risk modifier
 FDA-2026-N-7874-0161	escalation_separate	Evaluate escalation as an AI-to-clinician handoff
-FDA-2026-N-7874-0161	none	Use nursing benchmarks and nurse adjudicators for nursing-facing devices
+FDA-2026-N-7874-0161	nonphysician_clinicians	Use nursing benchmarks and nurse adjudicators for nursing-facing devices
 FDA-2026-N-7874-0161	human_ai_team	Confirm performance under realistic nursing workflow conditions
-FDA-2026-N-7874-0161	none	Match comparator expertise to the intended profession and setting
+FDA-2026-N-7874-0161	nonphysician_clinicians	Match comparator expertise to the intended profession and setting
 FDA-2026-N-7874-0161	postmarket_plans	Treat overrides and clinician corrections as postmarket safety signals
 FDA-2026-N-7874-0161	agent_authority	Require stop conditions and human-intervention boundaries for agents
 FDA-2026-N-7874-0161	populations_settings	Account for small practices lacking AI governance infrastructure
@@ -1025,11 +1025,11 @@ FDA-2026-N-7874-0186	drift_monitoring	Combine version pinning, configuration rec
 FDA-2026-N-7874-0186	supervisor_validation	Validate supervisory agents against independently adjudicated cases
 FDA-2026-N-7874-0186	agent_authority	Verify agent controls block prohibited actions at the tool layer
 FDA-2026-N-7874-0186	oversight_demonstrated	Give safeguards risk credit in proportion to evidence of effectiveness
-FDA-2026-N-7874-0165	none	Treat the nurse as a distinct intended user
+FDA-2026-N-7874-0165	nonphysician_clinicians	Treat the nurse as a distinct intended user
 FDA-2026-N-7874-0165	oversight_demonstrated	Require premarket evidence nurses can detect and override errors
 FDA-2026-N-7874-0165	audit_trail	Let nurses inspect the inputs and text the system recorded
 FDA-2026-N-7874-0165	error_reporting	Accept frontline clinician reports that bypass the manufacturer
-FDA-2026-N-7874-0165	none	Include nurses on comparator panels for nurse-used functions
+FDA-2026-N-7874-0165	nonphysician_clinicians	Include nurses on comparator panels for nurse-used functions
 FDA-2026-N-7874-0165	postmarket_plans	Monitor override rates and whether claimed time savings occur
 FDA-2026-N-7874-0165	rebenchmark_on_change	Recheck nursing-use measures when the underlying model changes
 FDA-2026-N-7874-0165	directiveness_behavior	Give no risk credit for clinician-retains-responsibility boilerplate
@@ -1096,7 +1096,7 @@ FDA-2026-N-7874-0163	deployed_config	Evaluate the whole care workflow, not only 
 FDA-2026-N-7874-0163	risk_factors	Add reversibility, time pressure, safeguards, and traceability to risk
 FDA-2026-N-7874-0163	oversight_demonstrated	Credit human approval only when timely intervention is shown
 FDA-2026-N-7874-0163	escalation_separate	Measure missed and unnecessary escalation and time to escalation
-FDA-2026-N-7874-0163	none	Include bedside nurses on evaluation panels
+FDA-2026-N-7874-0163	nonphysician_clinicians	Include bedside nurses on evaluation panels
 FDA-2026-N-7874-0163	human_approval	Require explicit human authorization for irreversible agentic actions
 FDA-2026-N-7874-0163	kill_switch	Provide a working stop mechanism and tested fallbacks
 FDA-2026-N-7874-0163	audit_trail	Log proposed, accepted, and executed actions separately
@@ -1108,7 +1108,7 @@ FDA-2026-N-7874-0145	none	Keep AI conclusions traceable to underlying source dat
 FDA-2026-N-7874-0145	drift_monitoring	Monitor whether the clinical workflow still works after updates
 FDA-2026-N-7874-0181	error_reporting	Create a protected channel for clinicians to report output drift
 FDA-2026-N-7874-0181	none	Include clinician review of real cases in postmarket monitoring
-FDA-2026-N-7874-0181	none	Include nurses as qualified adjudicators and reviewers
+FDA-2026-N-7874-0181	nonphysician_clinicians	Include nurses as qualified adjudicators and reviewers
 FDA-2026-N-7874-0146	lower_burden_supervised	Exclude general informational chatbots from device regulation
 FDA-2026-N-7874-0146	none	Address chatbot risks with accuracy standards and warnings
 FDA-2026-N-7874-0146	none	Do not block health topics in AI tools
@@ -1191,10 +1191,10 @@ FDA-2026-N-7874-0138	none	Require manufacturers to state device limits and targe
 FDA-2026-N-7874-0138	none	Define user training topics for each AI device
 FDA-2026-N-7874-0138	none	Involve all operational stakeholders in postmarket surveillance
 FDA-2026-N-7874-0138	postmarket_plans	Conduct active surveillance for potential incidents
-FDA-2026-N-7874-0152	none	Include nursing competency methods when benchmarking AI
+FDA-2026-N-7874-0152	nonphysician_clinicians	Include nursing competency methods when benchmarking AI
 FDA-2026-N-7874-0152	human_approval	Require clinician review before irreversible agentic actions
 FDA-2026-N-7874-0152	error_reporting	Create a channel for nurses to report AI problems
-FDA-2026-N-7874-0154	none	Include nurses in discussions on regulating generative AI devices
+FDA-2026-N-7874-0154	nonphysician_clinicians	Include nurses in discussions on regulating generative AI devices
 FDA-2026-N-7874-0191	model_disclosure	Define minimum content for Foundation Model Master Files
 FDA-2026-N-7874-0191	pccp_bounded	Let PCCPs prespecify the verification method, not change content
 FDA-2026-N-7874-0191	pccp_bounded	Adopt a three-tier change categorization framework
@@ -1206,7 +1206,7 @@ FDA-2026-N-7874-0191	reduced_evidence_limits	Accept postmarket reliance only wit
 FDA-2026-N-7874-0191	multi_turn	Require prespecified multi-turn adversarial stress testing
 FDA-2026-N-7874-0191	align_standards	Recognize accredited ISO 42001 certification for model suppliers
 FDA-2026-N-7874-0158	human_ai_team	Evaluate human-AI and clinical workflow performance, not model alone
-FDA-2026-N-7874-0158	comparator_realistic	Choose clinical comparators by function, including nurses
+FDA-2026-N-7874-0158	nonphysician_clinicians	Choose clinical comparators by function, including nurses
 FDA-2026-N-7874-0158	error_reporting	Count clinician-caught AI errors and near misses as safety data
 FDA-2026-N-7874-0158	error_reporting	Give nurses easy channels to report AI errors and overrides
 FDA-2026-N-7874-0158	accountability	Keep manufacturers responsible for postmarket surveillance, not clinicians
@@ -1258,7 +1258,7 @@ FDA-2026-N-7874-0197	none	Credit safeguards only against failure modes their tes
 FDA-2026-N-7874-0197	none	Document what information a safeguard checker receives
 FDA-2026-N-7874-0197	none	Test checkers with seeded upstream extraction errors
 FDA-2026-N-7874-0155	patient_disclosure	Inform patients that GenAI devices are experimental and risky
-FDA-2026-N-7874-0155	none	Apply nurse competencies alongside physician competencies
+FDA-2026-N-7874-0155	nonphysician_clinicians	Apply nurse competencies alongside physician competencies
 FDA-2026-N-7874-0155	none	Require comprehensive regulatory monitoring of GenAI devices
 FDA-2026-N-7874-0194	none	Hand off to a human when education becomes diagnosis
 FDA-2026-N-7874-0196	none	Listen to nurses' concerns about AI tools
@@ -1331,7 +1331,7 @@ FDA-2026-N-7874-0199	synthetic_separate	Report synthetic and real-world results 
 FDA-2026-N-7874-0199	benchmark_validity	Use expert adjudication and clinical follow-up as reference
 FDA-2026-N-7874-0199	none	Anticipate off-label use such as triage used as diagnosis
 FDA-2026-N-7874-0199	none	Include downstream testing and review burden in savings claims
-FDA-2026-N-7874-0153	none	Include bedside nurses from many settings in device evaluation
+FDA-2026-N-7874-0153	nonphysician_clinicians	Include bedside nurses from many settings in device evaluation
 FDA-2026-N-7874-0153	error_reporting	Track near misses and workarounds in postmarket monitoring
 FDA-2026-N-7874-0153	none	Train clinicians on device limits and conflicting outputs
 FDA-2026-N-7874-0153	none	Give nurses a clear way to question and escalate outputs

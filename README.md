@@ -8,7 +8,7 @@ Site: https://merylye.github.io/docket-lens/
 
 **Position distribution.** Where commenters stood on 17 proposals from the discussion paper, in docket question order. Bar length shows how many comments gave a view, and the segments show support, support with conditions, and opposition. Selecting a "support with conditions" segment lists the conditions those commenters attached. A category view splits each proposal by commenter category.
 
-**Top recommendations.** The asks that recurred across comments, grouped into 40 recommendations and ranked by how many comments made each.
+**Top recommendations.** The asks that recurred across comments, grouped into 41 recommendations and ranked by how many comments made each.
 
 **Coverage.** The share of comments addressing each of the paper's 26 questions, its four question groups, or themes FDA's questions did not ask about. The Focus buttons switch between these views.
 

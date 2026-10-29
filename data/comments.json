@@ -9813,6 +9813,7 @@
    "agentic_oversight": "support"
   },
   "recs": [
+   "nonphysician_clinicians",
    "human_approval",
    "error_reporting"
   ],
@@ -9851,6 +9852,7 @@
   "unreadable": false,
   "pos": {},
   "recs": [
+   "nonphysician_clinicians",
    "error_reporting",
    "patient_disclosure"
   ],
@@ -9880,7 +9882,9 @@
   "received": "2026-10-05T04:00:00Z",
   "unreadable": false,
   "pos": {},
-  "recs": [],
+  "recs": [
+   "nonphysician_clinicians"
+  ],
   "also_filed": [],
   "conds": {}
  },
@@ -9916,7 +9920,8 @@
    "postmarket_tradeoff": "oppose"
   },
   "recs": [
-   "patient_disclosure"
+   "patient_disclosure",
+   "nonphysician_clinicians"
   ],
   "also_filed": [],
   "conds": {}
@@ -10056,7 +10061,7 @@
   },
   "recs": [
    "human_ai_team",
-   "comparator_realistic",
+   "nonphysician_clinicians",
    "error_reporting",
    "accountability",
    "human_approval",
@@ -10194,6 +10199,7 @@
   "recs": [
    "risk_factors",
    "escalation_separate",
+   "nonphysician_clinicians",
    "human_ai_team",
    "postmarket_plans",
    "agent_authority",
@@ -10334,6 +10340,7 @@
    "risk_factors",
    "oversight_demonstrated",
    "escalation_separate",
+   "nonphysician_clinicians",
    "human_approval",
    "kill_switch",
    "audit_trail",
@@ -10469,6 +10476,7 @@
    "postmarket_methods": "conditional"
   },
   "recs": [
+   "nonphysician_clinicians",
    "oversight_demonstrated",
    "audit_trail",
    "error_reporting",
@@ -11675,7 +11683,8 @@
    "postmarket_methods": "conditional"
   },
   "recs": [
-   "error_reporting"
+   "error_reporting",
+   "nonphysician_clinicians"
   ],
   "also_filed": [],
   "conds": {
@@ -11806,6 +11815,7 @@
    "voluntary_model_files": "conditional"
   },
   "recs": [
+   "nonphysician_clinicians",
    "populations_settings",
    "accountability",
    "version_pinning"
@@ -13138,6 +13148,7 @@
   "unreadable": false,
   "pos": {},
   "recs": [
+   "nonphysician_clinicians",
    "error_reporting",
    "accountability"
   ],
