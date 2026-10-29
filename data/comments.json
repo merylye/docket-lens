@@ -1520,7 +1520,6 @@
    ],
    "agentic_oversight": [
     "audit_records",
-    "human_confirm",
     "least_privilege",
     "stop_rollback"
    ]
@@ -2506,7 +2505,6 @@
     "autonomy",
     "detectability",
     "other",
-    "real_oversight",
     "reversibility"
    ]
   }
@@ -2673,7 +2671,6 @@
   "also_filed": [],
   "conds": {
    "risk_framework": [
-    "detectability",
     "real_oversight"
    ],
    "escalation_errors": [
@@ -3189,8 +3186,7 @@
     "nosub"
    ],
    "postmarket_methods": [
-    "event_triggers",
-    "records"
+    "event_triggers"
    ],
    "supervisory_agents": [
     "define_role",
@@ -3367,7 +3363,6 @@
     "safeguards"
    ],
    "synthetic_data": [
-    "separate",
     "subgroup"
    ],
    "postmarket_tradeoff": [
@@ -3673,8 +3668,7 @@
    ],
    "postmarket_tradeoff": [
     "enforce",
-    "low",
-    "staged"
+    "low"
    ],
    "postmarket_methods": [
     "event_triggers",
@@ -3908,8 +3902,7 @@
   "conds": {
    "risk_framework": [
     "detectability",
-    "reversibility",
-    "setting"
+    "reversibility"
    ],
    "competency_eval": [
     "deployed_system",
@@ -4425,8 +4418,7 @@
   "conds": {
    "postmarket_methods": [
     "other",
-    "set_responses",
-    "targeted_sampling"
+    "set_responses"
    ],
    "agentic_oversight": [
     "audit_records",
@@ -4906,8 +4898,7 @@
    ],
    "postmarket_methods": [
     "other",
-    "reporting",
-    "risk_cadence"
+    "reporting"
    ],
    "supervisory_agents": [
     "human_final",
@@ -5052,7 +5043,6 @@
   "conds": {
    "voluntary_model_files": [
     "content",
-    "current",
     "fallback",
     "other"
    ]
@@ -6058,7 +6048,7 @@
     "traceability"
    ],
    "competency_eval": [
-    "clinical_evidence"
+    "other"
    ],
    "third_party": [
     "access",
@@ -6121,7 +6111,6 @@
   "also_filed": [],
   "conds": {
    "supervisory_agents": [
-    "independent",
     "other",
     "validate_supervisor"
    ]
@@ -7495,7 +7484,6 @@
     "traceability"
    ],
    "patient_facing_risk": [
-    "cantcheck",
     "noauto"
    ],
    "competency_eval": [
@@ -7730,7 +7718,6 @@
   "also_filed": [],
   "conds": {
    "risk_framework": [
-    "real_oversight",
     "reversibility",
     "setting",
     "traceability"
@@ -7743,7 +7730,6 @@
     "scale_to_risk"
    ],
    "synthetic_data": [
-    "indep",
     "subgroup"
    ],
    "median_clinician_comparator": [
@@ -7992,7 +7978,6 @@
    ],
    "supervisory_agents": [
     "human_final",
-    "independent",
     "validate_supervisor"
    ],
    "flexible_change_control": [
@@ -11121,7 +11106,6 @@
    ],
    "patient_facing_risk": [
     "action",
-    "human",
     "inform",
     "noauto"
    ],
@@ -11914,7 +11898,6 @@
     "reversibility"
    ],
    "competency_eval": [
-    "new_elements",
     "other"
    ],
    "synthetic_data": [
@@ -12817,7 +12800,6 @@
   "also_filed": [],
   "conds": {
    "risk_framework": [
-    "dependencies",
     "detectability",
     "real_oversight",
     "reversibility"

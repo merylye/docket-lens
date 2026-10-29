@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-29T00:23:47.177656+00:00",
+ "updated": "2026-10-29T00:24:48.845815+00:00",
  "questions": [
   {
    "n": 1,
@@ -1317,12 +1317,12 @@
    },
    {
     "id": "FDA-2026-N-7874-0136",
-    "reason": "Argues self-directed AI changes need human sign-off and PCCPs should not pre-approve unspecifiable changes.",
+    "reason": "Self-directed AI changes need human sign-off; PCCPs should not pre-approve self-directed changes of unspecifiable scope.",
     "alternative": ""
    },
    {
     "id": "FDA-2026-N-7874-0139",
-    "reason": "Argues self-changing technology cannot be verified by practitioners and should not enter practice yet.",
+    "reason": "Asks how practitioners can verify self-changing technology; says it should not enter practice until answered.",
     "alternative": ""
    }
   ],
@@ -1344,7 +1344,7 @@
    },
    {
     "id": "FDA-2026-N-7874-0056",
-    "reason": "Specialist panels should set the reference; median clinician performance should not define acceptable safety.",
+    "reason": "For specialty tasks, specialist panels should set the reference; median generalist performance should not define acceptable safety.",
     "alternative": ""
    },
    {
@@ -1393,7 +1393,7 @@
    },
    {
     "id": "FDA-2026-N-7874-0080",
-    "reason": "Argues consumer-facing informational functions are low risk and should be treated like HCP decision support.",
+    "reason": "Argues informational, non-directive consumer functions are low risk and belong outside device oversight or under enforcement discretion.",
     "alternative": ""
    },
    {
@@ -1403,7 +1403,7 @@
    },
    {
     "id": "FDA-2026-N-7874-0146",
-    "reason": "Patient-facing AI health information is like a library and should not be regulated as higher-risk devices.",
+    "reason": "Everyday AI health chatbots resemble a library and should not be regulated as medical devices.",
     "alternative": ""
    }
   ],
@@ -1454,7 +1454,7 @@
    },
    {
     "id": "FDA-2026-N-7874-0126",
-    "reason": "Replace the directiveness activity axis with a four-dimension scheme grading the significance of the output's clinical claims.",
+    "reason": "Replace the directiveness axis with output significance and add user and characterizability dimensions.",
     "alternative": ""
    },
    {
@@ -1508,7 +1508,7 @@
    },
    {
     "id": "FDA-2026-N-7874-0148",
-    "reason": "Transparency via master files is insufficient; centralized FDA or accredited certification is needed instead.",
+    "reason": "Says master-file transparency is insufficient since health systems cannot interpret it; wants centralized FDA or accredited certification.",
     "alternative": ""
    },
    {

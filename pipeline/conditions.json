@@ -633,7 +633,6 @@
    ],
    "supervisory_agents": [
     "human_final",
-    "independent",
     "validate_supervisor"
    ],
    "flexible_change_control": [
@@ -1169,8 +1168,7 @@
     "nosub"
    ],
    "postmarket_methods": [
-    "event_triggers",
-    "records"
+    "event_triggers"
    ],
    "supervisory_agents": [
     "define_role",
@@ -1290,8 +1288,7 @@
    ],
    "postmarket_methods": [
     "other",
-    "reporting",
-    "risk_cadence"
+    "reporting"
    ],
    "supervisory_agents": [
     "human_final",
@@ -1340,7 +1337,6 @@
     "autonomy",
     "detectability",
     "other",
-    "real_oversight",
     "reversibility"
    ]
   },
@@ -1533,7 +1529,6 @@
     "reversibility"
    ],
    "competency_eval": [
-    "new_elements",
     "other"
    ],
    "synthetic_data": [
@@ -1566,7 +1561,6 @@
   },
   "FDA-2026-N-7874-0118": {
    "risk_framework": [
-    "real_oversight",
     "reversibility",
     "setting",
     "traceability"
@@ -1579,7 +1573,6 @@
     "scale_to_risk"
    ],
    "synthetic_data": [
-    "indep",
     "subgroup"
    ],
    "median_clinician_comparator": [
@@ -1658,7 +1651,6 @@
     "safeguards"
    ],
    "synthetic_data": [
-    "separate",
     "subgroup"
    ],
    "postmarket_tradeoff": [
@@ -1697,7 +1689,7 @@
     "traceability"
    ],
    "competency_eval": [
-    "clinical_evidence"
+    "other"
    ],
    "third_party": [
     "access",
@@ -1763,7 +1755,6 @@
   },
   "FDA-2026-N-7874-0095": {
    "supervisory_agents": [
-    "independent",
     "other",
     "validate_supervisor"
    ]
@@ -1876,8 +1867,7 @@
   "FDA-2026-N-7874-0056": {
    "risk_framework": [
     "detectability",
-    "reversibility",
-    "setting"
+    "reversibility"
    ],
    "competency_eval": [
     "deployed_system",
@@ -2274,8 +2264,7 @@
   "FDA-2026-N-7874-0067": {
    "postmarket_methods": [
     "other",
-    "set_responses",
-    "targeted_sampling"
+    "set_responses"
    ],
    "agentic_oversight": [
     "audit_records",
@@ -2385,7 +2374,6 @@
   "FDA-2026-N-7874-0079": {
    "voluntary_model_files": [
     "content",
-    "current",
     "fallback",
     "other"
    ]
@@ -2407,7 +2395,6 @@
   },
   "FDA-2026-N-7874-0043": {
    "risk_framework": [
-    "detectability",
     "real_oversight"
    ],
    "escalation_errors": [
@@ -2506,8 +2493,7 @@
    ],
    "postmarket_tradeoff": [
     "enforce",
-    "low",
-    "staged"
+    "low"
    ],
    "postmarket_methods": [
     "event_triggers",
@@ -2660,7 +2646,6 @@
     "traceability"
    ],
    "patient_facing_risk": [
-    "cantcheck",
     "noauto"
    ],
    "competency_eval": [
@@ -2730,7 +2715,6 @@
    ],
    "agentic_oversight": [
     "audit_records",
-    "human_confirm",
     "least_privilege",
     "stop_rollback"
    ]
@@ -2745,7 +2729,6 @@
    ],
    "patient_facing_risk": [
     "action",
-    "human",
     "inform",
     "noauto"
    ],
@@ -2847,7 +2830,6 @@
   },
   "FDA-2026-N-7874-0199": {
    "risk_framework": [
-    "dependencies",
     "detectability",
     "real_oversight",
     "reversibility"
