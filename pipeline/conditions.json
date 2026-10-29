@@ -476,265 +476,6 @@
   ]
  },
  "map": {
-  "FDA-2026-N-7874-0118": {
-   "risk_framework": [
-    "real_oversight",
-    "reversibility",
-    "setting",
-    "traceability"
-   ],
-   "postmarket_methods": [
-    "event_triggers",
-    "reporting",
-    "set_responses",
-    "targeted_sampling"
-   ],
-   "directiveness_continuum": [
-    "clear_limits"
-   ],
-   "confirmation_flex": [
-    "other",
-    "scale_to_risk"
-   ],
-   "median_clinician_comparator": [
-    "other",
-    "specialists",
-    "standard_floor"
-   ],
-   "agentic_oversight": [
-    "full_sequence",
-    "human_confirm",
-    "stop_rollback"
-   ],
-   "supervisory_agents": [
-    "human_final",
-    "other"
-   ],
-   "competency_eval": [
-    "hard_cases",
-    "one_part",
-    "other"
-   ],
-   "postmarket_tradeoff": [
-    "detect",
-    "low"
-   ],
-   "flexible_change_control": [
-    "bounds",
-    "rebench"
-   ],
-   "synthetic_data": [
-    "other",
-    "subgroup"
-   ],
-   "third_party": [
-    "access",
-    "conflict",
-    "other"
-   ],
-   "escalation_errors": [
-    "asym",
-    "separate"
-   ],
-   "no_care_comparator": [
-    "standard"
-   ]
-  },
-  "FDA-2026-N-7874-0049": {
-   "risk_framework": [
-    "dependencies",
-    "framework_use"
-   ],
-   "postmarket_methods": [
-    "event_triggers",
-    "other"
-   ],
-   "supervisory_agents": [
-    "define_role",
-    "human_final",
-    "responsibility",
-    "validate_supervisor"
-   ],
-   "competency_eval": [
-    "benchmark_validity",
-    "deployed_system",
-    "one_part"
-   ],
-   "postmarket_tradeoff": [
-    "detect",
-    "low",
-    "nosub"
-   ],
-   "flexible_change_control": [
-    "bounds",
-    "review",
-    "rollback"
-   ],
-   "synthetic_data": [
-    "disclose",
-    "indep",
-    "noreplace",
-    "separate"
-   ],
-   "patient_facing_risk": [
-    "access",
-    "action",
-    "noauto"
-   ]
-  },
-  "FDA-2026-N-7874-0105": {
-   "risk_framework": [
-    "real_oversight",
-    "reversibility"
-   ],
-   "postmarket_methods": [
-    "event_triggers",
-    "set_responses"
-   ],
-   "trajectory_risk": [
-    "long_use",
-    "scope_drift"
-   ],
-   "agentic_oversight": [
-    "audit_records",
-    "human_confirm",
-    "least_privilege",
-    "other"
-   ],
-   "supervisory_agents": [
-    "define_role",
-    "fail_safe",
-    "independent",
-    "other"
-   ],
-   "postmarket_tradeoff": [
-    "low"
-   ],
-   "flexible_change_control": [
-    "bounds",
-    "pin",
-    "rollback",
-    "tier"
-   ],
-   "voluntary_model_files": [
-    "current",
-    "resp"
-   ]
-  },
-  "FDA-2026-N-7874-0053": {
-   "risk_framework": [
-    "other",
-    "reversibility"
-   ],
-   "confirmation_flex": [
-    "other"
-   ],
-   "agentic_oversight": [
-    "human_confirm",
-    "other"
-   ],
-   "competency_eval": [
-    "deployed_system",
-    "other"
-   ],
-   "postmarket_tradeoff": [
-    "low"
-   ],
-   "flexible_change_control": [
-    "other",
-    "pin"
-   ]
-  },
-  "FDA-2026-N-7874-0111": {
-   "risk_framework": [
-    "other"
-   ],
-   "trajectory_risk": [
-    "other",
-    "user_pressure"
-   ],
-   "agentic_oversight": [
-    "other",
-    "outside_model"
-   ],
-   "supervisory_agents": [
-    "define_role",
-    "other",
-    "validate_supervisor"
-   ],
-   "postmarket_tradeoff": [
-    "detect"
-   ],
-   "escalation_errors": [
-    "justify",
-    "separate"
-   ]
-  },
-  "FDA-2026-N-7874-0006": {
-   "risk_framework": [
-    "broader_harms",
-    "other"
-   ],
-   "postmarket_tradeoff": [
-    "enforce",
-    "other",
-    "plan"
-   ],
-   "third_party": [
-    "access",
-    "roles"
-   ],
-   "no_care_comparator": [
-    "local",
-    "standard"
-   ]
-  },
-  "FDA-2026-N-7874-0051": {
-   "risk_framework": [
-    "detectability",
-    "framework_use"
-   ],
-   "postmarket_tradeoff": [
-    "detect",
-    "low"
-   ],
-   "synthetic_data": [
-    "other",
-    "subgroup"
-   ],
-   "patient_facing_risk": [
-    "cantcheck",
-    "safeguards"
-   ]
-  },
-  "FDA-2026-N-7874-0126": {
-   "risk_framework": [
-    "detectability",
-    "other",
-    "traceability"
-   ],
-   "median_clinician_comparator": [
-    "measure_median",
-    "specialists"
-   ],
-   "supervisory_agents": [
-    "other",
-    "validate_supervisor"
-   ]
-  },
-  "FDA-2026-N-7874-0015": {
-   "risk_framework": [
-    "other",
-    "setting",
-    "traceability"
-   ]
-  },
-  "FDA-2026-N-7874-0030": {
-   "risk_framework": [
-    "detectability",
-    "framework_use"
-   ]
-  },
   "FDA-2026-N-7874-0013": {
    "risk_framework": [
     "detectability",
@@ -801,553 +542,248 @@
     "other"
    ]
   },
-  "FDA-2026-N-7874-0120": {
-   "risk_framework": [
-    "real_oversight",
-    "reversibility",
-    "traceability"
-   ],
-   "agentic_oversight": [
-    "human_confirm",
-    "not_device_alone",
+  "FDA-2026-N-7874-0129": {
+   "competency_eval": [
+    "new_elements",
     "other"
-   ],
-   "supervisory_agents": [
-    "human_final",
-    "independent",
-    "other",
-    "validate_supervisor"
-   ],
-   "postmarket_tradeoff": [
-    "enforce",
-    "low",
-    "nosub"
+   ]
+  },
+  "FDA-2026-N-7874-0126": {
+   "median_clinician_comparator": [
+    "measure_median",
+    "specialists",
+    "standard_floor"
    ],
    "flexible_change_control": [
-    "bounds",
     "pin",
-    "review"
-   ],
-   "synthetic_data": [
-    "noreplace",
-    "separate",
-    "validate"
-   ],
-   "voluntary_model_files": [
-    "current",
-    "resp"
-   ],
-   "patient_facing_risk": [
-    "access",
-    "noauto",
-    "other"
-   ],
-   "no_care_comparator": [
-    "local",
-    "other"
-   ]
-  },
-  "FDA-2026-N-7874-0115": {
-   "risk_framework": [
-    "autonomy",
-    "other",
-    "real_oversight",
-    "reversibility"
-   ],
-   "postmarket_methods": [
-    "event_triggers",
-    "other"
-   ],
-   "agentic_oversight": [
-    "human_confirm",
-    "least_privilege",
-    "stop_rollback"
-   ],
-   "supervisory_agents": [
-    "fail_safe",
-    "independent",
-    "validate_supervisor"
-   ],
-   "competency_eval": [
-    "benchmark_validity",
-    "deployed_system",
-    "other"
-   ],
-   "postmarket_tradeoff": [
-    "low"
-   ],
-   "synthetic_data": [
-    "disclose",
-    "separate",
-    "subgroup"
-   ],
-   "voluntary_model_files": [
-    "contract",
-    "other",
-    "resp"
-   ]
-  },
-  "FDA-2026-N-7874-0054": {
-   "risk_framework": [
-    "traceability"
-   ],
-   "postmarket_methods": [
-    "event_triggers"
-   ],
-   "agentic_oversight": [
-    "audit_records",
-    "authority_level",
-    "human_confirm"
-   ],
-   "competency_eval": [
-    "deployed_system",
-    "new_elements"
-   ],
-   "postmarket_tradeoff": [
-    "low",
-    "staged"
-   ],
-   "patient_facing_risk": [
-    "action",
-    "noauto"
-   ]
-  },
-  "FDA-2026-N-7874-0131": {
-   "risk_framework": [
-    "other",
-    "reversibility",
-    "setting"
-   ],
-   "postmarket_methods": [
-    "other"
-   ],
-   "agentic_oversight": [
-    "audit_records",
-    "other"
-   ],
-   "supervisory_agents": [
-    "other",
-    "records"
-   ],
-   "postmarket_tradeoff": [
-    "low"
-   ],
-   "voluntary_model_files": [
-    "other"
-   ]
-  },
-  "FDA-2026-N-7874-0020": {
-   "risk_framework": [
-    "broader_harms",
-    "detectability",
-    "reversibility"
-   ],
-   "competency_eval": [
-    "benchmark_validity",
-    "clinical_evidence",
-    "other"
-   ],
-   "postmarket_tradeoff": [
-    "low"
-   ],
-   "synthetic_data": [
-    "noreplace"
-   ]
-  },
-  "FDA-2026-N-7874-0032": {
-   "risk_framework": [
-    "dependencies"
-   ],
-   "postmarket_methods": [
-    "other",
-    "reporting"
-   ],
-   "supervisory_agents": [
-    "independent"
-   ]
-  },
-  "FDA-2026-N-7874-0093": {
-   "risk_framework": [
-    "dependencies",
-    "other",
-    "traceability"
-   ],
-   "supervisory_agents": [
-    "human_final",
-    "independent",
-    "records",
-    "validate_supervisor"
-   ],
-   "postmarket_tradeoff": [
-    "detect",
-    "enforce",
-    "low"
-   ]
-  },
-  "FDA-2026-N-7874-0057": {
-   "risk_framework": [
-    "detectability",
-    "other",
-    "real_oversight"
-   ],
-   "flexible_change_control": [
     "rebench"
    ]
   },
-  "FDA-2026-N-7874-0101": {
+  "FDA-2026-N-7874-0082": {
    "risk_framework": [
-    "other"
-   ],
-   "agentic_oversight": [
-    "least_privilege"
-   ]
-  },
-  "FDA-2026-N-7874-0039": {
-   "risk_framework": [
-    "autonomy"
-   ]
-  },
-  "FDA-2026-N-7874-0003": {
-   "risk_framework": [
-    "dependencies",
-    "reversibility",
-    "setting"
-   ],
-   "postmarket_methods": [
-    "event_triggers",
-    "risk_cadence"
-   ],
-   "directiveness_continuum": [
-    "clear_limits"
-   ],
-   "trajectory_risk": [
-    "other",
-    "scope_drift"
-   ],
-   "agentic_oversight": [
-    "human_confirm",
-    "other"
-   ],
-   "supervisory_agents": [
-    "human_final",
-    "validate_supervisor"
-   ],
-   "postmarket_tradeoff": [
-    "enforce",
-    "other",
-    "plan"
-   ],
-   "synthetic_data": [
-    "subgroup",
-    "validate"
+    "setting",
+    "traceability"
    ],
    "patient_facing_risk": [
-    "action",
-    "other"
-   ],
-   "third_party": [
-    "multiple",
-    "roles"
-   ],
-   "escalation_errors": [
-    "asym"
-   ],
-   "no_care_comparator": [
-    "other"
-   ]
-  },
-  "FDA-2026-N-7874-0017": {
-   "risk_framework": [
-    "autonomy",
-    "real_oversight",
-    "setting"
+    "safeguards"
    ],
    "postmarket_methods": [
-    "other",
-    "outcomes",
-    "risk_cadence"
-   ],
-   "agentic_oversight": [
-    "audit_records",
-    "human_confirm",
-    "least_privilege",
-    "stop_rollback"
-   ],
-   "supervisory_agents": [
-    "validate_supervisor"
-   ],
-   "competency_eval": [
-    "benchmark_validity",
-    "clinical_evidence",
-    "deployed_system",
-    "human_ai_team"
-   ],
-   "postmarket_tradeoff": [
-    "low"
-   ],
-   "flexible_change_control": [
-    "bounds",
-    "pin",
-    "review"
-   ],
-   "synthetic_data": [
-    "noreplace",
-    "separate"
-   ],
-   "voluntary_model_files": [
-    "current",
-    "other"
-   ],
-   "no_care_comparator": [
     "other"
    ]
   },
-  "FDA-2026-N-7874-0045": {
+  "FDA-2026-N-7874-0163": {
    "risk_framework": [
-    "autonomy",
-    "other"
-   ],
-   "postmarket_methods": [
-    "event_triggers"
-   ],
-   "supervisory_agents": [
-    "other",
-    "validate_supervisor"
-   ],
-   "postmarket_tradeoff": [
-    "low",
-    "other"
-   ],
-   "synthetic_data": [
-    "indep",
-    "noreplace"
-   ],
-   "voluntary_model_files": [
-    "contract"
-   ],
-   "third_party": [
-    "multiple",
-    "other"
-   ]
-  },
-  "FDA-2026-N-7874-0024": {
-   "risk_framework": [
-    "autonomy",
-    "detectability",
-    "other",
-    "reversibility"
-   ],
-   "agentic_oversight": [
-    "least_privilege",
-    "stop_rollback"
-   ],
-   "competency_eval": [
-    "hard_cases",
-    "human_ai_team",
-    "other"
-   ],
-   "postmarket_tradeoff": [
-    "low",
-    "plan"
-   ],
-   "flexible_change_control": [
-    "bounds",
-    "other"
-   ]
-  },
-  "FDA-2026-N-7874-0028": {
-   "risk_framework": [
+    "framework_use",
     "real_oversight",
     "reversibility",
     "setting",
     "traceability"
    ],
-   "supervisory_agents": [
-    "validate_supervisor"
-   ],
    "postmarket_tradeoff": [
     "detect",
-    "indep",
+    "enforce",
     "low",
-    "other"
+    "nosub",
+    "plan"
    ],
-   "synthetic_data": [
-    "disclose",
-    "other",
-    "validate"
-   ],
-   "patient_facing_risk": [
-    "inform",
-    "noauto",
-    "safeguards"
-   ]
-  },
-  "FDA-2026-N-7874-0082": {
-   "risk_framework": [
-    "other"
-   ],
-   "postmarket_methods": [
-    "other"
-   ],
-   "directiveness_continuum": [
-    "other"
-   ],
-   "patient_facing_risk": [
-    "other",
-    "safeguards"
-   ]
-  },
-  "FDA-2026-N-7874-0037": {
-   "risk_framework": [
-    "autonomy",
-    "detectability",
-    "reversibility"
-   ],
-   "directiveness_continuum": [
-    "other"
-   ]
-  },
-  "FDA-2026-N-7874-0010": {
-   "risk_framework": [
-    "detectability",
-    "other"
-   ],
-   "postmarket_methods": [
-    "event_triggers",
-    "other"
-   ],
-   "directiveness_continuum": [
-    "clear_limits"
+   "supervisory_agents": [
+    "independent",
+    "responsibility",
+    "validate_supervisor"
    ],
    "agentic_oversight": [
     "audit_records",
-    "full_sequence",
     "human_confirm",
-    "least_privilege"
+    "least_privilege",
+    "stop_rollback"
+   ]
+  },
+  "FDA-2026-N-7874-0120": {
+   "risk_framework": [
+    "autonomy",
+    "dependencies",
+    "detectability",
+    "real_oversight",
+    "reversibility",
+    "setting",
+    "traceability"
+   ],
+   "patient_facing_risk": [
+    "access",
+    "cantcheck",
+    "noauto"
+   ],
+   "synthetic_data": [
+    "disclose",
+    "indep",
+    "noreplace",
+    "separate",
+    "validate"
+   ],
+   "no_care_comparator": [
+    "justify",
+    "local"
+   ],
+   "third_party": [
+    "access",
+    "multiple",
+    "optional",
+    "roles"
+   ],
+   "postmarket_tradeoff": [
+    "enforce",
+    "low",
+    "nosub",
+    "plan",
+    "staged"
    ],
    "supervisory_agents": [
     "human_final",
     "independent",
-    "other",
     "validate_supervisor"
    ],
-   "competency_eval": [
-    "benchmark_validity",
-    "other"
+   "flexible_change_control": [
+    "bounds",
+    "pin",
+    "review",
+    "rollback"
+   ],
+   "voluntary_model_files": [
+    "contract",
+    "current",
+    "resp"
+   ],
+   "agentic_oversight": [
+    "full_sequence",
+    "human_confirm",
+    "not_device_alone"
+   ]
+  },
+  "FDA-2026-N-7874-0185": {
+   "risk_framework": [
+    "detectability",
+    "traceability"
+   ]
+  },
+  "FDA-2026-N-7874-0087": {
+   "risk_framework": [
+    "autonomy",
+    "real_oversight",
+    "traceability"
+   ],
+   "voluntary_model_files": [
+    "resp"
+   ],
+   "agentic_oversight": [
+    "authority_level",
+    "full_sequence",
+    "human_confirm"
+   ]
+  },
+  "FDA-2026-N-7874-0144": {
+   "postmarket_tradeoff": [
+    "nosub"
+   ]
+  },
+  "FDA-2026-N-7874-0099": {
+   "risk_framework": [
+    "real_oversight",
+    "reversibility"
    ],
    "postmarket_tradeoff": [
     "detect",
     "enforce",
-    "low"
+    "nosub",
+    "plan"
    ],
-   "flexible_change_control": [
-    "other",
-    "rebench",
-    "rollback"
-   ],
-   "synthetic_data": [
-    "disclose",
-    "indep",
-    "noreplace"
-   ],
+   "voluntary_model_files": [
+    "resp"
+   ]
+  },
+  "FDA-2026-N-7874-0183": {
    "third_party": [
-    "conflict",
-    "multiple",
+    "access",
     "optional"
+   ],
+   "voluntary_model_files": [
+    "other"
+   ]
+  },
+  "FDA-2026-N-7874-0168": {
+   "risk_framework": [
+    "broader_harms",
+    "detectability",
+    "traceability"
+   ]
+  },
+  "FDA-2026-N-7874-0010": {
+   "risk_framework": [
+    "detectability"
+   ],
+   "directiveness_continuum": [
+    "other"
+   ],
+   "patient_facing_risk": [
+    "cantcheck",
+    "noauto"
    ],
    "escalation_errors": [
     "asym",
     "justify"
    ],
+   "competency_eval": [
+    "clinical_evidence",
+    "other"
+   ],
+   "synthetic_data": [
+    "disclose",
+    "indep",
+    "noreplace",
+    "subgroup"
+   ],
    "no_care_comparator": [
     "local",
     "other"
    ],
-   "confirmation_flex": [
-    "real_populations",
-    "scale_to_risk"
+   "third_party": [
+    "conflict",
+    "multiple",
+    "optional",
+    "roles"
+   ],
+   "postmarket_tradeoff": [
+    "detect",
+    "enforce",
+    "low",
+    "plan"
+   ],
+   "postmarket_methods": [
+    "event_triggers",
+    "risk_cadence"
+   ],
+   "supervisory_agents": [
+    "human_final",
+    "independent",
+    "validate_supervisor"
+   ],
+   "flexible_change_control": [
+    "bounds",
+    "pin",
+    "rebench",
+    "rollback",
+    "tier"
    ],
    "voluntary_model_files": [
     "content",
     "current",
     "fallback",
     "resp"
-   ]
-  },
-  "FDA-2026-N-7874-0005": {
-   "risk_framework": [
-    "framework_use",
-    "reversibility"
-   ],
-   "postmarket_methods": [
-    "event_triggers",
-    "set_responses"
-   ],
-   "agentic_oversight": [
-    "full_sequence"
-   ],
-   "supervisory_agents": [
-    "other",
-    "validate_supervisor"
-   ],
-   "competency_eval": [
-    "benchmark_validity",
-    "deployed_system",
-    "new_elements"
-   ],
-   "postmarket_tradeoff": [
-    "detect",
-    "low"
-   ],
-   "synthetic_data": [
-    "disclose",
-    "noreplace",
-    "separate"
-   ],
-   "voluntary_model_files": [
-    "current",
-    "resp"
-   ],
-   "third_party": [
-    "multiple"
-   ]
-  },
-  "FDA-2026-N-7874-0076": {
-   "risk_framework": [
-    "other"
-   ],
-   "postmarket_methods": [
-    "other",
-    "reporting"
    ],
    "agentic_oversight": [
     "audit_records",
+    "full_sequence",
     "human_confirm",
     "least_privilege"
-   ],
-   "supervisory_agents": [
-    "human_final",
-    "validate_supervisor"
-   ],
-   "competency_eval": [
-    "deployed_system",
-    "hard_cases",
-    "other",
-    "variability"
-   ],
-   "synthetic_data": [
-    "indep",
-    "separate",
-    "subgroup"
-   ],
-   "patient_facing_risk": [
-    "human",
-    "inform",
-    "safeguards"
-   ],
-   "escalation_errors": [
-    "asym",
-    "other"
    ]
   },
   "FDA-2026-N-7874-0127": {
@@ -1355,245 +791,49 @@
     "autonomy",
     "real_oversight"
    ],
-   "postmarket_methods": [
-    "records"
-   ],
-   "agentic_oversight": [
-    "audit_records",
-    "other",
-    "outside_model",
-    "stop_rollback"
-   ],
-   "supervisory_agents": [
-    "define_role",
-    "validate_supervisor"
-   ],
    "competency_eval": [
-    "new_elements",
-    "other"
+    "deployed_system",
+    "new_elements"
    ],
    "postmarket_tradeoff": [
     "indep"
    ],
-   "flexible_change_control": [
-    "pin",
-    "tier"
-   ]
-  },
-  "FDA-2026-N-7874-0056": {
-   "risk_framework": [
-    "detectability",
-    "reversibility"
-   ],
    "postmarket_methods": [
-    "event_triggers",
-    "outcomes",
-    "targeted_sampling"
-   ],
-   "agentic_oversight": [
-    "authority_level",
-    "human_confirm",
-    "least_privilege"
+    "records"
    ],
    "supervisory_agents": [
+    "define_role",
+    "records",
     "validate_supervisor"
    ],
-   "competency_eval": [
-    "failure_limits",
-    "hard_cases",
-    "other"
-   ]
-  },
-  "FDA-2026-N-7874-0043": {
-   "risk_framework": [
-    "detectability",
-    "other"
-   ],
-   "synthetic_data": [
-    "other",
-    "validate"
-   ],
-   "escalation_errors": [
-    "other"
-   ]
-  },
-  "FDA-2026-N-7874-0099": {
-   "risk_framework": [
-    "reversibility"
-   ],
-   "postmarket_tradeoff": [
-    "detect",
-    "nosub",
-    "plan"
-   ],
-   "voluntary_model_files": [
-    "resp"
-   ]
-  },
-  "FDA-2026-N-7874-0038": {
-   "risk_framework": [
-    "other"
-   ],
-   "patient_facing_risk": [
-    "action",
-    "inform"
-   ]
-  },
-  "FDA-2026-N-7874-0121": {
-   "risk_framework": [
-    "real_oversight",
-    "reversibility"
-   ],
-   "postmarket_methods": [
-    "other",
-    "outcomes"
-   ]
-  },
-  "FDA-2026-N-7874-0112": {
-   "risk_framework": [
-    "other"
-   ]
-  },
-  "FDA-2026-N-7874-0113": {
-   "risk_framework": [
-    "other",
-    "reversibility"
-   ],
-   "postmarket_methods": [
-    "other",
-    "risk_cadence"
-   ],
-   "confirmation_flex": [
-    "other",
-    "real_populations",
-    "scale_to_risk"
-   ],
-   "median_clinician_comparator": [
-    "measure_median",
-    "specialists"
-   ],
-   "trajectory_risk": [
-    "scope_drift"
+   "flexible_change_control": [
+    "pin",
+    "rebench",
+    "tier"
    ],
    "agentic_oversight": [
     "audit_records",
-    "full_sequence",
     "human_confirm",
-    "other"
-   ],
-   "supervisory_agents": [
-    "human_final",
-    "validate_supervisor"
-   ],
-   "competency_eval": [
-    "benchmark_validity",
-    "other"
-   ],
-   "flexible_change_control": [
-    "other",
-    "review",
-    "tier"
-   ],
-   "synthetic_data": [
-    "disclose",
-    "noreplace",
-    "subgroup"
-   ],
-   "patient_facing_risk": [
-    "human",
-    "noauto",
-    "other"
-   ],
-   "no_care_comparator": [
-    "justify",
-    "other",
-    "standard"
-   ]
-  },
-  "FDA-2026-N-7874-0035": {
-   "risk_framework": [
-    "framework_use",
-    "other",
-    "setting"
-   ],
-   "postmarket_methods": [
-    "event_triggers",
-    "other",
-    "risk_cadence"
-   ],
-   "agentic_oversight": [
-    "human_confirm",
-    "least_privilege",
     "outside_model",
     "stop_rollback"
-   ],
-   "supervisory_agents": [
-    "independent",
-    "records"
-   ],
-   "competency_eval": [
-    "deployed_system",
-    "new_elements",
-    "one_part",
-    "variability"
-   ],
-   "postmarket_tradeoff": [
-    "enforce",
-    "low",
-    "other",
-    "plan"
-   ],
-   "voluntary_model_files": [
-    "content",
-    "current",
-    "resp"
-   ],
-   "patient_facing_risk": [
-    "noauto",
-    "other"
-   ],
-   "third_party": [
-    "conflict",
-    "multiple"
    ]
   },
-  "FDA-2026-N-7874-0100": {
-   "risk_framework": [
-    "reversibility",
-    "traceability"
+  "FDA-2026-N-7874-0180": {
+   "trajectory_risk": [
+    "other"
    ],
-   "agentic_oversight": [
-    "human_confirm",
-    "not_device_alone",
-    "other",
-    "stop_rollback"
-   ],
-   "supervisory_agents": [
-    "human_final",
-    "validate_supervisor"
+   "synthetic_data": [
+    "subgroup",
+    "validate"
    ],
    "postmarket_tradeoff": [
-    "low",
     "other",
     "plan"
    ],
-   "voluntary_model_files": [
-    "fallback",
-    "other"
-   ],
-   "patient_facing_risk": [
-    "human",
-    "noauto",
-    "safeguards"
-   ],
-   "third_party": [
-    "conflict",
-    "multiple",
-    "optional"
-   ],
-   "no_care_comparator": [
-    "justify",
-    "local"
+   "postmarket_methods": [
+    "other",
+    "reporting",
+    "risk_cadence"
    ]
   },
   "FDA-2026-N-7874-0021": {
@@ -1601,89 +841,108 @@
     "broader_harms",
     "other"
    ],
-   "postmarket_methods": [
-    "event_triggers",
-    "other",
-    "outcomes",
-    "reporting"
-   ],
    "trajectory_risk": [
-    "long_use",
     "other"
-   ],
-   "competency_eval": [
-    "benchmark_validity",
-    "failure_limits",
-    "other"
-   ],
-   "voluntary_model_files": [
-    "contract",
-    "fallback"
-   ],
-   "escalation_errors": [
-    "after"
-   ]
-  },
-  "FDA-2026-N-7874-0094": {
-   "risk_framework": [
-    "other",
-    "setting",
-    "traceability"
-   ],
-   "postmarket_methods": [
-    "other"
-   ],
-   "agentic_oversight": [
-    "not_device_alone",
-    "other"
-   ],
-   "competency_eval": [
-    "clinical_evidence",
-    "human_ai_team",
-    "new_elements",
-    "other"
-   ],
-   "patient_facing_risk": [
-    "access",
-    "other"
-   ],
-   "third_party": [
-    "access",
-    "optional",
-    "other"
-   ]
-  },
-  "FDA-2026-N-7874-0086": {
-   "risk_framework": [
-    "broader_harms",
-    "real_oversight",
-    "setting"
    ],
    "postmarket_methods": [
     "other",
     "outcomes"
    ],
-   "supervisory_agents": [
-    "human_final"
-   ],
-   "competency_eval": [
-    "clinical_evidence",
-    "human_ai_team",
-    "other"
+   "voluntary_model_files": [
+    "contract",
+    "resp"
    ]
   },
-  "FDA-2026-N-7874-0046": {
+  "FDA-2026-N-7874-0057": {
    "risk_framework": [
-    "other",
-    "reversibility"
+    "real_oversight"
+   ],
+   "flexible_change_control": [
+    "rebench"
+   ]
+  },
+  "FDA-2026-N-7874-0102": {
+   "postmarket_tradeoff": [
+    "enforce"
    ],
    "postmarket_methods": [
-    "other",
-    "records"
+    "event_triggers",
+    "records",
+    "set_responses"
+   ],
+   "supervisory_agents": [
+    "define_role",
+    "human_final",
+    "validate_supervisor"
    ],
    "agentic_oversight": [
     "human_confirm",
     "other"
+   ]
+  },
+  "FDA-2026-N-7874-0148": {
+   "risk_framework": [
+    "detectability"
+   ],
+   "postmarket_methods": [
+    "outcomes"
+   ]
+  },
+  "FDA-2026-N-7874-0030": {
+   "risk_framework": [
+    "detectability",
+    "framework_use",
+    "reversibility",
+    "setting"
+   ],
+   "patient_facing_risk": [
+    "noauto",
+    "safeguards"
+   ]
+  },
+  "FDA-2026-N-7874-0113": {
+   "risk_framework": [
+    "other",
+    "real_oversight",
+    "reversibility",
+    "setting",
+    "traceability"
+   ],
+   "patient_facing_risk": [
+    "human",
+    "inform",
+    "noauto"
+   ],
+   "competency_eval": [
+    "benchmark_validity",
+    "clinical_evidence",
+    "other"
+   ],
+   "confirmation_flex": [
+    "real_populations",
+    "scale_to_risk"
+   ],
+   "synthetic_data": [
+    "disclose",
+    "noreplace",
+    "subgroup"
+   ],
+   "median_clinician_comparator": [
+    "measure_median",
+    "specialists"
+   ],
+   "no_care_comparator": [
+    "justify",
+    "standard"
+   ],
+   "postmarket_methods": [
+    "other",
+    "risk_cadence"
+   ],
+   "supervisory_agents": [
+    "define_role",
+    "human_final",
+    "validate_supervisor"
    ]
   },
   "FDA-2026-N-7874-0119": {
@@ -1691,507 +950,558 @@
     "real_oversight",
     "setting"
    ],
-   "flexible_change_control": [
-    "other"
-   ],
    "voluntary_model_files": [
     "contract",
     "resp"
-   ]
-  },
-  "FDA-2026-N-7874-0042": {
-   "risk_framework": [
-    "other",
-    "real_oversight",
-    "traceability"
-   ],
-   "supervisory_agents": [
-    "other",
-    "records"
-   ]
-  },
-  "FDA-2026-N-7874-0087": {
-   "risk_framework": [
-    "other",
-    "real_oversight",
-    "traceability"
-   ],
-   "agentic_oversight": [
-    "audit_records",
-    "authority_level",
-    "full_sequence",
-    "human_confirm"
-   ]
-  },
-  "FDA-2026-N-7874-0025": {
-   "risk_framework": [
-    "broader_harms",
-    "reversibility"
-   ],
-   "postmarket_methods": [
-    "other",
-    "outcomes",
-    "reporting"
-   ],
-   "confirmation_flex": [
-    "scale_to_risk"
-   ],
-   "median_clinician_comparator": [
-    "other",
-    "standard_floor"
-   ],
-   "supervisory_agents": [
-    "human_final",
-    "responsibility",
-    "validate_supervisor"
-   ],
-   "competency_eval": [
-    "failure_limits",
-    "hard_cases",
-    "new_elements",
-    "other"
-   ],
-   "postmarket_tradeoff": [
-    "low",
-    "other"
-   ],
-   "flexible_change_control": [
-    "other"
-   ],
-   "voluntary_model_files": [
-    "other",
-    "resp"
-   ],
-   "third_party": [
-    "access",
-    "conflict",
-    "other"
-   ],
-   "no_care_comparator": [
-    "other"
-   ]
-  },
-  "FDA-2026-N-7874-0048": {
-   "risk_framework": [
-    "reversibility"
-   ],
-   "postmarket_methods": [
-    "event_triggers",
-    "set_responses"
-   ],
-   "agentic_oversight": [
-    "full_sequence",
-    "human_confirm"
-   ],
-   "competency_eval": [
-    "benchmark_validity",
-    "hard_cases",
-    "one_part",
-    "other"
-   ],
-   "postmarket_tradeoff": [
-    "low",
-    "nosub"
-   ],
-   "synthetic_data": [
-    "noreplace",
-    "separate"
-   ],
-   "third_party": [
-    "roles"
-   ]
-  },
-  "FDA-2026-N-7874-0052": {
-   "risk_framework": [
-    "other",
-    "real_oversight"
-   ],
-   "postmarket_methods": [
-    "event_triggers",
-    "other",
-    "outcomes"
-   ],
-   "supervisory_agents": [
-    "human_final",
-    "independent",
-    "validate_supervisor"
-   ],
-   "postmarket_tradeoff": [
-    "low",
-    "nosub",
-    "other"
-   ],
-   "synthetic_data": [
-    "indep",
-    "noreplace",
-    "other",
-    "validate"
-   ],
-   "patient_facing_risk": [
-    "cantcheck",
-    "safeguards"
-   ]
-  },
-  "FDA-2026-N-7874-0102": {
-   "risk_framework": [
-    "reversibility"
-   ],
-   "postmarket_methods": [
-    "records",
-    "set_responses"
-   ],
-   "agentic_oversight": [
-    "human_confirm",
-    "other"
-   ],
-   "supervisory_agents": [
-    "responsibility",
-    "validate_supervisor"
-   ],
-   "postmarket_tradeoff": [
-    "enforce"
-   ],
-   "voluntary_model_files": [
-    "contract",
-    "other",
-    "resp"
-   ]
-  },
-  "FDA-2026-N-7874-0098": {
-   "risk_framework": [
-    "other",
-    "real_oversight"
-   ],
-   "postmarket_methods": [
-    "other"
-   ],
-   "trajectory_risk": [
-    "other",
-    "scope_drift",
-    "user_pressure"
-   ],
-   "agentic_oversight": [
-    "human_confirm"
-   ],
-   "third_party": [
-    "conflict",
-    "other"
-   ]
-  },
-  "FDA-2026-N-7874-0089": {
-   "risk_framework": [
-    "other",
-    "reversibility"
-   ],
-   "agentic_oversight": [
-    "audit_records",
-    "human_confirm",
-    "other"
-   ]
-  },
-  "FDA-2026-N-7874-0009": {
-   "risk_framework": [
-    "real_oversight",
-    "reversibility",
-    "traceability"
-   ]
-  },
-  "FDA-2026-N-7874-0008": {
-   "postmarket_methods": [
-    "other"
-   ],
-   "postmarket_tradeoff": [
-    "detect"
-   ],
-   "voluntary_model_files": [
-    "content"
-   ]
-  },
-  "FDA-2026-N-7874-0090": {
-   "postmarket_methods": [
-    "event_triggers",
-    "other"
-   ],
-   "supervisory_agents": [
-    "independent",
-    "other",
-    "validate_supervisor"
-   ],
-   "postmarket_tradeoff": [
-    "detect",
-    "indep",
-    "other",
-    "plan"
-   ]
-  },
-  "FDA-2026-N-7874-0092": {
-   "postmarket_methods": [
-    "other",
-    "targeted_sampling"
-   ],
-   "agentic_oversight": [
-    "authority_level",
-    "human_confirm",
-    "other"
-   ]
-  },
-  "FDA-2026-N-7874-0075": {
-   "postmarket_methods": [
-    "event_triggers",
-    "other",
-    "set_responses"
-   ],
-   "agentic_oversight": [
-    "audit_records",
-    "human_confirm",
-    "other",
-    "outside_model"
-   ],
-   "supervisory_agents": [
-    "define_role",
-    "fail_safe",
-    "independent",
-    "validate_supervisor"
-   ],
-   "postmarket_tradeoff": [
-    "detect",
-    "enforce",
-    "staged"
-   ]
-  },
-  "FDA-2026-N-7874-0033": {
-   "postmarket_methods": [
-    "other"
-   ],
-   "supervisory_agents": [
-    "define_role",
-    "human_final",
-    "validate_supervisor"
-   ],
-   "postmarket_tradeoff": [
-    "detect",
-    "other"
-   ]
-  },
-  "FDA-2026-N-7874-0097": {
-   "postmarket_methods": [
-    "outcomes",
-    "reporting"
-   ],
-   "confirmation_flex": [
-    "real_populations",
-    "scale_to_risk"
-   ],
-   "agentic_oversight": [
-    "authority_level",
-    "other"
-   ]
-  },
-  "FDA-2026-N-7874-0110": {
-   "postmarket_methods": [
-    "event_triggers",
-    "other"
-   ],
-   "supervisory_agents": [
-    "human_final",
-    "independent"
-   ]
-  },
-  "FDA-2026-N-7874-0063": {
-   "postmarket_methods": [
-    "other",
-    "records",
-    "set_responses"
-   ]
-  },
-  "FDA-2026-N-7874-0027": {
-   "postmarket_methods": [
-    "other"
-   ],
-   "trajectory_risk": [
-    "other"
-   ],
-   "agentic_oversight": [
-    "human_confirm",
-    "other"
-   ],
-   "flexible_change_control": [
-    "other",
-    "rebench"
-   ],
-   "voluntary_model_files": [
-    "content",
-    "other"
-   ]
-  },
-  "FDA-2026-N-7874-0095": {
-   "postmarket_methods": [
-    "other"
-   ],
-   "agentic_oversight": [
-    "other"
-   ],
-   "supervisory_agents": [
-    "independent",
-    "other",
-    "validate_supervisor"
-   ],
-   "competency_eval": [
-    "other",
-    "variability"
-   ]
-  },
-  "FDA-2026-N-7874-0116": {
-   "postmarket_methods": [
-    "event_triggers",
-    "other"
-   ],
-   "supervisory_agents": [
-    "human_final",
-    "records",
-    "validate_supervisor"
-   ],
-   "postmarket_tradeoff": [
-    "detect",
-    "indep",
-    "low",
-    "other"
-   ],
-   "escalation_errors": [
-    "after",
-    "other",
-    "separate"
-   ],
-   "flexible_change_control": [
-    "bounds"
    ]
   },
   "FDA-2026-N-7874-0055": {
-   "postmarket_methods": [
-    "outcomes",
-    "set_responses",
-    "targeted_sampling"
+   "patient_facing_risk": [
+    "cantcheck",
+    "noauto",
+    "other"
+   ],
+   "escalation_errors": [
+    "asym",
+    "separate"
+   ],
+   "competency_eval": [
+    "deployed_system",
+    "failure_limits",
+    "one_part"
+   ],
+   "synthetic_data": [
+    "indep",
+    "noreplace",
+    "other",
+    "separate"
    ],
    "median_clinician_comparator": [
     "specialists",
     "standard_floor"
    ],
-   "agentic_oversight": [
-    "human_confirm",
-    "least_privilege",
-    "stop_rollback"
-   ],
-   "supervisory_agents": [
-    "human_final",
-    "independent",
-    "other",
-    "validate_supervisor"
-   ],
-   "competency_eval": [
-    "benchmark_validity",
-    "deployed_system",
-    "failure_limits",
-    "one_part"
+   "third_party": [
+    "conflict",
+    "multiple",
+    "roles"
    ],
    "postmarket_tradeoff": [
     "detect",
     "enforce",
     "low",
+    "plan",
     "staged"
    ],
-   "flexible_change_control": [
-    "bounds",
-    "rebench",
-    "review"
+   "postmarket_methods": [
+    "outcomes",
+    "set_responses",
+    "targeted_sampling"
    ],
-   "synthetic_data": [
-    "indep",
-    "noreplace",
-    "separate"
+   "supervisory_agents": [
+    "fail_safe",
+    "human_final",
+    "independent",
+    "other",
+    "validate_supervisor"
    ],
    "voluntary_model_files": [
+    "content",
     "fallback",
     "resp"
+   ]
+  },
+  "FDA-2026-N-7874-0006": {
+   "risk_framework": [
+    "other",
+    "setting"
    ],
    "patient_facing_risk": [
     "access",
-    "cantcheck",
-    "human",
-    "other"
+    "noauto",
+    "safeguards"
    ],
-   "escalation_errors": [
-    "after",
-    "asym"
+   "third_party": [
+    "access"
+   ],
+   "postmarket_tradeoff": [
+    "enforce",
+    "indep",
+    "other",
+    "plan"
    ]
   },
-  "FDA-2026-N-7874-0130": {
+  "FDA-2026-N-7874-0033": {
+   "postmarket_tradeoff": [
+    "detect",
+    "plan"
+   ],
    "postmarket_methods": [
     "event_triggers",
     "other",
     "records"
    ],
-   "agentic_oversight": [
-    "audit_records",
-    "least_privilege",
-    "stop_rollback"
-   ],
    "supervisory_agents": [
     "define_role",
-    "independent",
-    "other"
+    "human_final",
+    "records",
+    "responsibility",
+    "validate_supervisor"
+   ]
+  },
+  "FDA-2026-N-7874-0028": {
+   "risk_framework": [
+    "framework_use",
+    "real_oversight",
+    "reversibility",
+    "setting",
+    "traceability"
+   ],
+   "patient_facing_risk": [
+    "noauto",
+    "safeguards"
+   ],
+   "synthetic_data": [
+    "disclose",
+    "indep",
+    "validate"
+   ],
+   "median_clinician_comparator": [
+    "measure_median"
    ],
    "postmarket_tradeoff": [
     "detect",
+    "enforce",
+    "indep",
+    "low",
+    "other",
+    "plan"
+   ],
+   "supervisory_agents": [
+    "other",
+    "validate_supervisor"
+   ]
+  },
+  "FDA-2026-N-7874-0191": {
+   "postmarket_tradeoff": [
+    "indep",
+    "plan"
+   ]
+  },
+  "FDA-2026-N-7874-0093": {
+   "synthetic_data": [
+    "disclose",
+    "indep",
+    "subgroup",
+    "validate"
+   ],
+   "median_clinician_comparator": [
+    "measure_median",
+    "specialists"
+   ],
+   "third_party": [
+    "access",
+    "conflict",
+    "multiple"
+   ],
+   "postmarket_tradeoff": [
+    "detect",
+    "enforce",
+    "low",
+    "plan"
+   ],
+   "supervisory_agents": [
+    "human_final",
+    "independent",
+    "records",
+    "validate_supervisor"
+   ]
+  },
+  "FDA-2026-N-7874-0192": {
+   "supervisory_agents": [
+    "human_final",
+    "validate_supervisor"
+   ]
+  },
+  "FDA-2026-N-7874-0020": {
+   "risk_framework": [
+    "broader_harms",
+    "detectability",
+    "reversibility",
+    "setting"
+   ],
+   "competency_eval": [
+    "clinical_evidence"
+   ],
+   "confirmation_flex": [
+    "scale_to_risk"
+   ],
+   "synthetic_data": [
+    "noreplace"
+   ],
+   "postmarket_tradeoff": [
+    "low",
+    "nosub"
+   ]
+  },
+  "FDA-2026-N-7874-0178": {
+   "postmarket_tradeoff": [
+    "nosub"
+   ]
+  },
+  "FDA-2026-N-7874-0049": {
+   "risk_framework": [
+    "autonomy",
+    "dependencies",
+    "framework_use",
+    "real_oversight",
+    "reversibility",
+    "setting",
+    "traceability"
+   ],
+   "patient_facing_risk": [
+    "access",
+    "cantcheck",
+    "inform",
+    "noauto"
+   ],
+   "synthetic_data": [
+    "disclose",
+    "indep",
+    "noreplace",
+    "separate",
+    "validate"
+   ],
+   "postmarket_tradeoff": [
+    "detect",
+    "enforce",
+    "indep",
+    "low",
+    "nosub"
+   ],
+   "postmarket_methods": [
+    "event_triggers",
+    "records"
+   ],
+   "supervisory_agents": [
+    "define_role",
+    "fail_safe",
+    "records",
+    "responsibility",
+    "validate_supervisor"
+   ],
+   "flexible_change_control": [
+    "bounds",
+    "rebench",
+    "review",
+    "rollback",
+    "tier"
+   ]
+  },
+  "FDA-2026-N-7874-0158": {
+   "agentic_oversight": [
+    "audit_records",
+    "authority_level",
+    "human_confirm",
+    "stop_rollback"
+   ]
+  },
+  "FDA-2026-N-7874-0098": {
+   "risk_framework": [
+    "real_oversight"
+   ],
+   "trajectory_risk": [
+    "other"
+   ],
+   "postmarket_methods": [
+    "records"
+   ],
+   "agentic_oversight": [
+    "audit_records",
+    "human_confirm",
+    "outside_model"
+   ]
+  },
+  "FDA-2026-N-7874-0188": {
+   "synthetic_data": [
+    "indep",
+    "separate",
+    "subgroup",
+    "validate"
+   ],
+   "postmarket_tradeoff": [
+    "detect",
+    "enforce",
+    "low",
+    "nosub",
+    "plan"
+   ],
+   "supervisory_agents": [
+    "human_final",
+    "independent",
+    "validate_supervisor"
+   ],
+   "flexible_change_control": [
+    "pin",
+    "rebench",
+    "review",
+    "tier"
+   ],
+   "voluntary_model_files": [
+    "content"
+   ]
+  },
+  "FDA-2026-N-7874-0107": {
+   "competency_eval": [
+    "clinical_evidence",
+    "one_part"
+   ]
+  },
+  "FDA-2026-N-7874-0167": {
+   "risk_framework": [
+    "framework_use",
+    "reversibility",
+    "traceability"
+   ],
+   "competency_eval": [
+    "benchmark_validity",
+    "one_part"
+   ],
+   "supervisory_agents": [
+    "independent",
+    "validate_supervisor"
+   ]
+  },
+  "FDA-2026-N-7874-0076": {
+   "risk_framework": [
+    "broader_harms",
+    "other"
+   ],
+   "patient_facing_risk": [
+    "access",
+    "human",
+    "inform",
+    "noauto",
+    "safeguards"
+   ],
+   "escalation_errors": [
+    "asym",
+    "justify"
+   ],
+   "synthetic_data": [
+    "indep",
+    "noreplace",
+    "separate",
+    "subgroup"
+   ],
+   "postmarket_tradeoff": [
+    "low",
+    "other",
+    "plan"
+   ],
+   "postmarket_methods": [
+    "other",
+    "reporting",
+    "risk_cadence"
+   ],
+   "supervisory_agents": [
+    "human_final",
+    "validate_supervisor"
+   ],
+   "agentic_oversight": [
+    "audit_records",
+    "human_confirm",
+    "least_privilege"
+   ]
+  },
+  "FDA-2026-N-7874-0131": {
+   "risk_framework": [
+    "broader_harms",
+    "reversibility"
+   ],
+   "postmarket_tradeoff": [
+    "low"
+   ],
+   "postmarket_methods": [
+    "other"
+   ],
+   "supervisory_agents": [
+    "other",
+    "records"
+   ],
+   "voluntary_model_files": [
+    "content"
+   ],
+   "agentic_oversight": [
+    "audit_records"
+   ]
+  },
+  "FDA-2026-N-7874-0193": {
+   "postmarket_tradeoff": [
     "other"
    ]
   },
-  "FDA-2026-N-7874-0067": {
+  "FDA-2026-N-7874-0101": {
+   "risk_framework": [
+    "other"
+   ]
+  },
+  "FDA-2026-N-7874-0039": {
+   "risk_framework": [
+    "autonomy",
+    "detectability",
+    "other",
+    "real_oversight",
+    "reversibility"
+   ]
+  },
+  "FDA-2026-N-7874-0149": {
+   "risk_framework": [
+    "real_oversight",
+    "reversibility",
+    "setting"
+   ],
+   "patient_facing_risk": [
+    "cantcheck",
+    "noauto"
+   ],
+   "postmarket_tradeoff": [
+    "enforce",
+    "low",
+    "other",
+    "plan"
+   ],
+   "supervisory_agents": [
+    "human_final",
+    "independent",
+    "validate_supervisor"
+   ],
+   "voluntary_model_files": [
+    "content",
+    "current",
+    "resp"
+   ]
+  },
+  "FDA-2026-N-7874-0157": {
+   "confirmation_flex": [
+    "real_populations"
+   ]
+  },
+  "FDA-2026-N-7874-0027": {
+   "postmarket_methods": [
+    "event_triggers",
+    "other",
+    "risk_cadence"
+   ],
+   "flexible_change_control": [
+    "bounds",
+    "rebench"
+   ]
+  },
+  "FDA-2026-N-7874-0136": {
+   "risk_framework": [
+    "reversibility"
+   ],
    "postmarket_methods": [
     "other",
     "set_responses"
    ],
+   "supervisory_agents": [
+    "fail_safe",
+    "human_final",
+    "independent",
+    "validate_supervisor"
+   ],
    "agentic_oversight": [
     "audit_records",
-    "human_confirm"
+    "human_confirm",
+    "least_privilege",
+    "stop_rollback"
    ]
   },
-  "FDA-2026-N-7874-0050": {
+  "FDA-2026-N-7874-0037": {
+   "risk_framework": [
+    "autonomy",
+    "dependencies",
+    "other",
+    "real_oversight",
+    "reversibility",
+    "setting",
+    "traceability"
+   ]
+  },
+  "FDA-2026-N-7874-0046": {
+   "risk_framework": [
+    "real_oversight",
+    "reversibility"
+   ],
    "postmarket_methods": [
-    "other"
-   ],
-   "voluntary_model_files": [
-    "other"
+    "records"
    ]
   },
-  "FDA-2026-N-7874-0091": {
-   "confirmation_flex": [
-    "other"
-   ],
-   "trajectory_risk": [
-    "report_timing"
-   ],
-   "competency_eval": [
-    "benchmark_validity",
-    "other",
-    "variability"
-   ],
-   "flexible_change_control": [
-    "other",
-    "rebench",
-    "tier"
-   ],
-   "synthetic_data": [
+  "FDA-2026-N-7874-0130": {
+   "postmarket_tradeoff": [
+    "enforce",
     "indep",
     "other"
    ],
-   "third_party": [
+   "postmarket_methods": [
+    "event_triggers",
     "other",
-    "roles"
+    "records"
    ],
-   "escalation_errors": [
-    "justify",
+   "supervisory_agents": [
+    "define_role",
+    "independent",
+    "records"
+   ],
+   "flexible_change_control": [
     "other",
-    "separate"
+    "pin",
+    "rollback"
+   ]
+  },
+  "FDA-2026-N-7874-0035": {
+   "risk_framework": [
+    "broader_harms",
+    "real_oversight",
+    "reversibility",
+    "setting",
+    "traceability"
+   ],
+   "patient_facing_risk": [
+    "noauto",
+    "safeguards"
+   ],
+   "competency_eval": [
+    "deployed_system",
+    "new_elements"
+   ],
+   "third_party": [
+    "conflict",
+    "multiple"
+   ],
+   "postmarket_tradeoff": [
+    "detect",
+    "enforce",
+    "low",
+    "plan"
+   ],
+   "postmarket_methods": [
+    "event_triggers",
+    "risk_cadence"
+   ],
+   "supervisory_agents": [
+    "define_role",
+    "fail_safe",
+    "independent",
+    "records",
+    "validate_supervisor"
+   ],
+   "voluntary_model_files": [
+    "content",
+    "contract",
+    "current",
+    "resp"
    ]
   },
   "FDA-2026-N-7874-0123": {
@@ -2200,57 +1510,21 @@
     "specialists",
     "standard_floor"
    ],
-   "competency_eval": [
-    "benchmark_validity",
-    "new_elements",
-    "one_part",
-    "other"
-   ],
    "no_care_comparator": [
     "standard"
    ]
   },
-  "FDA-2026-N-7874-0078": {
-   "trajectory_risk": [
-    "long_use",
-    "report_timing"
-   ]
-  },
-  "FDA-2026-N-7874-0065": {
-   "trajectory_risk": [
-    "long_use",
-    "other",
-    "report_timing",
-    "user_pressure"
-   ]
-  },
-  "FDA-2026-N-7874-0018": {
+  "FDA-2026-N-7874-0075": {
+   "postmarket_tradeoff": [
+    "detect",
+    "enforce",
+    "low",
+    "plan"
+   ],
    "agentic_oversight": [
     "audit_records",
-    "authority_level",
-    "human_confirm",
-    "stop_rollback"
-   ],
-   "flexible_change_control": [
-    "other",
-    "pin",
-    "rebench"
-   ]
-  },
-  "FDA-2026-N-7874-0109": {
-   "agentic_oversight": [
-    "other",
-    "stop_rollback"
-   ]
-  },
-  "FDA-2026-N-7874-0122": {
-   "agentic_oversight": [
-    "authority_level",
-    "least_privilege",
-    "other"
-   ],
-   "flexible_change_control": [
-    "other"
+    "full_sequence",
+    "outside_model"
    ]
   },
   "FDA-2026-N-7874-0062": {
@@ -2259,325 +1533,17 @@
     "validate_supervisor"
    ],
    "flexible_change_control": [
-    "pin"
-   ]
-  },
-  "FDA-2026-N-7874-0071": {
-   "supervisory_agents": [
-    "independent",
-    "other"
-   ],
-   "flexible_change_control": [
-    "rebench",
-    "tier"
-   ]
-  },
-  "FDA-2026-N-7874-0066": {
-   "supervisory_agents": [
-    "fail_safe",
-    "independent",
-    "records",
-    "validate_supervisor"
-   ]
-  },
-  "FDA-2026-N-7874-0106": {
-   "supervisory_agents": [
-    "independent",
-    "validate_supervisor"
-   ]
-  },
-  "FDA-2026-N-7874-0074": {
-   "competency_eval": [
-    "benchmark_validity",
-    "deployed_system",
-    "other"
-   ]
-  },
-  "FDA-2026-N-7874-0108": {
-   "competency_eval": [
-    "hard_cases",
-    "other"
-   ]
-  },
-  "FDA-2026-N-7874-0103": {
-   "competency_eval": [
-    "deployed_system",
-    "other"
-   ]
-  },
-  "FDA-2026-N-7874-0128": {
-   "competency_eval": [
-    "new_elements",
-    "other"
-   ]
-  },
-  "FDA-2026-N-7874-0129": {
-   "competency_eval": [
-    "new_elements",
-    "other"
-   ]
-  },
-  "FDA-2026-N-7874-0077": {
-   "postmarket_tradeoff": [
-    "detect",
-    "indep",
-    "low"
-   ]
-  },
-  "FDA-2026-N-7874-0026": {
-   "escalation_errors": [
-    "asym",
-    "justify",
-    "other"
-   ]
-  },
-  "FDA-2026-N-7874-0064": {
-   "no_care_comparator": [
-    "justify",
-    "other",
-    "standard"
-   ]
-  },
-  "FDA-2026-N-7874-0173": {
-   "postmarket_tradeoff": [
-    "indep",
-    "other"
-   ],
-   "postmarket_methods": [
-    "records"
-   ],
-   "supervisory_agents": [
-    "validate_supervisor",
-    "records"
-   ],
-   "voluntary_model_files": [
-    "current"
-   ],
-   "flexible_change_control": [
-    "bounds",
-    "other",
     "pin",
     "rebench"
-   ],
-   "agentic_oversight": [
-    "authority_level",
-    "full_sequence",
-    "other"
-   ]
-  },
-  "FDA-2026-N-7874-0144": {
-   "risk_framework": [
-    "real_oversight",
-    "reversibility",
-    "detectability",
-    "other"
-   ],
-   "postmarket_tradeoff": [
-    "nosub"
-   ],
-   "agentic_oversight": [
-    "human_confirm",
-    "stop_rollback",
-    "full_sequence",
-    "authority_level",
-    "least_privilege"
-   ],
-   "postmarket_methods": [
-    "other",
-    "outcomes",
-    "reporting",
-    "set_responses"
-   ]
-  },
-  "FDA-2026-N-7874-0193": {
-   "risk_framework": [
-    "other"
-   ],
-   "postmarket_tradeoff": [
-    "other"
-   ],
-   "voluntary_model_files": [
-    "current",
-    "contract"
-   ],
-   "postmarket_methods": [
-    "other"
-   ],
-   "flexible_change_control": [
-    "rebench"
-   ]
-  },
-  "FDA-2026-N-7874-0183": {
-   "third_party": [
-    "optional",
-    "access"
-   ]
-  },
-  "FDA-2026-N-7874-0177": {
-   "risk_framework": [
-    "setting"
-   ],
-   "postmarket_tradeoff": [
-    "low",
-    "detect"
-   ],
-   "flexible_change_control": [
-    "bounds",
-    "tier",
-    "rollback",
-    "rebench",
-    "other"
-   ]
-  },
-  "FDA-2026-N-7874-0203": {
-   "competency_eval": [
-    "other"
-   ]
-  },
-  "FDA-2026-N-7874-0179": {
-   "risk_framework": [
-    "real_oversight",
-    "other"
-   ],
-   "patient_facing_risk": [
-    "noauto",
-    "cantcheck",
-    "inform"
-   ],
-   "trajectory_risk": [
-    "long_use",
-    "scope_drift"
-   ],
-   "escalation_errors": [
-    "separate",
-    "justify",
-    "after"
-   ],
-   "competency_eval": [
-    "deployed_system",
-    "benchmark_validity",
-    "failure_limits",
-    "other"
-   ],
-   "confirmation_flex": [
-    "scale_to_risk",
-    "real_populations"
-   ],
-   "synthetic_data": [
-    "separate",
-    "validate",
-    "indep",
-    "subgroup"
-   ],
-   "median_clinician_comparator": [
-    "standard_floor",
-    "specialists"
-   ],
-   "no_care_comparator": [
-    "local",
-    "justify",
-    "standard"
-   ],
-   "postmarket_tradeoff": [
-    "low",
-    "detect",
-    "nosub",
-    "indep"
-   ],
-   "postmarket_methods": [
-    "event_triggers",
-    "outcomes",
-    "risk_cadence",
-    "targeted_sampling",
-    "other"
-   ],
-   "supervisory_agents": [
-    "validate_supervisor",
-    "human_final",
-    "fail_safe",
-    "records"
-   ],
-   "flexible_change_control": [
-    "bounds",
-    "rebench",
-    "review",
-    "rollback"
-   ],
-   "voluntary_model_files": [
-    "content",
-    "current",
-    "contract",
-    "fallback",
-    "resp"
-   ],
-   "agentic_oversight": [
-    "full_sequence",
-    "least_privilege",
-    "human_confirm",
-    "authority_level",
-    "audit_records",
-    "stop_rollback"
-   ]
-  },
-  "FDA-2026-N-7874-0161": {
-   "risk_framework": [
-    "real_oversight"
-   ],
-   "escalation_errors": [
-    "after"
-   ],
-   "competency_eval": [
-    "other"
-   ],
-   "postmarket_methods": [
-    "outcomes",
-    "reporting"
-   ],
-   "agentic_oversight": [
-    "human_confirm",
-    "stop_rollback",
-    "audit_records",
-    "other"
-   ]
-  },
-  "FDA-2026-N-7874-0185": {
-   "risk_framework": [
-    "traceability",
-    "detectability"
-   ],
-   "competency_eval": [
-    "new_elements",
-    "human_ai_team"
-   ],
-   "flexible_change_control": [
-    "bounds",
-    "rebench",
-    "review",
-    "rollback"
-   ]
-  },
-  "FDA-2026-N-7874-0195": {
-   "synthetic_data": [
-    "validate",
-    "separate",
-    "indep",
-    "disclose",
-    "noreplace"
-   ],
-   "third_party": [
-    "conflict",
-    "multiple",
-    "access",
-    "roles"
-   ],
-   "confirmation_flex": [
-    "real_populations",
-    "scale_to_risk"
    ]
   },
   "FDA-2026-N-7874-0184": {
    "risk_framework": [
-    "reversibility",
+    "other",
+    "reversibility"
+   ],
+   "competency_eval": [
+    "new_elements",
     "other"
    ],
    "synthetic_data": [
@@ -2586,501 +1552,343 @@
    ],
    "postmarket_tradeoff": [
     "low"
-   ],
-   "postmarket_methods": [
-    "risk_cadence",
-    "other"
-   ],
-   "competency_eval": [
-    "hard_cases",
-    "other"
    ]
   },
-  "FDA-2026-N-7874-0186": {
-   "third_party": [
-    "roles",
-    "other"
+  "FDA-2026-N-7874-0143": {
+   "synthetic_data": [
+    "separate",
+    "subgroup"
    ],
    "supervisory_agents": [
-    "validate_supervisor",
+    "human_final",
+    "independent",
+    "validate_supervisor"
+   ]
+  },
+  "FDA-2026-N-7874-0121": {
+   "risk_framework": [
+    "detectability",
+    "real_oversight",
+    "reversibility"
+   ],
+   "postmarket_methods": [
+    "outcomes"
+   ]
+  },
+  "FDA-2026-N-7874-0164": {
+   "synthetic_data": [
+    "noreplace"
+   ],
+   "postmarket_tradeoff": [
+    "detect",
+    "enforce",
+    "low"
+   ]
+  },
+  "FDA-2026-N-7874-0118": {
+   "risk_framework": [
+    "real_oversight",
+    "reversibility",
+    "setting",
+    "traceability"
+   ],
+   "escalation_errors": [
+    "asym",
+    "separate"
+   ],
+   "confirmation_flex": [
+    "scale_to_risk"
+   ],
+   "synthetic_data": [
+    "indep",
+    "subgroup"
+   ],
+   "median_clinician_comparator": [
+    "specialists",
+    "standard_floor"
+   ],
+   "no_care_comparator": [
+    "standard"
+   ],
+   "third_party": [
+    "access",
+    "conflict",
+    "other"
+   ],
+   "postmarket_tradeoff": [
+    "detect",
+    "low"
+   ],
+   "postmarket_methods": [
+    "event_triggers",
+    "reporting",
+    "set_responses",
+    "targeted_sampling"
+   ],
+   "supervisory_agents": [
+    "human_final",
+    "independent",
     "other"
    ],
    "flexible_change_control": [
+    "bounds",
     "rebench",
-    "tier",
-    "other"
-   ],
-   "voluntary_model_files": [
-    "resp",
-    "fallback",
-    "content"
+    "tier"
    ],
    "agentic_oversight": [
-    "outside_model"
-   ],
+    "full_sequence",
+    "human_confirm",
+    "stop_rollback"
+   ]
+  },
+  "FDA-2026-N-7874-0189": {
    "competency_eval": [
-    "benchmark_validity",
     "deployed_system",
-    "one_part",
-    "variability"
-   ]
-  },
-  "FDA-2026-N-7874-0165": {
-   "risk_framework": [
-    "real_oversight",
     "other"
    ],
-   "competency_eval": [
-    "human_ai_team",
+   "third_party": [
+    "conflict",
     "other"
-   ],
-   "confirmation_flex": [
-    "real_populations"
-   ],
-   "postmarket_methods": [
-    "outcomes",
-    "reporting",
-    "event_triggers"
-   ]
-  },
-  "FDA-2026-N-7874-0168": {
-   "risk_framework": [
-    "traceability",
-    "other"
-   ],
-   "competency_eval": [
-    "deployed_system"
    ],
    "agentic_oversight": [
-    "audit_records"
+    "audit_records",
+    "authority_level",
+    "human_confirm",
+    "stop_rollback"
    ]
   },
-  "FDA-2026-N-7874-0174": {
+  "FDA-2026-N-7874-0111": {
+   "escalation_errors": [
+    "justify",
+    "separate"
+   ],
+   "third_party": [
+    "access",
+    "optional"
+   ],
+   "postmarket_tradeoff": [
+    "detect"
+   ],
+   "supervisory_agents": [
+    "define_role",
+    "validate_supervisor"
+   ]
+  },
+  "FDA-2026-N-7874-0051": {
    "risk_framework": [
     "detectability",
-    "reversibility",
-    "real_oversight",
+    "framework_use"
+   ],
+   "patient_facing_risk": [
+    "cantcheck",
+    "noauto",
+    "safeguards"
+   ],
+   "synthetic_data": [
+    "separate",
+    "subgroup"
+   ],
+   "postmarket_tradeoff": [
+    "detect",
+    "low"
+   ]
+  },
+  "FDA-2026-N-7874-0134": {
+   "supervisory_agents": [
+    "fail_safe",
+    "validate_supervisor"
+   ]
+  },
+  "FDA-2026-N-7874-0053": {
+   "risk_framework": [
+    "other",
+    "reversibility"
+   ],
+   "postmarket_tradeoff": [
+    "low"
+   ],
+   "flexible_change_control": [
+    "pin",
+    "rebench",
+    "tier"
+   ]
+  },
+  "FDA-2026-N-7874-0181": {
+   "postmarket_methods": [
+    "reporting"
+   ]
+  },
+  "FDA-2026-N-7874-0094": {
+   "risk_framework": [
     "setting",
-    "other"
+    "traceability"
+   ],
+   "competency_eval": [
+    "clinical_evidence"
+   ],
+   "third_party": [
+    "access",
+    "optional"
+   ],
+   "agentic_oversight": [
+    "human_confirm",
+    "not_device_alone"
+   ]
+  },
+  "FDA-2026-N-7874-0205": {
+   "third_party": [
+    "optional"
+   ],
+   "supervisory_agents": [
+    "validate_supervisor"
+   ]
+  },
+  "FDA-2026-N-7874-0176": {
+   "risk_framework": [
+    "reversibility"
    ],
    "patient_facing_risk": [
     "noauto",
-    "action",
-    "inform",
-    "human"
-   ],
-   "competency_eval": [
-    "deployed_system",
-    "new_elements",
-    "human_ai_team"
+    "safeguards"
    ],
    "no_care_comparator": [
     "justify",
     "local",
     "standard"
    ],
-   "postmarket_tradeoff": [
-    "detect",
-    "low",
-    "plan",
-    "enforce",
-    "staged",
-    "nosub"
-   ],
-   "flexible_change_control": [
-    "bounds",
-    "tier",
-    "rollback",
-    "review",
-    "rebench"
-   ],
-   "agentic_oversight": [
-    "full_sequence",
-    "human_confirm",
-    "authority_level",
-    "audit_records"
-   ],
-   "escalation_errors": [
-    "after",
-    "justify",
-    "separate"
-   ],
-   "synthetic_data": [
-    "noreplace"
-   ],
-   "median_clinician_comparator": [
-    "standard_floor"
-   ],
-   "directiveness_continuum": [
-    "clear_limits"
-   ]
-  },
-  "FDA-2026-N-7874-0169": {
-   "risk_framework": [
-    "framework_use",
-    "reversibility",
-    "real_oversight",
-    "setting",
-    "traceability"
-   ],
-   "trajectory_risk": [
-    "scope_drift"
-   ],
-   "postmarket_tradeoff": [
-    "plan",
-    "enforce",
-    "detect",
-    "low"
-   ],
-   "postmarket_methods": [
-    "event_triggers",
-    "risk_cadence",
-    "set_responses"
-   ],
-   "supervisory_agents": [
-    "validate_supervisor",
-    "independent",
-    "define_role",
-    "records"
-   ],
-   "flexible_change_control": [
-    "tier",
-    "bounds",
-    "rollback",
-    "review",
-    "rebench"
-   ],
-   "agentic_oversight": [
-    "least_privilege",
-    "audit_records",
-    "human_confirm",
-    "outside_model",
-    "authority_level"
-   ]
-  },
-  "FDA-2026-N-7874-0180": {
-   "directiveness_continuum": [
-    "clear_limits"
-   ],
-   "synthetic_data": [
-    "validate",
-    "subgroup"
-   ],
-   "postmarket_tradeoff": [
-    "plan",
-    "other"
-   ],
-   "postmarket_methods": [
-    "risk_cadence",
-    "reporting",
-    "other"
-   ],
-   "trajectory_risk": [
-    "other",
-    "scope_drift"
-   ]
-  },
-  "FDA-2026-N-7874-0182": {
    "third_party": [
-    "conflict",
     "access",
-    "other"
+    "conflict",
+    "multiple",
+    "optional"
    ],
    "postmarket_tradeoff": [
-    "plan",
+    "enforce",
+    "indep",
     "low",
-    "other"
-   ],
-   "voluntary_model_files": [
-    "current",
-    "content",
-    "other"
-   ],
-   "flexible_change_control": [
-    "other"
-   ]
-  },
-  "FDA-2026-N-7874-0150": {
-   "risk_framework": [
-    "real_oversight",
-    "other"
-   ],
-   "postmarket_methods": [
-    "other"
-   ]
-  },
-  "FDA-2026-N-7874-0163": {
-   "risk_framework": [
-    "reversibility",
-    "setting",
-    "traceability",
-    "real_oversight"
-   ],
-   "competency_eval": [
-    "deployed_system",
-    "hard_cases",
-    "human_ai_team"
-   ],
-   "postmarket_tradeoff": [
-    "low",
-    "detect",
     "nosub",
     "plan"
    ],
    "supervisory_agents": [
+    "human_final",
     "validate_supervisor"
-   ],
-   "agentic_oversight": [
-    "human_confirm",
-    "least_privilege",
-    "stop_rollback",
-    "audit_records"
-   ],
-   "postmarket_methods": [
-    "event_triggers",
-    "other",
-    "reporting"
-   ]
-  },
-  "FDA-2026-N-7874-0145": {
-   "risk_framework": [
-    "detectability",
-    "real_oversight",
-    "reversibility"
-   ]
-  },
-  "FDA-2026-N-7874-0181": {
-   "postmarket_methods": [
-    "reporting",
-    "other"
-   ]
-  },
-  "FDA-2026-N-7874-0167": {
-   "risk_framework": [
-    "reversibility",
-    "traceability",
-    "framework_use"
-   ],
-   "trajectory_risk": [
-    "long_use"
-   ],
-   "competency_eval": [
-    "benchmark_validity",
-    "one_part"
-   ],
-   "postmarket_methods": [
-    "other"
-   ],
-   "supervisory_agents": [
-    "validate_supervisor"
-   ]
-  },
-  "FDA-2026-N-7874-0202": {
-   "risk_framework": [
-    "framework_use",
-    "detectability",
-    "reversibility",
-    "real_oversight",
-    "autonomy",
-    "other"
-   ],
-   "competency_eval": [
-    "deployed_system",
-    "one_part",
-    "hard_cases",
-    "benchmark_validity"
-   ],
-   "synthetic_data": [
-    "separate",
-    "indep",
-    "other"
-   ],
-   "postmarket_tradeoff": [
-    "detect",
-    "enforce"
-   ],
-   "postmarket_methods": [
-    "event_triggers",
-    "outcomes"
    ],
    "flexible_change_control": [
     "bounds",
-    "rollback",
-    "tier",
-    "rebench"
+    "rebench",
+    "review"
    ]
   },
-  "FDA-2026-N-7874-0200": {
+  "FDA-2026-N-7874-0042": {
    "risk_framework": [
-    "traceability",
-    "reversibility",
     "real_oversight",
+    "traceability"
+   ],
+   "supervisory_agents": [
+    "records"
+   ]
+  },
+  "FDA-2026-N-7874-0095": {
+   "supervisory_agents": [
+    "independent",
+    "other",
+    "validate_supervisor"
+   ]
+  },
+  "FDA-2026-N-7874-0074": {
+   "competency_eval": [
+    "deployed_system"
+   ]
+  },
+  "FDA-2026-N-7874-0177": {
+   "postmarket_tradeoff": [
+    "detect",
+    "low"
+   ],
+   "flexible_change_control": [
+    "bounds",
+    "rebench",
+    "rollback",
+    "tier"
+   ]
+  },
+  "FDA-2026-N-7874-0003": {
+   "risk_framework": [
+    "dependencies",
+    "reversibility",
+    "setting"
+   ],
+   "directiveness_continuum": [
     "other"
    ],
    "patient_facing_risk": [
-    "cantcheck",
-    "safeguards",
-    "human"
-   ],
-   "trajectory_risk": [
-    "scope_drift",
-    "long_use"
+    "action",
+    "noauto"
    ],
    "escalation_errors": [
-    "separate",
-    "asym",
-    "other"
+    "asym"
    ],
    "synthetic_data": [
-    "subgroup"
+    "noreplace",
+    "subgroup",
+    "validate"
    ],
    "third_party": [
-    "optional",
     "access",
-    "conflict",
-    "roles"
+    "multiple"
    ],
    "postmarket_tradeoff": [
-    "low"
+    "enforce",
+    "plan"
    ],
    "postmarket_methods": [
-    "outcomes",
+    "event_triggers",
+    "risk_cadence"
+   ],
+   "supervisory_agents": [
+    "human_final",
+    "validate_supervisor"
+   ],
+   "agentic_oversight": [
+    "authority_level",
+    "human_confirm",
+    "other"
+   ]
+  },
+  "FDA-2026-N-7874-0092": {
+   "postmarket_methods": [
     "risk_cadence",
+    "targeted_sampling"
+   ],
+   "agentic_oversight": [
+    "audit_records",
+    "authority_level",
+    "human_confirm"
+   ]
+  },
+  "FDA-2026-N-7874-0090": {
+   "postmarket_tradeoff": [
+    "detect",
+    "enforce",
+    "indep",
+    "low",
+    "plan"
+   ],
+   "postmarket_methods": [
+    "event_triggers",
     "other"
    ],
    "supervisory_agents": [
     "independent",
-    "validate_supervisor",
-    "human_final"
+    "other",
+    "records",
+    "validate_supervisor"
    ],
    "flexible_change_control": [
-    "tier",
-    "bounds",
-    "rebench"
-   ],
-   "agentic_oversight": [
-    "human_confirm",
-    "audit_records",
-    "least_privilege",
-    "full_sequence",
-    "not_device_alone"
-   ],
-   "voluntary_model_files": [
-    "content",
-    "contract",
-    "current"
-   ],
-   "competency_eval": [
-    "benchmark_validity"
-   ]
-  },
-  "FDA-2026-N-7874-0192": {
-   "escalation_errors": [
-    "separate",
-    "justify"
-   ],
-   "synthetic_data": [
-    "separate",
-    "disclose",
-    "other"
-   ],
-   "supervisory_agents": [
-    "validate_supervisor",
-    "fail_safe",
-    "records"
-   ]
-  },
-  "FDA-2026-N-7874-0132": {
-   "postmarket_methods": [
-    "reporting",
-    "risk_cadence",
-    "other"
-   ]
-  },
-  "FDA-2026-N-7874-0133": {
-   "third_party": [
-    "optional",
-    "access"
-   ]
-  },
-  "FDA-2026-N-7874-0148": {
-   "risk_framework": [
-    "detectability",
-    "real_oversight"
-   ],
-   "postmarket_methods": [
-    "event_triggers"
-   ]
-  },
-  "FDA-2026-N-7874-0178": {
-   "competency_eval": [
-    "deployed_system",
-    "new_elements",
-    "failure_limits",
-    "variability"
-   ],
-   "postmarket_methods": [
-    "reporting",
-    "other"
-   ],
-   "postmarket_tradeoff": [
-    "nosub"
-   ]
-  },
-  "FDA-2026-N-7874-0152": {
-   "competency_eval": [
-    "other"
-   ],
-   "agentic_oversight": [
-    "human_confirm"
-   ]
-  },
-  "FDA-2026-N-7874-0191": {
-   "trajectory_risk": [
-    "scope_drift"
-   ],
-   "postmarket_tradeoff": [
-    "plan",
-    "other"
-   ],
-   "postmarket_methods": [
-    "event_triggers",
-    "set_responses"
-   ],
-   "flexible_change_control": [
+    "other",
+    "pin",
     "rebench",
-    "tier",
-    "bounds",
-    "review"
-   ],
-   "voluntary_model_files": [
-    "content",
-    "contract"
-   ],
-   "competency_eval": [
-    "benchmark_validity",
-    "hard_cases",
-    "other"
-   ]
-  },
-  "FDA-2026-N-7874-0158": {
-   "postmarket_methods": [
-    "outcomes",
-    "reporting"
-   ],
-   "agentic_oversight": [
-    "human_confirm",
-    "authority_level",
-    "audit_records"
-   ]
-  },
-  "FDA-2026-N-7874-0151": {
-   "postmarket_tradeoff": [
-    "indep",
-    "detect"
-   ],
-   "agentic_oversight": [
-    "audit_records"
+    "tier"
    ]
   },
   "FDA-2026-N-7874-0172": {
@@ -3088,90 +1896,221 @@
     "other"
    ],
    "postmarket_tradeoff": [
+    "detect",
     "indep"
-   ],
-   "third_party": [
-    "conflict",
-    "other"
-   ],
-   "flexible_change_control": [
-    "other"
    ]
   },
-  "FDA-2026-N-7874-0188": {
+  "FDA-2026-N-7874-0056": {
    "risk_framework": [
-    "reversibility",
     "detectability",
-    "traceability",
-    "other"
-   ],
-   "trajectory_risk": [
-    "scope_drift",
-    "user_pressure",
-    "report_timing"
-   ],
-   "escalation_errors": [
-    "justify",
-    "separate",
-    "other"
+    "reversibility",
+    "setting"
    ],
    "competency_eval": [
     "deployed_system",
-    "benchmark_validity",
-    "variability"
+    "failure_limits",
+    "hard_cases",
+    "human_ai_team",
+    "new_elements"
    ],
-   "synthetic_data": [
-    "indep",
-    "separate",
-    "validate",
-    "subgroup"
+   "postmarket_methods": [
+    "event_triggers",
+    "outcomes",
+    "targeted_sampling"
+   ],
+   "supervisory_agents": [
+    "independent",
+    "validate_supervisor"
+   ],
+   "agentic_oversight": [
+    "audit_records",
+    "full_sequence",
+    "human_confirm",
+    "least_privilege",
+    "stop_rollback"
+   ]
+  },
+  "FDA-2026-N-7874-0112": {
+   "risk_framework": [
+    "broader_harms"
+   ]
+  },
+  "FDA-2026-N-7874-0151": {
+   "postmarket_tradeoff": [
+    "detect",
+    "indep"
+   ]
+  },
+  "FDA-2026-N-7874-0063": {
+   "postmarket_methods": [
+    "event_triggers",
+    "other"
+   ]
+  },
+  "FDA-2026-N-7874-0064": {
+   "no_care_comparator": [
+    "other",
+    "standard"
+   ]
+  },
+  "FDA-2026-N-7874-0008": {
+   "postmarket_tradeoff": [
+    "detect"
+   ],
+   "postmarket_methods": [
+    "other"
+   ],
+   "voluntary_model_files": [
+    "content"
+   ]
+  },
+  "FDA-2026-N-7874-0086": {
+   "risk_framework": [
+    "broader_harms",
+    "detectability",
+    "reversibility",
+    "setting",
+    "traceability"
+   ],
+   "competency_eval": [
+    "clinical_evidence",
+    "human_ai_team"
+   ],
+   "confirmation_flex": [
+    "real_populations",
+    "scale_to_risk"
+   ],
+   "postmarket_methods": [
+    "outcomes",
+    "reporting"
+   ],
+   "supervisory_agents": [
+    "human_final"
+   ],
+   "flexible_change_control": [
+    "pin",
+    "review",
+    "rollback"
+   ]
+  },
+  "FDA-2026-N-7874-0083": {
+   "postmarket_methods": [
+    "other"
+   ]
+  },
+  "FDA-2026-N-7874-0025": {
+   "risk_framework": [
+    "broader_harms",
+    "reversibility",
+    "setting"
+   ],
+   "competency_eval": [
+    "new_elements"
+   ],
+   "median_clinician_comparator": [
+    "standard_floor"
+   ],
+   "no_care_comparator": [
+    "standard"
    ],
    "postmarket_tradeoff": [
-    "low",
-    "plan",
+    "low"
+   ],
+   "postmarket_methods": [
+    "outcomes",
+    "reporting"
+   ],
+   "supervisory_agents": [
+    "human_final",
+    "responsibility",
+    "validate_supervisor"
+   ],
+   "voluntary_model_files": [
+    "content",
+    "current",
+    "resp"
+   ]
+  },
+  "FDA-2026-N-7874-0169": {
+   "risk_framework": [
+    "real_oversight",
+    "reversibility",
+    "setting",
+    "traceability"
+   ],
+   "postmarket_tradeoff": [
+    "detect",
     "enforce",
-    "nosub"
+    "indep",
+    "low",
+    "plan"
+   ],
+   "supervisory_agents": [
+    "define_role",
+    "independent",
+    "records",
+    "validate_supervisor"
+   ]
+  },
+  "FDA-2026-N-7874-0105": {
+   "risk_framework": [
+    "other",
+    "real_oversight",
+    "reversibility",
+    "setting",
+    "traceability"
+   ],
+   "postmarket_tradeoff": [
+    "detect",
+    "low",
+    "plan"
    ],
    "postmarket_methods": [
     "event_triggers",
     "set_responses"
    ],
    "supervisory_agents": [
+    "define_role",
+    "fail_safe",
     "independent",
-    "validate_supervisor",
-    "human_final"
+    "records",
+    "validate_supervisor"
    ],
    "flexible_change_control": [
-    "tier",
-    "rebench",
+    "bounds",
+    "pin",
     "review",
-    "pin"
+    "rollback",
+    "tier"
    ],
    "voluntary_model_files": [
-    "content"
+    "content",
+    "current",
+    "fallback",
+    "resp"
    ],
    "agentic_oversight": [
-    "human_confirm",
-    "least_privilege",
     "audit_records",
     "full_sequence",
-    "authority_level"
+    "human_confirm",
+    "least_privilege",
+    "outside_model",
+    "stop_rollback"
    ]
   },
-  "FDA-2026-N-7874-0140": {
-   "postmarket_methods": [
-    "set_responses",
-    "other"
-   ],
-   "trajectory_risk": [
-    "other"
-   ],
-   "competency_eval": [
-    "other"
-   ],
-   "confirmation_flex": [
-    "real_populations",
-    "scale_to_risk"
+  "FDA-2026-N-7874-0195": {
+   "synthetic_data": [
+    "indep",
+    "noreplace",
+    "separate",
+    "validate"
+   ]
+  },
+  "FDA-2026-N-7874-0089": {
+   "agentic_oversight": [
+    "audit_records",
+    "authority_level",
+    "human_confirm"
    ]
   },
   "FDA-2026-N-7874-0162": {
@@ -3186,204 +2125,763 @@
    "voluntary_model_files": [
     "content",
     "contract"
-   ],
-   "directiveness_continuum": [
-    "clear_limits",
+   ]
+  },
+  "FDA-2026-N-7874-0050": {
+   "postmarket_methods": [
     "other"
    ],
-   "escalation_errors": [
+   "voluntary_model_files": [
     "other"
    ]
   },
-  "FDA-2026-N-7874-0197": {
+  "FDA-2026-N-7874-0161": {
    "risk_framework": [
-    "real_oversight"
+    "real_oversight",
+    "setting"
    ]
   },
-  "FDA-2026-N-7874-0149": {
+  "FDA-2026-N-7874-0077": {
+   "postmarket_tradeoff": [
+    "detect",
+    "indep",
+    "low",
+    "other"
+   ]
+  },
+  "FDA-2026-N-7874-0171": {
+   "postmarket_methods": [
+    "event_triggers",
+    "set_responses"
+   ]
+  },
+  "FDA-2026-N-7874-0203": {
+   "competency_eval": [
+    "other"
+   ]
+  },
+  "FDA-2026-N-7874-0179": {
    "risk_framework": [
-    "reversibility",
-    "setting",
-    "real_oversight"
+    "other",
+    "real_oversight",
+    "setting"
    ],
    "patient_facing_risk": [
-    "noauto",
     "cantcheck",
-    "action",
-    "safeguards"
-   ],
-   "escalation_errors": [
-    "separate",
-    "justify",
-    "after"
+    "inform",
+    "noauto"
    ],
    "competency_eval": [
-    "new_elements",
     "benchmark_validity",
-    "human_ai_team",
+    "deployed_system",
+    "failure_limits",
     "other"
    ],
    "confirmation_flex": [
-    "scale_to_risk",
     "real_populations",
+    "scale_to_risk"
+   ],
+   "synthetic_data": [
+    "indep",
+    "separate",
+    "subgroup",
+    "validate"
+   ],
+   "median_clinician_comparator": [
+    "specialists",
+    "standard_floor"
+   ],
+   "no_care_comparator": [
+    "justify",
+    "local",
+    "standard"
+   ],
+   "postmarket_tradeoff": [
+    "detect",
+    "low",
+    "nosub"
+   ],
+   "supervisory_agents": [
+    "fail_safe",
+    "human_final",
+    "independent",
+    "records",
+    "validate_supervisor"
+   ],
+   "flexible_change_control": [
+    "bounds",
+    "rebench",
+    "review",
+    "rollback"
+   ],
+   "voluntary_model_files": [
+    "content",
+    "current",
+    "fallback",
+    "resp"
+   ]
+  },
+  "FDA-2026-N-7874-0091": {
+   "trajectory_risk": [
+    "other"
+   ],
+   "competency_eval": [
+    "benchmark_validity",
+    "other"
+   ],
+   "confirmation_flex": [
     "other"
    ],
    "synthetic_data": [
     "indep",
-    "validate",
-    "disclose",
-    "subgroup"
-   ],
-   "no_care_comparator": [
-    "other"
+    "other",
+    "separate"
    ],
    "third_party": [
-    "conflict",
-    "multiple",
     "roles"
    ],
-   "postmarket_tradeoff": [
-    "low",
-    "plan",
-    "enforce",
-    "other"
-   ],
-   "postmarket_methods": [
-    "outcomes",
-    "event_triggers",
-    "risk_cadence",
-    "other"
-   ],
-   "supervisory_agents": [
-    "independent",
-    "validate_supervisor",
-    "human_final",
-    "define_role"
-   ],
    "flexible_change_control": [
-    "rebench",
-    "bounds",
-    "review",
-    "tier"
-   ],
-   "voluntary_model_files": [
-    "current",
-    "content",
-    "resp",
-    "contract"
-   ],
-   "agentic_oversight": [
-    "human_confirm",
-    "authority_level",
-    "audit_records",
-    "full_sequence",
-    "other"
-   ],
-   "trajectory_risk": [
     "other",
-    "report_timing",
-    "scope_drift",
-    "user_pressure"
+    "rebench",
+    "tier"
    ]
   },
-  "FDA-2026-N-7874-0157": {
+  "FDA-2026-N-7874-0017": {
    "risk_framework": [
+    "autonomy",
+    "dependencies",
+    "detectability",
     "real_oversight",
-    "detectability"
+    "reversibility",
+    "setting"
    ],
    "competency_eval": [
+    "deployed_system",
+    "hard_cases",
     "human_ai_team"
    ],
    "confirmation_flex": [
-    "real_populations",
-    "other"
-   ],
-   "postmarket_methods": [
-    "event_triggers",
-    "other"
-   ],
-   "trajectory_risk": [
-    "long_use",
-    "other"
-   ]
-  },
-  "FDA-2026-N-7874-0189": {
-   "risk_framework": [
-    "reversibility",
-    "real_oversight",
-    "autonomy",
-    "other"
-   ],
-   "competency_eval": [
-    "deployed_system"
-   ],
-   "third_party": [
-    "conflict",
-    "other"
-   ],
-   "agentic_oversight": [
-    "least_privilege",
-    "human_confirm",
-    "audit_records",
-    "stop_rollback",
-    "authority_level"
-   ]
-  },
-  "FDA-2026-N-7874-0143": {
-   "risk_framework": [
-    "real_oversight"
+    "scale_to_risk"
    ],
    "synthetic_data": [
+    "disclose",
+    "noreplace",
     "separate",
-    "subgroup"
+    "validate"
+   ],
+   "no_care_comparator": [
+    "standard"
+   ],
+   "postmarket_tradeoff": [
+    "detect",
+    "low"
    ],
    "postmarket_methods": [
     "event_triggers",
-    "records",
-    "other"
+    "outcomes",
+    "risk_cadence"
    ],
    "supervisory_agents": [
-    "validate_supervisor",
-    "define_role",
-    "records"
+    "independent",
+    "validate_supervisor"
+   ],
+   "flexible_change_control": [
+    "bounds",
+    "pin",
+    "review",
+    "rollback"
    ],
    "agentic_oversight": [
-    "full_sequence",
+    "audit_records",
+    "human_confirm",
+    "least_privilege",
     "stop_rollback"
    ]
   },
-  "FDA-2026-N-7874-0134": {
+  "FDA-2026-N-7874-0067": {
+   "postmarket_methods": [
+    "other",
+    "set_responses",
+    "targeted_sampling"
+   ],
+   "agentic_oversight": [
+    "audit_records",
+    "human_confirm"
+   ]
+  },
+  "FDA-2026-N-7874-0106": {
    "supervisory_agents": [
-    "validate_supervisor",
-    "fail_safe",
+    "validate_supervisor"
+   ]
+  },
+  "FDA-2026-N-7874-0108": {
+   "competency_eval": [
+    "hard_cases",
     "other"
    ]
   },
-  "FDA-2026-N-7874-0142": {
+  "FDA-2026-N-7874-0026": {
+   "escalation_errors": [
+    "asym",
+    "justify"
+   ]
+  },
+  "FDA-2026-N-7874-0005": {
+   "risk_framework": [
+    "dependencies",
+    "detectability",
+    "framework_use",
+    "reversibility",
+    "setting",
+    "traceability"
+   ],
+   "escalation_errors": [
+    "asym",
+    "justify",
+    "separate"
+   ],
+   "competency_eval": [
+    "benchmark_validity",
+    "deployed_system",
+    "new_elements"
+   ],
+   "synthetic_data": [
+    "disclose",
+    "indep",
+    "noreplace",
+    "separate"
+   ],
+   "postmarket_tradeoff": [
+    "detect",
+    "enforce",
+    "low"
+   ],
+   "postmarket_methods": [
+    "event_triggers",
+    "outcomes",
+    "set_responses"
+   ],
    "supervisory_agents": [
+    "fail_safe",
+    "independent",
+    "records",
     "validate_supervisor"
+   ],
+   "flexible_change_control": [
+    "bounds",
+    "rebench",
+    "review",
+    "rollback",
+    "tier"
+   ],
+   "voluntary_model_files": [
+    "content",
+    "current",
+    "resp"
    ],
    "agentic_oversight": [
     "full_sequence",
-    "audit_records"
-   ],
-   "risk_framework": [
-    "autonomy",
-    "real_oversight"
+    "human_confirm",
+    "least_privilege",
+    "stop_rollback"
    ]
   },
-  "FDA-2026-N-7874-0199": {
+  "FDA-2026-N-7874-0202": {
    "risk_framework": [
-    "reversibility",
+    "autonomy",
     "detectability",
-    "autonomy"
+    "other",
+    "real_oversight",
+    "reversibility",
+    "setting"
+   ],
+   "postmarket_tradeoff": [
+    "detect",
+    "enforce"
+   ],
+   "postmarket_methods": [
+    "event_triggers",
+    "outcomes"
+   ],
+   "flexible_change_control": [
+    "bounds",
+    "pin",
+    "rollback"
+   ]
+  },
+  "FDA-2026-N-7874-0079": {
+   "voluntary_model_files": [
+    "content",
+    "current",
+    "fallback",
+    "other"
+   ]
+  },
+  "FDA-2026-N-7874-0182": {
+   "postmarket_tradeoff": [
+    "low",
+    "other",
+    "plan"
+   ],
+   "flexible_change_control": [
+    "other",
+    "pin"
+   ],
+   "voluntary_model_files": [
+    "current",
+    "other"
+   ]
+  },
+  "FDA-2026-N-7874-0043": {
+   "risk_framework": [
+    "detectability",
+    "real_oversight"
    ],
    "escalation_errors": [
     "other"
    ],
+   "synthetic_data": [
+    "other",
+    "validate"
+   ]
+  },
+  "FDA-2026-N-7874-0150": {
+   "risk_framework": [
+    "autonomy",
+    "real_oversight"
+   ],
+   "postmarket_methods": [
+    "other"
+   ]
+  },
+  "FDA-2026-N-7874-0048": {
+   "risk_framework": [
+    "detectability",
+    "real_oversight",
+    "reversibility",
+    "traceability"
+   ],
+   "synthetic_data": [
+    "noreplace",
+    "separate",
+    "subgroup"
+   ],
+   "postmarket_tradeoff": [
+    "detect",
+    "enforce",
+    "low",
+    "nosub"
+   ],
+   "postmarket_methods": [
+    "event_triggers",
+    "records",
+    "set_responses"
+   ],
+   "agentic_oversight": [
+    "audit_records",
+    "full_sequence",
+    "human_confirm",
+    "least_privilege",
+    "outside_model",
+    "stop_rollback"
+   ]
+  },
+  "FDA-2026-N-7874-0052": {
+   "risk_framework": [
+    "framework_use",
+    "real_oversight",
+    "reversibility",
+    "setting",
+    "traceability"
+   ],
+   "patient_facing_risk": [
+    "noauto",
+    "safeguards"
+   ],
+   "postmarket_tradeoff": [
+    "detect",
+    "enforce",
+    "low",
+    "nosub"
+   ],
+   "postmarket_methods": [
+    "event_triggers",
+    "outcomes"
+   ],
+   "supervisory_agents": [
+    "human_final",
+    "independent",
+    "validate_supervisor"
+   ]
+  },
+  "FDA-2026-N-7874-0054": {
+   "risk_framework": [
+    "detectability",
+    "real_oversight",
+    "reversibility",
+    "setting",
+    "traceability"
+   ],
+   "patient_facing_risk": [
+    "action",
+    "noauto",
+    "safeguards"
+   ],
+   "competency_eval": [
+    "deployed_system",
+    "new_elements"
+   ],
+   "postmarket_tradeoff": [
+    "enforce",
+    "low",
+    "staged"
+   ],
+   "postmarket_methods": [
+    "event_triggers",
+    "outcomes"
+   ]
+  },
+  "FDA-2026-N-7874-0045": {
+   "risk_framework": [
+    "autonomy",
+    "detectability",
+    "reversibility",
+    "setting"
+   ],
+   "patient_facing_risk": [
+    "cantcheck",
+    "noauto",
+    "safeguards"
+   ],
+   "synthetic_data": [
+    "indep",
+    "noreplace"
+   ],
+   "third_party": [
+    "conflict",
+    "multiple"
+   ],
+   "postmarket_tradeoff": [
+    "detect",
+    "low",
+    "nosub"
+   ],
+   "postmarket_methods": [
+    "event_triggers",
+    "set_responses"
+   ],
+   "supervisory_agents": [
+    "records",
+    "validate_supervisor"
+   ],
+   "voluntary_model_files": [
+    "contract"
+   ]
+  },
+  "FDA-2026-N-7874-0066": {
+   "supervisory_agents": [
+    "fail_safe",
+    "independent",
+    "records",
+    "validate_supervisor"
+   ]
+  },
+  "FDA-2026-N-7874-0135": {
+   "no_care_comparator": [
+    "standard"
+   ]
+  },
+  "FDA-2026-N-7874-0133": {
+   "third_party": [
+    "access",
+    "optional"
+   ],
+   "postmarket_tradeoff": [
+    "low"
+   ]
+  },
+  "FDA-2026-N-7874-0110": {
+   "supervisory_agents": [
+    "human_final",
+    "independent"
+   ]
+  },
+  "FDA-2026-N-7874-0173": {
+   "postmarket_tradeoff": [
+    "indep",
+    "other"
+   ],
+   "postmarket_methods": [
+    "other",
+    "records"
+   ],
+   "supervisory_agents": [
+    "records",
+    "validate_supervisor"
+   ],
+   "voluntary_model_files": [
+    "current"
+   ]
+  },
+  "FDA-2026-N-7874-0032": {
+   "risk_framework": [
+    "dependencies",
+    "detectability",
+    "reversibility",
+    "setting"
+   ],
+   "competency_eval": [
+    "deployed_system",
+    "new_elements"
+   ],
+   "postmarket_methods": [
+    "other"
+   ],
+   "supervisory_agents": [
+    "independent"
+   ]
+  },
+  "FDA-2026-N-7874-0200": {
+   "risk_framework": [
+    "real_oversight",
+    "reversibility",
+    "traceability"
+   ],
+   "synthetic_data": [
+    "subgroup"
+   ],
+   "third_party": [
+    "access",
+    "conflict",
+    "optional"
+   ],
+   "postmarket_tradeoff": [
+    "low"
+   ],
+   "supervisory_agents": [
+    "human_final",
+    "independent",
+    "validate_supervisor"
+   ],
+   "agentic_oversight": [
+    "audit_records",
+    "human_confirm",
+    "least_privilege",
+    "not_device_alone"
+   ]
+  },
+  "FDA-2026-N-7874-0071": {
+   "supervisory_agents": [
+    "define_role",
+    "independent",
+    "validate_supervisor"
+   ]
+  },
+  "FDA-2026-N-7874-0115": {
+   "risk_framework": [
+    "autonomy",
+    "detectability",
+    "other",
+    "real_oversight",
+    "reversibility",
+    "traceability"
+   ],
+   "patient_facing_risk": [
+    "cantcheck",
+    "noauto"
+   ],
+   "competency_eval": [
+    "benchmark_validity",
+    "deployed_system",
+    "one_part"
+   ],
+   "synthetic_data": [
+    "disclose",
+    "indep",
+    "separate",
+    "subgroup"
+   ],
+   "postmarket_tradeoff": [
+    "detect",
+    "enforce",
+    "low",
+    "nosub"
+   ],
+   "postmarket_methods": [
+    "event_triggers",
+    "records"
+   ],
+   "supervisory_agents": [
+    "define_role",
+    "fail_safe",
+    "human_final",
+    "independent",
+    "records",
+    "validate_supervisor"
+   ],
+   "voluntary_model_files": [
+    "content",
+    "contract",
+    "resp"
+   ]
+  },
+  "FDA-2026-N-7874-0128": {
+   "competency_eval": [
+    "new_elements",
+    "other"
+   ]
+  },
+  "FDA-2026-N-7874-0024": {
+   "risk_framework": [
+    "autonomy",
+    "detectability",
+    "other",
+    "reversibility",
+    "setting"
+   ],
+   "competency_eval": [
+    "hard_cases",
+    "human_ai_team",
+    "other"
+   ],
+   "postmarket_tradeoff": [
+    "low",
+    "nosub",
+    "plan"
+   ],
+   "flexible_change_control": [
+    "bounds",
+    "other",
+    "rebench",
+    "rollback"
+   ],
+   "agentic_oversight": [
+    "audit_records",
+    "human_confirm",
+    "least_privilege",
+    "stop_rollback"
+   ]
+  },
+  "FDA-2026-N-7874-0174": {
+   "risk_framework": [
+    "detectability",
+    "real_oversight",
+    "reversibility",
+    "setting",
+    "traceability"
+   ],
+   "patient_facing_risk": [
+    "action",
+    "human",
+    "inform",
+    "noauto"
+   ],
+   "competency_eval": [
+    "benchmark_validity",
+    "deployed_system"
+   ],
+   "median_clinician_comparator": [
+    "standard_floor"
+   ],
+   "no_care_comparator": [
+    "justify",
+    "local",
+    "standard"
+   ],
+   "postmarket_tradeoff": [
+    "detect",
+    "enforce",
+    "low",
+    "nosub",
+    "plan",
+    "staged"
+   ]
+  },
+  "FDA-2026-N-7874-0116": {
+   "postmarket_tradeoff": [
+    "detect",
+    "enforce",
+    "indep",
+    "low",
+    "nosub",
+    "plan"
+   ],
+   "supervisory_agents": [
+    "human_final",
+    "records",
+    "validate_supervisor"
+   ]
+  },
+  "FDA-2026-N-7874-0100": {
+   "risk_framework": [
+    "reversibility",
+    "traceability"
+   ],
+   "patient_facing_risk": [
+    "access",
+    "noauto",
+    "safeguards"
+   ],
+   "no_care_comparator": [
+    "justify",
+    "local"
+   ],
+   "third_party": [
+    "conflict",
+    "multiple",
+    "optional"
+   ],
+   "postmarket_tradeoff": [
+    "enforce",
+    "indep",
+    "low",
+    "plan"
+   ],
+   "supervisory_agents": [
+    "human_final",
+    "independent",
+    "validate_supervisor"
+   ],
+   "voluntary_model_files": [
+    "fallback",
+    "other"
+   ]
+  },
+  "FDA-2026-N-7874-0038": {
+   "risk_framework": [
+    "dependencies",
+    "other"
+   ]
+  },
+  "FDA-2026-N-7874-0165": {
+   "risk_framework": [
+    "other",
+    "real_oversight",
+    "traceability"
+   ],
    "competency_eval": [
     "human_ai_team",
-    "clinical_evidence"
+    "other"
+   ],
+   "confirmation_flex": [
+    "real_populations"
+   ],
+   "postmarket_methods": [
+    "event_triggers",
+    "outcomes",
+    "reporting"
+   ]
+  },
+  "FDA-2026-N-7874-0199": {
+   "risk_framework": [
+    "dependencies",
+    "detectability",
+    "real_oversight",
+    "reversibility"
+   ],
+   "competency_eval": [
+    "clinical_evidence",
+    "human_ai_team"
    ],
    "synthetic_data": [
     "noreplace",
@@ -3395,186 +2893,11 @@
     "standard_floor"
    ]
   },
-  "FDA-2026-N-7874-0164": {
-   "postmarket_tradeoff": [
-    "low",
-    "detect",
-    "enforce"
-   ],
-   "competency_eval": [
-    "benchmark_validity",
-    "hard_cases",
-    "new_elements"
-   ],
-   "synthetic_data": [
-    "noreplace"
-   ]
-  },
-  "FDA-2026-N-7874-0205": {
-   "synthetic_data": [
-    "validate",
-    "disclose",
-    "subgroup"
-   ],
-   "third_party": [
-    "optional"
-   ],
-   "supervisory_agents": [
-    "validate_supervisor"
-   ],
-   "flexible_change_control": [
-    "rebench",
-    "rollback"
-   ]
-  },
-  "FDA-2026-N-7874-0176": {
+  "FDA-2026-N-7874-0015": {
    "risk_framework": [
-    "reversibility",
-    "real_oversight"
-   ],
-   "patient_facing_risk": [
-    "safeguards",
-    "access",
-    "noauto"
-   ],
-   "confirmation_flex": [
-    "scale_to_risk",
-    "other"
-   ],
-   "no_care_comparator": [
-    "local",
-    "justify",
-    "standard"
-   ],
-   "third_party": [
-    "optional",
-    "multiple",
-    "access",
-    "conflict",
-    "roles"
-   ],
-   "postmarket_tradeoff": [
-    "plan",
-    "enforce",
-    "low",
-    "indep"
-   ],
-   "supervisory_agents": [
-    "validate_supervisor",
-    "human_final"
-   ],
-   "flexible_change_control": [
-    "rebench",
-    "bounds",
-    "review"
-   ],
-   "voluntary_model_files": [
-    "content",
-    "fallback"
-   ],
-   "escalation_errors": [
-    "justify",
-    "separate"
-   ],
-   "postmarket_methods": [
-    "event_triggers",
-    "other"
-   ],
-   "agentic_oversight": [
-    "human_confirm",
-    "not_device_alone"
-   ]
-  },
-  "FDA-2026-N-7874-0136": {
-   "risk_framework": [
-    "reversibility"
-   ],
-   "competency_eval": [
-    "new_elements"
-   ],
-   "postmarket_methods": [
-    "records",
-    "set_responses",
-    "other"
-   ],
-   "supervisory_agents": [
-    "independent",
-    "human_final",
-    "validate_supervisor",
-    "fail_safe"
-   ],
-   "agentic_oversight": [
-    "stop_rollback",
-    "human_confirm",
-    "least_privilege",
-    "audit_records",
-    "outside_model",
-    "other"
-   ]
-  },
-  "FDA-2026-N-7874-0135": {
-   "no_care_comparator": [
-    "standard"
-   ],
-   "postmarket_methods": [
-    "set_responses",
-    "outcomes",
-    "reporting",
-    "risk_cadence"
-   ],
-   "agentic_oversight": [
-    "authority_level",
-    "audit_records",
-    "full_sequence",
-    "other"
-   ],
-   "competency_eval": [
-    "deployed_system",
-    "failure_limits",
-    "hard_cases"
-   ],
-   "trajectory_risk": [
-    "long_use"
-   ]
-  },
-  "FDA-2026-N-7874-0141": {
-   "synthetic_data": [
-    "validate",
-    "disclose",
-    "other"
-   ]
-  },
-  "FDA-2026-N-7874-0147": {
-   "supervisory_agents": [
-    "validate_supervisor"
-   ],
-   "agentic_oversight": [
-    "audit_records",
-    "full_sequence",
-    "other",
-    "outside_model"
-   ]
-  },
-  "FDA-2026-N-7874-0171": {
-   "postmarket_methods": [
-    "event_triggers",
-    "other",
-    "set_responses"
-   ],
-   "agentic_oversight": [
-    "audit_records",
-    "authority_level",
-    "other"
-   ],
-   "flexible_change_control": [
-    "rebench",
-    "tier"
-   ]
-  },
-  "FDA-2026-N-7874-0198": {
-   "third_party": [
-    "conflict",
-    "roles"
+    "real_oversight",
+    "setting",
+    "traceability"
    ]
   }
  },

@@ -125,7 +125,7 @@
    "directiveness_continuum": null,
    "patient_facing_risk": null,
    "trajectory_risk": null,
-   "escalation_errors": "conditional",
+   "escalation_errors": "support",
    "competency_eval": null,
    "confirmation_flex": null,
    "synthetic_data": null,
@@ -133,9 +133,9 @@
    "no_care_comparator": null,
    "third_party": "support",
    "postmarket_tradeoff": "conditional",
-   "postmarket_methods": "conditional",
+   "postmarket_methods": "support",
    "supervisory_agents": "conditional",
-   "flexible_change_control": "conditional",
+   "flexible_change_control": "oppose",
    "voluntary_model_files": null,
    "agentic_oversight": null
   },
@@ -157,7 +157,7 @@
   "positions": {
    "risk_framework": "support",
    "directiveness_continuum": null,
-   "patient_facing_risk": null,
+   "patient_facing_risk": "oppose",
    "trajectory_risk": null,
    "escalation_errors": null,
    "competency_eval": null,
@@ -227,7 +227,7 @@
    "third_party": null,
    "postmarket_tradeoff": null,
    "postmarket_methods": "support",
-   "supervisory_agents": "support",
+   "supervisory_agents": null,
    "flexible_change_control": "support",
    "voluntary_model_files": null,
    "agentic_oversight": null
@@ -277,7 +277,7 @@
   "positions": {
    "risk_framework": "conditional",
    "directiveness_continuum": null,
-   "patient_facing_risk": "oppose",
+   "patient_facing_risk": "conditional",
    "trajectory_risk": null,
    "escalation_errors": null,
    "competency_eval": null,
@@ -449,7 +449,7 @@
   "id": "FDA-2026-N-7874-0051",
   "positions": {
    "risk_framework": "conditional",
-   "directiveness_continuum": "support",
+   "directiveness_continuum": null,
    "patient_facing_risk": "conditional",
    "trajectory_risk": "support",
    "escalation_errors": "support",

@@ -7,7 +7,7 @@
    "patient_facing_risk": null,
    "trajectory_risk": null,
    "escalation_errors": null,
-   "competency_eval": "conditional",
+   "competency_eval": "oppose",
    "confirmation_flex": null,
    "synthetic_data": null,
    "median_clinician_comparator": null,
@@ -56,7 +56,7 @@
   "id": "FDA-2026-N-7874-0037",
   "positions": {
    "risk_framework": "conditional",
-   "directiveness_continuum": "conditional",
+   "directiveness_continuum": "support",
    "patient_facing_risk": "oppose",
    "trajectory_risk": null,
    "escalation_errors": null,
@@ -115,23 +115,23 @@
  {
   "id": "FDA-2026-N-7874-0095",
   "positions": {
-   "risk_framework": "support",
+   "risk_framework": null,
    "directiveness_continuum": null,
    "patient_facing_risk": null,
    "trajectory_risk": null,
    "escalation_errors": null,
-   "competency_eval": "conditional",
+   "competency_eval": "support",
    "confirmation_flex": null,
    "synthetic_data": null,
    "median_clinician_comparator": null,
    "no_care_comparator": null,
    "third_party": null,
    "postmarket_tradeoff": null,
-   "postmarket_methods": "conditional",
+   "postmarket_methods": "support",
    "supervisory_agents": "conditional",
    "flexible_change_control": null,
    "voluntary_model_files": null,
-   "agentic_oversight": "conditional"
+   "agentic_oversight": "support"
   },
   "recommendations": [
    "Require reporting a per-endpoint reproducibility floor on identical inputs",
@@ -188,7 +188,7 @@
    "no_care_comparator": null,
    "third_party": null,
    "postmarket_tradeoff": null,
-   "postmarket_methods": null,
+   "postmarket_methods": "conditional",
    "supervisory_agents": null,
    "flexible_change_control": null,
    "voluntary_model_files": null,
@@ -221,7 +221,7 @@
    "supervisory_agents": "conditional",
    "flexible_change_control": "support",
    "voluntary_model_files": "conditional",
-   "agentic_oversight": "conditional"
+   "agentic_oversight": "support"
   },
   "recommendations": [
    "Add traceability and reversibility as risk modifiers",
@@ -241,11 +241,11 @@
   "positions": {
    "risk_framework": null,
    "directiveness_continuum": null,
-   "patient_facing_risk": null,
+   "patient_facing_risk": "support",
    "trajectory_risk": null,
    "escalation_errors": null,
    "competency_eval": "conditional",
-   "confirmation_flex": null,
+   "confirmation_flex": "support",
    "synthetic_data": null,
    "median_clinician_comparator": null,
    "no_care_comparator": null,
@@ -284,7 +284,7 @@
    "supervisory_agents": null,
    "flexible_change_control": null,
    "voluntary_model_files": "support",
-   "agentic_oversight": "conditional"
+   "agentic_oversight": "support"
   },
   "recommendations": [
    "Evaluate the complete deployed sociotechnical system, not the model",
@@ -328,7 +328,7 @@
    "patient_facing_risk": null,
    "trajectory_risk": null,
    "escalation_errors": null,
-   "competency_eval": null,
+   "competency_eval": "support",
    "confirmation_flex": null,
    "synthetic_data": null,
    "median_clinician_comparator": null,
@@ -472,8 +472,8 @@
    "patient_facing_risk": null,
    "trajectory_risk": null,
    "escalation_errors": null,
-   "competency_eval": "conditional",
-   "confirmation_flex": "conditional",
+   "competency_eval": "support",
+   "confirmation_flex": null,
    "synthetic_data": null,
    "median_clinician_comparator": null,
    "no_care_comparator": null,
@@ -483,7 +483,7 @@
    "supervisory_agents": null,
    "flexible_change_control": "conditional",
    "voluntary_model_files": null,
-   "agentic_oversight": "conditional"
+   "agentic_oversight": "support"
   },
   "recommendations": [
    "Add physical output and reversibility as a risk dimension",

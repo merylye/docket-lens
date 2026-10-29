@@ -72,9 +72,9 @@
    "postmarket_tradeoff": null,
    "postmarket_methods": null,
    "supervisory_agents": null,
-   "flexible_change_control": "conditional",
+   "flexible_change_control": "support",
    "voluntary_model_files": null,
-   "agentic_oversight": "conditional"
+   "agentic_oversight": "support"
   },
   "recommendations": [
    "Register and version agents, models, tools, and qualification datasets",
@@ -126,7 +126,7 @@
    "escalation_errors": "support",
    "competency_eval": "support",
    "confirmation_flex": "support",
-   "synthetic_data": "conditional",
+   "synthetic_data": "support",
    "median_clinician_comparator": "support",
    "no_care_comparator": "support",
    "third_party": null,
@@ -156,7 +156,7 @@
    "risk_framework": null,
    "directiveness_continuum": "oppose",
    "patient_facing_risk": null,
-   "trajectory_risk": "conditional",
+   "trajectory_risk": "support",
    "escalation_errors": null,
    "competency_eval": null,
    "confirmation_flex": null,
@@ -232,7 +232,7 @@
    "supervisory_agents": null,
    "flexible_change_control": null,
    "voluntary_model_files": null,
-   "agentic_oversight": "conditional"
+   "agentic_oversight": null
   },
   "recommendations": [
    "Require a verifiable built-in kill switch for autonomous AI systems",
@@ -244,7 +244,7 @@
   "positions": {
    "risk_framework": "conditional",
    "directiveness_continuum": "support",
-   "patient_facing_risk": "oppose",
+   "patient_facing_risk": "conditional",
    "trajectory_risk": "support",
    "escalation_errors": "support",
    "competency_eval": "support",
@@ -386,7 +386,7 @@
    "patient_facing_risk": null,
    "trajectory_risk": null,
    "escalation_errors": null,
-   "competency_eval": "conditional",
+   "competency_eval": "support",
    "confirmation_flex": null,
    "synthetic_data": null,
    "median_clinician_comparator": "conditional",
@@ -429,7 +429,7 @@
    "postmarket_tradeoff": "conditional",
    "postmarket_methods": "conditional",
    "supervisory_agents": "conditional",
-   "flexible_change_control": "support",
+   "flexible_change_control": "conditional",
    "voluntary_model_files": null,
    "agentic_oversight": null
   },
@@ -461,7 +461,7 @@
    "no_care_comparator": null,
    "third_party": null,
    "postmarket_tradeoff": "conditional",
-   "postmarket_methods": null,
+   "postmarket_methods": "oppose",
    "supervisory_agents": null,
    "flexible_change_control": null,
    "voluntary_model_files": null,

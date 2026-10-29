@@ -84,13 +84,13 @@
    "risk_framework": "conditional",
    "directiveness_continuum": "conditional",
    "patient_facing_risk": "conditional",
-   "trajectory_risk": "conditional",
+   "trajectory_risk": "support",
    "escalation_errors": "conditional",
    "competency_eval": "support",
    "confirmation_flex": "support",
    "synthetic_data": "conditional",
    "median_clinician_comparator": "oppose",
-   "no_care_comparator": "conditional",
+   "no_care_comparator": "support",
    "third_party": "conditional",
    "postmarket_tradeoff": "conditional",
    "postmarket_methods": "conditional",
@@ -115,46 +115,40 @@
     "reversibility",
     "setting"
    ],
+   "directiveness_continuum": [
+    "other"
+   ],
+   "patient_facing_risk": [
+    "action",
+    "noauto"
+   ],
+   "escalation_errors": [
+    "asym"
+   ],
+   "synthetic_data": [
+    "noreplace",
+    "subgroup",
+    "validate"
+   ],
+   "third_party": [
+    "access",
+    "multiple"
+   ],
+   "postmarket_tradeoff": [
+    "enforce",
+    "plan"
+   ],
    "postmarket_methods": [
     "event_triggers",
     "risk_cadence"
-   ],
-   "directiveness_continuum": [
-    "clear_limits"
-   ],
-   "trajectory_risk": [
-    "other",
-    "scope_drift"
-   ],
-   "agentic_oversight": [
-    "human_confirm",
-    "other"
    ],
    "supervisory_agents": [
     "human_final",
     "validate_supervisor"
    ],
-   "postmarket_tradeoff": [
-    "enforce",
-    "other",
-    "plan"
-   ],
-   "synthetic_data": [
-    "subgroup",
-    "validate"
-   ],
-   "patient_facing_risk": [
-    "action",
-    "other"
-   ],
-   "third_party": [
-    "multiple",
-    "roles"
-   ],
-   "escalation_errors": [
-    "asym"
-   ],
-   "no_care_comparator": [
+   "agentic_oversight": [
+    "authority_level",
+    "human_confirm",
     "other"
    ]
   }
@@ -274,16 +268,16 @@
    "risk_framework": "conditional",
    "directiveness_continuum": "support",
    "trajectory_risk": "support",
-   "escalation_errors": "support",
+   "escalation_errors": "conditional",
    "competency_eval": "conditional",
    "confirmation_flex": "support",
    "synthetic_data": "conditional",
    "no_care_comparator": "support",
-   "third_party": "conditional",
+   "third_party": "support",
    "postmarket_tradeoff": "conditional",
    "postmarket_methods": "conditional",
    "supervisory_agents": "conditional",
-   "flexible_change_control": "support",
+   "flexible_change_control": "conditional",
    "voluntary_model_files": "conditional",
    "agentic_oversight": "conditional"
   },
@@ -302,40 +296,62 @@
   "also_filed": [],
   "conds": {
    "risk_framework": [
+    "dependencies",
+    "detectability",
     "framework_use",
-    "reversibility"
+    "reversibility",
+    "setting",
+    "traceability"
    ],
-   "postmarket_methods": [
-    "event_triggers",
-    "set_responses"
-   ],
-   "agentic_oversight": [
-    "full_sequence"
-   ],
-   "supervisory_agents": [
-    "other",
-    "validate_supervisor"
+   "escalation_errors": [
+    "asym",
+    "justify",
+    "separate"
    ],
    "competency_eval": [
     "benchmark_validity",
     "deployed_system",
     "new_elements"
    ],
-   "postmarket_tradeoff": [
-    "detect",
-    "low"
-   ],
    "synthetic_data": [
     "disclose",
+    "indep",
     "noreplace",
     "separate"
    ],
+   "postmarket_tradeoff": [
+    "detect",
+    "enforce",
+    "low"
+   ],
+   "postmarket_methods": [
+    "event_triggers",
+    "outcomes",
+    "set_responses"
+   ],
+   "supervisory_agents": [
+    "fail_safe",
+    "independent",
+    "records",
+    "validate_supervisor"
+   ],
+   "flexible_change_control": [
+    "bounds",
+    "rebench",
+    "review",
+    "rollback",
+    "tier"
+   ],
    "voluntary_model_files": [
+    "content",
     "current",
     "resp"
    ],
-   "third_party": [
-    "multiple"
+   "agentic_oversight": [
+    "full_sequence",
+    "human_confirm",
+    "least_privilege",
+    "stop_rollback"
    ]
   }
  },
@@ -395,13 +411,13 @@
   "pos": {
    "risk_framework": "conditional",
    "directiveness_continuum": "support",
-   "patient_facing_risk": "oppose",
+   "patient_facing_risk": "conditional",
    "trajectory_risk": "support",
    "escalation_errors": "support",
    "competency_eval": "support",
    "confirmation_flex": "support",
    "median_clinician_comparator": "support",
-   "no_care_comparator": "conditional",
+   "no_care_comparator": "support",
    "third_party": "conditional",
    "postmarket_tradeoff": "conditional",
    "flexible_change_control": "support",
@@ -420,21 +436,22 @@
   "also_filed": [],
   "conds": {
    "risk_framework": [
-    "broader_harms",
-    "other"
+    "other",
+    "setting"
+   ],
+   "patient_facing_risk": [
+    "access",
+    "noauto",
+    "safeguards"
+   ],
+   "third_party": [
+    "access"
    ],
    "postmarket_tradeoff": [
     "enforce",
+    "indep",
     "other",
     "plan"
-   ],
-   "third_party": [
-    "access",
-    "roles"
-   ],
-   "no_care_comparator": [
-    "local",
-    "standard"
    ]
   }
  },
@@ -505,6 +522,7 @@
   "received": "2026-08-18T04:00:00Z",
   "unreadable": false,
   "pos": {
+   "competency_eval": "support",
    "postmarket_tradeoff": "conditional",
    "postmarket_methods": "conditional",
    "voluntary_model_files": "conditional"
@@ -516,11 +534,11 @@
   ],
   "also_filed": [],
   "conds": {
-   "postmarket_methods": [
-    "other"
-   ],
    "postmarket_tradeoff": [
     "detect"
+   ],
+   "postmarket_methods": [
+    "other"
    ],
    "voluntary_model_files": [
     "content"
@@ -573,7 +591,7 @@
   "received": "2026-08-18T04:00:00Z",
   "unreadable": false,
   "pos": {
-   "risk_framework": "conditional",
+   "risk_framework": "support",
    "escalation_errors": "support",
    "confirmation_flex": "support",
    "no_care_comparator": "support"
@@ -585,13 +603,7 @@
    "comparator_realistic"
   ],
   "also_filed": [],
-  "conds": {
-   "risk_framework": [
-    "real_oversight",
-    "reversibility",
-    "traceability"
-   ]
-  }
+  "conds": {}
  },
  {
   "id": "FDA-2026-N-7874-0010",
@@ -678,11 +690,11 @@
   "pos": {
    "risk_framework": "conditional",
    "directiveness_continuum": "conditional",
-   "patient_facing_risk": "oppose",
+   "patient_facing_risk": "conditional",
    "trajectory_risk": "support",
    "escalation_errors": "conditional",
    "competency_eval": "conditional",
-   "confirmation_flex": "conditional",
+   "confirmation_flex": "support",
    "synthetic_data": "conditional",
    "median_clinician_comparator": "oppose",
    "no_care_comparator": "conditional",
@@ -711,69 +723,72 @@
   ],
   "conds": {
    "risk_framework": [
-    "detectability",
-    "other"
-   ],
-   "postmarket_methods": [
-    "event_triggers",
-    "other"
+    "detectability"
    ],
    "directiveness_continuum": [
-    "clear_limits"
-   ],
-   "agentic_oversight": [
-    "audit_records",
-    "full_sequence",
-    "human_confirm",
-    "least_privilege"
-   ],
-   "supervisory_agents": [
-    "human_final",
-    "independent",
-    "other",
-    "validate_supervisor"
-   ],
-   "competency_eval": [
-    "benchmark_validity",
     "other"
    ],
-   "postmarket_tradeoff": [
-    "detect",
-    "enforce",
-    "low"
-   ],
-   "flexible_change_control": [
-    "other",
-    "rebench",
-    "rollback"
-   ],
-   "synthetic_data": [
-    "disclose",
-    "indep",
-    "noreplace"
-   ],
-   "third_party": [
-    "conflict",
-    "multiple",
-    "optional"
+   "patient_facing_risk": [
+    "cantcheck",
+    "noauto"
    ],
    "escalation_errors": [
     "asym",
     "justify"
    ],
+   "competency_eval": [
+    "clinical_evidence",
+    "other"
+   ],
+   "synthetic_data": [
+    "disclose",
+    "indep",
+    "noreplace",
+    "subgroup"
+   ],
    "no_care_comparator": [
     "local",
     "other"
    ],
-   "confirmation_flex": [
-    "real_populations",
-    "scale_to_risk"
+   "third_party": [
+    "conflict",
+    "multiple",
+    "optional",
+    "roles"
+   ],
+   "postmarket_tradeoff": [
+    "detect",
+    "enforce",
+    "low",
+    "plan"
+   ],
+   "postmarket_methods": [
+    "event_triggers",
+    "risk_cadence"
+   ],
+   "supervisory_agents": [
+    "human_final",
+    "independent",
+    "validate_supervisor"
+   ],
+   "flexible_change_control": [
+    "bounds",
+    "pin",
+    "rebench",
+    "rollback",
+    "tier"
    ],
    "voluntary_model_files": [
     "content",
     "current",
     "fallback",
     "resp"
+   ],
+   "agentic_oversight": [
+    "audit_records",
+    "full_sequence",
+    "human_confirm",
+    "least_privilege"
    ]
   }
  },
@@ -862,6 +877,7 @@
   "pos": {
    "risk_framework": "support",
    "competency_eval": "support",
+   "confirmation_flex": "support",
    "supervisory_agents": "support",
    "flexible_change_control": "support",
    "voluntary_model_files": "support",
@@ -939,7 +955,7 @@
   "also_filed": [],
   "conds": {
    "risk_framework": [
-    "other",
+    "real_oversight",
     "setting",
     "traceability"
    ]
@@ -1055,7 +1071,7 @@
    "trajectory_risk": "support",
    "escalation_errors": "support",
    "competency_eval": "conditional",
-   "confirmation_flex": "support",
+   "confirmation_flex": "conditional",
    "synthetic_data": "conditional",
    "no_care_comparator": "conditional",
    "third_party": "support",
@@ -1063,7 +1079,7 @@
    "postmarket_methods": "conditional",
    "supervisory_agents": "conditional",
    "flexible_change_control": "conditional",
-   "voluntary_model_files": "conditional",
+   "voluntary_model_files": "oppose",
    "agentic_oversight": "conditional"
   },
   "recs": [
@@ -1081,47 +1097,53 @@
   "conds": {
    "risk_framework": [
     "autonomy",
+    "dependencies",
+    "detectability",
     "real_oversight",
+    "reversibility",
     "setting"
    ],
+   "competency_eval": [
+    "deployed_system",
+    "hard_cases",
+    "human_ai_team"
+   ],
+   "confirmation_flex": [
+    "scale_to_risk"
+   ],
+   "synthetic_data": [
+    "disclose",
+    "noreplace",
+    "separate",
+    "validate"
+   ],
+   "no_care_comparator": [
+    "standard"
+   ],
+   "postmarket_tradeoff": [
+    "detect",
+    "low"
+   ],
    "postmarket_methods": [
-    "other",
+    "event_triggers",
     "outcomes",
     "risk_cadence"
+   ],
+   "supervisory_agents": [
+    "independent",
+    "validate_supervisor"
+   ],
+   "flexible_change_control": [
+    "bounds",
+    "pin",
+    "review",
+    "rollback"
    ],
    "agentic_oversight": [
     "audit_records",
     "human_confirm",
     "least_privilege",
     "stop_rollback"
-   ],
-   "supervisory_agents": [
-    "validate_supervisor"
-   ],
-   "competency_eval": [
-    "benchmark_validity",
-    "clinical_evidence",
-    "deployed_system",
-    "human_ai_team"
-   ],
-   "postmarket_tradeoff": [
-    "low"
-   ],
-   "flexible_change_control": [
-    "bounds",
-    "pin",
-    "review"
-   ],
-   "synthetic_data": [
-    "noreplace",
-    "separate"
-   ],
-   "voluntary_model_files": [
-    "current",
-    "other"
-   ],
-   "no_care_comparator": [
-    "other"
    ]
   }
  },
@@ -1160,8 +1182,7 @@
   "pos": {
    "risk_framework": "support",
    "competency_eval": "support",
-   "flexible_change_control": "conditional",
-   "agentic_oversight": "conditional"
+   "agentic_oversight": "support"
   },
   "recs": [
    "version_pinning",
@@ -1171,19 +1192,7 @@
    "human_approval"
   ],
   "also_filed": [],
-  "conds": {
-   "agentic_oversight": [
-    "audit_records",
-    "authority_level",
-    "human_confirm",
-    "stop_rollback"
-   ],
-   "flexible_change_control": [
-    "other",
-    "pin",
-    "rebench"
-   ]
-  }
+  "conds": {}
  },
  {
   "id": "withheld-1",
@@ -1250,7 +1259,7 @@
    "trajectory_risk": "support",
    "escalation_errors": "support",
    "competency_eval": "conditional",
-   "confirmation_flex": "support",
+   "confirmation_flex": "conditional",
    "synthetic_data": "conditional",
    "no_care_comparator": "support",
    "postmarket_tradeoff": "conditional",
@@ -1270,18 +1279,21 @@
    "risk_framework": [
     "broader_harms",
     "detectability",
-    "reversibility"
+    "reversibility",
+    "setting"
    ],
    "competency_eval": [
-    "benchmark_validity",
-    "clinical_evidence",
-    "other"
+    "clinical_evidence"
    ],
-   "postmarket_tradeoff": [
-    "low"
+   "confirmation_flex": [
+    "scale_to_risk"
    ],
    "synthetic_data": [
     "noreplace"
+   ],
+   "postmarket_tradeoff": [
+    "low",
+    "nosub"
    ]
   }
  },
@@ -1326,8 +1338,7 @@
   "pos": {
    "risk_framework": "conditional",
    "trajectory_risk": "conditional",
-   "escalation_errors": "conditional",
-   "competency_eval": "conditional",
+   "escalation_errors": "support",
    "median_clinician_comparator": "oppose",
    "postmarket_methods": "conditional",
    "voluntary_model_files": "conditional"
@@ -1344,27 +1355,16 @@
     "broader_harms",
     "other"
    ],
-   "postmarket_methods": [
-    "event_triggers",
-    "other",
-    "outcomes",
-    "reporting"
-   ],
    "trajectory_risk": [
-    "long_use",
     "other"
    ],
-   "competency_eval": [
-    "benchmark_validity",
-    "failure_limits",
-    "other"
+   "postmarket_methods": [
+    "other",
+    "outcomes"
    ],
    "voluntary_model_files": [
     "contract",
-    "fallback"
-   ],
-   "escalation_errors": [
-    "after"
+    "resp"
    ]
   }
  },
@@ -1393,6 +1393,7 @@
   "received": "2026-08-20T04:00:00Z",
   "unreadable": false,
   "pos": {
+   "directiveness_continuum": "support",
    "agentic_oversight": "support"
   },
   "recs": [
@@ -1498,11 +1499,8 @@
     "autonomy",
     "detectability",
     "other",
-    "reversibility"
-   ],
-   "agentic_oversight": [
-    "least_privilege",
-    "stop_rollback"
+    "reversibility",
+    "setting"
    ],
    "competency_eval": [
     "hard_cases",
@@ -1511,11 +1509,20 @@
    ],
    "postmarket_tradeoff": [
     "low",
+    "nosub",
     "plan"
    ],
    "flexible_change_control": [
     "bounds",
-    "other"
+    "other",
+    "rebench",
+    "rollback"
+   ],
+   "agentic_oversight": [
+    "audit_records",
+    "human_confirm",
+    "least_privilege",
+    "stop_rollback"
    ]
   }
  },
@@ -1606,15 +1613,14 @@
    "trajectory_risk": "support",
    "escalation_errors": "support",
    "competency_eval": "conditional",
-   "confirmation_flex": "conditional",
+   "confirmation_flex": "support",
    "synthetic_data": "support",
    "median_clinician_comparator": "conditional",
    "no_care_comparator": "conditional",
-   "third_party": "conditional",
+   "third_party": "support",
    "postmarket_tradeoff": "conditional",
    "postmarket_methods": "conditional",
    "supervisory_agents": "conditional",
-   "flexible_change_control": "conditional",
    "voluntary_model_files": "conditional",
    "agentic_oversight": "support"
   },
@@ -1630,49 +1636,34 @@
   "conds": {
    "risk_framework": [
     "broader_harms",
-    "reversibility"
+    "reversibility",
+    "setting"
    ],
-   "postmarket_methods": [
-    "other",
-    "outcomes",
-    "reporting"
-   ],
-   "confirmation_flex": [
-    "scale_to_risk"
+   "competency_eval": [
+    "new_elements"
    ],
    "median_clinician_comparator": [
-    "other",
     "standard_floor"
+   ],
+   "no_care_comparator": [
+    "standard"
+   ],
+   "postmarket_tradeoff": [
+    "low"
+   ],
+   "postmarket_methods": [
+    "outcomes",
+    "reporting"
    ],
    "supervisory_agents": [
     "human_final",
     "responsibility",
     "validate_supervisor"
    ],
-   "competency_eval": [
-    "failure_limits",
-    "hard_cases",
-    "new_elements",
-    "other"
-   ],
-   "postmarket_tradeoff": [
-    "low",
-    "other"
-   ],
-   "flexible_change_control": [
-    "other"
-   ],
    "voluntary_model_files": [
-    "other",
+    "content",
+    "current",
     "resp"
-   ],
-   "third_party": [
-    "access",
-    "conflict",
-    "other"
-   ],
-   "no_care_comparator": [
-    "other"
    ]
   }
  },
@@ -1712,8 +1703,7 @@
   "conds": {
    "escalation_errors": [
     "asym",
-    "justify",
-    "other"
+    "justify"
    ]
   }
  },
@@ -1762,12 +1752,11 @@
   "received": "2026-08-22T04:00:00Z",
   "unreadable": false,
   "pos": {
-   "trajectory_risk": "conditional",
+   "trajectory_risk": "support",
    "competency_eval": "support",
    "postmarket_methods": "conditional",
    "flexible_change_control": "conditional",
-   "voluntary_model_files": "conditional",
-   "agentic_oversight": "conditional"
+   "agentic_oversight": "support"
   },
   "recs": [
    "deployed_config",
@@ -1777,22 +1766,13 @@
   "also_filed": [],
   "conds": {
    "postmarket_methods": [
-    "other"
-   ],
-   "trajectory_risk": [
-    "other"
-   ],
-   "agentic_oversight": [
-    "human_confirm",
-    "other"
+    "event_triggers",
+    "other",
+    "risk_cadence"
    ],
    "flexible_change_control": [
-    "other",
+    "bounds",
     "rebench"
-   ],
-   "voluntary_model_files": [
-    "content",
-    "other"
    ]
   }
  },
@@ -1846,7 +1826,7 @@
    "competency_eval": "support",
    "confirmation_flex": "support",
    "synthetic_data": "conditional",
-   "median_clinician_comparator": "support",
+   "median_clinician_comparator": "conditional",
    "third_party": "support",
    "postmarket_tradeoff": "conditional",
    "postmarket_methods": "support",
@@ -1866,29 +1846,35 @@
   "also_filed": [],
   "conds": {
    "risk_framework": [
+    "framework_use",
     "real_oversight",
     "reversibility",
     "setting",
     "traceability"
    ],
-   "supervisory_agents": [
-    "validate_supervisor"
-   ],
-   "postmarket_tradeoff": [
-    "detect",
-    "indep",
-    "low",
-    "other"
+   "patient_facing_risk": [
+    "noauto",
+    "safeguards"
    ],
    "synthetic_data": [
     "disclose",
-    "other",
+    "indep",
     "validate"
    ],
-   "patient_facing_risk": [
-    "inform",
-    "noauto",
-    "safeguards"
+   "median_clinician_comparator": [
+    "measure_median"
+   ],
+   "postmarket_tradeoff": [
+    "detect",
+    "enforce",
+    "indep",
+    "low",
+    "other",
+    "plan"
+   ],
+   "supervisory_agents": [
+    "other",
+    "validate_supervisor"
    ]
   }
  },
@@ -1967,7 +1953,7 @@
   "unreadable": false,
   "pos": {
    "risk_framework": "conditional",
-   "patient_facing_risk": "oppose",
+   "patient_facing_risk": "conditional",
    "confirmation_flex": "support"
   },
   "recs": [
@@ -1979,7 +1965,13 @@
   "conds": {
    "risk_framework": [
     "detectability",
-    "framework_use"
+    "framework_use",
+    "reversibility",
+    "setting"
+   ],
+   "patient_facing_risk": [
+    "noauto",
+    "safeguards"
    ]
   }
  },
@@ -2060,9 +2052,9 @@
   "unreadable": false,
   "pos": {
    "risk_framework": "conditional",
+   "competency_eval": "conditional",
    "postmarket_methods": "conditional",
-   "supervisory_agents": "conditional",
-   "voluntary_model_files": "support"
+   "supervisory_agents": "conditional"
   },
   "recs": [
    "security_dependencies",
@@ -2071,11 +2063,17 @@
   "also_filed": [],
   "conds": {
    "risk_framework": [
-    "dependencies"
+    "dependencies",
+    "detectability",
+    "reversibility",
+    "setting"
+   ],
+   "competency_eval": [
+    "deployed_system",
+    "new_elements"
    ],
    "postmarket_methods": [
-    "other",
-    "reporting"
+    "other"
    ],
    "supervisory_agents": [
     "independent"
@@ -2129,17 +2127,21 @@
   ],
   "also_filed": [],
   "conds": {
+   "postmarket_tradeoff": [
+    "detect",
+    "plan"
+   ],
    "postmarket_methods": [
-    "other"
+    "event_triggers",
+    "other",
+    "records"
    ],
    "supervisory_agents": [
     "define_role",
     "human_final",
+    "records",
+    "responsibility",
     "validate_supervisor"
-   ],
-   "postmarket_tradeoff": [
-    "detect",
-    "other"
    ]
   }
  },
@@ -2255,7 +2257,6 @@
    "trajectory_risk": "support",
    "escalation_errors": "support",
    "competency_eval": "conditional",
-   "confirmation_flex": "support",
    "synthetic_data": "support",
    "third_party": "conditional",
    "postmarket_tradeoff": "conditional",
@@ -2263,7 +2264,7 @@
    "supervisory_agents": "conditional",
    "flexible_change_control": "support",
    "voluntary_model_files": "conditional",
-   "agentic_oversight": "conditional"
+   "agentic_oversight": "support"
   },
   "recs": [
    "deployed_config",
@@ -2277,49 +2278,46 @@
   "also_filed": [],
   "conds": {
    "risk_framework": [
-    "framework_use",
-    "other",
-    "setting"
-   ],
-   "postmarket_methods": [
-    "event_triggers",
-    "other",
-    "risk_cadence"
-   ],
-   "agentic_oversight": [
-    "human_confirm",
-    "least_privilege",
-    "outside_model",
-    "stop_rollback"
-   ],
-   "supervisory_agents": [
-    "independent",
-    "records"
-   ],
-   "competency_eval": [
-    "deployed_system",
-    "new_elements",
-    "one_part",
-    "variability"
-   ],
-   "postmarket_tradeoff": [
-    "enforce",
-    "low",
-    "other",
-    "plan"
-   ],
-   "voluntary_model_files": [
-    "content",
-    "current",
-    "resp"
+    "broader_harms",
+    "real_oversight",
+    "reversibility",
+    "setting",
+    "traceability"
    ],
    "patient_facing_risk": [
     "noauto",
-    "other"
+    "safeguards"
+   ],
+   "competency_eval": [
+    "deployed_system",
+    "new_elements"
    ],
    "third_party": [
     "conflict",
     "multiple"
+   ],
+   "postmarket_tradeoff": [
+    "detect",
+    "enforce",
+    "low",
+    "plan"
+   ],
+   "postmarket_methods": [
+    "event_triggers",
+    "risk_cadence"
+   ],
+   "supervisory_agents": [
+    "define_role",
+    "fail_safe",
+    "independent",
+    "records",
+    "validate_supervisor"
+   ],
+   "voluntary_model_files": [
+    "content",
+    "contract",
+    "current",
+    "resp"
    ]
   }
  },
@@ -2390,7 +2388,7 @@
   "unreadable": false,
   "pos": {
    "risk_framework": "conditional",
-   "directiveness_continuum": "conditional",
+   "directiveness_continuum": "support",
    "patient_facing_risk": "oppose"
   },
   "recs": [
@@ -2401,11 +2399,12 @@
   "conds": {
    "risk_framework": [
     "autonomy",
-    "detectability",
-    "reversibility"
-   ],
-   "directiveness_continuum": [
-    "other"
+    "dependencies",
+    "other",
+    "real_oversight",
+    "reversibility",
+    "setting",
+    "traceability"
    ]
   }
  },
@@ -2450,7 +2449,8 @@
   "pos": {
    "risk_framework": "conditional",
    "directiveness_continuum": "support",
-   "patient_facing_risk": "conditional"
+   "patient_facing_risk": "support",
+   "confirmation_flex": "support"
   },
   "recs": [
    "directiveness_behavior",
@@ -2460,11 +2460,8 @@
   "also_filed": [],
   "conds": {
    "risk_framework": [
+    "dependencies",
     "other"
-   ],
-   "patient_facing_risk": [
-    "action",
-    "inform"
    ]
   }
  },
@@ -2495,8 +2492,7 @@
   "received": "2026-08-26T04:00:00Z",
   "unreadable": false,
   "pos": {
-   "risk_framework": "conditional",
-   "postmarket_methods": "support"
+   "risk_framework": "conditional"
   },
   "recs": [
    "safety_floors",
@@ -2507,7 +2503,11 @@
   "also_filed": [],
   "conds": {
    "risk_framework": [
-    "autonomy"
+    "autonomy",
+    "detectability",
+    "other",
+    "real_oversight",
+    "reversibility"
    ]
   }
  },
@@ -2591,12 +2591,10 @@
   "also_filed": [],
   "conds": {
    "risk_framework": [
-    "other",
     "real_oversight",
     "traceability"
    ],
    "supervisory_agents": [
-    "other",
     "records"
    ]
   }
@@ -2676,14 +2674,14 @@
   "conds": {
    "risk_framework": [
     "detectability",
+    "real_oversight"
+   ],
+   "escalation_errors": [
     "other"
    ],
    "synthetic_data": [
     "other",
     "validate"
-   ],
-   "escalation_errors": [
-    "other"
    ]
   }
  },
@@ -2795,7 +2793,7 @@
   "pos": {
    "risk_framework": "conditional",
    "directiveness_continuum": "support",
-   "patient_facing_risk": "oppose",
+   "patient_facing_risk": "conditional",
    "trajectory_risk": "support",
    "escalation_errors": "support",
    "competency_eval": "support",
@@ -2822,29 +2820,38 @@
   "conds": {
    "risk_framework": [
     "autonomy",
-    "other"
+    "detectability",
+    "reversibility",
+    "setting"
    ],
-   "postmarket_methods": [
-    "event_triggers"
-   ],
-   "supervisory_agents": [
-    "other",
-    "validate_supervisor"
-   ],
-   "postmarket_tradeoff": [
-    "low",
-    "other"
+   "patient_facing_risk": [
+    "cantcheck",
+    "noauto",
+    "safeguards"
    ],
    "synthetic_data": [
     "indep",
     "noreplace"
    ],
+   "third_party": [
+    "conflict",
+    "multiple"
+   ],
+   "postmarket_tradeoff": [
+    "detect",
+    "low",
+    "nosub"
+   ],
+   "postmarket_methods": [
+    "event_triggers",
+    "set_responses"
+   ],
+   "supervisory_agents": [
+    "records",
+    "validate_supervisor"
+   ],
    "voluntary_model_files": [
     "contract"
-   ],
-   "third_party": [
-    "multiple",
-    "other"
    ]
   }
  },
@@ -2882,10 +2889,10 @@
   "unreadable": false,
   "pos": {
    "risk_framework": "conditional",
-   "patient_facing_risk": "support",
    "competency_eval": "support",
    "postmarket_methods": "conditional",
-   "agentic_oversight": "conditional"
+   "voluntary_model_files": "support",
+   "agentic_oversight": "support"
   },
   "recs": [
    "risk_factors",
@@ -2897,16 +2904,11 @@
   "also_filed": [],
   "conds": {
    "risk_framework": [
-    "other",
+    "real_oversight",
     "reversibility"
    ],
    "postmarket_methods": [
-    "other",
     "records"
-   ],
-   "agentic_oversight": [
-    "human_confirm",
-    "other"
    ]
   }
  },
@@ -2991,9 +2993,9 @@
    "risk_framework": "conditional",
    "directiveness_continuum": "support",
    "trajectory_risk": "support",
-   "competency_eval": "conditional",
+   "competency_eval": "support",
    "synthetic_data": "conditional",
-   "third_party": "conditional",
+   "third_party": "support",
    "postmarket_tradeoff": "conditional",
    "postmarket_methods": "conditional",
    "agentic_oversight": "conditional"
@@ -3011,32 +3013,34 @@
   "also_filed": [],
   "conds": {
    "risk_framework": [
-    "reversibility"
-   ],
-   "postmarket_methods": [
-    "event_triggers",
-    "set_responses"
-   ],
-   "agentic_oversight": [
-    "full_sequence",
-    "human_confirm"
-   ],
-   "competency_eval": [
-    "benchmark_validity",
-    "hard_cases",
-    "one_part",
-    "other"
-   ],
-   "postmarket_tradeoff": [
-    "low",
-    "nosub"
+    "detectability",
+    "real_oversight",
+    "reversibility",
+    "traceability"
    ],
    "synthetic_data": [
     "noreplace",
-    "separate"
+    "separate",
+    "subgroup"
    ],
-   "third_party": [
-    "roles"
+   "postmarket_tradeoff": [
+    "detect",
+    "enforce",
+    "low",
+    "nosub"
+   ],
+   "postmarket_methods": [
+    "event_triggers",
+    "records",
+    "set_responses"
+   ],
+   "agentic_oversight": [
+    "audit_records",
+    "full_sequence",
+    "human_confirm",
+    "least_privilege",
+    "outside_model",
+    "stop_rollback"
    ]
   }
  },
@@ -3129,7 +3133,7 @@
    "patient_facing_risk": "conditional",
    "trajectory_risk": "support",
    "escalation_errors": "support",
-   "competency_eval": "conditional",
+   "competency_eval": "support",
    "confirmation_flex": "support",
    "synthetic_data": "conditional",
    "no_care_comparator": "support",
@@ -3156,44 +3160,51 @@
   "also_filed": [],
   "conds": {
    "risk_framework": [
+    "autonomy",
     "dependencies",
-    "framework_use"
+    "framework_use",
+    "real_oversight",
+    "reversibility",
+    "setting",
+    "traceability"
    ],
-   "postmarket_methods": [
-    "event_triggers",
-    "other"
-   ],
-   "supervisory_agents": [
-    "define_role",
-    "human_final",
-    "responsibility",
-    "validate_supervisor"
-   ],
-   "competency_eval": [
-    "benchmark_validity",
-    "deployed_system",
-    "one_part"
-   ],
-   "postmarket_tradeoff": [
-    "detect",
-    "low",
-    "nosub"
-   ],
-   "flexible_change_control": [
-    "bounds",
-    "review",
-    "rollback"
+   "patient_facing_risk": [
+    "access",
+    "cantcheck",
+    "inform",
+    "noauto"
    ],
    "synthetic_data": [
     "disclose",
     "indep",
     "noreplace",
-    "separate"
+    "separate",
+    "validate"
    ],
-   "patient_facing_risk": [
-    "access",
-    "action",
-    "noauto"
+   "postmarket_tradeoff": [
+    "detect",
+    "enforce",
+    "indep",
+    "low",
+    "nosub"
+   ],
+   "postmarket_methods": [
+    "event_triggers",
+    "records"
+   ],
+   "supervisory_agents": [
+    "define_role",
+    "fail_safe",
+    "records",
+    "responsibility",
+    "validate_supervisor"
+   ],
+   "flexible_change_control": [
+    "bounds",
+    "rebench",
+    "review",
+    "rollback",
+    "tier"
    ]
   }
  },
@@ -3320,7 +3331,6 @@
   "unreadable": false,
   "pos": {
    "risk_framework": "conditional",
-   "directiveness_continuum": "support",
    "patient_facing_risk": "conditional",
    "trajectory_risk": "support",
    "escalation_errors": "support",
@@ -3351,17 +3361,18 @@
     "detectability",
     "framework_use"
    ],
+   "patient_facing_risk": [
+    "cantcheck",
+    "noauto",
+    "safeguards"
+   ],
+   "synthetic_data": [
+    "separate",
+    "subgroup"
+   ],
    "postmarket_tradeoff": [
     "detect",
     "low"
-   ],
-   "synthetic_data": [
-    "other",
-    "subgroup"
-   ],
-   "patient_facing_risk": [
-    "cantcheck",
-    "safeguards"
    ]
   }
  },
@@ -3450,7 +3461,7 @@
    "escalation_errors": "support",
    "competency_eval": "support",
    "confirmation_flex": "support",
-   "synthetic_data": "conditional",
+   "synthetic_data": "support",
    "median_clinician_comparator": "support",
    "no_care_comparator": "support",
    "postmarket_tradeoff": "conditional",
@@ -3471,33 +3482,30 @@
   "also_filed": [],
   "conds": {
    "risk_framework": [
-    "other",
-    "real_oversight"
+    "framework_use",
+    "real_oversight",
+    "reversibility",
+    "setting",
+    "traceability"
+   ],
+   "patient_facing_risk": [
+    "noauto",
+    "safeguards"
+   ],
+   "postmarket_tradeoff": [
+    "detect",
+    "enforce",
+    "low",
+    "nosub"
    ],
    "postmarket_methods": [
     "event_triggers",
-    "other",
     "outcomes"
    ],
    "supervisory_agents": [
     "human_final",
     "independent",
     "validate_supervisor"
-   ],
-   "postmarket_tradeoff": [
-    "low",
-    "nosub",
-    "other"
-   ],
-   "synthetic_data": [
-    "indep",
-    "noreplace",
-    "other",
-    "validate"
-   ],
-   "patient_facing_risk": [
-    "cantcheck",
-    "safeguards"
    ]
   }
  },
@@ -3548,11 +3556,10 @@
   "unreadable": false,
   "pos": {
    "risk_framework": "conditional",
-   "competency_eval": "conditional",
-   "confirmation_flex": "conditional",
+   "competency_eval": "support",
    "postmarket_tradeoff": "conditional",
    "flexible_change_control": "conditional",
-   "agentic_oversight": "conditional"
+   "agentic_oversight": "support"
   },
   "recs": [
    "risk_factors",
@@ -3568,23 +3575,13 @@
     "other",
     "reversibility"
    ],
-   "confirmation_flex": [
-    "other"
-   ],
-   "agentic_oversight": [
-    "human_confirm",
-    "other"
-   ],
-   "competency_eval": [
-    "deployed_system",
-    "other"
-   ],
    "postmarket_tradeoff": [
     "low"
    ],
    "flexible_change_control": [
-    "other",
-    "pin"
+    "pin",
+    "rebench",
+    "tier"
    ]
   }
  },
@@ -3645,7 +3642,7 @@
    "postmarket_tradeoff": "conditional",
    "postmarket_methods": "conditional",
    "voluntary_model_files": "support",
-   "agentic_oversight": "conditional"
+   "agentic_oversight": "support"
   },
   "recs": [
    "deployed_config",
@@ -3659,27 +3656,29 @@
   "also_filed": [],
   "conds": {
    "risk_framework": [
+    "detectability",
+    "real_oversight",
+    "reversibility",
+    "setting",
     "traceability"
    ],
-   "postmarket_methods": [
-    "event_triggers"
-   ],
-   "agentic_oversight": [
-    "audit_records",
-    "authority_level",
-    "human_confirm"
+   "patient_facing_risk": [
+    "action",
+    "noauto",
+    "safeguards"
    ],
    "competency_eval": [
     "deployed_system",
     "new_elements"
    ],
    "postmarket_tradeoff": [
+    "enforce",
     "low",
     "staged"
    ],
-   "patient_facing_risk": [
-    "action",
-    "noauto"
+   "postmarket_methods": [
+    "event_triggers",
+    "outcomes"
    ]
   }
  },
@@ -3774,13 +3773,13 @@
    "synthetic_data": "conditional",
    "median_clinician_comparator": "conditional",
    "no_care_comparator": "support",
-   "third_party": "support",
+   "third_party": "conditional",
    "postmarket_tradeoff": "conditional",
    "postmarket_methods": "conditional",
    "supervisory_agents": "conditional",
-   "flexible_change_control": "conditional",
+   "flexible_change_control": "support",
    "voluntary_model_files": "conditional",
-   "agentic_oversight": "conditional"
+   "agentic_oversight": "support"
   },
   "recs": [
    "directiveness_behavior",
@@ -3793,61 +3792,58 @@
   ],
   "also_filed": [],
   "conds": {
-   "postmarket_methods": [
-    "outcomes",
-    "set_responses",
-    "targeted_sampling"
+   "patient_facing_risk": [
+    "cantcheck",
+    "noauto",
+    "other"
+   ],
+   "escalation_errors": [
+    "asym",
+    "separate"
+   ],
+   "competency_eval": [
+    "deployed_system",
+    "failure_limits",
+    "one_part"
+   ],
+   "synthetic_data": [
+    "indep",
+    "noreplace",
+    "other",
+    "separate"
    ],
    "median_clinician_comparator": [
     "specialists",
     "standard_floor"
    ],
-   "agentic_oversight": [
-    "human_confirm",
-    "least_privilege",
-    "stop_rollback"
-   ],
-   "supervisory_agents": [
-    "human_final",
-    "independent",
-    "other",
-    "validate_supervisor"
-   ],
-   "competency_eval": [
-    "benchmark_validity",
-    "deployed_system",
-    "failure_limits",
-    "one_part"
+   "third_party": [
+    "conflict",
+    "multiple",
+    "roles"
    ],
    "postmarket_tradeoff": [
     "detect",
     "enforce",
     "low",
+    "plan",
     "staged"
    ],
-   "flexible_change_control": [
-    "bounds",
-    "rebench",
-    "review"
+   "postmarket_methods": [
+    "outcomes",
+    "set_responses",
+    "targeted_sampling"
    ],
-   "synthetic_data": [
-    "indep",
-    "noreplace",
-    "separate"
+   "supervisory_agents": [
+    "fail_safe",
+    "human_final",
+    "independent",
+    "other",
+    "validate_supervisor"
    ],
    "voluntary_model_files": [
+    "content",
     "fallback",
     "resp"
-   ],
-   "patient_facing_risk": [
-    "access",
-    "cantcheck",
-    "human",
-    "other"
-   ],
-   "escalation_errors": [
-    "after",
-    "asym"
    ]
   }
  },
@@ -3887,6 +3883,7 @@
   "unreadable": false,
   "pos": {
    "risk_framework": "conditional",
+   "directiveness_continuum": "support",
    "trajectory_risk": "support",
    "competency_eval": "conditional",
    "median_clinician_comparator": "oppose",
@@ -3911,25 +3908,31 @@
   "conds": {
    "risk_framework": [
     "detectability",
-    "reversibility"
+    "reversibility",
+    "setting"
+   ],
+   "competency_eval": [
+    "deployed_system",
+    "failure_limits",
+    "hard_cases",
+    "human_ai_team",
+    "new_elements"
    ],
    "postmarket_methods": [
     "event_triggers",
     "outcomes",
     "targeted_sampling"
    ],
-   "agentic_oversight": [
-    "authority_level",
-    "human_confirm",
-    "least_privilege"
-   ],
    "supervisory_agents": [
+    "independent",
     "validate_supervisor"
    ],
-   "competency_eval": [
-    "failure_limits",
-    "hard_cases",
-    "other"
+   "agentic_oversight": [
+    "audit_records",
+    "full_sequence",
+    "human_confirm",
+    "least_privilege",
+    "stop_rollback"
    ]
   }
  },
@@ -4002,8 +4005,6 @@
   ],
   "conds": {
    "risk_framework": [
-    "detectability",
-    "other",
     "real_oversight"
    ],
    "flexible_change_control": [
@@ -4175,7 +4176,8 @@
     "validate_supervisor"
    ],
    "flexible_change_control": [
-    "pin"
+    "pin",
+    "rebench"
    ]
   }
  },
@@ -4221,9 +4223,8 @@
   "also_filed": [],
   "conds": {
    "postmarket_methods": [
-    "other",
-    "records",
-    "set_responses"
+    "event_triggers",
+    "other"
    ]
   }
  },
@@ -4266,7 +4267,6 @@
   "also_filed": [],
   "conds": {
    "no_care_comparator": [
-    "justify",
     "other",
     "standard"
    ]
@@ -4303,7 +4303,7 @@
   "unreadable": false,
   "pos": {
    "directiveness_continuum": "oppose",
-   "trajectory_risk": "conditional"
+   "trajectory_risk": "support"
   },
   "recs": [
    "multi_turn",
@@ -4312,14 +4312,7 @@
    "deterministic_controls"
   ],
   "also_filed": [],
-  "conds": {
-   "trajectory_risk": [
-    "long_use",
-    "other",
-    "report_timing",
-    "user_pressure"
-   ]
-  }
+  "conds": {}
  },
  {
   "id": "FDA-2026-N-7874-0066",
@@ -4414,6 +4407,7 @@
    "risk_framework": "support",
    "escalation_errors": "support",
    "competency_eval": "support",
+   "third_party": "support",
    "postmarket_methods": "conditional",
    "flexible_change_control": "support",
    "agentic_oversight": "conditional"
@@ -4431,7 +4425,8 @@
   "conds": {
    "postmarket_methods": [
     "other",
-    "set_responses"
+    "set_responses",
+    "targeted_sampling"
    ],
    "agentic_oversight": [
     "audit_records",
@@ -4575,7 +4570,7 @@
    "third_party": "support",
    "postmarket_methods": "support",
    "supervisory_agents": "conditional",
-   "flexible_change_control": "conditional",
+   "flexible_change_control": "support",
    "agentic_oversight": "support"
   },
   "recs": [
@@ -4588,12 +4583,9 @@
   "also_filed": [],
   "conds": {
    "supervisory_agents": [
+    "define_role",
     "independent",
-    "other"
-   ],
-   "flexible_change_control": [
-    "rebench",
-    "tier"
+    "validate_supervisor"
    ]
   }
  },
@@ -4704,9 +4696,7 @@
   "also_filed": [],
   "conds": {
    "competency_eval": [
-    "benchmark_validity",
-    "deployed_system",
-    "other"
+    "deployed_system"
    ]
   }
  },
@@ -4753,8 +4743,9 @@
   "unreadable": false,
   "pos": {
    "postmarket_tradeoff": "conditional",
-   "postmarket_methods": "conditional",
-   "supervisory_agents": "conditional",
+   "postmarket_methods": "support",
+   "supervisory_agents": "support",
+   "flexible_change_control": "support",
    "agentic_oversight": "conditional"
   },
   "recs": [
@@ -4769,27 +4760,16 @@
   ],
   "also_filed": [],
   "conds": {
-   "postmarket_methods": [
-    "event_triggers",
-    "other",
-    "set_responses"
-   ],
-   "agentic_oversight": [
-    "audit_records",
-    "human_confirm",
-    "other",
-    "outside_model"
-   ],
-   "supervisory_agents": [
-    "define_role",
-    "fail_safe",
-    "independent",
-    "validate_supervisor"
-   ],
    "postmarket_tradeoff": [
     "detect",
     "enforce",
-    "staged"
+    "low",
+    "plan"
+   ],
+   "agentic_oversight": [
+    "audit_records",
+    "full_sequence",
+    "outside_model"
    ]
   }
  },
@@ -4875,11 +4855,11 @@
    "patient_facing_risk": "conditional",
    "trajectory_risk": "support",
    "escalation_errors": "conditional",
-   "competency_eval": "conditional",
+   "competency_eval": "support",
    "synthetic_data": "conditional",
    "median_clinician_comparator": "oppose",
    "third_party": "support",
-   "postmarket_tradeoff": "oppose",
+   "postmarket_tradeoff": "conditional",
    "postmarket_methods": "conditional",
    "supervisory_agents": "conditional",
    "flexible_change_control": "oppose",
@@ -4899,40 +4879,44 @@
   "also_filed": [],
   "conds": {
    "risk_framework": [
+    "broader_harms",
     "other"
+   ],
+   "patient_facing_risk": [
+    "access",
+    "human",
+    "inform",
+    "noauto",
+    "safeguards"
+   ],
+   "escalation_errors": [
+    "asym",
+    "justify"
+   ],
+   "synthetic_data": [
+    "indep",
+    "noreplace",
+    "separate",
+    "subgroup"
+   ],
+   "postmarket_tradeoff": [
+    "low",
+    "other",
+    "plan"
    ],
    "postmarket_methods": [
     "other",
-    "reporting"
-   ],
-   "agentic_oversight": [
-    "audit_records",
-    "human_confirm",
-    "least_privilege"
+    "reporting",
+    "risk_cadence"
    ],
    "supervisory_agents": [
     "human_final",
     "validate_supervisor"
    ],
-   "competency_eval": [
-    "deployed_system",
-    "hard_cases",
-    "other",
-    "variability"
-   ],
-   "synthetic_data": [
-    "indep",
-    "separate",
-    "subgroup"
-   ],
-   "patient_facing_risk": [
-    "human",
-    "inform",
-    "safeguards"
-   ],
-   "escalation_errors": [
-    "asym",
-    "other"
+   "agentic_oversight": [
+    "audit_records",
+    "human_confirm",
+    "least_privilege"
    ]
   }
  },
@@ -4968,7 +4952,8 @@
   "received": "2026-09-08T04:00:00Z",
   "unreadable": false,
   "pos": {
-   "postmarket_tradeoff": "conditional"
+   "postmarket_tradeoff": "conditional",
+   "postmarket_methods": "oppose"
   },
   "recs": [
    "reduced_evidence_limits",
@@ -4979,7 +4964,8 @@
    "postmarket_tradeoff": [
     "detect",
     "indep",
-    "low"
+    "low",
+    "other"
    ]
   }
  },
@@ -5014,7 +5000,7 @@
   "received": "2026-09-08T04:00:00Z",
   "unreadable": false,
   "pos": {
-   "trajectory_risk": "conditional",
+   "trajectory_risk": "support",
    "competency_eval": "support"
   },
   "recs": [
@@ -5025,12 +5011,7 @@
    "independent_records"
   ],
   "also_filed": [],
-  "conds": {
-   "trajectory_risk": [
-    "long_use",
-    "report_timing"
-   ]
-  }
+  "conds": {}
  },
  {
   "id": "FDA-2026-N-7874-0079",
@@ -5061,14 +5042,21 @@
   "received": "2026-09-08T04:00:00Z",
   "unreadable": false,
   "pos": {
-   "voluntary_model_files": "oppose"
+   "voluntary_model_files": "conditional"
   },
   "recs": [
    "audit_trail",
    "independent_records"
   ],
   "also_filed": [],
-  "conds": {}
+  "conds": {
+   "voluntary_model_files": [
+    "content",
+    "current",
+    "fallback",
+    "other"
+   ]
+  }
  },
  {
   "id": "FDA-2026-N-7874-0080",
@@ -5102,7 +5090,8 @@
   "received": "2026-09-08T04:00:00Z",
   "unreadable": false,
   "pos": {
-   "risk_framework": "support"
+   "risk_framework": "support",
+   "patient_facing_risk": "oppose"
   },
   "recs": [
    "lower_burden_supervised"
@@ -5188,7 +5177,7 @@
   "unreadable": false,
   "pos": {
    "risk_framework": "conditional",
-   "directiveness_continuum": "conditional",
+   "directiveness_continuum": "support",
    "patient_facing_risk": "conditional",
    "escalation_errors": "oppose",
    "no_care_comparator": "support",
@@ -5204,17 +5193,14 @@
   "also_filed": [],
   "conds": {
    "risk_framework": [
-    "other"
+    "setting",
+    "traceability"
+   ],
+   "patient_facing_risk": [
+    "safeguards"
    ],
    "postmarket_methods": [
     "other"
-   ],
-   "directiveness_continuum": [
-    "other"
-   ],
-   "patient_facing_risk": [
-    "other",
-    "safeguards"
    ]
   }
  },
@@ -5253,12 +5239,18 @@
   "posted": "2026-09-09T04:00:00Z",
   "received": "2026-09-09T04:00:00Z",
   "unreadable": false,
-  "pos": {},
+  "pos": {
+   "postmarket_methods": "conditional"
+  },
   "recs": [
    "accountability"
   ],
   "also_filed": [],
-  "conds": {}
+  "conds": {
+   "postmarket_methods": [
+    "other"
+   ]
+  }
  },
  {
   "id": "FDA-2026-N-7874-0084",
@@ -5404,10 +5396,13 @@
    "risk_framework": "conditional",
    "escalation_errors": "support",
    "competency_eval": "conditional",
+   "confirmation_flex": "conditional",
+   "median_clinician_comparator": "oppose",
    "no_care_comparator": "oppose",
    "postmarket_tradeoff": "oppose",
    "postmarket_methods": "conditional",
    "supervisory_agents": "conditional",
+   "flexible_change_control": "conditional",
    "agentic_oversight": "support"
   },
   "recs": [
@@ -5424,20 +5419,30 @@
   "conds": {
    "risk_framework": [
     "broader_harms",
-    "real_oversight",
-    "setting"
+    "detectability",
+    "reversibility",
+    "setting",
+    "traceability"
+   ],
+   "competency_eval": [
+    "clinical_evidence",
+    "human_ai_team"
+   ],
+   "confirmation_flex": [
+    "real_populations",
+    "scale_to_risk"
    ],
    "postmarket_methods": [
-    "other",
-    "outcomes"
+    "outcomes",
+    "reporting"
    ],
    "supervisory_agents": [
     "human_final"
    ],
-   "competency_eval": [
-    "clinical_evidence",
-    "human_ai_team",
-    "other"
+   "flexible_change_control": [
+    "pin",
+    "review",
+    "rollback"
    ]
   }
  },
@@ -5489,7 +5494,7 @@
    "confirmation_flex": "support",
    "postmarket_methods": "support",
    "flexible_change_control": "support",
-   "voluntary_model_files": "support",
+   "voluntary_model_files": "conditional",
    "agentic_oversight": "conditional"
   },
   "recs": [
@@ -5505,12 +5510,14 @@
   "also_filed": [],
   "conds": {
    "risk_framework": [
-    "other",
+    "autonomy",
     "real_oversight",
     "traceability"
    ],
+   "voluntary_model_files": [
+    "resp"
+   ],
    "agentic_oversight": [
-    "audit_records",
     "authority_level",
     "full_sequence",
     "human_confirm"
@@ -5562,7 +5569,6 @@
   "received": "2026-09-11T04:00:00Z",
   "unreadable": false,
   "pos": {
-   "trajectory_risk": "support",
    "competency_eval": "support"
   },
   "recs": [
@@ -5604,7 +5610,6 @@
   "received": "2026-09-11T04:00:00Z",
   "unreadable": false,
   "pos": {
-   "risk_framework": "conditional",
    "agentic_oversight": "conditional"
   },
   "recs": [
@@ -5614,14 +5619,10 @@
   ],
   "also_filed": [],
   "conds": {
-   "risk_framework": [
-    "other",
-    "reversibility"
-   ],
    "agentic_oversight": [
     "audit_records",
-    "human_confirm",
-    "other"
+    "authority_level",
+    "human_confirm"
    ]
   }
  },
@@ -5667,7 +5668,7 @@
    "postmarket_tradeoff": "conditional",
    "postmarket_methods": "conditional",
    "supervisory_agents": "conditional",
-   "flexible_change_control": "support"
+   "flexible_change_control": "conditional"
   },
   "recs": [
    "postmarket_plans",
@@ -5679,6 +5680,13 @@
   ],
   "also_filed": [],
   "conds": {
+   "postmarket_tradeoff": [
+    "detect",
+    "enforce",
+    "indep",
+    "low",
+    "plan"
+   ],
    "postmarket_methods": [
     "event_triggers",
     "other"
@@ -5686,13 +5694,14 @@
    "supervisory_agents": [
     "independent",
     "other",
+    "records",
     "validate_supervisor"
    ],
-   "postmarket_tradeoff": [
-    "detect",
-    "indep",
+   "flexible_change_control": [
     "other",
-    "plan"
+    "pin",
+    "rebench",
+    "tier"
    ]
   }
  },
@@ -5741,9 +5750,8 @@
   "received": "2026-09-12T04:00:00Z",
   "unreadable": false,
   "pos": {
-   "risk_framework": "support",
    "trajectory_risk": "conditional",
-   "escalation_errors": "conditional",
+   "escalation_errors": "support",
    "competency_eval": "conditional",
    "confirmation_flex": "conditional",
    "synthetic_data": "conditional",
@@ -5761,34 +5769,28 @@
   ],
   "also_filed": [],
   "conds": {
-   "confirmation_flex": [
-    "other"
-   ],
    "trajectory_risk": [
-    "report_timing"
+    "other"
    ],
    "competency_eval": [
     "benchmark_validity",
+    "other"
+   ],
+   "confirmation_flex": [
+    "other"
+   ],
+   "synthetic_data": [
+    "indep",
     "other",
-    "variability"
+    "separate"
+   ],
+   "third_party": [
+    "roles"
    ],
    "flexible_change_control": [
     "other",
     "rebench",
     "tier"
-   ],
-   "synthetic_data": [
-    "indep",
-    "other"
-   ],
-   "third_party": [
-    "other",
-    "roles"
-   ],
-   "escalation_errors": [
-    "justify",
-    "other",
-    "separate"
    ]
   }
  },
@@ -5841,13 +5843,13 @@
   "also_filed": [],
   "conds": {
    "postmarket_methods": [
-    "other",
+    "risk_cadence",
     "targeted_sampling"
    ],
    "agentic_oversight": [
+    "audit_records",
     "authority_level",
-    "human_confirm",
-    "other"
+    "human_confirm"
    ]
   }
  },
@@ -5924,16 +5926,17 @@
   "received": "2026-09-14T04:00:00Z",
   "unreadable": false,
   "pos": {
-   "risk_framework": "conditional",
+   "risk_framework": "support",
    "directiveness_continuum": "support",
    "patient_facing_risk": "support",
    "trajectory_risk": "support",
    "escalation_errors": "support",
    "competency_eval": "support",
    "confirmation_flex": "support",
-   "synthetic_data": "support",
+   "synthetic_data": "conditional",
+   "median_clinician_comparator": "conditional",
    "no_care_comparator": "support",
-   "third_party": "support",
+   "third_party": "conditional",
    "postmarket_tradeoff": "conditional",
    "postmarket_methods": "support",
    "supervisory_agents": "conditional",
@@ -5951,21 +5954,32 @@
   ],
   "also_filed": [],
   "conds": {
-   "risk_framework": [
-    "dependencies",
-    "other",
-    "traceability"
+   "synthetic_data": [
+    "disclose",
+    "indep",
+    "subgroup",
+    "validate"
+   ],
+   "median_clinician_comparator": [
+    "measure_median",
+    "specialists"
+   ],
+   "third_party": [
+    "access",
+    "conflict",
+    "multiple"
+   ],
+   "postmarket_tradeoff": [
+    "detect",
+    "enforce",
+    "low",
+    "plan"
    ],
    "supervisory_agents": [
     "human_final",
     "independent",
     "records",
     "validate_supervisor"
-   ],
-   "postmarket_tradeoff": [
-    "detect",
-    "enforce",
-    "low"
    ]
   }
  },
@@ -6023,13 +6037,11 @@
   "unreadable": false,
   "pos": {
    "risk_framework": "conditional",
-   "patient_facing_risk": "conditional",
    "competency_eval": "conditional",
    "confirmation_flex": "support",
    "third_party": "conditional",
    "postmarket_tradeoff": "support",
-   "postmarket_methods": "conditional",
-   "flexible_change_control": "support",
+   "postmarket_methods": "support",
    "voluntary_model_files": "support",
    "agentic_oversight": "conditional"
   },
@@ -6042,31 +6054,19 @@
   "also_filed": [],
   "conds": {
    "risk_framework": [
-    "other",
     "setting",
     "traceability"
    ],
-   "postmarket_methods": [
-    "other"
-   ],
-   "agentic_oversight": [
-    "not_device_alone",
-    "other"
-   ],
    "competency_eval": [
-    "clinical_evidence",
-    "human_ai_team",
-    "new_elements",
-    "other"
-   ],
-   "patient_facing_risk": [
-    "access",
-    "other"
+    "clinical_evidence"
    ],
    "third_party": [
     "access",
-    "optional",
-    "other"
+    "optional"
+   ],
+   "agentic_oversight": [
+    "human_confirm",
+    "not_device_alone"
    ]
   }
  },
@@ -6107,11 +6107,10 @@
   "received": "2026-09-14T04:00:00Z",
   "unreadable": false,
   "pos": {
-   "risk_framework": "support",
-   "competency_eval": "conditional",
-   "postmarket_methods": "conditional",
+   "competency_eval": "support",
+   "postmarket_methods": "support",
    "supervisory_agents": "conditional",
-   "agentic_oversight": "conditional"
+   "agentic_oversight": "support"
   },
   "recs": [
    "benchmark_validity",
@@ -6121,20 +6120,10 @@
   ],
   "also_filed": [],
   "conds": {
-   "postmarket_methods": [
-    "other"
-   ],
-   "agentic_oversight": [
-    "other"
-   ],
    "supervisory_agents": [
     "independent",
     "other",
     "validate_supervisor"
-   ],
-   "competency_eval": [
-    "other",
-    "variability"
    ]
   }
  },
@@ -6208,9 +6197,7 @@
   "received": "2026-09-15T04:00:00Z",
   "unreadable": false,
   "pos": {
-   "confirmation_flex": "conditional",
-   "postmarket_methods": "conditional",
-   "agentic_oversight": "conditional"
+   "agentic_oversight": "support"
   },
   "recs": [
    "human_approval",
@@ -6221,20 +6208,7 @@
    "patient_disclosure"
   ],
   "also_filed": [],
-  "conds": {
-   "postmarket_methods": [
-    "outcomes",
-    "reporting"
-   ],
-   "confirmation_flex": [
-    "real_populations",
-    "scale_to_risk"
-   ],
-   "agentic_oversight": [
-    "authority_level",
-    "other"
-   ]
-  }
+  "conds": {}
  },
  {
   "id": "FDA-2026-N-7874-0098",
@@ -6291,7 +6265,6 @@
    "risk_framework": "conditional",
    "trajectory_risk": "conditional",
    "competency_eval": "support",
-   "third_party": "conditional",
    "postmarket_methods": "conditional",
    "agentic_oversight": "conditional"
   },
@@ -6307,23 +6280,18 @@
   "also_filed": [],
   "conds": {
    "risk_framework": [
-    "other",
     "real_oversight"
    ],
-   "postmarket_methods": [
+   "trajectory_risk": [
     "other"
    ],
-   "trajectory_risk": [
-    "other",
-    "scope_drift",
-    "user_pressure"
+   "postmarket_methods": [
+    "records"
    ],
    "agentic_oversight": [
-    "human_confirm"
-   ],
-   "third_party": [
-    "conflict",
-    "other"
+    "audit_records",
+    "human_confirm",
+    "outside_model"
    ]
   }
  },
@@ -6385,10 +6353,12 @@
   "also_filed": [],
   "conds": {
    "risk_framework": [
+    "real_oversight",
     "reversibility"
    ],
    "postmarket_tradeoff": [
     "detect",
+    "enforce",
     "nosub",
     "plan"
    ],
@@ -6477,7 +6447,7 @@
    "supervisory_agents": "conditional",
    "flexible_change_control": "support",
    "voluntary_model_files": "conditional",
-   "agentic_oversight": "conditional"
+   "agentic_oversight": "support"
   },
   "recs": [
    "risk_factors",
@@ -6495,38 +6465,34 @@
     "reversibility",
     "traceability"
    ],
-   "agentic_oversight": [
-    "human_confirm",
-    "not_device_alone",
-    "other",
-    "stop_rollback"
-   ],
-   "supervisory_agents": [
-    "human_final",
-    "validate_supervisor"
-   ],
-   "postmarket_tradeoff": [
-    "low",
-    "other",
-    "plan"
-   ],
-   "voluntary_model_files": [
-    "fallback",
-    "other"
-   ],
    "patient_facing_risk": [
-    "human",
+    "access",
     "noauto",
     "safeguards"
+   ],
+   "no_care_comparator": [
+    "justify",
+    "local"
    ],
    "third_party": [
     "conflict",
     "multiple",
     "optional"
    ],
-   "no_care_comparator": [
-    "justify",
-    "local"
+   "postmarket_tradeoff": [
+    "enforce",
+    "indep",
+    "low",
+    "plan"
+   ],
+   "supervisory_agents": [
+    "human_final",
+    "independent",
+    "validate_supervisor"
+   ],
+   "voluntary_model_files": [
+    "fallback",
+    "other"
    ]
   }
  },
@@ -6560,7 +6526,7 @@
   "unreadable": false,
   "pos": {
    "risk_framework": "conditional",
-   "agentic_oversight": "conditional"
+   "agentic_oversight": "support"
   },
   "recs": [
    "data_privacy",
@@ -6570,9 +6536,6 @@
   "conds": {
    "risk_framework": [
     "other"
-   ],
-   "agentic_oversight": [
-    "least_privilege"
    ]
   }
  },
@@ -6619,14 +6582,15 @@
   "received": "2026-09-15T04:00:00Z",
   "unreadable": false,
   "pos": {
-   "risk_framework": "conditional",
+   "risk_framework": "support",
    "directiveness_continuum": "support",
    "competency_eval": "support",
    "third_party": "support",
    "postmarket_tradeoff": "conditional",
    "postmarket_methods": "conditional",
    "supervisory_agents": "conditional",
-   "voluntary_model_files": "conditional",
+   "flexible_change_control": "support",
+   "voluntary_model_files": "oppose",
    "agentic_oversight": "conditional"
   },
   "recs": [
@@ -6644,28 +6608,22 @@
    "FDA-2026-N-7874-0117"
   ],
   "conds": {
-   "risk_framework": [
-    "reversibility"
+   "postmarket_tradeoff": [
+    "enforce"
    ],
    "postmarket_methods": [
+    "event_triggers",
     "records",
     "set_responses"
+   ],
+   "supervisory_agents": [
+    "define_role",
+    "human_final",
+    "validate_supervisor"
    ],
    "agentic_oversight": [
     "human_confirm",
     "other"
-   ],
-   "supervisory_agents": [
-    "responsibility",
-    "validate_supervisor"
-   ],
-   "postmarket_tradeoff": [
-    "enforce"
-   ],
-   "voluntary_model_files": [
-    "contract",
-    "other",
-    "resp"
    ]
   }
  },
@@ -6702,7 +6660,7 @@
   "unreadable": false,
   "pos": {
    "risk_framework": "support",
-   "competency_eval": "conditional"
+   "competency_eval": "oppose"
   },
   "recs": [
    "deterministic_controls",
@@ -6710,12 +6668,7 @@
    "pccp_bounded"
   ],
   "also_filed": [],
-  "conds": {
-   "competency_eval": [
-    "deployed_system",
-    "other"
-   ]
-  }
+  "conds": {}
  },
  {
   "id": "FDA-2026-N-7874-0104",
@@ -6808,7 +6761,7 @@
   "unreadable": false,
   "pos": {
    "risk_framework": "conditional",
-   "trajectory_risk": "conditional",
+   "trajectory_risk": "support",
    "postmarket_tradeoff": "conditional",
    "postmarket_methods": "conditional",
    "supervisory_agents": "conditional",
@@ -6830,41 +6783,48 @@
   "also_filed": [],
   "conds": {
    "risk_framework": [
+    "other",
     "real_oversight",
-    "reversibility"
+    "reversibility",
+    "setting",
+    "traceability"
+   ],
+   "postmarket_tradeoff": [
+    "detect",
+    "low",
+    "plan"
    ],
    "postmarket_methods": [
     "event_triggers",
     "set_responses"
    ],
-   "trajectory_risk": [
-    "long_use",
-    "scope_drift"
-   ],
-   "agentic_oversight": [
-    "audit_records",
-    "human_confirm",
-    "least_privilege",
-    "other"
-   ],
    "supervisory_agents": [
     "define_role",
     "fail_safe",
     "independent",
-    "other"
-   ],
-   "postmarket_tradeoff": [
-    "low"
+    "records",
+    "validate_supervisor"
    ],
    "flexible_change_control": [
     "bounds",
     "pin",
+    "review",
     "rollback",
     "tier"
    ],
    "voluntary_model_files": [
+    "content",
     "current",
+    "fallback",
     "resp"
+   ],
+   "agentic_oversight": [
+    "audit_records",
+    "full_sequence",
+    "human_confirm",
+    "least_privilege",
+    "outside_model",
+    "stop_rollback"
    ]
   }
  },
@@ -6916,7 +6876,6 @@
   "also_filed": [],
   "conds": {
    "supervisory_agents": [
-    "independent",
     "validate_supervisor"
    ]
   }
@@ -6953,6 +6912,7 @@
   "received": "2026-09-20T04:00:00Z",
   "unreadable": false,
   "pos": {
+   "competency_eval": "conditional",
    "confirmation_flex": "oppose"
   },
   "recs": [
@@ -6961,7 +6921,12 @@
    "sequestered_benchmarks"
   ],
   "also_filed": [],
-  "conds": {}
+  "conds": {
+   "competency_eval": [
+    "clinical_evidence",
+    "one_part"
+   ]
+  }
  },
  {
   "id": "FDA-2026-N-7874-0108",
@@ -7032,19 +6997,12 @@
   "posted": "2026-09-21T04:00:00Z",
   "received": "2026-09-21T04:00:00Z",
   "unreadable": false,
-  "pos": {
-   "agentic_oversight": "conditional"
-  },
+  "pos": {},
   "recs": [
    "kill_switch"
   ],
   "also_filed": [],
-  "conds": {
-   "agentic_oversight": [
-    "other",
-    "stop_rollback"
-   ]
-  }
+  "conds": {}
  },
  {
   "id": "FDA-2026-N-7874-0110",
@@ -7079,7 +7037,6 @@
   "received": "2026-09-21T04:00:00Z",
   "unreadable": false,
   "pos": {
-   "postmarket_methods": "conditional",
    "supervisory_agents": "conditional"
   },
   "recs": [
@@ -7089,10 +7046,6 @@
   ],
   "also_filed": [],
   "conds": {
-   "postmarket_methods": [
-    "event_triggers",
-    "other"
-   ],
    "supervisory_agents": [
     "human_final",
     "independent"
@@ -7150,13 +7103,12 @@
   "received": "2026-09-21T04:00:00Z",
   "unreadable": false,
   "pos": {
-   "risk_framework": "conditional",
-   "trajectory_risk": "conditional",
+   "risk_framework": "support",
+   "trajectory_risk": "support",
    "escalation_errors": "conditional",
+   "third_party": "conditional",
    "postmarket_tradeoff": "conditional",
-   "postmarket_methods": "support",
-   "supervisory_agents": "conditional",
-   "agentic_oversight": "conditional"
+   "supervisory_agents": "conditional"
   },
   "recs": [
    "sycophancy",
@@ -7167,28 +7119,20 @@
   ],
   "also_filed": [],
   "conds": {
-   "risk_framework": [
-    "other"
+   "escalation_errors": [
+    "justify",
+    "separate"
    ],
-   "trajectory_risk": [
-    "other",
-    "user_pressure"
-   ],
-   "agentic_oversight": [
-    "other",
-    "outside_model"
-   ],
-   "supervisory_agents": [
-    "define_role",
-    "other",
-    "validate_supervisor"
+   "third_party": [
+    "access",
+    "optional"
    ],
    "postmarket_tradeoff": [
     "detect"
    ],
-   "escalation_errors": [
-    "justify",
-    "separate"
+   "supervisory_agents": [
+    "define_role",
+    "validate_supervisor"
    ]
   }
  },
@@ -7236,7 +7180,7 @@
   "also_filed": [],
   "conds": {
    "risk_framework": [
-    "other"
+    "broader_harms"
    ]
   }
  },
@@ -7328,7 +7272,7 @@
    "risk_framework": "conditional",
    "directiveness_continuum": "support",
    "patient_facing_risk": "conditional",
-   "trajectory_risk": "conditional",
+   "trajectory_risk": "support",
    "escalation_errors": "support",
    "competency_eval": "conditional",
    "confirmation_flex": "conditional",
@@ -7339,9 +7283,9 @@
    "postmarket_tradeoff": "oppose",
    "postmarket_methods": "conditional",
    "supervisory_agents": "conditional",
-   "flexible_change_control": "conditional",
+   "flexible_change_control": "support",
    "voluntary_model_files": "oppose",
-   "agentic_oversight": "conditional"
+   "agentic_oversight": "support"
   },
   "recs": [
    "prospective_outcomes",
@@ -7358,57 +7302,46 @@
   "conds": {
    "risk_framework": [
     "other",
-    "reversibility"
+    "real_oversight",
+    "reversibility",
+    "setting",
+    "traceability"
    ],
-   "postmarket_methods": [
-    "other",
-    "risk_cadence"
-   ],
-   "confirmation_flex": [
-    "other",
-    "real_populations",
-    "scale_to_risk"
-   ],
-   "median_clinician_comparator": [
-    "measure_median",
-    "specialists"
-   ],
-   "trajectory_risk": [
-    "scope_drift"
-   ],
-   "agentic_oversight": [
-    "audit_records",
-    "full_sequence",
-    "human_confirm",
-    "other"
-   ],
-   "supervisory_agents": [
-    "human_final",
-    "validate_supervisor"
+   "patient_facing_risk": [
+    "human",
+    "inform",
+    "noauto"
    ],
    "competency_eval": [
     "benchmark_validity",
+    "clinical_evidence",
     "other"
    ],
-   "flexible_change_control": [
-    "other",
-    "review",
-    "tier"
+   "confirmation_flex": [
+    "real_populations",
+    "scale_to_risk"
    ],
    "synthetic_data": [
     "disclose",
     "noreplace",
     "subgroup"
    ],
-   "patient_facing_risk": [
-    "human",
-    "noauto",
-    "other"
+   "median_clinician_comparator": [
+    "measure_median",
+    "specialists"
    ],
    "no_care_comparator": [
     "justify",
-    "other",
     "standard"
+   ],
+   "postmarket_methods": [
+    "other",
+    "risk_cadence"
+   ],
+   "supervisory_agents": [
+    "define_role",
+    "human_final",
+    "validate_supervisor"
    ]
   }
  },
@@ -7450,7 +7383,6 @@
   "pos": {
    "trajectory_risk": "support",
    "competency_eval": "support",
-   "third_party": "support",
    "voluntary_model_files": "support"
   },
   "recs": [
@@ -7531,18 +7463,17 @@
   "unreadable": false,
   "pos": {
    "risk_framework": "conditional",
-   "patient_facing_risk": "oppose",
+   "patient_facing_risk": "conditional",
    "trajectory_risk": "support",
    "escalation_errors": "support",
    "competency_eval": "conditional",
-   "confirmation_flex": "support",
    "synthetic_data": "conditional",
    "third_party": "support",
    "postmarket_tradeoff": "conditional",
    "postmarket_methods": "conditional",
    "supervisory_agents": "conditional",
    "voluntary_model_files": "conditional",
-   "agentic_oversight": "conditional"
+   "agentic_oversight": "support"
   },
   "recs": [
    "risk_factors",
@@ -7558,40 +7489,48 @@
   "conds": {
    "risk_framework": [
     "autonomy",
+    "detectability",
     "other",
     "real_oversight",
-    "reversibility"
+    "reversibility",
+    "traceability"
    ],
-   "postmarket_methods": [
-    "event_triggers",
-    "other"
-   ],
-   "agentic_oversight": [
-    "human_confirm",
-    "least_privilege",
-    "stop_rollback"
-   ],
-   "supervisory_agents": [
-    "fail_safe",
-    "independent",
-    "validate_supervisor"
+   "patient_facing_risk": [
+    "cantcheck",
+    "noauto"
    ],
    "competency_eval": [
     "benchmark_validity",
     "deployed_system",
-    "other"
-   ],
-   "postmarket_tradeoff": [
-    "low"
+    "one_part"
    ],
    "synthetic_data": [
     "disclose",
+    "indep",
     "separate",
     "subgroup"
    ],
+   "postmarket_tradeoff": [
+    "detect",
+    "enforce",
+    "low",
+    "nosub"
+   ],
+   "postmarket_methods": [
+    "event_triggers",
+    "records"
+   ],
+   "supervisory_agents": [
+    "define_role",
+    "fail_safe",
+    "human_final",
+    "independent",
+    "records",
+    "validate_supervisor"
+   ],
    "voluntary_model_files": [
+    "content",
     "contract",
-    "other",
     "resp"
    ]
   }
@@ -7645,12 +7584,12 @@
   "received": "2026-09-23T04:00:00Z",
   "unreadable": false,
   "pos": {
-   "escalation_errors": "conditional",
+   "escalation_errors": "support",
    "third_party": "support",
    "postmarket_tradeoff": "conditional",
-   "postmarket_methods": "conditional",
+   "postmarket_methods": "support",
    "supervisory_agents": "conditional",
-   "flexible_change_control": "conditional"
+   "flexible_change_control": "oppose"
   },
   "recs": [
    "reduced_evidence_limits",
@@ -7661,28 +7600,18 @@
   ],
   "also_filed": [],
   "conds": {
-   "postmarket_methods": [
-    "event_triggers",
-    "other"
+   "postmarket_tradeoff": [
+    "detect",
+    "enforce",
+    "indep",
+    "low",
+    "nosub",
+    "plan"
    ],
    "supervisory_agents": [
     "human_final",
     "records",
     "validate_supervisor"
-   ],
-   "postmarket_tradeoff": [
-    "detect",
-    "indep",
-    "low",
-    "other"
-   ],
-   "escalation_errors": [
-    "after",
-    "other",
-    "separate"
-   ],
-   "flexible_change_control": [
-    "bounds"
    ]
   }
  },
@@ -7772,11 +7701,11 @@
   "unreadable": false,
   "pos": {
    "risk_framework": "conditional",
-   "directiveness_continuum": "conditional",
+   "directiveness_continuum": "support",
    "patient_facing_risk": "support",
    "trajectory_risk": "support",
    "escalation_errors": "conditional",
-   "competency_eval": "conditional",
+   "competency_eval": "support",
    "confirmation_flex": "conditional",
    "synthetic_data": "conditional",
    "median_clinician_comparator": "conditional",
@@ -7807,61 +7736,53 @@
     "setting",
     "traceability"
    ],
-   "postmarket_methods": [
-    "event_triggers",
-    "reporting",
-    "set_responses",
-    "targeted_sampling"
-   ],
-   "directiveness_continuum": [
-    "clear_limits"
+   "escalation_errors": [
+    "asym",
+    "separate"
    ],
    "confirmation_flex": [
-    "other",
     "scale_to_risk"
    ],
+   "synthetic_data": [
+    "indep",
+    "subgroup"
+   ],
    "median_clinician_comparator": [
-    "other",
     "specialists",
     "standard_floor"
    ],
-   "agentic_oversight": [
-    "full_sequence",
-    "human_confirm",
-    "stop_rollback"
-   ],
-   "supervisory_agents": [
-    "human_final",
-    "other"
-   ],
-   "competency_eval": [
-    "hard_cases",
-    "one_part",
-    "other"
-   ],
-   "postmarket_tradeoff": [
-    "detect",
-    "low"
-   ],
-   "flexible_change_control": [
-    "bounds",
-    "rebench"
-   ],
-   "synthetic_data": [
-    "other",
-    "subgroup"
+   "no_care_comparator": [
+    "standard"
    ],
    "third_party": [
     "access",
     "conflict",
     "other"
    ],
-   "escalation_errors": [
-    "asym",
-    "separate"
+   "postmarket_tradeoff": [
+    "detect",
+    "low"
    ],
-   "no_care_comparator": [
-    "standard"
+   "postmarket_methods": [
+    "event_triggers",
+    "reporting",
+    "set_responses",
+    "targeted_sampling"
+   ],
+   "supervisory_agents": [
+    "human_final",
+    "independent",
+    "other"
+   ],
+   "flexible_change_control": [
+    "bounds",
+    "rebench",
+    "tier"
+   ],
+   "agentic_oversight": [
+    "full_sequence",
+    "human_confirm",
+    "stop_rollback"
    ]
   }
  },
@@ -7909,7 +7830,6 @@
   "pos": {
    "risk_framework": "conditional",
    "escalation_errors": "support",
-   "flexible_change_control": "conditional",
    "voluntary_model_files": "conditional"
   },
   "recs": [
@@ -7922,9 +7842,6 @@
    "risk_framework": [
     "real_oversight",
     "setting"
-   ],
-   "flexible_change_control": [
-    "other"
    ],
    "voluntary_model_files": [
     "contract",
@@ -8023,7 +7940,7 @@
    "confirmation_flex": "support",
    "synthetic_data": "conditional",
    "no_care_comparator": "conditional",
-   "third_party": "support",
+   "third_party": "conditional",
    "postmarket_tradeoff": "conditional",
    "postmarket_methods": "support",
    "supervisory_agents": "conditional",
@@ -8042,48 +7959,63 @@
   "also_filed": [],
   "conds": {
    "risk_framework": [
+    "autonomy",
+    "dependencies",
+    "detectability",
     "real_oversight",
     "reversibility",
+    "setting",
     "traceability"
    ],
-   "agentic_oversight": [
-    "human_confirm",
-    "not_device_alone",
-    "other"
-   ],
-   "supervisory_agents": [
-    "human_final",
-    "independent",
-    "other",
-    "validate_supervisor"
-   ],
-   "postmarket_tradeoff": [
-    "enforce",
-    "low",
-    "nosub"
-   ],
-   "flexible_change_control": [
-    "bounds",
-    "pin",
-    "review"
+   "patient_facing_risk": [
+    "access",
+    "cantcheck",
+    "noauto"
    ],
    "synthetic_data": [
+    "disclose",
+    "indep",
     "noreplace",
     "separate",
     "validate"
    ],
+   "no_care_comparator": [
+    "justify",
+    "local"
+   ],
+   "third_party": [
+    "access",
+    "multiple",
+    "optional",
+    "roles"
+   ],
+   "postmarket_tradeoff": [
+    "enforce",
+    "low",
+    "nosub",
+    "plan",
+    "staged"
+   ],
+   "supervisory_agents": [
+    "human_final",
+    "independent",
+    "validate_supervisor"
+   ],
+   "flexible_change_control": [
+    "bounds",
+    "pin",
+    "review",
+    "rollback"
+   ],
    "voluntary_model_files": [
+    "contract",
     "current",
     "resp"
    ],
-   "patient_facing_risk": [
-    "access",
-    "noauto",
-    "other"
-   ],
-   "no_care_comparator": [
-    "local",
-    "other"
+   "agentic_oversight": [
+    "full_sequence",
+    "human_confirm",
+    "not_device_alone"
    ]
   }
  },
@@ -8127,6 +8059,7 @@
   "unreadable": false,
   "pos": {
    "risk_framework": "conditional",
+   "competency_eval": "support",
    "postmarket_methods": "conditional"
   },
   "recs": [
@@ -8139,11 +8072,11 @@
   "also_filed": [],
   "conds": {
    "risk_framework": [
+    "detectability",
     "real_oversight",
     "reversibility"
    ],
    "postmarket_methods": [
-    "other",
     "outcomes"
    ]
   }
@@ -8179,8 +8112,8 @@
   "received": "2026-09-26T04:00:00Z",
   "unreadable": false,
   "pos": {
-   "flexible_change_control": "conditional",
-   "agentic_oversight": "conditional"
+   "flexible_change_control": "support",
+   "agentic_oversight": "support"
   },
   "recs": [
    "audit_trail",
@@ -8188,16 +8121,7 @@
    "human_approval"
   ],
   "also_filed": [],
-  "conds": {
-   "agentic_oversight": [
-    "authority_level",
-    "least_privilege",
-    "other"
-   ],
-   "flexible_change_control": [
-    "other"
-   ]
-  }
+  "conds": {}
  },
  {
   "id": "FDA-2026-N-7874-0123",
@@ -8252,7 +8176,7 @@
   "received": "2026-09-26T04:00:00Z",
   "unreadable": false,
   "pos": {
-   "competency_eval": "conditional",
+   "competency_eval": "support",
    "median_clinician_comparator": "conditional",
    "no_care_comparator": "conditional",
    "third_party": "support"
@@ -8272,12 +8196,6 @@
     "measure_median",
     "specialists",
     "standard_floor"
-   ],
-   "competency_eval": [
-    "benchmark_validity",
-    "new_elements",
-    "one_part",
-    "other"
    ],
    "no_care_comparator": [
     "standard"
@@ -8317,7 +8235,6 @@
    "competency_eval": "support",
    "synthetic_data": "support",
    "postmarket_methods": "support",
-   "supervisory_agents": "support",
    "flexible_change_control": "support"
   },
   "recs": [
@@ -8359,9 +8276,7 @@
   "unreadable": false,
   "pos": {
    "competency_eval": "support",
-   "synthetic_data": "support",
    "postmarket_methods": "support",
-   "supervisory_agents": "support",
    "flexible_change_control": "support"
   },
   "recs": [
@@ -8447,7 +8362,7 @@
   "received": "2026-09-28T04:00:00Z",
   "unreadable": false,
   "pos": {
-   "risk_framework": "conditional",
+   "risk_framework": "oppose",
    "directiveness_continuum": "oppose",
    "patient_facing_risk": "support",
    "escalation_errors": "support",
@@ -8458,7 +8373,8 @@
    "third_party": "support",
    "postmarket_tradeoff": "oppose",
    "postmarket_methods": "support",
-   "supervisory_agents": "conditional",
+   "supervisory_agents": "support",
+   "flexible_change_control": "conditional",
    "voluntary_model_files": "support"
   },
   "recs": [
@@ -8470,18 +8386,14 @@
   ],
   "also_filed": [],
   "conds": {
-   "risk_framework": [
-    "detectability",
-    "other",
-    "traceability"
-   ],
    "median_clinician_comparator": [
     "measure_median",
-    "specialists"
+    "specialists",
+    "standard_floor"
    ],
-   "supervisory_agents": [
-    "other",
-    "validate_supervisor"
+   "flexible_change_control": [
+    "pin",
+    "rebench"
    ]
   }
  },
@@ -8560,29 +8472,31 @@
     "autonomy",
     "real_oversight"
    ],
-   "postmarket_methods": [
-    "records"
-   ],
-   "agentic_oversight": [
-    "audit_records",
-    "other",
-    "outside_model",
-    "stop_rollback"
-   ],
-   "supervisory_agents": [
-    "define_role",
-    "validate_supervisor"
-   ],
    "competency_eval": [
-    "new_elements",
-    "other"
+    "deployed_system",
+    "new_elements"
    ],
    "postmarket_tradeoff": [
     "indep"
    ],
+   "postmarket_methods": [
+    "records"
+   ],
+   "supervisory_agents": [
+    "define_role",
+    "records",
+    "validate_supervisor"
+   ],
    "flexible_change_control": [
     "pin",
+    "rebench",
     "tier"
+   ],
+   "agentic_oversight": [
+    "audit_records",
+    "human_confirm",
+    "outside_model",
+    "stop_rollback"
    ]
   }
  },
@@ -8625,7 +8539,9 @@
   "received": "2026-09-28T04:00:00Z",
   "unreadable": false,
   "pos": {
-   "competency_eval": "conditional"
+   "patient_facing_risk": "support",
+   "competency_eval": "conditional",
+   "confirmation_flex": "support"
   },
   "recs": [
    "lower_burden_supervised"
@@ -8686,7 +8602,8 @@
    "postmarket_tradeoff": "conditional",
    "postmarket_methods": "conditional",
    "supervisory_agents": "conditional",
-   "agentic_oversight": "conditional"
+   "flexible_change_control": "conditional",
+   "agentic_oversight": "support"
   },
   "recs": [
    "agent_authority",
@@ -8697,24 +8614,25 @@
   ],
   "also_filed": [],
   "conds": {
+   "postmarket_tradeoff": [
+    "enforce",
+    "indep",
+    "other"
+   ],
    "postmarket_methods": [
     "event_triggers",
     "other",
     "records"
    ],
-   "agentic_oversight": [
-    "audit_records",
-    "least_privilege",
-    "stop_rollback"
-   ],
    "supervisory_agents": [
     "define_role",
     "independent",
-    "other"
+    "records"
    ],
-   "postmarket_tradeoff": [
-    "detect",
-    "other"
+   "flexible_change_control": [
+    "other",
+    "pin",
+    "rollback"
    ]
   }
  },
@@ -8779,26 +8697,24 @@
   "also_filed": [],
   "conds": {
    "risk_framework": [
-    "other",
-    "reversibility",
-    "setting"
+    "broader_harms",
+    "reversibility"
+   ],
+   "postmarket_tradeoff": [
+    "low"
    ],
    "postmarket_methods": [
-    "other"
-   ],
-   "agentic_oversight": [
-    "audit_records",
     "other"
    ],
    "supervisory_agents": [
     "other",
     "records"
    ],
-   "postmarket_tradeoff": [
-    "low"
-   ],
    "voluntary_model_files": [
-    "other"
+    "content"
+   ],
+   "agentic_oversight": [
+    "audit_records"
    ]
   }
  },
@@ -8851,9 +8767,7 @@
   "posted": "2026-10-28T04:00:00Z",
   "received": "2026-09-30T04:00:00Z",
   "unreadable": false,
-  "pos": {
-   "postmarket_methods": "conditional"
-  },
+  "pos": {},
   "recs": [
    "accountability",
    "audit_trail",
@@ -8862,13 +8776,7 @@
    "oversight_demonstrated"
   ],
   "also_filed": [],
-  "conds": {
-   "postmarket_methods": [
-    "reporting",
-    "risk_cadence",
-    "other"
-   ]
-  }
+  "conds": {}
  },
  {
   "id": "FDA-2026-N-7874-0133",
@@ -8919,7 +8827,7 @@
    "confirmation_flex": "support",
    "no_care_comparator": "support",
    "third_party": "conditional",
-   "postmarket_tradeoff": "support",
+   "postmarket_tradeoff": "conditional",
    "flexible_change_control": "support"
   },
   "recs": [
@@ -8931,8 +8839,11 @@
   "also_filed": [],
   "conds": {
    "third_party": [
-    "optional",
-    "access"
+    "access",
+    "optional"
+   ],
+   "postmarket_tradeoff": [
+    "low"
    ]
   }
  },
@@ -8973,9 +8884,8 @@
   "also_filed": [],
   "conds": {
    "supervisory_agents": [
-    "validate_supervisor",
     "fail_safe",
-    "other"
+    "validate_supervisor"
    ]
   }
  },
@@ -9019,11 +8929,12 @@
   "unreadable": false,
   "pos": {
    "risk_framework": "support",
-   "trajectory_risk": "conditional",
-   "competency_eval": "conditional",
+   "directiveness_continuum": "support",
+   "trajectory_risk": "support",
+   "escalation_errors": "support",
+   "competency_eval": "support",
    "no_care_comparator": "conditional",
-   "postmarket_methods": "conditional",
-   "agentic_oversight": "conditional"
+   "agentic_oversight": "support"
   },
   "recs": [
    "safety_floors",
@@ -9036,26 +8947,6 @@
   "conds": {
    "no_care_comparator": [
     "standard"
-   ],
-   "postmarket_methods": [
-    "set_responses",
-    "outcomes",
-    "reporting",
-    "risk_cadence"
-   ],
-   "agentic_oversight": [
-    "authority_level",
-    "audit_records",
-    "full_sequence",
-    "other"
-   ],
-   "competency_eval": [
-    "deployed_system",
-    "failure_limits",
-    "hard_cases"
-   ],
-   "trajectory_risk": [
-    "long_use"
    ]
   }
  },
@@ -9108,9 +8999,9 @@
   "unreadable": false,
   "pos": {
    "risk_framework": "conditional",
-   "competency_eval": "conditional",
    "postmarket_methods": "conditional",
    "supervisory_agents": "conditional",
+   "flexible_change_control": "oppose",
    "agentic_oversight": "conditional"
   },
   "recs": [
@@ -9128,27 +9019,21 @@
    "risk_framework": [
     "reversibility"
    ],
-   "competency_eval": [
-    "new_elements"
-   ],
    "postmarket_methods": [
-    "records",
-    "set_responses",
-    "other"
+    "other",
+    "set_responses"
    ],
    "supervisory_agents": [
-    "independent",
+    "fail_safe",
     "human_final",
-    "validate_supervisor",
-    "fail_safe"
+    "independent",
+    "validate_supervisor"
    ],
    "agentic_oversight": [
-    "stop_rollback",
+    "audit_records",
     "human_confirm",
     "least_privilege",
-    "audit_records",
-    "outside_model",
-    "other"
+    "stop_rollback"
    ]
   }
  },
@@ -9241,7 +9126,9 @@
   "posted": "2026-10-28T04:00:00Z",
   "received": "2026-10-02T04:00:00Z",
   "unreadable": false,
-  "pos": {},
+  "pos": {
+   "flexible_change_control": "oppose"
+  },
   "recs": [],
   "also_filed": [],
   "conds": {}
@@ -9276,11 +9163,9 @@
   "received": "2026-10-02T04:00:00Z",
   "unreadable": false,
   "pos": {
-   "trajectory_risk": "conditional",
+   "trajectory_risk": "support",
    "escalation_errors": "support",
-   "competency_eval": "conditional",
-   "confirmation_flex": "conditional",
-   "postmarket_methods": "conditional"
+   "confirmation_flex": "support"
   },
   "recs": [
    "populations_settings",
@@ -9289,22 +9174,7 @@
    "postmarket_plans"
   ],
   "also_filed": [],
-  "conds": {
-   "postmarket_methods": [
-    "set_responses",
-    "other"
-   ],
-   "trajectory_risk": [
-    "other"
-   ],
-   "competency_eval": [
-    "other"
-   ],
-   "confirmation_flex": [
-    "real_populations",
-    "scale_to_risk"
-   ]
-  }
+  "conds": {}
  },
  {
   "id": "FDA-2026-N-7874-0141",
@@ -9338,7 +9208,7 @@
   "unreadable": false,
   "pos": {
    "patient_facing_risk": "support",
-   "synthetic_data": "conditional"
+   "synthetic_data": "support"
   },
   "recs": [
    "human_approval",
@@ -9347,13 +9217,7 @@
    "patient_disclosure"
   ],
   "also_filed": [],
-  "conds": {
-   "synthetic_data": [
-    "validate",
-    "disclose",
-    "other"
-   ]
-  }
+  "conds": {}
  },
  {
   "id": "FDA-2026-N-7874-0142",
@@ -9388,9 +9252,8 @@
   "received": "2026-10-02T04:00:00Z",
   "unreadable": false,
   "pos": {
-   "risk_framework": "conditional",
-   "supervisory_agents": "conditional",
-   "agentic_oversight": "conditional"
+   "risk_framework": "support",
+   "supervisory_agents": "support"
   },
   "recs": [
    "deterministic_controls",
@@ -9402,19 +9265,7 @@
    "rebenchmark_on_change"
   ],
   "also_filed": [],
-  "conds": {
-   "supervisory_agents": [
-    "validate_supervisor"
-   ],
-   "agentic_oversight": [
-    "full_sequence",
-    "audit_records"
-   ],
-   "risk_framework": [
-    "autonomy",
-    "real_oversight"
-   ]
-  }
+  "conds": {}
  },
  {
   "id": "FDA-2026-N-7874-0143",
@@ -9461,11 +9312,9 @@
   "received": "2026-10-03T04:00:00Z",
   "unreadable": false,
   "pos": {
-   "risk_framework": "conditional",
    "synthetic_data": "conditional",
-   "postmarket_methods": "conditional",
-   "supervisory_agents": "conditional",
-   "agentic_oversight": "conditional"
+   "postmarket_methods": "support",
+   "supervisory_agents": "conditional"
   },
   "recs": [
    "oversight_demonstrated",
@@ -9480,26 +9329,14 @@
   ],
   "also_filed": [],
   "conds": {
-   "risk_framework": [
-    "real_oversight"
-   ],
    "synthetic_data": [
     "separate",
     "subgroup"
    ],
-   "postmarket_methods": [
-    "event_triggers",
-    "records",
-    "other"
-   ],
    "supervisory_agents": [
-    "validate_supervisor",
-    "define_role",
-    "records"
-   ],
-   "agentic_oversight": [
-    "full_sequence",
-    "stop_rollback"
+    "human_final",
+    "independent",
+    "validate_supervisor"
    ]
   }
  },
@@ -9546,11 +9383,11 @@
   "received": "2026-10-03T04:00:00Z",
   "unreadable": false,
   "pos": {
-   "risk_framework": "conditional",
+   "risk_framework": "support",
    "patient_facing_risk": "support",
    "postmarket_tradeoff": "conditional",
-   "postmarket_methods": "conditional",
-   "agentic_oversight": "conditional"
+   "postmarket_methods": "support",
+   "agentic_oversight": "support"
   },
   "recs": [
    "risk_factors",
@@ -9566,27 +9403,8 @@
   ],
   "also_filed": [],
   "conds": {
-   "risk_framework": [
-    "real_oversight",
-    "reversibility",
-    "detectability",
-    "other"
-   ],
    "postmarket_tradeoff": [
     "nosub"
-   ],
-   "agentic_oversight": [
-    "human_confirm",
-    "stop_rollback",
-    "full_sequence",
-    "authority_level",
-    "least_privilege"
-   ],
-   "postmarket_methods": [
-    "other",
-    "outcomes",
-    "reporting",
-    "set_responses"
    ]
   }
  },
@@ -9618,22 +9436,14 @@
   "posted": "2026-10-28T04:00:00Z",
   "received": "2026-10-03T04:00:00Z",
   "unreadable": false,
-  "pos": {
-   "risk_framework": "conditional"
-  },
+  "pos": {},
   "recs": [
    "risk_factors",
    "human_ai_team",
    "drift_monitoring"
   ],
   "also_filed": [],
-  "conds": {
-   "risk_framework": [
-    "detectability",
-    "real_oversight",
-    "reversibility"
-   ]
-  }
+  "conds": {}
  },
  {
   "id": "FDA-2026-N-7874-0146",
@@ -9702,10 +9512,7 @@
   "posted": "2026-10-28T04:00:00Z",
   "received": "2026-10-04T04:00:00Z",
   "unreadable": false,
-  "pos": {
-   "supervisory_agents": "conditional",
-   "agentic_oversight": "conditional"
-  },
+  "pos": {},
   "recs": [
    "agent_sequences",
    "audit_trail",
@@ -9715,17 +9522,7 @@
    "independent_eval"
   ],
   "also_filed": [],
-  "conds": {
-   "supervisory_agents": [
-    "validate_supervisor"
-   ],
-   "agentic_oversight": [
-    "audit_records",
-    "full_sequence",
-    "other",
-    "outside_model"
-   ]
-  }
+  "conds": {}
  },
  {
   "id": "FDA-2026-N-7874-0148",
@@ -9760,8 +9557,8 @@
   "unreadable": false,
   "pos": {
    "risk_framework": "conditional",
-   "third_party": "support",
-   "postmarket_methods": "conditional"
+   "postmarket_methods": "conditional",
+   "voluntary_model_files": "oppose"
   },
   "recs": [
    "risk_factors",
@@ -9771,11 +9568,10 @@
   "also_filed": [],
   "conds": {
    "risk_framework": [
-    "detectability",
-    "real_oversight"
+    "detectability"
    ],
    "postmarket_methods": [
-    "event_triggers"
+    "outcomes"
    ]
   }
  },
@@ -9866,19 +9662,19 @@
    "risk_framework": "conditional",
    "directiveness_continuum": "support",
    "patient_facing_risk": "conditional",
-   "trajectory_risk": "conditional",
-   "escalation_errors": "conditional",
-   "competency_eval": "conditional",
-   "confirmation_flex": "conditional",
-   "synthetic_data": "conditional",
-   "no_care_comparator": "conditional",
-   "third_party": "conditional",
+   "trajectory_risk": "support",
+   "escalation_errors": "support",
+   "competency_eval": "support",
+   "confirmation_flex": "support",
+   "synthetic_data": "support",
+   "no_care_comparator": "support",
+   "third_party": "support",
    "postmarket_tradeoff": "conditional",
-   "postmarket_methods": "conditional",
+   "postmarket_methods": "support",
    "supervisory_agents": "conditional",
-   "flexible_change_control": "conditional",
+   "flexible_change_control": "support",
    "voluntary_model_files": "conditional",
-   "agentic_oversight": "conditional"
+   "agentic_oversight": "support"
   },
   "recs": [
    "benchmark_validity",
@@ -9889,88 +9685,29 @@
   "also_filed": [],
   "conds": {
    "risk_framework": [
+    "real_oversight",
     "reversibility",
-    "setting",
-    "real_oversight"
+    "setting"
    ],
    "patient_facing_risk": [
-    "noauto",
     "cantcheck",
-    "action",
-    "safeguards"
-   ],
-   "escalation_errors": [
-    "separate",
-    "justify",
-    "after"
-   ],
-   "competency_eval": [
-    "new_elements",
-    "benchmark_validity",
-    "human_ai_team",
-    "other"
-   ],
-   "confirmation_flex": [
-    "scale_to_risk",
-    "real_populations",
-    "other"
-   ],
-   "synthetic_data": [
-    "indep",
-    "validate",
-    "disclose",
-    "subgroup"
-   ],
-   "no_care_comparator": [
-    "other"
-   ],
-   "third_party": [
-    "conflict",
-    "multiple",
-    "roles"
+    "noauto"
    ],
    "postmarket_tradeoff": [
-    "low",
-    "plan",
     "enforce",
-    "other"
-   ],
-   "postmarket_methods": [
-    "outcomes",
-    "event_triggers",
-    "risk_cadence",
-    "other"
+    "low",
+    "other",
+    "plan"
    ],
    "supervisory_agents": [
-    "independent",
-    "validate_supervisor",
     "human_final",
-    "define_role"
-   ],
-   "flexible_change_control": [
-    "rebench",
-    "bounds",
-    "review",
-    "tier"
+    "independent",
+    "validate_supervisor"
    ],
    "voluntary_model_files": [
-    "current",
     "content",
-    "resp",
-    "contract"
-   ],
-   "agentic_oversight": [
-    "human_confirm",
-    "authority_level",
-    "audit_records",
-    "full_sequence",
-    "other"
-   ],
-   "trajectory_risk": [
-    "other",
-    "report_timing",
-    "scope_drift",
-    "user_pressure"
+    "current",
+    "resp"
    ]
   }
  },
@@ -10020,8 +9757,8 @@
   "also_filed": [],
   "conds": {
    "risk_framework": [
-    "real_oversight",
-    "other"
+    "autonomy",
+    "real_oversight"
    ],
    "postmarket_methods": [
     "other"
@@ -10061,8 +9798,7 @@
   "received": "2026-10-05T04:00:00Z",
   "unreadable": false,
   "pos": {
-   "postmarket_tradeoff": "conditional",
-   "agentic_oversight": "conditional"
+   "postmarket_tradeoff": "conditional"
   },
   "recs": [
    "reduced_evidence_limits",
@@ -10074,11 +9810,8 @@
   "also_filed": [],
   "conds": {
    "postmarket_tradeoff": [
-    "indep",
-    "detect"
-   ],
-   "agentic_oversight": [
-    "audit_records"
+    "detect",
+    "indep"
    ]
   }
  },
@@ -10111,22 +9844,15 @@
   "received": "2026-10-05T04:00:00Z",
   "unreadable": false,
   "pos": {
-   "competency_eval": "conditional",
-   "agentic_oversight": "conditional"
+   "competency_eval": "support",
+   "agentic_oversight": "support"
   },
   "recs": [
    "human_approval",
    "error_reporting"
   ],
   "also_filed": [],
-  "conds": {
-   "competency_eval": [
-    "other"
-   ],
-   "agentic_oversight": [
-    "human_confirm"
-   ]
-  }
+  "conds": {}
  },
  {
   "id": "FDA-2026-N-7874-0153",
@@ -10221,7 +9947,9 @@
   "posted": "2026-10-28T04:00:00Z",
   "received": "2026-10-05T04:00:00Z",
   "unreadable": false,
-  "pos": {},
+  "pos": {
+   "postmarket_tradeoff": "oppose"
+  },
   "recs": [
    "patient_disclosure"
   ],
@@ -10304,11 +10032,10 @@
   "received": "2026-10-06T04:00:00Z",
   "unreadable": false,
   "pos": {
-   "risk_framework": "conditional",
-   "trajectory_risk": "conditional",
-   "competency_eval": "conditional",
+   "risk_framework": "support",
+   "trajectory_risk": "support",
    "confirmation_flex": "conditional",
-   "postmarket_methods": "conditional"
+   "postmarket_methods": "support"
   },
   "recs": [
    "oversight_demonstrated",
@@ -10317,24 +10044,8 @@
   ],
   "also_filed": [],
   "conds": {
-   "risk_framework": [
-    "real_oversight",
-    "detectability"
-   ],
-   "competency_eval": [
-    "human_ai_team"
-   ],
    "confirmation_flex": [
-    "real_populations",
-    "other"
-   ],
-   "postmarket_methods": [
-    "event_triggers",
-    "other"
-   ],
-   "trajectory_risk": [
-    "long_use",
-    "other"
+    "real_populations"
    ]
   }
  },
@@ -10376,7 +10087,6 @@
   "received": "2026-10-06T04:00:00Z",
   "unreadable": false,
   "pos": {
-   "postmarket_methods": "conditional",
    "agentic_oversight": "conditional"
   },
   "recs": [
@@ -10389,14 +10099,11 @@
   ],
   "also_filed": [],
   "conds": {
-   "postmarket_methods": [
-    "outcomes",
-    "reporting"
-   ],
    "agentic_oversight": [
-    "human_confirm",
+    "audit_records",
     "authority_level",
-    "audit_records"
+    "human_confirm",
+    "stop_rollback"
    ]
   }
  },
@@ -10514,10 +10221,10 @@
   "unreadable": false,
   "pos": {
    "risk_framework": "conditional",
-   "escalation_errors": "conditional",
-   "competency_eval": "conditional",
-   "postmarket_methods": "conditional",
-   "agentic_oversight": "conditional"
+   "escalation_errors": "support",
+   "competency_eval": "support",
+   "postmarket_methods": "support",
+   "agentic_oversight": "support"
   },
   "recs": [
    "risk_factors",
@@ -10530,23 +10237,8 @@
   "also_filed": [],
   "conds": {
    "risk_framework": [
-    "real_oversight"
-   ],
-   "escalation_errors": [
-    "after"
-   ],
-   "competency_eval": [
-    "other"
-   ],
-   "postmarket_methods": [
-    "outcomes",
-    "reporting"
-   ],
-   "agentic_oversight": [
-    "human_confirm",
-    "stop_rollback",
-    "audit_records",
-    "other"
+    "real_oversight",
+    "setting"
    ]
   }
  },
@@ -10584,8 +10276,8 @@
   "unreadable": false,
   "pos": {
    "risk_framework": "conditional",
-   "directiveness_continuum": "conditional",
-   "escalation_errors": "conditional",
+   "directiveness_continuum": "support",
+   "escalation_errors": "support",
    "competency_eval": "conditional",
    "voluntary_model_files": "conditional"
   },
@@ -10611,13 +10303,6 @@
    "voluntary_model_files": [
     "content",
     "contract"
-   ],
-   "directiveness_continuum": [
-    "clear_limits",
-    "other"
-   ],
-   "escalation_errors": [
-    "other"
    ]
   }
  },
@@ -10674,10 +10359,9 @@
   "pos": {
    "risk_framework": "conditional",
    "escalation_errors": "support",
-   "competency_eval": "conditional",
+   "competency_eval": "support",
    "confirmation_flex": "support",
    "postmarket_tradeoff": "conditional",
-   "postmarket_methods": "conditional",
    "supervisory_agents": "conditional",
    "agentic_oversight": "conditional"
   },
@@ -10695,35 +10379,29 @@
   "also_filed": [],
   "conds": {
    "risk_framework": [
+    "framework_use",
+    "real_oversight",
     "reversibility",
     "setting",
-    "traceability",
-    "real_oversight"
-   ],
-   "competency_eval": [
-    "deployed_system",
-    "hard_cases",
-    "human_ai_team"
+    "traceability"
    ],
    "postmarket_tradeoff": [
-    "low",
     "detect",
+    "enforce",
+    "low",
     "nosub",
     "plan"
    ],
    "supervisory_agents": [
+    "independent",
+    "responsibility",
     "validate_supervisor"
    ],
    "agentic_oversight": [
+    "audit_records",
     "human_confirm",
     "least_privilege",
-    "stop_rollback",
-    "audit_records"
-   ],
-   "postmarket_methods": [
-    "event_triggers",
-    "other",
-    "reporting"
+    "stop_rollback"
    ]
   }
  },
@@ -10774,7 +10452,7 @@
   "received": "2026-10-06T04:00:00Z",
   "unreadable": false,
   "pos": {
-   "competency_eval": "conditional",
+   "competency_eval": "support",
    "synthetic_data": "conditional",
    "postmarket_tradeoff": "conditional"
   },
@@ -10787,18 +10465,13 @@
   ],
   "also_filed": [],
   "conds": {
-   "postmarket_tradeoff": [
-    "low",
-    "detect",
-    "enforce"
-   ],
-   "competency_eval": [
-    "benchmark_validity",
-    "hard_cases",
-    "new_elements"
-   ],
    "synthetic_data": [
     "noreplace"
+   ],
+   "postmarket_tradeoff": [
+    "detect",
+    "enforce",
+    "low"
    ]
   }
  },
@@ -10848,8 +10521,9 @@
   "also_filed": [],
   "conds": {
    "risk_framework": [
+    "other",
     "real_oversight",
-    "other"
+    "traceability"
    ],
    "competency_eval": [
     "human_ai_team",
@@ -10859,9 +10533,9 @@
     "real_populations"
    ],
    "postmarket_methods": [
+    "event_triggers",
     "outcomes",
-    "reporting",
-    "event_triggers"
+    "reporting"
    ]
   }
  },
@@ -10955,13 +10629,12 @@
   "pos": {
    "risk_framework": "conditional",
    "directiveness_continuum": "support",
-   "trajectory_risk": "conditional",
+   "trajectory_risk": "support",
    "competency_eval": "conditional",
-   "confirmation_flex": "support",
-   "third_party": "support",
    "postmarket_tradeoff": "oppose",
-   "postmarket_methods": "conditional",
+   "postmarket_methods": "support",
    "supervisory_agents": "conditional",
+   "flexible_change_control": "support",
    "voluntary_model_files": "oppose"
   },
   "recs": [
@@ -10977,21 +10650,16 @@
   "also_filed": [],
   "conds": {
    "risk_framework": [
+    "framework_use",
     "reversibility",
-    "traceability",
-    "framework_use"
-   ],
-   "trajectory_risk": [
-    "long_use"
+    "traceability"
    ],
    "competency_eval": [
     "benchmark_validity",
     "one_part"
    ],
-   "postmarket_methods": [
-    "other"
-   ],
    "supervisory_agents": [
+    "independent",
     "validate_supervisor"
    ]
   }
@@ -11039,8 +10707,8 @@
   "unreadable": false,
   "pos": {
    "risk_framework": "conditional",
-   "competency_eval": "conditional",
-   "agentic_oversight": "conditional"
+   "competency_eval": "support",
+   "agentic_oversight": "support"
   },
   "recs": [
    "risk_factors",
@@ -11053,14 +10721,9 @@
   "also_filed": [],
   "conds": {
    "risk_framework": [
-    "traceability",
-    "other"
-   ],
-   "competency_eval": [
-    "deployed_system"
-   ],
-   "agentic_oversight": [
-    "audit_records"
+    "broader_harms",
+    "detectability",
+    "traceability"
    ]
   }
  },
@@ -11115,13 +10778,13 @@
   "unreadable": false,
   "pos": {
    "risk_framework": "conditional",
-   "trajectory_risk": "conditional",
+   "trajectory_risk": "support",
    "competency_eval": "support",
    "postmarket_tradeoff": "conditional",
-   "postmarket_methods": "conditional",
+   "postmarket_methods": "support",
    "supervisory_agents": "conditional",
-   "flexible_change_control": "conditional",
-   "agentic_oversight": "conditional"
+   "flexible_change_control": "support",
+   "agentic_oversight": "support"
   },
   "recs": [
    "oversight_demonstrated",
@@ -11137,45 +10800,23 @@
   "also_filed": [],
   "conds": {
    "risk_framework": [
-    "framework_use",
-    "reversibility",
     "real_oversight",
+    "reversibility",
     "setting",
     "traceability"
    ],
-   "trajectory_risk": [
-    "scope_drift"
-   ],
    "postmarket_tradeoff": [
-    "plan",
-    "enforce",
     "detect",
-    "low"
-   ],
-   "postmarket_methods": [
-    "event_triggers",
-    "risk_cadence",
-    "set_responses"
+    "enforce",
+    "indep",
+    "low",
+    "plan"
    ],
    "supervisory_agents": [
-    "validate_supervisor",
-    "independent",
     "define_role",
-    "records"
-   ],
-   "flexible_change_control": [
-    "tier",
-    "bounds",
-    "rollback",
-    "review",
-    "rebench"
-   ],
-   "agentic_oversight": [
-    "least_privilege",
-    "audit_records",
-    "human_confirm",
-    "outside_model",
-    "authority_level"
+    "independent",
+    "records",
+    "validate_supervisor"
    ]
   }
  },
@@ -11244,8 +10885,7 @@
   "unreadable": false,
   "pos": {
    "postmarket_methods": "conditional",
-   "flexible_change_control": "conditional",
-   "agentic_oversight": "conditional"
+   "agentic_oversight": "support"
   },
   "recs": [
    "benchmark_validity",
@@ -11259,17 +10899,7 @@
   "conds": {
    "postmarket_methods": [
     "event_triggers",
-    "other",
     "set_responses"
-   ],
-   "agentic_oversight": [
-    "audit_records",
-    "authority_level",
-    "other"
-   ],
-   "flexible_change_control": [
-    "rebench",
-    "tier"
    ]
   }
  },
@@ -11314,9 +10944,8 @@
   "unreadable": false,
   "pos": {
    "competency_eval": "conditional",
-   "third_party": "conditional",
-   "postmarket_tradeoff": "conditional",
-   "flexible_change_control": "conditional"
+   "third_party": "support",
+   "postmarket_tradeoff": "conditional"
   },
   "recs": [
    "independent_eval",
@@ -11331,14 +10960,8 @@
     "other"
    ],
    "postmarket_tradeoff": [
+    "detect",
     "indep"
-   ],
-   "third_party": [
-    "conflict",
-    "other"
-   ],
-   "flexible_change_control": [
-    "other"
    ]
   }
  },
@@ -11391,9 +11014,9 @@
    "postmarket_tradeoff": "conditional",
    "postmarket_methods": "conditional",
    "supervisory_agents": "conditional",
-   "flexible_change_control": "conditional",
+   "flexible_change_control": "support",
    "voluntary_model_files": "conditional",
-   "agentic_oversight": "conditional"
+   "agentic_oversight": "support"
   },
   "recs": [
    "error_reporting",
@@ -11412,25 +11035,15 @@
     "other"
    ],
    "postmarket_methods": [
+    "other",
     "records"
    ],
    "supervisory_agents": [
-    "validate_supervisor",
-    "records"
+    "records",
+    "validate_supervisor"
    ],
    "voluntary_model_files": [
     "current"
-   ],
-   "flexible_change_control": [
-    "bounds",
-    "other",
-    "pin",
-    "rebench"
-   ],
-   "agentic_oversight": [
-    "authority_level",
-    "full_sequence",
-    "other"
    ]
   }
  },
@@ -11497,19 +11110,19 @@
   "unreadable": false,
   "pos": {
    "risk_framework": "conditional",
-   "directiveness_continuum": "conditional",
+   "directiveness_continuum": "support",
    "patient_facing_risk": "conditional",
    "trajectory_risk": "support",
-   "escalation_errors": "conditional",
+   "escalation_errors": "support",
    "competency_eval": "conditional",
    "confirmation_flex": "support",
-   "synthetic_data": "conditional",
+   "synthetic_data": "support",
    "median_clinician_comparator": "conditional",
    "no_care_comparator": "conditional",
    "postmarket_tradeoff": "conditional",
    "postmarket_methods": "support",
-   "flexible_change_control": "conditional",
-   "agentic_oversight": "conditional"
+   "flexible_change_control": "support",
+   "agentic_oversight": "support"
   },
   "recs": [
    "risk_factors",
@@ -11528,21 +11141,23 @@
   "conds": {
    "risk_framework": [
     "detectability",
-    "reversibility",
     "real_oversight",
+    "reversibility",
     "setting",
-    "other"
+    "traceability"
    ],
    "patient_facing_risk": [
-    "noauto",
     "action",
+    "human",
     "inform",
-    "human"
+    "noauto"
    ],
    "competency_eval": [
-    "deployed_system",
-    "new_elements",
-    "human_ai_team"
+    "benchmark_validity",
+    "deployed_system"
+   ],
+   "median_clinician_comparator": [
+    "standard_floor"
    ],
    "no_care_comparator": [
     "justify",
@@ -11551,38 +11166,11 @@
    ],
    "postmarket_tradeoff": [
     "detect",
-    "low",
-    "plan",
     "enforce",
-    "staged",
-    "nosub"
-   ],
-   "flexible_change_control": [
-    "bounds",
-    "tier",
-    "rollback",
-    "review",
-    "rebench"
-   ],
-   "agentic_oversight": [
-    "full_sequence",
-    "human_confirm",
-    "authority_level",
-    "audit_records"
-   ],
-   "escalation_errors": [
-    "after",
-    "justify",
-    "separate"
-   ],
-   "synthetic_data": [
-    "noreplace"
-   ],
-   "median_clinician_comparator": [
-    "standard_floor"
-   ],
-   "directiveness_continuum": [
-    "clear_limits"
+    "low",
+    "nosub",
+    "plan",
+    "staged"
    ]
   }
  },
@@ -11654,16 +11242,15 @@
    "directiveness_continuum": "support",
    "patient_facing_risk": "conditional",
    "trajectory_risk": "support",
-   "escalation_errors": "conditional",
-   "confirmation_flex": "conditional",
+   "escalation_errors": "support",
+   "confirmation_flex": "support",
    "no_care_comparator": "conditional",
    "third_party": "conditional",
    "postmarket_tradeoff": "conditional",
-   "postmarket_methods": "conditional",
+   "postmarket_methods": "support",
    "supervisory_agents": "conditional",
    "flexible_change_control": "conditional",
-   "voluntary_model_files": "conditional",
-   "agentic_oversight": "conditional"
+   "voluntary_model_files": "support"
   },
   "recs": [
    "directiveness_behavior",
@@ -11678,60 +11265,38 @@
   "also_filed": [],
   "conds": {
    "risk_framework": [
-    "reversibility",
-    "real_oversight"
+    "reversibility"
    ],
    "patient_facing_risk": [
-    "safeguards",
-    "access",
-    "noauto"
-   ],
-   "confirmation_flex": [
-    "scale_to_risk",
-    "other"
+    "noauto",
+    "safeguards"
    ],
    "no_care_comparator": [
-    "local",
     "justify",
+    "local",
     "standard"
    ],
    "third_party": [
-    "optional",
-    "multiple",
     "access",
     "conflict",
-    "roles"
+    "multiple",
+    "optional"
    ],
    "postmarket_tradeoff": [
-    "plan",
     "enforce",
+    "indep",
     "low",
-    "indep"
+    "nosub",
+    "plan"
    ],
    "supervisory_agents": [
-    "validate_supervisor",
-    "human_final"
+    "human_final",
+    "validate_supervisor"
    ],
    "flexible_change_control": [
-    "rebench",
     "bounds",
+    "rebench",
     "review"
-   ],
-   "voluntary_model_files": [
-    "content",
-    "fallback"
-   ],
-   "escalation_errors": [
-    "justify",
-    "separate"
-   ],
-   "postmarket_methods": [
-    "event_triggers",
-    "other"
-   ],
-   "agentic_oversight": [
-    "human_confirm",
-    "not_device_alone"
    ]
   }
  },
@@ -11774,7 +11339,7 @@
   "received": "2026-10-09T04:00:00Z",
   "unreadable": false,
   "pos": {
-   "risk_framework": "conditional",
+   "risk_framework": "support",
    "postmarket_tradeoff": "conditional",
    "flexible_change_control": "conditional"
   },
@@ -11790,19 +11355,15 @@
   ],
   "also_filed": [],
   "conds": {
-   "risk_framework": [
-    "setting"
-   ],
    "postmarket_tradeoff": [
-    "low",
-    "detect"
+    "detect",
+    "low"
    ],
    "flexible_change_control": [
     "bounds",
-    "tier",
-    "rollback",
     "rebench",
-    "other"
+    "rollback",
+    "tier"
    ]
   }
  },
@@ -11838,10 +11399,9 @@
   "received": "2026-10-10T04:00:00Z",
   "unreadable": false,
   "pos": {
-   "competency_eval": "conditional",
+   "competency_eval": "support",
    "third_party": "support",
-   "postmarket_tradeoff": "conditional",
-   "postmarket_methods": "conditional"
+   "postmarket_tradeoff": "conditional"
   },
   "recs": [
    "reduced_evidence_limits",
@@ -11853,16 +11413,6 @@
   ],
   "also_filed": [],
   "conds": {
-   "competency_eval": [
-    "deployed_system",
-    "new_elements",
-    "failure_limits",
-    "variability"
-   ],
-   "postmarket_methods": [
-    "reporting",
-    "other"
-   ],
    "postmarket_tradeoff": [
     "nosub"
    ]
@@ -11954,8 +11504,8 @@
    "risk_framework": "conditional",
    "directiveness_continuum": "support",
    "patient_facing_risk": "conditional",
-   "trajectory_risk": "conditional",
-   "escalation_errors": "conditional",
+   "trajectory_risk": "support",
+   "escalation_errors": "support",
    "competency_eval": "conditional",
    "confirmation_flex": "conditional",
    "synthetic_data": "conditional",
@@ -11963,11 +11513,11 @@
    "no_care_comparator": "conditional",
    "third_party": "support",
    "postmarket_tradeoff": "conditional",
-   "postmarket_methods": "conditional",
+   "postmarket_methods": "support",
    "supervisory_agents": "conditional",
    "flexible_change_control": "conditional",
    "voluntary_model_files": "conditional",
-   "agentic_oversight": "conditional"
+   "agentic_oversight": "support"
   },
   "recs": [
    "independent_eval",
@@ -11984,66 +11534,51 @@
   "also_filed": [],
   "conds": {
    "risk_framework": [
+    "other",
     "real_oversight",
-    "other"
+    "setting"
    ],
    "patient_facing_risk": [
-    "noauto",
     "cantcheck",
-    "inform"
-   ],
-   "trajectory_risk": [
-    "long_use",
-    "scope_drift"
-   ],
-   "escalation_errors": [
-    "separate",
-    "justify",
-    "after"
+    "inform",
+    "noauto"
    ],
    "competency_eval": [
-    "deployed_system",
     "benchmark_validity",
+    "deployed_system",
     "failure_limits",
     "other"
    ],
    "confirmation_flex": [
-    "scale_to_risk",
-    "real_populations"
+    "real_populations",
+    "scale_to_risk"
    ],
    "synthetic_data": [
-    "separate",
-    "validate",
     "indep",
-    "subgroup"
+    "separate",
+    "subgroup",
+    "validate"
    ],
    "median_clinician_comparator": [
-    "standard_floor",
-    "specialists"
+    "specialists",
+    "standard_floor"
    ],
    "no_care_comparator": [
-    "local",
     "justify",
+    "local",
     "standard"
    ],
    "postmarket_tradeoff": [
-    "low",
     "detect",
-    "nosub",
-    "indep"
-   ],
-   "postmarket_methods": [
-    "event_triggers",
-    "outcomes",
-    "risk_cadence",
-    "targeted_sampling",
-    "other"
+    "low",
+    "nosub"
    ],
    "supervisory_agents": [
-    "validate_supervisor",
-    "human_final",
     "fail_safe",
-    "records"
+    "human_final",
+    "independent",
+    "records",
+    "validate_supervisor"
    ],
    "flexible_change_control": [
     "bounds",
@@ -12054,17 +11589,8 @@
    "voluntary_model_files": [
     "content",
     "current",
-    "contract",
     "fallback",
     "resp"
-   ],
-   "agentic_oversight": [
-    "full_sequence",
-    "least_privilege",
-    "human_confirm",
-    "authority_level",
-    "audit_records",
-    "stop_rollback"
    ]
   }
  },
@@ -12123,9 +11649,10 @@
   "unreadable": false,
   "pos": {
    "risk_framework": "oppose",
-   "directiveness_continuum": "conditional",
+   "directiveness_continuum": "support",
    "patient_facing_risk": "support",
    "trajectory_risk": "conditional",
+   "competency_eval": "oppose",
    "synthetic_data": "conditional",
    "third_party": "support",
    "postmarket_tradeoff": "conditional",
@@ -12140,25 +11667,21 @@
   ],
   "also_filed": [],
   "conds": {
-   "directiveness_continuum": [
-    "clear_limits"
+   "trajectory_risk": [
+    "other"
    ],
    "synthetic_data": [
-    "validate",
-    "subgroup"
+    "subgroup",
+    "validate"
    ],
    "postmarket_tradeoff": [
-    "plan",
-    "other"
+    "other",
+    "plan"
    ],
    "postmarket_methods": [
-    "risk_cadence",
-    "reporting",
-    "other"
-   ],
-   "trajectory_risk": [
     "other",
-    "scope_drift"
+    "reporting",
+    "risk_cadence"
    ]
   }
  },
@@ -12200,8 +11723,7 @@
   "also_filed": [],
   "conds": {
    "postmarket_methods": [
-    "reporting",
-    "other"
+    "reporting"
    ]
   }
  },
@@ -12244,7 +11766,7 @@
   "received": "2026-10-11T04:00:00Z",
   "unreadable": false,
   "pos": {
-   "third_party": "conditional",
+   "third_party": "support",
    "postmarket_tradeoff": "conditional",
    "flexible_change_control": "conditional",
    "voluntary_model_files": "conditional"
@@ -12258,22 +11780,17 @@
   ],
   "also_filed": [],
   "conds": {
-   "third_party": [
-    "conflict",
-    "access",
-    "other"
-   ],
    "postmarket_tradeoff": [
-    "plan",
     "low",
-    "other"
+    "other",
+    "plan"
+   ],
+   "flexible_change_control": [
+    "other",
+    "pin"
    ],
    "voluntary_model_files": [
     "current",
-    "content",
-    "other"
-   ],
-   "flexible_change_control": [
     "other"
    ]
   }
@@ -12326,8 +11843,10 @@
   "unreadable": false,
   "pos": {
    "escalation_errors": "support",
+   "confirmation_flex": "support",
    "no_care_comparator": "support",
-   "third_party": "conditional"
+   "third_party": "conditional",
+   "voluntary_model_files": "conditional"
   },
   "recs": [
    "populations_settings",
@@ -12337,8 +11856,11 @@
   "also_filed": [],
   "conds": {
    "third_party": [
-    "optional",
-    "access"
+    "access",
+    "optional"
+   ],
+   "voluntary_model_files": [
+    "other"
    ]
   }
  },
@@ -12398,8 +11920,10 @@
    "competency_eval": "conditional",
    "synthetic_data": "conditional",
    "median_clinician_comparator": "oppose",
+   "no_care_comparator": "oppose",
    "postmarket_tradeoff": "conditional",
-   "postmarket_methods": "conditional"
+   "postmarket_methods": "support",
+   "agentic_oversight": "support"
   },
   "recs": [
    "human_approval",
@@ -12413,7 +11937,11 @@
   "also_filed": [],
   "conds": {
    "risk_framework": [
-    "reversibility",
+    "other",
+    "reversibility"
+   ],
+   "competency_eval": [
+    "new_elements",
     "other"
    ],
    "synthetic_data": [
@@ -12422,14 +11950,6 @@
    ],
    "postmarket_tradeoff": [
     "low"
-   ],
-   "postmarket_methods": [
-    "risk_cadence",
-    "other"
-   ],
-   "competency_eval": [
-    "hard_cases",
-    "other"
    ]
   }
  },
@@ -12482,10 +12002,10 @@
   "unreadable": false,
   "pos": {
    "risk_framework": "conditional",
-   "competency_eval": "conditional",
    "confirmation_flex": "support",
    "no_care_comparator": "support",
-   "flexible_change_control": "conditional"
+   "postmarket_methods": "support",
+   "flexible_change_control": "support"
   },
   "recs": [
    "risk_factors",
@@ -12499,18 +12019,8 @@
   "also_filed": [],
   "conds": {
    "risk_framework": [
-    "traceability",
-    "detectability"
-   ],
-   "competency_eval": [
-    "new_elements",
-    "human_ai_team"
-   ],
-   "flexible_change_control": [
-    "bounds",
-    "rebench",
-    "review",
-    "rollback"
+    "detectability",
+    "traceability"
    ]
   }
  },
@@ -12562,12 +12072,13 @@
   "received": "2026-10-12T04:00:00Z",
   "unreadable": false,
   "pos": {
-   "competency_eval": "conditional",
-   "third_party": "conditional",
-   "supervisory_agents": "conditional",
-   "flexible_change_control": "conditional",
-   "voluntary_model_files": "conditional",
-   "agentic_oversight": "conditional"
+   "competency_eval": "support",
+   "third_party": "support",
+   "postmarket_methods": "support",
+   "supervisory_agents": "support",
+   "flexible_change_control": "support",
+   "voluntary_model_files": "support",
+   "agentic_oversight": "support"
   },
   "recs": [
    "rebenchmark_on_change",
@@ -12581,35 +12092,7 @@
    "oversight_demonstrated"
   ],
   "also_filed": [],
-  "conds": {
-   "third_party": [
-    "roles",
-    "other"
-   ],
-   "supervisory_agents": [
-    "validate_supervisor",
-    "other"
-   ],
-   "flexible_change_control": [
-    "rebench",
-    "tier",
-    "other"
-   ],
-   "voluntary_model_files": [
-    "resp",
-    "fallback",
-    "content"
-   ],
-   "agentic_oversight": [
-    "outside_model"
-   ],
-   "competency_eval": [
-    "benchmark_validity",
-    "deployed_system",
-    "one_part",
-    "variability"
-   ]
-  }
+  "conds": {}
  },
  {
   "id": "FDA-2026-N-7874-0187",
@@ -12709,18 +12192,18 @@
   "received": "2026-10-12T04:00:00Z",
   "unreadable": false,
   "pos": {
-   "risk_framework": "conditional",
-   "trajectory_risk": "conditional",
-   "escalation_errors": "conditional",
-   "competency_eval": "conditional",
+   "risk_framework": "support",
+   "trajectory_risk": "support",
+   "escalation_errors": "support",
+   "competency_eval": "support",
    "synthetic_data": "conditional",
    "third_party": "support",
    "postmarket_tradeoff": "conditional",
-   "postmarket_methods": "conditional",
+   "postmarket_methods": "support",
    "supervisory_agents": "conditional",
    "flexible_change_control": "conditional",
    "voluntary_model_files": "conditional",
-   "agentic_oversight": "conditional"
+   "agentic_oversight": "support"
   },
   "recs": [
    "risk_factors",
@@ -12736,63 +12219,32 @@
   ],
   "also_filed": [],
   "conds": {
-   "risk_framework": [
-    "reversibility",
-    "detectability",
-    "traceability",
-    "other"
-   ],
-   "trajectory_risk": [
-    "scope_drift",
-    "user_pressure",
-    "report_timing"
-   ],
-   "escalation_errors": [
-    "justify",
-    "separate",
-    "other"
-   ],
-   "competency_eval": [
-    "deployed_system",
-    "benchmark_validity",
-    "variability"
-   ],
    "synthetic_data": [
     "indep",
     "separate",
-    "validate",
-    "subgroup"
+    "subgroup",
+    "validate"
    ],
    "postmarket_tradeoff": [
-    "low",
-    "plan",
+    "detect",
     "enforce",
-    "nosub"
-   ],
-   "postmarket_methods": [
-    "event_triggers",
-    "set_responses"
+    "low",
+    "nosub",
+    "plan"
    ],
    "supervisory_agents": [
+    "human_final",
     "independent",
-    "validate_supervisor",
-    "human_final"
+    "validate_supervisor"
    ],
    "flexible_change_control": [
-    "tier",
+    "pin",
     "rebench",
     "review",
-    "pin"
+    "tier"
    ],
    "voluntary_model_files": [
     "content"
-   ],
-   "agentic_oversight": [
-    "human_confirm",
-    "least_privilege",
-    "audit_records",
-    "full_sequence",
-    "authority_level"
    ]
   }
  },
@@ -12859,7 +12311,6 @@
   "received": "2026-10-12T04:00:00Z",
   "unreadable": false,
   "pos": {
-   "risk_framework": "conditional",
    "competency_eval": "conditional",
    "third_party": "conditional",
    "agentic_oversight": "conditional"
@@ -12875,25 +12326,19 @@
   ],
   "also_filed": [],
   "conds": {
-   "risk_framework": [
-    "reversibility",
-    "real_oversight",
-    "autonomy",
-    "other"
-   ],
    "competency_eval": [
-    "deployed_system"
+    "deployed_system",
+    "other"
    ],
    "third_party": [
     "conflict",
     "other"
    ],
    "agentic_oversight": [
-    "least_privilege",
-    "human_confirm",
     "audit_records",
-    "stop_rollback",
-    "authority_level"
+    "authority_level",
+    "human_confirm",
+    "stop_rollback"
    ]
   }
  },
@@ -12988,12 +12433,12 @@
   "received": "2026-10-12T04:00:00Z",
   "unreadable": false,
   "pos": {
-   "trajectory_risk": "conditional",
-   "competency_eval": "conditional",
+   "trajectory_risk": "support",
+   "competency_eval": "support",
    "postmarket_tradeoff": "conditional",
-   "postmarket_methods": "conditional",
-   "flexible_change_control": "conditional",
-   "voluntary_model_files": "conditional"
+   "postmarket_methods": "support",
+   "flexible_change_control": "support",
+   "voluntary_model_files": "support"
   },
   "recs": [
    "model_disclosure",
@@ -13007,31 +12452,9 @@
   ],
   "also_filed": [],
   "conds": {
-   "trajectory_risk": [
-    "scope_drift"
-   ],
    "postmarket_tradeoff": [
-    "plan",
-    "other"
-   ],
-   "postmarket_methods": [
-    "event_triggers",
-    "set_responses"
-   ],
-   "flexible_change_control": [
-    "rebench",
-    "tier",
-    "bounds",
-    "review"
-   ],
-   "voluntary_model_files": [
-    "content",
-    "contract"
-   ],
-   "competency_eval": [
-    "benchmark_validity",
-    "hard_cases",
-    "other"
+    "indep",
+    "plan"
    ]
   }
  },
@@ -13082,8 +12505,8 @@
   "received": "2026-10-12T04:00:00Z",
   "unreadable": false,
   "pos": {
-   "escalation_errors": "conditional",
-   "synthetic_data": "conditional",
+   "escalation_errors": "support",
+   "synthetic_data": "support",
    "supervisory_agents": "conditional"
   },
   "recs": [
@@ -13097,19 +12520,9 @@
   ],
   "also_filed": [],
   "conds": {
-   "escalation_errors": [
-    "separate",
-    "justify"
-   ],
-   "synthetic_data": [
-    "separate",
-    "disclose",
-    "other"
-   ],
    "supervisory_agents": [
-    "validate_supervisor",
-    "fail_safe",
-    "records"
+    "human_final",
+    "validate_supervisor"
    ]
   }
  },
@@ -13151,13 +12564,13 @@
   "received": "2026-10-13T04:00:00Z",
   "unreadable": false,
   "pos": {
-   "risk_framework": "conditional",
+   "risk_framework": "support",
    "competency_eval": "support",
    "confirmation_flex": "support",
    "postmarket_tradeoff": "conditional",
-   "postmarket_methods": "conditional",
-   "flexible_change_control": "conditional",
-   "voluntary_model_files": "conditional"
+   "postmarket_methods": "support",
+   "flexible_change_control": "support",
+   "voluntary_model_files": "support"
   },
   "recs": [
    "lower_burden_supervised",
@@ -13169,21 +12582,8 @@
   ],
   "also_filed": [],
   "conds": {
-   "risk_framework": [
-    "other"
-   ],
    "postmarket_tradeoff": [
     "other"
-   ],
-   "voluntary_model_files": [
-    "current",
-    "contract"
-   ],
-   "postmarket_methods": [
-    "other"
-   ],
-   "flexible_change_control": [
-    "rebench"
    ]
   }
  },
@@ -13263,9 +12663,9 @@
   "unreadable": false,
   "pos": {
    "competency_eval": "support",
-   "confirmation_flex": "conditional",
+   "confirmation_flex": "support",
    "synthetic_data": "conditional",
-   "third_party": "conditional"
+   "third_party": "support"
   },
   "recs": [
    "benchmark_validity",
@@ -13277,21 +12677,10 @@
   "also_filed": [],
   "conds": {
    "synthetic_data": [
-    "validate",
-    "separate",
     "indep",
-    "disclose",
-    "noreplace"
-   ],
-   "third_party": [
-    "conflict",
-    "multiple",
-    "access",
-    "roles"
-   ],
-   "confirmation_flex": [
-    "real_populations",
-    "scale_to_risk"
+    "noreplace",
+    "separate",
+    "validate"
    ]
   }
  },
@@ -13356,16 +12745,10 @@
   "posted": "2026-10-28T04:00:00Z",
   "received": "2026-10-13T04:00:00Z",
   "unreadable": false,
-  "pos": {
-   "risk_framework": "conditional"
-  },
+  "pos": {},
   "recs": [],
   "also_filed": [],
-  "conds": {
-   "risk_framework": [
-    "real_oversight"
-   ]
-  }
+  "conds": {}
  },
  {
   "id": "FDA-2026-N-7874-0198",
@@ -13396,16 +12779,11 @@
   "received": "2026-10-13T04:00:00Z",
   "unreadable": false,
   "pos": {
-   "third_party": "conditional"
+   "third_party": "support"
   },
   "recs": [],
   "also_filed": [],
-  "conds": {
-   "third_party": [
-    "conflict",
-    "roles"
-   ]
-  }
+  "conds": {}
  },
  {
   "id": "FDA-2026-N-7874-0199",
@@ -13456,7 +12834,7 @@
   "pos": {
    "risk_framework": "conditional",
    "directiveness_continuum": "support",
-   "escalation_errors": "conditional",
+   "escalation_errors": "support",
    "competency_eval": "conditional",
    "confirmation_flex": "oppose",
    "synthetic_data": "conditional",
@@ -13473,16 +12851,14 @@
   "also_filed": [],
   "conds": {
    "risk_framework": [
-    "reversibility",
+    "dependencies",
     "detectability",
-    "autonomy"
-   ],
-   "escalation_errors": [
-    "other"
+    "real_oversight",
+    "reversibility"
    ],
    "competency_eval": [
-    "human_ai_team",
-    "clinical_evidence"
+    "clinical_evidence",
+    "human_ai_team"
    ],
    "synthetic_data": [
     "noreplace",
@@ -13562,18 +12938,17 @@
   "pos": {
    "risk_framework": "conditional",
    "directiveness_continuum": "support",
-   "patient_facing_risk": "conditional",
-   "trajectory_risk": "conditional",
-   "escalation_errors": "conditional",
-   "competency_eval": "conditional",
+   "patient_facing_risk": "support",
+   "trajectory_risk": "support",
+   "escalation_errors": "support",
+   "confirmation_flex": "support",
    "synthetic_data": "conditional",
    "no_care_comparator": "support",
    "third_party": "conditional",
    "postmarket_tradeoff": "conditional",
-   "postmarket_methods": "conditional",
    "supervisory_agents": "conditional",
-   "flexible_change_control": "conditional",
-   "voluntary_model_files": "conditional",
+   "flexible_change_control": "support",
+   "voluntary_model_files": "support",
    "agentic_oversight": "conditional"
   },
   "recs": [
@@ -13589,66 +12964,31 @@
   "also_filed": [],
   "conds": {
    "risk_framework": [
-    "traceability",
-    "reversibility",
     "real_oversight",
-    "other"
-   ],
-   "patient_facing_risk": [
-    "cantcheck",
-    "safeguards",
-    "human"
-   ],
-   "trajectory_risk": [
-    "scope_drift",
-    "long_use"
-   ],
-   "escalation_errors": [
-    "separate",
-    "asym",
-    "other"
+    "reversibility",
+    "traceability"
    ],
    "synthetic_data": [
     "subgroup"
    ],
    "third_party": [
-    "optional",
     "access",
     "conflict",
-    "roles"
+    "optional"
    ],
    "postmarket_tradeoff": [
     "low"
    ],
-   "postmarket_methods": [
-    "outcomes",
-    "risk_cadence",
-    "other"
-   ],
    "supervisory_agents": [
+    "human_final",
     "independent",
-    "validate_supervisor",
-    "human_final"
-   ],
-   "flexible_change_control": [
-    "tier",
-    "bounds",
-    "rebench"
+    "validate_supervisor"
    ],
    "agentic_oversight": [
-    "human_confirm",
     "audit_records",
+    "human_confirm",
     "least_privilege",
-    "full_sequence",
     "not_device_alone"
-   ],
-   "voluntary_model_files": [
-    "content",
-    "contract",
-    "current"
-   ],
-   "competency_eval": [
-    "benchmark_validity"
    ]
   }
  },
@@ -13736,9 +13076,9 @@
   "pos": {
    "risk_framework": "conditional",
    "escalation_errors": "support",
-   "competency_eval": "conditional",
+   "competency_eval": "support",
    "confirmation_flex": "support",
-   "synthetic_data": "conditional",
+   "synthetic_data": "support",
    "no_care_comparator": "support",
    "third_party": "support",
    "postmarket_tradeoff": "conditional",
@@ -13756,23 +13096,12 @@
   "also_filed": [],
   "conds": {
    "risk_framework": [
-    "framework_use",
-    "detectability",
-    "reversibility",
-    "real_oversight",
     "autonomy",
-    "other"
-   ],
-   "competency_eval": [
-    "deployed_system",
-    "one_part",
-    "hard_cases",
-    "benchmark_validity"
-   ],
-   "synthetic_data": [
-    "separate",
-    "indep",
-    "other"
+    "detectability",
+    "other",
+    "real_oversight",
+    "reversibility",
+    "setting"
    ],
    "postmarket_tradeoff": [
     "detect",
@@ -13784,9 +13113,8 @@
    ],
    "flexible_change_control": [
     "bounds",
-    "rollback",
-    "tier",
-    "rebench"
+    "pin",
+    "rollback"
    ]
   }
  },
@@ -13950,12 +13278,12 @@
    "escalation_errors": "support",
    "competency_eval": "support",
    "confirmation_flex": "support",
-   "synthetic_data": "conditional",
+   "synthetic_data": "support",
    "third_party": "conditional",
    "postmarket_tradeoff": "support",
    "postmarket_methods": "support",
    "supervisory_agents": "conditional",
-   "flexible_change_control": "conditional"
+   "flexible_change_control": "support"
   },
   "recs": [
    "benchmark_validity",
@@ -13968,20 +13296,11 @@
   ],
   "also_filed": [],
   "conds": {
-   "synthetic_data": [
-    "validate",
-    "disclose",
-    "subgroup"
-   ],
    "third_party": [
     "optional"
    ],
    "supervisory_agents": [
     "validate_supervisor"
-   ],
-   "flexible_change_control": [
-    "rebench",
-    "rollback"
    ]
   }
  }

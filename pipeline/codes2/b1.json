@@ -5,7 +5,7 @@
    "risk_framework": "conditional",
    "directiveness_continuum": null,
    "patient_facing_risk": null,
-   "trajectory_risk": "conditional",
+   "trajectory_risk": "support",
    "escalation_errors": null,
    "competency_eval": null,
    "confirmation_flex": null,
@@ -114,7 +114,7 @@
   "positions": {
    "risk_framework": "conditional",
    "directiveness_continuum": null,
-   "patient_facing_risk": "support",
+   "patient_facing_risk": null,
    "trajectory_risk": null,
    "escalation_errors": null,
    "competency_eval": "support",
@@ -127,8 +127,8 @@
    "postmarket_methods": "conditional",
    "supervisory_agents": null,
    "flexible_change_control": null,
-   "voluntary_model_files": null,
-   "agentic_oversight": "conditional"
+   "voluntary_model_files": "support",
+   "agentic_oversight": "support"
   },
   "recommendations": [
    "Treat named human review as a risk-lowering variable",
@@ -181,15 +181,15 @@
    "trajectory_risk": null,
    "escalation_errors": "support",
    "competency_eval": "conditional",
-   "confirmation_flex": null,
+   "confirmation_flex": "conditional",
    "synthetic_data": null,
-   "median_clinician_comparator": null,
+   "median_clinician_comparator": "oppose",
    "no_care_comparator": "oppose",
    "third_party": null,
    "postmarket_tradeoff": "oppose",
    "postmarket_methods": "conditional",
    "supervisory_agents": "conditional",
-   "flexible_change_control": null,
+   "flexible_change_control": "conditional",
    "voluntary_model_files": null,
    "agentic_oversight": "support"
   },
@@ -225,7 +225,7 @@
    "supervisory_agents": null,
    "flexible_change_control": null,
    "voluntary_model_files": null,
-   "agentic_oversight": "conditional"
+   "agentic_oversight": "support"
   },
   "recommendations": [
    "Add data sensitivity as a risk modifier",
@@ -267,7 +267,7 @@
  {
   "id": "FDA-2026-N-7874-0009",
   "positions": {
-   "risk_framework": "conditional",
+   "risk_framework": "support",
    "directiveness_continuum": null,
    "patient_facing_risk": null,
    "trajectory_risk": null,
@@ -329,17 +329,17 @@
    "directiveness_continuum": "support",
    "patient_facing_risk": null,
    "trajectory_risk": "support",
-   "escalation_errors": "support",
+   "escalation_errors": "conditional",
    "competency_eval": "conditional",
    "confirmation_flex": "support",
    "synthetic_data": "conditional",
    "median_clinician_comparator": null,
    "no_care_comparator": "support",
-   "third_party": "conditional",
+   "third_party": "support",
    "postmarket_tradeoff": "conditional",
    "postmarket_methods": "conditional",
    "supervisory_agents": "conditional",
-   "flexible_change_control": "support",
+   "flexible_change_control": "conditional",
    "voluntary_model_files": "conditional",
    "agentic_oversight": "conditional"
   },
@@ -362,7 +362,7 @@
    "risk_framework": null,
    "directiveness_continuum": null,
    "patient_facing_risk": null,
-   "trajectory_risk": "conditional",
+   "trajectory_risk": "support",
    "escalation_errors": null,
    "competency_eval": "support",
    "confirmation_flex": null,
@@ -374,8 +374,8 @@
    "postmarket_methods": "conditional",
    "supervisory_agents": null,
    "flexible_change_control": "conditional",
-   "voluntary_model_files": "conditional",
-   "agentic_oversight": "conditional"
+   "voluntary_model_files": null,
+   "agentic_oversight": "support"
   },
   "recommendations": [
    "Add model compression as a named change category",
@@ -394,11 +394,11 @@
   "id": "FDA-2026-N-7874-0118",
   "positions": {
    "risk_framework": "conditional",
-   "directiveness_continuum": "conditional",
+   "directiveness_continuum": "support",
    "patient_facing_risk": "support",
    "trajectory_risk": "support",
    "escalation_errors": "conditional",
-   "competency_eval": "conditional",
+   "competency_eval": "support",
    "confirmation_flex": "conditional",
    "synthetic_data": "conditional",
    "median_clinician_comparator": "conditional",
@@ -442,7 +442,7 @@
    "postmarket_methods": "support",
    "supervisory_agents": null,
    "flexible_change_control": "support",
-   "voluntary_model_files": "support",
+   "voluntary_model_files": "conditional",
    "agentic_oversight": "conditional"
   },
   "recommendations": [
