@@ -7,7 +7,7 @@
    "patient_facing_risk": null,
    "trajectory_risk": null,
    "escalation_errors": null,
-   "competency_eval": "oppose",
+   "competency_eval": null,
    "confirmation_flex": null,
    "synthetic_data": null,
    "median_clinician_comparator": null,

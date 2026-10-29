@@ -231,7 +231,7 @@
  {
   "id": "FDA-2026-N-7874-0119",
   "positions": {
-   "risk_framework": "conditional",
+   "risk_framework": null,
    "directiveness_continuum": null,
    "patient_facing_risk": null,
    "trajectory_risk": null,

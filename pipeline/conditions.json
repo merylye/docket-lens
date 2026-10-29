@@ -590,12 +590,6 @@
     "independent",
     "responsibility",
     "validate_supervisor"
-   ],
-   "agentic_oversight": [
-    "audit_records",
-    "human_confirm",
-    "least_privilege",
-    "stop_rollback"
    ]
   },
   "FDA-2026-N-7874-0120": {
@@ -946,10 +940,6 @@
    ]
   },
   "FDA-2026-N-7874-0119": {
-   "risk_framework": [
-    "real_oversight",
-    "setting"
-   ],
    "voluntary_model_files": [
     "contract",
     "resp"
@@ -1554,17 +1544,6 @@
     "low"
    ]
   },
-  "FDA-2026-N-7874-0143": {
-   "synthetic_data": [
-    "separate",
-    "subgroup"
-   ],
-   "supervisory_agents": [
-    "human_final",
-    "independent",
-    "validate_supervisor"
-   ]
-  },
   "FDA-2026-N-7874-0121": {
    "risk_framework": [
     "detectability",
@@ -1649,12 +1628,6 @@
    "third_party": [
     "conflict",
     "other"
-   ],
-   "agentic_oversight": [
-    "audit_records",
-    "authority_level",
-    "human_confirm",
-    "stop_rollback"
    ]
   },
   "FDA-2026-N-7874-0111": {

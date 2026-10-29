@@ -2,11 +2,6 @@
  "dissent": {
   "competency_eval": [
    {
-    "id": "FDA-2026-N-7874-0103",
-    "reason": "Premarket evaluation should validate the deterministic constraint around the model, not the generative model itself.",
-    "alternative": ""
-   },
-   {
     "id": "FDA-2026-N-7874-0126",
     "reason": "Competency inference is unreliable; bounding and claim-level evaluation against reference standards should be primary.",
     "alternative": ""
@@ -275,7 +270,11 @@
     "reason": "A voluntary file cannot replace a binding change-notification obligation on model developers.",
     "alternative": ""
    }
-  ]
+  ],
+  "trajectory_risk": [],
+  "synthetic_data": [],
+  "agentic_oversight": [],
+  "supervisory_agents": []
  },
  "nopos": [
   {
@@ -397,6 +396,11 @@
    "id": "FDA-2026-N-7874-0138",
    "kind": "outside_framing",
    "point": "Lists postmarket incident-investigation factors and logging elements without evaluating FDA's specific proposals."
+  },
+  {
+   "id": "FDA-2026-N-7874-0143",
+   "kind": "outside_framing",
+   "point": "Gives testing recommendations without saying whether FDA's proposals are acceptable"
   },
   {
    "id": "FDA-2026-N-7874-0145",

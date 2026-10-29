@@ -840,7 +840,7 @@
    "supervisory_agents": "conditional",
    "flexible_change_control": null,
    "voluntary_model_files": null,
-   "agentic_oversight": "conditional"
+   "agentic_oversight": null
   },
   "recommendations": [
    "Evaluate the whole care workflow, not only AI answers",
@@ -1701,7 +1701,7 @@
    "supervisory_agents": null,
    "flexible_change_control": null,
    "voluntary_model_files": null,
-   "agentic_oversight": "conditional"
+   "agentic_oversight": null
   },
   "recommendations": [
    "Test that human reviewers can change the outcome",
@@ -1756,13 +1756,13 @@
    "escalation_errors": null,
    "competency_eval": null,
    "confirmation_flex": null,
-   "synthetic_data": "conditional",
+   "synthetic_data": null,
    "median_clinician_comparator": null,
    "no_care_comparator": null,
    "third_party": null,
    "postmarket_tradeoff": null,
-   "postmarket_methods": "support",
-   "supervisory_agents": "conditional",
+   "postmarket_methods": null,
+   "supervisory_agents": null,
    "flexible_change_control": null,
    "voluntary_model_files": null,
    "agentic_oversight": null
@@ -1973,18 +1973,18 @@
    "risk_framework": "support",
    "directiveness_continuum": "support",
    "patient_facing_risk": null,
-   "trajectory_risk": "support",
+   "trajectory_risk": null,
    "escalation_errors": "support",
    "competency_eval": "support",
    "confirmation_flex": "support",
-   "synthetic_data": "support",
+   "synthetic_data": null,
    "median_clinician_comparator": null,
    "no_care_comparator": null,
    "third_party": "conditional",
    "postmarket_tradeoff": "support",
    "postmarket_methods": "support",
    "supervisory_agents": "conditional",
-   "flexible_change_control": "support",
+   "flexible_change_control": null,
    "voluntary_model_files": null,
    "agentic_oversight": null
   },

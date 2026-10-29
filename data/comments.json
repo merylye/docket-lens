@@ -6659,8 +6659,7 @@
   "received": "2026-09-16T04:00:00Z",
   "unreadable": false,
   "pos": {
-   "risk_framework": "support",
-   "competency_eval": "oppose"
+   "risk_framework": "support"
   },
   "recs": [
    "deterministic_controls",
@@ -7828,7 +7827,6 @@
   "received": "2026-09-25T04:00:00Z",
   "unreadable": false,
   "pos": {
-   "risk_framework": "conditional",
    "escalation_errors": "support",
    "voluntary_model_files": "conditional"
   },
@@ -7839,10 +7837,6 @@
   ],
   "also_filed": [],
   "conds": {
-   "risk_framework": [
-    "real_oversight",
-    "setting"
-   ],
    "voluntary_model_files": [
     "contract",
     "resp"
@@ -9311,11 +9305,7 @@
   "posted": "2026-10-28T04:00:00Z",
   "received": "2026-10-03T04:00:00Z",
   "unreadable": false,
-  "pos": {
-   "synthetic_data": "conditional",
-   "postmarket_methods": "support",
-   "supervisory_agents": "conditional"
-  },
+  "pos": {},
   "recs": [
    "oversight_demonstrated",
    "synthetic_separate",
@@ -9328,17 +9318,7 @@
    "agent_sequences"
   ],
   "also_filed": [],
-  "conds": {
-   "synthetic_data": [
-    "separate",
-    "subgroup"
-   ],
-   "supervisory_agents": [
-    "human_final",
-    "independent",
-    "validate_supervisor"
-   ]
-  }
+  "conds": {}
  },
  {
   "id": "FDA-2026-N-7874-0144",
@@ -10362,8 +10342,7 @@
    "competency_eval": "support",
    "confirmation_flex": "support",
    "postmarket_tradeoff": "conditional",
-   "supervisory_agents": "conditional",
-   "agentic_oversight": "conditional"
+   "supervisory_agents": "conditional"
   },
   "recs": [
    "deployed_config",
@@ -10396,12 +10375,6 @@
     "independent",
     "responsibility",
     "validate_supervisor"
-   ],
-   "agentic_oversight": [
-    "audit_records",
-    "human_confirm",
-    "least_privilege",
-    "stop_rollback"
    ]
   }
  },
@@ -12312,8 +12285,7 @@
   "unreadable": false,
   "pos": {
    "competency_eval": "conditional",
-   "third_party": "conditional",
-   "agentic_oversight": "conditional"
+   "third_party": "conditional"
   },
   "recs": [
    "oversight_demonstrated",
@@ -12333,12 +12305,6 @@
    "third_party": [
     "conflict",
     "other"
-   ],
-   "agentic_oversight": [
-    "audit_records",
-    "authority_level",
-    "human_confirm",
-    "stop_rollback"
    ]
   }
  },
@@ -13274,16 +13240,13 @@
   "pos": {
    "risk_framework": "support",
    "directiveness_continuum": "support",
-   "trajectory_risk": "support",
    "escalation_errors": "support",
    "competency_eval": "support",
    "confirmation_flex": "support",
-   "synthetic_data": "support",
    "third_party": "conditional",
    "postmarket_tradeoff": "support",
    "postmarket_methods": "support",
-   "supervisory_agents": "conditional",
-   "flexible_change_control": "support"
+   "supervisory_agents": "conditional"
   },
   "recs": [
    "benchmark_validity",
