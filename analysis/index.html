@@ -144,6 +144,7 @@ svg .infoi { cursor: help; }
 svg .infoi:hover circle, svg .infoi:focus circle, .ic:hover, .ic:focus { stroke: var(--teal); border-color: var(--teal); color: var(--teal); }
 [data-tip]:not(.infoi):not(.ic) { cursor: help; }
 @media (prefers-reduced-motion: no-preference) { .bar { transition: width .25s ease; } }
+.opp[hidden] { display: none; }
 .opp { border-left: 3px solid #00dfe9; padding: 6px 0 6px 14px; margin-top: 8px; display: grid; gap: 8px; }
 .opp p { margin: 0; font-size: 13px; color: var(--muted); }
 .opp ul { margin: 0; padding-left: 18px; display: grid; gap: 6px; font-size: 14px; }
@@ -186,7 +187,7 @@ svg .infoi:hover circle, svg .infoi:focus circle, .ic:hover, .ic:focus { stroke:
         <button type="button" class="pill small" data-v="all" aria-pressed="true">All commenters</button>
         <button type="button" class="pill small" data-v="cat" aria-pressed="false">By category</button>
       </span>
-      <span id="posSort" class="group">
+      <span id="posSort" class="group" style="margin-left:16px">
         <button type="button" class="pill small" data-v="docket" aria-pressed="true">Docket order</button>
         <button type="button" class="pill small" data-v="support" aria-pressed="false">Most support first</button>
       </span>
@@ -413,7 +414,7 @@ function stackedBar(x, y, w, h, n, key, out, sel) {
 }
 function condPanel(p, pool, lw, bw, y0, out, aria) {
   const gs = condsOf(p.key), cond = pool.filter(c => (c.pos || {})[p.key] === "conditional");
-  const rows = gs.map(g => ({ g, n: cond.filter(c => ((c.conds || {})[p.key] || []).includes(g.key)).length })).filter(r => r.n);
+  const rows = gs.map(g => ({ g, n: cond.filter(c => ((c.conds || {})[p.key] || []).includes(g.key)).length })).filter(r => r.n).sort((a, b) => (a.g.key === "other") - (b.g.key === "other") || b.n - a.n);
   const ah = aria && META.aria.conds ? (META.aria.conds[p.key] || []) : [];
   const lh = 22, top = y0 + 4, x = 12, barMax = Math.max(60, bw * .55), mx = Math.max(1, ...rows.map(r => r.n)), h = (rows.length + 1) * lh + (rows.length ? 52 : 8);
   out.push(`<rect x="0" y="${top}" width="3" height="${h - 8}" fill="#00dfe9"></rect>`);
@@ -504,7 +505,7 @@ function renderOpp() {
   const rs = ((META.dissent || {})[key] || []).filter(r => ids.has(r.id));
   const opening = box.hidden; box.hidden = false;
   if (opening) requestAnimationFrame(() => box.scrollIntoView({ block: "nearest", behavior: "smooth" }));
-  box.innerHTML = `<p>Reasons given by comments opposing “${esc(p.label)}”${rs.length < ids.size ? ` (${rs.length} of ${ids.size} have a reason listed)` : ""}. Each is a short paraphrase; check the comment before quoting it.</p>
+  box.innerHTML = `<p>Reasons given by comments opposing “${esc(p.label)}”${rs.length < ids.size ? ` (${ids.size - rs.length === 1 ? "one opposing comment is" : ids.size - rs.length + " opposing comments are"} counted but not shown at the author's request)` : ""}. Each is a short paraphrase; check the comment before quoting it.</p>
     <ul>${rs.map(r => { const c = BYID[r.id]; return `<li>${esc(r.reason)} <span style="color:var(--muted)">(${c ? esc(c.commenter_type) : ""}, <a href="https://www.regulations.gov/comment/${esc(r.id)}" target="_blank" rel="noopener">read comment</a>)</span></li>`; }).join("")}</ul>`;
 }
 
@@ -682,7 +683,8 @@ function renderTable() {
   if (state.types.size) note.textContent += ` · ${[...state.types].join(", ")}`;
   const a = META.aria, ariaText = ["aria", a.name, "academia", ...a.topics].join(" ").toLowerCase();
   const ariaShow = (!state.sel || ariaItems(state.sel.lens).includes(state.sel.key)) && (state.types.size === 0 || state.types.has("Academia")) && (!q || ariaText.includes(q));
-  if (ariaShow) note.textContent = note.textContent.replace(/^\d+/, n => +n + 1);
+  if (ariaShow) note.textContent += ", plus ARIA";
+  if (withheld) note.textContent += ` · ${withheld} more counted but not shown at the author's request`;
   const SHORT = { IV: "Risk", V: "Premarket", VI: "Postmarket", VII: "Other" };
   const chips = arr => arr.length ? `<div class="qs">${arr.map(x => `<span class="q">${esc(x)}</span>`).join("")}</div>` : `<span class="none">None</span>`;
   const facets = (qs, themes) => {

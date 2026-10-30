@@ -902,9 +902,9 @@
     "traceability"
    ],
    "patient_facing_risk": [
-    "human",
     "inform",
-    "noauto"
+    "noauto",
+    "other"
    ],
    "competency_eval": [
     "benchmark_validity",
@@ -1266,9 +1266,9 @@
    ],
    "patient_facing_risk": [
     "access",
-    "human",
     "inform",
     "noauto",
+    "other",
     "safeguards"
    ],
    "escalation_errors": [
