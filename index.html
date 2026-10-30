@@ -144,14 +144,23 @@ svg .infoi { cursor: help; }
 svg .infoi:hover circle, svg .infoi:focus circle, .ic:hover, .ic:focus { stroke: var(--teal); border-color: var(--teal); color: var(--teal); }
 [data-tip]:not(.infoi):not(.ic) { cursor: help; }
 @media (prefers-reduced-motion: no-preference) { .bar { transition: width .25s ease; } }
+.opp { border-left: 3px solid #00dfe9; padding: 6px 0 6px 14px; margin-top: 8px; display: grid; gap: 8px; }
+.opp p { margin: 0; font-size: 13px; color: var(--muted); }
+.opp ul { margin: 0; padding-left: 18px; display: grid; gap: 6px; font-size: 14px; }
 </style>
+<link rel="stylesheet" href="views.css">
 </head>
 <body>
 <div class="wrap">
 <header>
   <h1>Landscape of comments to <a href="https://www.regulations.gov/docket/FDA-2026-N-7874" target="_blank" rel="noopener">Docket FDA&#8209;2026&#8209;N&#8209;7874</a></h1>
   <div class="facts" id="facts"><span>Loading comments…</span></div>
+  <nav class="tabs" role="tablist" aria-label="Views">
+    <button type="button" class="tab" role="tab" data-view="explore" aria-selected="true">Explore</button>
+    <button type="button" class="tab" role="tab" data-view="proposals" aria-selected="false">By proposal</button>
+  </nav>
 </header>
+<div id="view-explore" class="view" role="tabpanel">
 
 <div class="controls" role="toolbar" aria-label="Chart controls">
   <div class="group"><span class="label">Focus</span>
@@ -174,6 +183,10 @@ svg .infoi:hover circle, svg .infoi:focus circle, .ic:hover, .ic:focus { stroke:
         <button type="button" class="pill small" data-v="all" aria-pressed="true">All commenters</button>
         <button type="button" class="pill small" data-v="cat" aria-pressed="false">By category</button>
       </span>
+      <span id="posSort" class="group">
+        <button type="button" class="pill small" data-v="docket" aria-pressed="true">Docket order</button>
+        <button type="button" class="pill small" data-v="support" aria-pressed="false">Most support first</button>
+      </span>
     </div>
     <div class="legend">
       <span data-tip="stance:support" tabindex="0" style="text-decoration:underline dotted;text-underline-offset:3px"><i class="sw" style="background:#00848a"></i>Support</span>
@@ -183,6 +196,7 @@ svg .infoi:hover circle, svg .infoi:focus circle, .ic:hover, .ic:focus { stroke:
       <span id="posNote" style="flex-basis:100%;display:block">Bar length indicates how many comments gave a view on each proposal. Percentages are calculated from only those comments.<br>Select a segment to view comments</span>
     </div>
     <div class="chart" id="pos"></div>
+    <div class="opp" id="oppPanel" hidden></div>
   </section>
 
   <section id="recSection">
@@ -258,12 +272,14 @@ svg .infoi:hover circle, svg .infoi:focus circle, .ic:hover, .ic:focus { stroke:
     <button type="button" class="pill small more" id="more" hidden>Show all comments</button>
   </aside>
 </main>
+</div>
+<div id="view-proposals" class="view" role="tabpanel" hidden></div>
 
 
 </div>
 
 <script>
-const state = { posView: "all", recAll: false, sort: "latest", lens: "questions", weight: "count", types: new Set(), sel: null, cat: null, q: "", all: false, pinned: ["ARIA"], hidden: new Set(), gcols: "questions" };
+const state = { posView: "all", posSort: "docket", recAll: false, sort: "latest", lens: "questions", weight: "count", types: new Set(), sel: null, cat: null, q: "", all: false, pinned: ["ARIA"], hidden: new Set(), gcols: "questions" };
 let D = null, META = null, BYID = {};
 
 const esc = s => String(s ?? "").replace(/[&<>"']/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
@@ -421,7 +437,10 @@ function labelW(props) {
   return Math.ceil(Math.max(...props.map(p => c.measureText(p.label).width))) + 44;
 }
 function renderPos() {
-  const el = document.getElementById("pos"), out = [], props = META.proposals;
+  const el = document.getElementById("pos"), out = [];
+  const shareOf = (pool, k) => { const n = stanceCounts(pool, k); return n.total ? [n.support / n.total, (n.support + n.conditional) / n.total] : [-1, -1]; };
+  const sortPool = filtered();
+  const props = state.posSort === "support" ? [...META.proposals].sort((a, b) => { const x = shareOf(sortPool, a.key), y = shareOf(sortPool, b.key); return y[0] - x[0] || y[1] - x[1]; }) : META.proposals;
   const cwid = el.clientWidth || 900, aria = state.pinned.includes("ARIA") ? META.aria.pos || {} : null;
   if (state.posView === "all") {
     const pool = filtered(), W = Math.max(560, cwid), lw = Math.min(Math.round(W * .46), labelW(props)), nw = 130, aw = 0, bw = W - lw - nw - 10, rh = 34;
@@ -468,9 +487,22 @@ function renderPos() {
   el.querySelectorAll(".cnd").forEach(s => bindPick(s, () => toggleSel(s.dataset.key, null, "pos")));
   addIcons(el);
   document.getElementById("ariaMark").hidden = !(aria && state.posView === "all");
+  renderOpp();
   document.getElementById("posNote").innerHTML = state.posView === "all"
-    ? "Bar length indicates how many comments gave a view on each proposal. Percentages are calculated from only those comments.<br>Select a segment to view comments. Select a gray segment to also see the conditions commenters attached"
+    ? "Bar length indicates how many comments gave a view on each proposal. Percentages are calculated from only those comments.<br>Select a segment to view comments. Select a gray segment to also see the conditions commenters attached, or a black segment to see the reasons opposing comments gave." + (state.posSort === "support" ? "<br>Sorted by the share supporting without conditions. Proposals close together are effectively tied, since individual position codes are approximate." : "")
     : "Percentages are out of the comments in each column that gave a view on the proposal.";
+}
+
+function renderOpp() {
+  const box = document.getElementById("oppPanel"), sk = state.sel && state.sel.lens === "pos" ? state.sel.key : "";
+  if (state.posView !== "all" || !sk.endsWith(":oppose")) { box.hidden = true; box.innerHTML = ""; return; }
+  const key = sk.split(":")[0], p = META.proposals.find(x => x.key === key), pool = filtered();
+  const ids = new Set(pool.filter(c => (c.pos || {})[key] === "oppose").map(c => c.id));
+  const rs = ((META.dissent || {})[key] || []).filter(r => ids.has(r.id));
+  const opening = box.hidden; box.hidden = false;
+  if (opening) requestAnimationFrame(() => box.scrollIntoView({ block: "nearest", behavior: "smooth" }));
+  box.innerHTML = `<p>Reasons given by comments opposing “${esc(p.label)}”${rs.length < ids.size ? ` (${rs.length} of ${ids.size} have a reason listed)` : ""}. Each is a short paraphrase; check the comment before quoting it.</p>
+    <ul>${rs.map(r => { const c = BYID[r.id]; return `<li>${esc(r.reason)} <span style="color:var(--muted)">(${c ? esc(c.commenter_type) : ""}, <a href="https://www.regulations.gov/comment/${esc(r.id)}" target="_blank" rel="noopener">read comment</a>)</span></li>`; }).join("")}</ul>`;
 }
 
 /* Top recommendations */
@@ -730,6 +762,7 @@ function init() {
   document.getElementById("sort").addEventListener("change", e => { state.sort = e.target.value; state.all = false; renderTable(); document.getElementById("side").scrollTo({ top: 0 }); });
   document.getElementById("clear").onclick = () => { state.sel = null; state.cat = null; state.types.clear(); render(); };
   document.getElementById("more").onclick = () => { state.all = true; renderTable(); };
+  document.querySelectorAll("#posSort .pill").forEach(b => b.onclick = () => { state.posSort = b.dataset.v; document.querySelectorAll("#posSort .pill").forEach(x => x.setAttribute("aria-pressed", String(x.dataset.v === state.posSort))); renderPos(); });
   document.querySelectorAll("#posView .pill").forEach(b => b.onclick = () => { state.posView = b.dataset.v; document.querySelectorAll("#posView .pill").forEach(x => x.setAttribute("aria-pressed", String(x.dataset.v === state.posView))); renderPos(); });
   document.getElementById("recMore").onclick = () => { state.recAll = !state.recAll; renderRecs(); };
   document.querySelectorAll("#gcols .pill").forEach(b => b.onclick = () => { state.gcols = b.dataset.v; render(); });
@@ -760,9 +793,10 @@ function fitTitle() {
 }
 
 Promise.all([fetch("data/comments.json").then(r => r.json()), fetch("data/meta.json").then(r => r.json())])
-  .then(([c, m]) => { D = c; META = m; init(); })
+  .then(([c, m]) => { D = c; META = m; init(); if (window.analysisInit) analysisInit(); })
   .catch(() => { document.getElementById("facts").textContent = "Could not load the comment data. If you opened this file directly, serve the folder over HTTP instead."; });
 </script>
 <div class="tipbox" id="tipbox" role="tooltip" hidden></div>
+<script src="views.js"></script>
 </body>
 </html>

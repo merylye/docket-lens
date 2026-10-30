@@ -1,4 +1,4 @@
-/* Key findings and By proposal views. Everything is computed from the same data the Explore view reads,
+/* By proposal and Key findings views. The main site has Explore and By proposal; the analysis page adds Key findings. Everything is computed from the same data the Explore view reads,
    so the numbers stay current as comments are added. Proposals are ranked rather than sorted into lists by
    cutoffs, so a few changed codes cannot move a proposal on or off a list. Where the leaders are within a few
    points of the next proposal, the summary names them together as a close group. */
@@ -17,7 +17,8 @@
     minGroup: 5,    // minimum comments with a position before a group split is shown
     minCond: 5,     // minimum comments naming a condition before it is listed as the top condition
   };
-  let view = "findings", prop = null, showAria = false;
+  const HAS_FINDINGS = () => !!document.getElementById("view-findings");
+  let view = "explore", prop = null, showAria = false;
 
   const pool = () => readable().filter(c => !c.hidden || true);
   const people = () => readable();
@@ -136,7 +137,7 @@
     if (!prop || !P.find(p => p.key === prop)) prop = P[0].key;
     const p = P.find(x => x.key === prop), n = counts(rows, p.key), tip = (META.tips.pos || {})[p.key] || {};
     const cond = rows.filter(c => (c.pos || {})[p.key] === "conditional");
-    const cg = condsOf(p.key).map(g => ({ g, n: cond.filter(c => ((c.conds || {})[p.key] || []).includes(g.key)).length })).filter(x => x.n);
+    const cg = condsOf(p.key).map(g => ({ g, n: cond.filter(c => ((c.conds || {})[p.key] || []).includes(g.key)).length })).filter(x => x.n).sort((a, b) => (a.g.key === "other") - (b.g.key === "other") || b.n - a.n);
     const cmax = Math.max(1, ...cg.map(x => x.n));
     const A = META.aria, av = (A.pos || {})[p.key], aq = (A.position_quotes || {})[p.key] || [];
     const word = { support: "Support", conditional: "Support with conditions", oppose: "Oppose" };
@@ -152,7 +153,7 @@
           <div style="display:flex;gap:16px;flex-wrap:wrap">${["support", "conditional", "oppose"].filter(s => n[s]).map(s => `<button class="go" data-go="${esc(p.key)}:${s}">${n[s]} ${s === "conditional" ? "with conditions" : s === "support" ? "supporting" : "opposing"}</button>`).join("")}</div></div>
         <div class="block"><h3>Responses by commenter group</h3>${groups}<p class="note">The number is how many comments in each group took a position.</p></div>
         ${cg.length ? `<div class="block"><h3>Added conditions</h3>${cg.map(x => `<div class="row click" data-go="${esc(p.key)}:conditional:${esc(x.g.key)}" tabindex="0" role="button"><span class="lab">${esc(x.g.label)}</span>${lbar(x.n, cmax)}<span class="num">${x.n}</span></div>`).join("")}<p class="note">Named by the ${cond.length} comments that supported it with conditions. A comment can name more than one. Select a row to read them.</p></div>` : ""}
-        ${((META.dissent || {})[p.key] || []).length ? `<div class="block"><h3>Reasons for opposition</h3><ul class="rs">${META.dissent[p.key].map(r => { const c = BYID[r.id]; return `<li><span>${esc(r.reason)}</span> <span class="note">(${c ? esc(c.commenter_type) : ""}, <a href="https://www.regulations.gov/comment/${esc(r.id)}" target="_blank" rel="noopener">read comment</a>)</span></li>`; }).join("")}</ul></div>` : ""}
+        ${((META.dissent || {})[p.key] || []).length ? `<div class="block"><h3>Reasons for opposition</h3>${META.dissent[p.key].length < n.oppose ? `<p class="note">${META.dissent[p.key].length} of the ${n.oppose} opposing comments have a reason listed.</p>` : ""}<ul class="rs">${META.dissent[p.key].map(r => { const c = BYID[r.id]; return `<li><span>${esc(r.reason)}</span> <span class="note">(${c ? esc(c.commenter_type) : ""}, <a href="https://www.regulations.gov/comment/${esc(r.id)}" target="_blank" rel="noopener">read comment</a>)</span></li>`; }).join("")}</ul></div>` : ""}
         <div class="block"><button type="button" class="pill small" id="ariaTog" style="justify-self:start" aria-pressed="${showAria}">${showAria ? "Hide" : "Show"} ARIA's position</button>
           ${showAria ? `<p style="margin:0">${av ? word[av] : "ARIA took no position on this proposal."}</p>${aq.map(q => `<p class="quote">“${esc(q)}”</p>`).join("")}` : ""}</div>
       </article></div>${footer()}`;
@@ -191,11 +192,11 @@
     });
   }
   let rz; window.addEventListener("resize", () => { clearTimeout(rz); rz = setTimeout(() => { if (view !== "explore") align(document.getElementById("view-" + view)); }, 150); });
-  function setHash() { const h = view === "proposals" ? "proposal-" + prop : view; try { history.replaceState(null, "", "#" + h); } catch (e) {} }
+  function setHash() { const h = view === "proposals" ? "proposal-" + prop : view; if (h === "explore" && !HAS_FINDINGS() && !location.hash) return; try { history.replaceState(null, "", "#" + h); } catch (e) {} }
   function show(v) {
     view = v;
     document.querySelectorAll(".tabs .tab").forEach(t => t.setAttribute("aria-selected", String(t.dataset.view === v)));
-    ["explore", "findings", "proposals"].forEach(k => { document.getElementById("view-" + k).hidden = k !== v; });
+    ["explore", "findings", "proposals"].forEach(k => { const el = document.getElementById("view-" + k); if (el) el.hidden = k !== v; });
     if (v === "explore") { render(); fitTitle(); window.dispatchEvent(new Event("resize")); }
     if (v === "findings") findings();
     if (v === "proposals") proposals();
@@ -205,7 +206,7 @@
   function route() {
     const h = location.hash.slice(1);
     if (h.startsWith("proposal-")) { prop = h.slice(9); show("proposals"); }
-    else show(h === "explore" ? "explore" : "findings");
+    else show(h === "explore" || !HAS_FINDINGS() ? "explore" : "findings");
   }
   window.analysisInit = function () {
     document.querySelectorAll(".tabs .tab").forEach(t => t.onclick = () => { show(t.dataset.view); window.scrollTo({ top: 0 }); });
