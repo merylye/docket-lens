@@ -293,6 +293,8 @@ let D = null, META = null, BYID = {};
 const esc = s => String(s ?? "").replace(/[&<>"']/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
 const pct = x => Math.round(x * 100) + "%";
 const short = id => id.replace("FDA-2026-N-7874-", "");
+// Comments filed but not yet posted by FDA. Shown in the list and grid, never counted in the charts.
+const PENDING = () => (META && META.pending) || [];
 const nameOf = c => c.org || c.title.replace(/^Comment from /, "");
 
 function sectionOf(n) { return META.questions.find(q => q.n === n).section; }
@@ -599,7 +601,7 @@ function renderGrid() {
   for (let i = rows.length - 1; i >= 0; i--) if (state.hidden.has(rows[i].key)) rows.splice(i, 1);
   state.pinned.forEach(id => {
     if (id === "ARIA") { const s = new Set(ariaItems(L)); rows.push({ kind: "pin", key: "ARIA", label: "ARIA", val: k => s.has(k) ? 1 : 0 }); return; }
-    const c = BYID[id]; if (c) { const s = new Set(itemsFor(c, L)); rows.push({ kind: "pin", key: id, label: `${short(id)} · ${nameOf(c)}`, val: k => c.unreadable ? null : (s.has(k) ? 1 : 0) }); } });
+    const c = BYID[id]; if (c) { const s = new Set(itemsFor(c, L)); rows.push({ kind: "pin", key: id, label: c.pending ? `${c.short_name || nameOf(c)} (pending)` : `${short(id)} · ${nameOf(c)}`, val: k => c.unreadable ? null : (s.has(k) ? 1 : 0) }); } });
 
   const avail = Math.max(600, document.getElementById("grid").clientWidth || 900), many = cols.length > 8, lw = 280, cw = many ? Math.max(22, Math.floor((avail - lw - 12) / cols.length)) : Math.max(70, Math.min(140, (avail - lw - 12) / cols.length)), rh = 30, headH = many ? 46 : 36;
   const W = lw + cols.length * cw + 12;
@@ -646,10 +648,11 @@ function renderRowToggles(rows) {
 }
 function renderAddMenu() {
   const q = (document.getElementById("addSearch").value || "").trim().toLowerCase();
+  const pendOpts = PENDING().filter(c => !q || (nameOf(c) + " pending").toLowerCase().includes(q)).map(c => `<label><input type="checkbox" data-id="${esc(c.id)}" ${state.pinned.includes(c.id) ? "checked" : ""}><span><span class="num">Pending</span> ${esc(c.short_name || nameOf(c))}</span></label>`).join("");
   const list = D.filter(c => !c.hidden).filter(c => !q || (short(c.id) + " " + nameOf(c) + " " + c.commenter_type).toLowerCase().includes(q));
   const ariaOpt = (!q || "aria nsf ai research institute on interaction for ai assistants".includes(q)) ? `<label><input type="checkbox" data-id="ARIA" ${state.pinned.includes("ARIA") ? "checked" : ""}><span><span class="num">Pending</span> ARIA</span></label>` : "";
   const menu = document.getElementById("addMenu");
-  menu.innerHTML = (list.length || ariaOpt) ? ariaOpt + list.map(c => `<label><input type="checkbox" data-id="${esc(c.id)}" ${state.pinned.includes(c.id) ? "checked" : ""}><span><span class="num">${esc(short(c.id))}</span> ${esc(nameOf(c))}</span></label>`).join("") : `<p class="note" style="margin:6px">No comments match.</p>`;
+  menu.innerHTML = (list.length || ariaOpt || pendOpts) ? ariaOpt + pendOpts + list.map(c => `<label><input type="checkbox" data-id="${esc(c.id)}" ${state.pinned.includes(c.id) ? "checked" : ""}><span><span class="num">${esc(short(c.id))}</span> ${esc(nameOf(c))}</span></label>`).join("") : `<p class="note" style="margin:6px">No comments match.</p>`;
   menu.querySelectorAll("input").forEach(i => i.onchange = () => { togglePin(i.dataset.id); reveal(document.getElementById("grid"), "center"); });
   document.querySelector("#addDD summary").textContent = state.pinned.length ? `Add comments (${state.pinned.length})` : "Add comments";
 }
@@ -683,6 +686,8 @@ function renderTable() {
   if (state.sel) rows = rows.filter(c => itemsFor(c, state.sel.lens).includes(state.sel.key));
   if (q) rows = rows.filter(c => !c.hidden && [c.id, c.org, c.title, c.commenter_type, c.summary || ""].join(" ").toLowerCase().includes(q));
   const withheld = rows.filter(c => c.hidden).length; rows = rows.filter(c => !c.hidden);
+  const pend = PENDING().filter(c => (state.types.size === 0 || state.types.has(c.commenter_type)) && (!state.sel || itemsFor(c, state.sel.lens).includes(state.sel.key))
+    && (!q || [c.org, c.title, c.commenter_type, c.summary || "", "pending"].join(" ").toLowerCase().includes(q)));
   const note = document.getElementById("selNote"), clear = document.getElementById("clear");
   if (state.sel) {
     const it = catalog(state.sel.lens).find(i => i.key === state.sel.key);
@@ -691,7 +696,8 @@ function renderTable() {
   if (state.types.size) note.textContent += ` · ${[...state.types].join(", ")}`;
   const a = META.aria, ariaText = ["aria", a.name, "academia", ...a.topics].join(" ").toLowerCase();
   const ariaShow = (!state.sel || ariaItems(state.sel.lens).includes(state.sel.key)) && (state.types.size === 0 || state.types.has("Academia")) && (!q || ariaText.includes(q));
-  if (ariaShow) note.textContent += ", plus ARIA";
+  const extra = [...(ariaShow ? ["ARIA"] : []), ...pend.map(c => c.short_name || nameOf(c))];
+  if (extra.length) note.textContent += `, plus ${extra.join(" and ")} (not yet posted)`;
   if (withheld) note.textContent += ` · ${withheld} more counted but not shown at the author's request`;
   const SHORT = { IV: "Risk", V: "Premarket", VI: "Postmarket", VII: "Other" };
   const chips = arr => arr.length ? `<div class="qs">${arr.map(x => `<span class="q">${esc(x)}</span>`).join("")}</div>` : `<span class="none">None</span>`;
@@ -703,6 +709,7 @@ function renderTable() {
   const fmtD = d => d ? new Date(d).toLocaleDateString("en-US", { month: "short", day: "numeric", year: "numeric" }) : "";
   const items = rows.map(c => ({ c, name: nameOf(c), date: c.received || c.posted || "", cov: c.unreadable ? -1 : c.q_addr.length + (c.topics || []).length / 100 }));
   if (ariaShow) items.push({ aria: true, name: "ARIA", date: "2026-10-19T23:00:00Z", cov: a.q_addr.length + a.topics.length / 100 });
+  pend.forEach(c => items.push({ c, pending: true, name: nameOf(c), date: c.received || "", cov: c.q_addr.length }));
   const cmpName = (x, y) => x.name.localeCompare(y.name, "en", { sensitivity: "base" });
   const sorters = {
     earliest: (x, y) => x.date.localeCompare(y.date) || cmpName(x, y),
@@ -721,6 +728,10 @@ function renderTable() {
     ? `<article class="card aria"><div class="top"><span class="who">ARIA</span>${btn("ARIA")}</div>
       <div class="meta"><span>Academia</span><span>Received Oct 19, 2026</span><span>Posting pending</span></div>
       ${facets(a.q_addr, a.topics)}</article>`
+    : it.pending ? `<article class="card aria"><div class="top"><span class="who">${esc(it.name)}</span>${btn(it.c.id)}</div>
+      <div class="meta"><span>${esc(it.c.commenter_type)}</span><span>Received ${fmtD(it.c.received)}</span><span>Posting pending</span>${it.c.url ? `<a href="${esc(it.c.url)}" target="_blank" rel="noopener">Read the letter</a>` : ""}</div>
+      ${q && (it.c.summary || "").toLowerCase().includes(q) ? `<p class="sum"><span class="src">AI-written summary:</span> ${hl(it.c.summary, q)}</p>` : ""}
+      ${facets(it.c.q_addr, [])}</article>`
     : `<article class="card"><div class="top"><span class="who">${esc(it.name)}</span>${btn(it.c.id)}</div>
       <div class="meta"><a href="https://www.regulations.gov/comment/${esc(it.c.id)}" target="_blank" rel="noopener">${esc(short(it.c.id))}</a><span>${esc(it.c.commenter_type)}${it.c.type_inferred ? " (inferred)" : ""}</span><span>Received ${fmtD(it.c.received)}</span>${(it.c.also_filed || []).map(d => `<span>Also filed as <a href="https://www.regulations.gov/comment/${esc(d)}" target="_blank" rel="noopener">${esc(short(d))}</a></span>`).join("")}</div>
       ${q && (it.c.summary || "").toLowerCase().includes(q) ? `<p class="sum"><span class="src">AI-written summary:</span> ${hl(it.c.summary, q)}</p>` : ""}
@@ -775,7 +786,7 @@ function renderControls() {
 function render() { renderControls(); renderPos(); renderRecs(); renderMain(); renderGrid(); renderTypes(); renderTable(); renderAddMenu(); }
 
 function init() {
-  D.forEach(c => BYID[c.id] = c);
+  D.forEach(c => BYID[c.id] = c); PENDING().forEach(c => BYID[c.id] = c);
   const types = [...new Set(D.map(c => c.commenter_type))].sort((a, b) => D.filter(c => c.commenter_type === b).length - D.filter(c => c.commenter_type === a).length);
   const counts = {}; D.forEach(c => counts[c.commenter_type] = (counts[c.commenter_type] || 0) + 1);
   document.getElementById("catMenu").innerHTML = types.map(t => `<label><input type="checkbox" data-v="${esc(t)}"><span>${esc(t)} <span class="num">(${counts[t]})</span></span></label>`).join("") + `<button type="button" class="textbtn" id="catClear" style="justify-self:start;margin:6px">Show all categories</button>`;

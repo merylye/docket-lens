@@ -140,6 +140,9 @@ meta = {
     "nopos": DISSENT.get("nopos", []),
     "open_questions": DISSENT.get("open_questions", []),
     "recs": RECS["groups"],
+    # Comments filed but not yet posted on Regulations.gov. Shown in the list and grid, not counted in charts.
+    # Remove an entry once FDA posts the comment and it is coded from the docket.
+    "pending": json.load(open(os.path.join(HERE, "pending.json"))) if os.path.exists(os.path.join(HERE, "pending.json")) else [],
     "method": f"{len(out)} posted comments read in full, including attachments, and coded against the codebook. "
               "A question counts as addressed when a comment discusses it substantively, cited or not. "
               "Comment types come from Regulations.gov; those with no category were assigned from content and are marked inferred.",
