@@ -1,4 +1,4 @@
-/* By proposal and Key findings views. The main site has Explore and By proposal; the analysis page adds Key findings. Everything is computed from the same data the Explore view reads,
+/* Positions by proposal and Key findings views. The main site has Explore and Positions by proposal; the analysis page adds Key findings. Everything is computed from the same data the Explore view reads,
    so the numbers stay current as comments are added. Proposals are ranked rather than sorted into lists by
    cutoffs, so a few changed codes cannot move a proposal on or off a list. Where the leaders are within a few
    points of the next proposal, the summary names them together as a close group. */
@@ -120,7 +120,7 @@
         ${top.map(t => `<div class="row click" data-go="${esc(t.p.key)}:conditional:${esc(t.g)}" tabindex="0" role="button"><span class="lab">${pl(t.p)}</span><span class="lab2">${esc(condLabel(t.p.key, t.g))}${t.near.length ? `<span class="note" style="display:block">Close behind: ${t.near.slice(0, 2).map(x => `${esc(condLabel(t.p.key, x.g))} (${x.n})`).join("; ")}${t.near.length > 2 ? `; ${t.near.length - 2} more` : ""}</span>` : ""}</span>${lbar(t.n, topMax)}<span class="num">${t.n} of ${t.of}</span></div>`).join("")}
         <p class="note">For each proposal, the condition named most often by comments that supported it with conditions. Shown when at least ${T.minCond} comments named it. When another condition was named by nearly as many, it is listed as close behind. Select a row to read them.</p></div></div></section>
       <section><h2>Opposition</h2><p class="note">Every proposal that drew opposition, ranked by the share of comments that took a position and opposed it, with each opposing comment's reason. Opposition was rare overall, so small changes in coding can reorder this list.</p><div class="cards stack">
-        ${opposed.length ? `<div class="card" style="grid-column:1/-1">${opposed.map(x => `<div class="oth"><div class="row click" data-go="${esc(x.p.key)}:oppose" tabindex="0" role="button"><span class="lab">${pl(x.p)}</span>${sbar(x.n)}<span class="num">${x.n.oppose} of ${x.n.total}</span></div>${reasons(x.p.key) ? `<ul class="rs">${reasons(x.p.key)}</ul>` : ""}</div>`).join("")}<p class="note">The By proposal tab shows how each commenter group responded.</p></div>` : '<p class="note">No proposal drew opposition.</p>'}
+        ${opposed.length ? `<div class="card" style="grid-column:1/-1">${opposed.map(x => `<div class="oth"><div class="row click" data-go="${esc(x.p.key)}:oppose" tabindex="0" role="button"><span class="lab">${pl(x.p)}</span>${sbar(x.n)}<span class="num">${x.n.oppose} of ${x.n.total}</span></div>${reasons(x.p.key) ? `<ul class="rs">${reasons(x.p.key)}</ul>` : ""}</div>`).join("")}<p class="note">The Positions by proposal tab shows how each commenter group responded.</p></div>` : '<p class="note">No proposal drew opposition.</p>'}
       </div></section>
       <section><h2>Coverage gaps</h2><div class="cards stack">
         <div class="card"><h3>Least addressed questions</h3>${qs.map(x => `<div class="row click" data-q="${x.q.n}" tabindex="0" role="button"><span class="lab">Q${x.q.n} ${esc(x.q.label)}</span>${lbar(x.n, rows.length)}<span class="num">${pc(x.n, rows.length)}</span></div>`).join("")}<p class="note">Share of all comments that substantively addressed the question.</p></div>
@@ -140,7 +140,7 @@
     bind(document.getElementById("view-findings"));
   }
 
-  /* By proposal */
+  /* Positions by proposal */
   function proposals() {
     const rows = people(), P = META.proposals;
     if (!prop || !P.find(p => p.key === prop)) prop = P[0].key;
