@@ -201,7 +201,7 @@ svg .infoi:hover circle, svg .infoi:focus circle, .ic:hover, .ic:focus { stroke:
       <span data-tip="stance:conditional" tabindex="0" style="text-decoration:underline dotted;text-underline-offset:3px"><i class="sw" style="background:#bbbbbb"></i>Support with conditions</span>
       <span data-tip="stance:oppose" tabindex="0" style="text-decoration:underline dotted;text-underline-offset:3px"><i class="sw" style="background:#111111"></i>Oppose</span>
       <span id="ariaMark" hidden><svg width="14" height="10" aria-hidden="true"><path d="M 1 1 L 13 1 L 7 9 Z" fill="#00dfe9"></path></svg>ARIA's position</span>
-      <span id="posNote" style="flex-basis:100%;display:block">Bar length indicates how many comments gave a view on each proposal. Percentages are calculated from only those comments.<br>Select a segment to view comments</span>
+      <span id="posNote" style="flex-basis:100%;display:block">Bar length indicates how many comments gave a view on each proposal.<br>Percentages are calculated from only those comments.<br>Select a segment to view comments.</span>
     </div>
     <div class="chart" id="pos"></div>
     <div class="opp" id="oppPanel" hidden></div>
@@ -499,7 +499,7 @@ function renderPos() {
   document.getElementById("ariaMark").hidden = !(aria && state.posView === "all");
   renderOpp();
   document.getElementById("posNote").innerHTML = state.posView === "all"
-    ? "Bar length indicates how many comments gave a view on each proposal. Percentages are calculated from only those comments.<br>Select a segment to view comments. Select a gray segment to also see the conditions commenters attached, or a black segment to see the reasons opposing comments gave." + (state.posSort === "support" ? "<br>Sorted by the share supporting without conditions. Proposals close together are effectively tied, since individual position codes are approximate." : "")
+    ? "Bar length indicates how many comments gave a view on each proposal.<br>Percentages are calculated from only those comments.<br>Select a segment to view comments.<br>Select a gray segment to also see the conditions commenters attached, or a black segment to see the reasons opposing comments gave." + (state.posSort === "support" ? "<br>Sorted by the share supporting without conditions. Proposals close together are effectively tied, since individual position codes are approximate." : "")
     : "Percentages are out of the comments in each column that gave a view on the proposal.";
 }
 
