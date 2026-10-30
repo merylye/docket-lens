@@ -38,8 +38,17 @@
     if (lens) state.lens = lens;
     document.querySelectorAll("#posView .pill").forEach(x => x.setAttribute("aria-pressed", String(x.dataset.v === "all")));
     show("explore");
-    const target = sel && sel.lens === "pos" ? document.getElementById("posSection") : document.getElementById("covTitle");
-    if (target) target.scrollIntoView({ behavior: "smooth", block: "start" });
+    requestAnimationFrame(() => {
+      let target = sel && sel.lens === "pos" ? document.getElementById("posSection") : document.getElementById("covSection");
+      if (sel && sel.lens === "pos") {
+        const [k, st] = sel.key.split(":");
+        target = st === "oppose" ? document.getElementById("oppPanel")
+          : document.querySelector(`#pos .cnd[data-key="${sel.key}"]`) || document.querySelector(`#pos .seg[data-key="${k}:${st}"]`) || target;
+        if (st !== "oppose" && st !== "conditional") target = document.getElementById("posSection");
+      }
+      if (window.reveal) window.reveal(target, target && target.tagName === "g" ? "center" : "start");
+      if (typeof showSide === "function" && matchMedia("(min-width: 1100px)").matches) showSide();
+    });
   }
   const goPos = key => go({ lens: "pos", key });
 

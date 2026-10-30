@@ -145,6 +145,10 @@ svg .infoi:hover circle, svg .infoi:focus circle, .ic:hover, .ic:focus { stroke:
 [data-tip]:not(.infoi):not(.ic) { cursor: help; }
 @media (prefers-reduced-motion: no-preference) { .bar { transition: width .25s ease; } }
 .opp[hidden] { display: none; }
+@keyframes flash { 0% { box-shadow: 0 0 0 3px #00dfe9; } 100% { box-shadow: 0 0 0 3px rgba(0,223,233,0); } }
+.flash { animation: flash 1.6s ease-out; }
+.card .sum mark { background: #fff3c4; padding: 0 1px; }
+.card .sum .src { color: var(--muted); }
 .opp { border-left: 3px solid #00dfe9; padding: 6px 0 6px 14px; margin-top: 8px; display: grid; gap: 8px; }
 .opp p { margin: 0; font-size: 13px; color: var(--muted); }
 .opp ul { margin: 0; padding-left: 18px; display: grid; gap: 6px; font-size: 14px; }
@@ -207,7 +211,7 @@ svg .infoi:hover circle, svg .infoi:focus circle, .ic:hover, .ic:focus { stroke:
     <button type="button" class="pill small" id="recMore" style="margin-top:10px">Show all recommendations</button>
   </section>
 
-  <section>
+  <section id="covSection">
     <h2 id="covTitle">Coverage by question</h2>
     <div class="panel">
       <div class="legend">
@@ -242,7 +246,7 @@ svg .infoi:hover circle, svg .infoi:focus circle, .ic:hover, .ic:focus { stroke:
 
   <section>
     <h2>Commenter category</h2>
-    <div class="legend"><span><i class="sw" style="background:var(--ink)"></i>Category filed on Regulations.gov</span><span><i class="sw" style="background:#bbbbbb"></i>No category filed, assigned based on content</span><span>Select a bar to filter</span></div>
+    <div class="legend"><span><i class="sw" style="background:#3d3a8c"></i>Category filed on Regulations.gov</span><span><i class="sw" style="background:#a8a5e0"></i>No category filed, assigned based on content</span><span>Select a bar to filter</span></div>
     <div class="panel chart" id="types-chart"></div>
   </section>
 
@@ -256,7 +260,7 @@ svg .infoi:hover circle, svg .infoi:focus circle, .ic:hover, .ic:focus { stroke:
     <div class="head">
       <h2>Comments</h2>
       <div class="filters">
-        <input class="field" id="search" type="search" placeholder="Search comments" aria-label="Search comments">
+        <input class="field" id="search" type="search" placeholder="Search names and summaries" aria-label="Search comments by name or summary">
         <label class="sortby"><span class="label" style="min-width:0">Sort</span>
           <select id="sort" class="select" aria-label="Sort comments">
             <option value="latest" selected>Latest</option>
@@ -484,7 +488,7 @@ function renderPos() {
     });
     el.innerHTML = `<svg viewBox="0 0 ${W} ${hh + props.length * rh}" width="100%">${out.join("")}</svg>`;
   }
-  el.querySelectorAll(".seg").forEach(s => bindPick(s, () => toggleSel(s.dataset.key, null, "pos")));
+  el.querySelectorAll(".seg").forEach(s => bindPick(s, () => { toggleSel(s.dataset.key, null, "pos"); const k = s.dataset.key; if (state.sel && k.endsWith(":conditional")) { const g = document.querySelector(`#pos .cnd[data-key^="${k.split(":")[0]}:"]`); if (g) { const r = g.getBoundingClientRect(); if (r.bottom > window.innerHeight) window.scrollBy({ top: r.bottom - window.innerHeight + 160, behavior: "smooth" }); } } }));
   el.querySelectorAll(".cnd").forEach(s => bindPick(s, () => toggleSel(s.dataset.key, null, "pos")));
   addIcons(el);
   document.getElementById("ariaMark").hidden = !(aria && state.posView === "all");
@@ -496,12 +500,12 @@ function renderPos() {
 
 function renderOpp() {
   const box = document.getElementById("oppPanel"), sk = state.sel && state.sel.lens === "pos" ? state.sel.key : "";
-  if (state.posView !== "all" || !sk.endsWith(":oppose")) { box.hidden = true; box.innerHTML = ""; return; }
+  if (state.posView !== "all" || !sk.endsWith(":oppose")) { box.hidden = true; box.innerHTML = ""; renderOpp.last = null; return; }
   const key = sk.split(":")[0], p = META.proposals.find(x => x.key === key), pool = filtered();
   const ids = new Set(pool.filter(c => (c.pos || {})[key] === "oppose").map(c => c.id));
   const rs = ((META.dissent || {})[key] || []).filter(r => ids.has(r.id));
   const opening = box.hidden; box.hidden = false;
-  if (opening) requestAnimationFrame(() => box.scrollIntoView({ block: "nearest", behavior: "smooth" }));
+  if (opening || renderOpp.last !== key) requestAnimationFrame(() => reveal(box)); renderOpp.last = key;
   box.innerHTML = `<p>Reasons given by comments opposing “${esc(p.label)}”${rs.length < ids.size ? ` (${ids.size - rs.length === 1 ? "one opposing comment is" : ids.size - rs.length + " opposing comments are"} counted but not shown at the author's request)` : ""}. Each is a short paraphrase; check the comment before quoting it.</p>
     <ul>${rs.map(r => { const c = BYID[r.id]; return `<li>${esc(r.reason)} <span style="color:var(--muted)">(${c ? esc(c.commenter_type) : ""}, <a href="https://www.regulations.gov/comment/${esc(r.id)}" target="_blank" rel="noopener">read comment</a>)</span></li>`; }).join("")}</ul>`;
 }
@@ -510,7 +514,7 @@ function renderOpp() {
 function renderRecs() {
   const el = document.getElementById("recs"), pool = filtered(), out = [];
   const cats = [...new Set(readable().map(c => c.commenter_type))].map(t => [t, readable().filter(c => c.commenter_type === t).length]).sort((a, b) => b[1] - a[1]).slice(0, 4).map(x => x[0]);
-  const DOT = ["#111111", "#00848a", "#7fb9bc", "#bbbbbb"], aria = state.pinned.includes("ARIA") ? new Set(META.aria.recs || []) : null;
+  const DOT = ["#3d3a8c", "#6f6bc2", "#a8a5e0", "#d4d2f2"], aria = state.pinned.includes("ARIA") ? new Set(META.aria.recs || []) : null;
   let rows = META.recs.map(r => { const hit = pool.filter(c => (c.recs || []).includes(r.key)); return { ...r, n: hit.length, by: cats.map(t => hit.filter(c => c.commenter_type === t).length), other: hit.filter(c => !cats.includes(c.commenter_type)).length }; }).filter(r => r.n > 0 || (aria && aria.has(r.key))).sort((a, b) => b.n - a.n);
   const total = rows.length; if (!state.recAll) rows = rows.slice(0, 15);
   const W = Math.max(360, el.clientWidth || 900), lw = 0, bw = W - 50, rh = 46, max = Math.max(1, ...rows.map(r => r.n));
@@ -520,13 +524,13 @@ function renderRecs() {
       <rect class="hit" x="0" y="${y}" width="${W}" height="${rh}" fill="transparent"></rect>
       <text x="0" y="${y + 16}" font-size="14" font-weight="500" fill="#111111" ${ff} data-tip="rec:${esc(r.key)}" data-icon="1">${esc(r.label)}${aria && aria.has(r.key) ? '<tspan font-weight="700" fill="#00848a"> *</tspan>' : ""}</text>`);
     let x = lw;
-    [...r.by, r.other].forEach((v, j) => { if (!v) return; const ww = v / max * bw; out.push(`<rect x="${x}" y="${y + 23}" width="${ww}" height="14" fill="${j < 4 ? DOT[j] : "#e6e6e6"}" stroke="${on ? "#00dfe9" : "none"}" stroke-width="2"><title>${j < 4 ? cats[j] : "Other categories"}: ${v}</title></rect>`); x += ww; });
+    [...r.by, r.other].forEach((v, j) => { if (!v) return; const ww = v / max * bw; out.push(`<rect x="${x}" y="${y + 23}" width="${ww}" height="14" fill="${j < 4 ? DOT[j] : "#ececec"}" stroke="${on ? "#00dfe9" : "none"}" stroke-width="2"><title>${j < 4 ? cats[j] : "Other categories"}: ${v}</title></rect>`); x += ww; });
     out.push(`<text x="${x + 8}" y="${y + 35}" font-size="13" fill="#111111" ${ff} style="font-variant-numeric:tabular-nums">${r.n}</text></g>`);
   });
   el.innerHTML = rows.length ? `<svg viewBox="0 0 ${W} ${rows.length * rh}" width="100%">${out.join("")}</svg>` : `<p class="empty">No recommendations in this selection.</p>`;
   el.querySelectorAll(".row").forEach(g => bindPick(g, () => toggleSel(g.dataset.key, null, "recs")));
   addIcons(el);
-  document.getElementById("recLegend").innerHTML = cats.map((t, j) => `<span><i class="sw" style="background:${DOT[j]}"></i>${esc(t)}</span>`).join("") + `<span><i class="sw" style="background:#e6e6e6"></i>Other categories</span><span style="flex-basis:100%;display:block">Number of comments making each recommendation. Select a row to view comments${aria ? '<br><b style="color:#00848a">*</b> indicates ARIA made this recommendation. No asterisk does not mean ARIA opposed it.' : ""}</span>`;
+  document.getElementById("recLegend").innerHTML = cats.map((t, j) => `<span><i class="sw" style="background:${DOT[j]}"></i>${esc(t)}</span>`).join("") + `<span><i class="sw" style="background:#ececec;outline:1px solid #d0d0d0"></i>Other categories</span><span style="flex-basis:100%;display:block">Number of comments making each recommendation. Select a row to view comments${aria ? '<br><b style="color:#00848a">*</b> indicates ARIA made this recommendation. No asterisk does not mean ARIA opposed it.' : ""}</span>`;
   const more = document.getElementById("recMore"); more.hidden = total <= 15; more.textContent = state.recAll ? "Show top 15" : `Show all ${total} recommendations`;
 }
 
@@ -544,7 +548,9 @@ function renderMain() {
   const max = Math.max(.05, ...rows.map(r => r.share));
   const cwid = document.getElementById("main").clientWidth || 900, narrow = cwid < 640;
   const W = Math.max(560, cwid), labelW = state.lens === "questions" ? 58 : (narrow ? 250 : 330), descW = state.lens === "questions" && !narrow ? Math.min(380, Math.round(W * .36)) : 0;
-  const x0 = labelW + descW + 10, barW = W - x0 - 60, rowH = 30;
+  const x0 = labelW + descW + 10, barW = W - x0 - 60;
+  const mc = renderMain.c || (renderMain.c = document.createElement("canvas").getContext("2d")); mc.font = "14px 'Fira Sans', Arial, sans-serif";
+  const wrap = (t, maxW) => { const lines = []; let cur = ""; t.split(" ").forEach(wd => { const nx = cur ? cur + " " + wd : wd; if (mc.measureText(nx).width > maxW && cur) { lines.push(cur); cur = wd; } else cur = nx; }); if (cur) lines.push(cur); return lines; };
   let y = 0, out = [], last = null;
   rows.forEach(r => {
     if (r.group && r.group !== last) {
@@ -553,13 +559,14 @@ function renderMain() {
       out.push(`<text x="0" y="${y + 18}" font-size="12" font-weight="700" letter-spacing="1" fill="#00848a" font-family="Fira Sans, Arial, sans-serif">${esc(sec.label.toUpperCase())}</text>`);
       y += 28; last = r.group;
     }
+    const lines = descW ? wrap(r.desc || "", descW - 30) : [], rowH = Math.max(30, 10 + lines.length * 18), mid = y + rowH / 2;
     const bw = r.share ? Math.max(2, r.share / max * barW) : 0, on = state.sel && state.sel.lens === state.lens && state.sel.key === r.key;
     out.push(`<g class="row${on ? " on" : ""}" data-key="${esc(r.key)}" tabindex="0" role="button" aria-label="${esc(r.label)}: ${pct(r.share)} of comments">
       <rect class="hit" x="0" y="${y}" width="${W}" height="${rowH}" fill="transparent"></rect>
-      <text x="0" y="${y + 20}" font-size="15" font-weight="${state.lens === "questions" ? 700 : 500}" fill="#111111" font-family="Fira Sans, Arial, sans-serif" ${descW ? "" : `data-tip="${state.lens === "questions" ? "q:" + r.key : state.lens === "sections" ? "sec:" + r.key : "theme:" + esc(r.key)}" data-icon="1"`}>${esc(r.label)}</text>
-      ${descW ? `<clipPath id="qclip${r.key}"><rect x="${labelW}" y="${y}" width="${descW - 26}" height="${rowH}"></rect></clipPath><g clip-path="url(#qclip${r.key})"><text class="qscroll" x="${labelW}" y="${y + 20}" font-size="14" fill="#555555" font-family="Fira Sans, Arial, sans-serif" data-tip="q:${r.key}" data-icon="1" data-maxw="${descW - 26}">${esc(r.desc)}</text></g>` : ""}
-      <rect class="bar" x="${x0}" y="${y + 7}" width="${bw}" height="${rowH - 14}" fill="#00848a" stroke="${on ? "#00dfe9" : "none"}" stroke-width="3"></rect>
-      <text x="${x0 + bw + 8}" y="${y + 20}" font-size="14" fill="#111111" font-family="Fira Sans, Arial, sans-serif" style="font-variant-numeric:tabular-nums">${pct(r.share)}</text>
+      <text x="0" y="${descW ? y + 20 : mid + 5}" font-size="15" font-weight="${state.lens === "questions" ? 700 : 500}" fill="#111111" font-family="Fira Sans, Arial, sans-serif" ${descW ? "" : `data-tip="${state.lens === "questions" ? "q:" + r.key : state.lens === "sections" ? "sec:" + r.key : "theme:" + esc(r.key)}" data-icon="1"`}>${esc(r.label)}</text>
+      ${descW ? `<text x="${labelW}" y="${y + 20}" font-size="14" fill="#555555" font-family="Fira Sans, Arial, sans-serif" data-tip="q:${r.key}" data-icon="1">${lines.map((l, k) => `<tspan x="${labelW}" dy="${k ? 18 : 0}">${esc(l)}</tspan>`).join("")}</text>` : ""}
+      <rect class="bar" x="${x0}" y="${mid - 8}" width="${bw}" height="16" fill="#00848a" stroke="${on ? "#00dfe9" : "none"}" stroke-width="3"></rect>
+      <text x="${x0 + bw + 8}" y="${mid + 5}" font-size="14" fill="#111111" font-family="Fira Sans, Arial, sans-serif" style="font-variant-numeric:tabular-nums">${pct(r.share)}</text>
     </g>`);
     y += rowH;
   });
@@ -613,7 +620,8 @@ function renderGrid() {
     cols.forEach((c, i) => {
       const v = r.val(c.key), on = state.sel && state.sel.lens === L && state.sel.key === c.key && (state.types.size === 1 ? (r.kind === "cat" && state.types.has(r.key)) : r.kind === "all");
       const tip = v === null ? `${r.label}: unreadable` : `${r.label}, ${c.label}: ${r.kind === "aria" || r.kind === "pin" ? (v ? "addressed" : "not addressed") : pct(v)}`;
-      out.push(`<rect class="cell" data-key="${esc(c.key)}" data-row="${esc(r.key)}" data-kind="${r.kind}" x="${lw + i * cw}" y="${y}" width="${cw - 2}" height="${rh - 3}" fill="${v === null ? "#f2f2f2" : shade(v)}" ${on ? 'stroke="#111111" stroke-width="2.5"' : ""}><title>${esc(tip)}</title></rect>`);
+      const few = r.kind === "cat" && r.n < 5;
+      out.push(`<rect class="cell" data-key="${esc(c.key)}" data-row="${esc(r.key)}" data-kind="${r.kind}" x="${lw + i * cw}" y="${y}" width="${cw - 2}" height="${rh - 3}" fill="${v === null ? "#f2f2f2" : shade(v)}" ${few ? 'opacity="0.3"' : ""} ${on ? 'stroke="#111111" stroke-width="2.5"' : ""}><title>${esc(tip)}${few ? " (fewer than 5 comments in this row)" : ""}</title></rect>`);
     });
     y += rh;
   });
@@ -623,13 +631,13 @@ function renderGrid() {
     toggleSel(el.dataset.key, kind === "cat" ? row : null, L);
   }));
   document.querySelectorAll("#grid .unpin").forEach(g => bindPick(g, () => { state.pinned = state.pinned.filter(x => x !== g.dataset.id); render(); }));
-  document.getElementById("rampKey").innerHTML = [0, .2, .4, .6, .8].map(v => `<i style="background:${shade(v)}"></i>`).join("") + `<span style="margin-left:6px">0% to 80%+</span>`;
+  document.getElementById("rampKey").innerHTML = [0, .2, .4, .6, .8].map(v => `<i style="background:${shade(v)}"></i>`).join("") + `<span style="margin-left:6px">0% to 80%+</span>` + (rows.some(r => r.kind === "cat" && r.n < 5) ? `<span style="margin-left:12px">Faded rows have fewer than 5 comments, so their percentages swing widely.</span>` : "");
 }
 
 function renderRowToggles(rows) {
   const menu = document.getElementById("rowMenu");
   menu.innerHTML = rows.map(r => `<label><input type="checkbox" data-key="${esc(r.key)}" ${state.hidden.has(r.key) ? "" : "checked"}><span>${esc(r.label)}${r.n ? ` <span class="num">(${r.n})</span>` : ""}</span></label>`).join("");
-  menu.querySelectorAll("input").forEach(i => i.onchange = () => { i.checked ? state.hidden.delete(i.dataset.key) : state.hidden.add(i.dataset.key); renderGrid(); });
+  menu.querySelectorAll("input").forEach(i => i.onchange = () => { i.checked ? state.hidden.delete(i.dataset.key) : state.hidden.add(i.dataset.key); renderGrid(); reveal(document.getElementById("grid"), "center"); });
   const shown = rows.filter(r => !state.hidden.has(r.key)).length;
   document.querySelector("#rowsDD summary").textContent = `Rows (${shown} of ${rows.length})`;
 }
@@ -639,7 +647,7 @@ function renderAddMenu() {
   const ariaOpt = (!q || "aria nsf ai research institute on interaction for ai assistants".includes(q)) ? `<label><input type="checkbox" data-id="ARIA" ${state.pinned.includes("ARIA") ? "checked" : ""}><span><span class="num">Pending</span> ARIA</span></label>` : "";
   const menu = document.getElementById("addMenu");
   menu.innerHTML = (list.length || ariaOpt) ? ariaOpt + list.map(c => `<label><input type="checkbox" data-id="${esc(c.id)}" ${state.pinned.includes(c.id) ? "checked" : ""}><span><span class="num">${esc(short(c.id))}</span> ${esc(nameOf(c))}</span></label>`).join("") : `<p class="note" style="margin:6px">No comments match.</p>`;
-  menu.querySelectorAll("input").forEach(i => i.onchange = () => togglePin(i.dataset.id));
+  menu.querySelectorAll("input").forEach(i => i.onchange = () => { togglePin(i.dataset.id); reveal(document.getElementById("grid"), "center"); });
   document.querySelector("#addDD summary").textContent = state.pinned.length ? `Add comments (${state.pinned.length})` : "Add comments";
 }
 
@@ -654,8 +662,8 @@ function renderTypes() {
       <rect class="hit" x="0" y="${y}" width="${W}" height="${rowH}" fill="transparent"></rect>
       <text x="0" y="${y + 19}" font-size="14" font-weight="${on ? 700 : 400}" fill="#111111" font-family="Fira Sans, Arial, sans-serif">${esc(t)}</text>
       <g opacity="${state.types.size && !on ? .3 : 1}">
-      <rect x="${x0}" y="${y + 7}" width="${full - inf}" height="${rowH - 14}" fill="${on ? "#00848a" : "#111111"}"></rect>
-      <rect x="${x0 + full - inf}" y="${y + 7}" width="${inf}" height="${rowH - 14}" fill="${on ? "#7fb9bc" : "#bbbbbb"}"></rect></g>
+      <rect x="${x0}" y="${y + 7}" width="${full - inf}" height="${rowH - 14}" fill="#3d3a8c"></rect>
+      <rect x="${x0 + full - inf}" y="${y + 7}" width="${inf}" height="${rowH - 14}" fill="#a8a5e0"></rect></g>
       <text x="${x0 + full + 8}" y="${y + 19}" font-size="14" fill="#111111" font-family="Fira Sans, Arial, sans-serif" style="font-variant-numeric:tabular-nums">${v.n}</text></g>`;
     y += rowH; return g;
   });
@@ -670,7 +678,7 @@ function renderTable() {
   let rows = D.filter(c => state.types.size === 0 || state.types.has(c.commenter_type));
   if (state.cat) rows = rows.filter(c => c.commenter_type === state.cat);
   if (state.sel) rows = rows.filter(c => itemsFor(c, state.sel.lens).includes(state.sel.key));
-  if (q) rows = rows.filter(c => !c.hidden && [c.id, c.org, c.title, c.commenter_type].join(" ").toLowerCase().includes(q));
+  if (q) rows = rows.filter(c => !c.hidden && [c.id, c.org, c.title, c.commenter_type, c.summary || ""].join(" ").toLowerCase().includes(q));
   const withheld = rows.filter(c => c.hidden).length; rows = rows.filter(c => !c.hidden);
   const note = document.getElementById("selNote"), clear = document.getElementById("clear");
   if (state.sel) {
@@ -705,22 +713,36 @@ function renderTable() {
   more.hidden = state.all || items.length <= limit; more.textContent = `Show all ${items.length} comments`;
   const shown = state.all ? items : items.slice(0, limit);
   const btn = (id) => `<button type="button" class="cmp" data-id="${esc(id)}" aria-pressed="${state.pinned.includes(id)}">${state.pinned.includes(id) ? "In grid" : "Add to grid"}</button>`;
+  const hl = (t, q) => { const i = t.toLowerCase().indexOf(q); return i < 0 ? esc(t) : esc(t.slice(0, i)) + "<mark>" + esc(t.slice(i, i + q.length)) + "</mark>" + esc(t.slice(i + q.length)); };
   const card = it => it.aria
     ? `<article class="card aria"><div class="top"><span class="who">ARIA</span>${btn("ARIA")}</div>
       <div class="meta"><span>Academia</span><span>Received Oct 19, 2026</span><span>Posting pending</span></div>
       ${facets(a.q_addr, a.topics)}</article>`
     : `<article class="card"><div class="top"><span class="who">${esc(it.name)}</span>${btn(it.c.id)}</div>
       <div class="meta"><a href="https://www.regulations.gov/comment/${esc(it.c.id)}" target="_blank" rel="noopener">${esc(short(it.c.id))}</a><span>${esc(it.c.commenter_type)}${it.c.type_inferred ? " (inferred)" : ""}</span><span>Received ${fmtD(it.c.received)}</span>${(it.c.also_filed || []).map(d => `<span>Also filed as <a href="https://www.regulations.gov/comment/${esc(d)}" target="_blank" rel="noopener">${esc(short(d))}</a></span>`).join("")}</div>
+      ${q && (it.c.summary || "").toLowerCase().includes(q) ? `<p class="sum"><span class="src">AI-written summary:</span> ${hl(it.c.summary, q)}</p>` : ""}
       ${it.c.unreadable ? '<div class="themes">Attachment unreadable, not coded</div>' : facets(it.c.q_addr, it.c.topics || [])}</article>`;
   document.getElementById("rows").innerHTML = shown.length ? shown.map(card).join("") : `<p class="empty">No comments match.</p>`;
   document.querySelectorAll("#rows .cmp").forEach(b => b.onclick = () => {
     const adding = !state.pinned.includes(b.dataset.id);
     togglePin(b.dataset.id);
-    if (adding) document.getElementById("grid").scrollIntoView({ behavior: "smooth", block: "end" });
+    if (adding) reveal(document.getElementById("grid"), "center");
   });
 }
 
 /* Interaction */
+// Bring a changed area into view if it is not already visible, then flash it so the change is easy to spot.
+function reveal(el, block = "start") {
+  if (!el) return;
+  const ctl = parseFloat(getComputedStyle(document.documentElement).getPropertyValue("--ctl-h")) || 0;
+  const r = el.getBoundingClientRect(), top = ctl + 8, visible = r.top >= top && r.top < window.innerHeight - 80;
+  if (!visible) {
+    const y = block === "center" ? window.scrollY + r.top - (window.innerHeight - r.height) / 2 : window.scrollY + r.top - top;
+    window.scrollTo({ top: Math.max(0, y), behavior: "smooth" });
+  }
+  el.classList.remove("flash"); void el.offsetWidth; el.classList.add("flash");
+}
+window.reveal = reveal;
 function bindPick(el, fn) { el.addEventListener("click", fn); el.addEventListener("keydown", e => { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); fn(); } }); }
 function toggleSel(key, cat, lens = state.lens) {
   const sameCat = cat ? (state.types.size === 1 && state.types.has(cat)) : true;
@@ -728,15 +750,12 @@ function toggleSel(key, cat, lens = state.lens) {
   state.sel = same ? null : { lens, key }; state.cat = null;
   if (cat) state.types = same ? new Set() : new Set([cat]);
   state.all = false; render();
-  if (!same) {
-    const side = document.getElementById("side");
-    if (matchMedia("(min-width: 1100px)").matches) side.scrollTo({ top: 0, behavior: "smooth" });
-    else document.getElementById("rows").scrollIntoView({ behavior: "smooth", block: "start" });
-  }
+  if (!same) showSide();
 }
 function showSide() {
-  if (matchMedia("(min-width: 1100px)").matches) document.getElementById("side").scrollTo({ top: 0, behavior: "smooth" });
-  else document.getElementById("rows").scrollIntoView({ behavior: "smooth", block: "start" });
+  const head = document.querySelector("#side .head");
+  if (matchMedia("(min-width: 1100px)").matches) { document.getElementById("side").scrollTo({ top: 0, behavior: "smooth" }); head.classList.remove("flash"); void head.offsetWidth; head.classList.add("flash"); }
+  else reveal(head);
 }
 function togglePin(id) {
   if (state.pinned.includes(id)) state.pinned = state.pinned.filter(x => x !== id);
@@ -759,14 +778,14 @@ function init() {
   document.getElementById("catMenu").innerHTML = types.map(t => `<label><input type="checkbox" data-v="${esc(t)}"><span>${esc(t)} <span class="num">(${counts[t]})</span></span></label>`).join("") + `<button type="button" class="textbtn" id="catClear" style="justify-self:start;margin:6px">Show all categories</button>`;
   document.querySelectorAll("#catMenu input").forEach(i => i.onchange = () => { i.checked ? state.types.add(i.dataset.v) : state.types.delete(i.dataset.v); render(); showSide(); });
   document.getElementById("catClear").onclick = () => { state.types.clear(); render(); };
-  document.querySelectorAll("#lens .pill").forEach(b => b.onclick = () => { state.lens = b.dataset.v; state.sel = null; state.cat = null; render(); });
+  document.querySelectorAll("#lens .pill").forEach(b => b.onclick = () => { state.lens = b.dataset.v; state.sel = null; state.cat = null; render(); reveal(document.getElementById("covSection")); });
   document.getElementById("search").addEventListener("input", e => { state.q = e.target.value; renderTable(); });
   document.getElementById("sort").addEventListener("change", e => { state.sort = e.target.value; state.all = false; renderTable(); document.getElementById("side").scrollTo({ top: 0 }); });
   document.getElementById("clear").onclick = () => { state.sel = null; state.cat = null; state.types.clear(); render(); };
   document.getElementById("more").onclick = () => { state.all = true; renderTable(); };
-  document.querySelectorAll("#posSort .pill").forEach(b => b.onclick = () => { state.posSort = b.dataset.v; document.querySelectorAll("#posSort .pill").forEach(x => x.setAttribute("aria-pressed", String(x.dataset.v === state.posSort))); renderPos(); });
+  document.querySelectorAll("#posSort .pill").forEach(b => b.onclick = () => { state.posSort = b.dataset.v; document.querySelectorAll("#posSort .pill").forEach(x => x.setAttribute("aria-pressed", String(x.dataset.v === state.posSort))); renderPos(); reveal(document.getElementById("pos")); });
   document.querySelectorAll("#posView .pill").forEach(b => b.onclick = () => { state.posView = b.dataset.v; document.querySelectorAll("#posView .pill").forEach(x => x.setAttribute("aria-pressed", String(x.dataset.v === state.posView))); renderPos(); });
-  document.getElementById("recMore").onclick = () => { state.recAll = !state.recAll; renderRecs(); };
+  document.getElementById("recMore").onclick = () => { state.recAll = !state.recAll; renderRecs(); if (!state.recAll) reveal(document.getElementById("recSection")); };
   document.querySelectorAll("#gcols .pill").forEach(b => b.onclick = () => { state.gcols = b.dataset.v; render(); });
   document.getElementById("addSearch").addEventListener("input", renderAddMenu);
   document.addEventListener("click", e => document.querySelectorAll(".dd[open]").forEach(d => { if (!d.contains(e.target)) d.open = false; }));

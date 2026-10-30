@@ -39,6 +39,9 @@ s = swap(s, "family=Fira+Sans:wght@400;500;700", "family=Public+Sans:wght@400;50
 s = swap(s, '--sans: "Fira Sans", Arial, sans-serif;', '--sans: "Public Sans", Arial, sans-serif;')
 s = swap(s, "c.font = \"500 14px 'Fira Sans', Arial, sans-serif\";", "c.font = \"500 16px 'Public Sans', Arial, sans-serif\";")
 s = s.replace("Fira Sans, Arial, sans-serif", "Public Sans, Arial, sans-serif")
+s = swap(s, "mc.font = \"14px 'Fira Sans', Arial, sans-serif\";", "mc.font = \"16px 'Public Sans', Arial, sans-serif\";")
+s = swap(s, '<tspan x="${labelW}" dy="${k ? 18 : 0}">', '<tspan x="${labelW}" dy="${k ? 20 : 0}">')
+s = swap(s, "rowH = Math.max(30, 10 + lines.length * 18)", "rowH = Math.max(32, 12 + lines.length * 20)")
 s = swap(s, 'font-size="${cw < 130 ? 11 : 12}"', 'font-size="${cw < 130 ? 13 : 14}"')
 s = re.sub(r'font-size="(\d+)"', lambda m: f'font-size="{max(13, int(m.group(1)) + 2)}"', s)
 
