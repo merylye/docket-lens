@@ -39,6 +39,8 @@ Coding is approximate. Check a comment's original text before quoting or citing 
 
 The docket has 203 posted comments. The charts count 197, because six documents were each filed twice (0102 and 0117, 0057 and 0058, 0010 and 0013, 0128 and 0129, 0040 and 0041, 0174 and 0175). Each is counted once under the earlier filing, whose card links to the second. Where the two copies had been coded differently, the code follows the disagreement rule above.
 
+Comments known to be filed but not yet posted by FDA are listed in `pipeline/pending.json`. They appear in the comment list and can be added to the grid, marked "Posting pending," but are not counted in any chart. The Stanford HAI and Stanford School of Medicine response (filed October 19, 2026, from the letter published at hai.stanford.edu) is listed this way. It was coded from the published letter by two independent coders, who agreed on all 17 positions; questions, conditions, and recommendation groups are kept only where both agreed. When FDA posts it, code the posted version with the rest and remove the entry.
+
 One commenter asked that their comment not be used this way. It is counted in the charts but has no card, and its coding is kept in `pipeline/private/`, which is not committed.
 
 Categories come from Regulations.gov. Comments filed without one were assigned a category from their content and are marked "inferred." A few comments are filed under a category that does not match their content, and the site keeps the filed category.
