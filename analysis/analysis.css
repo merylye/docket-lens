@@ -82,7 +82,7 @@ h2 { font-size: 26px; }
 /* Layout: shared label column per box, stacked cards, readable line length, darker helper text. */
 .af .row { grid-template-columns: var(--lw, minmax(0, 1fr)) minmax(0, 1fr) 84px; gap: 16px; }
 .af .measuring > .row { grid-template-columns: max-content minmax(0, 1fr) 84px; }
-.af .measuring > .row > .lab { white-space: nowrap; }
+.af .measuring > .row > .lab, .af .measuring > .oth > .row > .lab { white-space: nowrap; }
 .af .cards.stack { grid-template-columns: minmax(0, 1fr); }
 .af .card ul.rs:not(.sumlist) li { max-width: 100ch; }
 .af .note, .note, .af .sub, .legend, .tag, .inferred, .bp .plist .qn { color: #3d3d3d; }

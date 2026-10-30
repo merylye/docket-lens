@@ -1,5 +1,7 @@
 /* Key findings and By proposal views. Everything is computed from the same data the Explore view reads,
-   so the numbers stay current as comments are added. Thresholds are stated next to each list. */
+   so the numbers stay current as comments are added. Proposals are ranked rather than sorted into lists by
+   cutoffs, so a few changed codes cannot move a proposal on or off a list. Where the leaders are within a few
+   points of the next proposal, the summary names them together as a close group. */
 (function () {
   const COL = { support: "#00848a", conditional: "#bbbbbb", oppose: "#111111" };
   const GROUPS = [
@@ -9,9 +11,8 @@
     ["Academia, government, and other", ["Academia", "Government", "Other"]],
   ];
   const T = {
-    endorse: 0.6,   // share supporting without conditions
-    cond: 0.8,      // share supporting with conditions
-    contest: 0.2,   // share opposing
+    close: 0.05,    // shares within this many points of each other are named together
+    closeN: 2,      // condition counts within this many comments of the top one are shown as close
     minN: 15,       // minimum comments with a position for the consensus and contention lists
     minGroup: 5,    // minimum comments with a position before a group split is shown
     minCond: 5,     // minimum comments naming a condition before it is listed as the top condition
@@ -45,16 +46,21 @@
   function findings() {
     const rows = people(), P = META.proposals.map(p => ({ p, n: counts(rows, p.key) })).filter(x => x.n.total >= T.minN);
     const row = (x, val, key, num) => `<div class="row click" data-go="${esc(key)}" tabindex="0" role="button"><span class="lab">${pl(x.p)}</span>${sbar(x.n)}<span class="num">${num}</span></div>`;
-    const endorsed = P.filter(x => x.n.support / x.n.total >= T.endorse).sort((a, b) => b.n.support / b.n.total - a.n.support / a.n.total);
-    const condd = P.filter(x => x.n.conditional / x.n.total >= T.cond).sort((a, b) => b.n.conditional / b.n.total - a.n.conditional / a.n.total);
-    const contested = P.filter(x => x.n.oppose / x.n.total >= T.contest).sort((a, b) => b.n.oppose / b.n.total - a.n.oppose / a.n.total);
+    const sh = st => x => x.n[st] / x.n.total;
+    const ranked = st => [...P].sort((a, b) => sh(st)(b) - sh(st)(a));
+    // The top k, plus any proposal within T.close of the k-th, so near-ties are named together.
+    const lead = (st, k) => { const r = ranked(st).filter(x => x.n[st]); if (!r.length) return []; const cut = sh(st)(r[Math.min(k, r.length) - 1]) - T.close; return r.filter((x, i) => i < k || sh(st)(x) >= cut); };
+    const bySupport = ranked("support");
+    const opposed = ranked("oppose").filter(x => x.n.oppose);
+    const small = META.proposals.map(p => ({ p, n: counts(rows, p.key) })).filter(x => x.n.total < T.minN);
 
 
     const top = META.proposals.map(p => {
       const cond = rows.filter(c => (c.pos || {})[p.key] === "conditional");
       const tally = {}; cond.forEach(c => ((c.conds || {})[p.key] || []).forEach(g => { if (g !== "other") tally[g] = (tally[g] || 0) + 1; }));
-      const best = Object.entries(tally).sort((a, b) => b[1] - a[1])[0];
-      return best && best[1] >= T.minCond ? { p, g: best[0], n: best[1], of: cond.length } : null;
+      const ord = Object.entries(tally).sort((a, b) => b[1] - a[1]), best = ord[0];
+      const near = ord.slice(1).filter(([, n]) => best && n >= best[1] - T.closeN).map(([g, n]) => ({ g, n }));
+      return best && best[1] >= T.minCond ? { p, g: best[0], n: best[1], of: cond.length, near } : null;
     }).filter(Boolean);
     const topMax = Math.max(1, ...top.map(t => t.of));
 
@@ -63,13 +69,15 @@
 
     const tot = { support: 0, conditional: 0, oppose: 0 }; META.proposals.forEach(p => { const n = counts(rows, p.key); tot.support += n.support; tot.conditional += n.conditional; tot.oppose += n.oppose; });
     const T3 = tot.support + tot.conditional + tot.oppose, nm = x => `${esc(Q(x.p))} ${esc(x.p.label.toLowerCase())}`;
-    const topConds = [...top].sort((a, b) => b.n - a.n).slice(0, 2);
+    const tc = [...top].sort((a, b) => b.n - a.n), topConds = tc.filter((t, i) => i < 2 || t.n >= tc[1].n - T.closeN);
+    const list = (xs, f) => xs.length < 2 ? xs.map(f).join("") : xs.slice(0, -1).map(f).join(", ") + (xs.length > 2 ? "," : "") + " and " + f(xs[xs.length - 1]);
+    const sup = lead("support", 2), con = lead("conditional", 2), opp = lead("oppose", 1);
     const sum = [
       `Commenters accepted most of FDA's proposals. Across the 17 proposals, ${pc(tot.support, T3)} of positions were support, ${pc(tot.conditional, T3)} were support with conditions, and ${pc(tot.oppose, T3)} were opposition.`,
-      endorsed.length ? `The broadest support without conditions went to ${endorsed.slice(0, 2).map(x => `${nm(x)} (${pc(x.n.support, x.n.total)})`).join(" and ")}.` : "",
-      condd.length ? `Proposals accepted mostly with conditions include ${condd.slice(0, 2).map(x => `${nm(x)} (${pc(x.n.conditional, x.n.total)})`).join(" and ")}.` : "",
-      topConds.length ? `The most requested conditions were ${topConds.map(t => `“${esc(condLabel(t.p.key, t.g))}” for ${esc(Q(t.p))} ${esc(t.p.label.toLowerCase())} (${t.n} comments)`).join(" and ")}.` : "",
-      contested.length ? `Opposition was concentrated on ${contested.map(x => `${nm(x)} (${x.n.oppose} of ${x.n.total} opposed)`).join(" and ")}.` : "",
+      sup.length ? `Support without conditions was highest for ${list(sup, x => `${nm(x)} (${pc(x.n.support, x.n.total)})`)}.` : "",
+      con.length ? `Support with conditions was most common for ${list(con, x => `${nm(x)} (${pc(x.n.conditional, x.n.total)})`)}.` : "",
+      topConds.length ? `The most requested conditions were ${list(topConds, t => `“${esc(condLabel(t.p.key, t.g))}” for ${esc(Q(t.p))} ${esc(t.p.label.toLowerCase())} (${t.n} comments)`)}.` : "",
+      opp.length ? `Opposition was highest for ${list(opp, x => `${nm(x)} (${x.n.oppose} of ${x.n.total})`)}. No other proposal drew opposition from more than ${pc(Math.max(0, ...opposed.filter(x => !opp.includes(x)).map(x => x.n.oppose / x.n.total)) * 100, 100)} of the comments that took a position on it.` : "",
     ].filter(Boolean);
     const isInd = c => groupOf(c) === GROUPS[0][0];
     const share = (rs, k, st) => { const n = counts(rs, k); return n.total ? pc(n[st], n.total) : "none"; };
@@ -82,12 +90,6 @@
 
     const DIS = META.dissent || {}, who = id => { const c = BYID[id]; return c ? `${esc(c.commenter_type)}, <a href="https://www.regulations.gov/comment/${esc(id)}" target="_blank" rel="noopener">read comment</a>` : ""; };
     const reasons = k => (DIS[k] || []).map(r => `<li><span>${esc(r.reason)}</span> <span class="note">(${who(r.id)})</span></li>`).join("");
-    const contestedKeys = new Set(contested.map(x => x.p.key));
-    const others = META.proposals.map(p => ({ p, n: counts(rows, p.key) })).filter(x => x.n.oppose && !contestedKeys.has(x.p.key)).sort((a, b) => b.n.oppose - a.n.oppose);
-    const diverge = [];
-    META.proposals.forEach(p => { const all = counts(rows, p.key); if (contestedKeys.has(p.key) || !all.total) return;
-      GROUPS.forEach(([g]) => { const n = counts(rows.filter(c => groupOf(c) === g), p.key); if (n.total >= 4 && n.oppose >= 2 && n.oppose / n.total >= 0.3) diverge.push({ p, g, n, all }); }); });
-
     const NP = (META.nopos || []).filter(x => x.kind === "outside_framing" || x.kind === "general_objection");
     const npKinds = {}; (META.nopos || []).forEach(x => npKinds[x.kind] = (npKinds[x.kind] || 0) + 1);
     const OQ = META.open_questions || [];
@@ -100,19 +102,15 @@
         <div class="cats">${catRows.map(([t, n]) => `<div class="row"><span class="lab">${esc(t)}</span>${lbar(n, rows.length)}<span class="num">${n}</span></div>`).join("")}</div>
         
       </div></div></section>
-      <section><h2>Points of consensus</h2>${legend}${defn}<div class="cards">
-        <div class="card"><h3>Largely endorsed as written in the docket</h3>${endorsed.map(x => crow(x, "support")).join("") || '<p class="note">None at this threshold.</p>'}</div>
-        <div class="card"><h3>Accepted with added conditions</h3>${condd.map(x => crow(x, "conditional")).join("") || '<p class="note">None at this threshold.</p>'}
-          <p class="note">Select a bar to see added conditions. Listed when at least ${T.cond * 100}% supported with conditions.</p></div>
-      </div></section>
+      <section><h2>Positions on each proposal</h2>${legend}${defn}<div class="cards"><div class="card" style="grid-column:1/-1">
+        ${bySupport.map(x => row(x, 0, x.p.key + ":support", `${pc(x.n.support, x.n.total)} · ${pc(x.n.conditional, x.n.total)}`) + `<div class="note sub">${x.n.total} took a position · Industry ${share(rows.filter(isInd), x.p.key, "support")} · Everyone else ${share(rows.filter(c => !isInd(c)), x.p.key, "support")} without conditions</div>`).join("")}
+        <p class="note">Ranked by the share supporting without conditions, followed by the share supporting with conditions. Shares are out of the comments that took a position on each proposal. Proposals close together in this ranking are effectively tied; individual position codes are approximate. Select a bar to read those comments.${small.length ? ` Not shown because fewer than ${T.minN} comments took a position: ${small.map(x => esc(Q(x.p)) + " " + esc(x.p.label)).join("; ")}.` : ""}</p>
+      </div></div></section>
       <section><h2>Most requested conditions</h2><div class="cards"><div class="card" style="grid-column:1/-1">
-        ${top.map(t => `<div class="row click" data-go="${esc(t.p.key)}:conditional:${esc(t.g)}" tabindex="0" role="button"><span class="lab">${pl(t.p)}</span><span class="lab2">${esc(condLabel(t.p.key, t.g))}</span>${lbar(t.n, topMax)}<span class="num">${t.n} of ${t.of}</span></div>`).join("")}
-        <p class="note">For each proposal, the condition named most often by comments that supported it with conditions. Shown when at least ${T.minCond} comments named it. Select a row to read them.</p></div></div></section>
-      <section><h2>Points of dissent</h2><p class="note">Proposals where at least ${T.contest * 100}% of comments that took a position opposed it, with each opposing comment's reason.</p><div class="cards stack">
-        ${contested.map(x => { const lines = GROUPS.map(([g]) => { const n = counts(rows.filter(c => groupOf(c) === g), x.p.key); return !n.total ? "" : n.total < T.minGroup ? `<div class="row"><span class="lab">${esc(g)}</span><span class="note">Fewer than ${T.minGroup} took a position</span><span class="num">${n.total}</span></div>` : `<div class="row"><span class="lab">${esc(g)}</span>${sbar(n)}<span class="num">${n.oppose} of ${n.total}</span></div>`; }).join("");
-          return `<div class="card"><h3>${pl(x.p)}</h3><div class="row"><span class="lab"><b>All commenters</b></span>${sbar(x.n)}<span class="num">${x.n.oppose} of ${x.n.total}</span></div>${lines}<p class="note">Comments opposing, out of those in each group that took a position.</p>${reasons(x.p.key) ? `<p class="note">Reasons given</p><ul class="rs">${reasons(x.p.key)}</ul>` : ""}<button class="go" data-go="${esc(x.p.key)}:oppose">Read the ${x.n.oppose} opposing comments</button></div>`; }).join("") || '<p class="note">None at this threshold.</p>'}
-        ${diverge.length ? `<div class="card"><h3>Opposition within one group</h3>${diverge.map(d => `<div class="row click" data-go="${esc(d.p.key)}:oppose" tabindex="0" role="button"><span class="lab">${pl(d.p)}, ${esc(d.g)}</span>${sbar(d.n)}<span class="num">${d.n.oppose} of ${d.n.total}</span></div>`).join("")}<p class="note">Proposals below the threshold overall where at least 30% of one group opposed, with at least 2 opposing and 4 taking a position.</p></div>` : ""}
-        ${others.length ? `<div class="card" style="grid-column:1/-1"><h3>Opposition on other proposals</h3>${others.map(x => `<div class="oth"><button class="go" data-go="${esc(x.p.key)}:oppose">${esc(Q(x.p))} ${esc(x.p.label)}, ${x.n.oppose} of ${x.n.total}</button>${reasons(x.p.key) ? `<ul class="rs">${reasons(x.p.key)}</ul>` : ""}</div>`).join("")}</div>` : ""}
+        ${top.map(t => `<div class="row click" data-go="${esc(t.p.key)}:conditional:${esc(t.g)}" tabindex="0" role="button"><span class="lab">${pl(t.p)}</span><span class="lab2">${esc(condLabel(t.p.key, t.g))}${t.near.length ? `<span class="note" style="display:block">Close behind: ${t.near.slice(0, 2).map(x => `${esc(condLabel(t.p.key, x.g))} (${x.n})`).join("; ")}${t.near.length > 2 ? `; ${t.near.length - 2} more` : ""}</span>` : ""}</span>${lbar(t.n, topMax)}<span class="num">${t.n} of ${t.of}</span></div>`).join("")}
+        <p class="note">For each proposal, the condition named most often by comments that supported it with conditions. Shown when at least ${T.minCond} comments named it. When another condition was named by nearly as many, it is listed as close behind. Select a row to read them.</p></div></div></section>
+      <section><h2>Opposition</h2><p class="note">Every proposal that drew opposition, ranked by the share of comments that took a position and opposed it, with each opposing comment's reason. Opposition was rare overall, so small changes in coding can reorder this list.</p><div class="cards stack">
+        ${opposed.length ? `<div class="card" style="grid-column:1/-1">${opposed.map(x => `<div class="oth"><div class="row click" data-go="${esc(x.p.key)}:oppose" tabindex="0" role="button"><span class="lab">${pl(x.p)}</span>${sbar(x.n)}<span class="num">${x.n.oppose} of ${x.n.total}</span></div>${reasons(x.p.key) ? `<ul class="rs">${reasons(x.p.key)}</ul>` : ""}</div>`).join("")}<p class="note">The By proposal tab shows how each commenter group responded.</p></div>` : '<p class="note">No proposal drew opposition.</p>'}
       </div></section>
       <section><h2>Coverage gaps</h2><div class="cards stack">
         <div class="card"><h3>Least addressed questions</h3>${qs.map(x => `<div class="row click" data-q="${x.q.n}" tabindex="0" role="button"><span class="lab">Q${x.q.n} ${esc(x.q.label)}</span>${lbar(x.n, rows.length)}<span class="num">${pc(x.n, rows.length)}</span></div>`).join("")}<p class="note">Share of all comments that substantively addressed the question.</p></div>
@@ -125,6 +123,7 @@
         <li>Positions were recoded for every comment on October 28 and 29, 2026, under one set of instructions. In a blind recode of 15 random comments, coders agreed on 64% of codes where either took a position, so treat individual position codes as approximate.</li>
         <li>Each comment counts once. Duplicate filings of the same document are counted once.</li>
         <li>"Support with conditions" includes comments that endorsed a proposal while listing requirements they treated as necessary. Where coders disagreed, the code leans toward support with conditions or no position.</li>
+        <li>Proposals are ranked, not sorted into lists by cutoffs, so a few changed codes reorder neighbors instead of changing what is listed. The summary names leaders together when they are within ${T.close * 100} points of each other.</li>
         <li>Reasons for opposition and summaries of other comments are short paraphrases. Check a comment's original text before quoting or citing it.</li>
       </ul></div></details></section>
       ${footer()}</div>`;
@@ -179,10 +178,11 @@
   }
   // Rows in one box share a label column as wide as their longest label, capped at 45% of the box.
   function align(root) {
-    const boxes = new Set([...root.querySelectorAll(".row")].map(r => r.parentElement));
+    const boxOf = r => r.parentElement.classList.contains("oth") ? r.parentElement.parentElement : r.parentElement;
+    const boxes = new Set([...root.querySelectorAll(".row")].map(boxOf));
     boxes.forEach(b => {
       b.style.removeProperty("--lw"); b.style.removeProperty("--lw2"); b.classList.remove("duo"); const bw = b.clientWidth; b.classList.add("measuring");
-      const wid = sel => Math.max(0, ...[...b.querySelectorAll(":scope > .row > " + sel)].map(l => l.getBoundingClientRect().width));
+      const wid = sel => Math.max(0, ...[...b.querySelectorAll(":scope > .row > " + sel + ", :scope > .oth > .row > " + sel)].map(l => l.getBoundingClientRect().width));
       const w = wid(".lab"), w2 = wid(".lab2");
       b.classList.remove("measuring");
       const cap = Math.round(bw * (w2 ? .3 : .45));

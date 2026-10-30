@@ -32,12 +32,6 @@ s = swap(s, 'fetch("data/meta.json")', 'fetch("../data/meta.json")')
 s = swap(s, "D = c; META = m; init(); })", "D = c; META = m; document.fonts.ready.then(() => { init(); if (window.analysisInit) analysisInit(); }); })")
 s = swap(s, "</body>", '<script src="analysis.js"></script>\n</body>')
 
-# Theme coding matched only 39% in a blind check, so the analysis page leaves themes out.
-s = swap(s, '      <button type="button" class="pill" data-v="topics" aria-pressed="false">Additional themes</button>\n', '')
-s = swap(s, '</div>\n      <div class="facet"><span>Additional themes</span>${themes.length ? `<span>${themes.map(esc).join(" · ")}</span>` : `<span class="none">None</span>`}</div>`;', '</div>`;')
-
-s = swap(s, "[c.id, c.org, c.title, c.commenter_type, ...(c.topics || []), ...(c.tags || [])]", "[c.id, c.org, c.title, c.commenter_type]")
-
 # The disclaimer sits in the Key findings intro, so the footer drops the coding line.
 s = swap(s, "  <p>Coding is approximate and was done with Claude Opus 5.5. Check a comment's original text before quoting or citing it.</p>\n", "")
 
