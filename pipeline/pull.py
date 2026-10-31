@@ -25,13 +25,14 @@ def get(url):
 
 ids, page = [], 1
 while True:
-    q = urllib.parse.urlencode({"filter[docketId]": DOCKET, "page[size]": 250, "page[number]": page, "api_key": KEY})
+    q = urllib.parse.urlencode({"filter[docketId]": DOCKET, "sort": "documentId", "page[size]": 250, "page[number]": page, "api_key": KEY})
     d = get(f"{BASE}/comments?{q}")
     ids += [x["id"] for x in d["data"]]
     if not d["meta"]["hasNextPage"]:
         break
     page += 1
 
+ids = list(dict.fromkeys(ids))  # pages can overlap; keep each ID once
 rows = []
 for cid in ids:
     d = get(f"{BASE}/comments/{cid}?include=attachments&api_key={KEY}")
@@ -40,6 +41,7 @@ for cid in ids:
              for inc in d.get("included", []) for f in (inc["attributes"].get("fileFormats") or [])]
     rows.append({"id": cid, "title": a.get("title"), "category": a.get("category"),
                  "posted": a.get("postedDate"), "received": a.get("receiveDate"),
-                 "comment": a.get("comment"), "files": files})
+                 "comment": a.get("comment"), "files": files,
+                 "pending_files": [inc["attributes"].get("title") for inc in d.get("included", []) if not inc["attributes"].get("fileFormats")]})
 json.dump(rows, open(os.path.join(OUT, "comments.json"), "w"), indent=1)
 print(f"{len(rows)} comments, {sum(len(r['files']) for r in rows)} attachments")

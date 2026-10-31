@@ -24,12 +24,14 @@ def get(url):
 
 ids, page = [], 1
 while True:
-    q = urllib.parse.urlencode({"filter[docketId]": DOCKET, "page[size]": 250, "page[number]": page, "api_key": KEY})
+    q = urllib.parse.urlencode({"filter[docketId]": DOCKET, "sort": "documentId", "page[size]": 250, "page[number]": page, "api_key": KEY})
     d = get(f"https://api.regulations.gov/v4/comments?{q}")
     ids += [x["id"] for x in d["data"]]
     if not d["meta"]["hasNextPage"]:
         break
     page += 1
+
+ids = sorted(set(ids))  # pages can overlap; keep each ID once
 
 if "--update" in sys.argv:
     open(KNOWN, "w").write("\n".join(sorted(h(i) for i in ids)) + "\n")
