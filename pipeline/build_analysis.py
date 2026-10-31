@@ -26,6 +26,7 @@ s = swap(s, '<div id="view-proposals" class="view" role="tabpanel" hidden></div>
          '<div id="view-findings" class="view" role="tabpanel"></div>\n<div id="view-proposals" class="view" role="tabpanel" hidden></div>\n')
 s = swap(s, 'fetch("data/comments.json")', 'fetch("../data/comments.json")')
 s = swap(s, 'fetch("data/meta.json")', 'fetch("../data/meta.json")')
+s = swap(s, 'fetch("data/docket_status.json")', 'fetch("../data/docket_status.json")')
 s = swap(s, "D = c; META = m; init(); if (window.analysisInit) analysisInit(); })", "D = c; META = m; document.fonts.ready.then(() => { init(); if (window.analysisInit) analysisInit(); }); })")
 s = swap(s, '<script src="views.js"></script>', '<script src="../views.js"></script>')
 

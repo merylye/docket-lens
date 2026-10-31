@@ -6,7 +6,7 @@ on:
   workflow_dispatch:
 
 permissions:
-  contents: read
+  contents: write
   issues: write
 
 env:
@@ -30,8 +30,18 @@ jobs:
         env:
           REGULATIONS_GOV_API_KEY: ${{ secrets.REGULATIONS_GOV_API_KEY }}
         run: |
-          python3 pipeline/check_new.py > new.txt
+          python3 pipeline/check_new.py --status > new.txt
           echo "count=$(grep -c . new.txt || true)" >> "$GITHUB_OUTPUT"
+
+      - name: Record the posted count for the site
+        if: steps.window.outputs.active == 'true'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/docket_status.json
+          git diff --cached --quiet && exit 0
+          git commit -m "Update docket posted count"
+          git pull --rebase && git push
 
       - name: Open or update an issue
         if: steps.window.outputs.active == 'true' && steps.check.outputs.count != '0'

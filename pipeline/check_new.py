@@ -3,7 +3,8 @@
 Used by .github/workflows/check-new-comments.yml. Known comments are stored as
 SHA-256 hashes of their IDs in pipeline/known_comments.txt, so the repo does not
 list every comment ID in plain text. Prints new comment IDs, one per line.
-Run with --update to record the current docket as known.
+Run with --update to record the current docket as known, and with --status to
+write the posted count and check date to data/docket_status.json for the site.
 """
 import hashlib, json, os, sys, time, urllib.parse, urllib.request
 
@@ -34,6 +35,10 @@ if "--update" in sys.argv:
     open(KNOWN, "w").write("\n".join(sorted(h(i) for i in ids)) + "\n")
     print(f"Recorded {len(ids)} comments as known", file=sys.stderr)
     sys.exit(0)
+
+if "--status" in sys.argv:
+    out = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "data", "docket_status.json")
+    json.dump({"posted": len(ids), "checked": time.strftime("%Y-%m-%d", time.gmtime())}, open(out, "w"), indent=1)
 
 known = set(open(KNOWN).read().split()) if os.path.exists(KNOWN) else set()
 new = sorted(i for i in ids if h(i) not in known)
