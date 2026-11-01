@@ -117,7 +117,7 @@ for cid, r in sorted(raw.items()):
         "commenter_type": c["commenter_type"], "type_inferred": bool(c.get("type_inferred")),
         "org": c.get("org") or "", "domain": c.get("domain"),
         "q_cited": sorted(set(c.get("questions_cited") or [])), "q_addr": sorted(set(c.get("questions_addressed") or [])),
-        "topics": topics, "tags": tags, "summary": c.get("summary") or "",
+        "topics": topics, "tags": tags, "summary": "",
         "words": c.get("words"), "pages": c.get("pages") or None,
         "posted": r["posted"], "received": r["received"], "unreadable": bool(c.get("unreadable")), "ai_disclosed": cid in AI_DISCLOSED,
         "pos": {k: v for k, v in (codes2.get(cid, {}).get("positions") or {}).items() if v},

@@ -271,7 +271,7 @@ svg .infoi:hover circle, svg .infoi:focus circle, .ic:hover, .ic:focus { stroke:
     <div class="head">
       <h2>Comments</h2>
       <div class="filters">
-        <input class="field" id="search" type="search" placeholder="Search names and summaries" aria-label="Search comments by name or summary">
+        <input class="field" id="search" type="search" placeholder="Search names, categories, or comment numbers" aria-label="Search comments by name, category, or comment number">
         <label class="sortby"><span class="label" style="min-width:0">Sort</span>
           <select id="sort" class="select" aria-label="Sort comments">
             <option value="latest" selected>Latest</option>
@@ -520,7 +520,7 @@ function renderOpp() {
   const opening = box.hidden; box.hidden = false;
   if (opening || renderOpp.last !== key) requestAnimationFrame(() => reveal(box)); renderOpp.last = key;
   box.innerHTML = `<p>Reasons given by comments opposing “${esc(p.label)}”${rs.length < ids.size ? ` (${ids.size - rs.length === 1 ? "one opposing comment is" : ids.size - rs.length + " opposing comments are"} counted but not shown at the author's request)` : ""}. Each is a short paraphrase; check the comment before quoting it.</p>
-    <ul>${rs.map(r => { const c = BYID[r.id]; return `<li>${esc(r.reason)} <span style="color:var(--muted)">(${c ? esc(c.commenter_type) : ""}, <a href="https://www.regulations.gov/comment/${esc(r.id)}" target="_blank" rel="noopener">read comment</a>)</span></li>`; }).join("")}</ul>`;
+    <ul>${rs.map(r => { const c = BYID[r.id]; return `<li><span class="src">AI-written reason:</span> ${esc(r.reason)} <span style="color:var(--muted)">(${c ? esc(c.commenter_type) : ""}, <a href="https://www.regulations.gov/comment/${esc(r.id)}" target="_blank" rel="noopener">read comment</a>)</span></li>`; }).join("")}</ul>`;
 }
 
 /* Top recommendations */
@@ -692,10 +692,10 @@ function renderTable() {
   let rows = D.filter(c => state.types.size === 0 || state.types.has(c.commenter_type));
   if (state.cat) rows = rows.filter(c => c.commenter_type === state.cat);
   if (state.sel) rows = rows.filter(c => itemsFor(c, state.sel.lens).includes(state.sel.key));
-  if (q) rows = rows.filter(c => !c.hidden && [c.id, c.org, c.title, c.commenter_type, c.summary || ""].join(" ").toLowerCase().includes(q));
+  if (q) rows = rows.filter(c => !c.hidden && [c.id, c.org, c.title, c.commenter_type].join(" ").toLowerCase().includes(q));
   const withheld = rows.filter(c => c.hidden).length; rows = rows.filter(c => !c.hidden);
   const pend = PENDING().filter(c => (state.types.size === 0 || state.types.has(c.commenter_type)) && (!state.sel || itemsFor(c, state.sel.lens).includes(state.sel.key))
-    && (!q || [c.org, c.title, c.commenter_type, c.summary || "", "pending"].join(" ").toLowerCase().includes(q)));
+    && (!q || [c.org, c.title, c.commenter_type, "pending"].join(" ").toLowerCase().includes(q)));
   const note = document.getElementById("selNote"), clear = document.getElementById("clear");
   if (state.sel) {
     const it = catalog(state.sel.lens).find(i => i.key === state.sel.key);
@@ -736,11 +736,9 @@ function renderTable() {
       ${facets(a.q_addr, a.topics)}</article>`
     : it.pending ? `<article class="card aria"><div class="top"><span class="who">${esc(it.name)}</span>${btn(it.c.id)}</div>
       <div class="meta"><span>${esc(it.c.commenter_type)}</span><span>Received ${fmtD(it.c.received)}</span><span>Posting pending</span>${it.c.url ? `<a href="${esc(it.c.url)}" target="_blank" rel="noopener">Read the letter</a>` : ""}</div>
-      ${q && (it.c.summary || "").toLowerCase().includes(q) ? `<p class="sum"><span class="src">AI-written summary:</span> ${hl(it.c.summary, q)}</p>` : ""}
       ${facets(it.c.q_addr, [])}</article>`
     : `<article class="card"><div class="top"><span class="who">${esc(it.name)}</span>${btn(it.c.id)}</div>
       <div class="meta"><a href="https://www.regulations.gov/comment/${esc(it.c.id)}" target="_blank" rel="noopener">${esc(short(it.c.id))}</a><span>${esc(it.c.commenter_type)}${it.c.type_inferred ? " (inferred)" : ""}</span><span>Received ${fmtD(it.c.received)}</span>${it.c.ai_disclosed ? "<span>Disclosed as AI-written</span>" : ""}${(it.c.also_filed || []).map(d => `<span>Also filed as <a href="https://www.regulations.gov/comment/${esc(d)}" target="_blank" rel="noopener">${esc(short(d))}</a></span>`).join("")}</div>
-      ${q && (it.c.summary || "").toLowerCase().includes(q) ? `<p class="sum"><span class="src">AI-written summary:</span> ${hl(it.c.summary, q)}</p>` : ""}
       ${it.c.unreadable ? '<div class="themes">Attachment unreadable, not coded</div>' : facets(it.c.q_addr, it.c.topics || [])}</article>`;
   document.getElementById("rows").innerHTML = shown.length ? shown.map(card).join("") : `<p class="empty">No comments match.</p>`;
   document.querySelectorAll("#rows .cmp").forEach(b => b.onclick = () => {

@@ -70,3 +70,4 @@ header { padding-bottom: 0; }
 .af .measuring.duo > .row, .af .measuring > .row:has(.lab2) { grid-template-columns: max-content max-content minmax(0, 360px) 84px; }
 .af .measuring > .row > .lab2 { white-space: nowrap; }
 .af .row .num { text-align: left; }
+.src { color: var(--muted); }
