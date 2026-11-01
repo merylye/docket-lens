@@ -62,6 +62,8 @@ for row in PRIV["codes2"]: codes2[row["id"]] = row
 RECS["map"].update(PRIV["recs_map"])
 NO_CARD = set(PRIV["no_card"])
 # The same document filed twice: count it once, under the earlier filing (lower number when filed the same day).
+# Comments that state they were written, in whole or part, by AI. Shown with a label on their cards.
+AI_DISCLOSED = {"FDA-2026-N-7874-0227", "FDA-2026-N-7874-0268", "FDA-2026-N-7874-0313"}
 DUPLICATES = {"FDA-2026-N-7874-0117": "FDA-2026-N-7874-0102", "FDA-2026-N-7874-0058": "FDA-2026-N-7874-0057",
               "FDA-2026-N-7874-0013": "FDA-2026-N-7874-0010", "FDA-2026-N-7874-0129": "FDA-2026-N-7874-0128",
               "FDA-2026-N-7874-0041": "FDA-2026-N-7874-0040",
@@ -117,7 +119,7 @@ for cid, r in sorted(raw.items()):
         "q_cited": sorted(set(c.get("questions_cited") or [])), "q_addr": sorted(set(c.get("questions_addressed") or [])),
         "topics": topics, "tags": tags, "summary": c.get("summary") or "",
         "words": c.get("words"), "pages": c.get("pages") or None,
-        "posted": r["posted"], "received": r["received"], "unreadable": bool(c.get("unreadable")),
+        "posted": r["posted"], "received": r["received"], "unreadable": bool(c.get("unreadable")), "ai_disclosed": cid in AI_DISCLOSED,
         "pos": {k: v for k, v in (codes2.get(cid, {}).get("positions") or {}).items() if v},
         "recs": RECS["map"].get(cid, []),
         "also_filed": sorted(d for d, k in DUPLICATES.items() if k == cid),

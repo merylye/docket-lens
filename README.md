@@ -39,11 +39,13 @@ Coding is approximate. Check a comment's original text before quoting or citing 
 
 ## Counts and categories
 
-The docket has 540 posted comments. The charts count 533, because seven documents were each filed twice (0102 and 0117, 0057 and 0058, 0010 and 0013, 0128 and 0129, 0040 and 0041, 0174 and 0175, 0522 and 0523). Each is counted once under the earlier filing, whose card links to the second. Where the two copies had been coded differently, the code follows the disagreement rule above.
+The docket has 540 posted comments. Two of them (0280 and 0382) list attachments that Regulations.gov has not yet released; they appear in the comment list but are left out of the charts until they can be read and coded. The charts count 531, because those two are left out and seven documents were each filed twice (0102 and 0117, 0057 and 0058, 0010 and 0013, 0128 and 0129, 0040 and 0041, 0174 and 0175, 0522 and 0523). Each is counted once under the earlier filing, whose card links to the second. Where the two copies had been coded differently, the code follows the disagreement rule above.
 
 Comments known to be filed but not yet posted by FDA can be listed in `pipeline/pending.json`. They appear in the comment list and can be added to the grid, marked "Posting pending," but are not counted in any chart. None are listed now. The Stanford HAI response was listed this way until FDA posted it as 0514.
 
 One commenter asked that their comment not be used this way. It is counted in the charts but has no card, and its coding is kept in `pipeline/private/`, which is not committed.
+
+Three comments state they were written in whole or part by AI (0227, 0268, and 0313). They are coded like the others and labeled "Disclosed as AI-written" on their cards.
 
 Categories come from Regulations.gov. Comments filed without one were assigned a category from their content and are marked "inferred." A few comments are filed under a category that does not match their content, and the site keeps the filed category.
 

@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-01T01:06:31.086035+00:00",
+ "updated": "2026-11-01T15:31:19.330499+00:00",
  "questions": [
   {
    "n": 1,
@@ -2484,11 +2484,6 @@
    "point": "Argues LLMs are not ready for patient care and accountability is unclear."
   },
   {
-   "id": "FDA-2026-N-7874-0280",
-   "kind": "too_brief",
-   "point": "Text is only a title line; no substantive content or attachment."
-  },
-  {
    "id": "FDA-2026-N-7874-0281",
    "kind": "general_objection",
    "point": "Urges reconsidering AI in nursing and protecting clinicians from AI errors."
@@ -2557,11 +2552,6 @@
    "id": "FDA-2026-N-7874-0374",
    "kind": "outside_framing",
    "point": "Offers general AI health policy priorities without evaluating the paper's specific proposals."
-  },
-  {
-   "id": "FDA-2026-N-7874-0382",
-   "kind": "too_brief",
-   "point": "Text only says see attached file, and no attachment is listed."
   },
   {
    "id": "FDA-2026-N-7874-0404",

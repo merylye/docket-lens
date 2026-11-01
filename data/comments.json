@@ -80,6 +80,7 @@
   "posted": "2026-08-27T04:00:00Z",
   "received": "2026-08-18T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {
    "risk_framework": "conditional",
    "directiveness_continuum": "conditional",
@@ -179,6 +180,7 @@
   "posted": "2026-08-27T04:00:00Z",
   "received": "2026-08-18T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {},
   "recs": [],
   "also_filed": [],
@@ -264,6 +266,7 @@
   "posted": "2026-08-27T04:00:00Z",
   "received": "2026-08-18T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {
    "risk_framework": "conditional",
    "directiveness_continuum": "support",
@@ -408,6 +411,7 @@
   "posted": "2026-08-27T04:00:00Z",
   "received": "2026-08-18T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {
    "risk_framework": "conditional",
    "directiveness_continuum": "support",
@@ -481,6 +485,7 @@
   "posted": "2026-08-27T04:00:00Z",
   "received": "2026-08-18T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {},
   "recs": [],
   "also_filed": [],
@@ -521,6 +526,7 @@
   "posted": "2026-08-27T04:00:00Z",
   "received": "2026-08-18T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {
    "competency_eval": "support",
    "postmarket_tradeoff": "conditional",
@@ -590,6 +596,7 @@
   "posted": "2026-08-27T04:00:00Z",
   "received": "2026-08-18T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {
    "risk_framework": "support",
    "escalation_errors": "support",
@@ -687,6 +694,7 @@
   "posted": "2026-08-27T04:00:00Z",
   "received": "2026-08-18T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {
    "risk_framework": "conditional",
    "directiveness_continuum": "conditional",
@@ -820,6 +828,7 @@
   "posted": "2026-08-27T04:00:00Z",
   "received": "2026-08-18T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {},
   "recs": [
    "accountability"
@@ -874,6 +883,7 @@
   "posted": "2026-08-27T04:00:00Z",
   "received": "2026-08-18T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {
    "risk_framework": "support",
    "competency_eval": "support",
@@ -912,6 +922,7 @@
   "posted": "2026-08-27T04:00:00Z",
   "received": "2026-08-18T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {},
   "recs": [],
   "also_filed": [],
@@ -945,6 +956,7 @@
   "posted": "2026-08-27T04:00:00Z",
   "received": "2026-08-18T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {
    "risk_framework": "conditional"
   },
@@ -983,6 +995,7 @@
   "posted": "2026-08-27T04:00:00Z",
   "received": "2026-08-18T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {
    "flexible_change_control": "support"
   },
@@ -1066,6 +1079,7 @@
   "posted": "2026-08-27T04:00:00Z",
   "received": "2026-08-18T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {
    "risk_framework": "conditional",
    "trajectory_risk": "support",
@@ -1179,6 +1193,7 @@
   "posted": "2026-08-27T04:00:00Z",
   "received": "2026-08-19T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {
    "risk_framework": "support",
    "competency_eval": "support",
@@ -1253,6 +1268,7 @@
   "posted": "2026-08-27T04:00:00Z",
   "received": "2026-08-20T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {
    "risk_framework": "conditional",
    "directiveness_continuum": "support",
@@ -1335,6 +1351,7 @@
   "posted": "2026-08-27T04:00:00Z",
   "received": "2026-08-20T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {
    "risk_framework": "conditional",
    "trajectory_risk": "conditional",
@@ -1392,6 +1409,7 @@
   "posted": "2026-08-27T04:00:00Z",
   "received": "2026-08-20T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {
    "directiveness_continuum": "support",
    "agentic_oversight": "support"
@@ -1434,6 +1452,7 @@
   "posted": "2026-08-27T04:00:00Z",
   "received": "2026-08-20T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {
    "patient_facing_risk": "support",
    "postmarket_tradeoff": "oppose"
@@ -1476,6 +1495,7 @@
   "posted": "2026-08-27T04:00:00Z",
   "received": "2026-08-21T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {
    "risk_framework": "conditional",
    "competency_eval": "conditional",
@@ -1605,6 +1625,7 @@
   "posted": "2026-08-27T04:00:00Z",
   "received": "2026-08-22T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {
    "risk_framework": "conditional",
    "directiveness_continuum": "support",
@@ -1691,6 +1712,7 @@
   "posted": "2026-08-27T04:00:00Z",
   "received": "2026-08-22T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {
    "escalation_errors": "conditional"
   },
@@ -1750,6 +1772,7 @@
   "posted": "2026-08-27T04:00:00Z",
   "received": "2026-08-22T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {
    "trajectory_risk": "support",
    "competency_eval": "support",
@@ -1816,6 +1839,7 @@
   "posted": "2026-08-27T04:00:00Z",
   "received": "2026-08-23T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {
    "risk_framework": "conditional",
    "directiveness_continuum": "support",
@@ -1905,6 +1929,7 @@
   "posted": "2026-08-27T04:00:00Z",
   "received": "2026-08-24T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {
    "risk_framework": "support",
    "third_party": "support",
@@ -1950,6 +1975,7 @@
   "posted": "2026-08-27T04:00:00Z",
   "received": "2026-08-24T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {
    "risk_framework": "conditional",
    "patient_facing_risk": "conditional",
@@ -1998,6 +2024,7 @@
   "posted": "2026-08-27T04:00:00Z",
   "received": "2026-08-24T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {},
   "recs": [],
   "also_filed": [],
@@ -2049,6 +2076,7 @@
   "posted": "2026-08-27T04:00:00Z",
   "received": "2026-08-24T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {
    "risk_framework": "conditional",
    "competency_eval": "conditional",
@@ -2114,6 +2142,7 @@
   "posted": "2026-08-27T04:00:00Z",
   "received": "2026-08-24T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {
    "postmarket_tradeoff": "conditional",
    "postmarket_methods": "conditional",
@@ -2166,6 +2195,7 @@
   "posted": "2026-08-27T04:00:00Z",
   "received": "2026-08-25T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {},
   "recs": [],
   "also_filed": [],
@@ -2249,6 +2279,7 @@
   "posted": "2026-08-27T04:00:00Z",
   "received": "2026-08-25T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {
    "risk_framework": "conditional",
    "directiveness_continuum": "support",
@@ -2344,6 +2375,7 @@
   "posted": "2026-08-27T04:00:00Z",
   "received": "2026-08-25T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {},
   "recs": [],
   "also_filed": [],
@@ -2385,6 +2417,7 @@
   "posted": "2026-08-27T04:00:00Z",
   "received": "2026-08-25T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {
    "risk_framework": "conditional",
    "directiveness_continuum": "support",
@@ -2445,6 +2478,7 @@
   "posted": "2026-08-27T04:00:00Z",
   "received": "2026-08-25T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {
    "risk_framework": "conditional",
    "directiveness_continuum": "support",
@@ -2490,6 +2524,7 @@
   "posted": "2026-08-27T04:00:00Z",
   "received": "2026-08-26T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {
    "risk_framework": "conditional"
   },
@@ -2532,6 +2567,7 @@
   "posted": "2026-08-27T04:00:00Z",
   "received": "2026-08-26T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {},
   "recs": [],
   "also_filed": [
@@ -2575,6 +2611,7 @@
   "posted": "2026-08-27T04:00:00Z",
   "received": "2026-08-26T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {
    "risk_framework": "conditional",
    "supervisory_agents": "conditional",
@@ -2651,6 +2688,7 @@
   "posted": "2026-08-27T04:00:00Z",
   "received": "2026-08-26T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {
    "risk_framework": "conditional",
    "directiveness_continuum": "oppose",
@@ -2708,6 +2746,7 @@
   "posted": "2026-08-27T04:00:00Z",
   "received": "2026-08-27T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {},
   "recs": [
    "data_privacy"
@@ -2787,6 +2826,7 @@
   "posted": "2026-09-01T04:00:00Z",
   "received": "2026-08-28T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {
    "risk_framework": "conditional",
    "directiveness_continuum": "support",
@@ -2884,6 +2924,7 @@
   "posted": "2026-09-01T04:00:00Z",
   "received": "2026-08-28T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {
    "risk_framework": "conditional",
    "competency_eval": "support",
@@ -2941,6 +2982,7 @@
   "posted": "2026-09-01T04:00:00Z",
   "received": "2026-08-28T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {
    "third_party": "support"
   },
@@ -2986,6 +3028,7 @@
   "posted": "2026-09-01T04:00:00Z",
   "received": "2026-08-28T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {
    "risk_framework": "conditional",
    "directiveness_continuum": "support",
@@ -3124,6 +3167,7 @@
   "posted": "2026-09-01T04:00:00Z",
   "received": "2026-08-28T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {
    "risk_framework": "conditional",
    "directiveness_continuum": "support",
@@ -3240,6 +3284,7 @@
   "posted": "2026-09-01T04:00:00Z",
   "received": "2026-08-28T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {
    "postmarket_methods": "conditional",
    "voluntary_model_files": "conditional"
@@ -3325,6 +3370,7 @@
   "posted": "2026-09-01T04:00:00Z",
   "received": "2026-08-29T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {
    "risk_framework": "conditional",
    "patient_facing_risk": "conditional",
@@ -3448,6 +3494,7 @@
   "posted": "2026-09-01T04:00:00Z",
   "received": "2026-09-01T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {
    "risk_framework": "conditional",
    "directiveness_continuum": "support",
@@ -3549,6 +3596,7 @@
   "posted": "2026-09-02T04:00:00Z",
   "received": "2026-09-01T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {
    "risk_framework": "conditional",
    "competency_eval": "support",
@@ -3629,6 +3677,7 @@
   "posted": "2026-09-03T04:00:00Z",
   "received": "2026-09-03T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {
    "risk_framework": "conditional",
    "patient_facing_risk": "conditional",
@@ -3756,6 +3805,7 @@
   "posted": "2026-09-04T04:00:00Z",
   "received": "2026-09-03T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {
    "risk_framework": "oppose",
    "directiveness_continuum": "oppose",
@@ -3875,6 +3925,7 @@
   "posted": "2026-09-04T04:00:00Z",
   "received": "2026-09-03T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {
    "risk_framework": "conditional",
    "directiveness_continuum": "support",
@@ -3977,6 +4028,7 @@
   "posted": "2026-09-04T04:00:00Z",
   "received": "2026-09-03T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {
    "risk_framework": "conditional",
    "directiveness_continuum": "support",
@@ -4031,6 +4083,7 @@
   "posted": "2026-09-09T04:00:00Z",
   "received": "2026-09-04T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {},
   "recs": [
    "populations_settings"
@@ -4062,6 +4115,7 @@
   "posted": "2026-09-09T04:00:00Z",
   "received": "2026-09-04T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {},
   "recs": [],
   "also_filed": [],
@@ -4102,6 +4156,7 @@
   "posted": "2026-09-09T04:00:00Z",
   "received": "2026-09-04T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {
    "agentic_oversight": "support"
   },
@@ -4151,6 +4206,7 @@
   "posted": "2026-09-09T04:00:00Z",
   "received": "2026-09-04T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {
    "supervisory_agents": "conditional",
    "flexible_change_control": "conditional"
@@ -4206,6 +4262,7 @@
   "posted": "2026-09-09T04:00:00Z",
   "received": "2026-09-04T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {
    "postmarket_methods": "conditional"
   },
@@ -4250,6 +4307,7 @@
   "posted": "2026-09-09T04:00:00Z",
   "received": "2026-09-04T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {
    "no_care_comparator": "conditional"
   },
@@ -4294,6 +4352,7 @@
   "posted": "2026-09-09T04:00:00Z",
   "received": "2026-09-04T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {
    "directiveness_continuum": "oppose",
    "trajectory_risk": "support"
@@ -4336,6 +4395,7 @@
   "posted": "2026-09-09T04:00:00Z",
   "received": "2026-09-04T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {
    "supervisory_agents": "conditional"
   },
@@ -4396,6 +4456,7 @@
   "posted": "2026-09-09T04:00:00Z",
   "received": "2026-09-04T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {
    "risk_framework": "support",
    "escalation_errors": "support",
@@ -4451,6 +4512,7 @@
   "posted": "2026-09-09T04:00:00Z",
   "received": "2026-09-05T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {},
   "recs": [],
   "also_filed": [],
@@ -4479,6 +4541,7 @@
   "posted": "2026-09-09T04:00:00Z",
   "received": "2026-09-06T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {},
   "recs": [
    "align_standards"
@@ -4516,6 +4579,7 @@
   "posted": "2026-09-09T04:00:00Z",
   "received": "2026-09-07T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {},
   "recs": [
    "human_ai_team",
@@ -4558,6 +4622,7 @@
   "posted": "2026-09-09T04:00:00Z",
   "received": "2026-09-07T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {
    "third_party": "support",
    "postmarket_methods": "support",
@@ -4605,6 +4670,7 @@
   "posted": "2026-09-09T04:00:00Z",
   "received": "2026-09-07T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {},
   "recs": [
    "risk_evidence_map",
@@ -4633,6 +4699,7 @@
   "posted": "2026-09-09T04:00:00Z",
   "received": "2026-09-07T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {},
   "recs": [],
   "also_filed": [],
@@ -4676,6 +4743,7 @@
   "posted": "2026-09-09T04:00:00Z",
   "received": "2026-09-08T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {
    "competency_eval": "conditional",
    "synthetic_data": "support"
@@ -4733,6 +4801,7 @@
   "posted": "2026-09-09T04:00:00Z",
   "received": "2026-09-08T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {
    "postmarket_tradeoff": "conditional",
    "postmarket_methods": "support",
@@ -4841,6 +4910,7 @@
   "posted": "2026-09-09T04:00:00Z",
   "received": "2026-09-08T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {
    "risk_framework": "conditional",
    "directiveness_continuum": "support",
@@ -4942,6 +5012,7 @@
   "posted": "2026-09-09T04:00:00Z",
   "received": "2026-09-08T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {
    "postmarket_tradeoff": "conditional",
    "postmarket_methods": "oppose"
@@ -4990,6 +5061,7 @@
   "posted": "2026-09-09T04:00:00Z",
   "received": "2026-09-08T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {
    "trajectory_risk": "support",
    "competency_eval": "support"
@@ -5032,6 +5104,7 @@
   "posted": "2026-09-09T04:00:00Z",
   "received": "2026-09-08T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {
    "voluntary_model_files": "conditional"
   },
@@ -5079,6 +5152,7 @@
   "posted": "2026-09-09T04:00:00Z",
   "received": "2026-09-08T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {
    "risk_framework": "support",
    "patient_facing_risk": "oppose"
@@ -5113,6 +5187,7 @@
   "posted": "2026-09-09T04:00:00Z",
   "received": "2026-09-08T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {},
   "recs": [
    "accountability"
@@ -5165,6 +5240,7 @@
   "posted": "2026-09-09T04:00:00Z",
   "received": "2026-09-09T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {
    "risk_framework": "conditional",
    "directiveness_continuum": "support",
@@ -5229,6 +5305,7 @@
   "posted": "2026-09-09T04:00:00Z",
   "received": "2026-09-09T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {
    "postmarket_methods": "conditional"
   },
@@ -5267,6 +5344,7 @@
   "posted": "2026-09-15T04:00:00Z",
   "received": "2026-09-09T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {
    "escalation_errors": "support"
   },
@@ -5314,6 +5392,7 @@
   "posted": "2026-09-15T04:00:00Z",
   "received": "2026-09-10T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {},
   "recs": [
    "benchmark_validity",
@@ -5382,6 +5461,7 @@
   "posted": "2026-09-15T04:00:00Z",
   "received": "2026-09-10T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {
    "risk_framework": "conditional",
    "escalation_errors": "support",
@@ -5478,6 +5558,7 @@
   "posted": "2026-09-15T04:00:00Z",
   "received": "2026-09-10T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {
    "risk_framework": "conditional",
    "competency_eval": "support",
@@ -5558,6 +5639,7 @@
   "posted": "2026-09-15T04:00:00Z",
   "received": "2026-09-11T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {
    "competency_eval": "support"
   },
@@ -5599,6 +5681,7 @@
   "posted": "2026-09-15T04:00:00Z",
   "received": "2026-09-11T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {
    "agentic_oversight": "conditional"
   },
@@ -5654,6 +5737,7 @@
   "posted": "2026-09-15T04:00:00Z",
   "received": "2026-09-12T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {
    "postmarket_tradeoff": "conditional",
    "postmarket_methods": "conditional",
@@ -5739,6 +5823,7 @@
   "posted": "2026-09-15T04:00:00Z",
   "received": "2026-09-12T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {
    "trajectory_risk": "conditional",
    "escalation_errors": "support",
@@ -5819,6 +5904,7 @@
   "posted": "2026-09-15T04:00:00Z",
   "received": "2026-09-13T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {
    "postmarket_methods": "conditional",
    "agentic_oversight": "conditional"
@@ -5915,6 +6001,7 @@
   "posted": "2026-09-15T04:00:00Z",
   "received": "2026-09-14T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {
    "risk_framework": "support",
    "directiveness_continuum": "support",
@@ -6025,6 +6112,7 @@
   "posted": "2026-09-15T04:00:00Z",
   "received": "2026-09-14T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {
    "risk_framework": "conditional",
    "competency_eval": "conditional",
@@ -6096,6 +6184,7 @@
   "posted": "2026-09-15T04:00:00Z",
   "received": "2026-09-14T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {
    "competency_eval": "support",
    "postmarket_methods": "support",
@@ -6144,6 +6233,7 @@
   "posted": "2026-09-15T04:00:00Z",
   "received": "2026-09-14T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {},
   "recs": [
    "version_pinning",
@@ -6185,6 +6275,7 @@
   "posted": "2026-09-15T04:00:00Z",
   "received": "2026-09-15T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {
    "agentic_oversight": "support"
   },
@@ -6250,6 +6341,7 @@
   "posted": "2026-09-15T04:00:00Z",
   "received": "2026-09-15T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {
    "risk_framework": "conditional",
    "trajectory_risk": "conditional",
@@ -6326,6 +6418,7 @@
   "posted": "2026-09-15T04:00:00Z",
   "received": "2026-09-15T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {
    "risk_framework": "conditional",
    "competency_eval": "support",
@@ -6421,6 +6514,7 @@
   "posted": "2026-09-15T04:00:00Z",
   "received": "2026-09-15T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {
    "risk_framework": "conditional",
    "directiveness_continuum": "support",
@@ -6513,6 +6607,7 @@
   "posted": "2026-09-21T04:00:00Z",
   "received": "2026-09-15T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {
    "risk_framework": "conditional",
    "agentic_oversight": "support"
@@ -6570,6 +6665,7 @@
   "posted": "2026-09-21T04:00:00Z",
   "received": "2026-09-15T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {
    "risk_framework": "support",
    "directiveness_continuum": "support",
@@ -6647,6 +6743,7 @@
   "posted": "2026-09-21T04:00:00Z",
   "received": "2026-09-16T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {
    "risk_framework": "support"
   },
@@ -6691,6 +6788,7 @@
   "posted": "2026-09-21T04:00:00Z",
   "received": "2026-09-16T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {},
   "recs": [
    "independent_eval"
@@ -6747,6 +6845,7 @@
   "posted": "2026-09-21T04:00:00Z",
   "received": "2026-09-17T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {
    "risk_framework": "conditional",
    "trajectory_risk": "support",
@@ -6849,6 +6948,7 @@
   "posted": "2026-09-21T04:00:00Z",
   "received": "2026-09-20T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {
    "risk_framework": "support",
    "competency_eval": "support",
@@ -6899,6 +6999,7 @@
   "posted": "2026-09-21T04:00:00Z",
   "received": "2026-09-20T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {
    "competency_eval": "conditional",
    "confirmation_flex": "oppose"
@@ -6945,6 +7046,7 @@
   "posted": "2026-09-21T04:00:00Z",
   "received": "2026-09-20T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {
    "competency_eval": "conditional"
   },
@@ -6985,6 +7087,7 @@
   "posted": "2026-09-21T04:00:00Z",
   "received": "2026-09-21T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {},
   "recs": [
    "kill_switch"
@@ -7024,6 +7127,7 @@
   "posted": "2026-09-24T04:00:00Z",
   "received": "2026-09-21T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {
    "supervisory_agents": "conditional"
   },
@@ -7090,6 +7194,7 @@
   "posted": "2026-09-24T04:00:00Z",
   "received": "2026-09-21T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {
    "risk_framework": "support",
    "trajectory_risk": "support",
@@ -7158,6 +7263,7 @@
   "posted": "2026-09-24T04:00:00Z",
   "received": "2026-09-22T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {
    "risk_framework": "conditional",
    "competency_eval": "support"
@@ -7256,6 +7362,7 @@
   "posted": "2026-09-24T04:00:00Z",
   "received": "2026-09-22T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {
    "risk_framework": "conditional",
    "directiveness_continuum": "support",
@@ -7368,6 +7475,7 @@
   "posted": "2026-09-24T04:00:00Z",
   "received": "2026-09-22T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {
    "trajectory_risk": "support",
    "competency_eval": "support",
@@ -7449,6 +7557,7 @@
   "posted": "2026-09-24T04:00:00Z",
   "received": "2026-09-23T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {
    "risk_framework": "conditional",
    "patient_facing_risk": "conditional",
@@ -7570,6 +7679,7 @@
   "posted": "2026-09-24T04:00:00Z",
   "received": "2026-09-23T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {
    "escalation_errors": "support",
    "third_party": "support",
@@ -7686,6 +7796,7 @@
   "posted": "2026-09-25T04:00:00Z",
   "received": "2026-09-25T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {
    "risk_framework": "conditional",
    "directiveness_continuum": "support",
@@ -7812,6 +7923,7 @@
   "posted": "2026-09-30T04:00:00Z",
   "received": "2026-09-25T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {
    "escalation_errors": "support",
    "voluntary_model_files": "conditional"
@@ -7910,6 +8022,7 @@
   "posted": "2026-09-30T04:00:00Z",
   "received": "2026-09-25T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {
    "risk_framework": "conditional",
    "directiveness_continuum": "support",
@@ -8036,6 +8149,7 @@
   "posted": "2026-09-30T04:00:00Z",
   "received": "2026-09-26T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {
    "risk_framework": "conditional",
    "competency_eval": "support",
@@ -8090,6 +8204,7 @@
   "posted": "2026-09-30T04:00:00Z",
   "received": "2026-09-26T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {
    "flexible_change_control": "support",
    "agentic_oversight": "support"
@@ -8154,6 +8269,7 @@
   "posted": "2026-09-30T04:00:00Z",
   "received": "2026-09-26T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {
    "competency_eval": "support",
    "median_clinician_comparator": "conditional",
@@ -8210,6 +8326,7 @@
   "posted": "2026-09-30T04:00:00Z",
   "received": "2026-09-26T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {
    "competency_eval": "support",
    "synthetic_data": "support",
@@ -8253,6 +8370,7 @@
   "posted": "2026-09-30T04:00:00Z",
   "received": "2026-09-27T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {
    "competency_eval": "support",
    "postmarket_methods": "support",
@@ -8340,6 +8458,7 @@
   "posted": "2026-09-30T04:00:00Z",
   "received": "2026-09-28T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {
    "risk_framework": "oppose",
    "directiveness_continuum": "oppose",
@@ -8427,6 +8546,7 @@
   "posted": "2026-09-30T04:00:00Z",
   "received": "2026-09-28T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {
    "risk_framework": "conditional",
    "directiveness_continuum": "support",
@@ -8517,6 +8637,7 @@
   "posted": "2026-09-30T04:00:00Z",
   "received": "2026-09-28T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {
    "patient_facing_risk": "support",
    "competency_eval": "conditional",
@@ -8577,6 +8698,7 @@
   "posted": "2026-09-30T04:00:00Z",
   "received": "2026-09-29T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {
    "postmarket_tradeoff": "conditional",
    "postmarket_methods": "conditional",
@@ -8658,6 +8780,7 @@
   "posted": "2026-09-30T04:00:00Z",
   "received": "2026-09-30T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {
    "risk_framework": "conditional",
    "directiveness_continuum": "oppose",
@@ -8746,6 +8869,7 @@
   "posted": "2026-10-28T04:00:00Z",
   "received": "2026-09-30T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {},
   "recs": [
    "accountability",
@@ -8800,6 +8924,7 @@
   "posted": "2026-10-28T04:00:00Z",
   "received": "2026-09-30T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {
    "risk_framework": "support",
    "patient_facing_risk": "oppose",
@@ -8854,6 +8979,7 @@
   "posted": "2026-10-28T04:00:00Z",
   "received": "2026-10-01T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {
    "supervisory_agents": "conditional"
   },
@@ -8906,6 +9032,7 @@
   "posted": "2026-10-28T04:00:00Z",
   "received": "2026-10-01T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {
    "risk_framework": "support",
    "directiveness_continuum": "support",
@@ -8976,6 +9103,7 @@
   "posted": "2026-10-28T04:00:00Z",
   "received": "2026-10-01T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {
    "risk_framework": "conditional",
    "postmarket_methods": "conditional",
@@ -9040,6 +9168,7 @@
   "posted": "2026-10-28T04:00:00Z",
   "received": "2026-10-02T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {},
   "recs": [],
   "also_filed": [],
@@ -9073,6 +9202,7 @@
   "posted": "2026-10-28T04:00:00Z",
   "received": "2026-10-02T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {},
   "recs": [
    "audit_trail",
@@ -9105,6 +9235,7 @@
   "posted": "2026-10-28T04:00:00Z",
   "received": "2026-10-02T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {
    "flexible_change_control": "oppose"
   },
@@ -9141,6 +9272,7 @@
   "posted": "2026-10-28T04:00:00Z",
   "received": "2026-10-02T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {
    "trajectory_risk": "support",
    "escalation_errors": "support",
@@ -9185,6 +9317,7 @@
   "posted": "2026-10-28T04:00:00Z",
   "received": "2026-10-02T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {
    "patient_facing_risk": "support",
    "synthetic_data": "support"
@@ -9230,6 +9363,7 @@
   "posted": "2026-10-28T04:00:00Z",
   "received": "2026-10-02T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {
    "risk_framework": "support",
    "supervisory_agents": "support"
@@ -9290,6 +9424,7 @@
   "posted": "2026-10-28T04:00:00Z",
   "received": "2026-10-03T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {},
   "recs": [
    "oversight_demonstrated",
@@ -9347,6 +9482,7 @@
   "posted": "2026-10-28T04:00:00Z",
   "received": "2026-10-03T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {
    "risk_framework": "support",
    "patient_facing_risk": "support",
@@ -9401,6 +9537,7 @@
   "posted": "2026-10-28T04:00:00Z",
   "received": "2026-10-03T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {},
   "recs": [
    "risk_factors",
@@ -9434,6 +9571,7 @@
   "posted": "2026-10-28T04:00:00Z",
   "received": "2026-10-03T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {
    "patient_facing_risk": "oppose"
   },
@@ -9477,6 +9615,7 @@
   "posted": "2026-10-28T04:00:00Z",
   "received": "2026-10-04T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {},
   "recs": [
    "agent_sequences",
@@ -9520,6 +9659,7 @@
   "posted": "2026-10-28T04:00:00Z",
   "received": "2026-10-04T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {
    "risk_framework": "conditional",
    "postmarket_methods": "conditional",
@@ -9623,6 +9763,7 @@
   "posted": "2026-10-28T04:00:00Z",
   "received": "2026-10-05T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {
    "risk_framework": "conditional",
    "directiveness_continuum": "support",
@@ -9711,6 +9852,7 @@
   "posted": "2026-10-28T04:00:00Z",
   "received": "2026-10-05T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {
    "risk_framework": "conditional",
    "postmarket_methods": "conditional"
@@ -9762,6 +9904,7 @@
   "posted": "2026-10-28T04:00:00Z",
   "received": "2026-10-05T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {
    "postmarket_tradeoff": "conditional"
   },
@@ -9808,6 +9951,7 @@
   "posted": "2026-10-28T04:00:00Z",
   "received": "2026-10-05T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {
    "competency_eval": "support",
    "agentic_oversight": "support"
@@ -9850,6 +9994,7 @@
   "posted": "2026-10-28T04:00:00Z",
   "received": "2026-10-05T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {},
   "recs": [
    "nonphysician_clinicians",
@@ -9881,6 +10026,7 @@
   "posted": "2026-10-28T04:00:00Z",
   "received": "2026-10-05T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {},
   "recs": [
    "nonphysician_clinicians"
@@ -9916,6 +10062,7 @@
   "posted": "2026-10-28T04:00:00Z",
   "received": "2026-10-05T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {
    "postmarket_tradeoff": "oppose"
   },
@@ -9948,6 +10095,7 @@
   "posted": "2026-10-28T04:00:00Z",
   "received": "2026-10-06T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {},
   "recs": [],
   "also_filed": [],
@@ -10001,6 +10149,7 @@
   "posted": "2026-10-28T04:00:00Z",
   "received": "2026-10-06T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {
    "risk_framework": "support",
    "trajectory_risk": "support",
@@ -10056,6 +10205,7 @@
   "posted": "2026-10-28T04:00:00Z",
   "received": "2026-10-06T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {
    "agentic_oversight": "conditional"
   },
@@ -10101,6 +10251,7 @@
   "posted": "2026-10-28T04:00:00Z",
   "received": "2026-10-06T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {},
   "recs": [],
   "also_filed": [],
@@ -10129,6 +10280,7 @@
   "posted": "2026-10-28T04:00:00Z",
   "received": "2026-10-06T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {
    "trajectory_risk": "support"
   },
@@ -10189,6 +10341,7 @@
   "posted": "2026-10-28T04:00:00Z",
   "received": "2026-10-06T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {
    "risk_framework": "conditional",
    "escalation_errors": "support",
@@ -10245,6 +10398,7 @@
   "posted": "2026-10-28T04:00:00Z",
   "received": "2026-10-06T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {
    "risk_framework": "conditional",
    "directiveness_continuum": "support",
@@ -10327,6 +10481,7 @@
   "posted": "2026-10-28T04:00:00Z",
   "received": "2026-10-06T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {
    "risk_framework": "conditional",
    "escalation_errors": "support",
@@ -10416,6 +10571,7 @@
   "posted": "2026-10-28T04:00:00Z",
   "received": "2026-10-06T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {
    "competency_eval": "support",
    "synthetic_data": "conditional",
@@ -10468,6 +10624,7 @@
   "posted": "2026-10-28T04:00:00Z",
   "received": "2026-10-06T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {
    "risk_framework": "conditional",
    "directiveness_continuum": "support",
@@ -10529,6 +10686,7 @@
   "posted": "2026-10-28T04:00:00Z",
   "received": "2026-10-06T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {},
   "recs": [],
   "also_filed": [],
@@ -10592,6 +10750,7 @@
   "posted": "2026-10-28T04:00:00Z",
   "received": "2026-10-07T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {
    "risk_framework": "conditional",
    "directiveness_continuum": "support",
@@ -10671,6 +10830,7 @@
   "posted": "2026-10-28T04:00:00Z",
   "received": "2026-10-07T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {
    "risk_framework": "conditional",
    "competency_eval": "support",
@@ -10742,6 +10902,7 @@
   "posted": "2026-10-28T04:00:00Z",
   "received": "2026-10-07T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {
    "risk_framework": "conditional",
    "trajectory_risk": "support",
@@ -10810,6 +10971,7 @@
   "posted": "2026-10-28T04:00:00Z",
   "received": "2026-10-07T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {},
   "recs": [],
   "also_filed": [],
@@ -10849,6 +11011,7 @@
   "posted": "2026-10-28T04:00:00Z",
   "received": "2026-10-08T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {
    "postmarket_methods": "conditional",
    "agentic_oversight": "support"
@@ -10908,6 +11071,7 @@
   "posted": "2026-10-28T04:00:00Z",
   "received": "2026-10-08T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {
    "competency_eval": "conditional",
    "third_party": "support",
@@ -10976,6 +11140,7 @@
   "posted": "2026-10-28T04:00:00Z",
   "received": "2026-10-08T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {
    "postmarket_tradeoff": "conditional",
    "postmarket_methods": "conditional",
@@ -11074,6 +11239,7 @@
   "posted": "2026-10-28T04:00:00Z",
   "received": "2026-10-08T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {
    "risk_framework": "conditional",
    "directiveness_continuum": "support",
@@ -11202,6 +11368,7 @@
   "posted": "2026-10-28T04:00:00Z",
   "received": "2026-10-09T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {
    "risk_framework": "conditional",
    "directiveness_continuum": "support",
@@ -11303,6 +11470,7 @@
   "posted": "2026-10-28T04:00:00Z",
   "received": "2026-10-09T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {
    "risk_framework": "support",
    "postmarket_tradeoff": "conditional",
@@ -11363,6 +11531,7 @@
   "posted": "2026-10-28T04:00:00Z",
   "received": "2026-10-10T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {
    "competency_eval": "support",
    "third_party": "support",
@@ -11465,6 +11634,7 @@
   "posted": "2026-10-28T04:00:00Z",
   "received": "2026-10-10T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {
    "risk_framework": "conditional",
    "directiveness_continuum": "support",
@@ -11612,6 +11782,7 @@
   "posted": "2026-10-28T04:00:00Z",
   "received": "2026-10-10T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {
    "risk_framework": "oppose",
    "directiveness_continuum": "support",
@@ -11679,6 +11850,7 @@
   "posted": "2026-10-28T04:00:00Z",
   "received": "2026-10-11T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {
    "postmarket_methods": "conditional"
   },
@@ -11731,6 +11903,7 @@
   "posted": "2026-10-28T04:00:00Z",
   "received": "2026-10-11T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {
    "third_party": "support",
    "postmarket_tradeoff": "conditional",
@@ -11807,6 +11980,7 @@
   "posted": "2026-10-28T04:00:00Z",
   "received": "2026-10-11T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {
    "escalation_errors": "support",
    "confirmation_flex": "support",
@@ -11879,6 +12053,7 @@
   "posted": "2026-10-28T04:00:00Z",
   "received": "2026-10-11T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {
    "risk_framework": "conditional",
    "directiveness_continuum": "support",
@@ -11966,6 +12141,7 @@
   "posted": "2026-10-28T04:00:00Z",
   "received": "2026-10-12T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {
    "risk_framework": "conditional",
    "confirmation_flex": "support",
@@ -12037,6 +12213,7 @@
   "posted": "2026-10-28T04:00:00Z",
   "received": "2026-10-12T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {
    "competency_eval": "support",
    "third_party": "support",
@@ -12089,6 +12266,7 @@
   "posted": "2026-10-28T04:00:00Z",
   "received": "2026-10-12T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {},
   "recs": [
    "audit_trail",
@@ -12157,6 +12335,7 @@
   "posted": "2026-10-28T04:00:00Z",
   "received": "2026-10-12T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {
    "risk_framework": "support",
    "trajectory_risk": "support",
@@ -12276,6 +12455,7 @@
   "posted": "2026-10-28T04:00:00Z",
   "received": "2026-10-12T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {
    "competency_eval": "conditional",
    "third_party": "conditional"
@@ -12332,6 +12512,7 @@
   "posted": "2026-10-28T04:00:00Z",
   "received": "2026-10-12T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {},
   "recs": [
    "align_standards",
@@ -12391,6 +12572,7 @@
   "posted": "2026-10-28T04:00:00Z",
   "received": "2026-10-12T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {
    "trajectory_risk": "support",
    "competency_eval": "support",
@@ -12463,6 +12645,7 @@
   "posted": "2026-10-28T04:00:00Z",
   "received": "2026-10-12T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {
    "escalation_errors": "support",
    "synthetic_data": "support",
@@ -12522,6 +12705,7 @@
   "posted": "2026-10-28T04:00:00Z",
   "received": "2026-10-13T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {
    "risk_framework": "support",
    "competency_eval": "support",
@@ -12575,6 +12759,7 @@
   "posted": "2026-10-28T04:00:00Z",
   "received": "2026-10-13T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {},
   "recs": [],
   "also_filed": [],
@@ -12620,6 +12805,7 @@
   "posted": "2026-10-28T04:00:00Z",
   "received": "2026-10-13T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {
    "competency_eval": "support",
    "confirmation_flex": "support",
@@ -12667,6 +12853,7 @@
   "posted": "2026-10-28T04:00:00Z",
   "received": "2026-10-13T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {},
   "recs": [],
   "also_filed": [],
@@ -12704,6 +12891,7 @@
   "posted": "2026-10-28T04:00:00Z",
   "received": "2026-10-13T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {},
   "recs": [],
   "also_filed": [],
@@ -12737,6 +12925,7 @@
   "posted": "2026-10-28T04:00:00Z",
   "received": "2026-10-13T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {
    "third_party": "support"
   },
@@ -12790,6 +12979,7 @@
   "posted": "2026-10-28T04:00:00Z",
   "received": "2026-10-13T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {
    "risk_framework": "conditional",
    "directiveness_continuum": "support",
@@ -12893,6 +13083,7 @@
   "posted": "2026-10-28T04:00:00Z",
   "received": "2026-10-13T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {
    "risk_framework": "conditional",
    "directiveness_continuum": "support",
@@ -12974,6 +13165,7 @@
   "posted": "2026-10-28T04:00:00Z",
   "received": "2026-10-13T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {},
   "recs": [
    "align_standards"
@@ -13031,6 +13223,7 @@
   "posted": "2026-10-28T04:00:00Z",
   "received": "2026-10-13T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {
    "risk_framework": "conditional",
    "escalation_errors": "support",
@@ -13102,6 +13295,7 @@
   "posted": "2026-10-28T04:00:00Z",
   "received": "2026-10-14T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {
    "competency_eval": "conditional"
   },
@@ -13146,6 +13340,7 @@
   "posted": "2026-10-28T04:00:00Z",
   "received": "2026-10-14T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {},
   "recs": [
    "nonphysician_clinicians",
@@ -13230,6 +13425,7 @@
   "posted": "2026-10-28T04:00:00Z",
   "received": "2026-10-14T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {
    "risk_framework": "support",
    "directiveness_continuum": "support",
@@ -13296,6 +13492,7 @@
   "posted": "2026-10-30T04:00:00Z",
   "received": "2026-10-14T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {
    "postmarket_methods": "support",
    "supervisory_agents": "support",
@@ -13347,6 +13544,7 @@
   "posted": "2026-10-30T04:00:00Z",
   "received": "2026-10-14T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {
    "risk_framework": "support",
    "confirmation_flex": "conditional",
@@ -13425,6 +13623,7 @@
   "posted": "2026-10-30T04:00:00Z",
   "received": "2026-10-14T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {
    "risk_framework": "conditional",
    "competency_eval": "conditional"
@@ -13513,6 +13712,7 @@
   "posted": "2026-10-30T04:00:00Z",
   "received": "2026-10-14T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {
    "risk_framework": "conditional",
    "directiveness_continuum": "support",
@@ -13609,6 +13809,7 @@
   "posted": "2026-10-30T04:00:00Z",
   "received": "2026-10-14T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {
    "third_party": "support"
   },
@@ -13648,6 +13849,7 @@
   "posted": "2026-10-30T04:00:00Z",
   "received": "2026-10-14T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {
    "risk_framework": "conditional"
   },
@@ -13708,6 +13910,7 @@
   "posted": "2026-10-30T04:00:00Z",
   "received": "2026-10-15T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {
    "agentic_oversight": "support",
    "supervisory_agents": "conditional",
@@ -13786,6 +13989,7 @@
   "posted": "2026-10-30T04:00:00Z",
   "received": "2026-10-15T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {
    "trajectory_risk": "support",
    "escalation_errors": "support",
@@ -13843,6 +14047,7 @@
   "posted": "2026-10-30T04:00:00Z",
   "received": "2026-10-15T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {
    "risk_framework": "conditional",
    "escalation_errors": "support"
@@ -13884,6 +14089,7 @@
   "posted": "2026-10-30T04:00:00Z",
   "received": "2026-10-15T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {},
   "recs": [
    "human_ai_team",
@@ -13920,6 +14126,7 @@
   "posted": "2026-10-30T04:00:00Z",
   "received": "2026-10-15T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {
    "postmarket_methods": "support"
   },
@@ -13962,6 +14169,7 @@
   "posted": "2026-10-30T04:00:00Z",
   "received": "2026-10-15T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {
    "postmarket_methods": "conditional",
    "competency_eval": "conditional",
@@ -14027,6 +14235,7 @@
   "posted": "2026-10-30T04:00:00Z",
   "received": "2026-10-15T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {
    "postmarket_tradeoff": "conditional",
    "supervisory_agents": "conditional",
@@ -14120,6 +14329,7 @@
   "posted": "2026-10-30T04:00:00Z",
   "received": "2026-10-15T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {
    "patient_facing_risk": "conditional",
    "competency_eval": "support",
@@ -14187,6 +14397,7 @@
   "posted": "2026-10-30T04:00:00Z",
   "received": "2026-10-15T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {
    "risk_framework": "conditional",
    "directiveness_continuum": "support",
@@ -14243,6 +14454,7 @@
   "posted": "2026-10-30T04:00:00Z",
   "received": "2026-10-15T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {
    "third_party": "support"
   },
@@ -14283,6 +14495,7 @@
   "posted": "2026-10-30T04:00:00Z",
   "received": "2026-10-15T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {
    "third_party": "support",
    "postmarket_tradeoff": "conditional"
@@ -14337,6 +14550,7 @@
   "posted": "2026-10-30T04:00:00Z",
   "received": "2026-10-15T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {
    "risk_framework": "support",
    "competency_eval": "support",
@@ -14386,6 +14600,7 @@
   "posted": "2026-10-30T04:00:00Z",
   "received": "2026-10-15T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {
    "risk_framework": "conditional",
    "trajectory_risk": "support",
@@ -14498,6 +14713,7 @@
   "posted": "2026-10-30T04:00:00Z",
   "received": "2026-10-15T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {
    "risk_framework": "conditional",
    "directiveness_continuum": "support",
@@ -14637,6 +14853,7 @@
   "posted": "2026-10-30T04:00:00Z",
   "received": "2026-10-15T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {
    "risk_framework": "conditional",
    "competency_eval": "conditional",
@@ -14718,6 +14935,7 @@
   "posted": "2026-10-30T04:00:00Z",
   "received": "2026-10-15T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": true,
   "pos": {
    "risk_framework": "support",
    "competency_eval": "support",
@@ -14775,6 +14993,7 @@
   "posted": "2026-10-30T04:00:00Z",
   "received": "2026-10-15T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {
    "risk_framework": "support",
    "competency_eval": "support",
@@ -14871,6 +15090,7 @@
   "posted": "2026-10-30T04:00:00Z",
   "received": "2026-10-15T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {
    "risk_framework": "support",
    "directiveness_continuum": "support",
@@ -14963,6 +15183,7 @@
   "posted": "2026-10-30T04:00:00Z",
   "received": "2026-10-15T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {
    "risk_framework": "conditional",
    "escalation_errors": "support",
@@ -15013,6 +15234,7 @@
   "posted": "2026-10-30T04:00:00Z",
   "received": "2026-10-16T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {
    "third_party": "conditional"
   },
@@ -15051,6 +15273,7 @@
   "posted": "2026-10-30T04:00:00Z",
   "received": "2026-10-16T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {},
   "recs": [
    "human_approval"
@@ -15082,6 +15305,7 @@
   "posted": "2026-10-30T04:00:00Z",
   "received": "2026-10-16T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {},
   "recs": [],
   "also_filed": [],
@@ -15126,6 +15350,7 @@
   "posted": "2026-10-30T04:00:00Z",
   "received": "2026-10-16T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {
    "risk_framework": "conditional",
    "directiveness_continuum": "support",
@@ -15176,6 +15401,7 @@
   "posted": "2026-10-30T04:00:00Z",
   "received": "2026-10-16T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {},
   "recs": [],
   "also_filed": [],
@@ -15213,6 +15439,7 @@
   "posted": "2026-10-30T04:00:00Z",
   "received": "2026-10-16T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {
    "supervisory_agents": "conditional",
    "agentic_oversight": "conditional"
@@ -15265,6 +15492,7 @@
   "posted": "2026-10-30T04:00:00Z",
   "received": "2026-10-16T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {},
   "recs": [],
   "also_filed": [],
@@ -15304,6 +15532,7 @@
   "posted": "2026-10-30T04:00:00Z",
   "received": "2026-10-16T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {
    "directiveness_continuum": "support"
   },
@@ -15377,6 +15606,7 @@
   "posted": "2026-10-30T04:00:00Z",
   "received": "2026-10-16T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {
    "risk_framework": "support",
    "directiveness_continuum": "support",
@@ -15452,6 +15682,7 @@
   "posted": "2026-10-30T04:00:00Z",
   "received": "2026-10-16T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {
    "risk_framework": "conditional",
    "directiveness_continuum": "support",
@@ -15525,6 +15756,7 @@
   "posted": "2026-10-30T04:00:00Z",
   "received": "2026-10-16T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {},
   "recs": [],
   "also_filed": [],
@@ -15554,6 +15786,7 @@
   "posted": "2026-10-30T04:00:00Z",
   "received": "2026-10-16T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {},
   "recs": [],
   "also_filed": [],
@@ -15584,6 +15817,7 @@
   "posted": "2026-10-30T04:00:00Z",
   "received": "2026-10-16T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {},
   "recs": [
    "error_reporting",
@@ -15611,6 +15845,7 @@
   "posted": "2026-10-30T04:00:00Z",
   "received": "2026-10-16T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {},
   "recs": [],
   "also_filed": [],
@@ -15634,6 +15869,7 @@
   "posted": "2026-10-30T04:00:00Z",
   "received": "2026-10-16T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {},
   "recs": [],
   "also_filed": [],
@@ -15679,6 +15915,7 @@
   "posted": "2026-10-30T04:00:00Z",
   "received": "2026-10-16T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {
    "risk_framework": "conditional",
    "patient_facing_risk": "support",
@@ -15729,6 +15966,7 @@
   "posted": "2026-10-30T04:00:00Z",
   "received": "2026-10-16T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {},
   "recs": [
    "nonphysician_clinicians"
@@ -15802,6 +16040,7 @@
   "posted": "2026-10-30T04:00:00Z",
   "received": "2026-10-16T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {
    "risk_framework": "conditional",
    "directiveness_continuum": "support",
@@ -15870,6 +16109,7 @@
   "posted": "2026-10-30T04:00:00Z",
   "received": "2026-10-16T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {},
   "recs": [],
   "also_filed": [],
@@ -15908,6 +16148,7 @@
   "posted": "2026-10-30T04:00:00Z",
   "received": "2026-10-16T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {
    "risk_framework": "support",
    "patient_facing_risk": "oppose",
@@ -15982,6 +16223,7 @@
   "posted": "2026-10-30T04:00:00Z",
   "received": "2026-10-16T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {
    "confirmation_flex": "support",
    "third_party": "support",
@@ -16025,6 +16267,7 @@
   "posted": "2026-10-30T04:00:00Z",
   "received": "2026-10-16T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {},
   "recs": [],
   "also_filed": [],
@@ -16052,6 +16295,7 @@
   "posted": "2026-10-30T04:00:00Z",
   "received": "2026-10-16T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {},
   "recs": [],
   "also_filed": [],
@@ -16081,6 +16325,7 @@
   "posted": "2026-10-30T04:00:00Z",
   "received": "2026-10-16T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {},
   "recs": [],
   "also_filed": [],
@@ -16124,6 +16369,7 @@
   "posted": "2026-10-30T04:00:00Z",
   "received": "2026-10-16T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {
    "patient_facing_risk": "support",
    "escalation_errors": "support",
@@ -16183,6 +16429,7 @@
   "posted": "2026-10-30T04:00:00Z",
   "received": "2026-10-16T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {},
   "recs": [],
   "also_filed": [],
@@ -16210,6 +16457,7 @@
   "posted": "2026-10-30T04:00:00Z",
   "received": "2026-10-16T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {},
   "recs": [
    "patient_disclosure"
@@ -16239,6 +16487,7 @@
   "posted": "2026-10-30T04:00:00Z",
   "received": "2026-10-16T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {},
   "recs": [],
   "also_filed": [],
@@ -16294,6 +16543,7 @@
   "posted": "2026-10-30T04:00:00Z",
   "received": "2026-10-16T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {
    "risk_framework": "conditional",
    "competency_eval": "oppose",
@@ -16395,6 +16645,7 @@
   "posted": "2026-10-30T04:00:00Z",
   "received": "2026-10-16T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {
    "risk_framework": "conditional",
    "directiveness_continuum": "conditional",
@@ -16508,6 +16759,7 @@
   "posted": "2026-10-30T04:00:00Z",
   "received": "2026-10-16T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {
    "risk_framework": "support",
    "competency_eval": "support",
@@ -16611,6 +16863,7 @@
   "posted": "2026-10-30T04:00:00Z",
   "received": "2026-10-16T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {
    "risk_framework": "oppose",
    "directiveness_continuum": "oppose",
@@ -16701,6 +16954,7 @@
   "posted": "2026-10-30T04:00:00Z",
   "received": "2026-10-16T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {
    "patient_facing_risk": "support",
    "trajectory_risk": "support",
@@ -16798,6 +17052,7 @@
   "posted": "2026-10-30T04:00:00Z",
   "received": "2026-10-16T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {
    "risk_framework": "conditional",
    "directiveness_continuum": "support",
@@ -16883,6 +17138,7 @@
   "posted": "2026-10-30T04:00:00Z",
   "received": "2026-10-16T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {},
   "recs": [],
   "also_filed": [],
@@ -16910,6 +17166,7 @@
   "posted": "2026-10-30T04:00:00Z",
   "received": "2026-10-16T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {},
   "recs": [],
   "also_filed": [],
@@ -16989,6 +17246,7 @@
   "posted": "2026-10-30T04:00:00Z",
   "received": "2026-10-16T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {
    "directiveness_continuum": "support",
    "patient_facing_risk": "oppose",
@@ -17044,6 +17302,7 @@
   "posted": "2026-10-30T04:00:00Z",
   "received": "2026-10-16T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": true,
   "pos": {
    "postmarket_methods": "conditional"
   },
@@ -17113,6 +17372,7 @@
   "posted": "2026-10-30T04:00:00Z",
   "received": "2026-10-16T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {
    "risk_framework": "support",
    "patient_facing_risk": "conditional",
@@ -17227,6 +17487,7 @@
   "posted": "2026-10-30T04:00:00Z",
   "received": "2026-10-16T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {
    "risk_framework": "conditional",
    "directiveness_continuum": "support",
@@ -17366,6 +17627,7 @@
   "posted": "2026-10-30T04:00:00Z",
   "received": "2026-10-16T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {
    "trajectory_risk": "support",
    "competency_eval": "conditional",
@@ -17412,6 +17674,7 @@
   "posted": "2026-10-30T04:00:00Z",
   "received": "2026-10-16T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {},
   "recs": [],
   "also_filed": [],
@@ -17439,6 +17702,7 @@
   "posted": "2026-10-30T04:00:00Z",
   "received": "2026-10-16T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {},
   "recs": [],
   "also_filed": [],
@@ -17491,6 +17755,7 @@
   "posted": "2026-10-30T04:00:00Z",
   "received": "2026-10-16T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {
    "patient_facing_risk": "conditional",
    "trajectory_risk": "support",
@@ -17543,6 +17808,7 @@
   "posted": "2026-10-30T04:00:00Z",
   "received": "2026-10-16T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {
    "competency_eval": "support"
   },
@@ -17583,6 +17849,7 @@
   "posted": "2026-10-30T04:00:00Z",
   "received": "2026-10-16T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {
    "risk_framework": "support",
    "synthetic_data": "conditional",
@@ -17669,6 +17936,7 @@
   "posted": "2026-10-30T04:00:00Z",
   "received": "2026-10-16T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {
    "risk_framework": "conditional",
    "directiveness_continuum": "conditional",
@@ -17745,6 +18013,7 @@
   "posted": "2026-10-30T04:00:00Z",
   "received": "2026-10-16T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {
    "competency_eval": "support",
    "flexible_change_control": "support",
@@ -17812,6 +18081,7 @@
   "posted": "2026-10-30T04:00:00Z",
   "received": "2026-10-16T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {
    "risk_framework": "conditional",
    "directiveness_continuum": "conditional",
@@ -17880,12 +18150,13 @@
   "q_addr": [],
   "topics": [],
   "tags": [],
-  "summary": "Submission contains only the title line \"Lotus Health AI Comments\" with no substantive text or attachment.",
+  "summary": "Its attachment is listed on Regulations.gov but is not yet available to download.",
   "words": 4,
   "pages": null,
   "posted": "2026-10-30T04:00:00Z",
   "received": "2026-10-16T04:00:00Z",
-  "unreadable": false,
+  "unreadable": true,
+  "ai_disclosed": false,
   "pos": {},
   "recs": [],
   "also_filed": [],
@@ -17915,6 +18186,7 @@
   "posted": "2026-10-30T04:00:00Z",
   "received": "2026-10-16T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {},
   "recs": [
    "accountability",
@@ -17988,6 +18260,7 @@
   "posted": "2026-10-30T04:00:00Z",
   "received": "2026-10-16T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {
    "risk_framework": "conditional",
    "directiveness_continuum": "support",
@@ -18079,6 +18352,7 @@
   "posted": "2026-10-30T04:00:00Z",
   "received": "2026-10-16T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {},
   "recs": [],
   "also_filed": [],
@@ -18113,6 +18387,7 @@
   "posted": "2026-10-30T04:00:00Z",
   "received": "2026-10-16T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {
    "risk_framework": "conditional",
    "patient_facing_risk": "support",
@@ -18185,6 +18460,7 @@
   "posted": "2026-10-30T04:00:00Z",
   "received": "2026-10-17T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {
    "risk_framework": "support",
    "competency_eval": "support",
@@ -18281,6 +18557,7 @@
   "posted": "2026-10-30T04:00:00Z",
   "received": "2026-10-17T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {
    "risk_framework": "support",
    "competency_eval": "support",
@@ -18336,6 +18613,7 @@
   "posted": "2026-10-30T04:00:00Z",
   "received": "2026-10-17T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {
    "agentic_oversight": "support"
   },
@@ -18425,6 +18703,7 @@
   "posted": "2026-10-30T04:00:00Z",
   "received": "2026-10-17T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {
    "risk_framework": "conditional",
    "directiveness_continuum": "support",
@@ -18532,6 +18811,7 @@
   "posted": "2026-10-30T04:00:00Z",
   "received": "2026-10-17T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {
    "risk_framework": "support",
    "postmarket_methods": "support",
@@ -18604,6 +18884,7 @@
   "posted": "2026-10-30T04:00:00Z",
   "received": "2026-10-17T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {
    "risk_framework": "support",
    "competency_eval": "support",
@@ -18674,6 +18955,7 @@
   "posted": "2026-10-30T04:00:00Z",
   "received": "2026-10-17T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {
    "risk_framework": "support",
    "competency_eval": "support",
@@ -18729,6 +19011,7 @@
   "posted": "2026-10-30T04:00:00Z",
   "received": "2026-10-17T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {
    "patient_facing_risk": "support",
    "competency_eval": "support",
@@ -18782,6 +19065,7 @@
   "posted": "2026-10-30T04:00:00Z",
   "received": "2026-10-17T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {
    "risk_framework": "oppose",
    "patient_facing_risk": "conditional",
@@ -18862,6 +19146,7 @@
   "posted": "2026-10-30T04:00:00Z",
   "received": "2026-10-17T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {
    "risk_framework": "conditional",
    "competency_eval": "support",
@@ -18902,6 +19187,7 @@
   "posted": "2026-10-30T04:00:00Z",
   "received": "2026-10-17T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {
    "agentic_oversight": "support"
   },
@@ -18933,6 +19219,7 @@
   "posted": "2026-10-30T04:00:00Z",
   "received": "2026-10-17T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {},
   "recs": [],
   "also_filed": [],
@@ -18962,6 +19249,7 @@
   "posted": "2026-10-30T04:00:00Z",
   "received": "2026-10-18T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {},
   "recs": [],
   "also_filed": [],
@@ -18992,6 +19280,7 @@
   "posted": "2026-10-30T04:00:00Z",
   "received": "2026-10-18T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {
    "risk_framework": "conditional",
    "confirmation_flex": "support"
@@ -19057,6 +19346,7 @@
   "posted": "2026-10-30T04:00:00Z",
   "received": "2026-10-18T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {
    "risk_framework": "support",
    "directiveness_continuum": "support",
@@ -19121,6 +19411,7 @@
   "posted": "2026-10-30T04:00:00Z",
   "received": "2026-10-18T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {},
   "recs": [
    "accountability"
@@ -19184,6 +19475,7 @@
   "posted": "2026-10-30T04:00:00Z",
   "received": "2026-10-18T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {
    "risk_framework": "support",
    "patient_facing_risk": "conditional",
@@ -19243,6 +19535,7 @@
   "posted": "2026-10-30T04:00:00Z",
   "received": "2026-10-18T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {},
   "recs": [
    "risk_factors"
@@ -19274,6 +19567,7 @@
   "posted": "2026-10-30T04:00:00Z",
   "received": "2026-10-18T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {},
   "recs": [],
   "also_filed": [],
@@ -19321,6 +19615,7 @@
   "posted": "2026-10-30T04:00:00Z",
   "received": "2026-10-18T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {
    "competency_eval": "conditional",
    "third_party": "support",
@@ -19389,6 +19684,7 @@
   "posted": "2026-10-30T04:00:00Z",
   "received": "2026-10-18T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {
    "risk_framework": "support",
    "trajectory_risk": "support",
@@ -19457,6 +19753,7 @@
   "posted": "2026-10-30T04:00:00Z",
   "received": "2026-10-18T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {
    "risk_framework": "conditional",
    "directiveness_continuum": "support",
@@ -19597,6 +19894,7 @@
   "posted": "2026-10-30T04:00:00Z",
   "received": "2026-10-18T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {
    "risk_framework": "conditional",
    "directiveness_continuum": "support",
@@ -19710,6 +20008,7 @@
   "posted": "2026-10-30T04:00:00Z",
   "received": "2026-10-18T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {
    "risk_framework": "support",
    "postmarket_tradeoff": "conditional",
@@ -19772,6 +20071,7 @@
   "posted": "2026-10-30T04:00:00Z",
   "received": "2026-10-18T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {
    "risk_framework": "conditional",
    "trajectory_risk": "support",
@@ -19834,6 +20134,7 @@
   "posted": "2026-10-30T04:00:00Z",
   "received": "2026-10-18T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {
    "risk_framework": "conditional",
    "competency_eval": "support",
@@ -19882,6 +20183,7 @@
   "posted": "2026-10-30T04:00:00Z",
   "received": "2026-10-18T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {
    "trajectory_risk": "support",
    "no_care_comparator": "support",
@@ -19985,6 +20287,7 @@
   "posted": "2026-10-30T04:00:00Z",
   "received": "2026-10-18T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {
    "patient_facing_risk": "conditional",
    "trajectory_risk": "support",
@@ -20061,6 +20364,7 @@
   "posted": "2026-10-30T04:00:00Z",
   "received": "2026-10-18T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": true,
   "pos": {},
   "recs": [],
   "also_filed": [],
@@ -20105,6 +20409,7 @@
   "posted": "2026-10-30T04:00:00Z",
   "received": "2026-10-18T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {
    "risk_framework": "support",
    "competency_eval": "support",
@@ -20153,6 +20458,7 @@
   "posted": "2026-10-30T04:00:00Z",
   "received": "2026-10-18T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {
    "risk_framework": "conditional",
    "competency_eval": "conditional",
@@ -20222,6 +20528,7 @@
   "posted": "2026-10-30T04:00:00Z",
   "received": "2026-10-18T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {
    "competency_eval": "support",
    "supervisory_agents": "conditional"
@@ -20264,6 +20571,7 @@
   "posted": "2026-10-30T04:00:00Z",
   "received": "2026-10-18T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {
    "flexible_change_control": "support"
   },
@@ -20337,6 +20645,7 @@
   "posted": "2026-10-30T04:00:00Z",
   "received": "2026-10-18T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {
    "risk_framework": "conditional",
    "directiveness_continuum": "oppose",
@@ -20430,6 +20739,7 @@
   "posted": "2026-10-30T04:00:00Z",
   "received": "2026-10-18T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {},
   "recs": [
    "independent_eval",
@@ -20462,6 +20772,7 @@
   "posted": "2026-10-30T04:00:00Z",
   "received": "2026-10-18T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {
    "risk_framework": "support",
    "competency_eval": "support"
@@ -20526,6 +20837,7 @@
   "posted": "2026-10-30T04:00:00Z",
   "received": "2026-10-18T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {
    "risk_framework": "conditional",
    "directiveness_continuum": "support",
@@ -20669,6 +20981,7 @@
   "posted": "2026-10-30T04:00:00Z",
   "received": "2026-10-18T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {
    "risk_framework": "support",
    "directiveness_continuum": "support",
@@ -20765,6 +21078,7 @@
   "posted": "2026-10-30T04:00:00Z",
   "received": "2026-10-18T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {
    "agentic_oversight": "conditional"
   },
@@ -20826,6 +21140,7 @@
   "posted": "2026-10-30T04:00:00Z",
   "received": "2026-10-18T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {
    "risk_framework": "conditional",
    "escalation_errors": "support",
@@ -20893,6 +21208,7 @@
   "posted": "2026-10-30T04:00:00Z",
   "received": "2026-10-18T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {},
   "recs": [],
   "also_filed": [],
@@ -20921,6 +21237,7 @@
   "posted": "2026-10-30T04:00:00Z",
   "received": "2026-10-18T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {
    "agentic_oversight": "conditional"
   },
@@ -20972,6 +21289,7 @@
   "posted": "2026-10-30T04:00:00Z",
   "received": "2026-10-18T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {
    "competency_eval": "support"
   },
@@ -21044,6 +21362,7 @@
   "posted": "2026-10-30T04:00:00Z",
   "received": "2026-10-18T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {
    "patient_facing_risk": "conditional",
    "competency_eval": "support",
@@ -21107,6 +21426,7 @@
   "posted": "2026-10-30T04:00:00Z",
   "received": "2026-10-18T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {
    "risk_framework": "support",
    "patient_facing_risk": "conditional",
@@ -21184,6 +21504,7 @@
   "posted": "2026-10-30T04:00:00Z",
   "received": "2026-10-18T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {
    "risk_framework": "conditional"
   },
@@ -21275,6 +21596,7 @@
   "posted": "2026-10-30T04:00:00Z",
   "received": "2026-10-18T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {
    "risk_framework": "support",
    "directiveness_continuum": "support",
@@ -21409,6 +21731,7 @@
   "posted": "2026-10-30T04:00:00Z",
   "received": "2026-10-18T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {
    "risk_framework": "support",
    "directiveness_continuum": "support",
@@ -21511,6 +21834,7 @@
   "posted": "2026-10-30T04:00:00Z",
   "received": "2026-10-18T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {
    "risk_framework": "conditional",
    "patient_facing_risk": "support",
@@ -21612,6 +21936,7 @@
   "posted": "2026-10-30T04:00:00Z",
   "received": "2026-10-18T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {
    "risk_framework": "conditional",
    "patient_facing_risk": "conditional",
@@ -21704,6 +22029,7 @@
   "posted": "2026-10-30T04:00:00Z",
   "received": "2026-10-19T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {},
   "recs": [
    "audit_trail",
@@ -21756,6 +22082,7 @@
   "posted": "2026-10-30T04:00:00Z",
   "received": "2026-10-19T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {
    "no_care_comparator": "conditional",
    "third_party": "support",
@@ -21827,6 +22154,7 @@
   "posted": "2026-10-30T04:00:00Z",
   "received": "2026-10-19T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {
    "risk_framework": "support",
    "competency_eval": "conditional",
@@ -21922,6 +22250,7 @@
   "posted": "2026-10-30T04:00:00Z",
   "received": "2026-10-19T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {
    "risk_framework": "conditional",
    "directiveness_continuum": "support",
@@ -22024,6 +22353,7 @@
   "posted": "2026-10-30T04:00:00Z",
   "received": "2026-10-19T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {
    "third_party": "conditional",
    "postmarket_tradeoff": "conditional",
@@ -22117,6 +22447,7 @@
   "posted": "2026-10-30T04:00:00Z",
   "received": "2026-10-19T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {
    "risk_framework": "conditional",
    "no_care_comparator": "support",
@@ -22224,6 +22555,7 @@
   "posted": "2026-10-30T04:00:00Z",
   "received": "2026-10-19T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {
    "risk_framework": "conditional",
    "directiveness_continuum": "support",
@@ -22340,6 +22672,7 @@
   "posted": "2026-10-30T04:00:00Z",
   "received": "2026-10-19T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {
    "competency_eval": "support",
    "median_clinician_comparator": "conditional",
@@ -22394,6 +22727,7 @@
   "posted": "2026-10-30T04:00:00Z",
   "received": "2026-10-19T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {
    "risk_framework": "conditional",
    "synthetic_data": "conditional",
@@ -22451,6 +22785,7 @@
   "posted": "2026-10-30T04:00:00Z",
   "received": "2026-10-19T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {
    "competency_eval": "support",
    "synthetic_data": "conditional",
@@ -22523,6 +22858,7 @@
   "posted": "2026-10-30T04:00:00Z",
   "received": "2026-10-19T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {
    "risk_framework": "conditional",
    "directiveness_continuum": "support",
@@ -22626,6 +22962,7 @@
   "posted": "2026-10-30T04:00:00Z",
   "received": "2026-10-19T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {
    "risk_framework": "support",
    "escalation_errors": "support",
@@ -22734,6 +23071,7 @@
   "posted": "2026-10-30T04:00:00Z",
   "received": "2026-10-19T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {
    "risk_framework": "conditional",
    "directiveness_continuum": "support",
@@ -22850,6 +23188,7 @@
   "posted": "2026-10-30T04:00:00Z",
   "received": "2026-10-19T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {},
   "recs": [
    "audit_trail",
@@ -22896,6 +23235,7 @@
   "posted": "2026-10-30T04:00:00Z",
   "received": "2026-10-19T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {
    "risk_framework": "support",
    "directiveness_continuum": "support",
@@ -22983,6 +23323,7 @@
   "posted": "2026-10-30T04:00:00Z",
   "received": "2026-10-19T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {
    "risk_framework": "conditional",
    "directiveness_continuum": "support",
@@ -23082,6 +23423,7 @@
   "posted": "2026-10-30T04:00:00Z",
   "received": "2026-10-19T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {
    "directiveness_continuum": "support",
    "escalation_errors": "conditional",
@@ -23138,6 +23480,7 @@
   "posted": "2026-10-30T04:00:00Z",
   "received": "2026-10-19T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {
    "postmarket_methods": "support"
   },
@@ -23206,6 +23549,7 @@
   "posted": "2026-10-30T04:00:00Z",
   "received": "2026-10-19T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {
    "competency_eval": "oppose",
    "postmarket_tradeoff": "support",
@@ -23256,6 +23600,7 @@
   "posted": "2026-10-30T04:00:00Z",
   "received": "2026-10-19T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {
    "risk_framework": "conditional",
    "competency_eval": "support",
@@ -23367,6 +23712,7 @@
   "posted": "2026-10-30T04:00:00Z",
   "received": "2026-10-19T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {
    "risk_framework": "conditional",
    "competency_eval": "support",
@@ -23440,6 +23786,7 @@
   "posted": "2026-10-30T04:00:00Z",
   "received": "2026-10-19T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {
    "risk_framework": "conditional",
    "median_clinician_comparator": "conditional",
@@ -23498,6 +23845,7 @@
   "posted": "2026-10-30T04:00:00Z",
   "received": "2026-10-19T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {},
   "recs": [
    "audit_trail",
@@ -23542,6 +23890,7 @@
   "posted": "2026-10-30T04:00:00Z",
   "received": "2026-10-19T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {
    "third_party": "support",
    "postmarket_methods": "support",
@@ -23600,6 +23949,7 @@
   "posted": "2026-10-30T04:00:00Z",
   "received": "2026-10-19T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {
    "third_party": "support",
    "postmarket_tradeoff": "conditional",
@@ -23708,6 +24058,7 @@
   "posted": "2026-10-30T04:00:00Z",
   "received": "2026-10-19T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {
    "risk_framework": "conditional",
    "directiveness_continuum": "support",
@@ -23875,6 +24226,7 @@
   "posted": "2026-10-30T04:00:00Z",
   "received": "2026-10-19T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {
    "third_party": "support",
    "postmarket_methods": "support",
@@ -23919,6 +24271,7 @@
   "posted": "2026-10-30T04:00:00Z",
   "received": "2026-10-19T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {
    "risk_framework": "support",
    "postmarket_tradeoff": "conditional",
@@ -23981,6 +24334,7 @@
   "posted": "2026-10-30T04:00:00Z",
   "received": "2026-10-19T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {
    "competency_eval": "conditional",
    "synthetic_data": "conditional",
@@ -24060,6 +24414,7 @@
   "posted": "2026-10-30T04:00:00Z",
   "received": "2026-10-19T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {
    "risk_framework": "support",
    "competency_eval": "support",
@@ -24125,6 +24480,7 @@
   "posted": "2026-10-30T04:00:00Z",
   "received": "2026-10-19T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {
    "risk_framework": "conditional",
    "third_party": "conditional",
@@ -24201,6 +24557,7 @@
   "posted": "2026-10-30T04:00:00Z",
   "received": "2026-10-19T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {
    "risk_framework": "conditional",
    "directiveness_continuum": "support",
@@ -24295,6 +24652,7 @@
   "posted": "2026-10-30T04:00:00Z",
   "received": "2026-10-19T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {
    "risk_framework": "conditional",
    "directiveness_continuum": "oppose",
@@ -24394,6 +24752,7 @@
   "posted": "2026-10-30T04:00:00Z",
   "received": "2026-10-19T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {
    "risk_framework": "support",
    "trajectory_risk": "support",
@@ -24501,6 +24860,7 @@
   "posted": "2026-10-30T04:00:00Z",
   "received": "2026-10-19T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {
    "risk_framework": "oppose",
    "competency_eval": "oppose",
@@ -24599,6 +24959,7 @@
   "posted": "2026-10-30T04:00:00Z",
   "received": "2026-10-19T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {
    "risk_framework": "conditional",
    "directiveness_continuum": "support",
@@ -24722,6 +25083,7 @@
   "posted": "2026-10-30T04:00:00Z",
   "received": "2026-10-19T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {
    "risk_framework": "support",
    "escalation_errors": "support",
@@ -24836,6 +25198,7 @@
   "posted": "2026-10-30T04:00:00Z",
   "received": "2026-10-19T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {
    "risk_framework": "support",
    "directiveness_continuum": "support",
@@ -24915,6 +25278,7 @@
   "posted": "2026-10-30T04:00:00Z",
   "received": "2026-10-19T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {
    "risk_framework": "conditional",
    "directiveness_continuum": "conditional",
@@ -24991,6 +25355,7 @@
   "posted": "2026-10-30T04:00:00Z",
   "received": "2026-10-19T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {},
   "recs": [
    "accountability",
@@ -25056,6 +25421,7 @@
   "posted": "2026-10-30T04:00:00Z",
   "received": "2026-10-19T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {
    "patient_facing_risk": "support",
    "trajectory_risk": "support",
@@ -25117,6 +25483,7 @@
   "posted": "2026-10-30T04:00:00Z",
   "received": "2026-10-19T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {
    "postmarket_methods": "support"
   },
@@ -25164,6 +25531,7 @@
   "posted": "2026-10-30T04:00:00Z",
   "received": "2026-10-19T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {
    "risk_framework": "conditional",
    "directiveness_continuum": "oppose",
@@ -25212,6 +25580,7 @@
   "posted": "2026-10-30T04:00:00Z",
   "received": "2026-10-19T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {
    "risk_framework": "support",
    "competency_eval": "conditional",
@@ -25306,6 +25675,7 @@
   "posted": "2026-10-30T04:00:00Z",
   "received": "2026-10-19T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {
    "risk_framework": "conditional",
    "trajectory_risk": "support",
@@ -25374,6 +25744,7 @@
   "posted": "2026-10-30T04:00:00Z",
   "received": "2026-10-19T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {
    "risk_framework": "conditional",
    "competency_eval": "support",
@@ -25440,6 +25811,7 @@
   "posted": "2026-10-30T04:00:00Z",
   "received": "2026-10-19T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {
    "risk_framework": "conditional",
    "postmarket_methods": "support"
@@ -25472,12 +25844,13 @@
   "q_addr": [],
   "topics": [],
   "tags": [],
-  "summary": "The comment text only refers to an attached file, which is not included in the record.",
+  "summary": "Its attachment is listed on Regulations.gov but is not yet available to download.",
   "words": 4,
   "pages": null,
   "posted": "2026-10-30T04:00:00Z",
   "received": "2026-10-19T04:00:00Z",
   "unreadable": true,
+  "ai_disclosed": false,
   "pos": {},
   "recs": [],
   "also_filed": [],
@@ -25548,6 +25921,7 @@
   "posted": "2026-10-30T04:00:00Z",
   "received": "2026-10-19T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {
    "risk_framework": "conditional",
    "directiveness_continuum": "support",
@@ -25671,6 +26045,7 @@
   "posted": "2026-10-30T04:00:00Z",
   "received": "2026-10-19T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {
    "risk_framework": "conditional",
    "patient_facing_risk": "support",
@@ -25759,6 +26134,7 @@
   "posted": "2026-10-30T04:00:00Z",
   "received": "2026-10-19T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {
    "risk_framework": "conditional",
    "directiveness_continuum": "support",
@@ -25843,6 +26219,7 @@
   "posted": "2026-10-30T04:00:00Z",
   "received": "2026-10-19T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {
    "risk_framework": "conditional",
    "competency_eval": "support",
@@ -25924,6 +26301,7 @@
   "posted": "2026-10-30T04:00:00Z",
   "received": "2026-10-19T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {
    "risk_framework": "conditional",
    "confirmation_flex": "support",
@@ -26034,6 +26412,7 @@
   "posted": "2026-10-30T04:00:00Z",
   "received": "2026-10-19T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {
    "risk_framework": "support",
    "directiveness_continuum": "oppose",
@@ -26149,6 +26528,7 @@
   "posted": "2026-10-30T04:00:00Z",
   "received": "2026-10-19T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {
    "risk_framework": "conditional",
    "directiveness_continuum": "support",
@@ -26209,6 +26589,7 @@
   "posted": "2026-10-30T04:00:00Z",
   "received": "2026-10-19T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {
    "confirmation_flex": "support",
    "postmarket_methods": "support"
@@ -26272,6 +26653,7 @@
   "posted": "2026-10-30T04:00:00Z",
   "received": "2026-10-19T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {
    "postmarket_tradeoff": "conditional"
   },
@@ -26349,6 +26731,7 @@
   "posted": "2026-10-30T04:00:00Z",
   "received": "2026-10-19T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {
    "risk_framework": "conditional",
    "trajectory_risk": "support",
@@ -26453,6 +26836,7 @@
   "posted": "2026-10-30T04:00:00Z",
   "received": "2026-10-19T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {
    "risk_framework": "conditional",
    "directiveness_continuum": "conditional",
@@ -26524,6 +26908,7 @@
   "posted": "2026-10-30T04:00:00Z",
   "received": "2026-10-19T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {
    "risk_framework": "conditional",
    "directiveness_continuum": "support",
@@ -26591,6 +26976,7 @@
   "posted": "2026-10-30T04:00:00Z",
   "received": "2026-10-19T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {
    "risk_framework": "oppose",
    "directiveness_continuum": "support",
@@ -26640,6 +27026,7 @@
   "posted": "2026-10-30T04:00:00Z",
   "received": "2026-10-19T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {
    "directiveness_continuum": "oppose",
    "flexible_change_control": "support"
@@ -26732,6 +27119,7 @@
   "posted": "2026-10-30T04:00:00Z",
   "received": "2026-10-19T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {
    "risk_framework": "conditional",
    "directiveness_continuum": "support",
@@ -26865,6 +27253,7 @@
   "posted": "2026-10-30T04:00:00Z",
   "received": "2026-10-19T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {
    "competency_eval": "conditional",
    "third_party": "support",
@@ -26979,6 +27368,7 @@
   "posted": "2026-10-30T04:00:00Z",
   "received": "2026-10-19T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {
    "risk_framework": "conditional",
    "directiveness_continuum": "support",
@@ -27101,6 +27491,7 @@
   "posted": "2026-10-30T04:00:00Z",
   "received": "2026-10-19T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {
    "risk_framework": "conditional",
    "patient_facing_risk": "support",
@@ -27193,6 +27584,7 @@
   "posted": "2026-10-30T04:00:00Z",
   "received": "2026-10-19T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {
    "directiveness_continuum": "support",
    "patient_facing_risk": "support",
@@ -27301,6 +27693,7 @@
   "posted": "2026-10-30T04:00:00Z",
   "received": "2026-10-19T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {
    "risk_framework": "support",
    "directiveness_continuum": "support",
@@ -27400,6 +27793,7 @@
   "posted": "2026-10-30T04:00:00Z",
   "received": "2026-10-19T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {
    "risk_framework": "support",
    "trajectory_risk": "support",
@@ -27495,6 +27889,7 @@
   "posted": "2026-10-30T04:00:00Z",
   "received": "2026-10-19T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {},
   "recs": [],
   "also_filed": [],
@@ -27530,6 +27925,7 @@
   "posted": "2026-10-30T04:00:00Z",
   "received": "2026-10-19T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {
    "directiveness_continuum": "support",
    "patient_facing_risk": "support"
@@ -27593,6 +27989,7 @@
   "posted": "2026-10-30T04:00:00Z",
   "received": "2026-10-19T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {
    "risk_framework": "conditional",
    "escalation_errors": "support",
@@ -27713,6 +28110,7 @@
   "posted": "2026-10-30T04:00:00Z",
   "received": "2026-10-19T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {
    "risk_framework": "conditional",
    "directiveness_continuum": "support",
@@ -27851,6 +28249,7 @@
   "posted": "2026-10-30T04:00:00Z",
   "received": "2026-10-19T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {
    "risk_framework": "conditional",
    "directiveness_continuum": "oppose",
@@ -27912,6 +28311,7 @@
   "posted": "2026-10-30T04:00:00Z",
   "received": "2026-10-19T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {
    "directiveness_continuum": "support"
   },
@@ -27978,6 +28378,7 @@
   "posted": "2026-10-30T04:00:00Z",
   "received": "2026-10-19T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {
    "risk_framework": "support",
    "patient_facing_risk": "conditional",
@@ -28114,6 +28515,7 @@
   "posted": "2026-10-30T04:00:00Z",
   "received": "2026-10-19T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {
    "risk_framework": "support",
    "directiveness_continuum": "support",
@@ -28186,6 +28588,7 @@
   "posted": "2026-10-30T04:00:00Z",
   "received": "2026-10-19T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {
    "risk_framework": "conditional",
    "escalation_errors": "conditional",
@@ -28256,6 +28659,7 @@
   "posted": "2026-10-30T04:00:00Z",
   "received": "2026-10-19T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {
    "confirmation_flex": "support"
   },
@@ -28288,6 +28692,7 @@
   "posted": "2026-10-30T04:00:00Z",
   "received": "2026-10-19T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {},
   "recs": [],
   "also_filed": [],
@@ -28373,6 +28778,7 @@
   "posted": "2026-10-30T04:00:00Z",
   "received": "2026-10-19T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {
    "risk_framework": "conditional",
    "directiveness_continuum": "support",
@@ -28544,6 +28950,7 @@
   "posted": "2026-10-30T04:00:00Z",
   "received": "2026-10-19T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {
    "risk_framework": "support",
    "directiveness_continuum": "support",
@@ -28656,6 +29063,7 @@
   "posted": "2026-10-30T04:00:00Z",
   "received": "2026-10-19T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {
    "risk_framework": "support",
    "directiveness_continuum": "support",
@@ -28719,6 +29127,7 @@
   "posted": "2026-10-30T04:00:00Z",
   "received": "2026-10-19T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {},
   "recs": [],
   "also_filed": [],
@@ -28786,6 +29195,7 @@
   "posted": "2026-10-30T04:00:00Z",
   "received": "2026-10-19T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {
    "risk_framework": "support",
    "postmarket_methods": "support",
@@ -28917,6 +29327,7 @@
   "posted": "2026-10-30T04:00:00Z",
   "received": "2026-10-19T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {
    "risk_framework": "conditional",
    "postmarket_methods": "support",
@@ -29027,6 +29438,7 @@
   "posted": "2026-10-30T04:00:00Z",
   "received": "2026-10-19T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {
    "competency_eval": "support",
    "third_party": "support"
@@ -29090,6 +29502,7 @@
   "posted": "2026-10-30T04:00:00Z",
   "received": "2026-10-19T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {
    "risk_framework": "conditional",
    "postmarket_methods": "conditional",
@@ -29175,6 +29588,7 @@
   "posted": "2026-10-30T04:00:00Z",
   "received": "2026-10-19T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {
    "risk_framework": "conditional",
    "confirmation_flex": "support",
@@ -29239,6 +29653,7 @@
   "posted": "2026-10-30T04:00:00Z",
   "received": "2026-10-19T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {
    "trajectory_risk": "support",
    "escalation_errors": "support"
@@ -29303,6 +29718,7 @@
   "posted": "2026-10-30T04:00:00Z",
   "received": "2026-10-19T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {
    "risk_framework": "conditional",
    "postmarket_methods": "conditional",
@@ -29388,6 +29804,7 @@
   "posted": "2026-10-30T04:00:00Z",
   "received": "2026-10-19T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {},
   "recs": [
    "accountability"
@@ -29424,6 +29841,7 @@
   "posted": "2026-10-30T04:00:00Z",
   "received": "2026-10-19T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {
    "agentic_oversight": "support",
    "competency_eval": "support",
@@ -29512,6 +29930,7 @@
   "posted": "2026-10-30T04:00:00Z",
   "received": "2026-10-19T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {
    "risk_framework": "support",
    "postmarket_methods": "support",
@@ -29609,6 +30028,7 @@
   "posted": "2026-10-30T04:00:00Z",
   "received": "2026-10-19T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {
    "risk_framework": "conditional",
    "postmarket_methods": "support",
@@ -29708,6 +30128,7 @@
   "posted": "2026-10-30T04:00:00Z",
   "received": "2026-10-19T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {
    "risk_framework": "conditional",
    "directiveness_continuum": "support",
@@ -29824,6 +30245,7 @@
   "posted": "2026-10-30T04:00:00Z",
   "received": "2026-10-19T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {
    "risk_framework": "conditional",
    "directiveness_continuum": "support",
@@ -29930,6 +30352,7 @@
   "posted": "2026-10-30T04:00:00Z",
   "received": "2026-10-19T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {
    "risk_framework": "conditional",
    "directiveness_continuum": "support",
@@ -30036,6 +30459,7 @@
   "posted": "2026-10-30T04:00:00Z",
   "received": "2026-10-19T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {
    "risk_framework": "support",
    "directiveness_continuum": "support",
@@ -30095,6 +30519,7 @@
   "posted": "2026-10-30T04:00:00Z",
   "received": "2026-10-19T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {
    "risk_framework": "oppose",
    "patient_facing_risk": "oppose",
@@ -30169,6 +30594,7 @@
   "posted": "2026-10-30T04:00:00Z",
   "received": "2026-10-19T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {
    "risk_framework": "support",
    "competency_eval": "support",
@@ -30252,6 +30678,7 @@
   "posted": "2026-10-30T04:00:00Z",
   "received": "2026-10-19T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {
    "risk_framework": "conditional",
    "competency_eval": "support",
@@ -30366,6 +30793,7 @@
   "posted": "2026-10-30T04:00:00Z",
   "received": "2026-10-19T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {
    "risk_framework": "conditional",
    "directiveness_continuum": "support",
@@ -30533,6 +30961,7 @@
   "posted": "2026-10-30T04:00:00Z",
   "received": "2026-10-19T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {
    "risk_framework": "conditional",
    "directiveness_continuum": "conditional",
@@ -30672,6 +31101,7 @@
   "posted": "2026-10-30T04:00:00Z",
   "received": "2026-10-19T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {
    "risk_framework": "conditional",
    "directiveness_continuum": "support",
@@ -30834,6 +31264,7 @@
   "posted": "2026-10-30T04:00:00Z",
   "received": "2026-10-19T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {
    "risk_framework": "oppose",
    "directiveness_continuum": "support",
@@ -30980,6 +31411,7 @@
   "posted": "2026-10-30T04:00:00Z",
   "received": "2026-10-19T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {
    "risk_framework": "conditional",
    "directiveness_continuum": "oppose",
@@ -31089,6 +31521,7 @@
   "posted": "2026-10-30T04:00:00Z",
   "received": "2026-10-19T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {
    "risk_framework": "conditional",
    "patient_facing_risk": "support",
@@ -31164,6 +31597,7 @@
   "posted": "2026-10-30T04:00:00Z",
   "received": "2026-10-19T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {
    "risk_framework": "conditional",
    "directiveness_continuum": "support",
@@ -31303,6 +31737,7 @@
   "posted": "2026-10-30T04:00:00Z",
   "received": "2026-10-19T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {
    "risk_framework": "conditional",
    "directiveness_continuum": "conditional",
@@ -31443,6 +31878,7 @@
   "posted": "2026-10-30T04:00:00Z",
   "received": "2026-10-19T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {
    "risk_framework": "conditional",
    "patient_facing_risk": "support",
@@ -31532,6 +31968,7 @@
   "posted": "2026-10-30T04:00:00Z",
   "received": "2026-10-19T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {
    "risk_framework": "support",
    "competency_eval": "support",
@@ -31595,6 +32032,7 @@
   "posted": "2026-10-30T04:00:00Z",
   "received": "2026-10-19T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {
    "risk_framework": "conditional",
    "directiveness_continuum": "support",
@@ -31695,6 +32133,7 @@
   "posted": "2026-10-30T04:00:00Z",
   "received": "2026-10-19T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {
    "risk_framework": "conditional",
    "directiveness_continuum": "support",
@@ -31843,6 +32282,7 @@
   "posted": "2026-10-30T04:00:00Z",
   "received": "2026-10-19T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {
    "risk_framework": "conditional",
    "patient_facing_risk": "conditional",
@@ -31954,6 +32394,7 @@
   "posted": "2026-10-30T04:00:00Z",
   "received": "2026-10-19T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {
    "risk_framework": "conditional",
    "directiveness_continuum": "support",
@@ -32030,6 +32471,7 @@
   "posted": "2026-10-30T04:00:00Z",
   "received": "2026-10-19T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {
    "confirmation_flex": "support",
    "third_party": "conditional"
@@ -32114,6 +32556,7 @@
   "posted": "2026-10-30T04:00:00Z",
   "received": "2026-10-19T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {
    "risk_framework": "support",
    "directiveness_continuum": "support",
@@ -32228,6 +32671,7 @@
   "posted": "2026-10-30T04:00:00Z",
   "received": "2026-10-19T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {
    "patient_facing_risk": "oppose",
    "escalation_errors": "support",
@@ -32290,6 +32734,7 @@
   "posted": "2026-10-30T04:00:00Z",
   "received": "2026-10-19T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {
    "risk_framework": "oppose",
    "directiveness_continuum": "support",
@@ -32359,6 +32804,7 @@
   "posted": "2026-10-30T04:00:00Z",
   "received": "2026-10-19T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {
    "risk_framework": "support",
    "directiveness_continuum": "support",
@@ -32435,6 +32881,7 @@
   "posted": "2026-10-30T04:00:00Z",
   "received": "2026-10-19T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {
    "risk_framework": "support",
    "trajectory_risk": "support",
@@ -32542,6 +32989,7 @@
   "posted": "2026-10-30T04:00:00Z",
   "received": "2026-10-19T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {
    "risk_framework": "conditional",
    "directiveness_continuum": "support",
@@ -32708,6 +33156,7 @@
   "posted": "2026-10-30T04:00:00Z",
   "received": "2026-10-19T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {
    "risk_framework": "support",
    "directiveness_continuum": "support",
@@ -32795,6 +33244,7 @@
   "posted": "2026-10-30T04:00:00Z",
   "received": "2026-10-19T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {
    "patient_facing_risk": "conditional"
   },
@@ -32865,6 +33315,7 @@
   "posted": "2026-10-30T04:00:00Z",
   "received": "2026-10-19T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {
    "risk_framework": "support",
    "directiveness_continuum": "support",
@@ -32931,6 +33382,7 @@
   "posted": "2026-10-30T04:00:00Z",
   "received": "2026-10-19T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {
    "risk_framework": "support",
    "competency_eval": "support"
@@ -32978,6 +33430,7 @@
   "posted": "2026-10-30T04:00:00Z",
   "received": "2026-10-19T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {
    "flexible_change_control": "conditional"
   },
@@ -33021,6 +33474,7 @@
   "posted": "2026-10-30T04:00:00Z",
   "received": "2026-10-19T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {},
   "recs": [],
   "also_filed": [],
@@ -33051,6 +33505,7 @@
   "posted": "2026-10-30T04:00:00Z",
   "received": "2026-10-19T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {
    "postmarket_methods": "conditional",
    "agentic_oversight": "conditional"
@@ -33097,6 +33552,7 @@
   "posted": "2026-10-30T04:00:00Z",
   "received": "2026-10-19T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {},
   "recs": [
    "nonphysician_clinicians"
@@ -33141,6 +33597,7 @@
   "posted": "2026-10-30T04:00:00Z",
   "received": "2026-10-19T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {
    "competency_eval": "support",
    "flexible_change_control": "support"
@@ -33233,6 +33690,7 @@
   "posted": "2026-10-30T04:00:00Z",
   "received": "2026-10-19T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {
    "risk_framework": "conditional",
    "directiveness_continuum": "support",
@@ -33372,6 +33830,7 @@
   "posted": "2026-10-30T04:00:00Z",
   "received": "2026-10-19T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {
    "risk_framework": "support",
    "directiveness_continuum": "support",
@@ -33523,6 +33982,7 @@
   "posted": "2026-10-30T04:00:00Z",
   "received": "2026-10-19T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {
    "risk_framework": "conditional",
    "directiveness_continuum": "support",
@@ -33707,6 +34167,7 @@
   "posted": "2026-10-30T04:00:00Z",
   "received": "2026-10-19T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {
    "risk_framework": "oppose",
    "directiveness_continuum": "oppose",
@@ -33770,6 +34231,7 @@
   "posted": "2026-10-30T04:00:00Z",
   "received": "2026-10-19T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {
    "trajectory_risk": "conditional",
    "postmarket_tradeoff": "oppose",
@@ -33860,6 +34322,7 @@
   "posted": "2026-10-30T04:00:00Z",
   "received": "2026-10-19T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {
    "risk_framework": "conditional",
    "directiveness_continuum": "support",
@@ -33921,6 +34384,7 @@
   "posted": "2026-10-30T04:00:00Z",
   "received": "2026-10-19T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {
    "risk_framework": "support",
    "competency_eval": "support",
@@ -33992,6 +34456,7 @@
   "posted": "2026-10-30T04:00:00Z",
   "received": "2026-10-19T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {
    "risk_framework": "conditional",
    "patient_facing_risk": "support",
@@ -34088,6 +34553,7 @@
   "posted": "2026-10-30T04:00:00Z",
   "received": "2026-10-19T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {
    "risk_framework": "support",
    "directiveness_continuum": "support",
@@ -34169,6 +34635,7 @@
   "posted": "2026-10-30T04:00:00Z",
   "received": "2026-10-19T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {
    "risk_framework": "conditional",
    "directiveness_continuum": "support",
@@ -34298,6 +34765,7 @@
   "posted": "2026-10-30T04:00:00Z",
   "received": "2026-10-19T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {
    "risk_framework": "support",
    "patient_facing_risk": "oppose",
@@ -34404,6 +34872,7 @@
   "posted": "2026-10-30T04:00:00Z",
   "received": "2026-10-19T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {
    "synthetic_data": "conditional"
   },
@@ -34484,6 +34953,7 @@
   "posted": "2026-10-30T04:00:00Z",
   "received": "2026-10-19T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {
    "risk_framework": "support",
    "directiveness_continuum": "oppose",
@@ -34586,6 +35056,7 @@
   "posted": "2026-10-30T04:00:00Z",
   "received": "2026-10-19T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {
    "risk_framework": "conditional",
    "directiveness_continuum": "support",
@@ -34692,6 +35163,7 @@
   "posted": "2026-10-30T04:00:00Z",
   "received": "2026-10-19T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {
    "postmarket_tradeoff": "oppose",
    "postmarket_methods": "oppose",
@@ -34746,6 +35218,7 @@
   "posted": "2026-10-30T04:00:00Z",
   "received": "2026-10-19T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {
    "agentic_oversight": "support"
   },
@@ -34786,6 +35259,7 @@
   "posted": "2026-10-30T04:00:00Z",
   "received": "2026-10-19T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {},
   "recs": [],
   "also_filed": [],
@@ -34867,6 +35341,7 @@
   "posted": "2026-10-30T04:00:00Z",
   "received": "2026-10-19T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {
    "risk_framework": "conditional",
    "patient_facing_risk": "conditional",
@@ -34956,6 +35431,7 @@
   "posted": "2026-10-30T04:00:00Z",
   "received": "2026-10-19T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {
    "agentic_oversight": "conditional"
   },
@@ -35019,6 +35495,7 @@
   "posted": "2026-10-30T04:00:00Z",
   "received": "2026-10-19T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {
    "risk_framework": "conditional",
    "escalation_errors": "conditional",
@@ -35149,6 +35626,7 @@
   "posted": "2026-10-30T04:00:00Z",
   "received": "2026-10-19T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {
    "risk_framework": "support",
    "directiveness_continuum": "support",
@@ -35242,6 +35720,7 @@
   "posted": "2026-10-30T04:00:00Z",
   "received": "2026-10-19T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {
    "risk_framework": "conditional",
    "directiveness_continuum": "support",
@@ -35339,6 +35818,7 @@
   "posted": "2026-10-30T04:00:00Z",
   "received": "2026-10-19T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {
    "risk_framework": "conditional",
    "directiveness_continuum": "support",
@@ -35481,6 +35961,7 @@
   "posted": "2026-10-30T04:00:00Z",
   "received": "2026-10-19T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {
    "risk_framework": "conditional",
    "directiveness_continuum": "support",
@@ -35609,6 +36090,7 @@
   "posted": "2026-10-30T04:00:00Z",
   "received": "2026-10-19T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {
    "risk_framework": "conditional",
    "directiveness_continuum": "support",
@@ -35698,6 +36180,7 @@
   "posted": "2026-10-30T04:00:00Z",
   "received": "2026-10-19T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {
    "synthetic_data": "conditional"
   },
@@ -35778,6 +36261,7 @@
   "posted": "2026-10-30T04:00:00Z",
   "received": "2026-10-19T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {
    "risk_framework": "conditional",
    "escalation_errors": "support",
@@ -35850,6 +36334,7 @@
   "posted": "2026-10-30T04:00:00Z",
   "received": "2026-10-19T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {
    "confirmation_flex": "support",
    "postmarket_tradeoff": "oppose"
@@ -35896,6 +36381,7 @@
   "posted": "2026-10-30T04:00:00Z",
   "received": "2026-10-19T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {
    "directiveness_continuum": "support",
    "competency_eval": "support",
@@ -35979,6 +36465,7 @@
   "posted": "2026-10-30T04:00:00Z",
   "received": "2026-10-19T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {
    "third_party": "support",
    "postmarket_tradeoff": "conditional",
@@ -36043,6 +36530,7 @@
   "posted": "2026-10-30T04:00:00Z",
   "received": "2026-10-19T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {
    "risk_framework": "support",
    "trajectory_risk": "support",
@@ -36125,6 +36613,7 @@
   "posted": "2026-10-30T04:00:00Z",
   "received": "2026-10-19T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {
    "risk_framework": "conditional",
    "competency_eval": "support",
@@ -36242,6 +36731,7 @@
   "posted": "2026-10-30T04:00:00Z",
   "received": "2026-10-19T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {
    "risk_framework": "conditional",
    "directiveness_continuum": "support",
@@ -36400,6 +36890,7 @@
   "posted": "2026-10-30T04:00:00Z",
   "received": "2026-10-19T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {
    "competency_eval": "oppose",
    "synthetic_data": "conditional",
@@ -36487,6 +36978,7 @@
   "posted": "2026-10-30T04:00:00Z",
   "received": "2026-10-19T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {
    "risk_framework": "conditional",
    "patient_facing_risk": "conditional",
@@ -36580,6 +37072,7 @@
   "posted": "2026-10-30T04:00:00Z",
   "received": "2026-10-19T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {
    "third_party": "support"
   },
@@ -36624,6 +37117,7 @@
   "posted": "2026-10-30T04:00:00Z",
   "received": "2026-10-19T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {
    "risk_framework": "support"
   },
@@ -36701,6 +37195,7 @@
   "posted": "2026-10-30T04:00:00Z",
   "received": "2026-10-19T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {
    "risk_framework": "support",
    "directiveness_continuum": "conditional",
@@ -36819,6 +37314,7 @@
   "posted": "2026-10-30T04:00:00Z",
   "received": "2026-10-19T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {
    "competency_eval": "support",
    "confirmation_flex": "support",
@@ -36890,6 +37386,7 @@
   "posted": "2026-10-30T04:00:00Z",
   "received": "2026-10-19T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {
    "competency_eval": "support",
    "third_party": "support",
@@ -36951,6 +37448,7 @@
   "posted": "2026-10-30T04:00:00Z",
   "received": "2026-10-19T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {
    "competency_eval": "support",
    "confirmation_flex": "support",
@@ -37024,6 +37522,7 @@
   "posted": "2026-10-30T04:00:00Z",
   "received": "2026-10-19T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {
    "risk_framework": "support",
    "third_party": "support",
@@ -37111,6 +37610,7 @@
   "posted": "2026-10-30T04:00:00Z",
   "received": "2026-10-19T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {
    "risk_framework": "conditional",
    "directiveness_continuum": "support",
@@ -37198,6 +37698,7 @@
   "posted": "2026-10-30T04:00:00Z",
   "received": "2026-10-19T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {
    "risk_framework": "conditional",
    "patient_facing_risk": "conditional",
@@ -37278,6 +37779,7 @@
   "posted": "2026-10-30T04:00:00Z",
   "received": "2026-10-19T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {
    "risk_framework": "oppose",
    "competency_eval": "support",
@@ -37325,6 +37827,7 @@
   "posted": "2026-10-30T04:00:00Z",
   "received": "2026-10-19T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {},
   "recs": [],
   "also_filed": [],
@@ -37358,6 +37861,7 @@
   "posted": "2026-10-30T04:00:00Z",
   "received": "2026-10-19T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {
    "risk_framework": "support",
    "trajectory_risk": "support",
@@ -37413,6 +37917,7 @@
   "posted": "2026-10-30T04:00:00Z",
   "received": "2026-10-19T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {
    "risk_framework": "conditional",
    "directiveness_continuum": "support",
@@ -37501,6 +38006,7 @@
   "posted": "2026-10-30T04:00:00Z",
   "received": "2026-10-19T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {
    "risk_framework": "conditional",
    "patient_facing_risk": "support",
@@ -37587,6 +38093,7 @@
   "posted": "2026-10-30T04:00:00Z",
   "received": "2026-10-19T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {
    "risk_framework": "support",
    "directiveness_continuum": "support",
@@ -37668,6 +38175,7 @@
   "posted": "2026-10-30T04:00:00Z",
   "received": "2026-10-19T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {
    "trajectory_risk": "conditional",
    "supervisory_agents": "conditional"
@@ -37776,6 +38284,7 @@
   "posted": "2026-10-30T04:00:00Z",
   "received": "2026-10-19T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {
    "risk_framework": "conditional",
    "directiveness_continuum": "support",
@@ -37952,6 +38461,7 @@
   "posted": "2026-10-30T04:00:00Z",
   "received": "2026-10-19T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {
    "risk_framework": "support",
    "directiveness_continuum": "support",
@@ -38047,6 +38557,7 @@
   "posted": "2026-10-30T04:00:00Z",
   "received": "2026-10-19T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {
    "risk_framework": "oppose",
    "directiveness_continuum": "oppose",
@@ -38097,6 +38608,7 @@
   "posted": "2026-10-30T04:00:00Z",
   "received": "2026-10-19T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {},
   "recs": [
    "agent_authority",
@@ -38149,6 +38661,7 @@
   "posted": "2026-10-30T04:00:00Z",
   "received": "2026-10-19T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {
    "risk_framework": "support",
    "patient_facing_risk": "oppose",
@@ -38220,6 +38733,7 @@
   "posted": "2026-10-30T04:00:00Z",
   "received": "2026-10-19T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {
    "patient_facing_risk": "support",
    "trajectory_risk": "support",
@@ -38265,6 +38779,7 @@
   "posted": "2026-10-30T04:00:00Z",
   "received": "2026-10-19T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {
    "patient_facing_risk": "oppose"
   },
@@ -38340,6 +38855,7 @@
   "posted": "2026-10-30T04:00:00Z",
   "received": "2026-10-19T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {
    "risk_framework": "conditional",
    "directiveness_continuum": "support",
@@ -38477,6 +38993,7 @@
   "posted": "2026-10-30T04:00:00Z",
   "received": "2026-10-19T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {
    "risk_framework": "support",
    "directiveness_continuum": "support",
@@ -38573,6 +39090,7 @@
   "posted": "2026-10-30T04:00:00Z",
   "received": "2026-10-19T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {
    "risk_framework": "oppose",
    "directiveness_continuum": "support",
@@ -38687,6 +39205,7 @@
   "posted": "2026-10-30T04:00:00Z",
   "received": "2026-10-19T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {
    "competency_eval": "support"
   },
@@ -38739,6 +39258,7 @@
   "posted": "2026-10-30T04:00:00Z",
   "received": "2026-10-19T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {
    "competency_eval": "conditional",
    "median_clinician_comparator": "conditional",
@@ -38867,6 +39387,7 @@
   "posted": "2026-10-30T04:00:00Z",
   "received": "2026-10-19T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {
    "risk_framework": "conditional",
    "directiveness_continuum": "support",
@@ -39025,6 +39546,7 @@
   "posted": "2026-10-30T04:00:00Z",
   "received": "2026-10-19T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {
    "risk_framework": "conditional",
    "directiveness_continuum": "support",
@@ -39130,6 +39652,7 @@
   "posted": "2026-10-30T04:00:00Z",
   "received": "2026-10-19T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {
    "risk_framework": "conditional",
    "competency_eval": "conditional",
@@ -39246,6 +39769,7 @@
   "posted": "2026-10-30T04:00:00Z",
   "received": "2026-10-19T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {
    "risk_framework": "conditional",
    "directiveness_continuum": "support",
@@ -39364,6 +39888,7 @@
   "posted": "2026-10-30T04:00:00Z",
   "received": "2026-10-19T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {
    "trajectory_risk": "support",
    "competency_eval": "support",
@@ -39488,6 +40013,7 @@
   "posted": "2026-10-30T04:00:00Z",
   "received": "2026-10-19T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {
    "risk_framework": "conditional",
    "patient_facing_risk": "oppose",
@@ -39601,6 +40127,7 @@
   "posted": "2026-10-30T04:00:00Z",
   "received": "2026-10-19T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {
    "risk_framework": "support",
    "competency_eval": "support",
@@ -39734,6 +40261,7 @@
   "posted": "2026-10-30T04:00:00Z",
   "received": "2026-10-19T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {
    "risk_framework": "conditional",
    "directiveness_continuum": "support",
@@ -39865,6 +40393,7 @@
   "posted": "2026-10-30T04:00:00Z",
   "received": "2026-10-19T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {
    "competency_eval": "conditional",
    "postmarket_tradeoff": "conditional",
@@ -39941,6 +40470,7 @@
   "posted": "2026-10-30T04:00:00Z",
   "received": "2026-10-19T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {
    "postmarket_methods": "conditional"
   },
@@ -39996,6 +40526,7 @@
   "posted": "2026-10-30T04:00:00Z",
   "received": "2026-10-19T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {
    "agentic_oversight": "conditional"
   },
@@ -40040,6 +40571,7 @@
   "posted": "2026-10-30T04:00:00Z",
   "received": "2026-10-19T04:00:00Z",
   "unreadable": false,
+  "ai_disclosed": false,
   "pos": {
    "competency_eval": "support",
    "third_party": "support"

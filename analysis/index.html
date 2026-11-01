@@ -171,7 +171,7 @@ svg .infoi:hover circle, svg .infoi:focus circle, .ic:hover, .ic:focus { stroke:
     <summary>About this data</summary>
     <p>Comments are downloaded from the Regulations.gov public API for this docket, with their attached files. Regulations.gov shows only comments FDA has reviewed and posted. FDA posts them in batches, so the docket can hold more comments than this site includes, and comments filed but not yet posted appear in neither.</p>
     <p>New comments are added to the charts after each one is read and coded, which can take several days. "Coded data last updated" is the date coded comments were last added or changed.</p>
-    <p>Each comment was read in full and coded by Claude Opus 5.5 against a written codebook, with checks by separate instances of the same model. No codes have been checked by a person. Comments filed twice are counted once. One comment is counted but not shown, at its author's request.</p>
+    <p>Each comment was read in full and coded by Claude Opus 5.5 against a written codebook, with checks by separate instances of the same model. No codes have been checked by a person. Comments filed twice are counted once. One comment is counted but not shown, at its author's request. When AI agent coders disagreed on a position, the code leans toward ‘support with conditions’ or ‘no position,’ so those shares may be somewhat high.</p>
   </details>
   <nav class="tabs" role="tablist" aria-label="Views">
     <button type="button" class="tab" role="tab" data-view="explore" aria-selected="false">Explore</button>
@@ -702,8 +702,8 @@ function renderTable() {
   const note = document.getElementById("selNote"), clear = document.getElementById("clear");
   if (state.sel) {
     const it = catalog(state.sel.lens).find(i => i.key === state.sel.key);
-    note.textContent = `${rows.length} comments${state.cat ? " from " + state.cat : ""} ${it && it.phrase ? it.phrase : "addressing " + (it ? it.label : state.sel.key)}`; clear.hidden = false;
-  } else { note.textContent = `${rows.length} comments`; clear.hidden = state.types.size === 0; }
+    note.textContent = `${rows.length} comment${rows.length === 1 ? "" : "s"}${state.cat ? " from " + state.cat : ""} ${it && it.phrase ? it.phrase : "addressing " + (it ? it.label : state.sel.key)}`; clear.hidden = false;
+  } else { note.textContent = `${rows.length} comment${rows.length === 1 ? "" : "s"}`; clear.hidden = state.types.size === 0; }
   if (state.types.size) note.textContent += ` · ${[...state.types].join(", ")}`;
   const a = META.aria;
   const extra = pend.map(c => c.short_name || nameOf(c));
@@ -742,7 +742,7 @@ function renderTable() {
       ${q && (it.c.summary || "").toLowerCase().includes(q) ? `<p class="sum"><span class="src">AI-written summary:</span> ${hl(it.c.summary, q)}</p>` : ""}
       ${facets(it.c.q_addr, [])}</article>`
     : `<article class="card"><div class="top"><span class="who">${esc(it.name)}</span>${btn(it.c.id)}</div>
-      <div class="meta"><a href="https://www.regulations.gov/comment/${esc(it.c.id)}" target="_blank" rel="noopener">${esc(short(it.c.id))}</a><span>${esc(it.c.commenter_type)}${it.c.type_inferred ? " (inferred)" : ""}</span><span>Received ${fmtD(it.c.received)}</span>${(it.c.also_filed || []).map(d => `<span>Also filed as <a href="https://www.regulations.gov/comment/${esc(d)}" target="_blank" rel="noopener">${esc(short(d))}</a></span>`).join("")}</div>
+      <div class="meta"><a href="https://www.regulations.gov/comment/${esc(it.c.id)}" target="_blank" rel="noopener">${esc(short(it.c.id))}</a><span>${esc(it.c.commenter_type)}${it.c.type_inferred ? " (inferred)" : ""}</span><span>Received ${fmtD(it.c.received)}</span>${it.c.ai_disclosed ? "<span>Disclosed as AI-written</span>" : ""}${(it.c.also_filed || []).map(d => `<span>Also filed as <a href="https://www.regulations.gov/comment/${esc(d)}" target="_blank" rel="noopener">${esc(short(d))}</a></span>`).join("")}</div>
       ${q && (it.c.summary || "").toLowerCase().includes(q) ? `<p class="sum"><span class="src">AI-written summary:</span> ${hl(it.c.summary, q)}</p>` : ""}
       ${it.c.unreadable ? '<div class="themes">Attachment unreadable, not coded</div>' : facets(it.c.q_addr, it.c.topics || [])}</article>`;
   document.getElementById("rows").innerHTML = shown.length ? shown.map(card).join("") : `<p class="empty">No comments match.</p>`;
