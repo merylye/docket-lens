@@ -66,7 +66,7 @@ Categories come from Regulations.gov. Comments filed without one were assigned a
 
 ## Updating
 
-FDA posts comments after review, so the docket can keep growing. A GitHub Action checks it daily through November 21, 2026. It writes the posted count and check date to `data/docket_status.json`, which the site shows next to the number of coded comments along with an "About this data" note, and it opens a "New comments to code" issue when it finds new comments. It reads the API key from a repository secret named `REGULATIONS_GOV_API_KEY` (free at [api.data.gov/signup](https://api.data.gov/signup)).
+FDA posts comments after review, so the docket can keep growing. A GitHub Action checks it daily through December 31, 2026. It writes the posted count and check date to `data/docket_status.json`, which the site shows next to the number of coded comments along with an "About this data" note, and it opens a "New comments to code" issue when it finds new comments. It reads the API key from a repository secret named `REGULATIONS_GOV_API_KEY` (free at [api.data.gov/signup](https://api.data.gov/signup)).
 
 1. Run `REGULATIONS_GOV_API_KEY=... python pipeline/pull.py` to download comments into `pipeline/raw/`, which is not committed.
 2. Code new comments against both codebooks and add them to `pipeline/codes/`, `pipeline/codes2/`, `pipeline/recommendations.json`, and `pipeline/conditions.json`. Attachments on `downloads.regulations.gov` block many cloud servers, so read them from a normal browser. Scanned attachments need OCR.

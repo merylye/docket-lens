@@ -10,7 +10,7 @@ permissions:
   issues: write
 
 env:
-  STOP_AFTER: "2026-11-21"   # the daily check ends after this date
+  STOP_AFTER: "2026-12-31"   # the daily check ends after this date
 
 jobs:
   check:
