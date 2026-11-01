@@ -671,7 +671,7 @@ function renderAddMenu() {
 
 /* Small charts */
 function renderTypes() {
-  const counts = {}; D.forEach(c => { const t = c.commenter_type || "Other"; counts[t] = counts[t] || { n: 0, inf: 0 }; counts[t].n++; if (c.type_inferred) counts[t].inf++; });
+  const counts = {}; readable().forEach(c => { const t = c.commenter_type || "Other"; counts[t] = counts[t] || { n: 0, inf: 0 }; counts[t].n++; if (c.type_inferred) counts[t].inf++; });
   const rows = Object.entries(counts).sort((a, b) => b[1].n - a[1].n);
   const W = 600, x0 = 255, barW = W - x0 - 40, rowH = 30, max = Math.max(...rows.map(r => r[1].n));
   let y = 0; const out = rows.map(([t, v]) => {
