@@ -65,7 +65,8 @@ NO_CARD = set(PRIV["no_card"])
 DUPLICATES = {"FDA-2026-N-7874-0117": "FDA-2026-N-7874-0102", "FDA-2026-N-7874-0058": "FDA-2026-N-7874-0057",
               "FDA-2026-N-7874-0013": "FDA-2026-N-7874-0010", "FDA-2026-N-7874-0129": "FDA-2026-N-7874-0128",
               "FDA-2026-N-7874-0041": "FDA-2026-N-7874-0040",
-              "FDA-2026-N-7874-0175": "FDA-2026-N-7874-0174"}
+              "FDA-2026-N-7874-0175": "FDA-2026-N-7874-0174",
+              "FDA-2026-N-7874-0523": "FDA-2026-N-7874-0522"}
 PROPOSALS = [  # in docket question order
     ("risk_framework", "Two-axis risk framework", "FDA's framework rating risk by device activity and the consequence of relying on an incorrect output (Q1)"),
     ("directiveness_continuum", "Directiveness as a continuum", "Treating how directive an output is as a matter of degree, with wording and personalization as risk modifiers (Q2)"),

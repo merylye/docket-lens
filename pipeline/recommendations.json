@@ -1461,6 +1461,2431 @@
   ],
   "FDA-2026-N-7874-0154": [
    "nonphysician_clinicians"
+  ],
+  "FDA-2026-N-7874-0206": [
+   "accountability",
+   "populations_settings",
+   "postmarket_plans",
+   "rebenchmark_on_change",
+   "supervisor_validation",
+   "version_pinning"
+  ],
+  "FDA-2026-N-7874-0207": [
+   "human_ai_team",
+   "postmarket_plans",
+   "prospective_outcomes",
+   "risk_evidence_map",
+   "sequestered_benchmarks",
+   "synthetic_separate"
+  ],
+  "FDA-2026-N-7874-0208": [
+   "error_reporting",
+   "prospective_outcomes",
+   "rebenchmark_on_change"
+  ],
+  "FDA-2026-N-7874-0209": [
+   "agent_authority",
+   "comparator_realistic",
+   "directiveness_behavior",
+   "escalation_separate",
+   "multi_turn",
+   "patient_disclosure",
+   "risk_factors",
+   "sequestered_benchmarks",
+   "sycophancy",
+   "version_pinning"
+  ],
+  "FDA-2026-N-7874-0210": [
+   "independent_eval",
+   "populations_settings"
+  ],
+  "FDA-2026-N-7874-0211": [
+   "human_ai_team",
+   "nonphysician_clinicians",
+   "populations_settings",
+   "risk_factors",
+   "sycophancy"
+  ],
+  "FDA-2026-N-7874-0212": [
+   "independent_eval",
+   "missing_input",
+   "sequestered_benchmarks",
+   "supervisor_validation"
+  ],
+  "FDA-2026-N-7874-0213": [
+   "agent_sequences",
+   "audit_trail",
+   "drift_monitoring",
+   "escalation_separate",
+   "human_approval",
+   "independent_records",
+   "oversight_demonstrated",
+   "supervisor_validation",
+   "synthetic_separate"
+  ],
+  "FDA-2026-N-7874-0214": [
+   "escalation_separate",
+   "risk_factors"
+  ],
+  "FDA-2026-N-7874-0215": [
+   "human_ai_team",
+   "nonphysician_clinicians",
+   "oversight_demonstrated"
+  ],
+  "FDA-2026-N-7874-0216": [
+   "accountability",
+   "error_reporting",
+   "nonphysician_clinicians"
+  ],
+  "FDA-2026-N-7874-0217": [
+   "error_reporting",
+   "populations_settings",
+   "postmarket_plans",
+   "rebenchmark_on_change"
+  ],
+  "FDA-2026-N-7874-0218": [
+   "align_standards",
+   "deployed_config",
+   "oversight_demonstrated",
+   "postmarket_plans",
+   "rebenchmark_on_change",
+   "reduced_evidence_limits",
+   "security_dependencies",
+   "supervisor_validation",
+   "version_pinning"
+  ],
+  "FDA-2026-N-7874-0219": [
+   "accountability",
+   "error_reporting",
+   "human_ai_team",
+   "missing_input",
+   "nonphysician_clinicians",
+   "populations_settings"
+  ],
+  "FDA-2026-N-7874-0220": [
+   "benchmark_validity",
+   "deterministic_controls",
+   "escalation_separate",
+   "multi_turn",
+   "oversight_demonstrated",
+   "populations_settings",
+   "risk_factors"
+  ],
+  "FDA-2026-N-7874-0221": [
+   "align_standards",
+   "independent_eval"
+  ],
+  "FDA-2026-N-7874-0222": [
+   "drift_monitoring",
+   "independent_eval",
+   "postmarket_plans",
+   "rebenchmark_on_change",
+   "reduced_evidence_limits"
+  ],
+  "FDA-2026-N-7874-0223": [
+   "accountability",
+   "align_standards"
+  ],
+  "FDA-2026-N-7874-0224": [
+   "accountability",
+   "data_privacy",
+   "drift_monitoring",
+   "error_reporting",
+   "escalation_separate",
+   "multi_turn",
+   "prospective_outcomes"
+  ],
+  "FDA-2026-N-7874-0225": [
+   "audit_trail",
+   "comparator_realistic",
+   "oversight_demonstrated",
+   "populations_settings",
+   "postmarket_plans",
+   "sequestered_benchmarks"
+  ],
+  "FDA-2026-N-7874-0226": [
+   "agent_authority",
+   "model_disclosure",
+   "pccp_bounded",
+   "rebenchmark_on_change",
+   "risk_factors",
+   "security_dependencies",
+   "supervisor_validation",
+   "version_pinning"
+  ],
+  "FDA-2026-N-7874-0227": [
+   "audit_trail",
+   "model_disclosure",
+   "populations_settings",
+   "risk_evidence_map"
+  ],
+  "FDA-2026-N-7874-0228": [
+   "accountability",
+   "audit_trail",
+   "rebenchmark_on_change"
+  ],
+  "FDA-2026-N-7874-0229": [
+   "audit_trail",
+   "escalation_separate",
+   "human_ai_team",
+   "multi_turn",
+   "rebenchmark_on_change",
+   "risk_evidence_map",
+   "safety_floors",
+   "supervisor_validation",
+   "synthetic_separate"
+  ],
+  "FDA-2026-N-7874-0230": [
+   "accountability",
+   "agent_authority",
+   "escalation_separate",
+   "risk_factors",
+   "security_dependencies"
+  ],
+  "FDA-2026-N-7874-0231": [
+   "benchmark_validity",
+   "independent_eval"
+  ],
+  "FDA-2026-N-7874-0232": [
+   "human_approval"
+  ],
+  "FDA-2026-N-7874-0234": [
+   "accountability",
+   "audit_trail",
+   "comparator_realistic",
+   "pccp_bounded",
+   "risk_factors",
+   "sequestered_benchmarks",
+   "version_pinning"
+  ],
+  "FDA-2026-N-7874-0236": [
+   "audit_trail",
+   "data_privacy",
+   "error_reporting",
+   "human_approval",
+   "kill_switch",
+   "nonphysician_clinicians",
+   "patient_disclosure",
+   "populations_settings",
+   "prospective_outcomes",
+   "security_dependencies"
+  ],
+  "FDA-2026-N-7874-0238": [
+   "directiveness_behavior",
+   "error_reporting",
+   "populations_settings",
+   "version_pinning"
+  ],
+  "FDA-2026-N-7874-0239": [
+   "agent_authority",
+   "align_standards",
+   "model_disclosure",
+   "rebenchmark_on_change",
+   "risk_evidence_map",
+   "risk_factors",
+   "version_pinning"
+  ],
+  "FDA-2026-N-7874-0240": [
+   "accountability",
+   "directiveness_behavior",
+   "error_reporting",
+   "human_ai_team",
+   "oversight_demonstrated",
+   "patient_disclosure",
+   "postmarket_plans"
+  ],
+  "FDA-2026-N-7874-0243": [
+   "error_reporting",
+   "independent_eval",
+   "nonphysician_clinicians"
+  ],
+  "FDA-2026-N-7874-0246": [
+   "audit_trail",
+   "error_reporting",
+   "human_ai_team",
+   "kill_switch",
+   "nonphysician_clinicians",
+   "oversight_demonstrated",
+   "populations_settings"
+  ],
+  "FDA-2026-N-7874-0247": [
+   "nonphysician_clinicians"
+  ],
+  "FDA-2026-N-7874-0248": [
+   "agent_sequences",
+   "benchmark_validity",
+   "model_disclosure",
+   "oversight_demonstrated",
+   "postmarket_plans",
+   "risk_evidence_map",
+   "risk_factors"
+  ],
+  "FDA-2026-N-7874-0250": [
+   "agent_authority",
+   "error_reporting",
+   "human_approval",
+   "populations_settings"
+  ],
+  "FDA-2026-N-7874-0251": [
+   "benchmark_validity",
+   "drift_monitoring",
+   "independent_eval",
+   "model_disclosure",
+   "pccp_bounded",
+   "sequestered_benchmarks",
+   "version_pinning"
+  ],
+  "FDA-2026-N-7874-0255": [
+   "audit_trail",
+   "error_reporting",
+   "escalation_separate",
+   "human_ai_team",
+   "human_approval",
+   "nonphysician_clinicians",
+   "populations_settings",
+   "sycophancy"
+  ],
+  "FDA-2026-N-7874-0257": [
+   "patient_disclosure"
+  ],
+  "FDA-2026-N-7874-0259": [
+   "deployed_config",
+   "deterministic_controls",
+   "oversight_demonstrated",
+   "postmarket_plans",
+   "risk_evidence_map",
+   "risk_factors",
+   "safety_floors"
+  ],
+  "FDA-2026-N-7874-0260": [
+   "benchmark_validity",
+   "drift_monitoring",
+   "human_ai_team",
+   "lower_burden_supervised",
+   "model_disclosure",
+   "multi_turn",
+   "pccp_bounded",
+   "risk_evidence_map",
+   "sequestered_benchmarks",
+   "synthetic_separate"
+  ],
+  "FDA-2026-N-7874-0261": [
+   "agent_authority",
+   "deployed_config",
+   "drift_monitoring",
+   "error_reporting",
+   "human_approval",
+   "independent_records",
+   "risk_factors",
+   "sequestered_benchmarks",
+   "version_pinning"
+  ],
+  "FDA-2026-N-7874-0262": [
+   "agent_sequences",
+   "benchmark_validity",
+   "comparator_realistic",
+   "model_disclosure",
+   "pccp_bounded",
+   "risk_evidence_map",
+   "risk_factors",
+   "supervisor_validation",
+   "version_pinning"
+  ],
+  "FDA-2026-N-7874-0263": [
+   "benchmark_validity",
+   "deployed_config",
+   "deterministic_controls",
+   "multi_turn",
+   "populations_settings",
+   "safety_floors",
+   "supervisor_validation"
+  ],
+  "FDA-2026-N-7874-0264": [
+   "audit_trail",
+   "directiveness_behavior",
+   "error_reporting",
+   "escalation_separate",
+   "human_ai_team",
+   "human_approval",
+   "risk_factors",
+   "sequestered_benchmarks"
+  ],
+  "FDA-2026-N-7874-0267": [
+   "directiveness_behavior",
+   "human_ai_team",
+   "human_approval",
+   "multi_turn",
+   "risk_factors"
+  ],
+  "FDA-2026-N-7874-0268": [
+   "independent_eval",
+   "independent_records"
+  ],
+  "FDA-2026-N-7874-0269": [
+   "comparator_realistic",
+   "independent_eval"
+  ],
+  "FDA-2026-N-7874-0270": [
+   "agent_authority",
+   "agent_sequences",
+   "comparator_realistic",
+   "escalation_separate",
+   "risk_evidence_map",
+   "risk_factors",
+   "safety_floors",
+   "supervisor_validation",
+   "synthetic_separate",
+   "version_pinning"
+  ],
+  "FDA-2026-N-7874-0271": [
+   "accountability",
+   "benchmark_validity",
+   "error_reporting",
+   "human_ai_team",
+   "missing_input",
+   "multi_turn",
+   "populations_settings"
+  ],
+  "FDA-2026-N-7874-0274": [
+   "accountability",
+   "benchmark_validity",
+   "deployed_config",
+   "human_ai_team",
+   "multi_turn"
+  ],
+  "FDA-2026-N-7874-0275": [
+   "align_standards",
+   "human_ai_team",
+   "oversight_demonstrated"
+  ],
+  "FDA-2026-N-7874-0276": [
+   "human_approval",
+   "kill_switch",
+   "risk_factors"
+  ],
+  "FDA-2026-N-7874-0277": [
+   "human_ai_team",
+   "lower_burden_supervised",
+   "risk_evidence_map"
+  ],
+  "FDA-2026-N-7874-0278": [
+   "accountability",
+   "deployed_config",
+   "rebenchmark_on_change",
+   "version_pinning"
+  ],
+  "FDA-2026-N-7874-0279": [
+   "comparator_realistic",
+   "deterministic_controls",
+   "escalation_separate",
+   "human_ai_team",
+   "kill_switch",
+   "lower_burden_supervised",
+   "rebenchmark_on_change",
+   "supervisor_validation",
+   "synthetic_separate"
+  ],
+  "FDA-2026-N-7874-0281": [
+   "accountability",
+   "independent_eval"
+  ],
+  "FDA-2026-N-7874-0282": [
+   "directiveness_behavior",
+   "escalation_separate",
+   "independent_eval",
+   "model_disclosure",
+   "multi_turn",
+   "prospective_outcomes",
+   "rebenchmark_on_change",
+   "risk_factors",
+   "sequestered_benchmarks"
+  ],
+  "FDA-2026-N-7874-0284": [
+   "accountability",
+   "audit_trail",
+   "prospective_outcomes",
+   "rebenchmark_on_change",
+   "safety_floors"
+  ],
+  "FDA-2026-N-7874-0285": [
+   "agent_authority",
+   "audit_trail",
+   "deployed_config",
+   "drift_monitoring",
+   "kill_switch",
+   "postmarket_plans",
+   "reduced_evidence_limits",
+   "risk_factors",
+   "supervisor_validation",
+   "version_pinning"
+  ],
+  "FDA-2026-N-7874-0286": [
+   "audit_trail",
+   "oversight_demonstrated",
+   "pccp_bounded",
+   "reduced_evidence_limits",
+   "risk_factors"
+  ],
+  "FDA-2026-N-7874-0287": [
+   "agent_authority",
+   "audit_trail",
+   "drift_monitoring",
+   "rebenchmark_on_change"
+  ],
+  "FDA-2026-N-7874-0288": [
+   "escalation_separate",
+   "multi_turn",
+   "oversight_demonstrated",
+   "pccp_bounded",
+   "reduced_evidence_limits",
+   "synthetic_separate",
+   "version_pinning"
+  ],
+  "FDA-2026-N-7874-0289": [
+   "accountability",
+   "agent_sequences",
+   "align_standards",
+   "human_ai_team",
+   "risk_factors",
+   "supervisor_validation"
+  ],
+  "FDA-2026-N-7874-0290": [
+   "accountability",
+   "audit_trail",
+   "human_ai_team",
+   "human_approval",
+   "rebenchmark_on_change",
+   "reduced_evidence_limits",
+   "risk_factors",
+   "sequestered_benchmarks",
+   "supervisor_validation"
+  ],
+  "FDA-2026-N-7874-0291": [
+   "audit_trail",
+   "drift_monitoring",
+   "error_reporting",
+   "lower_burden_supervised",
+   "patient_disclosure"
+  ],
+  "FDA-2026-N-7874-0292": [
+   "accountability",
+   "populations_settings",
+   "postmarket_plans",
+   "risk_factors"
+  ],
+  "FDA-2026-N-7874-0293": [
+   "benchmark_validity",
+   "comparator_realistic",
+   "human_ai_team",
+   "populations_settings",
+   "synthetic_separate",
+   "version_pinning"
+  ],
+  "FDA-2026-N-7874-0294": [
+   "agent_authority",
+   "deployed_config",
+   "deterministic_controls",
+   "missing_input",
+   "oversight_demonstrated",
+   "risk_factors",
+   "supervisor_validation"
+  ],
+  "FDA-2026-N-7874-0295": [
+   "human_approval"
+  ],
+  "FDA-2026-N-7874-0298": [
+   "lower_burden_supervised",
+   "oversight_demonstrated",
+   "risk_evidence_map",
+   "risk_factors"
+  ],
+  "FDA-2026-N-7874-0299": [
+   "data_privacy",
+   "directiveness_behavior",
+   "drift_monitoring",
+   "multi_turn",
+   "oversight_demonstrated",
+   "postmarket_plans",
+   "risk_factors",
+   "supervisor_validation"
+  ],
+  "FDA-2026-N-7874-0300": [
+   "accountability"
+  ],
+  "FDA-2026-N-7874-0301": [
+   "comparator_realistic",
+   "data_privacy",
+   "model_disclosure",
+   "populations_settings",
+   "risk_factors",
+   "sycophancy"
+  ],
+  "FDA-2026-N-7874-0302": [
+   "risk_factors"
+  ],
+  "FDA-2026-N-7874-0304": [
+   "agent_sequences",
+   "benchmark_validity",
+   "postmarket_plans",
+   "sequestered_benchmarks"
+  ],
+  "FDA-2026-N-7874-0305": [
+   "agent_authority",
+   "align_standards",
+   "deterministic_controls",
+   "rebenchmark_on_change",
+   "risk_factors",
+   "supervisor_validation",
+   "version_pinning"
+  ],
+  "FDA-2026-N-7874-0306": [
+   "oversight_demonstrated",
+   "rebenchmark_on_change",
+   "sequestered_benchmarks",
+   "synthetic_separate",
+   "version_pinning"
+  ],
+  "FDA-2026-N-7874-0307": [
+   "comparator_realistic",
+   "deterministic_controls",
+   "drift_monitoring",
+   "error_reporting",
+   "escalation_separate",
+   "human_approval",
+   "model_disclosure",
+   "multi_turn",
+   "rebenchmark_on_change",
+   "risk_factors"
+  ],
+  "FDA-2026-N-7874-0308": [
+   "accountability",
+   "error_reporting",
+   "oversight_demonstrated",
+   "postmarket_plans",
+   "reduced_evidence_limits",
+   "risk_factors",
+   "supervisor_validation",
+   "version_pinning"
+  ],
+  "FDA-2026-N-7874-0309": [
+   "human_ai_team",
+   "multi_turn",
+   "populations_settings",
+   "reduced_evidence_limits",
+   "risk_factors",
+   "supervisor_validation"
+  ],
+  "FDA-2026-N-7874-0310": [
+   "populations_settings",
+   "risk_factors"
+  ],
+  "FDA-2026-N-7874-0311": [
+   "comparator_realistic",
+   "human_ai_team",
+   "independent_eval",
+   "multi_turn",
+   "reduced_evidence_limits",
+   "supervisor_validation"
+  ],
+  "FDA-2026-N-7874-0312": [
+   "audit_trail",
+   "benchmark_validity",
+   "human_approval",
+   "model_disclosure",
+   "prospective_outcomes",
+   "reduced_evidence_limits",
+   "safety_floors",
+   "security_dependencies",
+   "version_pinning"
+  ],
+  "FDA-2026-N-7874-0314": [
+   "deterministic_controls",
+   "lower_burden_supervised",
+   "rebenchmark_on_change"
+  ],
+  "FDA-2026-N-7874-0315": [
+   "agent_sequences",
+   "align_standards",
+   "deployed_config",
+   "oversight_demonstrated",
+   "reduced_evidence_limits",
+   "risk_factors",
+   "safety_floors",
+   "security_dependencies",
+   "version_pinning"
+  ],
+  "FDA-2026-N-7874-0316": [
+   "benchmark_validity",
+   "independent_records",
+   "supervisor_validation"
+  ],
+  "FDA-2026-N-7874-0317": [
+   "agent_sequences",
+   "deployed_config",
+   "deterministic_controls",
+   "pccp_bounded",
+   "rebenchmark_on_change"
+  ],
+  "FDA-2026-N-7874-0318": [
+   "drift_monitoring",
+   "escalation_separate",
+   "human_approval",
+   "rebenchmark_on_change",
+   "reduced_evidence_limits",
+   "risk_factors",
+   "supervisor_validation"
+  ],
+  "FDA-2026-N-7874-0319": [
+   "independent_eval",
+   "nonphysician_clinicians"
+  ],
+  "FDA-2026-N-7874-0320": [
+   "multi_turn",
+   "risk_factors"
+  ],
+  "FDA-2026-N-7874-0321": [
+   "deployed_config",
+   "oversight_demonstrated",
+   "patient_disclosure",
+   "postmarket_plans",
+   "risk_evidence_map",
+   "risk_factors",
+   "supervisor_validation",
+   "version_pinning"
+  ],
+  "FDA-2026-N-7874-0322": [
+   "drift_monitoring",
+   "escalation_separate",
+   "human_approval",
+   "independent_eval",
+   "oversight_demonstrated",
+   "postmarket_plans",
+   "risk_evidence_map",
+   "risk_factors",
+   "sequestered_benchmarks",
+   "synthetic_separate"
+  ],
+  "FDA-2026-N-7874-0323": [
+   "human_approval",
+   "nonphysician_clinicians"
+  ],
+  "FDA-2026-N-7874-0324": [
+   "benchmark_validity",
+   "comparator_realistic",
+   "escalation_separate",
+   "human_ai_team",
+   "independent_eval",
+   "prospective_outcomes",
+   "safety_floors",
+   "sequestered_benchmarks",
+   "synthetic_separate"
+  ],
+  "FDA-2026-N-7874-0326": [
+   "agent_authority",
+   "audit_trail",
+   "deterministic_controls",
+   "independent_records",
+   "pccp_bounded",
+   "rebenchmark_on_change"
+  ],
+  "FDA-2026-N-7874-0327": [
+   "benchmark_validity",
+   "populations_settings",
+   "rebenchmark_on_change",
+   "sequestered_benchmarks"
+  ],
+  "FDA-2026-N-7874-0328": [
+   "accountability",
+   "agent_authority",
+   "deployed_config",
+   "kill_switch",
+   "oversight_demonstrated",
+   "rebenchmark_on_change"
+  ],
+  "FDA-2026-N-7874-0329": [
+   "agent_sequences",
+   "audit_trail",
+   "benchmark_validity",
+   "deployed_config",
+   "escalation_separate",
+   "independent_records",
+   "oversight_demonstrated",
+   "risk_factors",
+   "version_pinning"
+  ],
+  "FDA-2026-N-7874-0330": [
+   "nonphysician_clinicians",
+   "risk_factors"
+  ],
+  "FDA-2026-N-7874-0331": [
+   "human_ai_team",
+   "human_approval",
+   "independent_eval",
+   "postmarket_plans",
+   "reduced_evidence_limits",
+   "risk_factors",
+   "sequestered_benchmarks",
+   "synthetic_separate",
+   "version_pinning"
+  ],
+  "FDA-2026-N-7874-0332": [
+   "directiveness_behavior",
+   "pccp_bounded",
+   "postmarket_plans",
+   "risk_evidence_map",
+   "risk_factors",
+   "safety_floors"
+  ],
+  "FDA-2026-N-7874-0333": [
+   "accountability",
+   "audit_trail",
+   "drift_monitoring",
+   "model_disclosure",
+   "risk_factors",
+   "supervisor_validation"
+  ],
+  "FDA-2026-N-7874-0334": [
+   "benchmark_validity",
+   "deployed_config",
+   "drift_monitoring",
+   "escalation_separate",
+   "multi_turn",
+   "postmarket_plans",
+   "risk_factors",
+   "version_pinning"
+  ],
+  "FDA-2026-N-7874-0335": [
+   "audit_trail",
+   "multi_turn"
+  ],
+  "FDA-2026-N-7874-0336": [
+   "audit_trail",
+   "benchmark_validity",
+   "comparator_realistic",
+   "deployed_config",
+   "model_disclosure",
+   "pccp_bounded",
+   "postmarket_plans",
+   "rebenchmark_on_change",
+   "version_pinning"
+  ],
+  "FDA-2026-N-7874-0337": [
+   "audit_trail",
+   "benchmark_validity",
+   "deployed_config",
+   "deterministic_controls",
+   "directiveness_behavior",
+   "error_reporting",
+   "postmarket_plans",
+   "risk_factors",
+   "sequestered_benchmarks",
+   "supervisor_validation"
+  ],
+  "FDA-2026-N-7874-0338": [
+   "deployed_config",
+   "human_ai_team",
+   "missing_input",
+   "nonphysician_clinicians",
+   "oversight_demonstrated",
+   "postmarket_plans",
+   "prospective_outcomes",
+   "reduced_evidence_limits",
+   "risk_factors",
+   "safety_floors"
+  ],
+  "FDA-2026-N-7874-0339": [
+   "accountability",
+   "audit_trail",
+   "error_reporting",
+   "human_approval",
+   "independent_eval",
+   "pccp_bounded",
+   "postmarket_plans",
+   "reduced_evidence_limits",
+   "supervisor_validation",
+   "version_pinning"
+  ],
+  "FDA-2026-N-7874-0340": [
+   "accountability",
+   "agent_sequences",
+   "benchmark_validity",
+   "comparator_realistic",
+   "human_ai_team",
+   "postmarket_plans",
+   "risk_factors",
+   "version_pinning"
+  ],
+  "FDA-2026-N-7874-0341": [
+   "benchmark_validity",
+   "escalation_separate",
+   "model_disclosure",
+   "multi_turn",
+   "oversight_demonstrated",
+   "pccp_bounded",
+   "postmarket_plans",
+   "safety_floors",
+   "synthetic_separate"
+  ],
+  "FDA-2026-N-7874-0342": [
+   "benchmark_validity",
+   "independent_eval"
+  ],
+  "FDA-2026-N-7874-0343": [
+   "accountability",
+   "independent_eval",
+   "risk_factors",
+   "synthetic_separate"
+  ],
+  "FDA-2026-N-7874-0344": [
+   "deployed_config",
+   "independent_eval",
+   "populations_settings",
+   "rebenchmark_on_change",
+   "safety_floors",
+   "sequestered_benchmarks",
+   "synthetic_separate"
+  ],
+  "FDA-2026-N-7874-0345": [
+   "benchmark_validity",
+   "directiveness_behavior",
+   "drift_monitoring",
+   "oversight_demonstrated",
+   "reduced_evidence_limits",
+   "risk_factors",
+   "version_pinning"
+  ],
+  "FDA-2026-N-7874-0346": [
+   "benchmark_validity",
+   "oversight_demonstrated",
+   "populations_settings",
+   "risk_factors",
+   "security_dependencies",
+   "sequestered_benchmarks",
+   "version_pinning"
+  ],
+  "FDA-2026-N-7874-0347": [
+   "accountability",
+   "align_standards",
+   "comparator_realistic",
+   "human_ai_team",
+   "human_approval",
+   "reduced_evidence_limits",
+   "risk_factors",
+   "supervisor_validation",
+   "version_pinning"
+  ],
+  "FDA-2026-N-7874-0348": [
+   "audit_trail",
+   "benchmark_validity",
+   "deployed_config",
+   "model_disclosure",
+   "rebenchmark_on_change",
+   "supervisor_validation"
+  ],
+  "FDA-2026-N-7874-0349": [
+   "align_standards",
+   "oversight_demonstrated",
+   "postmarket_plans",
+   "risk_factors"
+  ],
+  "FDA-2026-N-7874-0350": [
+   "benchmark_validity",
+   "comparator_realistic",
+   "escalation_separate",
+   "multi_turn",
+   "pccp_bounded",
+   "risk_factors",
+   "synthetic_separate"
+  ],
+  "FDA-2026-N-7874-0351": [
+   "directiveness_behavior",
+   "escalation_separate",
+   "model_disclosure",
+   "populations_settings"
+  ],
+  "FDA-2026-N-7874-0352": [
+   "accountability",
+   "deployed_config",
+   "error_reporting",
+   "populations_settings",
+   "postmarket_plans",
+   "version_pinning"
+  ],
+  "FDA-2026-N-7874-0353": [
+   "pccp_bounded"
+  ],
+  "FDA-2026-N-7874-0354": [
+   "oversight_demonstrated",
+   "postmarket_plans",
+   "rebenchmark_on_change",
+   "risk_factors",
+   "sequestered_benchmarks",
+   "synthetic_separate"
+  ],
+  "FDA-2026-N-7874-0355": [
+   "human_ai_team",
+   "human_approval",
+   "oversight_demonstrated",
+   "rebenchmark_on_change",
+   "reduced_evidence_limits",
+   "supervisor_validation"
+  ],
+  "FDA-2026-N-7874-0356": [
+   "benchmark_validity",
+   "model_disclosure",
+   "populations_settings",
+   "risk_factors"
+  ],
+  "FDA-2026-N-7874-0357": [
+   "audit_trail",
+   "oversight_demonstrated"
+  ],
+  "FDA-2026-N-7874-0358": [
+   "accountability",
+   "audit_trail",
+   "benchmark_validity",
+   "model_disclosure",
+   "rebenchmark_on_change"
+  ],
+  "FDA-2026-N-7874-0359": [
+   "accountability",
+   "drift_monitoring",
+   "independent_eval",
+   "postmarket_plans"
+  ],
+  "FDA-2026-N-7874-0360": [
+   "deployed_config",
+   "directiveness_behavior",
+   "drift_monitoring",
+   "escalation_separate",
+   "human_approval",
+   "multi_turn",
+   "pccp_bounded",
+   "risk_factors",
+   "safety_floors",
+   "synthetic_separate"
+  ],
+  "FDA-2026-N-7874-0361": [
+   "rebenchmark_on_change",
+   "security_dependencies",
+   "supervisor_validation"
+  ],
+  "FDA-2026-N-7874-0362": [
+   "drift_monitoring",
+   "human_approval",
+   "independent_records",
+   "nonphysician_clinicians",
+   "reduced_evidence_limits",
+   "risk_factors"
+  ],
+  "FDA-2026-N-7874-0363": [
+   "benchmark_validity",
+   "postmarket_plans",
+   "rebenchmark_on_change",
+   "safety_floors",
+   "synthetic_separate",
+   "version_pinning"
+  ],
+  "FDA-2026-N-7874-0364": [
+   "accountability",
+   "comparator_realistic",
+   "error_reporting",
+   "patient_disclosure",
+   "populations_settings"
+  ],
+  "FDA-2026-N-7874-0365": [
+   "accountability",
+   "populations_settings",
+   "postmarket_plans",
+   "reduced_evidence_limits",
+   "risk_factors",
+   "supervisor_validation",
+   "version_pinning"
+  ],
+  "FDA-2026-N-7874-0366": [
+   "deployed_config",
+   "directiveness_behavior",
+   "escalation_separate",
+   "human_approval",
+   "multi_turn",
+   "postmarket_plans",
+   "prospective_outcomes",
+   "risk_factors",
+   "sequestered_benchmarks",
+   "version_pinning"
+  ],
+  "FDA-2026-N-7874-0367": [
+   "pccp_bounded",
+   "risk_factors"
+  ],
+  "FDA-2026-N-7874-0368": [
+   "benchmark_validity",
+   "comparator_realistic",
+   "drift_monitoring",
+   "multi_turn",
+   "pccp_bounded",
+   "postmarket_plans",
+   "risk_evidence_map",
+   "supervisor_validation",
+   "synthetic_separate"
+  ],
+  "FDA-2026-N-7874-0369": [
+   "accountability",
+   "align_standards",
+   "pccp_bounded"
+  ],
+  "FDA-2026-N-7874-0370": [
+   "comparator_realistic",
+   "directiveness_behavior",
+   "error_reporting",
+   "escalation_separate",
+   "independent_eval",
+   "multi_turn",
+   "rebenchmark_on_change",
+   "reduced_evidence_limits",
+   "synthetic_separate"
+  ],
+  "FDA-2026-N-7874-0371": [
+   "comparator_realistic",
+   "escalation_separate",
+   "pccp_bounded",
+   "risk_factors",
+   "supervisor_validation",
+   "version_pinning"
+  ],
+  "FDA-2026-N-7874-0372": [
+   "agent_authority",
+   "deterministic_controls",
+   "directiveness_behavior",
+   "model_disclosure",
+   "pccp_bounded",
+   "postmarket_plans",
+   "supervisor_validation",
+   "synthetic_separate",
+   "version_pinning"
+  ],
+  "FDA-2026-N-7874-0373": [
+   "align_standards",
+   "benchmark_validity",
+   "directiveness_behavior",
+   "model_disclosure",
+   "pccp_bounded",
+   "reduced_evidence_limits",
+   "risk_evidence_map",
+   "risk_factors"
+  ],
+  "FDA-2026-N-7874-0374": [
+   "accountability",
+   "align_standards",
+   "data_privacy",
+   "error_reporting",
+   "model_disclosure",
+   "patient_disclosure"
+  ],
+  "FDA-2026-N-7874-0375": [
+   "directiveness_behavior",
+   "escalation_separate",
+   "human_approval",
+   "missing_input",
+   "multi_turn",
+   "oversight_demonstrated",
+   "populations_settings",
+   "synthetic_separate"
+  ],
+  "FDA-2026-N-7874-0376": [
+   "error_reporting",
+   "postmarket_plans"
+  ],
+  "FDA-2026-N-7874-0377": [
+   "independent_eval",
+   "security_dependencies"
+  ],
+  "FDA-2026-N-7874-0378": [
+   "align_standards"
+  ],
+  "FDA-2026-N-7874-0379": [
+   "benchmark_validity",
+   "drift_monitoring",
+   "escalation_separate",
+   "independent_eval",
+   "multi_turn",
+   "oversight_demonstrated",
+   "pccp_bounded"
+  ],
+  "FDA-2026-N-7874-0380": [
+   "accountability",
+   "lower_burden_supervised",
+   "model_disclosure",
+   "postmarket_plans",
+   "risk_factors"
+  ],
+  "FDA-2026-N-7874-0381": [
+   "error_reporting",
+   "human_ai_team",
+   "nonphysician_clinicians",
+   "oversight_demonstrated"
+  ],
+  "FDA-2026-N-7874-0383": [
+   "benchmark_validity",
+   "comparator_realistic",
+   "drift_monitoring",
+   "escalation_separate",
+   "human_ai_team",
+   "multi_turn",
+   "postmarket_plans",
+   "risk_factors",
+   "supervisor_validation"
+  ],
+  "FDA-2026-N-7874-0384": [
+   "agent_sequences",
+   "audit_trail",
+   "lower_burden_supervised",
+   "rebenchmark_on_change",
+   "risk_factors",
+   "supervisor_validation",
+   "synthetic_separate",
+   "version_pinning"
+  ],
+  "FDA-2026-N-7874-0385": [
+   "accountability",
+   "error_reporting",
+   "human_approval",
+   "oversight_demonstrated",
+   "populations_settings",
+   "postmarket_plans",
+   "rebenchmark_on_change",
+   "risk_factors",
+   "safety_floors"
+  ],
+  "FDA-2026-N-7874-0386": [
+   "agent_authority",
+   "benchmark_validity",
+   "deployed_config",
+   "oversight_demonstrated",
+   "sequestered_benchmarks",
+   "supervisor_validation",
+   "version_pinning"
+  ],
+  "FDA-2026-N-7874-0387": [
+   "deterministic_controls",
+   "human_ai_team",
+   "rebenchmark_on_change",
+   "risk_factors",
+   "sequestered_benchmarks"
+  ],
+  "FDA-2026-N-7874-0388": [
+   "agent_authority",
+   "directiveness_behavior",
+   "drift_monitoring",
+   "human_ai_team",
+   "multi_turn",
+   "postmarket_plans",
+   "sequestered_benchmarks",
+   "supervisor_validation",
+   "synthetic_separate"
+  ],
+  "FDA-2026-N-7874-0389": [
+   "accountability",
+   "directiveness_behavior",
+   "multi_turn",
+   "pccp_bounded",
+   "postmarket_plans",
+   "risk_factors"
+  ],
+  "FDA-2026-N-7874-0390": [
+   "audit_trail",
+   "benchmark_validity",
+   "deployed_config",
+   "human_ai_team",
+   "missing_input",
+   "oversight_demonstrated",
+   "populations_settings"
+  ],
+  "FDA-2026-N-7874-0391": [
+   "agent_authority",
+   "align_standards",
+   "audit_trail",
+   "deployed_config",
+   "independent_records",
+   "reduced_evidence_limits"
+  ],
+  "FDA-2026-N-7874-0392": [
+   "comparator_realistic",
+   "drift_monitoring",
+   "multi_turn",
+   "risk_factors",
+   "synthetic_separate",
+   "version_pinning"
+  ],
+  "FDA-2026-N-7874-0393": [
+   "agent_sequences",
+   "benchmark_validity",
+   "human_approval",
+   "lower_burden_supervised",
+   "risk_factors"
+  ],
+  "FDA-2026-N-7874-0394": [
+   "align_standards",
+   "directiveness_behavior",
+   "lower_burden_supervised",
+   "model_disclosure",
+   "oversight_demonstrated",
+   "risk_factors",
+   "safety_floors"
+  ],
+  "FDA-2026-N-7874-0395": [
+   "lower_burden_supervised",
+   "pccp_bounded"
+  ],
+  "FDA-2026-N-7874-0396": [
+   "align_standards",
+   "error_reporting"
+  ],
+  "FDA-2026-N-7874-0397": [
+   "escalation_separate",
+   "human_approval",
+   "model_disclosure",
+   "pccp_bounded",
+   "prospective_outcomes",
+   "reduced_evidence_limits",
+   "risk_factors",
+   "safety_floors",
+   "sequestered_benchmarks",
+   "version_pinning"
+  ],
+  "FDA-2026-N-7874-0398": [
+   "accountability",
+   "align_standards",
+   "error_reporting",
+   "independent_eval",
+   "oversight_demonstrated",
+   "postmarket_plans",
+   "reduced_evidence_limits"
+  ],
+  "FDA-2026-N-7874-0399": [
+   "escalation_separate",
+   "oversight_demonstrated",
+   "pccp_bounded",
+   "risk_factors",
+   "safety_floors",
+   "supervisor_validation",
+   "synthetic_separate"
+  ],
+  "FDA-2026-N-7874-0400": [
+   "accountability",
+   "agent_authority",
+   "missing_input",
+   "risk_factors",
+   "sequestered_benchmarks"
+  ],
+  "FDA-2026-N-7874-0401": [
+   "data_privacy",
+   "deployed_config",
+   "deterministic_controls",
+   "escalation_separate",
+   "human_approval",
+   "rebenchmark_on_change",
+   "safety_floors",
+   "version_pinning"
+  ],
+  "FDA-2026-N-7874-0402": [
+   "accountability",
+   "postmarket_plans",
+   "risk_evidence_map"
+  ],
+  "FDA-2026-N-7874-0403": [
+   "deployed_config",
+   "escalation_separate",
+   "human_approval",
+   "oversight_demonstrated",
+   "pccp_bounded",
+   "postmarket_plans",
+   "reduced_evidence_limits",
+   "synthetic_separate"
+  ],
+  "FDA-2026-N-7874-0405": [
+   "error_reporting",
+   "patient_disclosure"
+  ],
+  "FDA-2026-N-7874-0406": [
+   "agent_sequences",
+   "audit_trail",
+   "comparator_realistic",
+   "escalation_separate",
+   "reduced_evidence_limits",
+   "risk_factors",
+   "safety_floors",
+   "sequestered_benchmarks",
+   "synthetic_separate"
+  ],
+  "FDA-2026-N-7874-0407": [
+   "align_standards",
+   "benchmark_validity",
+   "deployed_config",
+   "multi_turn",
+   "postmarket_plans",
+   "risk_factors",
+   "supervisor_validation",
+   "version_pinning"
+  ],
+  "FDA-2026-N-7874-0408": [
+   "accountability",
+   "align_standards",
+   "kill_switch",
+   "lower_burden_supervised",
+   "oversight_demonstrated",
+   "pccp_bounded",
+   "postmarket_plans",
+   "sequestered_benchmarks"
+  ],
+  "FDA-2026-N-7874-0409": [
+   "directiveness_behavior",
+   "drift_monitoring",
+   "human_approval",
+   "patient_disclosure",
+   "sycophancy"
+  ],
+  "FDA-2026-N-7874-0410": [
+   "error_reporting",
+   "human_approval",
+   "patient_disclosure",
+   "populations_settings",
+   "postmarket_plans",
+   "reduced_evidence_limits",
+   "risk_factors",
+   "supervisor_validation",
+   "synthetic_separate"
+  ],
+  "FDA-2026-N-7874-0411": [
+   "align_standards",
+   "deployed_config",
+   "model_disclosure"
+  ],
+  "FDA-2026-N-7874-0412": [
+   "benchmark_validity",
+   "deployed_config",
+   "escalation_separate",
+   "lower_burden_supervised",
+   "rebenchmark_on_change",
+   "risk_factors",
+   "security_dependencies",
+   "sequestered_benchmarks"
+  ],
+  "FDA-2026-N-7874-0415": [
+   "accountability",
+   "escalation_separate",
+   "human_approval",
+   "populations_settings",
+   "postmarket_plans",
+   "reduced_evidence_limits",
+   "risk_factors",
+   "supervisor_validation",
+   "synthetic_separate",
+   "version_pinning"
+  ],
+  "FDA-2026-N-7874-0416": [
+   "accountability",
+   "audit_trail",
+   "benchmark_validity",
+   "deployed_config",
+   "escalation_separate",
+   "multi_turn",
+   "pccp_bounded",
+   "risk_factors",
+   "supervisor_validation",
+   "version_pinning"
+  ],
+  "FDA-2026-N-7874-0417": [
+   "agent_sequences",
+   "benchmark_validity",
+   "directiveness_behavior",
+   "drift_monitoring",
+   "independent_eval",
+   "model_disclosure",
+   "multi_turn",
+   "risk_evidence_map"
+  ],
+  "FDA-2026-N-7874-0419": [
+   "accountability",
+   "agent_authority",
+   "benchmark_validity",
+   "deployed_config",
+   "human_ai_team",
+   "oversight_demonstrated",
+   "rebenchmark_on_change",
+   "risk_evidence_map",
+   "sequestered_benchmarks",
+   "supervisor_validation"
+  ],
+  "FDA-2026-N-7874-0420": [
+   "benchmark_validity",
+   "directiveness_behavior",
+   "drift_monitoring",
+   "pccp_bounded",
+   "postmarket_plans",
+   "reduced_evidence_limits",
+   "safety_floors",
+   "sequestered_benchmarks",
+   "synthetic_separate"
+  ],
+  "FDA-2026-N-7874-0421": [
+   "benchmark_validity",
+   "escalation_separate",
+   "model_disclosure",
+   "populations_settings",
+   "rebenchmark_on_change",
+   "sequestered_benchmarks"
+  ],
+  "FDA-2026-N-7874-0422": [
+   "accountability",
+   "independent_eval",
+   "model_disclosure",
+   "postmarket_plans",
+   "rebenchmark_on_change",
+   "risk_factors"
+  ],
+  "FDA-2026-N-7874-0423": [
+   "benchmark_validity",
+   "deployed_config",
+   "postmarket_plans",
+   "risk_evidence_map",
+   "risk_factors",
+   "synthetic_separate"
+  ],
+  "FDA-2026-N-7874-0424": [
+   "data_privacy",
+   "escalation_separate",
+   "multi_turn",
+   "populations_settings",
+   "postmarket_plans"
+  ],
+  "FDA-2026-N-7874-0425": [
+   "error_reporting",
+   "escalation_separate",
+   "independent_records",
+   "multi_turn",
+   "rebenchmark_on_change",
+   "reduced_evidence_limits",
+   "risk_factors"
+  ],
+  "FDA-2026-N-7874-0426": [
+   "accountability"
+  ],
+  "FDA-2026-N-7874-0427": [
+   "agent_sequences",
+   "drift_monitoring",
+   "oversight_demonstrated",
+   "rebenchmark_on_change",
+   "reduced_evidence_limits"
+  ],
+  "FDA-2026-N-7874-0428": [
+   "accountability",
+   "comparator_realistic",
+   "pccp_bounded",
+   "risk_factors"
+  ],
+  "FDA-2026-N-7874-0429": [
+   "deterministic_controls",
+   "human_approval",
+   "lower_burden_supervised",
+   "pccp_bounded",
+   "risk_evidence_map",
+   "sequestered_benchmarks",
+   "synthetic_separate"
+  ],
+  "FDA-2026-N-7874-0430": [
+   "agent_authority",
+   "directiveness_behavior",
+   "escalation_separate",
+   "kill_switch",
+   "multi_turn",
+   "oversight_demonstrated",
+   "rebenchmark_on_change",
+   "risk_factors"
+  ],
+  "FDA-2026-N-7874-0431": [
+   "comparator_realistic",
+   "directiveness_behavior",
+   "human_approval",
+   "multi_turn",
+   "pccp_bounded",
+   "postmarket_plans",
+   "sequestered_benchmarks",
+   "supervisor_validation",
+   "version_pinning"
+  ],
+  "FDA-2026-N-7874-0432": [
+   "deployed_config",
+   "directiveness_behavior",
+   "error_reporting",
+   "human_ai_team",
+   "human_approval",
+   "postmarket_plans",
+   "reduced_evidence_limits",
+   "risk_factors",
+   "sequestered_benchmarks",
+   "version_pinning"
+  ],
+  "FDA-2026-N-7874-0433": [
+   "audit_trail",
+   "postmarket_plans",
+   "reduced_evidence_limits",
+   "risk_factors"
+  ],
+  "FDA-2026-N-7874-0434": [
+   "independent_eval",
+   "risk_evidence_map"
+  ],
+  "FDA-2026-N-7874-0435": [
+   "benchmark_validity",
+   "comparator_realistic",
+   "human_ai_team",
+   "kill_switch",
+   "postmarket_plans",
+   "synthetic_separate"
+  ],
+  "FDA-2026-N-7874-0436": [
+   "accountability",
+   "benchmark_validity",
+   "comparator_realistic",
+   "independent_eval",
+   "lower_burden_supervised",
+   "postmarket_plans",
+   "risk_factors",
+   "version_pinning"
+  ],
+  "FDA-2026-N-7874-0437": [
+   "directiveness_behavior",
+   "escalation_separate",
+   "human_ai_team",
+   "human_approval",
+   "multi_turn",
+   "pccp_bounded",
+   "postmarket_plans",
+   "risk_factors",
+   "supervisor_validation",
+   "synthetic_separate"
+  ],
+  "FDA-2026-N-7874-0438": [
+   "comparator_realistic",
+   "escalation_separate",
+   "pccp_bounded",
+   "rebenchmark_on_change",
+   "risk_evidence_map",
+   "risk_factors",
+   "sequestered_benchmarks",
+   "version_pinning"
+  ],
+  "FDA-2026-N-7874-0439": [
+   "agent_authority",
+   "align_standards",
+   "benchmark_validity",
+   "directiveness_behavior",
+   "human_approval",
+   "pccp_bounded",
+   "risk_evidence_map",
+   "risk_factors",
+   "supervisor_validation",
+   "version_pinning"
+  ],
+  "FDA-2026-N-7874-0440": [
+   "agent_sequences",
+   "align_standards",
+   "directiveness_behavior",
+   "multi_turn",
+   "oversight_demonstrated",
+   "pccp_bounded",
+   "postmarket_plans",
+   "rebenchmark_on_change",
+   "security_dependencies"
+  ],
+  "FDA-2026-N-7874-0441": [
+   "deterministic_controls",
+   "drift_monitoring",
+   "escalation_separate",
+   "human_approval",
+   "independent_eval",
+   "model_disclosure",
+   "pccp_bounded",
+   "populations_settings",
+   "sycophancy"
+  ],
+  "FDA-2026-N-7874-0442": [
+   "agent_authority",
+   "benchmark_validity",
+   "independent_eval",
+   "reduced_evidence_limits",
+   "risk_factors"
+  ],
+  "FDA-2026-N-7874-0443": [
+   "accountability",
+   "deployed_config",
+   "error_reporting",
+   "escalation_separate",
+   "oversight_demonstrated",
+   "reduced_evidence_limits",
+   "version_pinning"
+  ],
+  "FDA-2026-N-7874-0444": [
+   "escalation_separate",
+   "human_ai_team",
+   "human_approval",
+   "missing_input",
+   "risk_factors",
+   "sequestered_benchmarks",
+   "supervisor_validation",
+   "synthetic_separate",
+   "version_pinning"
+  ],
+  "FDA-2026-N-7874-0445": [
+   "accountability",
+   "agent_sequences",
+   "drift_monitoring",
+   "human_approval",
+   "independent_eval",
+   "patient_disclosure",
+   "populations_settings",
+   "postmarket_plans",
+   "synthetic_separate"
+  ],
+  "FDA-2026-N-7874-0446": [
+   "align_standards",
+   "audit_trail",
+   "pccp_bounded",
+   "postmarket_plans",
+   "risk_factors",
+   "supervisor_validation",
+   "version_pinning"
+  ],
+  "FDA-2026-N-7874-0447": [
+   "benchmark_validity",
+   "directiveness_behavior",
+   "independent_eval",
+   "multi_turn",
+   "sequestered_benchmarks",
+   "sycophancy"
+  ],
+  "FDA-2026-N-7874-0448": [
+   "benchmark_validity",
+   "deployed_config",
+   "escalation_separate",
+   "human_approval",
+   "oversight_demonstrated",
+   "pccp_bounded",
+   "risk_factors",
+   "synthetic_separate",
+   "version_pinning"
+  ],
+  "FDA-2026-N-7874-0449": [
+   "drift_monitoring",
+   "oversight_demonstrated",
+   "rebenchmark_on_change",
+   "risk_factors",
+   "supervisor_validation",
+   "version_pinning"
+  ],
+  "FDA-2026-N-7874-0450": [
+   "pccp_bounded",
+   "sequestered_benchmarks",
+   "version_pinning"
+  ],
+  "FDA-2026-N-7874-0451": [
+   "oversight_demonstrated",
+   "risk_evidence_map"
+  ],
+  "FDA-2026-N-7874-0452": [
+   "benchmark_validity",
+   "deployed_config",
+   "human_approval",
+   "independent_eval",
+   "postmarket_plans",
+   "reduced_evidence_limits",
+   "security_dependencies",
+   "sequestered_benchmarks",
+   "supervisor_validation",
+   "version_pinning"
+  ],
+  "FDA-2026-N-7874-0453": [
+   "accountability",
+   "comparator_realistic"
+  ],
+  "FDA-2026-N-7874-0454": [
+   "align_standards",
+   "directiveness_behavior",
+   "risk_factors"
+  ],
+  "FDA-2026-N-7874-0455": [
+   "align_standards",
+   "comparator_realistic",
+   "directiveness_behavior",
+   "multi_turn",
+   "risk_factors",
+   "version_pinning"
+  ],
+  "FDA-2026-N-7874-0456": [
+   "audit_trail",
+   "deterministic_controls",
+   "escalation_separate",
+   "independent_eval",
+   "multi_turn",
+   "rebenchmark_on_change",
+   "synthetic_separate"
+  ],
+  "FDA-2026-N-7874-0457": [
+   "align_standards",
+   "benchmark_validity",
+   "model_disclosure",
+   "pccp_bounded",
+   "risk_evidence_map",
+   "sequestered_benchmarks",
+   "synthetic_separate",
+   "version_pinning"
+  ],
+  "FDA-2026-N-7874-0458": [
+   "comparator_realistic",
+   "directiveness_behavior",
+   "error_reporting",
+   "pccp_bounded",
+   "rebenchmark_on_change",
+   "risk_evidence_map",
+   "risk_factors"
+  ],
+  "FDA-2026-N-7874-0459": [
+   "error_reporting",
+   "lower_burden_supervised",
+   "oversight_demonstrated",
+   "sequestered_benchmarks"
+  ],
+  "FDA-2026-N-7874-0460": [
+   "agent_sequences",
+   "align_standards",
+   "benchmark_validity",
+   "independent_eval",
+   "model_disclosure",
+   "oversight_demonstrated",
+   "pccp_bounded",
+   "risk_factors",
+   "supervisor_validation"
+  ],
+  "FDA-2026-N-7874-0461": [
+   "align_standards",
+   "benchmark_validity",
+   "data_privacy",
+   "drift_monitoring",
+   "populations_settings",
+   "postmarket_plans",
+   "risk_evidence_map",
+   "sequestered_benchmarks",
+   "version_pinning"
+  ],
+  "FDA-2026-N-7874-0462": [
+   "deterministic_controls",
+   "lower_burden_supervised",
+   "rebenchmark_on_change"
+  ],
+  "FDA-2026-N-7874-0464": [
+   "audit_trail",
+   "human_approval",
+   "nonphysician_clinicians",
+   "oversight_demonstrated",
+   "postmarket_plans"
+  ],
+  "FDA-2026-N-7874-0465": [
+   "nonphysician_clinicians"
+  ],
+  "FDA-2026-N-7874-0466": [
+   "benchmark_validity",
+   "pccp_bounded"
+  ],
+  "FDA-2026-N-7874-0467": [
+   "accountability",
+   "directiveness_behavior",
+   "risk_factors",
+   "sequestered_benchmarks",
+   "version_pinning"
+  ],
+  "FDA-2026-N-7874-0468": [
+   "deterministic_controls",
+   "directiveness_behavior",
+   "lower_burden_supervised",
+   "multi_turn",
+   "pccp_bounded",
+   "sycophancy",
+   "synthetic_separate",
+   "version_pinning"
+  ],
+  "FDA-2026-N-7874-0469": [
+   "benchmark_validity",
+   "directiveness_behavior",
+   "escalation_separate",
+   "human_approval",
+   "multi_turn",
+   "oversight_demonstrated",
+   "risk_factors",
+   "safety_floors",
+   "supervisor_validation",
+   "synthetic_separate"
+  ],
+  "FDA-2026-N-7874-0470": [
+   "independent_eval",
+   "lower_burden_supervised",
+   "postmarket_plans",
+   "supervisor_validation"
+  ],
+  "FDA-2026-N-7874-0471": [
+   "error_reporting",
+   "model_disclosure",
+   "multi_turn",
+   "populations_settings",
+   "postmarket_plans",
+   "reduced_evidence_limits"
+  ],
+  "FDA-2026-N-7874-0472": [
+   "agent_authority",
+   "align_standards",
+   "audit_trail",
+   "data_privacy",
+   "multi_turn",
+   "patient_disclosure",
+   "risk_factors",
+   "sequestered_benchmarks"
+  ],
+  "FDA-2026-N-7874-0473": [
+   "benchmark_validity",
+   "human_approval",
+   "populations_settings",
+   "postmarket_plans",
+   "risk_factors",
+   "supervisor_validation",
+   "version_pinning"
+  ],
+  "FDA-2026-N-7874-0474": [
+   "comparator_realistic",
+   "deterministic_controls",
+   "human_ai_team",
+   "multi_turn",
+   "pccp_bounded",
+   "risk_factors",
+   "synthetic_separate",
+   "version_pinning"
+  ],
+  "FDA-2026-N-7874-0475": [
+   "deployed_config",
+   "deterministic_controls",
+   "drift_monitoring",
+   "error_reporting",
+   "model_disclosure",
+   "multi_turn",
+   "risk_factors"
+  ],
+  "FDA-2026-N-7874-0476": [
+   "audit_trail",
+   "escalation_separate",
+   "human_approval",
+   "independent_eval",
+   "pccp_bounded",
+   "risk_factors",
+   "safety_floors",
+   "security_dependencies",
+   "version_pinning"
+  ],
+  "FDA-2026-N-7874-0477": [
+   "audit_trail",
+   "comparator_realistic",
+   "deterministic_controls",
+   "escalation_separate",
+   "human_approval",
+   "oversight_demonstrated",
+   "rebenchmark_on_change",
+   "safety_floors",
+   "version_pinning"
+  ],
+  "FDA-2026-N-7874-0478": [
+   "benchmark_validity",
+   "oversight_demonstrated",
+   "postmarket_plans"
+  ],
+  "FDA-2026-N-7874-0479": [
+   "directiveness_behavior",
+   "pccp_bounded",
+   "postmarket_plans",
+   "risk_evidence_map",
+   "risk_factors",
+   "synthetic_separate",
+   "version_pinning"
+  ],
+  "FDA-2026-N-7874-0480": [
+   "escalation_separate",
+   "independent_eval",
+   "populations_settings",
+   "postmarket_plans",
+   "prospective_outcomes",
+   "rebenchmark_on_change",
+   "supervisor_validation",
+   "version_pinning"
+  ],
+  "FDA-2026-N-7874-0481": [
+   "error_reporting",
+   "model_disclosure",
+   "version_pinning"
+  ],
+  "FDA-2026-N-7874-0482": [
+   "deterministic_controls",
+   "independent_records",
+   "kill_switch",
+   "version_pinning"
+  ],
+  "FDA-2026-N-7874-0484": [
+   "error_reporting",
+   "kill_switch",
+   "oversight_demonstrated",
+   "risk_factors",
+   "sequestered_benchmarks",
+   "supervisor_validation",
+   "synthetic_separate",
+   "version_pinning"
+  ],
+  "FDA-2026-N-7874-0485": [
+   "agent_authority",
+   "audit_trail",
+   "deterministic_controls",
+   "missing_input"
+  ],
+  "FDA-2026-N-7874-0486": [
+   "accountability",
+   "escalation_separate",
+   "oversight_demonstrated",
+   "postmarket_plans",
+   "prospective_outcomes",
+   "rebenchmark_on_change",
+   "risk_factors",
+   "supervisor_validation",
+   "version_pinning"
+  ],
+  "FDA-2026-N-7874-0487": [
+   "pccp_bounded",
+   "rebenchmark_on_change",
+   "risk_factors",
+   "safety_floors",
+   "supervisor_validation",
+   "synthetic_separate"
+  ],
+  "FDA-2026-N-7874-0488": [
+   "deterministic_controls",
+   "risk_evidence_map",
+   "risk_factors"
+  ],
+  "FDA-2026-N-7874-0489": [
+   "deployed_config",
+   "error_reporting",
+   "escalation_separate",
+   "human_approval",
+   "pccp_bounded",
+   "sequestered_benchmarks",
+   "supervisor_validation",
+   "synthetic_separate",
+   "version_pinning"
+  ],
+  "FDA-2026-N-7874-0490": [
+   "audit_trail",
+   "directiveness_behavior",
+   "human_ai_team",
+   "independent_eval",
+   "oversight_demonstrated",
+   "reduced_evidence_limits",
+   "risk_factors",
+   "version_pinning"
+  ],
+  "FDA-2026-N-7874-0491": [
+   "benchmark_validity",
+   "human_approval",
+   "multi_turn",
+   "oversight_demonstrated",
+   "postmarket_plans",
+   "sequestered_benchmarks",
+   "supervisor_validation",
+   "sycophancy",
+   "version_pinning"
+  ],
+  "FDA-2026-N-7874-0492": [
+   "benchmark_validity",
+   "sequestered_benchmarks",
+   "synthetic_separate"
+  ],
+  "FDA-2026-N-7874-0493": [
+   "benchmark_validity",
+   "data_privacy",
+   "escalation_separate",
+   "independent_eval",
+   "model_disclosure",
+   "pccp_bounded",
+   "populations_settings",
+   "risk_factors"
+  ],
+  "FDA-2026-N-7874-0494": [
+   "lower_burden_supervised",
+   "risk_evidence_map"
+  ],
+  "FDA-2026-N-7874-0495": [
+   "audit_trail",
+   "deployed_config",
+   "deterministic_controls",
+   "drift_monitoring",
+   "independent_records",
+   "model_disclosure",
+   "rebenchmark_on_change",
+   "supervisor_validation",
+   "version_pinning"
+  ],
+  "FDA-2026-N-7874-0496": [
+   "accountability",
+   "benchmark_validity",
+   "independent_eval",
+   "postmarket_plans",
+   "supervisor_validation"
+  ],
+  "FDA-2026-N-7874-0497": [
+   "data_privacy",
+   "model_disclosure",
+   "risk_factors"
+  ],
+  "FDA-2026-N-7874-0498": [
+   "error_reporting",
+   "human_ai_team",
+   "nonphysician_clinicians",
+   "populations_settings",
+   "postmarket_plans",
+   "rebenchmark_on_change",
+   "risk_factors",
+   "safety_floors"
+  ],
+  "FDA-2026-N-7874-0499": [
+   "deployed_config",
+   "escalation_separate",
+   "human_approval",
+   "kill_switch",
+   "pccp_bounded",
+   "risk_evidence_map",
+   "risk_factors",
+   "supervisor_validation",
+   "synthetic_separate",
+   "version_pinning"
+  ],
+  "FDA-2026-N-7874-0500": [
+   "audit_trail",
+   "comparator_realistic",
+   "deterministic_controls",
+   "independent_eval"
+  ],
+  "FDA-2026-N-7874-0501": [
+   "comparator_realistic",
+   "postmarket_plans",
+   "rebenchmark_on_change",
+   "reduced_evidence_limits",
+   "supervisor_validation",
+   "sycophancy",
+   "version_pinning"
+  ],
+  "FDA-2026-N-7874-0502": [
+   "independent_eval",
+   "rebenchmark_on_change"
+  ],
+  "FDA-2026-N-7874-0503": [
+   "agent_authority",
+   "audit_trail",
+   "deterministic_controls",
+   "lower_burden_supervised",
+   "patient_disclosure"
+  ],
+  "FDA-2026-N-7874-0504": [
+   "align_standards",
+   "audit_trail",
+   "directiveness_behavior",
+   "independent_eval",
+   "lower_burden_supervised",
+   "risk_evidence_map",
+   "risk_factors"
+  ],
+  "FDA-2026-N-7874-0505": [
+   "agent_sequences",
+   "data_privacy",
+   "pccp_bounded",
+   "security_dependencies",
+   "version_pinning"
+  ],
+  "FDA-2026-N-7874-0506": [
+   "agent_sequences",
+   "benchmark_validity",
+   "data_privacy",
+   "human_ai_team",
+   "independent_eval",
+   "prospective_outcomes",
+   "rebenchmark_on_change"
+  ],
+  "FDA-2026-N-7874-0507": [
+   "accountability",
+   "benchmark_validity",
+   "error_reporting",
+   "human_ai_team",
+   "independent_records",
+   "postmarket_plans",
+   "reduced_evidence_limits",
+   "sequestered_benchmarks"
+  ],
+  "FDA-2026-N-7874-0508": [
+   "audit_trail",
+   "benchmark_validity",
+   "rebenchmark_on_change",
+   "supervisor_validation"
+  ],
+  "FDA-2026-N-7874-0509": [
+   "accountability",
+   "pccp_bounded",
+   "risk_evidence_map",
+   "risk_factors",
+   "version_pinning"
+  ],
+  "FDA-2026-N-7874-0510": [
+   "accountability",
+   "benchmark_validity",
+   "error_reporting",
+   "escalation_separate",
+   "human_ai_team",
+   "prospective_outcomes",
+   "risk_factors",
+   "sycophancy"
+  ],
+  "FDA-2026-N-7874-0511": [
+   "align_standards",
+   "error_reporting",
+   "human_ai_team",
+   "independent_eval",
+   "lower_burden_supervised",
+   "sequestered_benchmarks"
+  ],
+  "FDA-2026-N-7874-0513": [
+   "multi_turn"
+  ],
+  "FDA-2026-N-7874-0514": [
+   "accountability",
+   "benchmark_validity",
+   "oversight_demonstrated",
+   "postmarket_plans",
+   "supervisor_validation",
+   "synthetic_separate"
+  ],
+  "FDA-2026-N-7874-0515": [
+   "comparator_realistic",
+   "deployed_config",
+   "pccp_bounded",
+   "rebenchmark_on_change",
+   "risk_factors"
+  ],
+  "FDA-2026-N-7874-0516": [
+   "agent_sequences",
+   "comparator_realistic",
+   "deployed_config",
+   "escalation_separate",
+   "independent_eval",
+   "populations_settings",
+   "rebenchmark_on_change",
+   "risk_factors",
+   "sequestered_benchmarks",
+   "synthetic_separate"
+  ],
+  "FDA-2026-N-7874-0517": [
+   "accountability",
+   "deterministic_controls",
+   "drift_monitoring",
+   "kill_switch",
+   "model_disclosure",
+   "multi_turn",
+   "supervisor_validation",
+   "version_pinning"
+  ],
+  "FDA-2026-N-7874-0518": [
+   "directiveness_behavior",
+   "escalation_separate",
+   "nonphysician_clinicians",
+   "populations_settings",
+   "rebenchmark_on_change",
+   "risk_evidence_map",
+   "risk_factors",
+   "synthetic_separate",
+   "version_pinning"
+  ],
+  "FDA-2026-N-7874-0519": [
+   "accountability",
+   "align_standards",
+   "lower_burden_supervised",
+   "pccp_bounded",
+   "rebenchmark_on_change",
+   "risk_evidence_map"
+  ],
+  "FDA-2026-N-7874-0521": [
+   "agent_authority",
+   "rebenchmark_on_change"
+  ],
+  "FDA-2026-N-7874-0522": [
+   "accountability",
+   "comparator_realistic",
+   "human_ai_team",
+   "multi_turn",
+   "oversight_demonstrated"
+  ],
+  "FDA-2026-N-7874-0523": [
+   "accountability",
+   "comparator_realistic",
+   "human_ai_team",
+   "multi_turn",
+   "oversight_demonstrated"
+  ],
+  "FDA-2026-N-7874-0524": [
+   "benchmark_validity",
+   "escalation_separate",
+   "multi_turn",
+   "populations_settings",
+   "sycophancy",
+   "synthetic_separate"
+  ],
+  "FDA-2026-N-7874-0526": [
+   "agent_authority",
+   "audit_trail",
+   "deployed_config",
+   "deterministic_controls",
+   "risk_factors",
+   "supervisor_validation",
+   "synthetic_separate"
+  ],
+  "FDA-2026-N-7874-0527": [
+   "deterministic_controls",
+   "escalation_separate",
+   "pccp_bounded",
+   "risk_evidence_map",
+   "version_pinning"
+  ],
+  "FDA-2026-N-7874-0528": [
+   "agent_sequences",
+   "audit_trail",
+   "multi_turn",
+   "oversight_demonstrated",
+   "pccp_bounded",
+   "populations_settings",
+   "reduced_evidence_limits",
+   "risk_factors",
+   "version_pinning"
+  ],
+  "FDA-2026-N-7874-0529": [
+   "populations_settings"
+  ],
+  "FDA-2026-N-7874-0530": [
+   "benchmark_validity",
+   "independent_eval",
+   "sequestered_benchmarks",
+   "supervisor_validation",
+   "version_pinning"
+  ],
+  "FDA-2026-N-7874-0531": [
+   "align_standards",
+   "deployed_config",
+   "escalation_separate",
+   "human_approval",
+   "multi_turn",
+   "pccp_bounded",
+   "safety_floors",
+   "synthetic_separate",
+   "version_pinning"
+  ],
+  "FDA-2026-N-7874-0532": [
+   "benchmark_validity",
+   "drift_monitoring",
+   "escalation_separate",
+   "independent_eval",
+   "multi_turn",
+   "populations_settings",
+   "risk_evidence_map",
+   "sequestered_benchmarks"
+  ],
+  "FDA-2026-N-7874-0533": [
+   "deployed_config",
+   "populations_settings",
+   "risk_evidence_map",
+   "supervisor_validation",
+   "version_pinning"
+  ],
+  "FDA-2026-N-7874-0534": [
+   "comparator_realistic",
+   "directiveness_behavior",
+   "escalation_separate",
+   "oversight_demonstrated",
+   "rebenchmark_on_change",
+   "risk_factors",
+   "sequestered_benchmarks",
+   "version_pinning"
+  ],
+  "FDA-2026-N-7874-0535": [
+   "agent_sequences",
+   "benchmark_validity",
+   "independent_eval",
+   "populations_settings",
+   "rebenchmark_on_change",
+   "safety_floors",
+   "sequestered_benchmarks",
+   "supervisor_validation",
+   "synthetic_separate"
+  ],
+  "FDA-2026-N-7874-0536": [
+   "align_standards",
+   "independent_eval",
+   "model_disclosure",
+   "rebenchmark_on_change"
+  ],
+  "FDA-2026-N-7874-0537": [
+   "agent_sequences",
+   "human_ai_team",
+   "human_approval",
+   "kill_switch",
+   "populations_settings",
+   "prospective_outcomes",
+   "sequestered_benchmarks",
+   "synthetic_separate"
+  ],
+  "FDA-2026-N-7874-0538": [
+   "deployed_config",
+   "directiveness_behavior",
+   "drift_monitoring",
+   "human_approval",
+   "multi_turn",
+   "pccp_bounded",
+   "risk_evidence_map",
+   "risk_factors",
+   "safety_floors",
+   "sycophancy"
+  ],
+  "FDA-2026-N-7874-0539": [
+   "agent_authority",
+   "deterministic_controls",
+   "pccp_bounded",
+   "prospective_outcomes",
+   "sycophancy"
+  ],
+  "FDA-2026-N-7874-0540": [
+   "accountability",
+   "audit_trail",
+   "independent_records",
+   "missing_input",
+   "postmarket_plans"
+  ],
+  "FDA-2026-N-7874-0541": [
+   "agent_authority",
+   "audit_trail",
+   "error_reporting",
+   "model_disclosure",
+   "postmarket_plans",
+   "security_dependencies"
+  ],
+  "FDA-2026-N-7874-0542": [
+   "independent_eval"
   ]
  }
 }
