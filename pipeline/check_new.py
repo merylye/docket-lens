@@ -40,7 +40,7 @@ if "--update" in sys.argv:
 
 if "--status" in sys.argv:
     out = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "data", "docket_status.json")
-    json.dump({"posted": len(ids), "checked": time.strftime("%Y-%m-%d", time.gmtime())}, open(out, "w"), indent=1)
+    json.dump({"posted": len(ids), "checked": time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime())}, open(out, "w"), indent=1)
 
 known = set(open(KNOWN).read().split()) if os.path.exists(KNOWN) else set()
 new = sorted(i for i in ids if h(i) not in known)

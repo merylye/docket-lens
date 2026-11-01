@@ -820,7 +820,7 @@ function init() {
   document.getElementById("facts").innerHTML = `<span><b>${coded}</b> posted comments coded</span><span>Last updated <b>${esc(upd)}</b></span>`;
   fetch("../data/docket_status.json").then(r => r.ok ? r.json() : null).then(st => {
     if (!st || !(st.posted > 0)) return;
-    const chk = new Date(st.checked + "T12:00:00Z").toLocaleDateString("en-US", { month: "long", day: "numeric", year: "numeric" });
+    const chk = new Date(st.checked.includes("T") ? st.checked : st.checked + "T12:00:00Z").toLocaleDateString("en-US", { month: "long", day: "numeric", year: "numeric" });
     document.getElementById("facts").innerHTML = `<span><b>${coded}</b> of <b>${st.posted}</b> posted comments coded</span><span>Docket checked <b>${esc(chk)}</b></span><span>Coded data last updated <b>${esc(upd)}</b></span>`;
     if (st.posted > coded) {
       const n = document.getElementById("gap-note");
