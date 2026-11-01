@@ -986,14 +986,15 @@
    "align_standards"
   ],
   "ARIA": [
-   "multi_turn",
+   "comparator_realistic",
    "directiveness_behavior",
+   "error_reporting",
    "escalation_separate",
-   "synthetic_separate",
-   "reduced_evidence_limits",
-   "rebenchmark_on_change",
    "independent_eval",
-   "error_reporting"
+   "multi_turn",
+   "rebenchmark_on_change",
+   "reduced_evidence_limits",
+   "synthetic_separate"
   ],
   "FDA-2026-N-7874-0173": [
    "error_reporting",

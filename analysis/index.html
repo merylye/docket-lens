@@ -171,7 +171,7 @@ svg .infoi:hover circle, svg .infoi:focus circle, .ic:hover, .ic:focus { stroke:
     <summary>About this data</summary>
     <p>Comments are downloaded from the Regulations.gov public API for this docket, with their attached files. Regulations.gov shows only comments FDA has reviewed and posted. FDA posts them in batches, so the docket can hold more comments than this site includes, and comments filed but not yet posted appear in neither.</p>
     <p>A script checks the docket once a day through November 21, 2026, and updates the posted count above. New comments are added to the charts after each one is read and coded, which can take several days. "Coded data last updated" is the date coded comments were last added or changed.</p>
-    <p>Each comment was read in full and coded by Claude Opus 5.5 against a written codebook, with checks by separate instances of the same model. No codes have been checked by a person. Comments filed twice are counted once. One comment is counted but not shown, at its author's request. Comments known to be filed but not yet posted, such as ARIA's and Stanford HAI's, are listed but not counted.</p>
+    <p>Each comment was read in full and coded by Claude Opus 5.5 against a written codebook, with checks by separate instances of the same model. No codes have been checked by a person. Comments filed twice are counted once. One comment is counted but not shown, at its author's request.</p>
     <p>Methods, codebooks, and code are on <a href="https://github.com/merylye/docket-lens" target="_blank" rel="noopener">GitHub</a>.</p>
   </details>
   <nav class="tabs" role="tablist" aria-label="Views">
@@ -662,7 +662,7 @@ function renderAddMenu() {
   const q = (document.getElementById("addSearch").value || "").trim().toLowerCase();
   const pendOpts = PENDING().filter(c => !q || (nameOf(c) + " pending").toLowerCase().includes(q)).map(c => `<label><input type="checkbox" data-id="${esc(c.id)}" ${state.pinned.includes(c.id) ? "checked" : ""}><span><span class="num">Pending</span> ${esc(c.short_name || nameOf(c))}</span></label>`).join("");
   const list = D.filter(c => !c.hidden).filter(c => !q || (short(c.id) + " " + nameOf(c) + " " + c.commenter_type).toLowerCase().includes(q));
-  const ariaOpt = (!q || "aria nsf ai research institute on interaction for ai assistants".includes(q)) ? `<label><input type="checkbox" data-id="ARIA" ${state.pinned.includes("ARIA") ? "checked" : ""}><span><span class="num">Pending</span> ARIA</span></label>` : "";
+  const ariaOpt = (!q || "aria nsf ai research institute on interaction for ai assistants".includes(q)) ? `<label><input type="checkbox" data-id="ARIA" ${state.pinned.includes("ARIA") ? "checked" : ""}><span><span class="num">0370</span> ARIA</span></label>` : "";
   const menu = document.getElementById("addMenu");
   menu.innerHTML = (list.length || ariaOpt || pendOpts) ? ariaOpt + pendOpts + list.map(c => `<label><input type="checkbox" data-id="${esc(c.id)}" ${state.pinned.includes(c.id) ? "checked" : ""}><span><span class="num">${esc(short(c.id))}</span> ${esc(nameOf(c))}</span></label>`).join("") : `<p class="note" style="margin:6px">No comments match.</p>`;
   menu.querySelectorAll("input").forEach(i => i.onchange = () => { togglePin(i.dataset.id); reveal(document.getElementById("grid"), "center"); });
@@ -706,9 +706,8 @@ function renderTable() {
     note.textContent = `${rows.length} comments${state.cat ? " from " + state.cat : ""} ${it && it.phrase ? it.phrase : "addressing " + (it ? it.label : state.sel.key)}`; clear.hidden = false;
   } else { note.textContent = `${rows.length} comments`; clear.hidden = state.types.size === 0; }
   if (state.types.size) note.textContent += ` · ${[...state.types].join(", ")}`;
-  const a = META.aria, ariaText = ["aria", a.name, "academia", ...a.topics].join(" ").toLowerCase();
-  const ariaShow = (!state.sel || ariaItems(state.sel.lens).includes(state.sel.key)) && (state.types.size === 0 || state.types.has("Academia")) && (!q || ariaText.includes(q));
-  const extra = [...(ariaShow ? ["ARIA"] : []), ...pend.map(c => c.short_name || nameOf(c))];
+  const a = META.aria;
+  const extra = pend.map(c => c.short_name || nameOf(c));
   if (extra.length) note.textContent += `, plus ${extra.join(" and ")} (not yet posted)`;
   if (withheld) note.textContent += ` · ${withheld} more counted but not shown at the author's request`;
   const SHORT = { IV: "Risk", V: "Premarket", VI: "Postmarket", VII: "Other" };
@@ -720,7 +719,6 @@ function renderTable() {
   };
   const fmtD = d => d ? new Date(d).toLocaleDateString("en-US", { month: "short", day: "numeric", year: "numeric" }) : "";
   const items = rows.map(c => ({ c, name: nameOf(c), date: c.received || c.posted || "", cov: c.unreadable ? -1 : c.q_addr.length + (c.topics || []).length / 100 }));
-  if (ariaShow) items.push({ aria: true, name: "ARIA", date: "2026-10-19T23:00:00Z", cov: a.q_addr.length + a.topics.length / 100 });
   pend.forEach(c => items.push({ c, pending: true, name: nameOf(c), date: c.received || "", cov: c.q_addr.length }));
   const cmpName = (x, y) => x.name.localeCompare(y.name, "en", { sensitivity: "base" });
   const sorters = {

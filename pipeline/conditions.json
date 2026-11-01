@@ -8139,37 +8139,41 @@
  },
  "aria": {
   "risk_framework": [
-   "other"
-  ],
-  "competency_eval": [
+   "broader_harms",
    "other"
   ],
   "synthetic_data": [
+   "disclose",
+   "indep",
    "separate",
    "validate"
-  ],
-  "postmarket_tradeoff": [
-   "plan"
-  ],
-  "supervisory_agents": [
-   "other",
-   "validate_supervisor"
-  ],
-  "escalation_errors": [
-   "after",
-   "separate"
   ],
   "median_clinician_comparator": [
    "standard_floor"
   ],
   "no_care_comparator": [
+   "justify",
    "local"
+  ],
+  "postmarket_tradeoff": [
+   "plan"
   ],
   "postmarket_methods": [
    "event_triggers",
-   "reporting"
+   "reporting",
+   "targeted_sampling"
+  ],
+  "supervisory_agents": [
+   "human_final",
+   "validate_supervisor"
+  ],
+  "flexible_change_control": [
+   "bounds",
+   "pin",
+   "rebench"
   ],
   "voluntary_model_files": [
+   "contract",
    "fallback",
    "resp"
   ]

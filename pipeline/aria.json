@@ -63,21 +63,21 @@
  "summary": "Risk depends on how people come to use and rely on conversational AI over time; recommends trajectory testing, care-connection outcomes, simulation standards, postmarket reassessment, and independent evaluation.",
  "positions": {
   "risk_framework": "conditional",
-  "competency_eval": "conditional",
-  "confirmation_flex": null,
-  "synthetic_data": "conditional",
-  "third_party": "support",
-  "postmarket_tradeoff": "conditional",
-  "supervisory_agents": "conditional",
-  "flexible_change_control": null,
-  "voluntary_model_files": "conditional",
   "directiveness_continuum": "support",
   "patient_facing_risk": null,
   "trajectory_risk": "support",
-  "escalation_errors": "conditional",
+  "escalation_errors": "support",
+  "competency_eval": "support",
+  "confirmation_flex": "oppose",
+  "synthetic_data": "conditional",
   "median_clinician_comparator": "conditional",
   "no_care_comparator": "conditional",
+  "third_party": "support",
+  "postmarket_tradeoff": "conditional",
   "postmarket_methods": "conditional",
+  "supervisory_agents": "conditional",
+  "flexible_change_control": "conditional",
+  "voluntary_model_files": "conditional",
   "agentic_oversight": null
  },
  "recommendations": [
@@ -118,7 +118,7 @@
    "Where a developer will not disclose safety-relevant information or commit to advance notice of updates, the FDA should require the manufacturer to make up for it through more extensive testing and monitoring."
   ],
   "directiveness_continuum": [
-   "The FDA should not treat disclaimers as sufficient mitigation when assessing whether a response is action-directing, and should require evidence that intended users understand the device’s responses (Q2)."
+   "The FDA should not treat disclaimers as sufficient mitigation when assessing whether a response is action-directing, and should require evidence that intended users understand the device\u2019s responses (Q2)."
   ],
   "trajectory_risk": [
    "Safety benchmarks should evaluate conversational trajectories (Q5)."
